@@ -114,8 +114,10 @@ passed all 11 generated engineering case classes across nine isolated folds:
 delivery, and one synthetic score in 17.790 seconds. It used zero network and
 zero real-data operations and retained zero generated payload bytes. This is a
 complete generated pipeline proof, not a neural result; its synthetic route
-has no scientific value. The exact result must become remotely green before
-Stage A.
+has no scientific value. Exact result `4ef12dd` is now green in CI
+`32765504463`. A proof-only closeout binds its three result artifacts and must
+itself become remotely green before the repository advances to Stage A; no
+real data or model operation is part of that closeout.
 
 Current result: [EEGMMIDB-UG1 Stage S-A2](docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md)
 failed closed during verified TLS certificate-chain validation before an HTTP

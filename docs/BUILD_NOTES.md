@@ -15547,3 +15547,23 @@ run the sole replacement generated qualification and stop before Stage A.
 
 Immediate gate: verify, commit, push, and green the exact G1 result. Stop
 before Stage A; no real BNCI payload or scientific score has been opened.
+
+### BNCI-C3C5-1 G1 result remotely green; proof closeout recorded
+
+- Exact result `4ef12dd056358907ab6734c7a2a21e6776f6f6af` passed Base
+  job `97553936562` in 5m30s, Optional Neuro Readers job `97553936838` in
+  6m51s, and CI `32765504463`.
+- Added a proof-only closeout binding the unchanged result document, machine
+  result, and result test: three artifacts totaling 17,134 bytes under
+  canonical SHA-256
+  `90f006d84089af6167ad920d5c90a0ea434cf28b0c04a60ef883ef373649f58b`.
+- The closeout repeats zero qualification, MAT, fit, prediction, target,
+  score, network, real-data, Stage A, release, or claim operations.
+- G1 remains consumed. Its generated `BNCIC3C5-R2` route remains
+  scientifically inert.
+- Local verification passed 6 proof tests, all 78 focused BNCI tests, and all
+  5,998 dependency-free tests with 216 expected skips in 209.524 seconds.
+  Pinned Ruff, compilation, JSON parsing, and diff hygiene also pass.
+
+Immediate gate: verify, commit, push, and green the proof-only closeout, then
+stop before Stage A.

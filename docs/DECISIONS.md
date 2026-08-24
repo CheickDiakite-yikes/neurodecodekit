@@ -13617,3 +13617,22 @@ then stop at that boundary. This generated result establishes no neural
 decoding, unseen-person generalization, EEG-beyond-EOG advantage, movement-
 intention or motor-cortex origin, language or thought decoding, live use, or
 portable-hardware result.
+
+## 0481 - Close BNCI G1 With A Proof-Only Remote Record
+
+Proof decision: exact result `4ef12dd056358907ab6734c7a2a21e6776f6f6af`
+passed Base Python job `97553936562`, Optional Neuro Readers job
+`97553936838`, and CI `32765504463`.
+
+Binding decision: bind the unchanged G1 result document, machine result, and
+test, totaling 17,134 bytes under canonical SHA-256
+`90f006d84089af6167ad920d5c90a0ea434cf28b0c04a60ef883ef373649f58b`.
+
+Operation decision: this closeout may verify the green CI and read those
+three committed aggregate artifacts only. It repeats zero qualification,
+generated MAT, fit, prediction, target delivery, scoring, network, real-data,
+Stage A, release, or claim operation.
+
+Transition decision: remotely green this proof closeout, then stop before
+Stage A. G1 is consumed and may not be retried, rerun, resumed, restarted, or
+scored again. Its synthetic route carries no scientific claim.

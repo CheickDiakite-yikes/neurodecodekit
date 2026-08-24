@@ -1,15 +1,15 @@
 # Codex Handoff - NeuroDecodeKit
 
-> **Current gate, 2026-08-24:** recovery decision `c5dd49b` passed Base job
-> `97547643345`, Optional job `97547643658`, and CI `32763519623` before the
-> sole replacement G1 invocation. The generated/mock pass completed all 11
-> case classes across nine isolated folds with exactly 468 fits, 495 prediction
-> sets, one generated target delivery, and one synthetic score. Runtime was
-> 17.790 seconds at 566,231,040-byte peak process-tree RSS; network, real-data
-> operations, and retained generated payload bytes were zero. Read the G1
-> result document, machine result, and test. Immediate gate: test, commit,
-> push, and green the result, then stop before Stage A. No retry, real data,
-> scientific score, release, or claim work is open in this milestone.
+> **Current gate, 2026-08-24:** exact G1 result `4ef12dd` passed Base job
+> `97553936562`, Optional job `97553936838`, and CI `32765504463`. The
+> generated/mock pass completed all 11 case classes across nine isolated folds
+> with 468 fits, 495 prediction sets, one generated target delivery, and one
+> synthetic score in 17.790 seconds. Read the result artifacts and new
+> proof-only closeout. It binds three exact result artifacts / 17,134 bytes
+> under canonical SHA-256 `90f006d8...649f58b` and performs no qualification
+> or real operation. Immediate gate: commit, push, and green the closeout, then
+> stop before Stage A. G1 is consumed; no retry, real data, scientific score,
+> release, or claim work is open in this milestone.
 
 > Current independent scientific lane, 2026-08-24: exact EEGMMIDB-UG1 Stage
 > S-A2 proof closeout `d9eae69d0361bc1ddfcbeaf7d3a105ad83502206`

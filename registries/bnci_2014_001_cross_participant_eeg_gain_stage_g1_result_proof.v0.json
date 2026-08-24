@@ -1,0 +1,114 @@
+{
+  "schema_name": "neurodecodekit.bnci_2014_001_stage_g1_result_proof",
+  "schema_version": "0.1.0",
+  "proof_id": "BNCI-C3C5-1-G1-result-proof-2026-08-24",
+  "recorded_at_local": "2026-08-24",
+  "lane_id": "BNCI-C3C5-1",
+  "status": "proof_only_closeout_effective_after_own_remote_green",
+  "green_result": {
+    "commit": "4ef12dd056358907ab6734c7a2a21e6776f6f6af",
+    "commit_subject": "Close generated BNCI G1 qualification",
+    "branch": "codex/loop-54a-vhdr-preregistration",
+    "CI_run_id": 32765504463,
+    "CI_url": "https://github.com/CheickDiakite-yikes/neurodecodekit/actions/runs/32765504463",
+    "base_python_job_id": 97553936562,
+    "base_python_duration": "5m30s",
+    "base_python_conclusion": "success",
+    "optional_neuro_readers_job_id": 97553936838,
+    "optional_neuro_readers_duration": "6m51s",
+    "optional_neuro_readers_conclusion": "success",
+    "both_required_jobs_green": true
+  },
+  "bound_artifacts": [
+    {
+      "path": "docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_STAGE_G1_RESULT.md",
+      "bytes": 4390,
+      "sha256": "e9f2972fe7a53e898f8b87984ae4b99c8c78495185036cc6c8b5ea5a11f953f0",
+      "git_blob": "005523b9b8e175a64779fde4123fa3b32c20369b"
+    },
+    {
+      "path": "registries/bnci_2014_001_cross_participant_eeg_gain_stage_g1_result.v0.json",
+      "bytes": 6354,
+      "sha256": "99efdf9956aa2c804827932372b057c8c58033d7b45cd5e0a7f56caca6cd5845",
+      "git_blob": "414818f1b155c3d53bb4ec8eba06e1ba0be47b4d"
+    },
+    {
+      "path": "tests/test_bnci_2014_001_cross_participant_eeg_gain_stage_g1_result.py",
+      "bytes": 6390,
+      "sha256": "a23b28120bc62e1967e61709a9ca315862b60370c8f563472dd7829264163ab4",
+      "git_blob": "cb2cf67e6e5386d9e0dd881493b9b99c7425ec22"
+    }
+  ],
+  "bound_artifact_summary": {
+    "count": 3,
+    "bytes": 17134,
+    "canonical_artifact_set_sha256": "90f006d84089af6167ad920d5c90a0ea434cf28b0c04a60ef883ef373649f58b"
+  },
+  "closed_result": {
+    "status": "passed_generated_mocked_qualification_only",
+    "case_classes_passed": 11,
+    "outer_folds": 9,
+    "parameter_update_fits": 468,
+    "prediction_sets": 495,
+    "synthetic_target_deliveries": 1,
+    "synthetic_scoring_events": 1,
+    "runtime_seconds": 17.790334874996915,
+    "peak_process_tree_RSS_bytes": 566231040,
+    "input_bytes": 56033424,
+    "output_bytes": 3296,
+    "retained_generated_payload_bytes": 0,
+    "network_bytes": 0,
+    "real_operations": 0,
+    "synthetic_router_route": "BNCIC3C5-R2",
+    "synthetic_router_route_has_claim_value": false,
+    "qualification_may_be_repeated": false
+  },
+  "proof_only_operations": {
+    "GitHub_CI_verification_calls": 1,
+    "committed_aggregate_artifact_reads": 3,
+    "qualification_invocations": 0,
+    "generated_MAT_writes_or_parses": 0,
+    "mock_transport_calls": 0,
+    "synthetic_or_real_fits": 0,
+    "synthetic_or_real_prediction_sets": 0,
+    "synthetic_or_real_target_deliveries": 0,
+    "synthetic_or_real_scoring_events": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "real_ignored_consumed_or_other_project_path_operations": 0,
+    "Stage_A_or_later_operations": 0,
+    "release_or_claim_operations": 0
+  },
+  "local_verification": {
+    "proof_tests_passed": 6,
+    "focused_BNCI_tests_passed": 78,
+    "focused_BNCI_tests_seconds": 5.651,
+    "full_dependency_free_tests_passed": 5998,
+    "full_dependency_free_tests_skipped": 216,
+    "full_dependency_free_tests_seconds": 209.524,
+    "pinned_ruff_passed": true,
+    "compileall_passed": true,
+    "all_JSON_registries_parsed": true,
+    "git_diff_check_passed": true,
+    "qualification_repeated": false,
+    "protected_operation_performed": false
+  },
+  "next_gate": {
+    "proof_closeout_commit_required": true,
+    "proof_closeout_push_required": true,
+    "both_remote_CI_jobs_green_required": true,
+    "Stage_A_begun": false,
+    "Stage_A_is_next_ordered_milestone_after_closeout_green": true,
+    "this_closeout_stops_before_Stage_A": true,
+    "retry_rerun_resume_restart_or_second_score_allowed": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "generated_target_firewalled_BNCI_pipeline_and_one_shot_result_have_a_hash_bound_remote_closeout",
+    "scientific_claim_established": false,
+    "unseen_person_generalization": false,
+    "EEG_beyond_EOG": false,
+    "motor_cortex_or_movement_intention": false,
+    "thought_or_language_decoding": false,
+    "live_portable_home_or_clinical_use": false
+  }
+}

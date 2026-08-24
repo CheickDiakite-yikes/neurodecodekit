@@ -7,25 +7,24 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: BNCI-C3C5-1 G1 Result Proof
+## Current Gate: BNCI-C3C5-1 G1 Proof Closeout
 
-Recovery decision `c5dd49b` passed Base job `97547643345`, Optional job
-`97547643658`, and CI `32763519623`. The sole replacement generated/mock
-qualification then passed all 11 registered case classes across nine isolated
+Exact G1 result `4ef12dd` passed Base job `97553936562`, Optional job
+`97553936838`, and CI `32765504463`. The sole replacement generated/mock
+qualification passed all 11 registered case classes across nine isolated
 folds with 468 synthetic fits, 495 synthetic prediction sets, one generated
 target delivery, and one synthetic score.
 
-Read the new G1 result document, machine result, and matching test. Runtime was
-17.790334874996915 seconds, peak process-tree RSS was 566,231,040 bytes,
-aggregate output was 3,296 bytes, and retained generated payload was zero.
-Network, real payload reads, real fits, real inference, real target delivery,
-and real scoring were all zero. `BNCIC3C5-R2` is synthetic and has no claim
-value.
+Read the G1 result artifacts, then the new proof-only closeout, machine proof,
+and proof test. The closeout binds three unchanged result artifacts totaling
+17,134 bytes under canonical SHA-256
+`90f006d84089af6167ad920d5c90a0ea434cf28b0c04a60ef883ef373649f58b`.
+It repeats no qualification and performs no Stage A or real-data operation.
 
-Test, commit, push, and green this exact result in both jobs, then stop before
-Stage A. The replacement invocation is consumed and cannot be retried or
-rerun. Real BNCI data, scientific scoring, releases, and claims remain closed
-in this milestone.
+Test, commit, push, and green the proof-only closeout, then stop before Stage
+A. The G1 invocation is consumed and cannot be retried or rerun. Real BNCI
+data, scientific scoring, releases, and claims remain closed in this
+milestone.
 
 ## Historical BNCI Decision Gate
 

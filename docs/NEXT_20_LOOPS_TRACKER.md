@@ -1,14 +1,14 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate gate (2026-08-24):** recovery decision `c5dd49b` passed both
-> jobs in CI `32763519623` before the sole replacement G1 invocation. The
-> generated/mock pass completed all 11 case classes across nine isolated folds
-> with 468 synthetic fits, 495 prediction sets, one generated target delivery,
-> and one synthetic score in 17.790 seconds. Peak process-tree RSS was
-> 566,231,040 bytes; network, real-data operations, and retained generated
-> payload were zero. Immediate gate: test, commit, push, and green the exact G1
-> result, then stop before Stage A. The recovery is consumed; retry, real data,
-> scientific score, release, and claim work remain closed in this milestone.
+> **Immediate gate (2026-08-24):** exact G1 result `4ef12dd` passed both jobs
+> in CI `32765504463`. Its sole generated/mock pass completed all 11 case
+> classes across nine isolated folds with 468 synthetic fits, 495 prediction
+> sets, one generated target delivery, and one synthetic score in 17.790
+> seconds. The new proof-only closeout binds three exact result artifacts /
+> 17,134 bytes under canonical SHA-256 `90f006d8...649f58b`. Immediate gate:
+> commit, push, and green the closeout, then stop before Stage A. G1 is
+> consumed; retry, real data, scientific score, release, and claim work remain
+> closed in this milestone.
 
 > **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its

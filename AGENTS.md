@@ -45,23 +45,25 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-Recovery decision `c5dd49b3d29fcb348fc836812f5a48a6c5526f04` passed Base
-Python job `97547643345`, Optional Neuro Readers job `97547643658`, and CI
-`32763519623` before the sole replacement G1 invocation.
+Exact G1 result `4ef12dd056358907ab6734c7a2a21e6776f6f6af` passed Base
+Python job `97553936562`, Optional Neuro Readers job `97553936838`, and CI
+`32765504463`. Read the result document, machine result, result test, new
+proof-only closeout, machine proof, and proof test.
 
-Read the new Stage G1 result document, machine result, and matching test. The
-generated/mock qualification passed all 11 case classes across nine isolated
-folds with exactly 468 synthetic fits, 495 synthetic prediction sets, one
-generated target delivery, and one synthetic score. It completed in
+The generated/mock qualification passed all 11 case classes across nine
+isolated folds with exactly 468 synthetic fits, 495 synthetic prediction
+sets, one generated target delivery, and one synthetic score. It completed in
 17.790334874996915 seconds at 566,231,040-byte peak process-tree RSS, emitted
-3,296 aggregate bytes, and retained zero generated payload bytes. Network,
-real MAT/signal/target reads, real fits, real inference, and real scores were
-all zero. The synthetic `BNCIC3C5-R2` route has no claim value.
+3,296 aggregate bytes, and retained zero generated payload bytes. Network and
+every real-data/model/target/score counter were zero. The synthetic
+`BNCIC3C5-R2` route has no claim value. The invocation is consumed.
 
-Immediate gate: test, commit, push, and green this exact G1 result in both
-jobs, then stop before Stage A. The one recovery invocation is consumed and
-may not be retried or rerun. Do not acquire or open real BNCI data, run a real
-model or scientific score, release, or upgrade a claim in this milestone.
+The proof-only closeout binds three exact result artifacts totaling 17,134
+bytes under canonical SHA-256
+`90f006d84089af6167ad920d5c90a0ea434cf28b0c04a60ef883ef373649f58b`.
+Immediate gate: test, commit, push, and green this closeout, then stop before
+Stage A. Do not rerun G1, acquire/open real BNCI data, run a real model or
+scientific score, release, or upgrade a claim in this milestone.
 
 ## Prior Lane Context
 
