@@ -61,7 +61,10 @@ acquisition. Even a maximum R4 result would establish only
 participant-independent EEGMMIDB protocol-condition prediction; cue/ocular
 compatibility, motor-cortex origin, movement intention, language, and live
 decoding would remain unproven. Every real-operation authority flag is
-currently false.
+currently false. Exact request `c642d90` passed Base job `97322606634`,
+Optional Neuro job `97322606501`, and CI `32690289547`. Its proof-only
+closeout is now the sole pending engineering barrier before packet-bound
+authorization can be requested.
 
 ## Results At A Glance
 

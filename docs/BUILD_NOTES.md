@@ -14834,3 +14834,22 @@ then choose an independent preregistered scientific lane.
 
 Immediate gate: commit, push, and green the all-false request, then create and
 separately green its proof-only closeout. No real operation is authorized.
+
+### EEGMMIDB-UG1 request remotely green; proof closeout recorded
+
+- Exact all-false request `c642d90b646ff32c6d83e648f7d7779810605e11`
+  passed Base Python job `97322606634`, Optional Neuro Readers job
+  `97322606501`, and CI `32690289547`.
+- Bound nine exact research, preregistration, request, and test artifacts
+  totaling 56,516 bytes by SHA-256 and Git blob. Canonical artifact-set hash is
+  `0aa60317de6ca5a3afe568eeccaef07ff1134275e1ebd8ccca38d8c76c0d5b43`.
+- Repeated no qualification and performed zero network, real/retained/ignored
+  path, EDF, signal, annotation, target, fit, inference, prediction, scoring,
+  release, or claim operation.
+- Preserved the 5,699-test/204-skip green local suite, 25 focused proof tests,
+  pinned Ruff lint, JSON, compilation, and diff hygiene. The existing
+  repository-wide 605-file formatting backlog remains untouched; all four new
+  UG1 tests are formatted.
+
+Immediate gate: commit, push, and green this proof-only closeout. UG1 is not
+authorized until that barrier passes and a fresh packet-bound decision follows.

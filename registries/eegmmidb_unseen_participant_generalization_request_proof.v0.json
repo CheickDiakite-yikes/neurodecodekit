@@ -1,0 +1,134 @@
+{
+  "schema_name": "neurodecodekit.eegmmidb_unseen_participant_generalization_request_proof",
+  "schema_version": "0.1.0",
+  "proof_id": "EEGMMIDB-UG1-request-proof-v0",
+  "lane_id": "EEGMMIDB-UG1",
+  "recorded_at_local": "2026-08-24",
+  "status": "proof_only_closeout_local_remote_green_pending",
+  "request_green_proof": {
+    "commit": "c642d90b646ff32c6d83e648f7d7779810605e11",
+    "CI_run_id": 32690289547,
+    "base_python_job_id": 97322606634,
+    "optional_neuro_job_id": 97322606501,
+    "both_required_jobs_green": true
+  },
+  "artifacts": [
+    {
+      "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_RESEARCH.md",
+      "bytes": 8749,
+      "sha256": "59c297d6006a8e0a41500888fc6916667b9be4c94b9bee4e4d17eed7b9c65238",
+      "git_blob": "06e248a524cd7bdc11d7eef0a63926c8a7b33bad"
+    },
+    {
+      "path": "registries/eegmmidb_unseen_participant_generalization_research.v0.json",
+      "bytes": 4890,
+      "sha256": "67d0d1ee100d795e678c5592ac793d1906d07dfd6b8ee55246612816c3f8b2cc",
+      "git_blob": "eaecd779471902e3938737cc0e34225d8a223ea7"
+    },
+    {
+      "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_PREREGISTRATION.md",
+      "bytes": 6056,
+      "sha256": "1b278e7a77db46f5fdc935e019a09c20be6b2fbf9bb957682d227ab30b1bce02",
+      "git_blob": "7dfd599786eca3a4210f796a26f2c615f1750faf"
+    },
+    {
+      "path": "registries/eegmmidb_unseen_participant_generalization_contract.v0.json",
+      "bytes": 6350,
+      "sha256": "1df7f4f139809d94a6135d979e8cd37e1ece9b87d001b12bcefd037c63b8ac37",
+      "git_blob": "8d309854a4cb7ad2663f1b05efad2c9d21c40b84"
+    },
+    {
+      "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_AUTHORIZATION_PACKET.md",
+      "bytes": 8070,
+      "sha256": "ddad6419fb8c00b3653b415c9a644bbd5b27278ce5c10d0de85131604df0dd6b",
+      "git_blob": "c14a23b178add0ad150af866d06851c8d9be97f0"
+    },
+    {
+      "path": "registries/eegmmidb_unseen_participant_generalization_authorization_request.v0.json",
+      "bytes": 10090,
+      "sha256": "6675cdab212197e61b3464612e4283a6e499cdb0cb86439d28acbc4c85e1df22",
+      "git_blob": "ab3824c2164ebd4287677e013b0e48d3aa0addd9"
+    },
+    {
+      "path": "tests/test_eegmmidb_unseen_participant_generalization_research.py",
+      "bytes": 3090,
+      "sha256": "cacdcbf3c2925672a6679b0053536cc9e468bf8194a6638fcb384e3951ba674f",
+      "git_blob": "e490d3aa0934d9cd7d41526b9a4fc8161d676283"
+    },
+    {
+      "path": "tests/test_eegmmidb_unseen_participant_generalization_contract.py",
+      "bytes": 3957,
+      "sha256": "ebf45df0501dc28ad9fb9cc036cffd1b65cb498d58b37457846b9bc762bbedc8",
+      "git_blob": "a994e1725220cd1db92c5367544e5e176e3af0b3"
+    },
+    {
+      "path": "tests/test_eegmmidb_unseen_participant_generalization_authorization_request.py",
+      "bytes": 5264,
+      "sha256": "807da3b10fade9e07997f15b9b2563a16da334527d409c9bc23b12b1763dfcc6",
+      "git_blob": "a41c36529ccd05d68c5b7e62821c5226304a4c2c"
+    }
+  ],
+  "artifact_summary": {
+    "count": 9,
+    "bytes": 56516,
+    "canonical_artifact_set_sha256": "0aa60317de6ca5a3afe568eeccaef07ff1134275e1ebd8ccca38d8c76c0d5b43"
+  },
+  "verification": {
+    "focused_tests": 20,
+    "full_dependency_light_tests": 5699,
+    "expected_skips": 204,
+    "pre_change_dependency_light_tests": 5679,
+    "pinned_ruff_check_green": true,
+    "new_test_format_check_green": true,
+    "registry_JSON_parse_green": true,
+    "compileall_green": true,
+    "git_diff_check_green": true,
+    "repository_wide_format_backlog_files": 605,
+    "format_backlog_pre_existing_and_unmodified": true
+  },
+  "scope_unchanged": {
+    "participants_runs_and_split": true,
+    "model_features_controls_and_gates": true,
+    "resource_caps_and_one_shot_order": true,
+    "routes_and_claim_boundary": true
+  },
+  "current_authorization_flags": {
+    "generated_implementation": false,
+    "remote_metadata": false,
+    "payload_acquisition": false,
+    "retained_real_data_access": false,
+    "signal_header_annotation_event_target_or_label_access": false,
+    "training": false,
+    "inference": false,
+    "prediction_freeze": false,
+    "target_delivery": false,
+    "scoring": false,
+    "scientific_claim_upgrade": false
+  },
+  "proof_operation_counters": {
+    "tracked_artifact_reads": 9,
+    "Git_proof_reads": 9,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "real_retained_ignored_or_consumed_path_operations": 0,
+    "EDF_or_signal_content_opens": 0,
+    "annotation_event_target_or_label_reads": 0,
+    "parameter_update_fits": 0,
+    "model_inferences": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scoring_events": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "next_gate": {
+    "closeout_commit_push_and_both_CI_jobs_green_required": true,
+    "sole_active_Tier_C_packet_identification_allowed_before_closeout_green": false,
+    "fresh_packet_bound_maintainer_message_required_after_identification": true,
+    "current_or_earlier_continue_is_retroactive": false,
+    "any_real_or_generated_stage_authorized_now": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "immutable remotely anchored unseen-participant experiment packet proof",
+    "scientific_claim_not_established": "no real data model prediction target or score was accessed so unseen-person generalization and neural decoding remain unestablished"
+  }
+}

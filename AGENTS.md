@@ -68,9 +68,14 @@ in 15 unseen participants, not movement intention, motor-cortex origin,
 eye-independent neural signal, language, live decoding, hardware, or clinical
 use.
 
-Immediate gate: commit, push, and green the exact all-false UG1 request, then
-create and separately green a non-scope-changing request proof closeout. Only
-after both barriers may UG1 be named the sole active Tier C packet for the
+Exact all-false request `c642d90b646ff32c6d83e648f7d7779810605e11`
+passed Base job `97322606634`, Optional Neuro job `97322606501`, and CI
+`32690289547`. Read the request proof closeout document, machine proof, and
+matching test. They bind nine exact artifacts totaling 56,516 bytes and make
+no scope or authority change.
+
+Immediate gate: commit, push, and green the exact request proof closeout. Only
+after that barrier may UG1 be named the sole active Tier C packet for the
 maintainer's next fresh unambiguous decision. No earlier continuation message
 is retroactive.
 

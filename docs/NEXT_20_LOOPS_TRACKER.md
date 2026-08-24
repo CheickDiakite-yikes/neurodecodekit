@@ -3956,9 +3956,14 @@ missing source EDFs -> 15-fold source LOSO/checkpoint freeze -> 30 fresh EDFs
 -> target-blind prediction freeze -> one 450-target score. New payload is at
 most 256 MiB and incremental disk at most 512 MiB under one CPU thread.
 
-Current gate: commit, push, and remotely green the exact all-false request,
-then separately green its proof closeout. No network, payload, signal, target,
-model, prediction, score, release, or claim operation is authorized now.
+Exact all-false request `c642d90b646ff32c6d83e648f7d7779810605e11`
+passed Base job `97322606634`, Optional Neuro job `97322606501`, and CI
+`32690289547`. Its proof-only closeout binds nine exact artifacts totaling
+56,516 bytes without changing scope or performing a real operation.
+
+Current gate: commit, push, and remotely green the exact proof closeout. No
+network, payload, signal, target, model, prediction, score, release, or claim
+operation is authorized now.
 
 ### MARC2-VR34P - All-False Exact-Count Private Confirmation Request Prepared
 

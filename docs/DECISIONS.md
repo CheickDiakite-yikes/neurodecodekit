@@ -12842,3 +12842,23 @@ Boundary decision: preparation authorizes nothing. The maximum future claim is
 zero-calibration left/right EEGMMIDB protocol-condition prediction in 15 unseen
 participants, not movement intention, motor-cortex origin, eye-independent
 neural information, thought/language decoding, live operation, or hardware.
+
+## 0452 - Bind the Remotely Green UG1 Request
+
+Proof decision: exact all-false request
+`c642d90b646ff32c6d83e648f7d7779810605e11` passed CI `32690289547`, Base
+Python job `97322606634`, and Optional Neuro Readers job `97322606501`.
+
+Binding decision: freeze nine exact UG1 research, preregistration, request, and
+test artifacts totaling 56,516 bytes by SHA-256 and Git blob. Preserve the
+canonical artifact-set hash
+`0aa60317de6ca5a3afe568eeccaef07ff1134275e1ebd8ccca38d8c76c0d5b43`.
+
+Scope decision: change no cohort, run, target, model, control, gate, resource
+cap, route, or claim. Record only tracked-artifact and Git-proof reads; every
+network, real-data, model, target, score, release, and claim counter remains
+zero.
+
+Transition decision: this closeout has no effect until its exact commit is
+pushed and both CI jobs pass. Only then may UG1 become the sole active Tier C
+packet for a fresh maintainer decision. No earlier continuation is authority.

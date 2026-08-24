@@ -35,10 +35,15 @@ The staged future envelope is 36 metadata requests, at most 36 new EDFs and
 thread, at most 300 fits and 640 prediction sets, one target delivery, one
 score, and zero retry or rerun. Every authority flag is false now.
 
-Immediate gate: verify, commit, push, and remotely green the exact all-false
-UG1 request, then add a non-scope-changing proof closeout. Only after both are
-green may UG1 be identified as the sole active Tier C packet for a fresh
-maintainer decision. No earlier `continue` is retroactive authority.
+Exact all-false request `c642d90b646ff32c6d83e648f7d7779810605e11`
+passed Base job `97322606634`, Optional Neuro job `97322606501`, and CI
+`32690289547`. Its proof-only closeout binds nine immutable artifacts totaling
+56,516 bytes and changes no scope.
+
+Immediate gate: commit, push, and remotely green the exact UG1 request proof
+closeout. Only afterward may UG1 be identified as the sole active Tier C
+packet for a fresh maintainer decision. No earlier `continue` is retroactive
+authority.
 
 ## Previous Gate: MARC2-VR39P Aggregate R2 Closeout
 
