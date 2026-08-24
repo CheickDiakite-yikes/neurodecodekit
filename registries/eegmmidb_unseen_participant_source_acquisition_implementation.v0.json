@@ -17,15 +17,15 @@
   "implementation_artifacts": [
     {
       "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_IMPLEMENTATION.md",
-      "bytes": 5674,
-      "sha256": "21c1107286afe3b4fc2c0524ead4b3732ecedee6a0656af5f5437e2aa922d7ae",
-      "Git_blob": "775a9bf919d193f95dfbb672caafcba825e3af62"
+      "bytes": 6032,
+      "sha256": "f2dc07ce997ccab2469f30974357459692d28f09918504245d0d65f6311d057c",
+      "Git_blob": "af12df99fb6b7902151f7ef6cc56dcbb8778a81a"
     },
     {
       "path": "src/neurodecodekit/datasets/eegmmidb_unseen_participant_source_acquisition.py",
-      "bytes": 72987,
-      "sha256": "f2526bfa9318dfe77490742e6e5c462ddca36ea2d3ee3be9ce89074f034ea031",
-      "Git_blob": "bf889e654d199c6c192b6cc297433ba6d9d5a421"
+      "bytes": 75810,
+      "sha256": "3e6d7c8ee9b52286860d59c26061f3f52521905d91bfad166c7618feaacc7e62",
+      "Git_blob": "5ee6c4a0b1a6cc479ba53afdbd9a425d3ca4cacf"
     },
     {
       "path": "src/neurodecodekit/eegmmidb_ug1_source_acquisition_cli.py",
@@ -47,7 +47,7 @@
     }
   ],
   "implementation_artifact_count": 5,
-  "implementation_artifact_bytes": 99876,
+  "implementation_artifact_bytes": 103057,
   "isolation": {
     "new_source_acquisition_module": "neurodecodekit.datasets.eegmmidb_unseen_participant_source_acquisition",
     "new_isolated_sidecar_CLI": "neurodecodekit.eegmmidb_ug1_source_acquisition_cli",
@@ -149,6 +149,20 @@
     ],
     "generated_or_mock_only": true,
     "exact_sentinel_payload_sizes": true,
+    "aggregate_measurements_required": [
+      "generated_body_bytes_read",
+      "successful_generated_bundle_count",
+      "successful_generated_payload_body_bytes",
+      "mock_requests",
+      "opaque_post_write_passes",
+      "maximum_stream_chunk_bytes",
+      "peak_application_visible_response_header_bytes",
+      "peak_incremental_disk_bytes",
+      "generated_metadata_bytes",
+      "retained_generated_output_bytes",
+      "runtime_seconds",
+      "peak_process_tree_RSS_bytes"
+    ],
     "network_allowed": false,
     "real_URL_or_local_payload_path_allowed": false,
     "retained_generated_fixture_bytes": 0,

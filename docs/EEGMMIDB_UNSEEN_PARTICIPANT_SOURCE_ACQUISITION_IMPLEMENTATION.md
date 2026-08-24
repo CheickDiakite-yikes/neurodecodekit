@@ -108,7 +108,11 @@ The registered Stage S-A1 pass has 27 ordered cases:
 Focused unit tests exercise the component contracts, including exact-sized
 generated streams. The sole registered aggregate qualification has not run. It
 may run only after this exact implementation commit is pushed and both required
-CI jobs pass.
+CI jobs pass. Its aggregate record must carry observed input/body bytes,
+successful bundle count, mock request count, post-write-pass count, maximum
+stream read, peak response-header bytes, peak incremental disk, runtime, peak
+RSS, output bytes, retained bytes, warnings, unavailable latency, and all zero
+real/scientific counters forward from the measured core outcomes.
 
 ## Current Operation Ledger
 

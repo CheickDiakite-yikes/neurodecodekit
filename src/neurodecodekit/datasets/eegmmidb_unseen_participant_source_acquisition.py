@@ -1483,6 +1483,12 @@ def run_generated_qualification(
     mock_requests = 0
     payload_bytes = 0
     metadata_bytes = 0
+    generated_body_bytes_read = 0
+    successful_bundle_count = 0
+    opaque_post_write_passes = 0
+    peak_incremental_disk_bytes = 0
+    maximum_stream_read_bytes = 0
+    peak_response_header_bytes = 0
     direct_refusals = 0
 
     def execute(
@@ -1498,6 +1504,9 @@ def run_generated_qualification(
         cleanup: bool = True,
     ) -> SourceAcquisitionOutcome | None:
         nonlocal mock_requests, payload_bytes, metadata_bytes
+        nonlocal generated_body_bytes_read, successful_bundle_count
+        nonlocal opaque_post_write_passes, peak_incremental_disk_bytes
+        nonlocal maximum_stream_read_bytes, peak_response_header_bytes
         case_layout = layout or _generated_layout(name)
         opener = FixtureGetOpener(exchanges)
         try:
@@ -1514,6 +1523,9 @@ def run_generated_qualification(
             )
         except UG1SourceAcquisitionRefusal:
             mock_requests += len(opener.calls)
+            generated_body_bytes_read += sum(
+                row.response._position for row in exchanges
+            )
             if expect_success:
                 raise
             passed.append(name)
@@ -1523,8 +1535,23 @@ def run_generated_qualification(
         if not expect_success:
             raise UG1SourceAcquisitionRefusal(f"generated mutation unexpectedly passed: {name}")
         mock_requests += len(opener.calls)
+        generated_body_bytes_read += sum(row.response._position for row in exchanges)
         payload_bytes += int(outcome.measurements["payload_body_bytes"])
         metadata_bytes += int(outcome.measurements["combined_metadata_bytes"])
+        successful_bundle_count += 1
+        opaque_post_write_passes += int(outcome.measurements["opaque_post_write_passes"])
+        peak_incremental_disk_bytes = max(
+            peak_incremental_disk_bytes,
+            int(outcome.measurements["incremental_disk_bytes_peak"]),
+        )
+        maximum_stream_read_bytes = max(
+            maximum_stream_read_bytes,
+            int(outcome.measurements["maximum_requested_stream_read_bytes"]),
+        )
+        peak_response_header_bytes = max(
+            peak_response_header_bytes,
+            int(outcome.measurements["application_visible_response_header_bytes"]),
+        )
         passed.append(name)
         _remove_generated_layout(root, case_layout, specs)
         return outcome
@@ -1679,7 +1706,8 @@ def run_generated_qualification(
     collision_parent.rmdir()
 
     second_layout = _generated_layout("second_invocation")
-    opener = FixtureGetOpener(build_generated_exchanges(repo_root))
+    second_source = build_generated_exchanges(repo_root)
+    opener = FixtureGetOpener(second_source)
     first = run_source_acquisition(
         repo_root=repo_root,
         opener=opener,
@@ -1691,8 +1719,23 @@ def run_generated_qualification(
         rss_reader=lambda: 32 * 1024 * 1024,
     )
     mock_requests += len(opener.calls)
+    generated_body_bytes_read += sum(row.response._position for row in second_source)
     payload_bytes += int(first.measurements["payload_body_bytes"])
     metadata_bytes += int(first.measurements["combined_metadata_bytes"])
+    successful_bundle_count += 1
+    opaque_post_write_passes += int(first.measurements["opaque_post_write_passes"])
+    peak_incremental_disk_bytes = max(
+        peak_incremental_disk_bytes,
+        int(first.measurements["incremental_disk_bytes_peak"]),
+    )
+    maximum_stream_read_bytes = max(
+        maximum_stream_read_bytes,
+        int(first.measurements["maximum_requested_stream_read_bytes"]),
+    )
+    peak_response_header_bytes = max(
+        peak_response_header_bytes,
+        int(first.measurements["application_visible_response_header_bytes"]),
+    )
     second_opener = FixtureGetOpener(build_generated_exchanges(repo_root))
     try:
         run_source_acquisition(
@@ -1764,6 +1807,16 @@ def run_generated_qualification(
 
     if tuple(passed) != QUALIFICATION_CASES:
         raise UG1SourceAcquisitionRefusal("generated qualification case order differs")
+    if (
+        successful_bundle_count != 3
+        or payload_bytes != 3 * EXACT_PAYLOAD_BYTES
+        or opaque_post_write_passes != 18
+        or maximum_stream_read_bytes <= 0
+        or maximum_stream_read_bytes > CHUNK_BYTES
+        or peak_incremental_disk_bytes > MAX_INCREMENTAL_DISK_BYTES
+        or peak_response_header_bytes > MAX_HEADER_BYTES
+    ):
+        raise UG1SourceAcquisitionRefusal("generated qualification measurements differ")
     if source_fingerprint != _sha256(
         _canonical_json(
             {
@@ -1790,13 +1843,18 @@ def run_generated_qualification(
         "cases": passed,
         "mock_requests": mock_requests,
         "real_requests": 0,
+        "generated_body_bytes_read": generated_body_bytes_read,
+        "successful_generated_bundle_count": successful_bundle_count,
         "successful_generated_payload_body_bytes": payload_bytes,
         "generated_metadata_bytes": metadata_bytes,
         "retained_generated_output_bytes": 0,
+        "opaque_post_write_passes": opaque_post_write_passes,
+        "peak_incremental_disk_bytes": peak_incremental_disk_bytes,
+        "peak_application_visible_response_header_bytes": peak_response_header_bytes,
         "direct_refusals": direct_refusals,
         "deterministic_replay": True,
         "source_immutability_checks": 1,
-        "maximum_stream_chunk_bytes": CHUNK_BYTES,
+        "maximum_stream_chunk_bytes": maximum_stream_read_bytes,
         "runtime_seconds": runtime,
         "peak_process_tree_RSS_bytes": peak_rss,
         "source_fixture_sha256": source_fingerprint,
@@ -1811,6 +1869,7 @@ def run_generated_qualification(
             "scientific_claim_established": False,
             "real_EEG_accessed": False,
             "unseen_participant_generalization_established": False,
+            "end_to_end_decoding_latency_measured": False,
         },
     }
     payload = _canonical_json(summary)
