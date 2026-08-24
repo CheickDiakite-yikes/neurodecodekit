@@ -1,0 +1,69 @@
+{
+  "schema_name": "neurodecodekit.bnci_2014_001_stage_a_redirect_recovery_request_proof",
+  "schema_version": "0.1.0",
+  "proof_id": "BNCI-C3C5-1-A-R-request-proof-2026-08-24",
+  "recorded_at_local": "2026-08-24",
+  "lane_id": "BNCI-C3C5-1",
+  "status": "proof_only_closeout_effective_after_own_remote_green",
+  "green_request": {
+    "commit": "69527929cbe590cf4d8a83cfc68bbff9867c28c9",
+    "CI_run_id": 32783593146,
+    "base_python_job_id": 97610714226,
+    "base_python_conclusion": "success",
+    "optional_neuro_readers_job_id": 97610714567,
+    "optional_neuro_readers_conclusion": "success",
+    "both_required_jobs_green": true
+  },
+  "bound_request_artifacts": [
+    {
+      "path": "docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_AUTHORIZATION_PACKET.md",
+      "bytes": 3205,
+      "sha256": "7123de40eff225d5b4fec369e924bd165a5a0805bba4562b6a7fed401cf03b87",
+      "Git_blob": "a9d64b6ee97303e404fc9bfe3e5161916849f48a"
+    },
+    {
+      "path": "registries/bnci_2014_001_stage_a_redirect_recovery_authorization_request.v0.json",
+      "bytes": 6375,
+      "sha256": "acdc51cd92369a79b46189fc83750e3c015c6d09e12c032e7e78bda511c0537e",
+      "Git_blob": "027a490764fb5c6a3f2a592a3b7f11bc92833f5f"
+    },
+    {
+      "path": "tests/test_bnci_2014_001_stage_a_redirect_recovery_request.py",
+      "bytes": 2982,
+      "sha256": "546121e9cb9b0b4e1d2f10f4e9e781af9ff8d91ab0a625d11ccda71807a1a44c",
+      "Git_blob": "7e85690f32887b51dcbb4fc21ed7b151f105daae"
+    }
+  ],
+  "bound_summary": {
+    "artifact_count": 3,
+    "artifact_bytes": 12562
+  },
+  "proof_operations": {
+    "GitHub_CI_verification_calls": 1,
+    "committed_artifact_reads": 3,
+    "public_manifest_GETs": 0,
+    "payload_requests": 0,
+    "payload_body_bytes": 0,
+    "ignored_path_operations": 0,
+    "MAT_semantic_content_opens": 0,
+    "model_runs": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "authority": {
+    "recovery_authorized": false,
+    "generated_recovery_implementation": false,
+    "manifest_or_payload_network": false,
+    "Stage_Q_or_later": false,
+    "decision_required_after_this_proof_is_remotely_green": true
+  },
+  "next_gate": "commit_push_remote_green_then_identify_BNCI-C3C5-1-A-R_as_sole_active_Tier_C_packet",
+  "claim_boundary": {
+    "engineering_capability": "recovery_request_has_exact_remote_and_artifact_proof",
+    "scientific_claim_established": false,
+    "unseen_person_generalization": false,
+    "EEG_beyond_EOG": false,
+    "decoding_performance": false
+  }
+}
