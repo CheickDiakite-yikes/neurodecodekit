@@ -120,11 +120,22 @@ committed, pushed, and remotely green one sequential 36-request HTTPS `HEAD`
 identity pass. Redirects, retries, response-body bytes, EDF parsing/download,
 local real-path access, and partial-inventory success are forbidden.
 
-Immediate gate: verify, commit, push, and remotely green the all-false Stage M
-request, then add and separately green its proof-only closeout. No Stage M
-implementation, generated qualification, network request, URL/path access,
-EDF, source/fresh acquisition, target, model, score, release, device, or claim
-operation is authorized now.
+Exact Stage M request `e2647d609a99997ac417dac5d8efb2dad61863a0`
+passed Base job `97376524550`, Optional Neuro Readers job `97376524804`, and
+CI `32709110804`.
+
+Read the Stage M request proof-only closeout, machine proof, and matching test.
+They bind the three unchanged request artifacts totaling 20,189 bytes under
+canonical artifact-set SHA-256
+`9b1c7e1e3baeece32cc26a238130af746d737d908c2dfe286da581fb37be729c`
+and perform only tracked-artifact and Git-proof reads.
+
+Immediate gate: verify, commit, push, and remotely green the proof-only
+closeout. Only then identify `EEGMMIDB-UG1-M` as the sole active Tier C packet
+and require fresh packet-bound maintainer words. No Stage M implementation,
+generated qualification, network request, URL/path access, EDF, source/fresh
+acquisition, target, model, score, release, device, or claim operation is
+authorized now.
 
 ### Historical VR39P path
 

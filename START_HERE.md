@@ -85,9 +85,20 @@ The future real surface is HTTPS `HEAD` only, zero redirects, zero retries,
 zero response-body bytes, and no EDF parsing or download. It binds 20 exact
 Stage G artifacts totaling 305,662 bytes.
 
-Immediate gate: commit, push, and remotely green the all-false Stage M request,
-then add and separately green a proof-only closeout. No implementation,
-network request, real URL/path access, or data operation is authorized now.
+Exact Stage M request `e2647d609a99997ac417dac5d8efb2dad61863a0`
+passed Base job `97376524550`, Optional job `97376524804`, and CI
+`32709110804`.
+
+Read
+`docs/EEGMMIDB_UNSEEN_PARTICIPANT_METADATA_REQUEST_PROOF_CLOSEOUT.md`, its
+machine proof, and matching test. The proof binds the three unchanged request
+artifacts totaling 20,189 bytes and performs only tracked-artifact and Git
+proof reads.
+
+Immediate gate: commit, push, and remotely green this proof-only closeout.
+Only then identify `EEGMMIDB-UG1-M` as the sole active Tier C packet and ask
+for fresh packet-bound maintainer words. No implementation, network request,
+real URL/path access, or data operation is authorized now.
 
 ## Previous Gate: MARC2-VR39P Aggregate R2 Closeout
 

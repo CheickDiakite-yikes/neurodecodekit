@@ -3937,7 +3937,7 @@ then may the one registered target-free structural discriminator execute.
 
 ### EEGMMIDB-UG1 - Unseen-Participant Generalization
 
-Status: **Stage G remotely closed; all-false Stage M request prepared locally**
+Status: **Stage G remotely closed; Stage M request green; proof closeout pending**
 
 This lane replaces the consumed VR39P structural branch with a direct
 scientific question. One model will be fitted on S001-S015 and, only after a
@@ -4003,9 +4003,15 @@ and, only after every later green barrier, one sequential 36-request HTTPS
 download an EDF, inspect a local data path, or continue into source, fresh,
 target, model, or score stages.
 
-Current gate: commit, push, and remotely green the Stage M request, then add
-and separately green its proof-only closeout. No implementation, network, URL,
-path, data, release, or claim operation is authorized now.
+Exact Stage M request `e2647d609a99997ac417dac5d8efb2dad61863a0`
+passed Base job `97376524550`, Optional job `97376524804`, and CI
+`32709110804`. The proof-only closeout binds its three exact request artifacts
+totaling 20,189 bytes without changing scope or performing an operation.
+
+Current gate: commit, push, and remotely green the proof-only closeout. Only
+then identify `EEGMMIDB-UG1-M` as the sole active Tier C packet. No
+implementation, network, URL/path, data, release, or claim operation is
+authorized now.
 
 ### MARC2-VR34P - All-False Exact-Count Private Confirmation Request Prepared
 

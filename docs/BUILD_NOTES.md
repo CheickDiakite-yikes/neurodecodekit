@@ -14958,3 +14958,22 @@ closed pending a separate exact Tier C decision.
 
 Immediate gate: commit, push, and remotely green this all-false request, then
 add and separately green its proof-only closeout. It authorizes no operation.
+
+### EEGMMIDB-UG1 Stage M request remotely green; proof closeout recorded
+
+- Exact all-false request `e2647d609a99997ac417dac5d8efb2dad61863a0`
+  passed Base Python job `97376524550`, Optional Neuro Readers job
+  `97376524804`, and CI `32709110804`.
+- Bound the three unchanged packet, machine-request, and request-test artifacts
+  totaling 20,189 bytes by exact byte size, SHA-256, and Git blob.
+- Canonical request-artifact-set SHA-256 is
+  `9b1c7e1e3baeece32cc26a238130af746d737d908c2dfe286da581fb37be729c`.
+- Performed only three tracked-artifact and three Git-proof reads. No Stage M
+  implementation, generated qualification, network, URL/path, metadata, body,
+  EDF, payload, target, model, score, release, or claim operation occurred.
+- Twelve combined request/proof tests pass in the optional environment; five
+  proof tests and seven request tests remain dependency-light.
+
+Immediate gate: commit, push, and remotely green this proof-only closeout.
+Only then identify `EEGMMIDB-UG1-M` as the sole active Tier C packet and seek
+fresh packet-bound maintainer words.

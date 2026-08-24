@@ -80,8 +80,10 @@ not unseen-person or neural evidence; Stage M and every real operation remain
 closed. Stage G closeout `5cc3e0e` passed both jobs in CI `32708050897`.
 The next all-false
 [Stage M metadata packet](docs/EEGMMIDB_UNSEEN_PARTICIPANT_METADATA_AUTHORIZATION_PACKET.md)
-proposes only 36 body-blind `HEAD` checks after separate proof barriers; it
-currently authorizes no implementation, network, URL, path, or data access.
+proposes only 36 body-blind `HEAD` checks after separate proof barriers. Exact
+request `e2647d6` passed both jobs in CI `32709110804`; its proof-only closeout
+is now pending remote green and still authorizes no implementation, network,
+URL, path, or data access.
 
 ## Results At A Glance
 

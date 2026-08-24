@@ -12979,3 +12979,27 @@ Authorization decision: every authority flag remains false. Commit, push, and
 green this request, then add and separately green a proof-only closeout before
 naming it as the sole active Tier C packet. No current network, URL/path, EDF,
 data, target, model, score, release, or claim operation is permitted.
+
+## 0457 - Bind the Remotely Green UG1 Stage M Request
+
+Proof decision: exact all-false request
+`e2647d609a99997ac417dac5d8efb2dad61863a0` passed CI `32709110804`, Base
+Python job `97376524550`, and Optional Neuro Readers job `97376524804`.
+
+Binding decision: freeze the three unchanged request artifacts totaling 20,189
+bytes by SHA-256 and Git blob. Preserve canonical artifact-set SHA-256
+`9b1c7e1e3baeece32cc26a238130af746d737d908c2dfe286da581fb37be729c`.
+
+Scope decision: preserve the exact 36 paths, HEAD-only zero-body transport,
+zero redirect/retry policy, resource caps, two-stage ordering, and claim
+boundary. Expand no authority.
+
+Operation decision: record only three tracked-artifact reads and three Git
+proof reads. Every implementation, qualification, network, URL/path, metadata,
+body, EDF, payload, target, fit, inference, score, release, and claim counter
+remains zero.
+
+Transition decision: this closeout has no effect until its exact commit is
+pushed and both required CI jobs pass. Only then may `EEGMMIDB-UG1-M` be named
+as the sole active Tier C packet and fresh packet-bound maintainer words be
+accepted. No earlier `continue` authorizes it.
