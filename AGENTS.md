@@ -153,12 +153,27 @@ and 20 generated cases. A new isolated metadata CLI exposes only `plan` and
 `qualify`; no live execute command exists, and the proof-bound Stage G sidecar
 remains byte-identical.
 
-Immediate gate: verify, commit, push, and remotely green the exact Stage M1
-implementation. Only then run the one registered generated/mock qualification.
-Stage M2 remains blocked until that result and a separate proof-only closeout
-are remotely green. Do not access any real URL, local real-data path, EDF
+The initial implementation commit exposed one historical Stage G workflow
+hash conflict before any registered run. Corrective commit
+`1c68a775294e08013f6ef0780eb8901917699db0` restored that exact workflow
+identity and passed Base job `97395810059`, Optional Neuro Readers job
+`97395810337`, and CI `32715529168`. A clean dependency-free local run passed
+all 5,822 tests with 212 optional skips.
+
+Read the Stage M1 result document, machine result, and matching test. The sole
+registered generated qualification passed all 20 cases with 297 mock `HEAD`
+requests, deterministic replay, 8,354 generated fixture bytes, 46,324 metadata
+bytes emitted across successful cases, 1,416 aggregate output bytes, runtime
+0.017772541963495314 seconds, and 33,341,440-byte peak RSS. Every real request,
+body, EDF, payload, target, model, training, score, network, and new-payload
+counter was zero. The run is consumed and must not be repeated.
+
+Immediate gate: commit, push, and remotely green the exact Stage M1 result.
+Then add and separately green a proof-only closeout binding the implementation
+and result without rerunning qualification. Stage M2 remains blocked until that
+proof barrier passes. Do not access any real URL, local real-data path, EDF
 content, source/fresh payload, target, model, score, release, device, or claim
-surface.
+surface yet.
 
 ### Historical VR39P path
 

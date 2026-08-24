@@ -15025,3 +15025,33 @@ and every real operation remain closed until that barrier passes.
 Immediate gate: commit, push, and remotely green the exact implementation.
 Then run one registered generated/mock Stage M1 qualification. Stage M2 remains
 closed pending the measured result and a separate green proof-only closeout.
+
+### EEGMMIDB-UG1 Stage M1 generated qualification passed once
+
+- Initial implementation commit `3f49821869fc89595741d89d0bf52d4454ca3edd`
+  exposed one complete-suite conflict because two added CI help lines changed a
+  workflow hash frozen by the consumed Stage G result. No registered
+  qualification had run.
+- Corrective commit `1c68a775294e08013f6ef0780eb8901917699db0`
+  removed only those two lines, restored the exact historical workflow
+  identity, and passed Base job `97395810059`, Optional Neuro Readers job
+  `97395810337`, and CI `32715529168`.
+- A clean dependency-free local run passed all 5,822 tests with 212 optional
+  skips. Thirty-five focused Stage G/M1 implementation/result tests pass,
+  together with Ruff, JSON validation, and `git diff --check`.
+- The sole registered Stage M1 run passed all 20 frozen generated cases with
+  deterministic replay, one source immutability check, and 297 mock `HEAD`
+  requests.
+- Measured 8,354 generated fixture bytes, 46,324 metadata bytes emitted across
+  successful cases, 1,416 aggregate output bytes, 0.017772541963495314 seconds
+  runtime, 33,341,440-byte peak process-tree RSS, and 101,540,491,264 initial
+  free-disk bytes.
+- Real request, response-body, real path, EDF, payload, target, fit, inference,
+  training, score, network, and new-payload counters were zero.
+- The aggregate output SHA-256 is
+  `9f91843e6a20f8794cf19105116b3bcf13a2a3deff496a3c44ff30ecbcfeafe3`;
+  the temporary artifact is not committed.
+
+Immediate gate: commit, push, and remotely green the result, then add and
+separately green a proof-only closeout. Stage M2 remains blocked until that
+proof barrier passes.

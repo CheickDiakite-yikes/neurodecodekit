@@ -1,5 +1,14 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
+> **Immediate gate (2026-08-24):** corrected EEGMMIDB-UG1 Stage M1
+> implementation `1c68a77` passed Base job `97395810059`, Optional job
+> `97395810337`, and CI `32715529168` before the sole generated qualification.
+> All 20 cases passed with 297 mock `HEAD` requests, exact replay, 8,354 input
+> fixture bytes, 1,416 aggregate output bytes, 0.0178 seconds runtime, and 33.3
+> MB peak RSS. Real URL, body, EDF, payload, target, model, training, scoring,
+> and network counts were zero. The run is consumed. Commit and green the
+> result, then separately green its proof-only closeout before Stage M2.
+
 > **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its
 > sole 168-path generated qualification. Proof-only closeout `cec5fe8` then

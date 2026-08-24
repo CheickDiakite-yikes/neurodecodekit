@@ -13059,3 +13059,32 @@ Boundary decision: the code includes a TLS-verified standard-library opener
 for later proof-gated use, but no network call or real path access occurs now.
 Stage M2, EDF content, acquisition, targets, models, scoring, release, and all
 scientific claims remain closed.
+
+## 0460 - Consume the Sole Stage M1 Generated Qualification
+
+Proof decision: initial implementation CI identified a historical proof hash
+conflict before qualification. Corrective commit
+`1c68a775294e08013f6ef0780eb8901917699db0` restored the consumed Stage G
+workflow identity and passed CI `32715529168`, Base Python job `97395810059`,
+and Optional Neuro Readers job `97395810337`.
+
+Execution decision: invoke the registered 20-case generated/mock qualification
+exactly once after both remote jobs were green. The pass returned
+`EEGMMIDBUG1M-G1` with all cases in frozen order, 297 mock `HEAD` requests,
+deterministic replay, and one source immutability check. Consume the run with
+no retry or rerun.
+
+Measurement decision: record 8,354 generated input bytes, 46,324 metadata
+bytes emitted across successful cases, 1,416 aggregate output bytes with
+SHA-256 `9f91843e6a20f8794cf19105116b3bcf13a2a3deff496a3c44ff30ecbcfeafe3`,
+0.017772541963495314 seconds runtime, 33,341,440-byte peak process-tree RSS,
+and 101,540,491,264 initial free-disk bytes.
+
+Boundary decision: preserve zero real request, response-body, local real-path,
+EDF, payload, target, fit, inference, training, score, network, new-payload,
+release, and scientific-claim operations. Producer causality is not applicable
+to metadata identity and end-to-end latency was not measured.
+
+Transition decision: commit and green the measured result, then separately
+commit and green a proof-only closeout. Stage M2 remains blocked until that
+proof barrier passes.

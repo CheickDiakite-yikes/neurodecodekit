@@ -84,12 +84,15 @@ proposes only 36 body-blind `HEAD` checks after separate proof barriers. Exact
 request `e2647d6` passed both jobs in CI `32709110804`; proof-only closeout
 `e9c11da` passed both jobs in CI `32710175884`. After Stage M was named as the
 sole active Tier C packet, the maintainer's exact `continue` was recorded in a
-packet-bound decision with delayed effect. Until that decision is remotely
-green, no implementation, network, URL, path, or data access is open. Decision
-`021bf8a` passed both jobs in CI `32712235191`; the isolated Stage M1 client is
-now implemented with strict mock-qualified `HEAD` semantics and no live
-execution command, pending its own remote-green implementation barrier before
-the one registered generated qualification.
+packet-bound decision with delayed effect. Decision `021bf8a` passed both jobs
+in CI `32712235191`. Corrected implementation `1c68a77` then passed Base job
+`97395810059`, Optional job `97395810337`, and CI `32715529168` before the sole
+Stage M1 generated qualification. All 20 cases passed with 297 mock `HEAD`
+requests, deterministic replay, 8,354 generated fixture bytes, 1,416 aggregate
+output bytes, 0.0178 seconds runtime, and 33.3 MB peak RSS. Every real request,
+body, EDF, payload, target, model, training, score, and network counter remained
+zero. The run is consumed; Stage M2 is blocked until the result and a separate
+proof-only closeout are remotely green.
 
 ## Results At A Glance
 

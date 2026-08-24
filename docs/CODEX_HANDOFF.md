@@ -1,5 +1,17 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current EEGMMIDB-UG1 Stage M1 result gate, 2026-08-24: corrected
+> implementation `1c68a775294e08013f6ef0780eb8901917699db0` passed Base job
+> `97395810059`, Optional Neuro Readers job `97395810337`, and CI
+> `32715529168` before the sole registered generated qualification. All 20
+> cases passed with 297 mock `HEAD` requests, deterministic replay, 8,354
+> generated fixture bytes, 1,416 aggregate output bytes, 0.017772541963495314
+> seconds runtime, and 33,341,440-byte peak RSS. Real request, body, EDF,
+> payload, target, model, training, score, and network counters were zero. The
+> run is consumed. Immediate gate: commit, push, and green the result, then add
+> and separately green a proof-only closeout. Stage M2 remains closed until
+> that barrier passes.
+
 > Current EEGMMIDB-UG1 Stage M1 implementation gate, 2026-08-24: exact
 > authorization decision `021bf8a1f2f12a8e7388a561535328cd0dc0dba2`
 > passed Base job `97385926125`, Optional job `97385926444`, and CI

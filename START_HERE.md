@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: EEGMMIDB-UG1 Stage M Authorization Decision
+## Current Gate: EEGMMIDB-UG1 Stage M1 Result Closeout
 
 VR39P result closeout `474d49f53e1a46633b99b0ef2ff62b9abebe7a9c`
 passed Base job `97317987437`, Optional job `97317987655`, and CI
@@ -117,12 +117,23 @@ and matching tests. The implementation freezes the exact `HEAD`-only client,
 canonical inventory and receipt, 20 generated cases, and resource/refusal
 boundaries. A new isolated metadata sidecar exposes `plan` and `qualify` but
 no live `execute` command; the proof-bound Stage G sidecar remains
-byte-identical. No registered qualification or network request has run.
+byte-identical.
 
-Immediate gate: commit, push, and remotely green this exact Stage M1
-implementation. Only then run the one registered generated/mock qualification.
-Stage M2 remains closed until that result and a separate proof-only closeout
-are remotely green.
+Corrected implementation `1c68a775294e08013f6ef0780eb8901917699db0`
+passed Base job `97395810059`, Optional Neuro Readers job `97395810337`, and
+CI `32715529168`. The sole Stage M1 qualification then passed all 20 generated
+cases with 297 mock `HEAD` requests, exact replay, and zero real request, body,
+EDF, payload, target, model, training, or score operations. It processed 8,354
+generated fixture bytes in 0.017772541963495314 seconds at 33,341,440-byte peak
+RSS and emitted a 1,416-byte aggregate with SHA-256
+`9f91843e6a20f8794cf19105116b3bcf13a2a3deff496a3c44ff30ecbcfeafe3`.
+The run is consumed and may not be repeated.
+
+Read the Stage M1 result document, machine result, and matching test.
+Immediate gate: commit, push, and green this exact result, then add and
+separately green a proof-only closeout. Stage M2 remains blocked until that
+proof barrier passes; no real URL, EDF content, payload, target, model, score,
+release, or scientific claim surface is open now.
 
 ## Previous Gate: MARC2-VR39P Aggregate R2 Closeout
 
