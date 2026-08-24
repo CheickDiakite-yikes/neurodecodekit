@@ -77,7 +77,11 @@ qualification passed all 17 case classes with 61 fits and 420 prediction sets
 in 443.246267 seconds at 276,856,832-byte peak RSS. It read zero real paths,
 EEG payloads, caches, or real targets. This is an executable-pipeline result,
 not unseen-person or neural evidence; Stage M and every real operation remain
-closed.
+closed. Stage G closeout `5cc3e0e` passed both jobs in CI `32708050897`.
+The next all-false
+[Stage M metadata packet](docs/EEGMMIDB_UNSEEN_PARTICIPANT_METADATA_AUTHORIZATION_PACKET.md)
+proposes only 36 body-blind `HEAD` checks after separate proof barriers; it
+currently authorizes no implementation, network, URL, path, or data access.
 
 ## Results At A Glance
 

@@ -1,0 +1,149 @@
+{
+  "schema_name": "neurodecodekit.eegmmidb_unseen_participant_metadata_authorization_request",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-24",
+  "request_id": "EEGMMIDB-UG1-M",
+  "status": "all_authority_false_request_only",
+  "green_stage_G_closeout": {
+    "commit": "5cc3e0e9fd5739e8836ddb91252f18ca7849c824",
+    "CI_run_id": 32708050897,
+    "base_python_job_id": 97373297588,
+    "optional_neuro_readers_job_id": 97373297708,
+    "both_required_jobs_green": true
+  },
+  "bound_pre_request_artifacts": [
+    {"path":"docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_RESEARCH.md","bytes":8749,"sha256":"59c297d6006a8e0a41500888fc6916667b9be4c94b9bee4e4d17eed7b9c65238","git_blob":"06e248a524cd7bdc11d7eef0a63926c8a7b33bad"},
+    {"path":"registries/eegmmidb_unseen_participant_generalization_research.v0.json","bytes":4890,"sha256":"67d0d1ee100d795e678c5592ac793d1906d07dfd6b8ee55246612816c3f8b2cc","git_blob":"eaecd779471902e3938737cc0e34225d8a223ea7"},
+    {"path":"docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_PREREGISTRATION.md","bytes":6056,"sha256":"1b278e7a77db46f5fdc935e019a09c20be6b2fbf9bb957682d227ab30b1bce02","git_blob":"7dfd599786eca3a4210f796a26f2c615f1750faf"},
+    {"path":"registries/eegmmidb_unseen_participant_generalization_contract.v0.json","bytes":6350,"sha256":"1df7f4f139809d94a6135d979e8cd37e1ece9b87d001b12bcefd037c63b8ac37","git_blob":"8d309854a4cb7ad2663f1b05efad2c9d21c40b84"},
+    {"path":"docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_AUTHORIZATION_PACKET.md","bytes":8070,"sha256":"ddad6419fb8c00b3653b415c9a644bbd5b27278ce5c10d0de85131604df0dd6b","git_blob":"c14a23b178add0ad150af866d06851c8d9be97f0"},
+    {"path":"registries/eegmmidb_unseen_participant_generalization_authorization_request.v0.json","bytes":10090,"sha256":"6675cdab212197e61b3464612e4283a6e499cdb0cb86439d28acbc4c85e1df22","git_blob":"ab3824c2164ebd4287677e013b0e48d3aa0addd9"},
+    {"path":"docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_REQUEST_PROOF_CLOSEOUT.md","bytes":2599,"sha256":"a8906739f551fc47c5af7b50029f1850d34844783ae13cae6ba6a972ced155f7","git_blob":"ed90f78dc5ac32e91f6d71d71303c170e5468ec7"},
+    {"path":"registries/eegmmidb_unseen_participant_generalization_request_proof.v0.json","bytes":5343,"sha256":"a86fa721291560f9e19d3a993de70763b74cd907f39d077513f76b5b0711d8a2","git_blob":"68242a43cb3164ea0d16c2676903874524117629"},
+    {"path":"docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_AUTHORIZATION_DECISION.md","bytes":9250,"sha256":"ba5c8ae710b5b202267c3c8c5202635b72a7a9d09670864996c1f73638156478","git_blob":"14b9a12107f9f3356cfd2cf4eaa5b79114d9312f"},
+    {"path":"registries/eegmmidb_unseen_participant_generalization_authorization_decision.v0.json","bytes":9968,"sha256":"9ff594953549740aac66bcd6428a10be078869cb8550b9fabd4d4985f085dc18","git_blob":"058e4ac15527ebb9ecbfc910900760384695d14a"},
+    {"path":"docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_AMENDMENT_1.md","bytes":13998,"sha256":"6560c6a379fb74de2a8ecf78a024620c2a86499556965c17e0621f7eb2c1d7f3","git_blob":"628dec5e00471f92588e02bba380ddeff7a77b1d"},
+    {"path":"registries/eegmmidb_unseen_participant_generalization_amendment_1.v0.json","bytes":22758,"sha256":"2d6576e2f31383efdcc1ea9f309e70c4beabdf440149567f7eabcbf1a2b177dd","git_blob":"0bc97e9be3876bff755ed4f567da65bee7e414f5"},
+    {"path":"docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_IMPLEMENTATION.md","bytes":4664,"sha256":"7c1941734bc9bcc4757cd04889362d70761479d5c8f0c8da93ccb0973e565320","git_blob":"577cac4d2524aee708d8a402ef4826c922096b82"},
+    {"path":"registries/eegmmidb_unseen_participant_generalization_implementation.v0.json","bytes":4745,"sha256":"dca1457794d2d9c3c19bfda9e5bec9b13b5ff5b87ca51fee762858988719877d","git_blob":"47b109293288dbaf3c11a2afb900c7888b4aa727"},
+    {"path":"registries/eegmmidb_unseen_participant_generalization_stage_g_result.v0.json","bytes":5326,"sha256":"fd8b7a4a7f59afaf9b42f8fe048b8c05ec5f155fb96ab406c0c41b5813ff7651","git_blob":"2f044f9332975a1770d8aa916b16e3c8d9a90d1b"},
+    {"path":"src/neurodecodekit/datasets/eegmmidb_unseen_participant_acquisition.py","bytes":41092,"sha256":"cfc9d9e515877f7c09309c249fafe15b835da2794c2b188f6fd58cbdd6579b4b","git_blob":"85d767496f2a84aa7e6a43c2b1ba0f8d778536e6"},
+    {"path":"src/neurodecodekit/eegmmidb_ug1_cli.py","bytes":2311,"sha256":"4980be763ff184923532f74f59b0a2d33869be2bb7ce3fef038b5e715457628a","git_blob":"66b1769db42c7408af08eb50a542bcc719407ede"},
+    {"path":"src/neurodecodekit/evaluation/eegmmidb_unseen_participant_score.py","bytes":33662,"sha256":"333755a355ec199e289f3e314474de162a49f649fa47c3789087f11ed59a4665","git_blob":"ea6daaee96a1b19137c9f98a7f51458522927bab"},
+    {"path":"src/neurodecodekit/experiments/eegmmidb_unseen_participant_generalization.py","bytes":99667,"sha256":"c0f98ada6393f2e3213c597c898bf508b484e543b9196c4e62800ce11e2a573c","git_blob":"2e8ef1615a54548c3ec633f854a60436973984e3"},
+    {"path":"tests/test_eegmmidb_unseen_participant_generalization_stage_g_result.py","bytes":6074,"sha256":"5aea11bb7d2026d7e332626a34ab1718d85fc33dafeb21933d044f5dcb886fa1","git_blob":"b23543c05142e82a73d3a3d1a2ea9cbe46e9ebbb"}
+  ],
+  "bound_pre_request_artifact_summary": {
+    "count": 20,
+    "bytes": 305662,
+    "canonical_artifact_set_sha256": "20d3106a66e78053bc73798762aed11b3713a5d4f414bd45528cc2c2f834bea6"
+  },
+  "dataset_identity": {
+    "name": "EEG Motor Movement/Imagery Dataset",
+    "version": "1.0.0",
+    "DOI": "10.13026/C28G6P",
+    "scheme": "https",
+    "host": "physionet.org",
+    "path_prefix": "/files/eegmmidb/1.0.0/"
+  },
+  "exact_paths_in_request_order": [
+    "S001/S001R04.edf", "S001/S001R08.edf", "S002/S002R04.edf", "S002/S002R08.edf", "S003/S003R04.edf", "S003/S003R08.edf",
+    "S016/S016R11.edf", "S016/S016R12.edf", "S017/S017R11.edf", "S017/S017R12.edf", "S018/S018R11.edf", "S018/S018R12.edf",
+    "S019/S019R11.edf", "S019/S019R12.edf", "S020/S020R11.edf", "S020/S020R12.edf", "S021/S021R11.edf", "S021/S021R12.edf",
+    "S022/S022R11.edf", "S022/S022R12.edf", "S023/S023R11.edf", "S023/S023R12.edf", "S024/S024R11.edf", "S024/S024R12.edf",
+    "S025/S025R11.edf", "S025/S025R12.edf", "S026/S026R11.edf", "S026/S026R12.edf", "S027/S027R11.edf", "S027/S027R12.edf",
+    "S028/S028R11.edf", "S028/S028R12.edf", "S029/S029R11.edf", "S029/S029R12.edf", "S030/S030R11.edf", "S030/S030R12.edf"
+  ],
+  "requested_ordered_stages": [
+    {
+      "stage": "M1_generated_metadata_client_qualification",
+      "available_only_after_decision_remote_green": true,
+      "network_requests": 0,
+      "real_URL_or_path_access": 0,
+      "qualification_invocations": 1,
+      "must_be_committed_pushed_and_both_jobs_green_before_M2": true
+    },
+    {
+      "stage": "M2_one_real_metadata_identity_invocation",
+      "available_only_after_exact_M1_remote_green": true,
+      "HTTP_method": "HEAD",
+      "requests_exact": 36,
+      "redirects": 0,
+      "retries": 0,
+      "response_body_bytes": 0,
+      "real_invocations": 1
+    }
+  ],
+  "metadata_contract": {
+    "success_status_exact": 200,
+    "content_length_required": true,
+    "content_length_nonnegative_decimal": true,
+    "optional_headers": ["ETag", "Last-Modified", "Accept-Ranges"],
+    "missing_optional_header_recorded_as_unavailable": true,
+    "header_inference_or_substitution_allowed": false,
+    "combined_declared_payload_bytes_maximum": 268435456,
+    "files_exact": 36,
+    "source_files_exact": 6,
+    "fresh_files_exact": 30,
+    "event_sidecars_allowed": false,
+    "response_body_read_allowed": false,
+    "fallback_GET_or_Range_allowed": false,
+    "partial_inventory_is_success": false
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "wall_time_seconds": 300,
+    "peak_process_tree_RSS_bytes": 268435456,
+    "metadata_requests": 36,
+    "application_visible_metadata_bytes": 2097152,
+    "generated_output_bytes": 1048576,
+    "network_payload_body_bytes": 0,
+    "incremental_disk_bytes": 1048576,
+    "minimum_free_disk_bytes": 2147483648,
+    "retries": 0,
+    "reruns": 0
+  },
+  "authority_now": {
+    "stage_M1_implementation": false,
+    "stage_M1_generated_qualification": false,
+    "network_or_metadata_request": false,
+    "real_URL_or_local_path_access": false,
+    "stage_M2_real_invocation": false,
+    "EDF_body_header_annotation_event_or_signal_access": false,
+    "payload_download_or_acquisition": false,
+    "source_fresh_or_target_stage": false,
+    "cache_split_feature_or_derivative_creation": false,
+    "model_checkpoint_inference_training_or_scoring": false,
+    "target_or_label_delivery": false,
+    "additional_file_participant_run_or_dataset": false,
+    "provider_language_model_RW3_stream_device_or_hardware": false,
+    "release_publication_or_claim_upgrade": false,
+    "retry_rerun_repair_or_substitution": false
+  },
+  "request_operation_counters": {
+    "tracked_artifact_reads": 20,
+    "Git_proof_reads": 20,
+    "network_requests": 0,
+    "metadata_responses": 0,
+    "response_body_bytes": 0,
+    "real_URL_or_local_path_reads": 0,
+    "EDF_body_header_annotation_event_or_signal_reads": 0,
+    "payload_download_bytes": 0,
+    "parameter_update_fits": 0,
+    "model_inference_runs": 0,
+    "target_deliveries": 0,
+    "scoring_events": 0,
+    "generated_qualification_invocations": 0,
+    "real_metadata_invocations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "claim_boundary": {
+    "engineering_capability_proposed": "An exact body-blind metadata identity gate for the 36 preregistered EEGMMIDB files.",
+    "scientific_claim_established_by_request": false,
+    "real_EEG_accessed": false,
+    "unseen_participant_generalization_established": false,
+    "neural_or_decoding_advantage_established": false
+  }
+}

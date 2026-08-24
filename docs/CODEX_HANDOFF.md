@@ -1,5 +1,16 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current EEGMMIDB-UG1 Stage M request, 2026-08-24: Stage G closeout
+> `5cc3e0e9fd5739e8836ddb91252f18ca7849c824` passed Base job
+> `97373297588`, Optional job `97373297708`, and CI `32708050897`. Stage G is
+> consumed. The new all-false Stage M request binds 20 exact artifacts totaling
+> 305,662 bytes and proposes generated/mock metadata-client qualification,
+> then only after its own proof barrier one exact 36-request HTTPS `HEAD` pass
+> with zero redirects, retries, or body bytes. It authorizes nothing now.
+> Immediate gate: commit, push, and green the request, then add and separately
+> green a proof-only closeout. No network, real URL/path, EDF, data, target,
+> model, score, release, or claim operation is open.
+
 > Current EEGMMIDB-UG1 gate, 2026-08-24: Amendment 1 commit `9ab8639` passed
 > both jobs in CI `32696449436`. Exact implementation `da2be31` then passed
 > Base job `97363993816`, Optional Neuro Readers job `97363993465`, and CI

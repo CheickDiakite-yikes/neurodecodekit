@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: EEGMMIDB-UG1 Stage G Closeout
+## Current Gate: EEGMMIDB-UG1 Stage M Metadata Request
 
 VR39P result closeout `474d49f53e1a46633b99b0ef2ff62b9abebe7a9c`
 passed Base job `97317987437`, Optional job `97317987655`, and CI
@@ -73,9 +73,21 @@ emitted a 3,911-byte aggregate result. Real path, EDF, cache, raw-data, real
 target, and network counts were zero. The synthetic R4 route has no scientific
 claim value and qualification may not be repeated.
 
-Immediate gate: commit, push, and remotely green this Stage G closeout. Stage
-M and every real-path operation remain closed pending their own exact Tier C
-decision. Do not invoke Stage G again.
+Stage G closeout `5cc3e0e9fd5739e8836ddb91252f18ca7849c824`
+passed Base job `97373297588`, Optional job `97373297708`, and CI
+`32708050897`. Stage G is consumed and must not be repeated.
+
+Read `docs/EEGMMIDB_UNSEEN_PARTICIPANT_METADATA_AUTHORIZATION_PACKET.md`, its
+machine request, and matching test. The all-false Stage M request proposes a
+generated/mock metadata-client qualification followed, only after a separate
+green implementation barrier, by one exact 36-request metadata invocation.
+The future real surface is HTTPS `HEAD` only, zero redirects, zero retries,
+zero response-body bytes, and no EDF parsing or download. It binds 20 exact
+Stage G artifacts totaling 305,662 bytes.
+
+Immediate gate: commit, push, and remotely green the all-false Stage M request,
+then add and separately green a proof-only closeout. No implementation,
+network request, real URL/path access, or data operation is authorized now.
 
 ## Previous Gate: MARC2-VR39P Aggregate R2 Closeout
 

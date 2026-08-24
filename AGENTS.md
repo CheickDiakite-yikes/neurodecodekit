@@ -108,10 +108,23 @@ Real path, EDF, cache, raw-data, real-target, network, and new-payload counts
 were zero. The synthetic R4 route has no scientific claim value. Do not repeat
 Stage G.
 
-Immediate gate: verify, commit, push, and remotely green the exact Stage G
-closeout. Stage M metadata, source/fresh acquisition, real EEG, targets,
-models, scores, releases, devices, and claim upgrades remain closed pending a
-separate exact Tier C decision.
+Stage G closeout `5cc3e0e9fd5739e8836ddb91252f18ca7849c824`
+passed Base job `97373297588`, Optional Neuro Readers job `97373297708`, and
+CI `32708050897`. Stage G is consumed and must not be repeated.
+
+Read the Stage M metadata authorization packet, machine request, and matching
+test. The all-false request binds 20 exact Stage G artifacts totaling 305,662
+bytes and proposes a two-stage maximum: generated/mock standard-library
+metadata-client qualification, then only after that exact implementation is
+committed, pushed, and remotely green one sequential 36-request HTTPS `HEAD`
+identity pass. Redirects, retries, response-body bytes, EDF parsing/download,
+local real-path access, and partial-inventory success are forbidden.
+
+Immediate gate: verify, commit, push, and remotely green the all-false Stage M
+request, then add and separately green its proof-only closeout. No Stage M
+implementation, generated qualification, network request, URL/path access,
+EDF, source/fresh acquisition, target, model, score, release, device, or claim
+operation is authorized now.
 
 ### Historical VR39P path
 

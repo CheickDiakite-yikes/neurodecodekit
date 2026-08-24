@@ -12953,3 +12953,29 @@ information, language/thought decoding, live decoding, or hardware use.
 Transition decision: consume Stage G with no repeat. Stage M remains closed
 until this closeout is committed, pushed, remotely green, and a separate exact
 Tier C metadata decision is recorded.
+
+## 0456 - Prepare the All-False UG1 Stage M Metadata Request
+
+Proof decision: Stage G closeout
+`5cc3e0e9fd5739e8836ddb91252f18ca7849c824` passed CI `32708050897`, Base
+Python job `97373297588`, and Optional Neuro Readers job `97373297708`.
+
+Scope decision: freeze only the already-preregistered 36 PhysioNet EEGMMIDB
+v1.0.0 EDF paths. Request a future generated/mock metadata-client
+qualification and, after its exact implementation is remotely green, one
+sequential metadata identity invocation. Add no participant, run, file,
+dataset, payload, model, target, score, retry, or claim.
+
+Transport decision: future real metadata uses direct HTTPS `HEAD` only, exact
+host and paths, direct status 200, required nonnegative `Content-Length`, and
+optional returned validators. Follow zero redirects, perform zero retries,
+read zero response-body bytes, and forbid fallback `GET` or `Range`.
+
+Resource decision: cap the future pass at 36 requests, one thread/worker/job,
+300 seconds, 256 MiB peak process-tree RSS, 2 MiB application-visible metadata,
+1 MiB output and incremental disk, and at least 2 GiB free disk.
+
+Authorization decision: every authority flag remains false. Commit, push, and
+green this request, then add and separately green a proof-only closeout before
+naming it as the sole active Tier C packet. No current network, URL/path, EDF,
+data, target, model, score, release, or claim operation is permitted.

@@ -14933,3 +14933,28 @@ and every real operation remain closed until that barrier passes.
 Immediate gate: commit, push, and remotely green this exact closeout. Stage G
 is consumed and may not be repeated. Stage M and every real operation remain
 closed pending a separate exact Tier C decision.
+
+### EEGMMIDB-UG1 Stage M all-false request prepared
+
+- Stage G closeout `5cc3e0e9fd5739e8836ddb91252f18ca7849c824`
+  passed Base job `97373297588`, Optional job `97373297708`, and CI
+  `32708050897`.
+- Bound 20 exact research, contract, decision, amendment, implementation,
+  result, code, and test artifacts totaling 305,662 bytes under canonical
+  artifact-set SHA-256
+  `20d3106a66e78053bc73798762aed11b3713a5d4f414bd45528cc2c2f834bea6`.
+- Froze the exact 36 PhysioNet v1.0.0 EDF paths in request order: six missing
+  source-fit imagery files and 30 fresh-final execution/imagery files.
+- Proposed generated/mock metadata-client qualification, followed only after
+  a separate remotely green implementation by one real metadata invocation.
+- The future real pass is direct HTTPS `HEAD` only, 36 requests, zero
+  redirects, retries, fallback `GET`/`Range`, response-body bytes, EDF parsing,
+  download, local real-path access, or partial success.
+- Capped the future pass at one thread/worker/job, 300 seconds, 256 MiB RSS,
+  2 MiB application-visible metadata, 1 MiB output/incremental disk, and at
+  least 2 GiB free disk.
+- Seven focused request tests and eight Stage G closeout tests pass. Request
+  network, data, target, model, score, and claim counters are all zero.
+
+Immediate gate: commit, push, and remotely green this all-false request, then
+add and separately green its proof-only closeout. It authorizes no operation.
