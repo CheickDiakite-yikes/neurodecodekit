@@ -256,12 +256,22 @@ reconciles the total as 21 checksum plus 35 EDF mock requests. Treat this as an
 explicit non-scientific counter-schema discrepancy; do not hide it, rerun the
 qualification, or modify the qualified implementation.
 
-Immediate gate: commit, push, and remotely green the exact result, then create
-and green a separate proof-only closeout without repeating qualification.
-Stage S-A2 remains closed until both barriers pass. Do not make a network
-request, inspect an existing local payload, or open EDF content. The 54
-retained source files, 30 fresh-final files, targets, models, scores, release,
-devices, and claim surfaces remain closed.
+Exact result `e2965cfc90ac73a0371689333d0bad67de2634fd` passed Base job
+`97450079515`, Optional Neuro Readers job `97450079739`, and CI
+`32733249548`.
+
+Read the Stage S-A1 proof-only closeout, machine proof, and matching test. They
+bind nine exact implementation/result artifacts totaling 130,558 bytes under
+canonical artifact-set SHA-256
+`859988a3e658c8f8872d9ffe82151f17bc475c94e754e817dd3c3dd698fd7ad5`.
+The closeout repeats no qualification and performs no real operation.
+
+Immediate gate: commit, push, and remotely green this exact proof-only
+closeout. It does not itself arm the frozen live opener; a separate exact green
+proof activation remains required before the one possible Stage S-A2
+invocation. Do not make a network request, inspect an existing local payload,
+or open EDF content. The 54 retained source files, 30 fresh-final files,
+targets, models, scores, release, devices, and claim surfaces remain closed.
 
 ### Historical VR39P path
 

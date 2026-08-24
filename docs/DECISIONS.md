@@ -13299,3 +13299,26 @@ Boundary decision: real request, network, payload, EDF semantic, retained-
 source, fresh-final, target, model, training, prediction, score, release, and
 claim counters remain zero. Commit and remotely green the result, then add a
 separate proof-only closeout before Stage S-A2 can become eligible.
+
+## 0469 - Bind Stage S-A1 Without Arming Stage S-A2
+
+Proof decision: exact result `e2965cfc90ac73a0371689333d0bad67de2634fd`
+passed CI `32733249548`, Base Python job `97450079515`, and Optional Neuro
+Readers job `97450079739` before this closeout.
+
+Binding decision: freeze nine unchanged implementation/result artifacts
+totaling 130,558 bytes by exact size, SHA-256, and Git blob under canonical
+artifact-set SHA-256
+`859988a3e658c8f8872d9ffe82151f17bc475c94e754e817dd3c3dd698fd7ad5`.
+Preserve the raw 56-request result, the explicit 21/35 subtype correction, and
+the unchanged qualified implementation.
+
+Operation decision: perform only nine tracked-artifact and nine Git-proof
+reads. Repeat no qualification and perform no network, checksum-manifest, real
+path, payload, EDF, retained-source, fresh-final, target, model, training,
+prediction, score, release, or claim operation.
+
+Transition decision: this pre-green closeout does not arm Stage S-A2. After
+its exact commit passes both remote jobs, add a separate exact green proof
+activation required by the frozen live gate. Do not construct a live opener or
+access a real byte before that activation is also remotely green.

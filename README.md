@@ -127,9 +127,12 @@ seconds runtime, 71.7 MB peak RSS, and zero retention or real operation. The
 raw nested mock-subtype fields were incorrectly zero; immutable case-flow
 accounting reconciles the authoritative total as 21 checksum plus 35 EDF mock
 requests. This reporting defect is documented without rerunning the consumed
-qualification. Stage S-A2 network access, real EEG parsing, source LOSO
-training, fresh participants, targets, scoring, and claim upgrades remain
-closed until this result and a separate proof-only closeout are remotely green.
+qualification. Result `e2965cf` passed both jobs in CI `32733249548`. The
+pending proof-only closeout binds nine exact artifacts totaling 130,558 bytes
+without another qualification or any real operation. Stage S-A2 network
+access, real EEG parsing, source LOSO training, fresh participants, targets,
+scoring, and claim upgrades remain closed until that closeout and a separate
+proof activation are remotely green.
 
 ## Results At A Glance
 

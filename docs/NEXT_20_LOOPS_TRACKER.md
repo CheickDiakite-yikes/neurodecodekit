@@ -6,11 +6,13 @@
 > three successful generated bundles, 18 opaque post-write passes, 0.476
 > seconds runtime, 71.7 MB peak RSS, and zero retention or real operation. The
 > raw generic nested subtype counters were incorrectly zero; immutable case
-> flow exactly reconciles 21 checksum plus 35 EDF mock requests. Commit, push,
-> and green this transparent result, then create and green a separate proof-
-> only closeout without rerunning qualification. Stage S-A2 payload, retained-
-> source, fresh-final, EDF semantic, target, model, score, or claim operations
-> remain closed until both barriers pass.
+> flow exactly reconciles 21 checksum plus 35 EDF mock requests. Result
+> `e2965cf` passed both jobs in CI `32733249548`. The pending proof-only
+> closeout binds nine exact artifacts totaling 130,558 bytes without rerunning
+> qualification or performing a real operation. Commit, push, and green that
+> closeout, then separately activate its exact green proof before any live
+> opener. Stage S-A2 payload, retained-source, fresh-final, EDF semantic,
+> target, model, score, or claim operations remain closed.
 
 > **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its

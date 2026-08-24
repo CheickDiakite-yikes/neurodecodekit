@@ -217,11 +217,22 @@ case flow exactly reconciles 21 checksum plus 35 EDF mock requests. The raw
 aggregate is hash-bound, the discrepancy is explicit, and the consumed
 qualification must not be rerun.
 
-Immediate gate: commit, push, and remotely green this exact result, then add
-and green a separate proof-only closeout. Stage S-A2 network access remains
-closed until both barriers pass. No local real payload, EDF semantic content,
-target, model, training, score, release, or claim action is open, and the 54
-retained source EDFs plus all 30 fresh-final EDFs remain untouched.
+Exact result `e2965cfc90ac73a0371689333d0bad67de2634fd` passed Base job
+`97450079515`, Optional Neuro Readers job `97450079739`, and CI
+`32733249548`.
+
+Read the Stage S-A1 proof-only closeout, machine proof, and matching test. The
+pending closeout binds nine exact artifacts totaling 130,558 bytes under
+canonical SHA-256
+`859988a3e658c8f8872d9ffe82151f17bc475c94e754e817dd3c3dd698fd7ad5`
+without repeating qualification or performing a real operation.
+
+Immediate gate: commit, push, and remotely green this exact closeout. A
+separate green proof activation is still required before the frozen live
+opener can run. Stage S-A2 network access remains closed now. No local real
+payload, EDF semantic content, target, model, training, score, release, or
+claim action is open, and the 54 retained source EDFs plus all 30 fresh-final
+EDFs remain untouched.
 
 ## Previous Gate: MARC2-VR39P Aggregate R2 Closeout
 

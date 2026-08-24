@@ -15242,3 +15242,29 @@ separate proof-only closeout are each remotely green.
 Immediate gate: verify, commit, push, and remotely green the exact result,
 then add and separately green a proof-only closeout. Stage S-A2 remains closed
 until both barriers pass.
+
+### EEGMMIDB-UG1 Stage S-A1 result remotely green; proof closeout recorded
+
+- Exact result `e2965cfc90ac73a0371689333d0bad67de2634fd` passed Base
+  Python job `97450079515`, Optional Neuro Readers job `97450079739`, and CI
+  `32733249548`.
+- Bound nine unchanged implementation/result artifacts totaling 130,558 bytes
+  under canonical artifact-set SHA-256
+  `859988a3e658c8f8872d9ffe82151f17bc475c94e754e817dd3c3dd698fd7ad5`.
+- Preserved the raw 56-request aggregate and explicit 21-checksum/35-EDF mock
+  subtype correction without rerunning qualification or editing the qualified
+  implementation.
+- Performed only nine tracked-artifact and nine Git-proof reads. Network,
+  checksum-manifest, real path, payload, EDF, retained-source, fresh-final,
+  target, model, training, prediction, score, release, and claim operations
+  were zero.
+- Kept `green_proof_closeout` null and
+  `both_required_stages_remotely_green` false. The pre-green closeout cannot
+  satisfy the frozen live opener.
+- Thirty focused checks and all 5,897 dependency-light tests passed with 212
+  expected skips, exactly six above the result milestone. Ruff, compilation,
+  every JSON registry, and diff hygiene also passed.
+
+Immediate gate: verify, commit, push, and remotely green this exact proof-only
+closeout. Then create a separate exact proof activation and remotely green it
+before considering the one possible Stage S-A2 invocation.
