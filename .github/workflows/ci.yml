@@ -49,6 +49,7 @@ jobs:
           neurodecode iackd-acquire --help
           neurodecode iackd-cue-action --help
           neurodecode score-iackd-cue-action --help
+          python -m neurodecodekit.eegmmidb_ug1_cli --help
 
   neuro:
     name: Optional Neuro Readers
@@ -70,6 +71,11 @@ jobs:
             'pyriemann==0.12'
       - name: Focused RW2 suite
         run: PYTHONPATH=src python -m unittest discover -s tests -p 'test_signal_quality.py' -v
+      - name: Focused UG1 numerical suite
+        run: |
+          NEURODECODEKIT_UG1_NUMERICAL_TESTS=1 \
+          PYTHONPATH=src \
+          python -m unittest tests.test_eegmmidb_unseen_participant_generalization -v
       - name: Complete neuro-enabled suite
         run: PYTHONPATH=src python -m unittest discover -s tests -v
       - name: RW2 CLI help
@@ -86,3 +92,4 @@ jobs:
           neurodecode iackd-acquire --help
           neurodecode iackd-cue-action --help
           neurodecode score-iackd-cue-action --help
+          python -m neurodecodekit.eegmmidb_ug1_cli --help
