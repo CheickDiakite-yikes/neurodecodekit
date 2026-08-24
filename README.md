@@ -63,8 +63,14 @@ compatibility, motor-cortex origin, movement intention, language, and live
 decoding would remain unproven. Every real-operation authority flag is
 currently false. Exact request `c642d90` passed Base job `97322606634`,
 Optional Neuro job `97322606501`, and CI `32690289547`. Its proof-only
-closeout is now the sole pending engineering barrier before packet-bound
-authorization can be requested.
+closeout `9117b1d` passed Base job `97324487895`, Optional Neuro job
+`97324488042`, and CI `32690987778`. The maintainer's next exact message was
+`continue`; the packet-bound authorization decision is recorded with delayed
+effect pending its own remote green proof. Two independent pre-execution
+reviews then found reproducibility gaps in the control gates, predictor
+firewall, and prediction-freeze binding. The decision therefore fails closed:
+after it is green, a narrowing amendment must also be frozen and remotely
+green before generated Stage G. No real operation has started.
 
 ## Results At A Glance
 

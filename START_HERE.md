@@ -40,10 +40,22 @@ passed Base job `97322606634`, Optional Neuro job `97322606501`, and CI
 `32690289547`. Its proof-only closeout binds nine immutable artifacts totaling
 56,516 bytes and changes no scope.
 
-Immediate gate: commit, push, and remotely green the exact UG1 request proof
-closeout. Only afterward may UG1 be identified as the sole active Tier C
-packet for a fresh maintainer decision. No earlier `continue` is retroactive
-authority.
+Exact proof closeout `9117b1db343be38248944c24e3d93cafc4058d98`
+passed Base job `97324487895`, Optional Neuro job `97324488042`, and CI
+`32690987778`. UG1 was then identified as the sole active Tier C packet, and
+the maintainer's next exact message was `continue`.
+
+Read the authorization decision document, machine decision, and matching test.
+The decision quotes the actual eight UTF-8 bytes, binds the unchanged 67,923-
+byte green packet, and authorizes only the registered G -> M -> S -> F -> T
+sequence after its own remote-green proof and a separate green narrowing
+amendment. The amendment is required because two target-free reviews found
+underspecified control gates, participant-ID isolation, prediction-freeze
+binding, exact completeness, causal state, and resource semantics.
+
+Immediate gate: commit, push, and remotely green the exact UG1 authorization
+decision. Then freeze and remotely green the non-scope-expanding amendment. Do
+not implement Stage G or access any real path before both barriers.
 
 ## Previous Gate: MARC2-VR39P Aggregate R2 Closeout
 

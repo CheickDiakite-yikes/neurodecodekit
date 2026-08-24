@@ -74,10 +74,24 @@ passed Base job `97322606634`, Optional Neuro job `97322606501`, and CI
 matching test. They bind nine exact artifacts totaling 56,516 bytes and make
 no scope or authority change.
 
-Immediate gate: commit, push, and green the exact request proof closeout. Only
-after that barrier may UG1 be named the sole active Tier C packet for the
-maintainer's next fresh unambiguous decision. No earlier continuation message
-is retroactive.
+Exact request proof closeout `9117b1db343be38248944c24e3d93cafc4058d98`
+passed Base job `97324487895`, Optional Neuro job `97324488042`, and CI
+`32690987778`. UG1 was then named the sole active Tier C packet. The
+maintainer's next exact message was `continue`.
+
+Read the UG1 authorization decision document, machine decision, and matching
+test. The decision quotes those eight UTF-8 bytes, binds twelve unchanged
+packet artifacts totaling 67,923 bytes, and has delayed effect.
+
+Immediate gate: commit, push, and green the exact authorization decision.
+Two independent target-free reviews found underspecified temporal/spatial
+gates, participant-ID isolation, prediction serialization, completeness,
+control transforms, causal state, and resource semantics. The decision fails
+closed on those findings. After the decision is green, freeze and remotely
+green a hash-changing, additive, non-scope-expanding amendment before any
+generated Stage G implementation. Stage M and every real-path operation remain
+closed until the amended Stage G is itself committed, pushed, and remotely
+green.
 
 ### Historical VR39P path
 

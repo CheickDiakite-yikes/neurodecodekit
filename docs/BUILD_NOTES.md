@@ -14853,3 +14853,31 @@ separately green its proof-only closeout. No real operation is authorized.
 
 Immediate gate: commit, push, and green this proof-only closeout. UG1 is not
 authorized until that barrier passes and a fresh packet-bound decision follows.
+
+### EEGMMIDB-UG1 packet-bound decision recorded
+
+- Exact proof closeout `9117b1db343be38248944c24e3d93cafc4058d98`
+  passed Base Python job `97324487895`, Optional Neuro Readers job
+  `97324488042`, and CI `32690987778`.
+- After UG1 was identified as the sole active Tier C packet, the maintainer's
+  next exact message was `continue`: eight UTF-8 bytes with SHA-256
+  `e256ee8e7aff6957a781d8328f0f68e26996564c81fa458da59fbca2305138ad`.
+- The decision binds twelve unchanged packet artifacts totaling 67,923 bytes
+  under canonical set hash
+  `f602c3dd10419050361c9d3b0b98c8216bd0268cc183a202b59d4b98b026e2e8`.
+- It authorizes the exact G -> M -> S -> F -> T maximum sequence only after
+  each preceding green barrier.
+- Two independent target-free reviews found that the frozen packet does not
+  yet fully specify temporal/spatial success gates, participant-ID isolation,
+  canonical prediction freezing, exact imagery completeness, deterministic
+  controls, causal state, or resource enforcement.
+- The decision therefore fails closed: after decision CI is green, a
+  hash-changing additive amendment may only narrow or clarify the packet and
+  must itself be remotely green before generated Stage G.
+- Thirty-two focused tests pass. Decision-time network, real-path, EDF,
+  signal, annotation, target, model, prediction, score, and claim counters are
+  all zero.
+
+Immediate gate: commit, push, and green the decision, then freeze and remotely
+green the narrowing amendment. Only then implement and run one generated/mock
+Stage G qualification. Stage M remains closed meanwhile.

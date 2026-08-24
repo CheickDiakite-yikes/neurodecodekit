@@ -12862,3 +12862,33 @@ zero.
 Transition decision: this closeout has no effect until its exact commit is
 pushed and both CI jobs pass. Only then may UG1 become the sole active Tier C
 packet for a fresh maintainer decision. No earlier continuation is authority.
+
+## 0453 - Record the Packet-Bound UG1 Authorization
+
+Proof decision: request proof closeout
+`9117b1db343be38248944c24e3d93cafc4058d98` passed CI `32690987778`, Base
+Python job `97324487895`, and Optional Neuro Readers job `97324488042` before
+UG1 was named the sole active Tier C packet.
+
+Authorization decision: preserve the maintainer's next exact message,
+`continue`, as eight UTF-8 bytes with SHA-256
+`e256ee8e7aff6957a781d8328f0f68e26996564c81fa458da59fbca2305138ad`.
+Bind only the unchanged twelve-artifact, 67,923-byte green packet by reference.
+
+Audit decision: two independent target-free reviews found that the maximum
+packet leaves scientifically meaningful implementation degrees of freedom in
+its temporal/spatial gates, participant-ID isolation, prediction-freeze
+binding, exact imagery completeness, deterministic controls, causal state, and
+resource semantics. Apply the registered ambiguity policy and fail closed.
+
+Ordering decision: after this decision itself is remotely green, require one
+hash-changing additive amendment that only narrows or clarifies the packet and
+passes both CI jobs. Only then authorize generated/mock Stage G. Open Stage M
+only after the exact amended Stage G implementation/result is remotely green,
+Stage S only after metadata identity is green, Stage F only after source
+LOSO/checkpoint is green, and Stage T only after target-blind predictions are
+frozen and green.
+
+Boundary decision: decision recording performs no network, data, EDF, signal,
+annotation, target, fit, inference, prediction, score, release, or claim
+operation. It is authorization, not evidence of unseen-person generalization.

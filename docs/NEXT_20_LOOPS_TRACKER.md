@@ -3937,7 +3937,7 @@ then may the one registered target-free structural discriminator execute.
 
 ### EEGMMIDB-UG1 - Unseen-Participant Generalization
 
-Status: **All-false research/preregistration/request prepared locally**
+Status: **Packet authorized by short form; decision and narrowing amendment barriers pending**
 
 This lane replaces the consumed VR39P structural branch with a direct
 scientific question. One model will be fitted on S001-S015 and, only after a
@@ -3961,9 +3961,21 @@ passed Base job `97322606634`, Optional Neuro job `97322606501`, and CI
 `32690289547`. Its proof-only closeout binds nine exact artifacts totaling
 56,516 bytes without changing scope or performing a real operation.
 
-Current gate: commit, push, and remotely green the exact proof closeout. No
-network, payload, signal, target, model, prediction, score, release, or claim
-operation is authorized now.
+Proof closeout `9117b1db343be38248944c24e3d93cafc4058d98` passed both
+jobs in CI `32690987778`. UG1 then became the sole active Tier C packet, and the
+maintainer's next exact message was `continue`. The packet-bound decision
+quotes those bytes and preserves the unchanged G -> M -> S -> F -> T maximum
+scope. Two independent target-free reviews then found underspecified
+temporal/spatial gates, participant-ID isolation, prediction-freeze binding,
+exact completeness, deterministic controls, causal state, and resource
+enforcement. The decision fails closed and requires a green narrowing
+amendment before Stage G.
+
+Current gate: commit, push, and remotely green the authorization decision,
+then freeze and remotely green the additive non-scope-expanding amendment, then
+implement generated/mock Stage G. No network, payload, signal, target, model,
+prediction, score, release, or claim operation is authorized before those
+barriers.
 
 ### MARC2-VR34P - All-False Exact-Count Private Confirmation Request Prepared
 
