@@ -15268,3 +15268,25 @@ until both barriers pass.
 Immediate gate: verify, commit, push, and remotely green this exact proof-only
 closeout. Then create a separate exact proof activation and remotely green it
 before considering the one possible Stage S-A2 invocation.
+
+### EEGMMIDB-UG1 Stage S-A1 green-proof activation recorded
+
+- Exact proof-only closeout `b3902cf50bef478055255570d1b78813207fb8d1`
+  passed Base Python job `97456050452`, Optional Neuro Readers job
+  `97456050604`, and CI `32735141922`.
+- Bound the three exact preactivation proof artifacts from that Git revision by
+  size, SHA-256, and Git blob.
+- Populated only the frozen proof registry's `green_proof_closeout` fields and
+  `both_required_stages_remotely_green` boolean with exact green evidence.
+- Frozen the activated proof-registry hash and complete future
+  `SA1ProofEvidence` values; a target-free unit check confirms the unchanged
+  proof reader accepts those values without constructing a live opener.
+- Performed zero qualification, network, checksum-manifest, real path, payload,
+  EDF, retained-source, fresh-final, target, model, training, prediction,
+  score, release, or claim operation.
+- Thirty-seven focused checks and all 5,904 dependency-light tests passed with
+  212 expected skips, exactly seven above the proof-closeout milestone. Ruff,
+  compilation, every JSON registry, and diff hygiene also passed.
+
+Immediate gate: run complete verification, commit, push, and remotely green
+the exact activation. No Stage S-A2 request may occur before that barrier.

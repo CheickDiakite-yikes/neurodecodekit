@@ -13322,3 +13322,24 @@ Transition decision: this pre-green closeout does not arm Stage S-A2. After
 its exact commit passes both remote jobs, add a separate exact green proof
 activation required by the frozen live gate. Do not construct a live opener or
 access a real byte before that activation is also remotely green.
+
+## 0470 - Activate Only The Exact Green Stage S-A1 Proof
+
+Proof decision: exact proof-only closeout
+`b3902cf50bef478055255570d1b78813207fb8d1` passed CI `32735141922`, Base
+Python job `97456050452`, and Optional Neuro Readers job `97456050604`.
+
+Activation decision: replace only the proof registry's null green-closeout
+field with those exact identifiers and set the frozen two-stage green boolean.
+Freeze the resulting proof-registry SHA-256 and complete future evidence values
+in a separate activation ledger. Do not modify the qualified implementation or
+consumed result.
+
+Operation decision: perform only three tracked-artifact and three Git-proof
+reads. Qualification, network, checksum-manifest, real path, payload, EDF,
+retained-source, fresh-final, target, model, training, prediction, score,
+release, and claim operations remain zero.
+
+Transition decision: the activation remains ineffective until its exact commit
+is pushed and both CI jobs pass. Before that proof, do not construct the live
+opener or execute Stage S-A2.

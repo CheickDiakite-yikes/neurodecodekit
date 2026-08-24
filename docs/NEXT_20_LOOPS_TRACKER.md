@@ -9,10 +9,12 @@
 > flow exactly reconciles 21 checksum plus 35 EDF mock requests. Result
 > `e2965cf` passed both jobs in CI `32733249548`. The pending proof-only
 > closeout binds nine exact artifacts totaling 130,558 bytes without rerunning
-> qualification or performing a real operation. Commit, push, and green that
-> closeout, then separately activate its exact green proof before any live
-> opener. Stage S-A2 payload, retained-source, fresh-final, EDF semantic,
-> target, model, score, or claim operations remain closed.
+> qualification or performing a real operation. Closeout `b3902cf` passed both
+> jobs in CI `32735141922`. The new activation copies that exact proof into the
+> frozen executor fields with zero real operations. Commit, push, and green the
+> activation before any live opener. Stage S-A2 payload, retained-source,
+> fresh-final, EDF semantic, target, model, score, or claim operations remain
+> closed.
 
 > **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its

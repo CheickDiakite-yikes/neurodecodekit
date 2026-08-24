@@ -266,12 +266,21 @@ canonical artifact-set SHA-256
 `859988a3e658c8f8872d9ffe82151f17bc475c94e754e817dd3c3dd698fd7ad5`.
 The closeout repeats no qualification and performs no real operation.
 
-Immediate gate: commit, push, and remotely green this exact proof-only
-closeout. It does not itself arm the frozen live opener; a separate exact green
-proof activation remains required before the one possible Stage S-A2
-invocation. Do not make a network request, inspect an existing local payload,
-or open EDF content. The 54 retained source files, 30 fresh-final files,
-targets, models, scores, release, devices, and claim surfaces remain closed.
+Exact proof-only closeout `b3902cf50bef478055255570d1b78813207fb8d1`
+passed Base job `97456050452`, Optional Neuro Readers job `97456050604`, and
+CI `32735141922`.
+
+Read the Stage S-A1 green-proof activation document, machine activation, the
+updated proof registry, and matching tests. The activation copies the exact
+green closeout into the frozen executor's fail-closed proof fields and binds
+the future evidence values. It performs zero real operation and has no effect
+until its own commit passes both required CI jobs.
+
+Immediate gate: commit, push, and remotely green this exact activation before
+the one possible Stage S-A2 invocation. Do not make a network request, inspect
+an existing local payload, or open EDF content before that barrier. The 54
+retained source files, 30 fresh-final files, targets, models, scores, release,
+devices, and claim surfaces remain closed.
 
 ### Historical VR39P path
 

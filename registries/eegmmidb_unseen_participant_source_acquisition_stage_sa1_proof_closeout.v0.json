@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "lane_id": "EEGMMIDB-UG1-SA1-PROOF",
   "recorded_at_local": "2026-08-24",
-  "status": "proof_only_closeout_pending_exact_commit_remote_green",
+  "status": "proof_only_closeout_remotely_green_activation_recorded_pending_exact_commit_remote_green",
   "green_implementation": {
     "commit": "37808bef8c59bc862345f342fd932aa04373b3fd",
     "CI_run_id": 32730673153,
@@ -18,8 +18,14 @@
     "optional_neuro_readers_job_id": 97450079739,
     "both_required_jobs_green": true
   },
-  "green_proof_closeout": null,
-  "both_required_stages_remotely_green": false,
+  "green_proof_closeout": {
+    "commit": "b3902cf50bef478055255570d1b78813207fb8d1",
+    "CI_run_id": 32735141922,
+    "base_python_job_id": 97456050452,
+    "optional_neuro_job_id": 97456050604,
+    "both_required_jobs_green": true
+  },
+  "both_required_stages_remotely_green": true,
   "bound_artifacts": [
     {
       "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_IMPLEMENTATION.md",

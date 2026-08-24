@@ -12,10 +12,13 @@
 > `97450079515`, Optional job `97450079739`, and CI `32733249548`. Read the
 > pending proof-only closeout, machine proof, and matching test; they bind nine
 > exact artifacts totaling 130,558 bytes without rerunning qualification.
-> Immediate gate: commit, push, and green this closeout, then add a separate
-> green proof activation before any live opener. Stage S-A2 network, retained-
-> source, fresh-final, EDF semantic, target, model, score, release, and claim
-> surfaces remain closed.
+> Closeout `b3902cf` passed Base job `97456050452`, Optional job
+> `97456050604`, and CI `32735141922`. Read the new green-proof activation,
+> updated proof registry, and matching tests. They copy only exact green proof
+> fields and perform no real operation. Immediate gate: commit, push, and green
+> the activation before any live opener. Stage S-A2 network, retained-source,
+> fresh-final, EDF semantic, target, model, score, release, and claim surfaces
+> remain closed.
 
 > Current EEGMMIDB-UG1 Stage S-A decision gate, 2026-08-24: request proof
 > `b0b4632ffbdaca10c1e4bbc93ad26ebd8e1368ca` passed Base job

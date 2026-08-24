@@ -129,10 +129,12 @@ accounting reconciles the authoritative total as 21 checksum plus 35 EDF mock
 requests. This reporting defect is documented without rerunning the consumed
 qualification. Result `e2965cf` passed both jobs in CI `32733249548`. The
 pending proof-only closeout binds nine exact artifacts totaling 130,558 bytes
-without another qualification or any real operation. Stage S-A2 network
-access, real EEG parsing, source LOSO training, fresh participants, targets,
-scoring, and claim upgrades remain closed until that closeout and a separate
-proof activation are remotely green.
+without another qualification or any real operation. Closeout `b3902cf` passed
+both jobs in CI `32735141922`. A separate activation now copies that exact
+green proof into the frozen live gate's evidence fields, but it performs no
+request and has no effect until its own CI is green. Stage S-A2 network access,
+real EEG parsing, source LOSO training, fresh participants, targets, scoring,
+and claim upgrades remain closed now.
 
 ## Results At A Glance
 

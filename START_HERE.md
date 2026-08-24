@@ -227,12 +227,19 @@ canonical SHA-256
 `859988a3e658c8f8872d9ffe82151f17bc475c94e754e817dd3c3dd698fd7ad5`
 without repeating qualification or performing a real operation.
 
-Immediate gate: commit, push, and remotely green this exact closeout. A
-separate green proof activation is still required before the frozen live
-opener can run. Stage S-A2 network access remains closed now. No local real
-payload, EDF semantic content, target, model, training, score, release, or
-claim action is open, and the 54 retained source EDFs plus all 30 fresh-final
-EDFs remain untouched.
+Exact proof-only closeout `b3902cf50bef478055255570d1b78813207fb8d1`
+passed Base job `97456050452`, Optional Neuro Readers job `97456050604`, and
+CI `32735141922`.
+
+Read the Stage S-A1 green-proof activation document, machine activation,
+updated proof registry, and matching tests. The activation fills only the
+frozen green-proof evidence fields, performs no real operation, and remains
+ineffective until its own commit passes both CI jobs.
+
+Immediate gate: commit, push, and remotely green the exact activation. Stage
+S-A2 network access remains closed now. No local real payload, EDF semantic
+content, target, model, training, score, release, or claim action is open, and
+the 54 retained source EDFs plus all 30 fresh-final EDFs remain untouched.
 
 ## Previous Gate: MARC2-VR39P Aggregate R2 Closeout
 

@@ -1,0 +1,129 @@
+{
+  "schema_name": "neurodecodekit.eegmmidb_unseen_participant_source_acquisition_stage_sa1_proof_activation",
+  "schema_version": "0.1.0",
+  "lane_id": "EEGMMIDB-UG1-SA1-ACTIVATION",
+  "recorded_at_local": "2026-08-24",
+  "status": "proof_activation_recorded_pending_exact_commit_remote_green",
+  "green_proof_closeout_commit": {
+    "commit": "b3902cf50bef478055255570d1b78813207fb8d1",
+    "CI_run_id": 32735141922,
+    "base_python_job_id": 97456050452,
+    "optional_neuro_readers_job_id": 97456050604,
+    "both_required_jobs_green": true
+  },
+  "preactivation_artifacts": [
+    {
+      "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA1_PROOF_CLOSEOUT.md",
+      "git_revision": "b3902cf50bef478055255570d1b78813207fb8d1",
+      "bytes": 3991,
+      "sha256": "2b7231857593ff146d9a0db8d40f54779bfde739d5c2637502e99bcd7ba05f38",
+      "git_blob": "e43da6e1764df4096d880ddd817e26636e1c9799"
+    },
+    {
+      "path": "registries/eegmmidb_unseen_participant_source_acquisition_stage_sa1_proof_closeout.v0.json",
+      "git_revision": "b3902cf50bef478055255570d1b78813207fb8d1",
+      "bytes": 6803,
+      "sha256": "479862aac0657c07b2b43050b27585d82bfacf8e624b224955fcaf24fa0e0a04",
+      "git_blob": "9c9d2cce5c68461f9048b175644856a3376a3c98"
+    },
+    {
+      "path": "tests/test_eegmmidb_unseen_participant_source_acquisition_stage_sa1_proof_closeout.py",
+      "git_revision": "b3902cf50bef478055255570d1b78813207fb8d1",
+      "bytes": 6089,
+      "sha256": "31a2dea66f65af4abdcfc97d9ff52fc5edee237c01a92dbcae12df66968fb0f7",
+      "git_blob": "888989dc31036347a252e9a225cec817e49fd7ef"
+    }
+  ],
+  "preactivation_artifact_summary": {
+    "count": 3,
+    "bytes": 16883,
+    "canonical_artifact_set_sha256": "1b3fdb283dc4b0d2e4a155e29a40e5dbe572a95c907f6974691340408115f5df"
+  },
+  "activated_proof_registry": {
+    "path": "registries/eegmmidb_unseen_participant_source_acquisition_stage_sa1_proof_closeout.v0.json",
+    "bytes": 7044,
+    "sha256": "0647482bf52d189454b7e1099967b9dea9270a62627a9d43c2631248de75b189",
+    "git_blob_before_activation_commit": "a7ec41b1d53f56ffcd067a691e92705b56ef56ca",
+    "green_implementation_commit": "37808bef8c59bc862345f342fd932aa04373b3fd",
+    "green_implementation_CI_run_id": 32730673153,
+    "green_proof_closeout_commit": "b3902cf50bef478055255570d1b78813207fb8d1",
+    "green_proof_closeout_CI_run_id": 32735141922,
+    "both_required_stages_remotely_green": true
+  },
+  "future_exact_evidence": {
+    "implementation_commit": "37808bef8c59bc862345f342fd932aa04373b3fd",
+    "implementation_CI_run_id": 32730673153,
+    "implementation_base_job_id": 97441967842,
+    "implementation_optional_job_id": 97441968304,
+    "proof_closeout_commit": "b3902cf50bef478055255570d1b78813207fb8d1",
+    "proof_closeout_CI_run_id": 32735141922,
+    "proof_closeout_base_job_id": 97456050452,
+    "proof_closeout_optional_job_id": 97456050604,
+    "proof_closeout_registry_sha256": "0647482bf52d189454b7e1099967b9dea9270a62627a9d43c2631248de75b189"
+  },
+  "scope_preservation": {
+    "qualified_implementation_unchanged": true,
+    "consumed_result_unchanged": true,
+    "proof_closeout_content_at_green_commit_unchanged": true,
+    "only_null_to_green_proof_transition_applied": true,
+    "qualification_repeated": false,
+    "authority_expanded": false,
+    "paths_participants_runs_dataset_and_order_unchanged": true,
+    "resource_caps_unchanged": true,
+    "claim_boundary_changed": false
+  },
+  "operation_counters": {
+    "tracked_artifact_reads": 3,
+    "Git_proof_reads": 3,
+    "generated_qualification_invocations": 0,
+    "network_requests": 0,
+    "checksum_manifest_requests": 0,
+    "real_URL_or_local_payload_path_operations": 0,
+    "real_payload_bytes": 0,
+    "new_real_payload_disk_bytes": 0,
+    "EDF_body_header_annotation_event_or_signal_reads": 0,
+    "retained_source_operations": 0,
+    "fresh_final_operations": 0,
+    "target_or_label_reads": 0,
+    "parameter_update_fits": 0,
+    "model_inference_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "scoring_events": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "verification": {
+    "focused_tests_passed": 37,
+    "frozen_proof_reader_acceptance_passed": true,
+    "prechange_clean_base_tests_passed": 5897,
+    "clean_base_tests_passed": 5904,
+    "net_new_tests_passed": 7,
+    "clean_base_tests_skipped_optional": 212,
+    "ruff_passed": true,
+    "compile_passed": true,
+    "JSON_parse_passed": true,
+    "git_diff_check_passed": true
+  },
+  "transition": {
+    "effective_before_this_activation_commit_remote_green": false,
+    "proof_registry_satisfies_frozen_field_contract_after_activation": true,
+    "activation_commit_push_and_both_CI_jobs_green_required_before_stage_SA2": true,
+    "stage_SA2_real_invocations_maximum_after_green": 1,
+    "stage_SA2_authorized_now": false,
+    "network_or_payload_access_performed_by_activation": false,
+    "EDF_semantic_access_authorized_by_activation": false,
+    "target_model_score_or_release_authorized_by_activation": false
+  },
+  "claim_boundary": {
+    "engineering_proof_added": "The remotely green Stage S-A1 proof is copied into the exact fail-closed evidence fields required by the frozen live gate.",
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "unseen_participant_generalization_established": false,
+    "neural_or_decoding_advantage_established": false,
+    "movement_intention_or_motor_cortex_origin_established": false,
+    "eye_independence_established": false,
+    "language_or_thought_decoding_established": false,
+    "live_or_hardware_result_established": false
+  }
+}
