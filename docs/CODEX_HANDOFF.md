@@ -1,5 +1,19 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current EEGMMIDB-UG1 Stage S-A2 consumed result, 2026-08-24:
+> activation repair `9cc2688d90dc9bf75bd64751a63a7e318b4276ce`
+> passed Base job `97467118679`, Optional Neuro Readers job `97467118486`,
+> and CI `32738530528` before the sole invocation. The executor persisted its
+> 212-byte consumed marker, then Python 3.12 raised
+> `ssl.SSLCertVerificationError` during the checksum-manifest TLS handshake.
+> No HTTP response, EDF request, payload byte, local EDF, target, model,
+> prediction, score, or claim resulted. Bundle and temporary paths are absent;
+> only the ignored marker remains. Never open, delete, retry, repair, resume,
+> bypass, substitute, or complete S-A2 through another client. Immediate gate:
+> commit, push, and green the aggregate result, then add a proof-only closeout.
+> The dependent UG1 source-LOSO stage is blocked; a future experiment must be
+> a separate frozen lane with a new Tier C decision.
+
 > Current EEGMMIDB-UG1 Stage S-A1 result gate, 2026-08-24: corrected
 > implementation `37808bef8c59bc862345f342fd932aa04373b3fd` passed Base job
 > `97441967842`, Optional Neuro Readers job `97441968304`, and CI

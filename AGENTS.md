@@ -45,7 +45,27 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-The independent current lane is `EEGMMIDB-UG1`. Read its research
+`EEGMMIDB-UG1` Stage S-A2 is consumed and permanently parked. Read
+`docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md`,
+its machine result, and the matching test first. Proof activation repair
+`9cc2688d90dc9bf75bd64751a63a7e318b4276ce` passed Base job
+`97467118679`, Optional Neuro Readers job `97467118486`, and CI
+`32738530528` before the sole invocation.
+
+The executor persisted its 212-byte consumed marker, then Python 3.12 failed
+certificate-chain verification during the checksum-manifest TLS handshake.
+There was no HTTP response, checksum body, EDF request, payload byte, local
+EDF, semantic read, target, model, prediction, score, or claim upgrade. The
+bundle and temporary path are absent; only the marker remains. Do not open,
+delete, replace, repair, bypass, retry, rerun, resume, or substitute this
+Stage S-A2 invocation. The dependent UG1 source-LOSO stage cannot proceed.
+
+Immediate safe gate: commit, push, and remotely green the exact aggregate
+failure result, then create a proof-only closeout without touching ignored
+state. Any future scientific experiment must be a genuinely separate frozen
+lane and Tier C decision, not an S-A2 retry.
+
+Historical UG1 setup follows. Read its research
 document and registry, preregistration and contract, authorization packet and
 machine request, and matching tests. It freezes S001-S015 as source and
 S016-S030 as completely fresh final participants, with execution 03/07 -> 11,

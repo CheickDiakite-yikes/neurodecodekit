@@ -13343,3 +13343,30 @@ release, and claim operations remain zero.
 Transition decision: the activation remains ineffective until its exact commit
 is pushed and both CI jobs pass. Before that proof, do not construct the live
 opener or execute Stage S-A2.
+
+## 0471 - Consume Stage S-A2 At The Verified TLS Failure
+
+Proof decision: initial activation `4c7800e` was not green and therefore
+opened no live boundary. Test-only repair
+`9cc2688d90dc9bf75bd64751a63a7e318b4276ce` preserved the qualified module
+and activated proof registry byte-for-byte and passed CI `32738530528`, Base
+Python job `97467118679`, and Optional Neuro Readers job `97467118486` before
+the sole invocation.
+
+Execution decision: accept the first checksum-manifest TLS-handshake attempt as
+the one registered Stage S-A2 invocation. Python 3.12's verified SSL context
+raised `ssl.SSLCertVerificationError` because the local issuer chain was
+unavailable. The executor retained its 212-byte consumed marker and cleaned
+its invocation-created temporary state. It received no HTTP response, made no
+EDF request, transferred zero payload bytes, and promoted no bundle.
+
+No-retry decision: do not bypass certificate verification, add a certificate
+bundle, switch clients, retry, rerun, repair, resume, fall back, substitute,
+delete the marker, or otherwise complete this S-A2 scope. Failure consumes the
+authority exactly as preregistered.
+
+Boundary decision: EDF semantic, retained-source, fresh-final, target, model,
+training, prediction, score, release, and scientific-claim counters remain
+zero. The dependent UG1 source-LOSO stage is blocked. Commit and remotely
+green this aggregate result, then add a proof-only closeout. Any future
+scientific experiment must be a new lane and decision, not a disguised retry.

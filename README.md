@@ -49,8 +49,17 @@ VR39P state. Language, motor, unseen-person, peripheral-control, and live work
 remain separate evidence tracks so success on one cannot silently upgrade the
 others.
 
-Current gate: [EEGMMIDB-UG1](docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_RESEARCH.md)
-is the direct unseen-person experiment. Its
+Current result: [EEGMMIDB-UG1 Stage S-A2](docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md)
+failed closed during verified TLS certificate-chain validation before an HTTP
+response or EDF request. The one-shot invocation is consumed: it retained only
+a durable marker, acquired zero payload bytes, and produced no target, model,
+prediction, or score. This is useful engineering evidence that partial or
+unverified data cannot silently enter the research pipeline, but it is not a
+scientific result. The dependent source-LOSO experiment is blocked and cannot
+be repaired or retried under this lane.
+
+The frozen [EEGMMIDB-UG1 research design](docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_RESEARCH.md)
+was the direct unseen-person experiment. Its
 [preregistration](docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_PREREGISTRATION.md),
 [machine contract](registries/eegmmidb_unseen_participant_generalization_contract.v0.json),
 and [all-false Tier C packet](docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_AUTHORIZATION_PACKET.md)

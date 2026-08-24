@@ -1,20 +1,15 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate gate (2026-08-24):** corrected EEGMMIDB-UG1 Stage S-A1
-> implementation `37808be` passed both jobs in CI `32730673153` before its
-> sole 27-case generated qualification. All cases passed with 56 mock requests,
-> three successful generated bundles, 18 opaque post-write passes, 0.476
-> seconds runtime, 71.7 MB peak RSS, and zero retention or real operation. The
-> raw generic nested subtype counters were incorrectly zero; immutable case
-> flow exactly reconciles 21 checksum plus 35 EDF mock requests. Result
-> `e2965cf` passed both jobs in CI `32733249548`. The pending proof-only
-> closeout binds nine exact artifacts totaling 130,558 bytes without rerunning
-> qualification or performing a real operation. Closeout `b3902cf` passed both
-> jobs in CI `32735141922`. The new activation copies that exact proof into the
-> frozen executor fields with zero real operations. Commit, push, and green the
-> activation before any live opener. Stage S-A2 payload, retained-source,
-> fresh-final, EDF semantic, target, model, score, or claim operations remain
-> closed.
+> **Immediate gate (2026-08-24):** EEGMMIDB-UG1 Stage S-A2 is consumed and
+> permanently parked. Activation repair `9cc2688` passed both jobs in CI
+> `32738530528`; the sole invocation then retained its 212-byte marker and
+> failed local certificate-chain verification during the checksum-manifest TLS
+> handshake. It received no HTTP response, made zero EDF requests, transferred
+> zero payload bytes, and produced no target, model, prediction, score, or
+> scientific claim. Commit and green the aggregate result, then add a
+> proof-only closeout. Do not retry, repair, resume, bypass, substitute, or
+> alter ignored state. The dependent source-LOSO stage is blocked; future
+> science requires a separate preregistered lane and Tier C decision.
 
 > **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its
@@ -4057,10 +4052,14 @@ active Tier C packet, and the maintainer's next exact message was `continue`.
 The packet-bound decision quotes those bytes and binds six unchanged request/
 proof artifacts totaling 44,910 bytes.
 
-Current gate: commit, push, and remotely green that exact decision. The packet
-then permits generated-only Stage S-A1 before any possible one-checksum/six-
-payload Stage S-A2 acquisition. The 54 retained source files and all 30 fresh-
-final files remain sealed.
+Stage S-A1 later passed and was remotely closed. Its proof activation repair
+`9cc2688` passed both jobs in CI `32738530528` before the sole S-A2 invocation.
+That invocation consumed at a verified TLS issuer-chain failure before any
+HTTP response or EDF request. Zero payload bytes were acquired; only the
+durable marker remains. The source-LOSO stage is blocked and S-A2 has no retry,
+repair, resume, bypass, fallback, or substitution. Commit and green the
+aggregate result, then add a proof-only closeout. All fresh-final files remain
+sealed.
 
 ### MARC2-VR34P - All-False Exact-Count Private Confirmation Request Prepared
 

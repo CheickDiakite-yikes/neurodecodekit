@@ -15290,3 +15290,28 @@ before considering the one possible Stage S-A2 invocation.
 
 Immediate gate: run complete verification, commit, push, and remotely green
 the exact activation. No Stage S-A2 request may occur before that barrier.
+
+### EEGMMIDB-UG1 Stage S-A2 consumed at TLS verification failure
+
+- Initial activation `4c7800e` failed both CI suites because one new proof
+  test assumed full Git history in a shallow checkout; no live operation ran.
+- Test-only repair `9cc2688` preserved the qualified module and proof registry
+  byte-for-byte and passed Base job `97467118679`, Optional Neuro Readers job
+  `97467118486`, and CI `32738530528`.
+- Exact preflight confirmed the green HEAD and frozen hashes, no pre-existing
+  bundle/temp/marker, one unrelated untracked inspection file preserved, and
+  100,362,612,736 free bytes.
+- The sole invocation wrote its 212-byte durable consumed marker, then failed
+  the initial checksum-manifest TLS handshake with verified local issuer-chain
+  error. There was no HTTP response or body.
+- EDF requests, payload bytes, local EDFs, post-write passes, semantic reads,
+  targets, fits, inference, training, predictions, scores, releases, and claim
+  upgrades were all zero. Bundle and temporary paths are absent.
+- External wall time was 0.347787333 seconds. Peak process-tree RSS and disk
+  allocation peak are unavailable because the exception preceded the bounded
+  outcome return; no rerun is permitted to recover them.
+
+Immediate gate: verify, commit, push, and remotely green the aggregate
+consumed-failure result, then add a proof-only closeout. Stage S-A2 may not be
+retried, repaired, resumed, bypassed, or substituted. The dependent source-
+LOSO stage is blocked.

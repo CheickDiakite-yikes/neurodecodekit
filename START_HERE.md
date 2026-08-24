@@ -7,7 +7,25 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: EEGMMIDB-UG1 Stage S-A1 Result
+## Current Gate: EEGMMIDB-UG1 Stage S-A2 Consumed Failure
+
+Read
+`docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md`
+and its machine result first. Activation repair `9cc2688` passed both jobs in
+CI `32738530528` before the sole registered invocation. The executor wrote its
+durable consumed marker, then failed certificate-chain verification during the
+initial checksum-manifest TLS handshake. It received no HTTP response and made
+zero EDF requests; zero payload bytes, targets, models, predictions, or scores
+were produced.
+
+Stage S-A2 has no retry, rerun, repair, resume, fallback, or substitution. Do
+not open or alter its ignored marker, and do not complete the six-file bundle
+through another client. The dependent UG1 source-LOSO stage is blocked. The
+immediate safe task is to commit and remotely green this aggregate result,
+then add a proof-only closeout. A later scientific lane requires a new
+preregistration and exact Tier C decision.
+
+## Historical UG1 Context
 
 VR39P result closeout `474d49f53e1a46633b99b0ef2ff62b9abebe7a9c`
 passed Base job `97317987437`, Optional job `97317987655`, and CI
