@@ -1,0 +1,80 @@
+{
+  "schema_name": "neurodecodekit.bnci_2014_001_stage_a_failure",
+  "schema_version": "0.1.0",
+  "result_id": "BNCI-C3C5-1-A-failure-2026-08-24",
+  "recorded_at_local": "2026-08-24",
+  "lane_id": "BNCI-C3C5-1",
+  "route": "BNCIC3C5-A-R1",
+  "status": "consumed_transport_identity_refusal_before_payload_body",
+  "green_implementation": {
+    "commit": "619105bda3c39c063bb47bda6793af2ece9e1f53",
+    "CI_run_id": 32781910547,
+    "base_python_job_id": 97605610792,
+    "base_python_conclusion": "success",
+    "optional_neuro_readers_job_id": 97605610605,
+    "optional_neuro_readers_conclusion": "success",
+    "both_required_jobs_green": true
+  },
+  "failure": {
+    "stage": "first_registered_payload_transport_response",
+    "registered_member_ordinal": 1,
+    "HTTP_status": 302,
+    "reason": "direct_response_required_redirect_refused",
+    "exception_class": "ConnectionError",
+    "invocation_consumed": true,
+    "retry_resume_or_rerun_performed": false
+  },
+  "measurements": {
+    "launcher_wall_seconds": 0.39314375,
+    "peak_RSS_bytes": null,
+    "peak_RSS_unavailable_reason": "failure_preceded_aggregate_receipt",
+    "consumed_marker_bytes": 297,
+    "consumed_marker_sha256": "e30e2abf7c1e55eca6663e5ed06b0d36d3e351865213af78bb3d9ccb6b94b854",
+    "retained_incremental_bytes": 297,
+    "response_header_bytes": null,
+    "response_header_bytes_unavailable_reason": "urllib_exception_did_not_expose_counted_wire_bytes",
+    "payload_network_body_bytes": 0,
+    "accepted_payload_bytes": 0,
+    "private_manifest_bytes": 0,
+    "aggregate_receipt_bytes": 0
+  },
+  "operations": {
+    "registered_invocations": 1,
+    "HTTPS_requests": 1,
+    "HTTP_responses": 1,
+    "redirects_followed": 0,
+    "payload_body_reads": 0,
+    "accepted_files": 0,
+    "opaque_post_write_hash_opens": 0,
+    "MAT_semantic_content_opens": 0,
+    "MAT_semantic_parses": 0,
+    "signal_event_target_or_label_reads": 0,
+    "cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "operations_on_other_projects": 0
+  },
+  "retained_private_state": {
+    "consumed_marker_present": true,
+    "payload_bundle_present": false,
+    "receipt_present": false,
+    "partial_directory_present": false,
+    "existing_private_state_modified_or_deleted": false
+  },
+  "authority": {
+    "original_Stage_A_invocation_consumed": true,
+    "retry_rerun_resume_restart_or_substitution_allowed": false,
+    "Stage_Q_allowed": false,
+    "new_narrow_recovery_decision_required": true
+  },
+  "claim_boundary": {
+    "engineering_result": "one_shot_transport_identity_refusal_and_cleanup_worked",
+    "scientific_claim_established": false,
+    "unseen_person_generalization": false,
+    "EEG_beyond_EOG": false,
+    "decoding_performance": false
+  }
+}
