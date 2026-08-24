@@ -1,0 +1,152 @@
+{
+  "schema_name": "neurodecodekit.bnci_2014_001_cross_participant_eeg_gain_request_proof",
+  "schema_version": "0.1.0",
+  "proof_id": "BNCI-C3C5-1-request-proof-v0",
+  "lane_id": "BNCI-C3C5-1",
+  "recorded_at_local": "2026-08-24",
+  "status": "proof_only_closeout_local_remote_green_pending",
+  "request_green_proof": {
+    "commit": "3197390d45bfc8d19c9df2f3675166815f56f028",
+    "CI_run_id": 32749812954,
+    "base_python_job_id": 97503845918,
+    "base_python_duration": "6m37s",
+    "optional_neuro_job_id": 97503846151,
+    "optional_neuro_duration": "8m35s",
+    "both_required_jobs_green": true
+  },
+  "artifacts": [
+    {
+      "path": "docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_PRIMARY_SOURCE_RESEARCH.md",
+      "bytes": 11800,
+      "sha256": "b2adf8ae9dfac9fc58578beb8b31a39cf167a6e4c494a65651446b71cf724323",
+      "git_blob": "82bd04643486fd9cd1fc958740d920bf147e0c04"
+    },
+    {
+      "path": "registries/bnci_2014_001_cross_participant_eeg_gain_research.v0.json",
+      "bytes": 9016,
+      "sha256": "5a333709dbbf8c2e30f33c9f47240d8830d34b78ac9eda5ae22ede68a751ded2",
+      "git_blob": "c032215e8cffd98a5476ed3fa5d4b03eff16207f"
+    },
+    {
+      "path": "tests/test_bnci_2014_001_cross_participant_eeg_gain_research.py",
+      "bytes": 5377,
+      "sha256": "9fc0aaa3bb227f648308ac7174a43b65d9eb583056a478690d79432febea57e2",
+      "git_blob": "39a5a4588568f4326e0257b19ca21b385b28be37"
+    },
+    {
+      "path": "docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_PREREGISTRATION.md",
+      "bytes": 11533,
+      "sha256": "d272dafde17633f977fc294f4af2bb18d7b7bb681664a3780e537f0f2e5865ff",
+      "git_blob": "9e68a2d6fa3602637030f941c78bde8f0f0a9d4e"
+    },
+    {
+      "path": "registries/bnci_2014_001_cross_participant_eeg_gain_contract.v0.json",
+      "bytes": 12156,
+      "sha256": "e11dad351f5a4736dc6ac3ffdad28a65e37b18b40c5bfa9e861f5b0754ad2b74",
+      "git_blob": "0c875eec36247128c17617600acd2037dedd76fe"
+    },
+    {
+      "path": "tests/test_bnci_2014_001_cross_participant_eeg_gain_contract.py",
+      "bytes": 7057,
+      "sha256": "495426e20f851246a8115596dc845a571134556b264a92f8618e0cf2f5c1a70f",
+      "git_blob": "8f0ebd5558de1fa1740671b989475b4dfc6d4a5a"
+    },
+    {
+      "path": "docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_AUTHORIZATION_PACKET.md",
+      "bytes": 9911,
+      "sha256": "a8118b61bdf6988610dd2833b384534dbbfbf9addb8ce4b78e4a02e7754f704c",
+      "git_blob": "bdd8c97a9d2c8968782522c75aed7bbb1fbabf68"
+    },
+    {
+      "path": "registries/bnci_2014_001_cross_participant_eeg_gain_authorization_request.v0.json",
+      "bytes": 13015,
+      "sha256": "5067c245c54940242f269f9d7c1fb94b07a5b38d5f8b8ea6a9dbc128e29a8684",
+      "git_blob": "ef3efbae3dbabdc398a77ec214bba193284cff36"
+    },
+    {
+      "path": "tests/test_bnci_2014_001_cross_participant_eeg_gain_authorization_request.py",
+      "bytes": 7948,
+      "sha256": "5f4f0628128929912d795bfbd649d9b220eea19e43c07a41c7b6bd3c48d1e787",
+      "git_blob": "5d58ab45459dc10b5b70eaf19db79b709c76da7d"
+    }
+  ],
+  "artifact_summary": {
+    "count": 9,
+    "bytes": 87813,
+    "canonical_artifact_set_sha256": "72e7ebf7de421b723a668ee2076c223c45c0ab5fca724457d66314951a1e3823"
+  },
+  "verification": {
+    "focused_BNCI_tests": 28,
+    "full_dependency_light_tests": 5948,
+    "expected_skips": 212,
+    "pre_change_dependency_light_tests": 5942,
+    "new_tests": 6,
+    "full_dependency_light_runtime_seconds": 231.508,
+    "repository_local_ruff_green": true,
+    "registry_JSON_files_parsed": 466,
+    "registry_JSON_parse_green": true,
+    "compileall_green": true,
+    "git_diff_check_green": true,
+    "remote_base_python_green": true,
+    "remote_optional_neuro_green": true,
+    "local_dependency_rich_full_suite_is_authoritative": false,
+    "local_dependency_rich_full_suite_green": false,
+    "local_dependency_rich_failures_attributed_to_loaded_RSS_caps_and_sandbox_socket": true,
+    "runtime_source_files_changed_by_request": 0
+  },
+  "scope_unchanged": {
+    "source_members_and_hashes": true,
+    "participants_sessions_runs_trials_and_split": true,
+    "channels_windows_models_features_selection_fusion_and_controls": true,
+    "C3_C5_partial_gates_and_router": true,
+    "resource_caps_one_shot_order_and_publication_boundary": true,
+    "claim_ceiling": true
+  },
+  "current_authorization_flags": {
+    "packet_bound_decision_received": false,
+    "generated_implementation": false,
+    "generated_qualification": false,
+    "network_or_metadata": false,
+    "payload_acquisition": false,
+    "retained_real_data_access": false,
+    "MAT_header_structure_signal_event_trial_artifact_target_or_label_parse": false,
+    "target_firewall_or_private_derivative_creation": false,
+    "training": false,
+    "inference": false,
+    "prediction_freeze": false,
+    "target_delivery": false,
+    "scoring": false,
+    "release_or_publication": false,
+    "scientific_claim_upgrade": false
+  },
+  "proof_operation_counters": {
+    "tracked_artifact_reads": 9,
+    "Git_proof_reads": 9,
+    "public_GitHub_run_list_invocations": 1,
+    "public_GitHub_CI_watch_invocations": 1,
+    "protected_or_payload_network_requests": 0,
+    "protected_or_payload_network_bytes": 0,
+    "real_retained_ignored_consumed_or_other_project_path_operations": 0,
+    "MAT_BDF_or_signal_content_opens": 0,
+    "event_trial_artifact_target_or_label_reads": 0,
+    "private_derivative_bytes": 0,
+    "parameter_update_fits": 0,
+    "model_inferences": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scoring_events": 0,
+    "releases_or_publications": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "next_gate": {
+    "closeout_commit_push_and_both_CI_jobs_green_required": true,
+    "sole_active_Tier_C_packet_identification_allowed_before_closeout_green": false,
+    "fresh_packet_bound_maintainer_message_required_after_identification": true,
+    "current_or_earlier_continue_is_retroactive": false,
+    "any_generated_network_real_or_scientific_stage_authorized_now": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "immutable_remotely_anchored_independent_unseen_participant_and_EOG_conditional_EEG_experiment_packet_proof",
+    "scientific_claim_not_established": "no_real_data_model_prediction_target_or_score_was_accessed_so_unseen_person_generalization_EEG_gain_beyond_recorded_EOG_and_neural_decoding_remain_unestablished"
+  }
+}

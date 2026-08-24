@@ -14,11 +14,14 @@
 > machine request, and two matching tests. They freeze nine isolated unseen-
 > person folds, causal E1/E2 EEG selection, recorded-EOG P, source-cross-fitted
 > P+E and P+D(E), participant-level C3/C5-partial gates, and the ordered G1 ->
-> A -> Q -> P -> T sequence. Immediate gate: verify, commit, push, and green
-> the exact request, then create and separately green a proof-only closeout.
-> The current `continue` is not retroactive authority. No implementation,
-> network, real payload, MAT parse, event table, target, model, prediction,
-> score, release, or claim is authorized.
+> A -> Q -> P -> T sequence. Exact request `3197390` passed Base job
+> `97503845918`, Optional Neuro Readers job `97503846151`, and CI
+> `32749812954`. Read the new request proof closeout, machine proof, and test;
+> they bind nine exact artifacts totaling 87,813 bytes under canonical hash
+> `72e7ebf7...`. Immediate gate: verify, commit, push, and green that exact
+> proof-only closeout. The current `continue` is not retroactive authority. No
+> implementation, network, real payload, MAT parse, event table, target,
+> model, prediction, score, release, or claim is authorized.
 
 > Current EEGMMIDB-UG1 Stage S-A2 consumed result, 2026-08-24:
 > activation repair `9cc2688d90dc9bf75bd64751a63a7e318b4276ce`

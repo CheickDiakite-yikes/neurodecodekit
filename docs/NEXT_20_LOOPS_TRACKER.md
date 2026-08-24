@@ -14,10 +14,12 @@
 > decision `f435296` passed both jobs in CI `32745853616`. The exact
 > preregistration, contract, and all-false Tier C request now freeze the causal
 > models, participant firewall, C3/C5-partial gates, controls, resources, and
-> G1 -> A -> Q -> P -> T barriers. Commit and green the request, then create
-> and separately green its proof-only closeout. The current `continue` is not
-> retroactive authority. No implementation, payload, target, model,
-> prediction, score, release, or claim is open.
+> G1 -> A -> Q -> P -> T barriers. Exact request `3197390` passed both jobs in
+> CI `32749812954`. The proof-only closeout now binds nine exact artifacts
+> totaling 87,813 bytes under canonical SHA-256 `72e7ebf7...`. Commit and green
+> that closeout. The current `continue` is not retroactive authority. No
+> implementation, payload, target, model, prediction, score, release, or claim
+> is open.
 
 > **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its

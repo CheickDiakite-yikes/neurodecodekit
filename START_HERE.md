@@ -41,12 +41,17 @@ timing, derangement, temporal, and spatial controls. Conditional C5-partial
 requires EOG+EEG log loss to beat both recorded EOG alone and an equally sized
 EOG+deranged-EEG fusion at the participant level.
 
-Every authority flag is false. The immediate safe task is to verify, commit,
-push, and remotely green this exact request, then create and separately green
-a non-scope-changing proof closeout. The current `continue` is not retroactive
-authority. No generated implementation, network, MAT or BDF payload, semantic
-parse, event table, target, model, prediction, score, release, or new
-scientific claim is authorized now.
+Exact request `3197390` passed Base job `97503845918`, Optional Neuro Readers
+job `97503846151`, and CI `32749812954`. Read the new request proof closeout,
+machine proof, and matching test. They bind nine exact artifacts totaling
+87,813 bytes under canonical SHA-256
+`72e7ebf7de421b723a668ee2076c223c45c0ab5fca724457d66314951a1e3823`.
+
+Every authority flag remains false. The immediate safe task is to verify,
+commit, push, and remotely green this exact proof-only closeout. The current
+`continue` is not retroactive authority. No generated implementation, network,
+MAT or BDF payload, semantic parse, event table, target, model, prediction,
+score, release, or new scientific claim is authorized now.
 
 ## Historical UG1 Context
 

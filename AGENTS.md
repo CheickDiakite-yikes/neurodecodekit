@@ -93,13 +93,19 @@ causal late-imagery E1/E2 EEG candidates, recorded-EOG P model, source-cross-
 fitted P+E and P+D(E) fusions, participant-level C3 and C5-partial gates, and
 the ordered G1 -> A -> Q -> P -> T evidence sequence.
 
+Exact request `3197390d45bfc8d19c9df2f3675166815f56f028` passed Base
+job `97503845918`, Optional Neuro Readers job `97503846151`, and CI
+`32749812954`. Read the new request proof closeout, machine proof, and matching
+test. They bind nine exact research, contract, request, and test artifacts
+totaling 87,813 bytes under canonical artifact-set SHA-256
+`72e7ebf7de421b723a668ee2076c223c45c0ab5fca724457d66314951a1e3823`.
+
 Every current authority flag is false and every protected operation counter is
-zero. Immediate safe gate: verify, commit, push, and remotely green the exact
-request, then create and separately green a non-scope-changing request proof
-closeout. Do not identify a sole active Tier C packet or interpret the current
-`continue` as retroactive authority. No generated implementation, MAT/BDF
-payload, semantic parse, event table, target, model, prediction, score,
-release, or claim operation is authorized now.
+zero. Immediate safe gate: verify, commit, push, and remotely green this exact
+proof-only closeout. Do not identify a sole active Tier C packet or interpret
+the current `continue` as retroactive authority. No generated implementation,
+network, MAT/BDF payload, semantic parse, event table, target, model,
+prediction, score, release, or claim operation is authorized now.
 
 Historical UG1 setup follows. Read its research
 document and registry, preregistration and contract, authorization packet and

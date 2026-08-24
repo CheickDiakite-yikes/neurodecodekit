@@ -15395,3 +15395,29 @@ packet; no real payload or evidence operation is authorized by this decision.
 Immediate gate: complete integrated verification, commit, push, and remotely
 green this exact request. Then create and separately green a non-scope-changing
 proof closeout. The current `continue` is not retroactive Tier C authority.
+
+### BNCI-C3C5-1 request remotely green; proof-only closeout recorded
+
+- Exact all-false request `3197390d45bfc8d19c9df2f3675166815f56f028`
+  passed Base Python job `97503845918` in 6m37s, Optional Neuro Readers job
+  `97503846151` in 8m35s, and CI `32749812954`.
+- Bound nine exact research, preregistration, request, and test artifacts
+  totaling 87,813 bytes by path, size, SHA-256, and Git blob at the green
+  request commit.
+- Frozen canonical artifact-set SHA-256
+  `72e7ebf7de421b723a668ee2076c223c45c0ab5fca724457d66314951a1e3823`.
+- Changed no source member, participant split, model, window, feature,
+  selector, fusion, control, gate, route, resource cap, publication boundary,
+  or claim ceiling.
+- Performed only tracked-artifact/Git-proof reads and public CI checks.
+  Protected network, real/retained/ignored/consumed path, MAT/BDF, signal,
+  target, model, prediction, score, release, and claim counters remain zero.
+- Twenty-eight focused checks and all 5,948 dependency-light tests pass with
+  212 expected skips in 231.508 seconds, exactly six tests above the green-
+  request baseline. Ruff, compilation, all 466 registries, and diff hygiene
+  also pass.
+
+Immediate gate: verify, commit, push, and remotely green this exact proof-only
+closeout. Only then identify BNCI-C3C5-1 as the sole active Tier C packet and
+wait for a fresh packet-bound maintainer message. The current `continue` is
+not retroactive authority.

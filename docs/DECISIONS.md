@@ -13458,3 +13458,25 @@ target, model, prediction, score, release, or claim operation. Commit, push,
 and green this exact request, then add and separately green a proof-only
 closeout before naming one sole active Tier C packet. The current `continue`
 is not retroactive authority.
+
+## 0475 - Close The Green BNCI-C3C5-1 Request Without Expanding Scope
+
+Proof decision: exact all-false request
+`3197390d45bfc8d19c9df2f3675166815f56f028` passed CI `32749812954`, Base
+Python job `97503845918`, and Optional Neuro Readers job `97503846151`.
+
+Binding decision: freeze nine exact research, preregistration, request, and
+test artifacts totaling 87,813 bytes under canonical artifact-set SHA-256
+`72e7ebf7de421b723a668ee2076c223c45c0ab5fca724457d66314951a1e3823`.
+Bind every row by path, byte count, SHA-256, and exact Git blob at the green
+request commit.
+
+Operation decision: perform only tracked-artifact and Git-proof reads plus
+public CI-status checks. Protected network, dataset payload, retained or
+ignored path, MAT/BDF, signal, event, target, label, model, prediction, score,
+release, and claim operations remain zero.
+
+Transition decision: commit, push, and remotely green this exact proof-only
+closeout. Only after that proof may BNCI-C3C5-1 be named as the sole active
+Tier C packet. The maintainer's next fresh unambiguous message after that
+identification is required; the current `continue` is not retroactive.

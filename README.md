@@ -63,6 +63,11 @@ loss over recorded EOG alone and an equally sized EOG+deranged-EEG fusion.
 The request is not authorization: no real payload, model, prediction, or score
 has been produced.
 
+Exact all-false request `3197390` passed Base job `97503845918`, Optional
+Neuro Readers job `97503846151`, and CI `32749812954`. Its proof-only closeout
+binds nine exact artifacts totaling 87,813 bytes and must become remotely green
+before the packet can be identified for a later fresh maintainer decision.
+
 Current result: [EEGMMIDB-UG1 Stage S-A2](docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md)
 failed closed during verified TLS certificate-chain validation before an HTTP
 response or EDF request. The one-shot invocation is consumed: it retained only
