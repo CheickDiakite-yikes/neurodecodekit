@@ -7,33 +7,35 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: MARC2-VR38A Proof-Only Closeout
+## Current Gate: MARC2-VR39P Terminal Cohort Request
 
-VR38A registration `25205b1d2a1033cf3cefcab022c885025ac76928`
-passed Base job `97270563617`, Optional job `97270563773`, and CI
-`32670514251` before implementation. Read
-`docs/MARC_2_SELECTION_SUFFICIENCY_REPAIR_PREREGISTRATION.md`,
-`docs/MARC_2_SELECTION_SUFFICIENCY_REPAIR_IMPLEMENTATION.md`, the contract,
-implementation registry, result registry, and matching tests.
+VR38A proof-only closeout `a599adf3e0320ad420e1c2f5647a0432e645c246`
+passed Base job `97278761357`, Optional job `97278761303`, and CI
+`32673882729`, remotely closing the generated selection-sufficiency repair.
+Read
+`docs/MARC_2_SELECTION_SUFFICIENCY_PRIVATE_COHORT_FREEZE_AUTHORIZATION_PACKET.md`,
+its machine request, and its request test.
 
-The one generated qualification passed all 40 paths with exact route counts
-4/16/8/8/4 and 101 direct refusals. All 20 accepted paths produced one full
-structural selection: 16 generated subjects, 96 bundles, and 384 core members,
-with zero selected optional, non-target, or ineligible rows. The run used one
-thread, took 7.651170833967626 seconds, peaked at 50,528,256 bytes RSS, emitted
-3,606 aggregate bytes, and retained zero.
+VR39P is an all-false request for the one terminal structural attempt that can
+move this lane toward science. A future generated wrapper must qualify both
+VR38A success routes at every 12-19 participant size and collapse every
+failure. Only after all later proof barriers may one target-free 418,755-byte
+source read either write a private HMAC-committed cohort or permanently park
+Freewill/CIL1.
 
-Exact implementation `7ef4a8dface0c2a00e27b38f1f91b4043c12535f` passed Base
-job `97275279259`, Optional job `97275279380`, and CI `32672478625`. The
-proof-only closeout now binds that exact commit, both preproof registry hashes,
-all implementation artifacts, and all transitive helper blobs without
-repeating qualification or touching private state.
+The public surface has only R1 `cohort frozen` and R2 `lane parked`. It exposes
+no count, identity, topology, row, path, storage total, runtime, RSS, readiness
+state, failure stage, raw hash, or deterministic selection hash. The private
+cohort preserves sessions 1/2, runs 1-3, exact split roles, source rows,
+distinct raw/canonical source hashes, and compressed/uncompressed storage
+feasibility under the 10 GiB project ceiling.
 
-Immediate gate: verify, commit, push, and green the proof-only closeout. Only
-after that closeout is green may one all-false terminal private packet be
-prepared. It must freeze at least 12 participants or park Freewill; no
-topology-only successor is eligible. Private, archive, neural, target, model,
-score, FW2/CIL1, and claim work remain closed.
+Immediate gate: verify, commit, push, and green the exact all-false request,
+then create and separately green a non-scope-changing request proof closeout.
+Only afterward may VR39P be identified as the sole active Tier C packet for a
+fresh maintainer decision. Current and earlier continuation messages are not
+retroactive. Private, archive, neural, target, model, score, FW2/CIL1, and
+claim work remain closed.
 
 ## Recent Structural History
 
@@ -120,11 +122,10 @@ remains unexecuted. Because every VR37P route freezes zero cohorts, executing
 it would not unlock FW2 or CIL1.
 
 The generated-only `MARC2-VR38A` selection-sufficiency repair then passed its
-sole qualification as summarized at the top of this file. It preserved exact
-source, task, taxonomy, companion, rank, split, and storage checks while
-removing only the unnecessary global exact-195 requirement. Its implementation
-is remotely green; its proof-only closeout is the current gate. No real cohort
-or neural payload has been opened.
+sole qualification as summarized above. It preserved exact source, task,
+taxonomy, companion, rank, split, and storage checks while removing only the
+unnecessary global exact-195 requirement. Its implementation and proof-only
+closeout are remotely green. No real cohort or neural payload has been opened.
 
 ## Consumed Boundary: MARC2-VR34P Protocol-Conforming R2
 

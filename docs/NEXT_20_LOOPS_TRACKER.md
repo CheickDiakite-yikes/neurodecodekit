@@ -4244,6 +4244,35 @@ Immediate gate: commit, push, and green this exact closeout. The next Tier C
 structural packet must either freeze at least 12 participants or park Freewill
 without another private topology-only diagnostic.
 
+### MARC2-VR39P - Terminal Private Cohort Request Prepared Locally
+
+VR38A proof-only closeout `a599adf3e0320ad420e1c2f5647a0432e645c246`
+passed Base Python job `97278761357`, Optional Neuro Readers job
+`97278761303`, and CI `32673882729`, remotely closing the generated selector
+without another qualification or private operation.
+
+The all-false VR39P request binds 20 tracked VR38A/VR33A artifacts totaling
+294,409 bytes. Its future Stage 1 freezes 21 generated cases: both VR38A
+success routes at every valid 12-19 participant cardinality plus five failure
+classes, in ready/not-ready states, two orders, and two replays. That requires
+168 paths, 168 VR33A calls, 504 provider calls, 336 sleeper calls, 84 VR38A
+calls, exact R1/R2 counts 64/104, at least 200 direct refusals, and zero
+retained output.
+
+Only after every later proof barrier may Stage 2 create a consumed marker,
+collect exact readiness, read and strict-parse the fixed 418,755-byte
+target-free source once, and call unchanged VR38A once. R1 writes one private
+12-19 participant cohort with distinct raw/canonical source hashes, exact
+split and row provenance, compressed/uncompressed storage checks, and a
+secret-key HMAC commitment. Every failure is byte-identical public R2 and
+permanently parks Freewill/CIL1.
+
+Immediate gate: verify, commit, push, and green this exact request, then add
+and separately green a non-scope-changing request proof closeout. Only then
+may VR39P be named as the sole active Tier C packet for a fresh decision. No
+private source, cohort, archive member, neural payload, target, model, score,
+FW2/CIL1, release, or scientific claim is open.
+
 ### MARC2-VR33A - Exact-Count Readiness Repair Remotely Closed
 
 The consumed VR32P invocation returned five readiness samples against a frozen

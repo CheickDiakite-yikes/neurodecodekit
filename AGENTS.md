@@ -45,6 +45,35 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
+VR38A proof-only closeout `a599adf3e0320ad420e1c2f5647a0432e645c246`
+passed Base Python job `97278761357`, Optional Neuro Readers job
+`97278761303`, and CI `32673882729`. VR38A is remotely closed generated
+engineering and may not be qualified again.
+
+The current local gate is the all-false `MARC2-VR39P` request. Read
+`docs/MARC_2_SELECTION_SUFFICIENCY_PRIVATE_COHORT_FREEZE_AUTHORIZATION_PACKET.md`,
+`registries/marc2_selection_sufficiency_private_cohort_freeze_authorization_request.v0.json`,
+and its matching request test. The request binds 20 tracked VR38A/VR33A
+artifacts totaling 294,409 bytes and performs zero private or ignored-path
+operation.
+
+VR39P proposes a generated fixed-path wrapper, then only after every proof
+barrier one terminal 418,755-byte target-free structural read and one unchanged
+VR38A call. R1 privately freezes a 12-19 participant cohort behind a secret-key
+HMAC commitment; every failure collapses to R2 and permanently parks
+Freewill/CIL1. Public output may not reveal count, identity, topology, row,
+path, deterministic hash, storage total, timing, memory, readiness, operation
+count, or failure class.
+
+Immediate gate: verify, commit, push, and green the exact request, then create
+and separately green its non-scope-changing proof closeout. Only after both
+proofs may VR39P be identified as the sole active Tier C packet for a fresh
+maintainer decision. Current and prior messages are not retroactive. Do not
+touch `.codex_work`, any private/consumed source, archive member, neural
+payload, target, model, score, FW2/CIL1, device, release, or claim surface.
+
+### Historical path to VR39P
+
 `MARC2-VR35A` passed its sole generated-only task-aware eligibility
 qualification. Read the preregistration, implementation document, contract,
 implementation registry, result registry, and matching tests first. Exact
@@ -175,12 +204,10 @@ proof test. The closeout binds both preproof registry hashes, every exact
 implementation Git blob, and the three transitive helper blobs without
 repeating qualification or touching private state.
 
-Immediate gate: verify, commit, push, and green the exact proof-only closeout.
-Only afterward may Tier A prepare one all-false terminal private packet. That
-packet must freeze at least 12 participants or park Freewill; another
-topology-only private discriminator is prohibited. No private, archive,
-neural, target, model, score, FW2/CIL1, device, release, or claim action is
-authorized now.
+VR38A proof-only closeout is remotely green as recorded at the top of this
+section. The all-false VR39P request is now the only eligible next structural
+artifact; no private, archive, neural, target, model, score, FW2/CIL1, device,
+release, or claim action is authorized by its preparation.
 
 ### Consumed VR34P boundary
 

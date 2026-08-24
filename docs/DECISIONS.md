@@ -12634,3 +12634,32 @@ ignored-path, consumed-state, archive, neural, target, model, score, FW2/CIL1,
 release, or claim operation. After it is green, the only eligible structural
 successor is an all-false terminal packet that freezes at least 12 participants
 or parks Freewill; no topology-only private successor is allowed.
+
+## 0444 - Prepare Terminal VR39P Cohort-Freeze Request
+
+Proof decision: VR38A proof-only closeout
+`a599adf3e0320ad420e1c2f5647a0432e645c246` passed CI `32673882729`, Base
+Python job `97278761357`, and Optional Neuro Readers job `97278761303`.
+
+Research decision: replace further topology localization with the binary
+question that can unlock science. Freeze one future two-stage VR39P wrapper
+whose sole private result is either R1 with a source-bound 12-19 participant
+cohort or R2 with the Freewill/CIL1 lane permanently parked.
+
+Privacy decision: collapse both VR38A successes, collapse every failure, use a
+strict public allowlist, make every R2 byte-identical, expose no count or
+data-dependent measurement, and bind R1 only through secret-key HMAC-SHA-256.
+Keep the exact cohort, split, source rows, raw/canonical hashes, sizes, and
+commitment key in the mode-0600 private manifest.
+
+Engineering decision: qualify both success routes at all eight cardinalities,
+five terminal failure classes, exact readiness, two orders, two replays, path
+race defenses, provenance conversion, storage ceilings, precomputed output
+caps, consumed-before-readiness ordering, and completion-marker-last atomicity.
+
+Boundary decision: every authority flag is false and every operation counter
+is zero. Commit, push, and green the request and its later proof closeout before
+sole-packet identification. Only a fresh later maintainer message may authorize
+the unchanged packet; the current `lets go` is not retroactive. No private,
+archive, neural, target, model, score, FW2/CIL1, release, or claim operation is
+authorized.

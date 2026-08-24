@@ -14643,3 +14643,32 @@ Immediate gate: run complete proof-closeout verification, commit, push, and
 green this exact closeout. Only then may Tier A prepare one all-false terminal
 private cohort-freeze packet. That packet must freeze at least 12 participants
 or park Freewill/CIL1; another topology-only private successor is prohibited.
+
+### VR38A remotely closed; VR39P terminal request prepared
+
+- Proof-only closeout `a599adf3e0320ad420e1c2f5647a0432e645c246`
+  passed Base Python job `97278761357`, Optional Neuro Readers job
+  `97278761303`, and CI `32673882729`.
+- The all-false VR39P request binds 20 tracked artifacts totaling 294,409
+  bytes. Packet preparation opens no private or Git-ignored path and every
+  authority flag and operation counter is zero.
+- Generated Stage 1 is frozen at 21 cases, ready/not-ready, two orders, and two
+  replays: 168 paths, 168/504/336 VR33A-provider-sleeper calls, 84 unchanged
+  VR38A calls, R1/R2 counts 64/104, at least 200 direct refusals, and zero
+  retention.
+- Both VR38A success routes are exercised for every valid 12-19 participant
+  cardinality. Required fit, required held-out, taxonomy/companion, minimum
+  prefix, and uncompressed/peak-disk failures all park.
+- The future private manifest distinguishes raw-file and canonical-source
+  hashes, removes generated provenance, preserves exact split and selected-row
+  bindings, and checks the 8 GiB compressed plus 10 GiB peak-disk envelopes.
+- Public output is allowlist-only. R2 is byte-identical across all failures;
+  R1 differs across cohorts only through a secret-key HMAC-SHA-256 commitment.
+  Count, identity, topology, deterministic hashes, storage, timing, memory,
+  readiness, operations, and failure stage remain private.
+
+Immediate gate: verify, commit, push, and green the exact request, then create
+and separately green its proof-only closeout. A fresh packet-bound maintainer
+decision remains required after sole-packet identification. No private,
+archive, neural, target, model, score, FW2/CIL1, release, or claim operation is
+authorized now.
