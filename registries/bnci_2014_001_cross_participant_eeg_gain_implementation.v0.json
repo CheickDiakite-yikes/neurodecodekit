@@ -1,0 +1,71 @@
+{
+  "schema_name": "neurodecodekit.bnci_2014_001_cross_participant_eeg_gain_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "BNCI-C3C5-1-G1-implementation-2026-08-24",
+  "recorded_at_local": "2026-08-24",
+  "status": "implemented_component_qualified_full_G1_unproven_after_launcher_refusal",
+  "lane_id": "BNCI-C3C5-1",
+  "bindings": {
+    "contract_path": "registries/bnci_2014_001_cross_participant_eeg_gain_contract.v0.json",
+    "contract_sha256": "e11dad351f5a4736dc6ac3ffdad28a65e37b18b40c5bfa9e861f5b0754ad2b74",
+    "authorization_decision_path": "registries/bnci_2014_001_cross_participant_eeg_gain_authorization_decision.v0.json",
+    "authorization_decision_sha256": "687ed0d5afa64ba7c34ab86bf3e0c4f79d08d21041dd1e9e6aa3642629d0f559",
+    "authorization_decision_commit": "617991b93a4525900efd7a2488e34fc16c302df6",
+    "authorization_decision_CI": 32753700516,
+    "authorization_decision_base_job": 97516278409,
+    "authorization_decision_optional_job": 97516278093
+  },
+  "artifacts": [
+    {"path": "src/neurodecodekit/bnci_c3c5_cli.py", "bytes": 1653, "sha256": "2a3ab539dc8d1c29d3b82910e0e1b4fa222eff5bd4bec5a3738ad172678e17da", "git_blob_sha1": "f3d4e8146c7b6b461fc54f5e1a0ace1846537ece"},
+    {"path": "src/neurodecodekit/datasets/bnci_2014_001_acquisition.py", "bytes": 18134, "sha256": "430e0f673d016d587df8c94189173f9de41c961695a32c827ccd6fdef7db3d05", "git_blob_sha1": "bf3778591d4319f4af47333817b8711621f46bef"},
+    {"path": "src/neurodecodekit/evaluation/bnci_2014_001_score.py", "bytes": 20945, "sha256": "9f1e88bd02b0974d2bab68c14bfa5623597e5557c28e3910681a950059bd8069", "git_blob_sha1": "42066fbff7af0d9c0497917f5160fe45521aac79"},
+    {"path": "src/neurodecodekit/experiments/bnci_2014_001_cross_participant_eeg_gain.py", "bytes": 56212, "sha256": "a2fe33d7dfa94b723192928676fb39ef5c1b6e01181c560a13a46fb491965334", "git_blob_sha1": "43e0312d360c52f2e1724aaf21b92a62f9e499b4"},
+    {"path": "tests/test_bnci_2014_001_cross_participant_eeg_gain.py", "bytes": 8233, "sha256": "a9ea8b1629e47daa074610fcea39d3ca101ac67a9eb4eff750e0f07ec6d685a9", "git_blob_sha1": "b6448e837fb544637af749ebfb256f608fe36374"},
+    {"path": "tests/test_bnci_2014_001_cross_participant_eeg_gain_numerical.py", "bytes": 4097, "sha256": "e31cb3821356cf00d9a3b2e3124ae81c0425dd997b977cd0f1876eb04bae7b7b", "git_blob_sha1": "2c6c7d0599db2f4f1bc127bc5c27aaf0eddd1eca"},
+    {"path": ".github/workflows/ci.yml", "bytes": 3040, "sha256": "53ea7e06c7989c7e3ae8030eafe7184aad4916fcefca2f8cfcc05ba7a87c2fc3", "git_blob_sha1": "4246b7c7f6f8570df53b1b89705b496b30e38a78"}
+  ],
+  "fixed_pipeline": {
+    "base_install_heavy_dependencies": 0,
+    "optional_versions": {"numpy": "2.5.2", "scipy": "1.18.0", "scikit-learn": "1.9.0"},
+    "outer_folds": 9,
+    "isolated_processes": true,
+    "workers_concurrent_maximum": 1,
+    "fits_per_fold": 52,
+    "prediction_sets_per_fold": 55,
+    "full_fits": 468,
+    "full_prediction_sets": 495,
+    "held_out_target_rows_per_fold_worker": 0,
+    "held_out_target_identities_per_fold_worker": 0,
+    "real_execute_CLI_available": false
+  },
+  "local_component_verification": {
+    "dependency_free_tests_passed": 8,
+    "optional_numerical_tests_passed": 4,
+    "optional_numerical_runtime_seconds": 5.100,
+    "recovery_request_tests_passed": 3,
+    "complete_dependency_light_tests_run": 5970,
+    "complete_dependency_light_tests_skipped": 216,
+    "complete_dependency_light_runtime_seconds": 207.879,
+    "pre_change_tests_run": 5955,
+    "pre_change_tests_skipped": 212,
+    "test_method_delta": 15,
+    "ruff_passed": true,
+    "compileall_passed": true,
+    "diff_check_passed": true,
+    "full_G1_passed": false
+  },
+  "incident": {
+    "route": "BNCIC3C5-R1",
+    "launcher_attempts": 1,
+    "generated_cases_reached": 0,
+    "failure": "existing_coordinator_root_passed_to_new_child_directory_helper",
+    "repair_applied": "pass_work_root_slash_mat",
+    "repair_rerun_performed": false,
+    "old_authority_consumed": true
+  },
+  "next_gate": "fresh_recovery_decision_for_one_replacement_generated_G1_pass",
+  "claim_boundary": {
+    "engineering_capability": "A bounded lazy target-firewalled BNCI generated pipeline implementation now exists.",
+    "scientific_claim_not_established": "The full G1 pass did not reach its first case and no real neural payload or model score was produced."
+  }
+}

@@ -72,6 +72,22 @@ packet, the maintainer's next exact message was `continue`; the packet-bound
 is recorded with delayed effect. It authorizes only the unchanged G1 -> A -> Q
 -> P -> T sequence after this decision itself is remotely green.
 
+Decision `617991b` passed Base job `97516278409`, Optional Neuro Readers job
+`97516278093`, and CI `32753700516`. The generated implementation now includes
+strict mocked acquisition, causal E1/E2/P features, nine spawned
+target-firewalled participant folds, 16 frozen conditions, prediction hashes,
+and a one-delivery aggregate scorer. Twelve focused component tests pass.
+
+The sole registered G1 launcher attempt nevertheless refused before its first
+generated case because an existing coordinator root was passed to a helper
+requiring a new child directory. The [R1 incident](docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_STAGE_G1_FAILURE.md)
+record shows zero fixture writes, fits, predictions, target deliveries, scores,
+real-data operations, network bytes, and output bytes. The one-line wiring fix
+is component-tested but was not rerun under consumed authority. A new
+[all-false recovery request](docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_STAGE_G1_RECOVERY_AUTHORIZATION_PACKET.md)
+asks only for one replacement generated G1 pass and explicitly stops before
+Stage A.
+
 Current result: [EEGMMIDB-UG1 Stage S-A2](docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md)
 failed closed during verified TLS certificate-chain validation before an HTTP
 response or EDF request. The one-shot invocation is consumed: it retained only
@@ -83,11 +99,10 @@ be repaired or retried under this lane. Exact result `ba8645e` passed both
 jobs in CI `32740773041`; proof-only closeout `d9eae69` passed both jobs in CI
 `32742694237` without reopening the consumed marker or payload paths.
 
-BNCI-C3C5-1 is authorized with delayed effect, not executed. The decision
-commit must pass both remote jobs before generated implementation, and the
-generated implementation must pass both jobs before acquisition. Zero MAT or
-BDF bodies, event tables, targets, models, predictions, or scores have been
-opened or produced. Even a maximum pass would establish only participant-
+BNCI-C3C5-1 has a component-tested generated implementation, but full G1 is R1
+and acquisition remains closed. Zero real MAT or BDF bodies, event tables,
+targets, models, predictions, or scores have been opened or produced. Even a
+future maximum pass would establish only participant-
 independent BNCI protocol-condition prediction and incremental EEG sensor
 information beyond three recorded EOG channels, not thought reading, language,
 movement intention, exclusive motor-cortex origin, live use, or hardware.

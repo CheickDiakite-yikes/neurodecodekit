@@ -7,7 +7,28 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: BNCI-C3C5-1 Decision Proof
+## Current Gate: BNCI-C3C5-1 G1 Recovery Request
+
+Decision `617991b93a4525900efd7a2488e34fc16c302df6` passed Base job
+`97516278409`, Optional Neuro Readers job `97516278093`, and CI
+`32753700516` before generated implementation.
+
+Read the BNCI implementation document, implementation registry, G1 failure
+document, and machine failure result. The implementation has 12 green focused
+component tests, but the sole registered full G1 launcher attempt consumed at
+`BNCIC3C5-R1` before its first generated case. It created and removed one
+empty invocation-owned root and produced zero generated cases, fits,
+predictions, target deliveries, scores, real operations, network bytes, or
+output bytes.
+
+Read the G1 recovery authorization packet, all-false machine request, and
+matching test. The request asks only for one replacement generated/mock pass
+under unchanged caps and stops before Stage A. It authorizes nothing now.
+Commit, push, and green the request, then add and separately green a proof-only
+closeout before identifying it as the sole active Tier C packet. Do not rerun
+G1 or access real BNCI data under the consumed decision.
+
+## Historical BNCI Decision Gate
 
 Read
 `docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md`

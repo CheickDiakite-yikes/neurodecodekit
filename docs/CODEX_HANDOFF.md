@@ -1,5 +1,17 @@
 # Codex Handoff - NeuroDecodeKit
 
+> **Current gate, 2026-08-24:** BNCI decision `617991b` passed Base job
+> `97516278409`, Optional job `97516278093`, and CI `32753700516`. The
+> generated pipeline implementation and 12 focused component tests are green,
+> but the sole full G1 launcher attempt consumed at `BNCIC3C5-R1` before the
+> first generated case due to an existing-root/new-child wiring mismatch.
+> Counters are zero for fixture writes, fits, predictions, targets, scores,
+> network, real data, and output. Read the implementation and G1 failure
+> records, then the all-false G1 recovery packet/request/test. Immediate gate:
+> commit, push, and green the recovery request, add and separately green its
+> proof-only closeout, identify it as the sole active Tier C packet, and wait
+> for a fresh message. Do not rerun G1 or begin Stage A now.
+
 > Current independent scientific lane, 2026-08-24: exact EEGMMIDB-UG1 Stage
 > S-A2 proof closeout `d9eae69d0361bc1ddfcbeaf7d3a105ad83502206`
 > passed Base job `97480690428`, Optional Neuro Readers job `97480690862`, and

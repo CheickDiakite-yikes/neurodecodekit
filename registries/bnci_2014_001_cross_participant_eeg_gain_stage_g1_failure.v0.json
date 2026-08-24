@@ -1,0 +1,61 @@
+{
+  "schema_name": "neurodecodekit.bnci_2014_001_cross_participant_eeg_gain_stage_g1_failure",
+  "schema_version": "0.1.0",
+  "result_id": "BNCI-C3C5-1-G1-launcher-failure-2026-08-24",
+  "recorded_at_local": "2026-08-24T13:26:38-04:00",
+  "lane_id": "BNCI-C3C5-1",
+  "stage": "G1",
+  "status": "consumed_at_pre_case_launcher_refusal_no_scientific_operation",
+  "route": "BNCIC3C5-R1",
+  "command_surface": "python_-m_neurodecodekit.bnci_c3c5_cli_qualify",
+  "failure_class": "FileExistsError",
+  "failure_reason": "generated_MAT_helper_received_existing_coordinator_root_instead_of_new_child_path",
+  "runtime_seconds_external": 0.027232958,
+  "initial_free_disk_bytes": 100353490944,
+  "peak_RSS_bytes": null,
+  "peak_RSS_unavailable_reason": "refusal_preceded_result_resource_sampling",
+  "bound_registry_reads": {
+    "files": 2,
+    "bytes": 21667,
+    "contract_reads": 1,
+    "decision_reads": 1
+  },
+  "invocation_owned_cleanup": {
+    "temporary_directories_created": 1,
+    "temporary_directories_removed": 1,
+    "temporary_files_created": 0,
+    "unrelated_paths_touched": 0,
+    "output_path_absent_after_refusal": true
+  },
+  "operation_counters": {
+    "generated_qualification_launcher_attempts": 1,
+    "generated_case_executions": 0,
+    "generated_MAT_writes": 0,
+    "generated_MAT_parses": 0,
+    "mock_transport_calls": 0,
+    "generated_feature_rows": 0,
+    "parameter_update_fits": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "prediction_freezes": 0,
+    "synthetic_target_deliveries": 0,
+    "synthetic_scoring_events": 0,
+    "real_path_stats_hashes_or_opens": 0,
+    "real_MAT_signal_event_artifact_target_or_label_reads": 0,
+    "network_bytes": 0,
+    "new_payload_bytes": 0,
+    "public_output_bytes": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "repair": {
+    "applied": true,
+    "change": "coordinator_now_passes_a_new_mat_child_path",
+    "component_tests_after_repair": 12,
+    "full_G1_rerun": false,
+    "fresh_recovery_decision_required": true
+  },
+  "claim_boundary": {
+    "engineering_result": "The zero-operation launcher defect was localized, cleaned, and repaired.",
+    "scientific_claim_not_established": "No full generated qualification or real neural operation occurred, so no decoding claim changed."
+  }
+}

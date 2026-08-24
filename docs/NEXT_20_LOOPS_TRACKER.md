@@ -1,28 +1,17 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate gate (2026-08-24):** EEGMMIDB-UG1 Stage S-A2 is consumed and
-> permanently parked. Activation repair `9cc2688` passed both jobs in CI
-> `32738530528`; the sole invocation then retained its 212-byte marker and
-> failed local certificate-chain verification before any HTTP response, EDF
-> request, or payload byte. Result `ba8645e` passed both jobs in CI
-> `32740773041`; proof-only closeout `d9eae69` passed both jobs in CI
-> `32742694237`. Never retry, repair, resume, bypass, substitute, or alter its
-> ignored state. Independent Tier A research now selects `BNCI-C3C5-1`: the 18
-> original NEMAR `nm000139` `v1.0.2` MAT files total 779,873,919 bytes and can
-> support a future nine-fold zero-calibration four-class comparison of
-> EOG-only, EEG-only, EOG+EEG, and EOG+deranged-EEG conditions. Research
-> decision `f435296` passed both jobs in CI `32745853616`. The exact
-> preregistration, contract, and all-false Tier C request now freeze the causal
-> models, participant firewall, C3/C5-partial gates, controls, resources, and
-> G1 -> A -> Q -> P -> T barriers. Exact request `3197390` passed both jobs in
-> CI `32749812954`. Proof-only closeout `9e7c70d` passed both jobs in CI
-> `32751503586`. BNCI-C3C5-1 was then identified as the sole active Tier C
-> packet, and the maintainer's next exact message was `continue`. The new
-> packet-bound decision preserves those eight bytes and authorizes only the
-> unchanged G1 -> A -> Q -> P -> T sequence after its own remote-green proof.
-> Immediate gate: commit and green the decision, then run one generated/mock
-> G1 qualification. Payload, target, model, prediction, score, release, and
-> claim work remain behind their registered later barriers.
+> **Immediate gate (2026-08-24):** BNCI decision `617991b` passed both jobs in
+> CI `32753700516`. The bounded generated implementation now has 12 green
+> focused component tests, including one exact 52-fit fold and one spawned
+> target-firewalled fold. The sole registered full G1 launcher attempt consumed
+> at `BNCIC3C5-R1` before its first case because an existing coordinator root
+> was passed to a helper requiring a new child. It created no fixture, fit,
+> prediction, target delivery, score, real access, network byte, or output.
+> The repaired code was not rerun. The all-false G1 recovery request asks only
+> for one replacement generated pass and stops before Stage A. Immediate gate:
+> commit and remotely green the request, then separately green a proof-only
+> closeout and wait for a fresh packet-bound decision. Real BNCI payload,
+> target, model, score, release, and claim work remain closed.
 
 > **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its

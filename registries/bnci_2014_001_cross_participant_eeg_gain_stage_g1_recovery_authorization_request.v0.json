@@ -1,0 +1,91 @@
+{
+  "schema_name": "neurodecodekit.bnci_2014_001_cross_participant_eeg_gain_stage_g1_recovery_authorization_request",
+  "schema_version": "0.1.0",
+  "request_id": "BNCI-C3C5-1-G1-recovery-request-2026-08-24-v0",
+  "recorded_at_local": "2026-08-24",
+  "lane_id": "BNCI-C3C5-1",
+  "stage": "G1-recovery",
+  "status": "prepared_all_authority_false_fresh_decision_pending",
+  "authorized_now": false,
+  "user_decision": null,
+  "bindings": {
+    "original_contract": {"path": "registries/bnci_2014_001_cross_participant_eeg_gain_contract.v0.json", "sha256": "e11dad351f5a4736dc6ac3ffdad28a65e37b18b40c5bfa9e861f5b0754ad2b74"},
+    "original_preregistration": {"path": "docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_PREREGISTRATION.md", "sha256": "d272dafde17633f977fc294f4af2bb18d7b7bb681664a3780e537f0f2e5865ff"},
+    "original_decision": {"path": "registries/bnci_2014_001_cross_participant_eeg_gain_authorization_decision.v0.json", "sha256": "687ed0d5afa64ba7c34ab86bf3e0c4f79d08d21041dd1e9e6aa3642629d0f559", "commit": "617991b93a4525900efd7a2488e34fc16c302df6", "CI": 32753700516},
+    "implementation": {"path": "registries/bnci_2014_001_cross_participant_eeg_gain_implementation.v0.json", "bytes": 4366, "sha256": "9ed077ac3f7b2ebe614fd09cb36bd9840a921dbbe74d888a34be5f0d5395f70b", "git_blob_sha1": "09f7181a07fd615f58e95e3d0b3d8cda7a4a12c1"},
+    "implementation_document": {"path": "docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_IMPLEMENTATION.md", "bytes": 3982, "sha256": "dc5c2a1849d7fc50bb40e9ddf509e674b958fd812227957136e8c168817230ba", "git_blob_sha1": "e64db46437be12819b2b4c0f4eb2a055329a8d40"},
+    "failure_result": {"path": "registries/bnci_2014_001_cross_participant_eeg_gain_stage_g1_failure.v0.json", "bytes": 2278, "sha256": "02d2ce00c7beb6393edc1ab3b51244e7028d799b8645bbedcf2b7d746986dbd7", "git_blob_sha1": "8c23ec722202b2fa0e7c9af1bee7e833275d3eb1"},
+    "failure_document": {"path": "docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_STAGE_G1_FAILURE.md", "bytes": 1834, "sha256": "60c41d95f514b6c4b9999a5227991e1dfb9ee8bdeaf4eafa4ba7599339008c78", "git_blob_sha1": "a0bc65bd20b4a0b140f7646d4bc53167fc5d453f"}
+  },
+  "recovery_authority_now": {
+    "replacement_generated_qualification": false,
+    "generated_MAT_fixture_write_or_parse": false,
+    "mock_transport": false,
+    "synthetic_feature_or_target_creation": false,
+    "synthetic_parameter_update_or_inference": false,
+    "synthetic_prediction_freeze": false,
+    "synthetic_target_delivery_or_score": false,
+    "aggregate_result_publication": false,
+    "network_or_download": false,
+    "existing_or_ignored_path_access": false,
+    "real_MAT_or_neural_access": false,
+    "real_feature_model_prediction_or_score": false,
+    "Stage_A_or_later_stage": false,
+    "provider_language_model_RW3_stream_device_or_hardware": false,
+    "release_or_claim_upgrade": false
+  },
+  "requested_scope_after_fresh_green_decision": {
+    "replacement_generated_qualification_invocations": 1,
+    "generated_only": true,
+    "mock_transport_only": true,
+    "outer_fold_processes": 9,
+    "active_workers_maximum": 1,
+    "synthetic_parameter_update_fits_exact": 468,
+    "synthetic_prediction_sets_exact": 495,
+    "synthetic_target_deliveries": 1,
+    "synthetic_scoring_events": 1,
+    "aggregate_result_files": 1,
+    "real_or_existing_payload_operations": 0,
+    "network_bytes": 0,
+    "retry_after_replacement": false,
+    "Stage_A_authorized_by_recovery": false
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 3600,
+    "peak_process_tree_RSS_bytes": 1073741824,
+    "private_generated_bytes": 536870912,
+    "public_output_bytes": 4194304,
+    "minimum_free_disk_bytes": 5368709120,
+    "network_bytes": 0
+  },
+  "current_operation_counters": {
+    "replacement_generated_qualification_invocations": 0,
+    "generated_MAT_writes_or_parses": 0,
+    "mock_transport_calls": 0,
+    "synthetic_parameter_update_fits": 0,
+    "synthetic_prediction_sets": 0,
+    "synthetic_target_deliveries": 0,
+    "synthetic_scoring_events": 0,
+    "aggregate_result_files": 0,
+    "real_or_existing_payload_operations": 0,
+    "network_bytes": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "required_order": [
+    "commit_push_and_green_request",
+    "commit_push_and_green_proof_only_closeout",
+    "identify_as_sole_active_Tier_C_packet",
+    "receive_fresh_packet_bound_user_decision",
+    "commit_push_and_green_decision",
+    "run_one_replacement_generated_G1_qualification",
+    "commit_push_and_green_implementation_and_result",
+    "stop_before_Stage_A"
+  ],
+  "claim_boundary": {
+    "maximum_after_clean_recovery": "Generated engineering proves the fixed BNCI target-firewalled pipeline executes end to end within its caps.",
+    "scientific_claim_not_established": "No real neural payload or scientific score is authorized by this recovery request."
+  }
+}

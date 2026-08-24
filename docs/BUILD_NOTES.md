@@ -15440,3 +15440,28 @@ not retroactive authority.
 Immediate gate: verify, commit, push, and green the decision in both jobs.
 Then implement and run exactly one generated/mock G1 qualification. Do not
 begin acquisition before the G1 implementation and result are remotely green.
+
+### BNCI-C3C5-1 implementation completed; G1 launcher consumed at R1
+
+- Authorization decision `617991b` passed Base job `97516278409`, Optional
+  Neuro Readers job `97516278093`, and CI `32753700516`.
+- Added strict mocked acquisition, generated MAT and causal feature mechanics,
+  source-only E2 reference fitting, nine spawned target-firewalled folds, 16
+  frozen conditions, canonical prediction hashes, and isolated scoring.
+- Eight dependency-free and four optional numerical tests pass. One fold
+  performs the frozen 52 fits and 55 prediction sets; the full schedule is 468
+  and 495 under the registered caps.
+- The sole full G1 CLI attempt refused in 0.027232958 seconds before its first
+  generated case because the coordinator passed an existing root to a helper
+  requiring a new child directory.
+- The attempt wrote no fixture, fit no model, made no prediction, delivered no
+  target, scored nothing, used no network or real data, and published no
+  output. It created and removed only one empty invocation-owned root.
+- The one-line child-path repair passes all component checks. No rerun occurred
+  under consumed authority.
+- Prepared an all-false recovery request for one replacement generated G1 pass
+  only. It stops before Stage A and opens no real payload or claim surface.
+
+Immediate gate: commit, push, and remotely green the recovery request, then
+add and separately green a proof-only closeout. Wait for a fresh packet-bound
+decision before any replacement pass.

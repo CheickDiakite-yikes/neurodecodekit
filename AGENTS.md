@@ -45,6 +45,31 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
+`BNCI-C3C5-1` authorization decision
+`617991b93a4525900efd7a2488e34fc16c302df6` passed Base job
+`97516278409`, Optional Neuro Readers job `97516278093`, and CI
+`32753700516`. Read the generated implementation document and registry, then
+the Stage G1 failure document and machine result.
+
+The bounded generated implementation has 12 green focused component tests,
+including one exact 52-fit fold and one spawned target-firewalled fold. The
+sole registered full G1 launcher attempt consumed at `BNCIC3C5-R1` before its
+first generated case because the coordinator passed an existing root to a
+helper requiring a new child. It produced zero generated fixtures, fits,
+predictions, target deliveries, scores, real operations, network bytes, or
+output bytes. The invocation-owned empty root was removed. The wiring is fixed
+and component-tested, but the old one-shot authority must not be reused.
+
+Read
+`docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_STAGE_G1_RECOVERY_AUTHORIZATION_PACKET.md`,
+its all-false machine request, and matching test. Immediate gate: commit, push,
+and green that exact request, then add and separately green a proof-only
+closeout. Only after it is identified as the sole active Tier C packet may a
+fresh maintainer message authorize one replacement generated pass. Stage A,
+real MAT access, neural modeling/scoring, release, and claims remain closed.
+
+## Prior Lane Context
+
 `EEGMMIDB-UG1` Stage S-A2 is consumed and permanently parked. Read
 `docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md`,
 its machine result, and the matching test first. Proof activation repair

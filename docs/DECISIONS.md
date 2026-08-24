@@ -13511,3 +13511,31 @@ Claim decision: the decision itself performs no protected operation and proves
 nothing scientific. Even R5 can establish only participant-independent BNCI
 protocol-condition prediction and incremental scalp-EEG sensor information
 beyond the three recorded EOG channels under this protocol.
+
+## 0477 - Preserve The BNCI G1 Launcher Refusal And Require Fresh Recovery
+
+Proof decision: authorization decision
+`617991b93a4525900efd7a2488e34fc16c302df6` passed CI `32753700516`, Base
+Python job `97516278409`, and Optional Neuro Readers job `97516278093` before
+implementation.
+
+Implementation decision: add the complete generated/mock pipeline with lazy
+optional dependencies, exact causal features, source-only fit state, spawned
+fold target capabilities, frozen controls, prediction commitments, and an
+isolated aggregate scorer. Keep the real execute surface absent.
+
+Incident decision: classify the sole G1 launcher attempt as
+`BNCIC3C5-R1`. It refused before its first generated case after two tracked
+registry reads and one free-disk sample. It performed zero generated fixture,
+model, prediction, target, score, network, real-data, or output operation and
+cleaned only its empty invocation-owned root.
+
+Recovery decision: repair the child-path wiring and component-test it, but do
+not reuse the consumed one-shot authority. Freeze an all-false request for one
+replacement generated G1 pass under unchanged caps. Require request proof,
+fresh packet-bound authorization, and decision proof before that pass. Stop
+before Stage A even if recovery succeeds.
+
+Claim decision: this is engineering failure localization, not neural evidence.
+No decoding, unseen-person, EEG-beyond-EOG, real-time, or scientific claim is
+upgraded.
