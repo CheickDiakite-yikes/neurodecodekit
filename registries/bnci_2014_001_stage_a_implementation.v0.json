@@ -1,0 +1,93 @@
+{
+  "schema_name": "neurodecodekit.bnci_2014_001_stage_a_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "BNCI-C3C5-1-A-implementation-2026-08-24",
+  "recorded_at_local": "2026-08-24",
+  "lane_id": "BNCI-C3C5-1",
+  "status": "implementation_qualified_live_invocation_not_run",
+  "green_G1_proof": {
+    "commit": "cf476982d70cbd6c710b7d0a67352765155c6bc1",
+    "CI_run_id": 32767245101,
+    "base_python_job_id": 97559394298,
+    "optional_neuro_readers_job_id": 97559394437,
+    "both_required_jobs_green": true,
+    "proof_registry_path": "registries/bnci_2014_001_cross_participant_eeg_gain_stage_g1_result_proof.v0.json",
+    "proof_registry_sha256": "aad6cca7e3c14dbad2f4934f9d16d417effc7ef5db01a45c2918ee8ff253f434"
+  },
+  "implementation_artifacts": [
+    {
+      "path": "src/neurodecodekit/datasets/bnci_2014_001_stage_a.py",
+      "bytes": 14579,
+      "sha256": "e95346a4e5f3674865e58dd3f2aa06bf0c2d0e85ab8dc4db3c8fa031f30dd665",
+      "Git_blob": "66960c6266b110f877eee02684711aa27d4bad5b"
+    },
+    {
+      "path": "src/neurodecodekit/bnci_c3c5_stage_a_cli.py",
+      "bytes": 1846,
+      "sha256": "21b647c2606f6e402a03aee6eb4bb5cd744039cc31370953ae5f7d33fa36fb08",
+      "Git_blob": "0131ede6417b4a3af6d7a38dcacc9137003b73d1"
+    },
+    {
+      "path": "tests/test_bnci_2014_001_stage_a_implementation.py",
+      "bytes": 4683,
+      "sha256": "b14e72b86e3070c52bab721d8843f82d5d87f5c1580290077b19845d49179554",
+      "Git_blob": "570b44cfd41b59d58ada05e4633ccc63d8c87f12"
+    }
+  ],
+  "transport": {
+    "method": "GET",
+    "TLS_verification": true,
+    "proxy_use": false,
+    "redirects": 0,
+    "content_encoding": "identity",
+    "resume_header": "Range",
+    "stream_chunk_bytes": 1048576,
+    "request_timeout_seconds": 120.0,
+    "MAT_semantic_interpretation": false
+  },
+  "one_shot_boundary": {
+    "consumed_marker_before_live_transport_construction": true,
+    "exclusive_output_paths": true,
+    "existing_output_overwrite": false,
+    "cleanup_scope": "invocation_created_temporary_directory_only",
+    "live_invocations_now": 0,
+    "reruns_allowed": 0
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "payload_files_exact": 18,
+    "payload_bytes_exact": 779873919,
+    "payload_requests_maximum": 54,
+    "attempts_per_file_maximum": 3,
+    "network_bytes_maximum": 2684354560,
+    "incremental_disk_bytes_maximum": 2147483648,
+    "free_disk_bytes_minimum": 5368709120,
+    "runtime_seconds_maximum": 1800.0,
+    "peak_RSS_bytes_maximum": 1073741824,
+    "public_output_bytes_maximum": 4194304
+  },
+  "verification": {
+    "focused_BNCI_tests_passed": 88,
+    "full_dependency_light_tests_passed": 6008,
+    "full_dependency_light_tests_skipped": 216,
+    "full_dependency_light_runtime_seconds": 225.675,
+    "ruff_passed": true,
+    "CLI_plan_passed": true,
+    "git_diff_check_passed": true,
+    "network_requests": 0,
+    "ignored_path_operations": 0,
+    "real_payload_reads": 0,
+    "scientific_scores": 0
+  },
+  "next_gate": "commit_push_and_both_remote_CI_jobs_green_before_the_one_Stage_A_invocation",
+  "claim_boundary": {
+    "engineering_capability": "proof_gated_one_shot_opaque_BNCI_payload_acquisition",
+    "scientific_claim_established": false,
+    "unseen_person_generalization": false,
+    "EEG_beyond_EOG": false,
+    "motor_cortex_or_movement_intention": false,
+    "thought_or_language_decoding": false
+  }
+}
