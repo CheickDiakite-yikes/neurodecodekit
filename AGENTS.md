@@ -238,18 +238,30 @@ request/proof artifacts totaling 44,910 bytes. Exact decision
 
 Read the Stage S-A1 implementation document and machine registry, the new
 isolated source-acquisition module and sidecar CLI, and their matching tests.
-The local implementation freezes a 27-case generated qualification, exact
-15,498,816-byte sentinel streams, checksum-before-payload ordering, 1 MiB
-stream reads, six opaque post-write hashes, durable consumed state, complete-
-bundle-only no-replace publication, target-detail-free public receipts, and a
-proof-before-live-opener gate. No live execute CLI exists.
+Corrected implementation `37808bef8c59bc862345f342fd932aa04373b3fd`
+passed Base job `97441967842`, Optional Neuro Readers job `97441968304`, and
+CI `32730673153` before the sole registered generated qualification.
 
-Immediate gate: verify, commit, push, and remotely green this exact
-implementation before the sole registered generated qualification. Do not run
-that qualification early, make a network request, inspect an existing local
-payload, or open EDF content. The 54 retained source files, 30 fresh-final
-files, targets, models, scores, release, devices, and claim surfaces remain
-closed.
+Read the Stage S-A1 result document, machine result, and matching test. All 27
+frozen generated cases passed with three complete generated bundles, 67,199,028
+body bytes read, 46,496,448 successful payload bytes, 18 opaque post-write
+passes, 0.4758401670260355 seconds runtime, 71,696,384-byte peak RSS, and zero
+retained generated output. Real request, network, payload, EDF semantic,
+target, model, training, prediction, score, release, and claim counters were
+zero. The run is consumed and must not be repeated.
+
+The raw aggregate correctly reported 56 top-level mock requests but its generic
+nested block serialized both mock subtypes as zero. The immutable case flow
+reconciles the total as 21 checksum plus 35 EDF mock requests. Treat this as an
+explicit non-scientific counter-schema discrepancy; do not hide it, rerun the
+qualification, or modify the qualified implementation.
+
+Immediate gate: commit, push, and remotely green the exact result, then create
+and green a separate proof-only closeout without repeating qualification.
+Stage S-A2 remains closed until both barriers pass. Do not make a network
+request, inspect an existing local payload, or open EDF content. The 54
+retained source files, 30 fresh-final files, targets, models, scores, release,
+devices, and claim surfaces remain closed.
 
 ### Historical VR39P path
 

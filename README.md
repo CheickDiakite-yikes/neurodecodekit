@@ -115,15 +115,21 @@ without implementation, network, payload, target, model, or score access.
 Proof closeout `b0b4632` then passed both jobs in CI `32724357118`. The
 maintainer's next exact `continue` is now recorded in a packet-bound decision;
 decision `1b5c919` passed Base job `97426157639`, Optional Neuro Readers job
-`97426157381`, and CI `32725633524`. The isolated Stage S-A1 implementation is
-now locally ready: it streams exact-size generated payloads in at most 1 MiB
+`97426157381`, and CI `32725633524`. Corrected Stage S-A1 implementation
+`37808be` then passed Base job `97441967842`, Optional Neuro Readers job
+`97441968304`, and CI `32730673153`. It streams exact-size generated payloads in at most 1 MiB
 chunks, freezes official checksums before payload requests, performs one opaque
 post-write hash per file, publishes only a complete no-replace bundle, and
-exposes only `plan` and generated `qualify` commands. Its 27-case registered
-qualification has not run and must wait for this exact implementation commit
-to pass both remote jobs. Stage S-A2 network access, real EEG parsing, source
-LOSO training, fresh participants, targets, scoring, and claim upgrades remain
-closed.
+exposes only `plan` and generated `qualify` commands. Its sole 27-case
+qualification passed with 56 mock requests, three successful generated
+bundles, 67,199,028 generated body bytes, 18 opaque post-write passes, 0.476
+seconds runtime, 71.7 MB peak RSS, and zero retention or real operation. The
+raw nested mock-subtype fields were incorrectly zero; immutable case-flow
+accounting reconciles the authoritative total as 21 checksum plus 35 EDF mock
+requests. This reporting defect is documented without rerunning the consumed
+qualification. Stage S-A2 network access, real EEG parsing, source LOSO
+training, fresh participants, targets, scoring, and claim upgrades remain
+closed until this result and a separate proof-only closeout are remotely green.
 
 ## Results At A Glance
 

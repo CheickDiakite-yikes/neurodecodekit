@@ -15214,3 +15214,31 @@ Immediate gate: verify, commit, push, and remotely green this exact
 implementation. Only then run the sole registered Stage S-A1 generated/mock
 qualification. Stage S-A2 remains closed until that measured result and a
 separate proof-only closeout are each remotely green.
+
+### EEGMMIDB-UG1 Stage S-A1 generated qualification passed once
+
+- Corrected implementation `37808bef8c59bc862345f342fd932aa04373b3fd`
+  passed Base Python job `97441967842`, Optional Neuro Readers job
+  `97441968304`, and CI `32730673153` before execution.
+- The sole 27-case generated qualification passed at route
+  `EEGMMIDBUG1SA1-G1`: three complete generated bundles, 67,199,028 body bytes
+  read, 46,496,448 successful payload bytes, 18 opaque post-write passes,
+  1,048,576-byte maximum stream read, and zero retained output.
+- Runtime was 0.4758401670260355 seconds, peak process-tree RSS was 71,696,384
+  bytes, and peak incremental disk was 15,523,840 bytes.
+- The raw top-level total correctly reported 56 mock requests. The generic
+  nested mock subtype fields were incorrectly zero; the frozen case flow
+  deterministically reconciles 21 checksum plus 35 EDF mock requests. This
+  non-scientific reporting discrepancy is explicit and does not justify a
+  rerun.
+- Real request, network, payload, EDF semantic, retained-source, fresh-final,
+  target, model, training, prediction, score, release, and claim counters were
+  zero. The qualification is consumed and may not be repeated.
+- Twenty-four focused checks and the complete dependency-light suite passed:
+  5,891 tests with 212 expected skips, exactly seven more passing tests than
+  the 5,884-test pre-result baseline. Changed-file Ruff, compilation, all JSON
+  registries, CLI help, and diff hygiene also passed.
+
+Immediate gate: verify, commit, push, and remotely green the exact result,
+then add and separately green a proof-only closeout. Stage S-A2 remains closed
+until both barriers pass.

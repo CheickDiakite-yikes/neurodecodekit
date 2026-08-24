@@ -13274,3 +13274,28 @@ EDF semantic, retained-source, fresh-final, target, model, training,
 prediction, score, release, and claim counters remain zero. Stage S-A2 stays
 closed until the measured S-A1 result and a separate proof-only closeout are
 each remotely green.
+
+## 0468 - Consume Stage S-A1 And Preserve Its Counter Discrepancy
+
+Proof decision: corrected implementation
+`37808bef8c59bc862345f342fd932aa04373b3fd` passed CI `32730673153`, Base
+Python job `97441967842`, and Optional Neuro Readers job `97441968304` before
+the sole Stage S-A1 generated qualification.
+
+Result decision: accept `EEGMMIDBUG1SA1-G1` as a passed, consumed generated
+engineering result. All 27 frozen cases passed with 67,199,028 generated body
+bytes read, three complete generated bundles, 18 opaque post-write passes,
+0.4758401670260355 seconds runtime, 71,696,384-byte peak RSS, and zero retained
+generated output.
+
+Correction decision: preserve the raw 1,901-byte aggregate by SHA-256
+`f2fbba2e102858d3e4328960b7772b3f5b6b83c3907266e99de45f19b7e7239e`.
+Its top-level total of 56 mock requests is authoritative; its nested zero
+checksum/EDF mock subtype fields are not. Recover 21 checksum and 35 EDF mock
+requests only from the immutable case flow, document the discrepancy, and do
+not rerun or amend the qualified implementation.
+
+Boundary decision: real request, network, payload, EDF semantic, retained-
+source, fresh-final, target, model, training, prediction, score, release, and
+claim counters remain zero. Commit and remotely green the result, then add a
+separate proof-only closeout before Stage S-A2 can become eligible.

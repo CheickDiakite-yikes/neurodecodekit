@@ -1,18 +1,18 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current EEGMMIDB-UG1 Stage S-A1 implementation gate, 2026-08-24: exact
-> packet-bound decision `1b5c9195f384e5867f18131aa7d669f7c9cd0e2b`
-> passed Base job `97426157639`, Optional Neuro Readers job `97426157381`,
-> and CI `32725633524`. Read the Stage S-A1 implementation document, machine
-> registry, isolated source-acquisition module, generated-only sidecar CLI,
-> and matching tests. The implementation freezes 27 generated cases, exact-
-> size sentinel streams, checksum-first ordering, 1 MiB reads, six opaque
-> post-write hashes, durable consumption, exact membership, no-replace
-> complete-bundle promotion, and a proof-before-live-opener gate. Immediate
-> gate: verify, commit, push, and green this exact implementation before the
-> sole registered qualification. Stage S-A2 network, retained-source, fresh-
-> final, EDF semantic, target, model, score, release, and claim surfaces remain
-> closed.
+> Current EEGMMIDB-UG1 Stage S-A1 result gate, 2026-08-24: corrected
+> implementation `37808bef8c59bc862345f342fd932aa04373b3fd` passed Base job
+> `97441967842`, Optional Neuro Readers job `97441968304`, and CI
+> `32730673153` before the sole 27-case generated qualification. All cases
+> passed with 56 mock requests, three successful generated bundles, 18 opaque
+> post-write passes, 0.4758401670260355 seconds runtime, 71,696,384-byte peak
+> RSS, and zero retention or real operation. The raw generic nested block
+> serialized mock checksum/EDF subtypes as zero; exact immutable case-flow
+> accounting reconciles 21 + 35 = 56. Do not rerun or modify the qualified
+> implementation. Immediate gate: commit, push, and green the transparent
+> result, then add and green a separate proof-only closeout. Stage S-A2
+> network, retained-source, fresh-final, EDF semantic, target, model, score,
+> release, and claim surfaces remain closed.
 
 > Current EEGMMIDB-UG1 Stage S-A decision gate, 2026-08-24: request proof
 > `b0b4632ffbdaca10c1e4bbc93ad26ebd8e1368ca` passed Base job

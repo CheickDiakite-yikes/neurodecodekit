@@ -1,15 +1,16 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate gate (2026-08-24):** EEGMMIDB-UG1 Stage S-A decision `1b5c919`
-> passed Base job `97426157639`, Optional Neuro Readers job `97426157381`,
-> and CI `32725633524`. The isolated Stage S-A1 implementation now freezes 27
-> generated cases, exact 15,498,816-byte sentinel streams, checksum-before-
-> payload ordering, 1 MiB reads, six opaque post-write hashes, durable consumed
-> state, complete-bundle-only no-replace promotion, and proof-before-live-
-> opener ordering. Commit, push, and green this exact implementation before
-> the sole registered qualification. Stage S-A2 payload, retained-source,
-> fresh-final, EDF semantic, target, model, score, or claim operation remains
-> closed until the result and separate proof closeout are also green.
+> **Immediate gate (2026-08-24):** corrected EEGMMIDB-UG1 Stage S-A1
+> implementation `37808be` passed both jobs in CI `32730673153` before its
+> sole 27-case generated qualification. All cases passed with 56 mock requests,
+> three successful generated bundles, 18 opaque post-write passes, 0.476
+> seconds runtime, 71.7 MB peak RSS, and zero retention or real operation. The
+> raw generic nested subtype counters were incorrectly zero; immutable case
+> flow exactly reconciles 21 checksum plus 35 EDF mock requests. Commit, push,
+> and green this transparent result, then create and green a separate proof-
+> only closeout without rerunning qualification. Stage S-A2 payload, retained-
+> source, fresh-final, EDF semantic, target, model, score, or claim operations
+> remain closed until both barriers pass.
 
 > **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its

@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: EEGMMIDB-UG1 Stage S-A1 Implementation
+## Current Gate: EEGMMIDB-UG1 Stage S-A1 Result
 
 VR39P result closeout `474d49f53e1a46633b99b0ef2ff62b9abebe7a9c`
 passed Base job `97317987437`, Optional job `97317987655`, and CI
@@ -203,14 +203,25 @@ freezes exact checksum parsing and seven-request order, 1 MiB streaming, six
 opaque local hash passes, a synced pre-request consumed marker, complete-
 bundle-only no-replace promotion, narrow cleanup, resource caps, and 27
 generated adversarial cases. The CLI exposes only `plan` and `qualify`; no
-live command or generic URL/path override exists.
+live command or generic URL/path override exists. Corrected implementation
+`37808bef8c59bc862345f342fd932aa04373b3fd` passed Base job `97441967842`,
+Optional Neuro Readers job `97441968304`, and CI `32730673153` before the one
+registered generated qualification.
 
-Immediate gate: commit, push, and remotely green this exact implementation.
-Only then run the sole registered generated qualification. Stage S-A2 network
-access remains closed until that result and a separate proof-only closeout are
-also remotely green. No local real payload, EDF semantic content, target,
-model, training, score, release, or claim action is open, and the 54 retained
-source EDFs plus all 30 fresh-final EDFs remain untouched.
+Read the Stage S-A1 result document, machine result, and matching test. All 27
+cases passed with 56 mock requests, three complete generated bundles,
+67,199,028 body bytes read, 18 post-write passes, 0.4758401670260355 seconds
+runtime, 71,696,384-byte peak RSS, and zero retention. The raw generic nested
+counter block incorrectly reports both mock subtypes as zero; the immutable
+case flow exactly reconciles 21 checksum plus 35 EDF mock requests. The raw
+aggregate is hash-bound, the discrepancy is explicit, and the consumed
+qualification must not be rerun.
+
+Immediate gate: commit, push, and remotely green this exact result, then add
+and green a separate proof-only closeout. Stage S-A2 network access remains
+closed until both barriers pass. No local real payload, EDF semantic content,
+target, model, training, score, release, or claim action is open, and the 54
+retained source EDFs plus all 30 fresh-final EDFs remain untouched.
 
 ## Previous Gate: MARC2-VR39P Aggregate R2 Closeout
 
