@@ -1,0 +1,134 @@
+{
+  "schema_name": "neurodecodekit.eegmmidb_unseen_participant_metadata_stage_m2_result",
+  "schema_version": "0.1.0",
+  "lane_id": "EEGMMIDB-UG1-M2",
+  "recorded_at_local": "2026-08-24",
+  "status": "passed_once_consumed_pending_result_remote_green",
+  "execution_binding": {
+    "proof_closeout_commit": "fd88d9d7ca9ffd3951eda295daa74a05ee4201a9",
+    "proof_closeout_CI_run_id": 32717768039,
+    "base_python_job_id": 97402552811,
+    "optional_neuro_readers_job_id": 97402552736,
+    "both_required_jobs_green_before_execution": true,
+    "real_metadata_invocations": 1,
+    "real_metadata_invocation_may_be_repeated": false,
+    "retries": 0,
+    "reruns": 0
+  },
+  "remote_inventory": {
+    "dataset": "PhysioNet EEG Motor Movement/Imagery Dataset",
+    "version": "1.0.0",
+    "file_count": 36,
+    "source_fit_missing_file_count": 6,
+    "fresh_final_file_count": 30,
+    "declared_payload_bytes": 92414976,
+    "source_fit_missing_declared_bytes": 15498816,
+    "fresh_final_declared_bytes": 76916160,
+    "minimum_file_bytes": 2555616,
+    "maximum_file_bytes": 2596896,
+    "distinct_paths": 36,
+    "distinct_ETags": 36,
+    "distinct_Last_Modified_values": 36,
+    "validator_availability": {
+      "etag": 36,
+      "last_modified": 36,
+      "accept_ranges": 36
+    },
+    "unavailable_optional_validator_fields": []
+  },
+  "artifacts": {
+    "inventory": {
+      "path": "registries/eegmmidb_unseen_participant_metadata_inventory.v0.json",
+      "bytes": 11698,
+      "sha256": "1b8f16f846a1bb3e0dccdbf71ea39f375872ad732bdffeecd100dbfc161a7dac"
+    },
+    "receipt": {
+      "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_METADATA_RECEIPT.md",
+      "bytes": 281,
+      "sha256": "a3ddfce0950fcb32d8ff2a540b42903ac4c20f24572324182108bfe34cf49837"
+    },
+    "combined_output_bytes": 11979,
+    "output_cap_bytes": 1048576
+  },
+  "measurements": {
+    "input_metadata_value_bytes": 2088,
+    "transport_level_header_bytes_measured": false,
+    "output_bytes": 11979,
+    "runtime_seconds": 4.292717207921669,
+    "peak_process_tree_RSS_bytes": 38141952,
+    "initial_free_disk_bytes": 101498957824,
+    "real_HEAD_requests": 36,
+    "mock_HEAD_requests": 0,
+    "redirects": 0,
+    "retries": 0,
+    "response_body_reads": 0,
+    "response_body_bytes": 0,
+    "local_real_data_path_operations": 0,
+    "EDF_body_header_annotation_event_or_signal_reads": 0,
+    "payload_download_bytes": 0,
+    "target_or_label_reads": 0,
+    "parameter_update_fits": 0,
+    "model_inference_runs": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "scoring_events": 0,
+    "new_payload_bytes": 0,
+    "producer_is_causal": null,
+    "end_to_end_latency_measured": false
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "wall_time_seconds": 300,
+    "peak_process_tree_RSS_bytes": 268435456,
+    "metadata_requests": 36,
+    "application_visible_metadata_bytes": 2097152,
+    "combined_declared_payload_bytes": 268435456,
+    "generated_output_bytes": 1048576,
+    "network_payload_body_bytes": 0,
+    "incremental_disk_bytes": 1048576,
+    "minimum_free_disk_bytes": 2147483648,
+    "retries": 0,
+    "reruns": 0
+  },
+  "warnings": [
+    "metadata_identity_only",
+    "EDF_content_not_opened",
+    "transport_level_header_bytes_not_measured",
+    "producer_causality_not_applicable_to_metadata_identity",
+    "end_to_end_latency_not_measured",
+    "not_neural_or_decoding_evidence"
+  ],
+  "unavailable_fields": [
+    "EDF_header",
+    "EDF_annotations",
+    "EEG_channels",
+    "EEG_sampling_rate",
+    "EEG_signal_samples",
+    "task_or_event_content",
+    "signal_quality",
+    "decoding_outcome"
+  ],
+  "next_gate": {
+    "result_commit_push_and_both_CI_jobs_green_required": true,
+    "proof_only_metadata_closeout_required_before_payload": true,
+    "source_first_sequence_preserved": true,
+    "source_fit_missing_file_count": 6,
+    "source_fit_missing_declared_bytes": 15498816,
+    "fresh_final_acquisition_authorized_now": false,
+    "payload_acquisition_authorized_by_result": false,
+    "EDF_content_access_authorized_by_result": false,
+    "target_model_or_score_authorized_by_result": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "A complete validator-backed size-bounded remote identity inventory was frozen for all 36 registered files.",
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "unseen_participant_generalization_established": false,
+    "neural_or_decoding_advantage_established": false,
+    "movement_intention_or_motor_cortex_origin_established": false,
+    "language_or_thought_decoding_established": false,
+    "live_or_hardware_result_established": false
+  }
+}

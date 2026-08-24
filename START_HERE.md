@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: EEGMMIDB-UG1 Stage M1 Proof-Only Closeout
+## Current Gate: EEGMMIDB-UG1 Stage M2 Result Closeout
 
 VR39P result closeout `474d49f53e1a46633b99b0ef2ff62b9abebe7a9c`
 passed Base job `97317987437`, Optional job `97317987655`, and CI
@@ -139,10 +139,23 @@ canonical artifact-set SHA-256
 `8c586bb311c1afb09bfacaf611da150398c40121802dd9b2c4683036f9bbb3c1`
 without repeating qualification or performing a real operation.
 
-Immediate gate: commit, push, and green this exact proof-only closeout. Only
-after both required jobs pass may the already-authorized one-shot Stage M2
-body-blind metadata invocation begin. Payload, EDF content, target, model,
-score, release, and scientific claim surfaces remain closed.
+Stage M1 proof-only closeout
+`fd88d9d7ca9ffd3951eda295daa74a05ee4201a9` passed Base job
+`97402552811`, Optional Neuro Readers job `97402552736`, and CI
+`32717768039`. The sole Stage M2 invocation then completed all 36 direct
+`HEAD` requests in 4.292717207921669 seconds at 38,141,952-byte peak RSS.
+
+Read the Stage M2 result document, canonical inventory, receipt, machine
+result, and matching test. The inventory freezes 92,414,976 declared bytes:
+six missing source-fit files totaling 15,498,816 bytes and 30 fresh-final files
+totaling 76,916,160 bytes. ETag, Last-Modified, and Accept-Ranges were present
+for all 36 files. Redirect, retry, body, EDF, payload, target, model, training,
+and scoring counts were zero. The real metadata invocation is consumed.
+
+Immediate gate: commit, push, and green the exact Stage M2 result, then add a
+separate proof-only metadata closeout before payload acquisition. The source-
+first six-file lane remains next; fresh-final acquisition, EDF content,
+targets, models, scores, release, and claims remain closed.
 
 ## Previous Gate: MARC2-VR39P Aggregate R2 Closeout
 

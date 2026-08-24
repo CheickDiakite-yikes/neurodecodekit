@@ -1,5 +1,16 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current EEGMMIDB-UG1 Stage M2 result gate, 2026-08-24: Stage M1 proof
+> `fd88d9d7ca9ffd3951eda295daa74a05ee4201a9` passed Base job
+> `97402552811`, Optional job `97402552736`, and CI `32717768039` before the
+> sole real metadata invocation. All 36 direct `HEAD` requests passed in
+> 4.292717207921669 seconds at 38,141,952-byte peak RSS, freezing 92,414,976
+> declared bytes and all three validators for every file. Redirect, retry,
+> response-body, EDF, payload, target, model, training, and scoring counts were
+> zero. The invocation is consumed. Immediate gate: commit and green the exact
+> inventory/receipt/result, then add a proof-only metadata closeout before any
+> source payload acquisition.
+
 > Current EEGMMIDB-UG1 Stage M1 proof gate, 2026-08-24: result
 > `3b343d74604b0b0d0e0732f14cf593c8e057ebbf` passed Base job
 > `97399780409`, Optional Neuro Readers job `97399780188`, and CI

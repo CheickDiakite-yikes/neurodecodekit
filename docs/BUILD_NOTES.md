@@ -15075,3 +15075,30 @@ proof barrier passes.
 Immediate gate: commit, push, and remotely green the proof-only closeout.
 Stage M2 remains closed until that barrier passes, and it authorizes no payload
 or EEG-content access.
+
+### EEGMMIDB-UG1 Stage M2 real metadata inventory passed once
+
+- Stage M1 proof-only closeout
+  `fd88d9d7ca9ffd3951eda295daa74a05ee4201a9` passed Base job
+  `97402552811`, Optional Neuro Readers job `97402552736`, and CI
+  `32717768039` before the sole real invocation.
+- Issued exactly 36 sequential direct `HEAD` requests over the frozen URLs.
+  Every request returned direct status 200, one canonical Content-Length, and
+  ETag, Last-Modified, and Accept-Ranges.
+- Froze 92,414,976 declared bytes total: six missing source-fit imagery files
+  at 15,498,816 bytes and 30 fresh-final files at 76,916,160 bytes. Individual
+  files range from 2,555,616 to 2,596,896 bytes.
+- Measured 2,088 application-visible metadata value bytes, 11,698 inventory
+  bytes, 281 receipt bytes, 4.292717207921669 seconds runtime,
+  38,141,952-byte peak process-tree RSS, and 101,498,957,824 initial free-disk
+  bytes.
+- Redirect, retry, response-body, local real-path, EDF, payload, target, fit,
+  inference, training, scoring, and new-payload counts were zero.
+- Preserved the exact canonical inventory SHA-256
+  `1b8f16f846a1bb3e0dccdbf71ea39f375872ad732bdffeecd100dbfc161a7dac`
+  and receipt SHA-256
+  `a3ddfce0950fcb32d8ff2a540b42903ac4c20f24572324182108bfe34cf49837`.
+
+Immediate gate: commit, push, and remotely green the exact result, then add a
+proof-only metadata closeout. No payload acquisition or EDF content access is
+authorized by the result itself.

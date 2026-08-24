@@ -10,6 +10,10 @@
 > result, then separately green its proof-only closeout before Stage M2.
 > Result `3b343d7` passed both jobs in CI `32716836238`; the nine-artifact
 > proof-only closeout is now the immediate gate and performs no real operation.
+> Proof closeout `fd88d9d` passed both jobs in CI `32717768039`; the sole real
+> metadata pass then froze all 36 files at 92,414,976 declared bytes with full
+> validators and zero body/EDF/payload bytes. The immediate gate is the exact
+> Stage M2 result and proof closeout before the six-file source-first payload.
 
 > **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its

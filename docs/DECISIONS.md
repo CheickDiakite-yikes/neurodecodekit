@@ -13109,3 +13109,33 @@ Transition decision: this closeout has no effect until its exact commit is
 pushed and both required CI jobs pass. Then, and only then, the existing Stage
 M decision permits one body-blind metadata invocation. Payload acquisition,
 EDF content, targets, models, scores, release, and claims remain closed.
+
+## 0462 - Consume the Sole Stage M2 Real Metadata Invocation
+
+Proof decision: Stage M1 proof-only closeout
+`fd88d9d7ca9ffd3951eda295daa74a05ee4201a9` passed CI `32717768039`, Base
+Python job `97402552811`, and Optional Neuro Readers job `97402552736` before
+the real invocation.
+
+Execution decision: issue exactly one sequential direct `HEAD` request to each
+of the 36 frozen PhysioNet URLs. All 36 passed with direct status 200, one
+canonical Content-Length, and all three optional validators. Consume the
+invocation with zero retry or rerun.
+
+Inventory decision: freeze 92,414,976 aggregate declared bytes, including
+15,498,816 bytes for six missing source-fit imagery files and 76,916,160 bytes
+for 30 fresh-final files. Retain the 11,698-byte canonical inventory and
+281-byte receipt as inspectable provenance artifacts.
+
+Measurement decision: record 2,088 application-visible metadata value bytes,
+11,979 combined output bytes, 4.292717207921669 seconds runtime,
+38,141,952-byte peak process-tree RSS, and 101,498,957,824 initial free-disk
+bytes. Transport-level header bytes were not measured.
+
+Boundary decision: preserve zero redirect, retry, response-body, local real-
+path, EDF, payload, target, fit, inference, training, scoring, new-payload,
+release, and claim operations. Metadata identity is not neural evidence.
+
+Transition decision: commit and green the exact result, then separately bind
+it in a proof-only metadata closeout before any payload operation. Preserve the
+source-first six-file sequence and keep all 30 fresh-final payloads closed.

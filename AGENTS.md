@@ -178,11 +178,27 @@ under canonical artifact-set SHA-256
 `8c586bb311c1afb09bfacaf611da150398c40121802dd9b2c4683036f9bbb3c1`.
 It repeats no qualification and performs no real operation.
 
-Immediate gate: commit, push, and remotely green the exact proof-only
-closeout. Only then may the one already-authorized Stage M2 body-blind metadata
-invocation run. Do not access a real URL before that proof, and do not access
-any local real-data path, EDF content, source/fresh payload, target, model,
-score, release, device, or claim surface under Stage M2.
+Exact Stage M1 proof-only closeout
+`fd88d9d7ca9ffd3951eda295daa74a05ee4201a9` passed Base job
+`97402552811`, Optional Neuro Readers job `97402552736`, and CI
+`32717768039` before the sole Stage M2 invocation.
+
+Read the Stage M2 result document, canonical inventory, receipt, machine
+result, and matching test. All 36 direct `HEAD` requests passed in
+4.292717207921669 seconds at 38,141,952-byte peak RSS. The exact inventory
+freezes 92,414,976 declared bytes: six missing source-fit files totaling
+15,498,816 bytes and 30 fresh-final files totaling 76,916,160 bytes. Every
+file returned ETag, Last-Modified, and Accept-Ranges. Redirect, retry,
+response-body, local real-path, EDF, payload, target, model, training, scoring,
+and new-payload counts were zero. The Stage M2 invocation is consumed and must
+not be repeated.
+
+Immediate gate: commit, push, and remotely green the exact Stage M2 result,
+then add and separately green a proof-only metadata closeout. Do not acquire
+payload or open EDF content before that proof. The next scientific sequence is
+source-first and may consider only the six missing source-fit imagery files;
+fresh-final, target, model, score, release, device, and claim surfaces remain
+closed.
 
 ### Historical VR39P path
 

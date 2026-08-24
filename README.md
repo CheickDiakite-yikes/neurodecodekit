@@ -96,6 +96,12 @@ proof-only closeout are remotely green. Result `3b343d7` passed both jobs in
 CI `32716836238`; the proof-only closeout now binds nine exact artifacts
 totaling 82,278 bytes without repeating qualification or accessing real data.
 Stage M2 remains blocked until that closeout is itself remotely green.
+Proof closeout `fd88d9d` passed both jobs in CI `32717768039` before the sole
+real metadata pass. All 36 direct `HEAD` checks succeeded, freezing a complete
+92,414,976-byte remote inventory with ETag, Last-Modified, and Accept-Ranges
+for every file. No response body or EDF content was read and nothing was
+downloaded. This removes remote availability and storage uncertainty; it is
+not EEG or decoding evidence.
 
 ## Results At A Glance
 
