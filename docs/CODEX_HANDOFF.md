@@ -9,10 +9,13 @@
 > No HTTP response, EDF request, payload byte, local EDF, target, model,
 > prediction, score, or claim resulted. Bundle and temporary paths are absent;
 > only the ignored marker remains. Never open, delete, retry, repair, resume,
-> bypass, substitute, or complete S-A2 through another client. Immediate gate:
-> commit, push, and green the aggregate result, then add a proof-only closeout.
-> The dependent UG1 source-LOSO stage is blocked; a future experiment must be
-> a separate frozen lane with a new Tier C decision.
+> bypass, substitute, or complete S-A2 through another client. Exact result
+> `ba8645e` passed Base job `97474420839`, Optional job `97474421286`, and
+> CI `32740773041`. Read the pending proof-only closeout and machine proof;
+> they bind six exact tracked artifacts totaling 108,663 bytes and touch no
+> ignored state. Immediate gate: commit, push, and green that closeout. The
+> dependent UG1 source-LOSO stage is blocked; a future experiment must be a
+> separate frozen lane with a new Tier C decision.
 
 > Current EEGMMIDB-UG1 Stage S-A1 result gate, 2026-08-24: corrected
 > implementation `37808bef8c59bc862345f342fd932aa04373b3fd` passed Base job

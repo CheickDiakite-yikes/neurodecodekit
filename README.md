@@ -56,7 +56,9 @@ a durable marker, acquired zero payload bytes, and produced no target, model,
 prediction, or score. This is useful engineering evidence that partial or
 unverified data cannot silently enter the research pipeline, but it is not a
 scientific result. The dependent source-LOSO experiment is blocked and cannot
-be repaired or retried under this lane.
+be repaired or retried under this lane. Exact result `ba8645e` passed both
+jobs in CI `32740773041`; its pending proof-only closeout binds six tracked
+artifacts without reopening the consumed marker or payload paths.
 
 The frozen [EEGMMIDB-UG1 research design](docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_RESEARCH.md)
 was the direct unseen-person experiment. Its

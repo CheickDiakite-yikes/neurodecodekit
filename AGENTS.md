@@ -60,10 +60,15 @@ bundle and temporary path are absent; only the marker remains. Do not open,
 delete, replace, repair, bypass, retry, rerun, resume, or substitute this
 Stage S-A2 invocation. The dependent UG1 source-LOSO stage cannot proceed.
 
-Immediate safe gate: commit, push, and remotely green the exact aggregate
-failure result, then create a proof-only closeout without touching ignored
-state. Any future scientific experiment must be a genuinely separate frozen
-lane and Tier C decision, not an S-A2 retry.
+Exact aggregate result `ba8645e66d98020daa0139d561e92e33551b9255`
+passed Base job `97474420839`, Optional Neuro Readers job `97474421286`,
+and CI `32740773041`. Read the new proof-only closeout, machine proof, and
+matching test. They bind six exact result/proof/module artifacts totaling
+108,663 bytes and do not inspect ignored state.
+
+Immediate safe gate: commit, push, and remotely green the exact proof-only
+closeout. Any future scientific experiment must be a genuinely separate
+frozen lane and Tier C decision, not an S-A2 retry.
 
 Historical UG1 setup follows. Read its research
 document and registry, preregistration and contract, authorization packet and

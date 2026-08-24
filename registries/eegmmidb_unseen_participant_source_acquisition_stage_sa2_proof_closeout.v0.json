@@ -1,0 +1,116 @@
+{
+  "schema_name": "neurodecodekit.eegmmidb_unseen_participant_source_acquisition_stage_sa2_proof_closeout",
+  "schema_version": "0.1.0",
+  "lane_id": "EEGMMIDB-UG1-SA2",
+  "recorded_at_local": "2026-08-24",
+  "status": "proof_only_closeout_recorded_pending_remote_green",
+  "green_result": {
+    "commit": "ba8645e66d98020daa0139d561e92e33551b9255",
+    "CI_run_id": 32740773041,
+    "base_python_job_id": 97474420839,
+    "optional_neuro_readers_job_id": 97474421286,
+    "both_required_jobs_green": true,
+    "result_status": "failed_before_HTTP_response_consumed_permanently_parked"
+  },
+  "bound_artifacts": [
+    {
+      "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md",
+      "git_revision": "ba8645e66d98020daa0139d561e92e33551b9255",
+      "bytes": 5659,
+      "sha256": "6f379ee1324377752f2d246a39ae0a1e613d75037955d9be0992fd49f7260e5f",
+      "git_blob": "b8227ca44ca01783457c55216c6417b6a6c747d7"
+    },
+    {
+      "path": "registries/eegmmidb_unseen_participant_source_acquisition_stage_sa2_result.v0.json",
+      "git_revision": "ba8645e66d98020daa0139d561e92e33551b9255",
+      "bytes": 8169,
+      "sha256": "cbfa4a0d16926125fb90ee6c2c3244933b321c21f772e29007298e4f5f986672",
+      "git_blob": "4b79e8c2959c863786251710a25c3a37b7c3ae5f"
+    },
+    {
+      "path": "tests/test_eegmmidb_unseen_participant_source_acquisition_stage_sa2_result.py",
+      "git_revision": "ba8645e66d98020daa0139d561e92e33551b9255",
+      "bytes": 6319,
+      "sha256": "da58a3247e2d54e96c5eacbc50b90474fc27f2c71ca7d3cadaf7472648c727ac",
+      "git_blob": "6b9f6cd5fe63ac3a4a74b50d96f6914afe2052c4"
+    },
+    {
+      "path": "registries/eegmmidb_unseen_participant_source_acquisition_stage_sa1_proof_activation.v0.json",
+      "git_revision": "ba8645e66d98020daa0139d561e92e33551b9255",
+      "bytes": 5662,
+      "sha256": "3de8bb9e53d424a6c6ef64fb59216c37a58f20d52283eac8198bcd0bf0fe6a9f",
+      "git_blob": "f7b31fb10efc16d348749c8cde99e75ebf3db133"
+    },
+    {
+      "path": "registries/eegmmidb_unseen_participant_source_acquisition_stage_sa1_proof_closeout.v0.json",
+      "git_revision": "ba8645e66d98020daa0139d561e92e33551b9255",
+      "bytes": 7044,
+      "sha256": "0647482bf52d189454b7e1099967b9dea9270a62627a9d43c2631248de75b189",
+      "git_blob": "a7ec41b1d53f56ffcd067a691e92705b56ef56ca"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/eegmmidb_unseen_participant_source_acquisition.py",
+      "git_revision": "ba8645e66d98020daa0139d561e92e33551b9255",
+      "bytes": 75810,
+      "sha256": "3e6d7c8ee9b52286860d59c26061f3f52521905d91bfad166c7618feaacc7e62",
+      "git_blob": "5ee6c4a0b1a6cc479ba53afdbd9a425d3ca4cacf"
+    }
+  ],
+  "artifact_summary": {
+    "count": 6,
+    "bytes": 108663,
+    "canonical_artifact_set_sha256": "87f551e1a19db3dbc3fbd2f7976aaac45da87e971f232d502f53f7863c9dde6f"
+  },
+  "operation_counters": {
+    "tracked_artifact_reads": 6,
+    "Git_proof_reads": 6,
+    "ignored_path_stats": 0,
+    "ignored_path_opens": 0,
+    "consumed_marker_stats": 0,
+    "consumed_marker_opens": 0,
+    "network_requests": 0,
+    "real_payload_bytes": 0,
+    "EDF_reads": 0,
+    "target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "scoring_events": 0,
+    "cleanup_or_deletion_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "verification": {
+    "focused_tests_passed": 23,
+    "pre_closeout_base_tests_passed": 5913,
+    "closeout_base_tests_passed": 5920,
+    "net_new_tests_passed": 7,
+    "base_tests_skipped_optional": 212,
+    "complete_base_suite_runtime_seconds": 229.919,
+    "changed_file_ruff_passed": true,
+    "compile_passed": true,
+    "JSON_parse_passed": true,
+    "JSON_registries_parsed": 462,
+    "git_diff_check_passed": true
+  },
+  "terminal_boundary": {
+    "stage_SA2_consumed": true,
+    "stage_SA2_permanently_parked": true,
+    "retry_rerun_repair_resume_bypass_fallback_or_substitution_allowed": false,
+    "consumed_marker_may_be_opened_modified_or_deleted": false,
+    "dependent_UG1_source_LOSO_executable": false,
+    "new_independent_lane_requires_new_preregistration": true,
+    "new_real_data_target_model_or_score_requires_Tier_C_decision": true
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "Immutable artifact-only proof closes the consumed Stage S-A2 failure without reopening ignored state.",
+    "scientific_claim_established": false,
+    "real_EEG_accessed_by_closeout": false,
+    "unseen_participant_generalization_established": false,
+    "neural_or_decoding_advantage_established": false,
+    "movement_intention_or_motor_cortex_origin_established": false,
+    "eye_independence_established": false,
+    "language_or_thought_decoding_established": false,
+    "live_or_hardware_result_established": false
+  }
+}

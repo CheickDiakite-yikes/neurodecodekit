@@ -6,10 +6,12 @@
 > failed local certificate-chain verification during the checksum-manifest TLS
 > handshake. It received no HTTP response, made zero EDF requests, transferred
 > zero payload bytes, and produced no target, model, prediction, score, or
-> scientific claim. Commit and green the aggregate result, then add a
-> proof-only closeout. Do not retry, repair, resume, bypass, substitute, or
-> alter ignored state. The dependent source-LOSO stage is blocked; future
-> science requires a separate preregistered lane and Tier C decision.
+> scientific claim. Result `ba8645e` passed both jobs in CI `32740773041`.
+> The pending proof-only closeout binds six tracked artifacts totaling 108,663
+> bytes and performs no ignored-state or real operation. Commit and green that
+> closeout. Do not retry, repair, resume, bypass, substitute, or alter ignored
+> state. The dependent source-LOSO stage is blocked; future science requires a
+> separate preregistered lane and Tier C decision.
 
 > **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its

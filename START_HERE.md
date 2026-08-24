@@ -20,10 +20,13 @@ were produced.
 
 Stage S-A2 has no retry, rerun, repair, resume, fallback, or substitution. Do
 not open or alter its ignored marker, and do not complete the six-file bundle
-through another client. The dependent UG1 source-LOSO stage is blocked. The
-immediate safe task is to commit and remotely green this aggregate result,
-then add a proof-only closeout. A later scientific lane requires a new
-preregistration and exact Tier C decision.
+through another client. The dependent UG1 source-LOSO stage is blocked.
+
+Exact result `ba8645e` passed both jobs in CI `32740773041`. Read the pending
+proof-only closeout and its machine record; they bind six tracked artifacts
+totaling 108,663 bytes and perform no ignored-state or real operation. The
+immediate safe task is to commit and remotely green that closeout. A later
+scientific lane requires a new preregistration and exact Tier C decision.
 
 ## Historical UG1 Context
 

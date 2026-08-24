@@ -15315,3 +15315,22 @@ Immediate gate: verify, commit, push, and remotely green the aggregate
 consumed-failure result, then add a proof-only closeout. Stage S-A2 may not be
 retried, repaired, resumed, bypassed, or substituted. The dependent source-
 LOSO stage is blocked.
+
+### EEGMMIDB-UG1 Stage S-A2 result remotely green; closeout recorded
+
+- Exact consumed-failure result
+  `ba8645e66d98020daa0139d561e92e33551b9255` passed Base Python job
+  `97474420839`, Optional Neuro Readers job `97474421286`, and CI
+  `32740773041`.
+- Bound six exact result, activation, proof, and unchanged-module artifacts
+  totaling 108,663 bytes under canonical artifact-set SHA-256
+  `87f551e1a19db3dbc3fbd2f7976aaac45da87e971f232d502f53f7863c9dde6f`.
+- Performed only six tracked-artifact and six Git-proof reads. Ignored path,
+  marker, network, payload, EDF, target, model, training, prediction, score,
+  release, cleanup, and claim operations were zero.
+- Preserved the terminal no-retry boundary and blocked dependent source-LOSO
+  stage without altering the consumed marker or qualified module.
+
+Immediate gate: verify, commit, push, and remotely green the exact closeout.
+Then design only a genuinely independent scientific lane; real-data, target,
+model, and score operations remain behind a new Tier C packet.

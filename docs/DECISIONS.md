@@ -13370,3 +13370,23 @@ training, prediction, score, release, and scientific-claim counters remain
 zero. The dependent UG1 source-LOSO stage is blocked. Commit and remotely
 green this aggregate result, then add a proof-only closeout. Any future
 scientific experiment must be a new lane and decision, not a disguised retry.
+
+## 0472 - Close The Consumed Stage S-A2 Result Without Reinspection
+
+Proof decision: exact aggregate result
+`ba8645e66d98020daa0139d561e92e33551b9255` passed CI `32740773041`, Base
+Python job `97474420839`, and Optional Neuro Readers job `97474421286`.
+
+Binding decision: freeze six exact result, proof, activation, and unchanged-
+module artifacts totaling 108,663 bytes under canonical artifact-set SHA-256
+`87f551e1a19db3dbc3fbd2f7976aaac45da87e971f232d502f53f7863c9dde6f`.
+
+Operation decision: perform six tracked-artifact and six Git-proof reads only.
+Do not stat or open the ignored marker, output root, payload, or any real data.
+Repeat no network, EDF, target, model, training, prediction, score, cleanup,
+release, or claim operation.
+
+Transition decision: Stage S-A2 remains terminally consumed and the dependent
+UG1 source-LOSO stage remains blocked. Commit and remotely green this proof-
+only closeout. Then a safe artifact-only strategy pass may design a separate
+lane, but no new Tier C action is implied.
