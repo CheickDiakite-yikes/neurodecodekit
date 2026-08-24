@@ -15358,3 +15358,40 @@ model, and score operations remain behind a new Tier C packet.
 Immediate gate: verify, commit, push, and remotely green this Tier A research
 record. Then prepare a separate all-false preregistration and acquisition
 packet; no real payload or evidence operation is authorized by this decision.
+
+### BNCI-C3C5-1 preregistration and all-false request prepared
+
+- Confirmed research decision `f435296` passed Base job `97491066752`,
+  Optional Neuro Readers job `97491066455`, and CI `32745853616`.
+- Pinned the public MOABB loader semantics at commit `69d80d0`, including the
+  22 EEG plus three EOG channel order, one-based trial indices, source units,
+  and run fields. No dataset payload or event table was requested or retained.
+- Froze nine isolated zero-calibration participant folds with held-out E as
+  final and held-out T unused. Fold-scoped target capabilities prevent a
+  participant's target from reaching its own predictive process.
+- Froze two causal compact EEG candidates, one low-frequency EOG comparator,
+  source-cross-fitted P+E and P+D(E) fusions, 16 conditions, participant-level
+  C3 and C5-partial gates, and routes R0-R5.
+- Froze G1 -> A -> Q -> P -> T barriers, one aggregate target delivery, one
+  score, no scientific rerun, and no post-target update.
+- Capped future work at one thread/worker/job, 779,873,919 accepted payload
+  bytes, 2.5 GiB transport, 2 GiB disk growth, a 5 GiB free-disk floor,
+  512 MiB derivatives, 4 MiB public output, 1 GiB RSS, 540 fits, and 900
+  prediction sets.
+- Every current authority flag is false and every protected operation counter
+  is zero. The packet does not authorize implementation, network, payload,
+  MAT parse, target, model, prediction, score, release, or claim work.
+- Twenty-two focused research/contract/request checks pass. The dependency-
+  light full suite passes all 5,942 tests with 212 expected skips in 228.181
+  seconds, exactly 17 tests above the 5,925-test pre-change baseline.
+- A dependency-rich local interpreter also passed the 22 focused checks but
+  its full-suite process accumulated 946 MiB RSS, tripped two old 256 MiB
+  fixture caps, could not bind one sandboxed multiprocessing socket, and left
+  two old mechanical gates false. That non-baseline surface is reported, not
+  treated as a BNCI regression; remote Base and Optional jobs remain required.
+- The first Ruff invocation was blocked from the sandboxed global uv cache;
+  final lint uses the repository-local toolchain.
+
+Immediate gate: complete integrated verification, commit, push, and remotely
+green this exact request. Then create and separately green a non-scope-changing
+proof closeout. The current `continue` is not retroactive Tier C authority.

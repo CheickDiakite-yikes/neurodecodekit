@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: Independent BNCI-C3C5-1 Research Decision
+## Current Gate: BNCI-C3C5-1 All-False Registration
 
 Read
 `docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md`
@@ -29,15 +29,23 @@ performed no ignored-state or real operation. EEGMMIDB-UG1 is closed.
 
 Read
 `docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_PRIMARY_SOURCE_RESEARCH.md`
-and its machine record next. This Tier A decision selects only the 18 original
-MAT files in NEMAR `nm000139` `v1.0.2`, totaling 779,873,919 bytes, for a
-future independent experiment. The proposed nine-fold protocol holds out one
-person completely and compares EOG-only, EEG-only, EOG+EEG, and
-EOG+deranged-EEG probabilities on the same four-class rows.
+and its machine record next. Exact Tier A research decision `f435296` passed
+Base job `97491066752`, Optional Neuro Readers job `97491066455`, and CI
+`32745853616`. It selects only the 18 original MAT files in NEMAR `nm000139`
+`v1.0.2`, totaling 779,873,919 bytes, for a future independent experiment.
 
-The immediate safe task is to commit and remotely green this research record,
-then prepare a separate all-false preregistration and acquisition packet. No
-MAT or BDF payload, event table, target, model, prediction, score, or new
+Then read the BNCI-C3C5-1 preregistration, machine contract, all-false
+authorization packet, machine request, and matching tests. The nine-fold
+protocol holds out one person completely. EEG-only C3 must beat no-signal,
+timing, derangement, temporal, and spatial controls. Conditional C5-partial
+requires EOG+EEG log loss to beat both recorded EOG alone and an equally sized
+EOG+deranged-EEG fusion at the participant level.
+
+Every authority flag is false. The immediate safe task is to verify, commit,
+push, and remotely green this exact request, then create and separately green
+a non-scope-changing proof closeout. The current `continue` is not retroactive
+authority. No generated implementation, network, MAT or BDF payload, semantic
+parse, event table, target, model, prediction, score, release, or new
 scientific claim is authorized now.
 
 ## Historical UG1 Context

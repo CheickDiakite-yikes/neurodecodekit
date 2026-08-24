@@ -52,6 +52,17 @@ improves log loss over recorded EOG alone. Language, motor, unseen-person,
 peripheral-control, and live work remain separate evidence tracks so success
 on one cannot silently upgrade the others.
 
+The exact [BNCI-C3C5-1 preregistration](docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_PREREGISTRATION.md),
+[machine contract](registries/bnci_2014_001_cross_participant_eeg_gain_contract.v0.json),
+and [all-false authorization packet](docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_AUTHORIZATION_PACKET.md)
+now freeze the experiment before data access. C3 requires a causal late-imagery
+EEG model to beat no-signal, timing, derangement, early/pre-cue, and spatial
+controls across nine completely held-out people. C5-partial separately asks
+whether a source-cross-fitted EOG+EEG fusion improves participant-macro log
+loss over recorded EOG alone and an equally sized EOG+deranged-EEG fusion.
+The request is not authorization: no real payload, model, prediction, or score
+has been produced.
+
 Current result: [EEGMMIDB-UG1 Stage S-A2](docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md)
 failed closed during verified TLS certificate-chain validation before an HTTP
 response or EDF request. The one-shot invocation is consumed: it retained only
@@ -63,14 +74,14 @@ be repaired or retried under this lane. Exact result `ba8645e` passed both
 jobs in CI `32740773041`; proof-only closeout `d9eae69` passed both jobs in CI
 `32742694237` without reopening the consumed marker or payload paths.
 
-BNCI-C3C5-1 is currently research only. The public metadata pass pinned NEMAR
-`nm000139` `v1.0.2` and the exact original source slice, but opened zero MAT or
-BDF bodies, event tables, targets, models, predictions, or scores. A later
-Tier C packet must separately authorize acquisition and every irreversible
-evidence stage. Even a maximum pass would establish only participant-
-independent BNCI protocol-condition prediction and incremental EEG sensor
-information beyond three recorded EOG channels, not thought reading, language,
-movement intention, exclusive motor-cortex origin, live use, or hardware.
+BNCI-C3C5-1 is currently preregistered but all authority remains false. The
+public pass pinned NEMAR `nm000139` `v1.0.2`, the exact original source slice,
+the loader semantics, and the G1 -> A -> Q -> P -> T evidence barriers, but
+opened zero MAT or BDF bodies, event tables, targets, models, predictions, or
+scores. Even a maximum pass would establish only participant-independent BNCI
+protocol-condition prediction and incremental EEG sensor information beyond
+three recorded EOG channels, not thought reading, language, movement
+intention, exclusive motor-cortex origin, live use, or hardware.
 
 The frozen [EEGMMIDB-UG1 research design](docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_RESEARCH.md)
 was the direct unseen-person experiment. Its

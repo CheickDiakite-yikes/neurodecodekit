@@ -85,10 +85,21 @@ EOG+EEG, and EOG+deranged-EEG conditions. It can at most test unseen-person
 protocol-condition prediction and incremental EEG sensor information beyond
 the three recorded EOG channels.
 
-Immediate safe gate: commit, push, and remotely green this research-only
-decision, then prepare a separate all-false preregistration and acquisition
-packet. No MAT/BDF payload, event table, target, model, prediction, score, or
-claim operation is authorized now.
+Exact research decision `f435296be49f51aa1573f483cb29b4dde888bea2`
+passed Base job `97491066752`, Optional Neuro Readers job `97491066455`, and
+CI `32745853616`. Read the new preregistration, contract, all-false
+authorization packet, machine request, and matching tests. They freeze the
+causal late-imagery E1/E2 EEG candidates, recorded-EOG P model, source-cross-
+fitted P+E and P+D(E) fusions, participant-level C3 and C5-partial gates, and
+the ordered G1 -> A -> Q -> P -> T evidence sequence.
+
+Every current authority flag is false and every protected operation counter is
+zero. Immediate safe gate: verify, commit, push, and remotely green the exact
+request, then create and separately green a non-scope-changing request proof
+closeout. Do not identify a sole active Tier C packet or interpret the current
+`continue` as retroactive authority. No generated implementation, MAT/BDF
+payload, semantic parse, event table, target, model, prediction, score,
+release, or claim operation is authorized now.
 
 Historical UG1 setup follows. Read its research
 document and registry, preregistration and contract, authorization packet and

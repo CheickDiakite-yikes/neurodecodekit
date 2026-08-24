@@ -13422,3 +13422,39 @@ Authority decision: this is Tier A public-metadata research. It authorizes no
 MAT/BDF payload, event table, target, model, prediction, score, release, or
 claim operation. Commit and remotely green the research record, then prepare
 a separate all-false preregistration and Tier C acquisition request.
+
+## 0474 - Freeze BNCI-C3C5-1 Before Any Neural Payload
+
+Proof decision: exact Tier A source decision
+`f435296be49f51aa1573f483cb29b4dde888bea2` passed CI `32745853616`, Base
+Python job `97491066752`, and Optional Neuro Readers job `97491066455` before
+this registration.
+
+Protocol decision: freeze nine isolated participant folds, evaluate held-out
+session E with held-out session T unused, select E1 versus E2 only through
+source-participant inner folds, and compare recorded-EOG P, EEG E, P+E, and a
+separately fitted size-matched P+D(E). Use causal completed-trial windows and
+source-only fit state.
+
+Evidence decision: C3 requires EEG-only accuracy and participant-level margins
+over no-signal, timing, derangement, temporal, and spatial controls.
+C5-partial requires P+E participant-macro log loss to beat both P and P+D(E),
+with effect-size, participant-count, and exact paired-sign-flip gates.
+
+Capability decision: isolate every fold so a participant's targets can train
+other source folds but can never enter the capability that predicts that same
+participant. Freeze all nine prediction sets before one aggregate target
+delivery and one score.
+
+Resource decision: cap work at one thread/worker/job, exact 779,873,919-byte
+accepted payload, 2.5 GiB bounded transport, 2 GiB incremental disk, 5 GiB
+free-disk floor, 512 MiB private derivatives, 4 MiB public output, 1 GiB RSS,
+540 fits, 900 prediction sets, and zero scientific reruns or post-target
+updates.
+
+Authority decision: the preregistration and request are all-false. They
+authorize no generated implementation, network, payload, MAT parse, signal,
+target, model, prediction, score, release, or claim operation. Commit, push,
+and green this exact request, then add and separately green a proof-only
+closeout before naming one sole active Tier C packet. The current `continue`
+is not retroactive authority.

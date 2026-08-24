@@ -10,9 +10,14 @@
 > ignored state. Independent Tier A research now selects `BNCI-C3C5-1`: the 18
 > original NEMAR `nm000139` `v1.0.2` MAT files total 779,873,919 bytes and can
 > support a future nine-fold zero-calibration four-class comparison of
-> EOG-only, EEG-only, EOG+EEG, and EOG+deranged-EEG conditions. Commit and
-> green the research record, then prepare a separate all-false packet. No
-> payload, event table, target, model, prediction, score, or claim is open.
+> EOG-only, EEG-only, EOG+EEG, and EOG+deranged-EEG conditions. Research
+> decision `f435296` passed both jobs in CI `32745853616`. The exact
+> preregistration, contract, and all-false Tier C request now freeze the causal
+> models, participant firewall, C3/C5-partial gates, controls, resources, and
+> G1 -> A -> Q -> P -> T barriers. Commit and green the request, then create
+> and separately green its proof-only closeout. The current `continue` is not
+> retroactive authority. No implementation, payload, target, model,
+> prediction, score, release, or claim is open.
 
 > **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its
