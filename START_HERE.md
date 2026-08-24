@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: MARC2-VR39P Proof-Only Closeout
+## Current Gate: MARC2-VR39P Aggregate R2 Closeout
 
 VR38A proof-only closeout `a599adf3e0320ad420e1c2f5647a0432e645c246`
 passed Base job `97278761357`, Optional job `97278761303`, and CI
@@ -63,13 +63,19 @@ state, and remains ineffective before its own remote green proof.
 
 Exact proof-only closeout `cec5fe87a6ddc122366e0db32e2c5147bae47c81`
 passed Base job `97313196679`, Optional job `97313196627`, and CI
-`32686765350`. Its activation transition now binds that exact green proof but
-is ineffective until its own commit is pushed and both jobs pass.
+`32686765350`. Activation `c74255526a9265e52919672e8c6088022b77ef1d`
+then passed Base job `97314783863`, Optional job `97314783869`, and CI
+`32687368688` before the sole Stage 2 invocation.
 
-Immediate gate: commit, push, and green the exact activation transition.
-Private Stage 2 remains blocked until that final proof barrier is green.
-Private, archive, neural, target, model, score, FW2/CIL1, and claim work remain
-closed meanwhile.
+The executor returned aggregate `MARC2VR39P-R2` with no cohort commitment. R2
+means only that no cohort was frozen and the Freewill/CIL1 lane is permanently
+parked. Readiness, failure stage, source operations, topology, identity,
+storage, runtime, RSS, and output measurements are unavailable by contract.
+No private output or source was inspected after consumption.
+
+Immediate gate: commit, push, and green the aggregate-only R2 result closeout.
+Then move to an independent preregistered scientific lane; VR39P has no retry
+or successor.
 
 ## Recent Structural History
 

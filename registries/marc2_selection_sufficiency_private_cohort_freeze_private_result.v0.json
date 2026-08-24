@@ -1,0 +1,133 @@
+{
+  "schema_name": "neurodecodekit.marc2_selection_sufficiency_private_cohort_freeze_private_result_record",
+  "schema_version": "0.1.0",
+  "result_id": "MARC-2-VR39P-selection-sufficiency-private-cohort-freeze-private-result-v0",
+  "lane_id": "MARC2-VR39P",
+  "recorded_at_local": "2026-08-23",
+  "status": "consumed_protocol_conforming_without_cohort_freeze",
+  "route": "MARC2VR39P-R2",
+  "execution_proof_chain": {
+    "decision_commit": "dbde5f84b3fac0ac0b23208afd56e00d678aff00",
+    "decision_CI_run_id": 32681510484,
+    "decision_base_job_id": 97298894039,
+    "decision_optional_neuro_job_id": 97298894171,
+    "exact_implementation_commit": "4d48cb38822e3e5a819ce1fef0188069ca6bd9ac",
+    "exact_implementation_CI_run_id": 32685719113,
+    "exact_implementation_base_job_id": 97310285688,
+    "exact_implementation_optional_neuro_job_id": 97310285728,
+    "proof_closeout_commit": "cec5fe87a6ddc122366e0db32e2c5147bae47c81",
+    "proof_closeout_CI_run_id": 32686765350,
+    "proof_closeout_base_job_id": 97313196679,
+    "proof_closeout_optional_neuro_job_id": 97313196627,
+    "activation_commit": "c74255526a9265e52919672e8c6088022b77ef1d",
+    "activation_CI_run_id": 32687368688,
+    "activation_base_job_id": 97314783863,
+    "activation_optional_neuro_job_id": 97314783869,
+    "every_required_barrier_green_before_execution": true
+  },
+  "returned_aggregate_report": {
+    "claim_boundary": {
+      "engineering": "terminal target-free cohort freeze state machine",
+      "scientific": "none"
+    },
+    "cohort_commitment_sha256": null,
+    "commitment_scheme": "HMAC-SHA256-v0",
+    "lane_id": "MARC2-VR39P",
+    "proof_anchors": {
+      "decision_CI_run_id": 32681510484,
+      "decision_commit": "dbde5f84b3fac0ac0b23208afd56e00d678aff00",
+      "implementation_commit": "4d48cb38822e3e5a819ce1fef0188069ca6bd9ac"
+    },
+    "route": "MARC2VR39P-R2",
+    "schema_name": "neurodecodekit.marc2_selection_sufficiency_private_cohort_freeze_result",
+    "schema_version": "0.1.0",
+    "status": "consumed_target_free_structural_confirmation",
+    "unavailable_fields": [
+      "selected_subject_count_identity_topology_rows_or_sizes",
+      "readiness_failure_stage_runtime_RSS_or_operations",
+      "archive_neural_target_model_prediction_or_score"
+    ],
+    "warnings": [
+      "target_free_structural_only",
+      "R1_only_makes_separate_FW2_preregistration_eligible",
+      "no_neural_decoding_or_scientific_claim"
+    ]
+  },
+  "route_interpretation": {
+    "public_meaning": "no cohort was frozen and the Freewill/CIL1 lane is permanently parked",
+    "cohort_frozen": false,
+    "FW2_preregistration_eligible_from_this_lane": false,
+    "Freewill_or_CIL1_lane_open": false,
+    "failure_stage_known": false,
+    "readiness_state_known": false,
+    "source_open_or_parse_state_known": false,
+    "participant_count_identity_topology_rows_or_sizes_known": false
+  },
+  "capture_boundary": {
+    "registered_execution_invocations": 1,
+    "returned_aggregate_JSON_captured": true,
+    "aggregate_report_inspections_after_execution": 0,
+    "readiness_certificate_inspections_after_execution": 0,
+    "consumed_marker_inspections_after_execution": 0,
+    "private_manifest_inspections": 0,
+    "private_source_reopens_or_rehashes": 0,
+    "private_output_listing_stat_or_content_operations": 0,
+    "retry_rerun_resume_repair_fallback_or_substitution_operations": 0
+  },
+  "unavailable_measurements_by_public_contract": [
+    "readiness_samples_or_values",
+    "source_preflight_open_parse_or_byte_counts",
+    "VR38A_call_count_or_route",
+    "failure_stage_or_exception",
+    "runtime_seconds",
+    "peak_RSS_bytes",
+    "free_disk_bytes",
+    "output_file_or_combined_bytes",
+    "private_count_identity_topology_rows_or_sizes"
+  ],
+  "forbidden_scientific_surfaces": {
+    "archive_member_or_neural_payload_access_authorized": false,
+    "target_or_label_access_authorized": false,
+    "model_training_inference_prediction_or_scoring_authorized": false,
+    "FW2_or_CIL1_execution_authorized": false,
+    "stream_device_or_hardware_authorized": false,
+    "scientific_claim_upgrade_authorized": false
+  },
+  "verification": {
+    "focused_result_and_transition_tests_passed": 82,
+    "complete_dependency_light_tests_passed": 5679,
+    "expected_skips": 204,
+    "new_failures": 0,
+    "repository_pinned_ruff_version": "0.15.20",
+    "repository_pinned_ruff_passed": true,
+    "compile_passed": true,
+    "registry_JSON_files_parsed": 436,
+    "git_diff_check_passed": true,
+    "private_operations_during_verification": 0
+  },
+  "next_gate": {
+    "VR39P_retry_rerun_resume_repair_or_reinspection_allowed": false,
+    "Freewill_or_CIL1_successor_allowed": false,
+    "artifact_only_closeout_allowed": true,
+    "independent_scientific_lane_requires_fresh_preregistration": true,
+    "new_real_data_neural_target_model_score_or_claim_action_requires_fresh_Tier_C_decision": true
+  },
+  "claim_boundary": {
+    "engineering_capability": "one remotely proven terminal target-free cohort-freeze attempt consumed without exposing private topology or failure stage",
+    "scientific_ceiling": "none",
+    "real_cohort_established": false,
+    "neural_payload_evidence": false,
+    "neural_effect": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "unseen_person_generalization": false,
+    "live_decoding": false
+  },
+  "warnings": [
+    "R2 exposes no readiness state, failure stage, source operation, count, identity, topology, row, or storage value.",
+    "No private output or source may be inspected to explain R2.",
+    "No cohort was frozen, so this Freewill/CIL1 lane is permanently parked.",
+    "This target-free structural result is not neural or decoding evidence.",
+    "VR39P has no retry, rerun, resume, repair, fallback, substitution, cleanup, amendment, or private reinspection."
+  ]
+}

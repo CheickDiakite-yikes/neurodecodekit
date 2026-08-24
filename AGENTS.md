@@ -109,14 +109,25 @@ Git blobs. It repeats no qualification and performs zero private operation.
 
 Exact proof-only closeout `cec5fe87a6ddc122366e0db32e2c5147bae47c81`
 passed Base Python job `97313196679`, Optional Neuro Readers job `97313196627`,
-and CI `32686765350`. Its activation transition now binds that green proof but
-has delayed effect until its own commit is pushed and both required jobs pass.
+and CI `32686765350`. Activation `c74255526a9265e52919672e8c6088022b77ef1d`
+then passed Base job `97314783863`, Optional job `97314783869`, and CI
+`32687368688` before the sole Stage 2 invocation.
 
-Immediate gate: commit, push, and green the exact activation transition. Stage
-2 private work remains closed until that final proof barrier is green. Do not touch
+Read the result document and machine result. The executor returned aggregate
+`MARC2VR39P-R2` with a null commitment. R2 means only that no cohort was frozen
+and the Freewill/CIL1 lane is permanently parked. It does not reveal readiness,
+failure stage, source operations, count, identity, topology, rows, sizes,
+runtime, RSS, or output measurements.
+
+VR39P is consumed. Do not retry, rerun, resume, repair, substitute, clean up,
+inspect, or amend it. Do not touch
 `.codex_work`, any private/consumed source,
 archive member, neural payload, target, model, score, FW2/CIL1, device,
 release, or claim surface.
+
+Immediate gate: commit, push, and green the aggregate-only R2 result closeout.
+Then choose an independent preregistered scientific lane; Freewill/CIL1 and
+VR39P have no successor.
 
 ### Historical path to VR39P
 

@@ -14789,3 +14789,24 @@ record and separately green its activation. Stage 2 remains closed meanwhile.
 
 Immediate gate: commit, push, and green the activation transition before the
 sole registered Stage 2 invocation.
+
+### VR39P consumed at aggregate R2 without a cohort
+
+- Activation `c74255526a9265e52919672e8c6088022b77ef1d` passed Base
+  Python job `97314783863`, Optional Neuro Readers job `97314783869`, and CI
+  `32687368688` before the sole Stage 2 invocation.
+- The executor returned the strict eleven-field aggregate report at
+  `MARC2VR39P-R2`, with constant `HMAC-SHA256-v0` scheme and a null cohort
+  commitment.
+- R2 means only that no cohort was frozen and Freewill/CIL1 is permanently
+  parked. Readiness, failure stage, source operations, topology, identity,
+  rows, storage, runtime, RSS, and output measurements are unavailable.
+- No post-execution output inspection or private source reinspection occurred.
+  Retry, rerun, resume, repair, cleanup, fallback, substitution, and amendment
+  remain forbidden.
+- Eighty-two focused transition/result tests and all 5,679 dependency-light
+  tests pass with 204 expected skips. All 436 registry JSON files parse; pinned
+  Ruff 0.15.20, compilation, and diff hygiene pass.
+
+Immediate gate: commit, push, and green the aggregate-only result closeout,
+then choose an independent preregistered scientific lane.

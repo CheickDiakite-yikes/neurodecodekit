@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "lane_id": "MARC2-VR39P",
   "recorded_at_local": "2026-08-23",
-  "status": "remotely_green_proof_only_closeout_private_stage_eligible",
+  "status": "consumed_at_MARC2VR39P-R2",
   "implementation_commit": "4d48cb38822e3e5a819ce1fef0188069ca6bd9ac",
   "implementation_green_proof": {
     "CI_run_id": 32685719113,
@@ -49,8 +49,14 @@
     "proof_closeout_is_remotely_green": true,
     "activation_record_is_this_transition": true,
     "activation_transition_commit_push_and_both_jobs_green_required": true,
-    "private_stage_eligible_after_activation_transition_is_remotely_green": true,
-    "private_path_may_be_touched_before_activation_transition_is_remotely_green": false
+    "activation_transition_commit": "c74255526a9265e52919672e8c6088022b77ef1d",
+    "activation_transition_CI_run_id": 32687368688,
+    "activation_transition_base_job_id": 97314783863,
+    "activation_transition_optional_neuro_job_id": 97314783869,
+    "activation_transition_both_required_jobs_green": true,
+    "private_stage_consumed": true,
+    "private_stage_eligible_now": false,
+    "rerun_or_private_reinspection_allowed": false
   },
   "operation_counters": {
     "qualification_invocations": 0,

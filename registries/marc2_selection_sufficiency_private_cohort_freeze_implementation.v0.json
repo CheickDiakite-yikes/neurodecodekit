@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "lane_id": "MARC2-VR39P",
   "recorded_at_local": "2026-08-23",
-  "status": "generated_stage_remotely_green_proof_closeout_pending",
+  "status": "private_stage_consumed_R2_lane_parked",
   "green_decision_proof": {
     "commit": "dbde5f84b3fac0ac0b23208afd56e00d678aff00",
     "CI_run_id": 32681510484,
@@ -147,6 +147,13 @@
     }
   },
   "private_execution_authorized_now": false,
+  "private_result": {
+    "path": "registries/marc2_selection_sufficiency_private_cohort_freeze_private_result.v0.json",
+    "route": "MARC2VR39P-R2",
+    "cohort_frozen": false,
+    "rerun_allowed": false,
+    "private_reinspection_allowed": false
+  },
   "proof_closeout_verification": {
     "qualification_repeated": false,
     "private_operations": 0,

@@ -4,9 +4,8 @@ Date: 2026-08-23
 
 Lane: `MARC2-VR39P`
 
-Status: **Proof-only closeout remotely green; activation recorded but
-ineffective until the activation transition's exact commit is pushed and both
-required CI jobs are green**
+Status: **Proof-only closeout and activation remotely green; Stage 2 consumed
+at aggregate R2 without a cohort freeze**
 
 ## Remote Implementation Proof
 
@@ -51,6 +50,13 @@ ineffective until its exact commit is pushed and both CI jobs are green. Only
 after that final remote barrier may the existing packet-bound decision permit
 one registered Stage 2 invocation. No qualification retry, private
 preinspection, fallback, or substitution is allowed during the transition.
+
+Activation `c74255526a9265e52919672e8c6088022b77ef1d` passed CI
+`32687368688`, Base Python job `97314783863`, and Optional Neuro Readers job
+`97314783869` before the sole Stage 2 invocation. That invocation is now
+consumed at R2. The tracked closeout state refuses future execution before any
+private-path access. See the separate aggregate result document and machine
+record; do not inspect private output to explain R2.
 
 Engineering capability added: the generated-qualified terminal cohort-freeze
 wrapper is now bound to its exact remotely green Stage 1 implementation and

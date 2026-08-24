@@ -78,10 +78,10 @@ class SelectionSufficiencyPrivateCohortFreezeProofCloseoutTests(unittest.TestCas
                     git_blob,
                 )
 
-    def test_closeout_green_proof_and_activation_are_exact(self):
+    def test_closeout_green_proof_and_consumed_state_are_exact(self):
         self.assertEqual(
             self.closeout["status"],
-            "remotely_green_proof_only_closeout_private_stage_eligible",
+            "consumed_at_MARC2VR39P-R2",
         )
         green = self.closeout["green_proof"]
         self.assertEqual(
@@ -95,13 +95,13 @@ class SelectionSufficiencyPrivateCohortFreezeProofCloseoutTests(unittest.TestCas
         self.assertEqual(self.closeout["private_operations"], 0)
         self.assertFalse(
             self.closeout["delayed_effect"][
-                "private_path_may_be_touched_before_activation_transition_is_remotely_green"
+                "rerun_or_private_reinspection_allowed"
             ]
         )
-        self.assertEqual(
-            wrapper._require_green_implementation(ROOT),
-            "4d48cb38822e3e5a819ce1fef0188069ca6bd9ac",
-        )
+        with self.assertRaises(
+            wrapper.SelectionSufficiencyPrivateCohortFreezeRefusal
+        ):
+            wrapper._require_green_implementation(ROOT)
 
     def test_closeout_did_not_repeat_or_touch_private_state(self):
         self.assertEqual(self.closeout["qualification_route"], "MARC2VR39P-G1")
@@ -111,7 +111,7 @@ class SelectionSufficiencyPrivateCohortFreezeProofCloseoutTests(unittest.TestCas
 
     def test_human_closeout_preserves_claim_boundary(self):
         text = DOC.read_text(encoding="utf-8")
-        self.assertIn("ineffective until the activation transition", text)
+        self.assertIn("Stage 2 consumed", text)
         self.assertIn("does not repeat the registered generated qualification", text)
         self.assertIn("Exact proof-only closeout", text)
         self.assertIn("Engineering capability added", text)

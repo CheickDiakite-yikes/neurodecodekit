@@ -4,9 +4,11 @@
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its
 > sole 168-path generated qualification. Proof-only closeout `cec5fe8` then
 > passed Base `97313196679`, Optional `97313196627`, and CI `32686765350`.
-> Commit, push, and green its exact activation transition before the one-shot
-> Stage 2 invocation. Private, archive, neural, target, model, score, FW2/CIL1,
-> and claim surfaces remain closed meanwhile.
+> Activation `c742555` passed CI `32687368688`; the sole Stage 2 invocation
+> returned R2. No cohort was frozen, and Freewill/CIL1 is permanently parked
+> without exposing readiness, failure stage, source operations, topology,
+> identity, or storage. Commit and green the aggregate-only result closeout,
+> then choose an independent preregistered scientific lane.
 
 > **Immediate update (2026-08-23):** exact VR32P proof closeout `5aec8a1`
 > passed Base job `97177262321`, Optional job `97177262387`, and CI
@@ -4295,11 +4297,19 @@ Runtime was 12.816678500035778 seconds at 67,158,016-byte peak RSS. Generated
 input was 37,159,376 bytes, peak live output was 313,627 bytes, and retained
 output was zero.
 
-Immediate gate: commit, push, and green the exact implementation/result, then
-create and separately green its proof-only closeout without repeating the
-qualification. Private Stage 2 remains blocked until both barriers are green.
-No private source, cohort, archive member, neural payload, target, model,
-score, FW2/CIL1, release, or scientific claim is open.
+Exact Stage 1 `4d48cb38822e3e5a819ce1fef0188069ca6bd9ac` passed CI
+`32685719113`; proof closeout `cec5fe87a6ddc122366e0db32e2c5147bae47c81`
+passed CI `32686765350`; activation
+`c74255526a9265e52919672e8c6088022b77ef1d` passed CI `32687368688`.
+The sole Stage 2 invocation then returned `MARC2VR39P-R2` with a null cohort
+commitment. No cohort was frozen, and Freewill/CIL1 is permanently parked.
+The failure stage and all private readiness, source-operation, topology,
+identity, storage, runtime, RSS, and output measurements remain unavailable.
+VR39P has no retry, rerun, repair, inspection, or successor.
+
+Immediate gate: commit, push, and green the aggregate-only R2 result closeout,
+then choose an independent preregistered scientific lane. No archive member,
+neural payload, target, model, score, release, or scientific claim is open.
 
 ### MARC2-VR33A - Exact-Count Readiness Repair Remotely Closed
 

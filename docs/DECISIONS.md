@@ -12791,3 +12791,26 @@ invocation. No readiness or private path may be touched before that barrier.
 Boundary decision: this is a proof-only transition. It establishes no cohort,
 neural access, target, model, prediction, score, FW2/CIL1 eligibility, device
 result, release state, or scientific claim.
+
+## 0450 - Consume VR39P at Aggregate R2 and Park Freewill/CIL1
+
+Proof decision: activation `c74255526a9265e52919672e8c6088022b77ef1d`
+passed CI `32687368688`, Base Python job `97314783863`, and Optional Neuro
+Readers job `97314783869` before Stage 2.
+
+Execution decision: run the registered fixed-path Stage 2 command exactly once
+under one CPU thread and no network. Capture only its returned aggregate JSON.
+The executor returned `MARC2VR39P-R2` with constant HMAC scheme and a null
+cohort commitment.
+
+Privacy decision: do not inspect the readiness certificate, consumed marker,
+private output root, registered source, or any possible private manifest after
+consumption. Do not infer whether readiness, source verification, selection,
+storage, resource enforcement, output handling, or another terminal check
+caused R2. Runtime, RSS, operation counts, output bytes, failure stage, and
+private topology remain unavailable by contract.
+
+Boundary decision: no cohort was frozen. Freewill/CIL1 is permanently parked,
+and VR39P has no retry, rerun, resume, repair, cleanup, fallback, substitution,
+amendment, or private reinspection. This is a target-free structural result
+with no neural payload, target, model, prediction, score, or scientific claim.
