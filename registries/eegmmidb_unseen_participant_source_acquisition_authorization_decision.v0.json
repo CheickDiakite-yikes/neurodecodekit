@@ -1,0 +1,235 @@
+{
+  "schema_name": "neurodecodekit.eegmmidb_unseen_participant_source_acquisition_authorization_decision",
+  "schema_version": "0.1.0",
+  "decision_id": "EEGMMIDB-UG1-SA-authorization-decision-v0",
+  "lane_id": "EEGMMIDB-UG1-SA",
+  "recorded_at_local": "2026-08-24",
+  "status": "short_form_packet_bound_authorized_effective_only_after_decision_remote_green_no_implementation_network_data_or_scientific_operation_at_recording",
+  "authorization_parent_commit": "b0b4632ffbdaca10c1e4bbc93ad26ebd8e1368ca",
+  "effective_only_after_this_record_is_committed_pushed_and_both_CI_jobs_green": true,
+  "decision_artifacts": [
+    {
+      "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_AUTHORIZATION_DECISION.md",
+      "bytes": 7106,
+      "sha256": "77f042599780c61ddcc47d30b0da3669b24eddd38d79ea28a2686f7b5a6e5d92"
+    },
+    {
+      "path": "tests/test_eegmmidb_unseen_participant_source_acquisition_authorization_decision.py",
+      "bytes": 7475,
+      "sha256": "d911dcf160d875f6f3a23b1fb2ab94dff06db9b18ae7e90fc1f0ad21d6ddba28"
+    }
+  ],
+  "green_request": {
+    "commit": "2085ea061d936bb18ef08e93fb7d3f874ef0f9d8",
+    "commit_subject": "Freeze UG1 source acquisition request",
+    "branch": "codex/loop-54a-vhdr-preregistration",
+    "CI_run_id": 32722744301,
+    "CI_url": "https://github.com/CheickDiakite-yikes/neurodecodekit/actions/runs/32722744301",
+    "base_python_job_id": 97417435948,
+    "base_python_conclusion": "success",
+    "optional_neuro_job_id": 97417435670,
+    "optional_neuro_conclusion": "success",
+    "both_required_jobs_green": true
+  },
+  "green_proof_closeout": {
+    "commit": "b0b4632ffbdaca10c1e4bbc93ad26ebd8e1368ca",
+    "commit_subject": "Close UG1 source acquisition request proof",
+    "branch": "codex/loop-54a-vhdr-preregistration",
+    "CI_run_id": 32724357118,
+    "CI_url": "https://github.com/CheickDiakite-yikes/neurodecodekit/actions/runs/32724357118",
+    "base_python_job_id": 97422237667,
+    "base_python_conclusion": "success",
+    "optional_neuro_job_id": 97422237272,
+    "optional_neuro_conclusion": "success",
+    "both_required_jobs_green": true,
+    "scope_changed_from_request": false,
+    "implementation_network_data_or_scientific_operations": 0
+  },
+  "bound_packet_artifacts": [
+    {
+      "role": "authorization_packet_document",
+      "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_AUTHORIZATION_PACKET.md",
+      "bytes": 8937,
+      "sha256": "2590c2796897ac32902a2d4795176a4f6023256295478846fd303b758ba54b50",
+      "Git_blob": "d04f519eaf7ea7adb7d8c21b7533ce299d147307"
+    },
+    {
+      "role": "authorization_request_registry",
+      "path": "registries/eegmmidb_unseen_participant_source_acquisition_authorization_request.v0.json",
+      "bytes": 14580,
+      "sha256": "791710dfff61bc6bd752d1d17ad5fafcc19e07db96b9f04705990dfddc6022f3",
+      "Git_blob": "98a36ee90a70e4ba8cbcbbb837b316c26d842e84"
+    },
+    {
+      "role": "authorization_request_test",
+      "path": "tests/test_eegmmidb_unseen_participant_source_acquisition_authorization_request.py",
+      "bytes": 10187,
+      "sha256": "2e02405ae50007c0349034a761e359b457ead7591e51f50c6918d3b3c304db1a",
+      "Git_blob": "a839684dc7934b49978e8701001e390f91c1f314"
+    },
+    {
+      "role": "request_proof_document",
+      "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_REQUEST_PROOF_CLOSEOUT.md",
+      "bytes": 2855,
+      "sha256": "a3232cacd00f4efadeda2bda0db66794ce67263d1d2718fd545ab6c38dccd530",
+      "Git_blob": "185e83acc519086750bae693b1b75d450f2decc7"
+    },
+    {
+      "role": "request_proof_registry",
+      "path": "registries/eegmmidb_unseen_participant_source_acquisition_request_proof.v0.json",
+      "bytes": 3919,
+      "sha256": "3240b563a69165119ab02cf1933556150145bdeda39f91ad654bef5e3288e0b1",
+      "Git_blob": "ce99eff762aad078b4b10cdc74c09b442a39ea3a"
+    },
+    {
+      "role": "request_proof_test",
+      "path": "tests/test_eegmmidb_unseen_participant_source_acquisition_request_proof.py",
+      "bytes": 4432,
+      "sha256": "b8f0986c2ba92fe37770573fe26a461b25c2d3db0f99b29c34108a042875b303",
+      "Git_blob": "6c307a863c25f05ff6d4e3ec96567b337b495f4a"
+    }
+  ],
+  "bound_packet_artifact_count": 6,
+  "bound_packet_artifact_bytes": 44910,
+  "user_authorization": {
+    "actual_message_verbatim": "continue",
+    "actual_message_UTF8_bytes": 8,
+    "actual_message_SHA256": "e256ee8e7aff6957a781d8328f0f68e26996564c81fa458da59fbca2305138ad",
+    "message_silently_corrected": false,
+    "communication_mode": "short_form_packet_reference",
+    "immediately_preceded_by_named_packet_commit_CI_scope_and_gate": true,
+    "sole_active_Tier_C_packet": "EEGMMIDB-UG1-SA",
+    "scope_incorporated_by_reference": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_AUTHORIZATION_PACKET.md",
+    "long_form_packet_claimed_as_user_utterance": false,
+    "substantive_registered_scope_unchanged": true,
+    "scope_may_not_expand_by_inference": true,
+    "one_registered_two_stage_sequence_only": true,
+    "positive_result_predeclared": false
+  },
+  "short_form_packet_rule": {
+    "separate_Tier_C_permission_satisfied_for_this_packet": true,
+    "exactly_one_active_packet_required": true,
+    "packet_request_and_proof_green_before_message": true,
+    "assistant_named_scope_and_fresh_decision_gate": true,
+    "maintainer_unambiguously_directed_execution": true,
+    "decision_quotes_actual_words_and_binds_scope": true,
+    "decision_commit_must_be_remotely_green_before_implementation_or_access": true,
+    "scope_expansion_by_short_form_allowed": false,
+    "future_stage_S_model_target_score_or_claim_authority_inferred": false,
+    "ambiguity_multiple_packets_changed_packet_or_missing_green_evidence_policy": "fail_closed"
+  },
+  "authorization": {
+    "stage_SA1_generated_source_acquisition_implementation_after_decision_green": true,
+    "stage_SA1_generated_mock_qualification_after_decision_green": true,
+    "stage_SA1_result_and_proof_closeout_after_implementation_green": true,
+    "stage_SA2_one_real_source_acquisition_after_stage_SA1_proof_green": true,
+    "stage_SA2_exact_checksum_manifest_requests": 1,
+    "stage_SA2_exact_EDF_requests": 6,
+    "stage_SA2_successful_payload_body_bytes_exact": 15498816,
+    "stage_SA1_implementation_or_qualification_authorized_now": false,
+    "network_or_remote_request_authorized_now": false,
+    "real_URL_or_local_data_path_access_authorized_now": false,
+    "EDF_body_header_annotation_event_or_signal_access_authorized_now": false,
+    "payload_download_or_acquisition_authorized_now": false,
+    "retained_source_or_fresh_final_operation_authorized_now": false,
+    "stage_S_model_checkpoint_inference_training_prediction_or_score_authorized_now": false,
+    "target_or_label_delivery_authorized_now": false,
+    "retry_rerun_fallback_substitution_or_repair_authorized_now": false,
+    "other_file_project_or_consumed_state_cleanup_authorized_now": false,
+    "release_publication_or_scientific_claim_upgrade_authorized_now": false
+  },
+  "required_execution_order": [
+    "decision_commit_pushed_and_both_CI_jobs_green",
+    "stage_SA1_generated_mock_implementation_and_one_qualification",
+    "exact_stage_SA1_implementation_result_commit_pushed_and_both_CI_jobs_green",
+    "stage_SA1_proof_closeout_commit_pushed_and_both_CI_jobs_green",
+    "stage_SA2_one_checksum_manifest_and_six_sequential_opaque_EDF_GETs",
+    "stage_SA2_result_commit_pushed_and_both_CI_jobs_green",
+    "stage_SA2_result_stop_before_EDF_parse_or_stage_S"
+  ],
+  "source_boundary": {
+    "dataset": "EEG Motor Movement/Imagery Dataset",
+    "version": "1.0.0",
+    "DOI": "10.13026/C28G6P",
+    "host": "physionet.org",
+    "participants": ["S001", "S002", "S003"],
+    "runs": ["04", "08"],
+    "files_exact": 6,
+    "successful_payload_bytes_exact": 15498816,
+    "partition": "source_fit_missing"
+  },
+  "transport_contract": {
+    "HTTP_method": "GET",
+    "checksum_manifest_requests_exact": 1,
+    "EDF_requests_exact": 6,
+    "total_requests_exact": 7,
+    "direct_status_exact": 200,
+    "redirects": 0,
+    "retries": 0,
+    "reruns": 0,
+    "Accept_Encoding": "identity",
+    "If_Match": "exact_frozen_file_etag",
+    "If_Unmodified_Since": "exact_frozen_file_last_modified",
+    "official_and_observed_SHA256_equality_required": true,
+    "maximum_stream_chunk_bytes": 1048576,
+    "EDF_semantic_parse_allowed": false,
+    "partial_bundle_is_success": false
+  },
+  "firewalls": {
+    "retained_source_files": 54,
+    "fresh_final_files": 30,
+    "retained_source_operations": 0,
+    "fresh_final_operations": 0,
+    "EDF_semantic_access_allowed": false,
+    "MNE_or_EDF_reader_allowed_in_acquisition_executor": false,
+    "target_model_score_or_stage_S_operation_allowed": false
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "wall_time_seconds_per_stage": 300,
+    "peak_process_tree_RSS_bytes": 268435456,
+    "checksum_manifest_requests": 1,
+    "EDF_requests": 6,
+    "successful_payload_body_bytes_exact": 15498816,
+    "payload_network_body_bytes": 16777216,
+    "incremental_disk_bytes": 67108864,
+    "combined_metadata_bytes": 1048576,
+    "stream_chunk_bytes": 1048576,
+    "minimum_free_disk_bytes": 2147483648,
+    "retries": 0,
+    "reruns": 0
+  },
+  "decision_only_counters": {
+    "implementation_operations": 0,
+    "generated_qualification_invocations": 0,
+    "network_requests": 0,
+    "checksum_manifest_requests": 0,
+    "remote_response_headers": 0,
+    "response_body_reads": 0,
+    "response_body_bytes": 0,
+    "real_URL_or_local_data_path_operations": 0,
+    "EDF_body_header_annotation_event_or_signal_reads": 0,
+    "source_payload_download_bytes": 0,
+    "retained_source_operations": 0,
+    "fresh_final_operations": 0,
+    "parameter_update_fits": 0,
+    "model_inference_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scoring_events": 0,
+    "release_or_publication_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "claim_boundary": {
+    "engineering_capability_authorized_after_green": "one bounded source-only opaque acquisition gate qualified on mocks and one later exact six-file acquisition",
+    "scientific_ceiling": "none",
+    "real_EEG_accessed_by_decision": false,
+    "neural_or_decoding_advantage_established": false,
+    "unseen_participant_generalization_established": false,
+    "movement_intention_or_motor_cortex_origin_established": false,
+    "eye_independence_language_or_live_decoding_established": false
+  }
+}

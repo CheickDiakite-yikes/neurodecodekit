@@ -112,6 +112,10 @@ bytes. It does not authorize a download, touch the 54 retained source files or
 The exact request `2085ea0` passed both jobs in CI `32722744301`. Its pending
 proof-only closeout binds the three request artifacts totaling 33,704 bytes
 without implementation, network, payload, target, model, or score access.
+Proof closeout `b0b4632` then passed both jobs in CI `32724357118`. The
+maintainer's next exact `continue` is now recorded in a packet-bound decision;
+that decision must itself pass both CI jobs before generated-only Stage S-A1
+implementation can begin.
 
 ## Results At A Glance
 

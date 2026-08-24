@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: EEGMMIDB-UG1 Stage S-A Request Proof
+## Current Gate: EEGMMIDB-UG1 Stage S-A Authorization Decision
 
 VR39P result closeout `474d49f53e1a46633b99b0ef2ff62b9abebe7a9c`
 passed Base job `97317987437`, Optional job `97317987655`, and CI
@@ -184,11 +184,19 @@ Read the request proof-only closeout, machine proof, and matching test. They
 bind the three unchanged request artifacts totaling 33,704 bytes under
 canonical artifact-set SHA-256
 `8f91ca0ae7e9a4ef47ce1a2ab7d71c9b24f805ae737587d02edf9b23b6deb4d0`.
-Immediate gate: commit, push, and green that exact proof closeout. No
-implementation, qualification, network request, local data access, payload
-acquisition, EDF parse, target, model, training, score, release, or claim
-action is authorized now. The 54 retained source EDFs and all 30 fresh-final
-EDFs remain untouched.
+
+Proof closeout `b0b4632ffbdaca10c1e4bbc93ad26ebd8e1368ca` passed Base
+job `97422237667`, Optional Neuro Readers job `97422237272`, and CI
+`32724357118`. Codex named Stage S-A as the sole active Tier C packet; the
+maintainer's next exact message was `continue`.
+
+Read the authorization decision, machine decision, and matching test. They
+quote those exact eight UTF-8 bytes and bind six unchanged request/proof
+artifacts totaling 44,910 bytes. Immediate gate: commit, push, and green the
+exact decision. No implementation, qualification, network request, local data
+access, payload acquisition, EDF parse, target, model, training, score,
+release, or claim action is authorized before that. The 54 retained source
+EDFs and all 30 fresh-final EDFs remain untouched.
 
 ## Previous Gate: MARC2-VR39P Aggregate R2 Closeout
 

@@ -13211,3 +13211,28 @@ fresh packet-bound maintainer instruction and a separately committed, pushed,
 and remotely green authorization decision before Stage S-A1 implementation.
 This proof grants no authority and does not bring Stage S-A2 acquisition
 forward.
+
+## 0466 - Record The Packet-Bound Stage S-A Authorization
+
+Proof decision: exact Stage S-A request proof
+`b0b4632ffbdaca10c1e4bbc93ad26ebd8e1368ca` passed CI `32724357118`, Base
+Python job `97422237667`, and Optional Neuro Readers job `97422237272`.
+
+Authorization decision: after Codex named `EEGMMIDB-UG1-SA` as the sole active
+Tier C packet and stated its exact gate, the maintainer's next message was
+exactly the eight UTF-8 bytes `continue`. Bind that short form only to the
+unchanged packet by reference; do not fabricate or infer broader authority.
+
+Binding decision: freeze six unchanged request/proof artifacts totaling 44,910
+bytes. Preserve the exact two-stage maximum: additive generated/mock Stage
+S-A1, its remotely green result and proof, then one possible checksum-manifest
+request plus six opaque source EDF requests totaling exactly 15,498,816 bytes.
+
+Operation decision: record zero implementation, qualification, network,
+checksum, real-path, EDF, payload, target, model, training, prediction, score,
+release, or claim operation. The decision remains ineffective until its exact
+commit is pushed and both required CI jobs pass.
+
+Firewall decision: keep all 54 retained source EDFs and all 30 fresh-final
+EDFs at zero operations. Stage S, targets, models, scores, devices, releases,
+and scientific claims remain outside this decision.

@@ -1,15 +1,15 @@
 # Codex Handoff - NeuroDecodeKit
 
-> Current EEGMMIDB-UG1 Stage S-A request proof gate, 2026-08-24: exact
-> all-false request `2085ea061d936bb18ef08e93fb7d3f874ef0f9d8` passed Base
-> job `97417435948`, Optional job `97417435670`, and CI `32722744301`.
-> Read its proof-only closeout, machine proof, and matching test. They bind the
-> three unchanged request artifacts totaling 33,704 bytes under canonical set
-> SHA-256
-> `8f91ca0ae7e9a4ef47ce1a2ab7d71c9b24f805ae737587d02edf9b23b6deb4d0`.
-> Immediate gate: commit, push, and green this proof. No implementation,
-> qualification, network, retained-source, fresh-final, EDF, target, model,
-> score, release, or claim operation is open.
+> Current EEGMMIDB-UG1 Stage S-A decision gate, 2026-08-24: request proof
+> `b0b4632ffbdaca10c1e4bbc93ad26ebd8e1368ca` passed Base job
+> `97422237667`, Optional job `97422237272`, and CI `32724357118`. Codex
+> named Stage S-A as the sole active Tier C packet, and the maintainer's next
+> exact message was `continue`. Read the authorization decision, machine
+> decision, and matching test. They quote those eight bytes and bind six
+> unchanged request/proof artifacts totaling 44,910 bytes. Immediate gate:
+> commit, push, and green the decision. No implementation, qualification,
+> network, retained-source, fresh-final, EDF, target, model, score, release, or
+> claim operation is open before that.
 
 > Current EEGMMIDB-UG1 Stage M2 proof gate, 2026-08-24: M2 result
 > `818ef1f6384a03c3681d9d4ec01d6f88db4d2749` passed Base job

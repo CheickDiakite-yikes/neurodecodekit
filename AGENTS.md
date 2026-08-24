@@ -224,11 +224,18 @@ matching test. They bind the three unchanged request artifacts totaling 33,704
 bytes under canonical artifact-set SHA-256
 `8f91ca0ae7e9a4ef47ce1a2ab7d71c9b24f805ae737587d02edf9b23b6deb4d0`.
 
-Immediate gate: commit, push, and remotely green the non-scope-changing Stage
-S-A request proof closeout. Do not implement or qualify the downloader, make a
-network request, inspect an existing local payload, or open EDF content now.
-The 54 retained source files, 30 fresh-final files, targets, models, scores,
-release, devices, and claim surfaces remain closed.
+Exact request proof `b0b4632ffbdaca10c1e4bbc93ad26ebd8e1368ca`
+passed Base job `97422237667`, Optional Neuro Readers job `97422237272`, and
+CI `32724357118`. Codex then identified `EEGMMIDB-UG1-SA` as the sole active
+Tier C packet, and the maintainer's next exact message was `continue`.
+
+Read the Stage S-A authorization decision, machine decision, and matching
+test. The decision quotes those exact eight UTF-8 bytes and binds six unchanged
+request/proof artifacts totaling 44,910 bytes. Immediate gate: verify, commit,
+push, and remotely green this decision. Do not implement or qualify the
+downloader, make a network request, inspect an existing local payload, or open
+EDF content before that. The 54 retained source files, 30 fresh-final files,
+targets, models, scores, release, devices, and claim surfaces remain closed.
 
 ### Historical VR39P path
 
