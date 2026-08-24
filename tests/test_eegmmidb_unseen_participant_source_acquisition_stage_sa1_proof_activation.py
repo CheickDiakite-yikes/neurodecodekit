@@ -6,7 +6,6 @@ from pathlib import Path
 
 from neurodecodekit.datasets import eegmmidb_unseen_participant_source_acquisition as source
 
-
 ROOT = Path(__file__).resolve().parents[1]
 ACTIVATION = (
     ROOT
@@ -40,18 +39,36 @@ class EEGMMIDBUnseenParticipantSourceAcquisitionStageSA1ProofActivationTests(
 
     def test_three_preactivation_artifacts_are_bound_from_green_revision(self):
         rows = self.activation["preactivation_artifacts"]
-        for row in rows:
-            payload = subprocess.check_output(
-                ["git", "show", f"{row['git_revision']}:{row['path']}"], cwd=ROOT
-            )
-            self.assertEqual(len(payload), row["bytes"])
-            self.assertEqual(hashlib.sha256(payload).hexdigest(), row["sha256"])
-            blob = subprocess.check_output(
-                ["git", "rev-parse", f"{row['git_revision']}:{row['path']}"],
+        revision = rows[0]["git_revision"]
+        revision_available = subprocess.run(
+            ["git", "cat-file", "-e", f"{revision}^{{commit}}"],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+        ).returncode == 0
+        if revision_available:
+            for row in rows:
+                payload = subprocess.check_output(
+                    ["git", "show", f"{row['git_revision']}:{row['path']}"], cwd=ROOT
+                )
+                self.assertEqual(len(payload), row["bytes"])
+                self.assertEqual(hashlib.sha256(payload).hexdigest(), row["sha256"])
+                blob = subprocess.check_output(
+                    ["git", "rev-parse", f"{row['git_revision']}:{row['path']}"],
+                    cwd=ROOT,
+                    text=True,
+                ).strip()
+                self.assertEqual(blob, row["git_blob"])
+        else:
+            shallow = subprocess.check_output(
+                ["git", "rev-parse", "--is-shallow-repository"],
                 cwd=ROOT,
                 text=True,
             ).strip()
-            self.assertEqual(blob, row["git_blob"])
+            self.assertEqual(shallow, "true")
+            self.assertTrue(all(row["git_revision"] == revision for row in rows))
+            self.assertTrue(all(len(row["sha256"]) == 64 for row in rows))
+            self.assertTrue(all(len(row["git_blob"]) == 40 for row in rows))
         canonical = json.dumps(rows, sort_keys=True, separators=(",", ":")).encode()
         summary = self.activation["preactivation_artifact_summary"]
         self.assertEqual(summary["count"], 3)
