@@ -1,16 +1,17 @@
 # Codex Handoff - NeuroDecodeKit
 
-> **Current gate, 2026-08-24:** BNCI decision `617991b` passed Base job
-> `97516278409`, Optional job `97516278093`, and CI `32753700516`. The
-> generated pipeline implementation and 12 focused component tests are green,
-> but the sole full G1 launcher attempt consumed at `BNCIC3C5-R1` before the
-> first generated case due to an existing-root/new-child wiring mismatch.
-> Counters are zero for fixture writes, fits, predictions, targets, scores,
-> network, real data, and output. Read the implementation and G1 failure
-> records, then the all-false G1 recovery packet/request/test. Immediate gate:
-> commit, push, and green the recovery request, add and separately green its
-> proof-only closeout, identify it as the sole active Tier C packet, and wait
-> for a fresh message. Do not rerun G1 or begin Stage A now.
+> **Current gate, 2026-08-24:** the unchanged BNCI G1 recovery request is green
+> at repair commit `b1f68e5`, Base job `97534565977`, Optional job
+> `97534565813`, and CI `32759468410`. The first implementation commit's two
+> optional-suite failures were historical whole-process lifetime-RSS test
+> defects; repair changed only two tests and preserved production enforcement.
+> Read the G1 failure record, all-false recovery packet/request, proof-only
+> closeout, machine proof, and proof test. The closeout binds seven exact
+> artifacts / 22,514 bytes under canonical SHA-256
+> `931089ec08bb154f95181f918b3f13f448987d91473207c59d49704ef476d447`.
+> Immediate gate: commit, push, and green this closeout. Only afterward identify
+> `BNCI-C3C5-1-G1-recovery` as the sole Tier C packet and wait for a fresh
+> maintainer message. Do not rerun G1, begin Stage A, or open real BNCI data.
 
 > Current independent scientific lane, 2026-08-24: exact EEGMMIDB-UG1 Stage
 > S-A2 proof closeout `d9eae69d0361bc1ddfcbeaf7d3a105ad83502206`

@@ -15465,3 +15465,32 @@ begin acquisition before the G1 implementation and result are remotely green.
 Immediate gate: commit, push, and remotely green the recovery request, then
 add and separately green a proof-only closeout. Wait for a fresh packet-bound
 decision before any replacement pass.
+
+### BNCI-C3C5-1 G1 recovery request remotely green; proof recorded
+
+- Initial implementation/request commit `d652949` passed Base and every
+  focused BNCI check in CI `32758324335`, but Optional exposed two historical
+  causal-replay tests that used the lifetime RSS of the whole 6,026-test
+  process as a 256 MiB fixture measurement.
+- Repair `b1f68e5` changed only those two historical tests. Synthetic success
+  paths now inject a bounded RSS value, while an explicit 257 MiB against
+  256 MiB assertion proves production refusal remains active.
+- Exact repair/request commit `b1f68e50823792ccedb5ef8962c584c1bb573f3a`
+  passed Base job `97534565977` in 6m42s, Optional Neuro Readers job
+  `97534565813` in 8m43s, and CI `32759468410`.
+- Base passed 5,970 tests with 218 skips in 381.002 seconds. Optional passed
+  6,026 tests with 44 skips in 468.652 seconds. Focused RW2 and UG1 suites
+  also passed.
+- The proof-only closeout binds seven exact implementation, failure, request,
+  and test artifacts totaling 22,514 bytes under canonical SHA-256
+  `931089ec08bb154f95181f918b3f13f448987d91473207c59d49704ef476d447`.
+- All 56 focused BNCI tests pass in 5.602 seconds. The proof-closeout base
+  suite passes 5,976 tests with 216 expected skips in 209.174 seconds, exactly
+  six tests above the 5,970-test green-request baseline. Pinned Ruff,
+  compilation, all 471 JSON registries, and diff hygiene pass.
+- No replacement G1, generated MAT, mocked transport, fit, prediction, target,
+  score, real-data, network-payload, release, or claim operation occurred.
+
+Immediate gate: verify, commit, push, and green this proof-only closeout. Only
+then identify `BNCI-C3C5-1-G1-recovery` as the sole active Tier C packet and
+wait for a fresh maintainer message. Stage A remains closed.

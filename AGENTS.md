@@ -45,28 +45,29 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-`BNCI-C3C5-1` authorization decision
-`617991b93a4525900efd7a2488e34fc16c302df6` passed Base job
-`97516278409`, Optional Neuro Readers job `97516278093`, and CI
-`32753700516`. Read the generated implementation document and registry, then
-the Stage G1 failure document and machine result.
+The unchanged `BNCI-C3C5-1-G1-recovery` request is remotely green at repair
+commit `b1f68e50823792ccedb5ef8962c584c1bb573f3a`, Base Python job
+`97534565977`, Optional Neuro Readers job `97534565813`, and CI
+`32759468410`. Read the Stage G1 failure record, all-false recovery packet,
+new proof-only closeout, machine proof, and matching proof test.
 
-The bounded generated implementation has 12 green focused component tests,
-including one exact 52-fit fold and one spawned target-firewalled fold. The
-sole registered full G1 launcher attempt consumed at `BNCIC3C5-R1` before its
-first generated case because the coordinator passed an existing root to a
-helper requiring a new child. It produced zero generated fixtures, fits,
-predictions, target deliveries, scores, real operations, network bytes, or
-output bytes. The invocation-owned empty root was removed. The wiring is fixed
-and component-tested, but the old one-shot authority must not be reused.
+The original implementation/request commit
+`d65294967ec80c08844af55354da72b11f1dacc1` passed Base and every focused
+BNCI check, but its optional complete suite exposed two historical causal-
+replay tests that compared a 256 MiB fixture cap with the lifetime RSS of the
+whole test process. Repair commit `b1f68e5` changed only those two tests,
+injecting bounded synthetic RSS in success paths and adding an explicit
+257 MiB over-cap refusal. Production RSS measurement and BNCI source are
+unchanged. Base passed 5,970 tests; Optional passed 6,026.
 
-Read
-`docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_STAGE_G1_RECOVERY_AUTHORIZATION_PACKET.md`,
-its all-false machine request, and matching test. Immediate gate: commit, push,
-and green that exact request, then add and separately green a proof-only
-closeout. Only after it is identified as the sole active Tier C packet may a
-fresh maintainer message authorize one replacement generated pass. Stage A,
-real MAT access, neural modeling/scoring, release, and claims remain closed.
+The proof-only closeout binds seven unchanged implementation, failure, and
+recovery-request artifacts totaling 22,514 bytes under canonical SHA-256
+`931089ec08bb154f95181f918b3f13f448987d91473207c59d49704ef476d447`.
+It performs no replacement qualification or real operation. Immediate gate:
+commit, push, and green this exact closeout in both jobs. Only afterward may
+the recovery request be identified as the sole active Tier C packet and a
+fresh maintainer message accepted. Do not rerun G1, begin Stage A, open real
+MAT data, train or score a real model, release, or upgrade a claim now.
 
 ## Prior Lane Context
 

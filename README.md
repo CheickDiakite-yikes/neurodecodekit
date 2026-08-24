@@ -88,6 +88,17 @@ is component-tested but was not rerun under consumed authority. A new
 asks only for one replacement generated G1 pass and explicitly stops before
 Stage A.
 
+The unchanged recovery request is now green at repair commit `b1f68e5`, Base
+job `97534565977`, Optional Neuro Readers job `97534565813`, and CI
+`32759468410`. The repair changed only two historical causal-replay tests so
+their synthetic success paths no longer inherit whole-suite lifetime RSS;
+production resource enforcement is unchanged and an explicit over-cap refusal
+test was added. The new
+[recovery request proof closeout](docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_STAGE_G1_RECOVERY_REQUEST_PROOF_CLOSEOUT.md)
+binds seven exact artifacts totaling 22,514 bytes. It must itself become
+remotely green before a fresh packet-bound decision can authorize one
+replacement generated pass.
+
 Current result: [EEGMMIDB-UG1 Stage S-A2](docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md)
 failed closed during verified TLS certificate-chain validation before an HTTP
 response or EDF request. The one-shot invocation is consumed: it retained only
@@ -100,9 +111,10 @@ jobs in CI `32740773041`; proof-only closeout `d9eae69` passed both jobs in CI
 `32742694237` without reopening the consumed marker or payload paths.
 
 BNCI-C3C5-1 has a component-tested generated implementation, but full G1 is R1
-and acquisition remains closed. Zero real MAT or BDF bodies, event tables,
-targets, models, predictions, or scores have been opened or produced. Even a
-future maximum pass would establish only participant-
+and its one-pass recovery is not yet authorized. Acquisition remains closed.
+Zero real MAT or BDF bodies, event tables, targets, models, predictions, or
+scores have been opened or produced. Even a future maximum pass would
+establish only participant-
 independent BNCI protocol-condition prediction and incremental EEG sensor
 information beyond three recorded EOG channels, not thought reading, language,
 movement intention, exclusive motor-cortex origin, live use, or hardware.

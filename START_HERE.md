@@ -7,26 +7,26 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: BNCI-C3C5-1 G1 Recovery Request
+## Current Gate: BNCI-C3C5-1 G1 Recovery Proof
 
-Decision `617991b93a4525900efd7a2488e34fc16c302df6` passed Base job
-`97516278409`, Optional Neuro Readers job `97516278093`, and CI
-`32753700516` before generated implementation.
+The unchanged all-false recovery request is green at commit `b1f68e5`, Base
+job `97534565977`, Optional Neuro Readers job `97534565813`, and CI
+`32759468410`. The two historical optional-suite failures at the first
+implementation commit were lifetime-RSS test-harness defects; the repair
+changed no production file and added an explicit over-cap refusal assertion.
 
-Read the BNCI implementation document, implementation registry, G1 failure
-document, and machine failure result. The implementation has 12 green focused
-component tests, but the sole registered full G1 launcher attempt consumed at
-`BNCIC3C5-R1` before its first generated case. It created and removed one
-empty invocation-owned root and produced zero generated cases, fits,
-predictions, target deliveries, scores, real operations, network bytes, or
-output bytes.
+Read the BNCI implementation and G1 failure records, recovery authorization
+packet, machine request, new proof-only closeout, machine proof, and matching
+proof test. The closeout binds seven exact artifacts totaling 22,514 bytes
+under canonical SHA-256
+`931089ec08bb154f95181f918b3f13f448987d91473207c59d49704ef476d447`.
+It performs zero replacement qualifications and zero real operations.
 
-Read the G1 recovery authorization packet, all-false machine request, and
-matching test. The request asks only for one replacement generated/mock pass
-under unchanged caps and stops before Stage A. It authorizes nothing now.
-Commit, push, and green the request, then add and separately green a proof-only
-closeout before identifying it as the sole active Tier C packet. Do not rerun
-G1 or access real BNCI data under the consumed decision.
+Commit, push, and green the exact proof closeout in both jobs. Only then may
+`BNCI-C3C5-1-G1-recovery` be identified as the sole active Tier C packet and
+the maintainer's next fresh `continue`, `approve`, or `proceed` bind it by
+reference. Do not rerun G1 or access real BNCI data now; Stage A and every
+scientific operation remain closed.
 
 ## Historical BNCI Decision Gate
 

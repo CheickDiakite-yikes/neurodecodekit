@@ -13539,3 +13539,28 @@ before Stage A even if recovery succeeds.
 Claim decision: this is engineering failure localization, not neural evidence.
 No decoding, unseen-person, EEG-beyond-EOG, real-time, or scientific claim is
 upgraded.
+
+## 0478 - Bind The Green BNCI G1 Recovery Request Without Reexecution
+
+Evidence decision: preserve initial CI `32758324335` as a failed optional-
+suite record. Its two failures came from historical causal-replay tests using
+the lifetime RSS of the complete test process, not from a BNCI focused check
+or production-pipeline regression.
+
+Repair decision: accept `b1f68e50823792ccedb5ef8962c584c1bb573f3a`
+after it changed only two historical tests, injected bounded RSS into
+synthetic success paths, added an explicit 257 MiB versus 256 MiB refusal, and
+passed Base job `97534565977`, Optional job `97534565813`, and CI
+`32759468410`. Production resource enforcement and all BNCI source remain
+unchanged.
+
+Binding decision: freeze seven exact implementation, failure, recovery-
+request, and request-test artifacts totaling 22,514 bytes under canonical
+artifact-set SHA-256
+`931089ec08bb154f95181f918b3f13f448987d91473207c59d49704ef476d447`.
+
+Operation decision: this proof performs no replacement qualification, real-
+data access, model fit, prediction, target delivery, scoring, release, or
+claim upgrade. Commit, push, and green it in both jobs before naming the
+recovery request as the sole active Tier C packet. An earlier `continue` is
+not retroactive authority.
