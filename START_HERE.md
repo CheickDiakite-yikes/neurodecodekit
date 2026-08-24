@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: MARC2-VR39P Terminal Cohort Request
+## Current Gate: MARC2-VR39P Decision Remote Proof
 
 VR38A proof-only closeout `a599adf3e0320ad420e1c2f5647a0432e645c246`
 passed Base job `97278761357`, Optional job `97278761303`, and CI
@@ -24,10 +24,18 @@ passed Base Python job `97283907786`, Optional Neuro Readers job
 `97283907932`, and CI `32675925646`. Its three exact request artifacts total
 45,742 bytes and remain unchanged.
 
-The pending closeout honestly records one repository-root listing that exposed
+The remotely green closeout honestly records one repository-root listing that exposed
 only the `.codex_work` root entry's metadata. No metadata value is retained,
 no descendant or content was accessed, and the deviation neither authorizes
 nor consumes a stage.
+
+Exact request proof `e581fe99d97e91e5af07e211dd75caa22a10d098`
+passed Base job `97288870035`, Optional job `97288870180`, and CI
+`32677755105`. After VR39P was identified as the sole active Tier C packet,
+the maintainer's next exact message was `continue`. The local decision binds
+those eight UTF-8 bytes and the six unchanged request/proof artifacts totaling
+61,722 bytes. It authorizes nothing until its own exact commit is pushed and
+both required CI jobs pass.
 
 VR39P is an all-false request for the one terminal structural attempt that can
 move this lane toward science. A future generated wrapper must qualify both
@@ -43,11 +51,11 @@ cohort preserves sessions 1/2, runs 1-3, exact split roles, source rows,
 distinct raw/canonical source hashes, and compressed/uncompressed storage
 feasibility under the 10 GiB project ceiling.
 
-Immediate gate: verify, commit, push, and green the exact non-scope-changing
-request proof closeout. Only afterward may VR39P be identified as the sole
-active Tier C packet for a fresh maintainer decision. Current and earlier
-continuation messages are not retroactive. Private, archive, neural, target,
-model, score, FW2/CIL1, and claim work remain closed.
+Immediate gate: verify, commit, push, and green the exact authorization
+decision. Only afterward may generated Stage 1 implementation and its sole
+qualification begin. Private Stage 2 remains blocked until that implementation
+and a separate proof-only closeout are also remotely green. Private, archive,
+neural, target, model, score, FW2/CIL1, and claim work remain closed.
 
 ## Recent Structural History
 

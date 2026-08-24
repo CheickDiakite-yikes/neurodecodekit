@@ -14699,3 +14699,29 @@ Immediate gate: commit, push, and green this exact request proof closeout.
 Only afterward may VR39P be identified as the sole active Tier C packet for a
 fresh packet-bound maintainer decision. The current and all earlier
 continuation messages are not retroactive authority.
+
+### VR39P packet-bound decision recorded; remote green pending
+
+- Exact request proof `e581fe99d97e91e5af07e211dd75caa22a10d098`
+  passed Base Python job `97288870035`, Optional Neuro Readers job
+  `97288870180`, and CI `32677755105` before sole-packet identification.
+- The maintainer's next exact message was `continue`: eight UTF-8 bytes with
+  SHA-256 `e256ee8e7aff6957a781d8328f0f68e26996564c81fa458da59fbca2305138ad`.
+- The decision binds six unchanged request/proof artifacts totaling 61,722
+  bytes. It preserves one inherited repository-root listing and one inherited
+  `.codex_work` entry-metadata observation, with zero descendant, content, or
+  private-source operations and no retained metadata values.
+- Five read-only GitHub CI verification calls are recorded for the decision
+  window. Implementation, generated qualification, readiness, private,
+  archive, neural, target, model, score, FW2/CIL1, network, device, release,
+  other-project, and claim counters remain zero.
+- Thirty-two focused request/proof/decision tests and all 5,629 dependency-
+  light tests pass with 204 expected skips, compared with the pre-change
+  5,620/204 baseline. All 432 registry JSON files parse; Ruff 0.16.4,
+  formatting, compilation, and diff hygiene pass.
+- The decision has delayed effect until its exact commit is pushed and both
+  required CI jobs pass. Stage 2 remains closed until generated Stage 1 and a
+  separate implementation proof closeout are also remotely green.
+
+Immediate gate: verify, commit, push, and green the exact decision. No private
+or scientific operation is open now.

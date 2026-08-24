@@ -42,8 +42,8 @@ separately. The full evidence definitions and experiment order live in
 | Live end-to-end decoding | Not established | A real stream must be causally decoded without an event-onset oracle, with measured capture-to-output latency, dropouts, buffering, and abstention |
 | EEG beyond eyes and other peripheral signals | Not established | On identical held-out trials, `P+E` must improve participant-macro log loss over `P`, `P+D(E)`, timing-only, and no-signal conditions |
 
-The immediate path is the all-false VR39P terminal cohort request, one
-target-free cohort freeze, bounded FW2 member qualification, one
+The immediate path is the packet-bound VR39P terminal cohort decision, one
+target-free cohort attempt, bounded FW2 member qualification, one
 peripheral-adjusted CIL1 neural experiment, and then a strict unseen-person
 arm. Language and live work remain separate evidence tracks so a good movement
 score cannot silently become a thought-to-text or real-time claim.
@@ -52,14 +52,16 @@ Current gate: the
 [VR39P terminal cohort packet](docs/MARC_2_SELECTION_SUFFICIENCY_PRIVATE_COHORT_FREEZE_AUTHORIZATION_PACKET.md)
 and its
 [machine request](registries/marc2_selection_sufficiency_private_cohort_freeze_authorization_request.v0.json)
-are all-false request artifacts. Exact request `6c805a8` passed both jobs in
+are the frozen all-false scope. Exact request `6c805a8` passed both jobs in
 CI `32675925646`; its
 [request proof closeout](docs/MARC_2_SELECTION_SUFFICIENCY_PRIVATE_COHORT_FREEZE_REQUEST_PROOF_CLOSEOUT.md)
 and [machine proof](registries/marc2_selection_sufficiency_private_cohort_freeze_request_proof.v0.json)
-are the current remote-proof gate. No private data has been accessed. Only
-after that closeout is remotely green and a fresh packet-bound decision may a
-future one-shot result either freeze a privacy-preserving target-free cohort
-or stop this lane.
+passed both jobs in CI `32677755105`. The maintainer's next exact message was
+`continue`, now bound by the local packet-specific decision. No private data
+has been accessed. The decision must become remotely green before generated
+implementation; a later Stage 1 proof barrier must pass before the one-shot
+private result can freeze a privacy-preserving target-free cohort or stop this
+lane.
 
 ## Results At A Glance
 

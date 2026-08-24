@@ -1,11 +1,11 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate gate (2026-08-23):** exact all-false VR39P request `6c805a8`
-> passed Base job `97283907786`, Optional job `97283907932`, and CI
-> `32675925646`. Commit, push, and green its exact non-scope-changing request
-> proof closeout. Only then may VR39P be identified as the sole active Tier C
-> packet for a fresh maintainer decision. Archive, neural, target, model,
-> score, FW2/CIL1, and claim surfaces remain closed.
+> **Immediate gate (2026-08-23):** exact VR39P request proof `e581fe9` passed
+> Base job `97288870035`, Optional job `97288870180`, and CI `32677755105`.
+> The fresh eight-byte maintainer message `continue` is now bound by the local
+> packet-specific decision. Commit, push, and green that exact decision before
+> generated Stage 1. Private, archive, neural, target, model, score, FW2/CIL1,
+> and claim surfaces remain closed.
 
 > **Immediate update (2026-08-23):** exact VR32P proof closeout `5aec8a1`
 > passed Base job `97177262321`, Optional job `97177262387`, and CI
@@ -4277,10 +4277,18 @@ split and row provenance, compressed/uncompressed storage checks, and a
 secret-key HMAC commitment. Every failure is byte-identical public R2 and
 permanently parks Freewill/CIL1.
 
-Immediate gate: verify, commit, push, and green the exact request proof
-closeout. Only then may VR39P be named as the sole active Tier C packet for a
-fresh decision. No private source, cohort, archive member, neural payload,
-target, model, score, FW2/CIL1, release, or scientific claim is open.
+Exact request proof `e581fe99d97e91e5af07e211dd75caa22a10d098`
+passed Base Python job `97288870035`, Optional Neuro Readers job
+`97288870180`, and CI `32677755105`. After sole-packet identification, the
+maintainer's next exact message was `continue`, eight UTF-8 bytes. The local
+decision binds the unchanged six request/proof artifacts totaling 61,722 bytes
+and preserves the inherited metadata-only deviation without repeating it.
+
+Immediate gate: verify, commit, push, and green the exact decision. Only then
+may generated Stage 1 begin. Private Stage 2 remains blocked until Stage 1 and
+its separate proof closeout are remotely green. No private source, cohort,
+archive member, neural payload, target, model, score, FW2/CIL1, release, or
+scientific claim is open.
 
 ### MARC2-VR33A - Exact-Count Readiness Repair Remotely Closed
 

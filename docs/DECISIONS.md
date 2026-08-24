@@ -12689,3 +12689,31 @@ maintainer decision; the current and any earlier `continue`, `approve`, or
 `lets go` is not retroactive. No wrapper, private read, cohort freeze, archive,
 neural, target, model, prediction, score, FW2/CIL1, release, or claim operation
 is authorized by the request or this proof.
+
+## 0446 - Record Fresh VR39P Packet-Bound Decision
+
+Proof decision: exact request proof
+`e581fe99d97e91e5af07e211dd75caa22a10d098` passed CI `32677755105`, Base
+Python job `97288870035`, and Optional Neuro Readers job `97288870180` before
+VR39P was identified as the sole active Tier C packet.
+
+Authorization decision: bind the maintainer's next exact message, `continue`,
+as eight UTF-8 bytes with SHA-256
+`e256ee8e7aff6957a781d8328f0f68e26996564c81fa458da59fbca2305138ad`.
+Bind only the unchanged six request/proof artifacts totaling 61,722 bytes;
+do not infer broader authority or a positive result.
+
+Accounting decision: preserve the inherited proof deviation exactly as one
+repository-root listing and one `.codex_work` root-entry metadata observation,
+with zero descendant, content, private-source, or consumed-state operations
+and no retained metadata values. Record five decision-window read-only CI
+verification calls and zero implementation, private, neural, model, score,
+device, other-project, release, or claim operations.
+
+Boundary decision: this decision authorizes nothing until its exact commit is
+pushed and both CI jobs pass. Only then may generated Stage 1 implementation
+and its sole qualification begin. Private Stage 2 remains closed until that
+exact implementation and a separate proof-only closeout are also remotely
+green. R1 only makes a separate FW2 preregistration eligible; R2 permanently
+parks Freewill/CIL1. No neural payload, target, training, inference, scoring,
+FW2 execution, CIL1, device, release, or scientific claim is authorized now.
