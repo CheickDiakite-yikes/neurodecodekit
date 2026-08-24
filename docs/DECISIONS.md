@@ -13480,3 +13480,34 @@ Transition decision: commit, push, and remotely green this exact proof-only
 closeout. Only after that proof may BNCI-C3C5-1 be named as the sole active
 Tier C packet. The maintainer's next fresh unambiguous message after that
 identification is required; the current `continue` is not retroactive.
+
+## 0476 - Authorize The Unchanged BNCI-C3C5-1 Sequence By Fresh Short Form
+
+Proof decision: exact request proof closeout
+`9e7c70dcdecae8264ea988563c05e7b2f1da7fd0` passed CI `32751503586`, Base
+Python job `97509285137`, and Optional Neuro Readers job `97509285462` before
+BNCI-C3C5-1 was identified as the sole active Tier C packet.
+
+Maintainer decision: the next exact message was the eight UTF-8 bytes
+`continue`, SHA-256
+`e256ee8e7aff6957a781d8328f0f68e26996564c81fa458da59fbca2305138ad`.
+Incorporate only the unchanged, remotely green packet by reference. Do not
+fabricate a long user utterance or infer a participant, file, model, request,
+retry, route, resource, release, or claim expansion.
+
+Execution decision: retain the exact G1 -> A -> Q -> P -> T order. G1 may use
+generated MAT fixtures and mocked transport only after this decision is
+remotely green. Each real acquisition, target-blind qualification, prediction
+freeze, and target-delivery stage remains closed until its exact predecessor is
+committed, pushed, and both remote jobs are green.
+
+Resource decision: preserve one thread/worker/job, exact 779,873,919 accepted
+payload bytes, 2.5 GiB transport, 2 GiB disk growth, 5 GiB free-disk floor,
+512 MiB derivatives, 4 MiB public output, 1 GiB RSS, 540 fits, 900 prediction
+sets, one target delivery, one score, and zero scientific reruns or post-target
+updates.
+
+Claim decision: the decision itself performs no protected operation and proves
+nothing scientific. Even R5 can establish only participant-independent BNCI
+protocol-condition prediction and incremental scalp-EEG sensor information
+beyond the three recorded EOG channels under this protocol.

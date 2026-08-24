@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: BNCI-C3C5-1 All-False Registration
+## Current Gate: BNCI-C3C5-1 Decision Proof
 
 Read
 `docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md`
@@ -47,11 +47,17 @@ machine proof, and matching test. They bind nine exact artifacts totaling
 87,813 bytes under canonical SHA-256
 `72e7ebf7de421b723a668ee2076c223c45c0ab5fca724457d66314951a1e3823`.
 
-Every authority flag remains false. The immediate safe task is to verify,
-commit, push, and remotely green this exact proof-only closeout. The current
-`continue` is not retroactive authority. No generated implementation, network,
-MAT or BDF payload, semantic parse, event table, target, model, prediction,
-score, release, or new scientific claim is authorized now.
+Exact proof closeout `9e7c70d` passed Base job `97509285137`, Optional Neuro
+Readers job `97509285462`, and CI `32751503586`. BNCI-C3C5-1 was then named as
+the sole active Tier C packet, and the maintainer's next exact message was
+`continue`.
+
+Read the authorization decision document, machine record, and matching test.
+They preserve those exact eight UTF-8 bytes and bind only the unchanged staged
+packet. The decision has delayed effect: commit, push, and green it in both
+jobs before implementing the one generated/mock G1 qualification. Acquisition,
+MAT parsing, model work, target delivery, scoring, release, and claim upgrades
+remain closed until their exact registered predecessor barriers pass.
 
 ## Historical UG1 Context
 

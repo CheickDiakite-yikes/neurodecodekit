@@ -64,9 +64,13 @@ The request is not authorization: no real payload, model, prediction, or score
 has been produced.
 
 Exact all-false request `3197390` passed Base job `97503845918`, Optional
-Neuro Readers job `97503846151`, and CI `32749812954`. Its proof-only closeout
-binds nine exact artifacts totaling 87,813 bytes and must become remotely green
-before the packet can be identified for a later fresh maintainer decision.
+Neuro Readers job `97503846151`, and CI `32749812954`. Proof-only closeout
+`9e7c70d` passed Base job `97509285137`, Optional job `97509285462`, and CI
+`32751503586`. After BNCI-C3C5-1 was identified as the sole active Tier C
+packet, the maintainer's next exact message was `continue`; the packet-bound
+[authorization decision](docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_AUTHORIZATION_DECISION.md)
+is recorded with delayed effect. It authorizes only the unchanged G1 -> A -> Q
+-> P -> T sequence after this decision itself is remotely green.
 
 Current result: [EEGMMIDB-UG1 Stage S-A2](docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md)
 failed closed during verified TLS certificate-chain validation before an HTTP
@@ -79,14 +83,14 @@ be repaired or retried under this lane. Exact result `ba8645e` passed both
 jobs in CI `32740773041`; proof-only closeout `d9eae69` passed both jobs in CI
 `32742694237` without reopening the consumed marker or payload paths.
 
-BNCI-C3C5-1 is currently preregistered but all authority remains false. The
-public pass pinned NEMAR `nm000139` `v1.0.2`, the exact original source slice,
-the loader semantics, and the G1 -> A -> Q -> P -> T evidence barriers, but
-opened zero MAT or BDF bodies, event tables, targets, models, predictions, or
-scores. Even a maximum pass would establish only participant-independent BNCI
-protocol-condition prediction and incremental EEG sensor information beyond
-three recorded EOG channels, not thought reading, language, movement
-intention, exclusive motor-cortex origin, live use, or hardware.
+BNCI-C3C5-1 is authorized with delayed effect, not executed. The decision
+commit must pass both remote jobs before generated implementation, and the
+generated implementation must pass both jobs before acquisition. Zero MAT or
+BDF bodies, event tables, targets, models, predictions, or scores have been
+opened or produced. Even a maximum pass would establish only participant-
+independent BNCI protocol-condition prediction and incremental EEG sensor
+information beyond three recorded EOG channels, not thought reading, language,
+movement intention, exclusive motor-cortex origin, live use, or hardware.
 
 The frozen [EEGMMIDB-UG1 research design](docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_RESEARCH.md)
 was the direct unseen-person experiment. Its

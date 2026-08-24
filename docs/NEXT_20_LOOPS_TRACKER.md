@@ -15,11 +15,14 @@
 > preregistration, contract, and all-false Tier C request now freeze the causal
 > models, participant firewall, C3/C5-partial gates, controls, resources, and
 > G1 -> A -> Q -> P -> T barriers. Exact request `3197390` passed both jobs in
-> CI `32749812954`. The proof-only closeout now binds nine exact artifacts
-> totaling 87,813 bytes under canonical SHA-256 `72e7ebf7...`. Commit and green
-> that closeout. The current `continue` is not retroactive authority. No
-> implementation, payload, target, model, prediction, score, release, or claim
-> is open.
+> CI `32749812954`. Proof-only closeout `9e7c70d` passed both jobs in CI
+> `32751503586`. BNCI-C3C5-1 was then identified as the sole active Tier C
+> packet, and the maintainer's next exact message was `continue`. The new
+> packet-bound decision preserves those eight bytes and authorizes only the
+> unchanged G1 -> A -> Q -> P -> T sequence after its own remote-green proof.
+> Immediate gate: commit and green the decision, then run one generated/mock
+> G1 qualification. Payload, target, model, prediction, score, release, and
+> claim work remain behind their registered later barriers.
 
 > **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its

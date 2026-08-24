@@ -16,12 +16,14 @@
 > P+E and P+D(E), participant-level C3/C5-partial gates, and the ordered G1 ->
 > A -> Q -> P -> T sequence. Exact request `3197390` passed Base job
 > `97503845918`, Optional Neuro Readers job `97503846151`, and CI
-> `32749812954`. Read the new request proof closeout, machine proof, and test;
-> they bind nine exact artifacts totaling 87,813 bytes under canonical hash
-> `72e7ebf7...`. Immediate gate: verify, commit, push, and green that exact
-> proof-only closeout. The current `continue` is not retroactive authority. No
-> implementation, network, real payload, MAT parse, event table, target,
-> model, prediction, score, release, or claim is authorized.
+> `32749812954`. Request proof closeout `9e7c70d` passed Base job
+> `97509285137`, Optional job `97509285462`, and CI `32751503586`. After the
+> packet was identified as the sole active Tier C gate, the maintainer's next
+> exact message was `continue`. Read the new authorization decision, machine
+> decision, and matching test; they bind only the unchanged packet with
+> delayed effect. Immediate gate: commit, push, and green the decision before
+> generated/mock G1 implementation. Acquisition and every real/scientific
+> stage remain behind later green barriers.
 
 > Current EEGMMIDB-UG1 Stage S-A2 consumed result, 2026-08-24:
 > activation repair `9cc2688d90dc9bf75bd64751a63a7e318b4276ce`

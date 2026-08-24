@@ -1,0 +1,208 @@
+{
+  "schema_name": "neurodecodekit.bnci_2014_001_cross_participant_eeg_gain_authorization_decision",
+  "schema_version": "0.1.0",
+  "decision_id": "BNCI-C3C5-1-authorization-decision-v0",
+  "lane_id": "BNCI-C3C5-1",
+  "recorded_at_local": "2026-08-24",
+  "status": "packet_bound_short_form_authorized_effective_only_after_decision_remote_green",
+  "authorization_parent_commit": "9e7c70dcdecae8264ea988563c05e7b2f1da7fd0",
+  "effective_only_after_this_record_is_committed_pushed_and_both_CI_jobs_green": true,
+  "green_request": {
+    "commit": "3197390d45bfc8d19c9df2f3675166815f56f028",
+    "CI_run_id": 32749812954,
+    "base_python_job_id": 97503845918,
+    "base_python_duration": "6m37s",
+    "optional_neuro_job_id": 97503846151,
+    "optional_neuro_duration": "8m35s",
+    "both_required_jobs_green": true
+  },
+  "green_proof_closeout": {
+    "commit": "9e7c70dcdecae8264ea988563c05e7b2f1da7fd0",
+    "CI_run_id": 32751503586,
+    "base_python_job_id": 97509285137,
+    "base_python_duration": "6m37s",
+    "optional_neuro_job_id": 97509285462,
+    "optional_neuro_duration": "8m25s",
+    "both_required_jobs_green": true,
+    "scope_changed_from_request": false,
+    "protected_or_scientific_operations": 0
+  },
+  "bound_request_artifact_summary": {
+    "count": 9,
+    "bytes": 87813,
+    "canonical_artifact_set_sha256": "72e7ebf7de421b723a668ee2076c223c45c0ab5fca724457d66314951a1e3823"
+  },
+  "bound_proof_artifacts": [
+    {
+      "path": "docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_REQUEST_PROOF_CLOSEOUT.md",
+      "bytes": 3281,
+      "sha256": "429e4dcefdd18d399ac2f06d6fc00f2d8a875bd0290f350d926c0ad27d8383e5",
+      "git_blob": "dab1d8ec6484385281b6d6c74b212ebd1823667a"
+    },
+    {
+      "path": "registries/bnci_2014_001_cross_participant_eeg_gain_request_proof.v0.json",
+      "bytes": 6378,
+      "sha256": "b9d7560e49a22c0d4f6bd72232d1ffc12b238bdbefe696628c0aa11b6d4e7443",
+      "git_blob": "78d730c377219a084bcd718bc90c3fc6912c84ab"
+    },
+    {
+      "path": "tests/test_bnci_2014_001_cross_participant_eeg_gain_request_proof.py",
+      "bytes": 4509,
+      "sha256": "c1a44c342fbd31eb0a2e3ef80d484063d83833ebd5f3aa815c3e6a2e1882ecc8",
+      "git_blob": "76c1ec41667a6a9d81f9ccdd0fa672644b158849"
+    }
+  ],
+  "bound_proof_artifact_summary": {"count": 3, "bytes": 14168},
+  "user_authorization": {
+    "actual_message_verbatim": "continue",
+    "actual_message_UTF8_bytes": 8,
+    "actual_message_SHA256": "e256ee8e7aff6957a781d8328f0f68e26996564c81fa458da59fbca2305138ad",
+    "message_silently_corrected": false,
+    "communication_mode": "short_form_packet_reference",
+    "immediately_preceded_by_named_packet_commit_CI_scope_and_gate": true,
+    "sole_active_Tier_C_packet": "BNCI-C3C5-1",
+    "scope_incorporated_by_reference": "docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_AUTHORIZATION_PACKET.md",
+    "long_form_packet_claimed_as_user_utterance": false,
+    "substantive_registered_scope_unchanged": true,
+    "scope_may_not_expand_by_inference": true,
+    "positive_result_predeclared": false
+  },
+  "short_form_rule": {
+    "separate_Tier_C_permission_satisfied_for_this_packet": true,
+    "exactly_one_active_packet_required": true,
+    "request_and_proof_green_before_message": true,
+    "assistant_named_scope_and_fresh_decision_gate": true,
+    "decision_commit_must_be_remotely_green_before_implementation_or_access": true,
+    "scope_expansion_by_short_form_allowed": false,
+    "ambiguity_or_missing_proof_policy": "fail_closed"
+  },
+  "authorization": {
+    "G1_generated_mocked_implementation_after_decision_green": true,
+    "G1_one_generated_qualification_after_decision_green": true,
+    "A_one_exact_acquisition_after_G1_green": true,
+    "Q_one_target_blind_qualification_after_A_manifest_green": true,
+    "P_nine_fold_isolated_fits_after_Q_green": true,
+    "P_one_hash_only_prediction_freeze_after_Q_green": true,
+    "T_one_target_delivery_after_prediction_freeze_green": true,
+    "T_one_scoring_event_after_prediction_freeze_green": true,
+    "scientific_claim_upgrade_only_by_frozen_router": true,
+    "implementation_or_any_stage_authorized_at_decision_recording": false,
+    "network_or_payload_operation_authorized_before_G1_green": false,
+    "MAT_semantic_or_signal_access_authorized_before_A_manifest_green": false,
+    "modeling_authorized_before_Q_green": false,
+    "target_delivery_authorized_before_prediction_freeze_green": false
+  },
+  "required_order": [
+    "decision_commit_push_and_both_CI_jobs_green",
+    "G1_generated_mocked_implementation_and_one_qualification",
+    "G1_implementation_result_commit_push_and_both_CI_jobs_green",
+    "A_one_exact_18_file_opaque_acquisition",
+    "A_manifest_and_receipt_commit_push_and_both_CI_jobs_green",
+    "Q_one_target_blind_semantic_signal_qualification",
+    "Q_derivative_and_receipt_commit_push_and_both_CI_jobs_green",
+    "P_nine_fold_isolated_fit_inference_and_prediction_freeze",
+    "P_hash_only_freeze_commit_push_and_both_CI_jobs_green",
+    "T_one_sealed_target_delivery_and_one_score",
+    "aggregate_result_commit_push_and_both_CI_jobs_green",
+    "stop_without_rerun_or_post_target_update"
+  ],
+  "registered_payload": {
+    "dataset_id": "nm000139",
+    "version": "v1.0.2",
+    "peeled_commit": "15cf4f87975f4b5ee2ac39f703b9ac85b0ff97dc",
+    "member_table_binding": "registries/bnci_2014_001_cross_participant_eeg_gain_research.v0.json:selected_original_payload.members",
+    "file_count": 18,
+    "accepted_payload_bytes_exact": 779873919,
+    "BDF_or_HTML_derivative_allowed": false,
+    "additional_file_participant_dataset_or_substitution_allowed": false
+  },
+  "experiment": {
+    "outer_folds": 9,
+    "held_out_participants_per_fold": 1,
+    "held_out_session": "E",
+    "held_out_T_session_use": "forbidden",
+    "held_out_person_calibration_rows": 0,
+    "EEG_candidates": ["E1_filter_bank_log_bandpower", "E2_filter_bank_log_Euclidean_tangent_covariance"],
+    "EOG_model": "P_fixed_102_feature_low_frequency_temporal_model",
+    "fusions": ["P_plus_E", "P_plus_D_E"],
+    "candidate_selection": "source_participant_inner_LOSO_log_loss_only",
+    "target_or_artifact_derived_exclusion": false,
+    "test_time_adaptation_updates": 0,
+    "post_target_updates": 0
+  },
+  "C3_gate": {
+    "participant_macro_four_class_balanced_accuracy_minimum": 0.35,
+    "macro_margin_over_max_equal_prior_timing_minimum": 0.08,
+    "macro_margin_over_max_derangement_temporal_spatial_minimum": 0.02,
+    "positive_participant_primary_margins_minimum": 8,
+    "exact_one_sided_participant_sign_flip_p_maximum": 0.05
+  },
+  "C5_partial_gate": {
+    "P_minus_P_plus_E_nats_per_trial_minimum": 0.03,
+    "P_plus_D_E_minus_P_plus_E_nats_per_trial_minimum": 0.03,
+    "positive_participant_deltas_each_comparison_minimum": 8,
+    "exact_one_sided_paired_participant_sign_flip_p_maximum_each": 0.05
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "payload_files": 18,
+    "payload_bytes_exact": 779873919,
+    "transport_attempts_per_file_maximum": 3,
+    "payload_requests_maximum": 54,
+    "payload_network_bytes_maximum": 2684354560,
+    "incremental_disk_bytes_maximum": 2147483648,
+    "free_disk_bytes_minimum_before_acquisition": 5368709120,
+    "private_derivative_bytes_maximum": 536870912,
+    "public_artifact_bytes_maximum": 4194304,
+    "peak_RSS_bytes_maximum": 1073741824,
+    "parameter_update_fits_maximum_inclusive": 540,
+    "prediction_sets_maximum_inclusive": 900,
+    "target_deliveries": 1,
+    "scoring_events": 1,
+    "scientific_reruns": 0,
+    "post_target_updates": 0,
+    "cleanup_scope": "active_invocation_created_temporary_files_only"
+  },
+  "forbidden": {
+    "additional_file_participant_dataset_or_substitution": true,
+    "consumed_or_existing_ignored_state_access": true,
+    "operation_on_another_project": true,
+    "row_random_split_or_heldout_person_adaptation": true,
+    "target_or_artifact_derived_exclusion_selection_threshold_or_update": true,
+    "larger_deep_pretrained_foundation_or_language_model": true,
+    "provider_RW3_stream_device_or_hardware": true,
+    "individual_protected_output_publication_or_release": true,
+    "retry_rerun_or_post_target_amendment": true,
+    "claim_above_BNCIC3C5_R5": true
+  },
+  "decision_only_counters": {
+    "network_requests": 0,
+    "network_bytes": 0,
+    "real_retained_ignored_or_consumed_path_operations": 0,
+    "MAT_header_structure_signal_event_artifact_target_or_label_reads": 0,
+    "private_derivative_bytes": 0,
+    "parameter_update_fits": 0,
+    "model_inferences": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scoring_events": 0,
+    "generated_qualification_invocations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "claim_boundary": {
+    "maximum_route": "BNCIC3C5-R5",
+    "maximum_claim": "participant_independent_four_class_BNCI_protocol_condition_prediction_and_incremental_scalp_EEG_sensor_information_beyond_three_recorded_EOG_channels_under_this_protocol",
+    "language_or_arbitrary_thought_decoding": false,
+    "executed_movement_intention_or_exclusive_motor_cortex_origin": false,
+    "freedom_from_unrecorded_peripheral_or_visual_confound": false,
+    "live_portable_home_or_clinical_use": false,
+    "scientific_claim_established_by_decision": false
+  },
+  "next_gate": {
+    "decision_commit_push_and_both_CI_jobs_green_required": true,
+    "G1_implementation_or_qualification_allowed_before_decision_green": false,
+    "real_network_payload_or_MAT_access_allowed_before_G1_green": false
+  }
+}

@@ -15421,3 +15421,22 @@ Immediate gate: verify, commit, push, and remotely green this exact proof-only
 closeout. Only then identify BNCI-C3C5-1 as the sole active Tier C packet and
 wait for a fresh packet-bound maintainer message. The current `continue` is
 not retroactive authority.
+
+### BNCI-C3C5-1 packet-bound decision recorded
+
+- Exact request proof closeout `9e7c70d` passed Base job `97509285137` in
+  6m37s, Optional Neuro Readers job `97509285462` in 8m25s, and CI
+  `32751503586`.
+- BNCI-C3C5-1 was identified as the sole active Tier C packet. The maintainer's
+  next exact message was `continue`; the decision preserves those eight bytes
+  and their SHA-256 without inventing a long authorization sentence.
+- The decision binds the unchanged 87,813-byte request artifact set and three
+  exact proof artifacts totaling 14,168 bytes.
+- Recording performed zero network, payload, MAT, signal, event, target,
+  model, prediction, score, release, or claim operations.
+- The authorized order remains G1 -> A -> Q -> P -> T, with each later stage
+  behind its exact committed, pushed, and remotely green predecessor.
+
+Immediate gate: verify, commit, push, and green the decision in both jobs.
+Then implement and run exactly one generated/mock G1 qualification. Do not
+begin acquisition before the G1 implementation and result are remotely green.

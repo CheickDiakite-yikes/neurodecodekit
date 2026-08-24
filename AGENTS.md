@@ -95,17 +95,25 @@ the ordered G1 -> A -> Q -> P -> T evidence sequence.
 
 Exact request `3197390d45bfc8d19c9df2f3675166815f56f028` passed Base
 job `97503845918`, Optional Neuro Readers job `97503846151`, and CI
-`32749812954`. Read the new request proof closeout, machine proof, and matching
-test. They bind nine exact research, contract, request, and test artifacts
-totaling 87,813 bytes under canonical artifact-set SHA-256
+`32749812954`. Request proof closeout
+`9e7c70dcdecae8264ea988563c05e7b2f1da7fd0` passed Base job
+`97509285137`, Optional Neuro Readers job `97509285462`, and CI
+`32751503586`. It binds nine exact request artifacts totaling 87,813 bytes
+under canonical artifact-set SHA-256
 `72e7ebf7de421b723a668ee2076c223c45c0ab5fca724457d66314951a1e3823`.
 
-Every current authority flag is false and every protected operation counter is
-zero. Immediate safe gate: verify, commit, push, and remotely green this exact
-proof-only closeout. Do not identify a sole active Tier C packet or interpret
-the current `continue` as retroactive authority. No generated implementation,
-network, MAT/BDF payload, semantic parse, event table, target, model,
-prediction, score, release, or claim operation is authorized now.
+BNCI-C3C5-1 was then identified as the sole active Tier C packet. The
+maintainer's next exact message was `continue`. Read the new authorization
+decision document, machine decision, and matching test. The decision quotes
+those exact eight UTF-8 bytes and binds only the unchanged G1 -> A -> Q -> P ->
+T packet. It has delayed effect until its own commit is pushed and both jobs
+are green.
+
+Immediate safe gate: verify, commit, push, and remotely green the decision.
+Only then implement and run the sole generated/mock G1 qualification. Do not
+begin acquisition until the exact G1 implementation and result are also
+committed, pushed, and remotely green. MAT/BDF payload, semantic parse, target,
+model, prediction, score, release, and claim operations remain closed now.
 
 Historical UG1 setup follows. Read its research
 document and registry, preregistration and contract, authorization packet and
