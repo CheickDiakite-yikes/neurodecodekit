@@ -14672,3 +14672,30 @@ and separately green its proof-only closeout. A fresh packet-bound maintainer
 decision remains required after sole-packet identification. No private,
 archive, neural, target, model, score, FW2/CIL1, release, or claim operation is
 authorized now.
+
+### VR39P request remotely green; proof closeout prepared
+
+- Exact all-false request `6c805a817fa44375b7b0e120abcb2c748c78ca07`
+  passed Base Python job `97283907786`, Optional Neuro Readers job
+  `97283907932`, and CI `32675925646`.
+- The request proof binds the unchanged 9,406-byte packet, 23,662-byte machine
+  request, and 12,674-byte request test by SHA-256 and exact Git blob. The set
+  totals 45,742 bytes.
+- The two-stage sequence, 168-path generated matrix, R1/R2 terminal map,
+  12-19 cohort range, HMAC commitment, storage limits, fixed paths, strict
+  public allowlist, decision protocol, and claim boundary are unchanged.
+- Twenty-three focused request/proof tests and all 5,620 dependency-light tests
+  pass with 204 expected skips. Every authority flag and every remotely green
+  request counter remains unchanged and false/zero.
+- One repository-root listing exposed only the `.codex_work` root entry's
+  metadata. The closeout records one root listing and one ignored-root-entry
+  metadata observation; descendant/content/private-source operations remain
+  zero. This metadata-only deviation does not authorize or consume a stage.
+- A secondary 5,690-test optional-neuro run reproduced three prior
+  environment/load failures; all three passed alone, with the forkserver case
+  run outside the sandbox. Remote Optional Neuro CI remains authoritative.
+
+Immediate gate: commit, push, and green this exact request proof closeout.
+Only afterward may VR39P be identified as the sole active Tier C packet for a
+fresh packet-bound maintainer decision. The current and all earlier
+continuation messages are not retroactive authority.

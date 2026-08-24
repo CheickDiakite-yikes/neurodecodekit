@@ -12663,3 +12663,29 @@ sole-packet identification. Only a fresh later maintainer message may authorize
 the unchanged packet; the current `lets go` is not retroactive. No private,
 archive, neural, target, model, score, FW2/CIL1, release, or claim operation is
 authorized.
+
+## 0445 - Bind VR39P Request To Exact Remote Proof
+
+Proof decision: exact all-false request
+`6c805a817fa44375b7b0e120abcb2c748c78ca07` passed CI `32675925646`, Base
+Python job `97283907786`, and Optional Neuro Readers job `97283907932`.
+
+Engineering decision: bind the unchanged 9,406-byte authorization packet,
+23,662-byte machine request, and 12,674-byte request test as one exact
+45,742-byte set using SHA-256 and Git blobs in a separate non-scope-changing
+proof closeout. Preserve the 168 generated paths, 12-19 successful
+cardinalities, binary R1/R2 public surface, private HMAC commitment, one-open
+limit, zero-retry terminal behavior, and no-topology-successor rule.
+
+Boundary decision: every authority flag and every remotely green request
+counter remains false/zero. Record one repository-root listing and one
+`.codex_work` root-entry metadata observation during closeout verification;
+retain none of the observed mode, owner, size, or timestamp, and preserve zero
+descendant, content, private-source, or consumed-state operations. This
+metadata-only deviation neither authorizes nor consumes a stage. The proof has
+delayed effect until its own exact commit is pushed and both CI jobs are green.
+Only then may VR39P be identified as the sole active Tier C packet for a fresh
+maintainer decision; the current and any earlier `continue`, `approve`, or
+`lets go` is not retroactive. No wrapper, private read, cohort freeze, archive,
+neural, target, model, prediction, score, FW2/CIL1, release, or claim operation
+is authorized by the request or this proof.

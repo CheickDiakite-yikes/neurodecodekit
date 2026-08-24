@@ -14,7 +14,20 @@ passed Base job `97278761357`, Optional job `97278761303`, and CI
 `32673882729`, remotely closing the generated selection-sufficiency repair.
 Read
 `docs/MARC_2_SELECTION_SUFFICIENCY_PRIVATE_COHORT_FREEZE_AUTHORIZATION_PACKET.md`,
-its machine request, and its request test.
+its machine request, its request test,
+`docs/MARC_2_SELECTION_SUFFICIENCY_PRIVATE_COHORT_FREEZE_REQUEST_PROOF_CLOSEOUT.md`,
+and
+`registries/marc2_selection_sufficiency_private_cohort_freeze_request_proof.v0.json`.
+
+Exact all-false request `6c805a817fa44375b7b0e120abcb2c748c78ca07`
+passed Base Python job `97283907786`, Optional Neuro Readers job
+`97283907932`, and CI `32675925646`. Its three exact request artifacts total
+45,742 bytes and remain unchanged.
+
+The pending closeout honestly records one repository-root listing that exposed
+only the `.codex_work` root entry's metadata. No metadata value is retained,
+no descendant or content was accessed, and the deviation neither authorizes
+nor consumes a stage.
 
 VR39P is an all-false request for the one terminal structural attempt that can
 move this lane toward science. A future generated wrapper must qualify both
@@ -30,12 +43,11 @@ cohort preserves sessions 1/2, runs 1-3, exact split roles, source rows,
 distinct raw/canonical source hashes, and compressed/uncompressed storage
 feasibility under the 10 GiB project ceiling.
 
-Immediate gate: verify, commit, push, and green the exact all-false request,
-then create and separately green a non-scope-changing request proof closeout.
-Only afterward may VR39P be identified as the sole active Tier C packet for a
-fresh maintainer decision. Current and earlier continuation messages are not
-retroactive. Private, archive, neural, target, model, score, FW2/CIL1, and
-claim work remain closed.
+Immediate gate: verify, commit, push, and green the exact non-scope-changing
+request proof closeout. Only afterward may VR39P be identified as the sole
+active Tier C packet for a fresh maintainer decision. Current and earlier
+continuation messages are not retroactive. Private, archive, neural, target,
+model, score, FW2/CIL1, and claim work remain closed.
 
 ## Recent Structural History
 

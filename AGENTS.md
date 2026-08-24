@@ -50,12 +50,25 @@ passed Base Python job `97278761357`, Optional Neuro Readers job
 `97278761303`, and CI `32673882729`. VR38A is remotely closed generated
 engineering and may not be qualified again.
 
-The current local gate is the all-false `MARC2-VR39P` request. Read
+The all-false `MARC2-VR39P` request is now remotely green. Exact request
+`6c805a817fa44375b7b0e120abcb2c748c78ca07` passed Base Python job
+`97283907786`, Optional Neuro Readers job `97283907932`, and CI
+`32675925646`. Read
 `docs/MARC_2_SELECTION_SUFFICIENCY_PRIVATE_COHORT_FREEZE_AUTHORIZATION_PACKET.md`,
 `registries/marc2_selection_sufficiency_private_cohort_freeze_authorization_request.v0.json`,
-and its matching request test. The request binds 20 tracked VR38A/VR33A
-artifacts totaling 294,409 bytes and performs zero private or ignored-path
-operation.
+its matching request test,
+`docs/MARC_2_SELECTION_SUFFICIENCY_PRIVATE_COHORT_FREEZE_REQUEST_PROOF_CLOSEOUT.md`,
+and
+`registries/marc2_selection_sufficiency_private_cohort_freeze_request_proof.v0.json`.
+The request binds 20 tracked VR38A/VR33A artifacts totaling 294,409 bytes and
+performs zero private or ignored-path operation. Its three exact request
+artifacts total 45,742 bytes.
+
+During the later local proof-closeout verification, one repository-root
+`ls -la` exposed only the `.codex_work` root entry's metadata. The pending
+closeout records one root listing and one ignored-root-entry metadata
+observation, retains none of the observed metadata values, and records zero
+descendant/content/private-source operations. Do not reinspect that path.
 
 VR39P proposes a generated fixed-path wrapper, then only after every proof
 barrier one terminal 418,755-byte target-free structural read and one unchanged
@@ -65,12 +78,12 @@ Freewill/CIL1. Public output may not reveal count, identity, topology, row,
 path, deterministic hash, storage total, timing, memory, readiness, operation
 count, or failure class.
 
-Immediate gate: verify, commit, push, and green the exact request, then create
-and separately green its non-scope-changing proof closeout. Only after both
-proofs may VR39P be identified as the sole active Tier C packet for a fresh
-maintainer decision. Current and prior messages are not retroactive. Do not
-touch `.codex_work`, any private/consumed source, archive member, neural
-payload, target, model, score, FW2/CIL1, device, release, or claim surface.
+Immediate gate: verify, commit, push, and green the exact non-scope-changing
+request proof closeout. Only then may VR39P be identified as the sole active
+Tier C packet for a fresh maintainer decision. Current and prior messages are
+not retroactive. Do not touch `.codex_work`, any private/consumed source,
+archive member, neural payload, target, model, score, FW2/CIL1, device,
+release, or claim surface.
 
 ### Historical path to VR39P
 

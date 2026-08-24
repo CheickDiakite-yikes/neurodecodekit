@@ -1,11 +1,10 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate gate (2026-08-23):** VR38A exact implementation `7ef4a8d`
-> passed Base job `97275279259`, Optional job `97275279380`, and CI
-> `32672478625` after its sole 40-path generated qualification. Commit, push,
-> and green the exact proof-only closeout without repeating qualification. Only
-> then may Tier A prepare one all-false terminal private packet; it must freeze
-> at least 12 participants or park Freewill. Archive, neural, target, model,
+> **Immediate gate (2026-08-23):** exact all-false VR39P request `6c805a8`
+> passed Base job `97283907786`, Optional job `97283907932`, and CI
+> `32675925646`. Commit, push, and green its exact non-scope-changing request
+> proof closeout. Only then may VR39P be identified as the sole active Tier C
+> packet for a fresh maintainer decision. Archive, neural, target, model,
 > score, FW2/CIL1, and claim surfaces remain closed.
 
 > **Immediate update (2026-08-23):** exact VR32P proof closeout `5aec8a1`
@@ -4244,12 +4243,23 @@ Immediate gate: commit, push, and green this exact closeout. The next Tier C
 structural packet must either freeze at least 12 participants or park Freewill
 without another private topology-only diagnostic.
 
-### MARC2-VR39P - Terminal Private Cohort Request Prepared Locally
+### MARC2-VR39P - Terminal Private Cohort Request Remotely Green
 
 VR38A proof-only closeout `a599adf3e0320ad420e1c2f5647a0432e645c246`
 passed Base Python job `97278761357`, Optional Neuro Readers job
 `97278761303`, and CI `32673882729`, remotely closing the generated selector
 without another qualification or private operation.
+
+Exact all-false request `6c805a817fa44375b7b0e120abcb2c748c78ca07`
+then passed Base Python job `97283907786`, Optional Neuro Readers job
+`97283907932`, and CI `32675925646`. Its three exact request artifacts total
+45,742 bytes and are now bound by a separate non-scope-changing proof
+closeout.
+
+The closeout records one metadata-only protocol deviation: a repository-root
+listing exposed the `.codex_work` root entry's metadata. No observed metadata
+value is retained and descendant/content/private-source operations remain
+zero. The deviation neither authorizes nor consumes a stage.
 
 The all-false VR39P request binds 20 tracked VR38A/VR33A artifacts totaling
 294,409 bytes. Its future Stage 1 freezes 21 generated cases: both VR38A
@@ -4267,11 +4277,10 @@ split and row provenance, compressed/uncompressed storage checks, and a
 secret-key HMAC commitment. Every failure is byte-identical public R2 and
 permanently parks Freewill/CIL1.
 
-Immediate gate: verify, commit, push, and green this exact request, then add
-and separately green a non-scope-changing request proof closeout. Only then
-may VR39P be named as the sole active Tier C packet for a fresh decision. No
-private source, cohort, archive member, neural payload, target, model, score,
-FW2/CIL1, release, or scientific claim is open.
+Immediate gate: verify, commit, push, and green the exact request proof
+closeout. Only then may VR39P be named as the sole active Tier C packet for a
+fresh decision. No private source, cohort, archive member, neural payload,
+target, model, score, FW2/CIL1, release, or scientific claim is open.
 
 ### MARC2-VR33A - Exact-Count Readiness Repair Remotely Closed
 

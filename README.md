@@ -52,9 +52,14 @@ Current gate: the
 [VR39P terminal cohort packet](docs/MARC_2_SELECTION_SUFFICIENCY_PRIVATE_COHORT_FREEZE_AUTHORIZATION_PACKET.md)
 and its
 [machine request](registries/marc2_selection_sufficiency_private_cohort_freeze_authorization_request.v0.json)
-are all-false request artifacts. They access no private data; after separate
-remote proof and fresh authorization, their future one-shot result must either
-freeze a privacy-preserving target-free cohort or stop this lane.
+are all-false request artifacts. Exact request `6c805a8` passed both jobs in
+CI `32675925646`; its
+[request proof closeout](docs/MARC_2_SELECTION_SUFFICIENCY_PRIVATE_COHORT_FREEZE_REQUEST_PROOF_CLOSEOUT.md)
+and [machine proof](registries/marc2_selection_sufficiency_private_cohort_freeze_request_proof.v0.json)
+are the current remote-proof gate. No private data has been accessed. Only
+after that closeout is remotely green and a fresh packet-bound decision may a
+future one-shot result either freeze a privacy-preserving target-free cohort
+or stop this lane.
 
 ## Results At A Glance
 
