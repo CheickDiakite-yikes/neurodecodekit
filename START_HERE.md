@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: EEGMMIDB-UG1 Stage S-A Authorization Decision
+## Current Gate: EEGMMIDB-UG1 Stage S-A1 Implementation
 
 VR39P result closeout `474d49f53e1a46633b99b0ef2ff62b9abebe7a9c`
 passed Base job `97317987437`, Optional job `97317987655`, and CI
@@ -192,11 +192,25 @@ maintainer's next exact message was `continue`.
 
 Read the authorization decision, machine decision, and matching test. They
 quote those exact eight UTF-8 bytes and bind six unchanged request/proof
-artifacts totaling 44,910 bytes. Immediate gate: commit, push, and green the
-exact decision. No implementation, qualification, network request, local data
-access, payload acquisition, EDF parse, target, model, training, score,
-release, or claim action is authorized before that. The 54 retained source
-EDFs and all 30 fresh-final EDFs remain untouched.
+artifacts totaling 44,910 bytes. Exact decision
+`1b5c9195f384e5867f18131aa7d669f7c9cd0e2b` passed Base job
+`97426157639`, Optional Neuro Readers job `97426157381`, and CI
+`32725633524` before Stage S-A1 implementation.
+
+Read the Stage S-A1 implementation document, machine registry, isolated
+source-acquisition module, sidecar CLI, and matching tests. The implementation
+freezes exact checksum parsing and seven-request order, 1 MiB streaming, six
+opaque local hash passes, a synced pre-request consumed marker, complete-
+bundle-only no-replace promotion, narrow cleanup, resource caps, and 27
+generated adversarial cases. The CLI exposes only `plan` and `qualify`; no
+live command or generic URL/path override exists.
+
+Immediate gate: commit, push, and remotely green this exact implementation.
+Only then run the sole registered generated qualification. Stage S-A2 network
+access remains closed until that result and a separate proof-only closeout are
+also remotely green. No local real payload, EDF semantic content, target,
+model, training, score, release, or claim action is open, and the 54 retained
+source EDFs plus all 30 fresh-final EDFs remain untouched.
 
 ## Previous Gate: MARC2-VR39P Aggregate R2 Closeout
 

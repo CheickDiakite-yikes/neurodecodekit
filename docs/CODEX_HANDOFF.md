@@ -1,5 +1,19 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current EEGMMIDB-UG1 Stage S-A1 implementation gate, 2026-08-24: exact
+> packet-bound decision `1b5c9195f384e5867f18131aa7d669f7c9cd0e2b`
+> passed Base job `97426157639`, Optional Neuro Readers job `97426157381`,
+> and CI `32725633524`. Read the Stage S-A1 implementation document, machine
+> registry, isolated source-acquisition module, generated-only sidecar CLI,
+> and matching tests. The implementation freezes 27 generated cases, exact-
+> size sentinel streams, checksum-first ordering, 1 MiB reads, six opaque
+> post-write hashes, durable consumption, exact membership, no-replace
+> complete-bundle promotion, and a proof-before-live-opener gate. Immediate
+> gate: verify, commit, push, and green this exact implementation before the
+> sole registered qualification. Stage S-A2 network, retained-source, fresh-
+> final, EDF semantic, target, model, score, release, and claim surfaces remain
+> closed.
+
 > Current EEGMMIDB-UG1 Stage S-A decision gate, 2026-08-24: request proof
 > `b0b4632ffbdaca10c1e4bbc93ad26ebd8e1368ca` passed Base job
 > `97422237667`, Optional job `97422237272`, and CI `32724357118`. Codex

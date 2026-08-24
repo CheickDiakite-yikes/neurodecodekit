@@ -1,18 +1,15 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate gate (2026-08-24):** EEGMMIDB-UG1 Stage M2 result `818ef1f`
-> passed both jobs in CI `32718796222`; proof-only closeout `00f795f` then
-> passed Base job `97409224259`, Optional job `97409224710`, and CI
-> `32720013549`, permanently closing Stage M. The new all-false Stage S-A
-> request binds eleven exact artifacts totaling 116,444 bytes and proposes
-> only one future official-checksum request plus six opaque S001-S003 run-04/
-> run-08 EDF requests totaling 15,498,816 successful bytes. Exact request
-> `2085ea0` passed both jobs in CI `32722744301`; proof closeout `b0b4632`
-> passed both jobs in CI `32724357118`. The maintainer's next exact `continue`
-> is recorded in a packet-bound decision over six unchanged artifacts totaling
-> 44,910 bytes. Commit, push, and green that decision. No payload, retained-
-> source, fresh-final, EDF, target, model, score, or claim operation is open
-> before then.
+> **Immediate gate (2026-08-24):** EEGMMIDB-UG1 Stage S-A decision `1b5c919`
+> passed Base job `97426157639`, Optional Neuro Readers job `97426157381`,
+> and CI `32725633524`. The isolated Stage S-A1 implementation now freezes 27
+> generated cases, exact 15,498,816-byte sentinel streams, checksum-before-
+> payload ordering, 1 MiB reads, six opaque post-write hashes, durable consumed
+> state, complete-bundle-only no-replace promotion, and proof-before-live-
+> opener ordering. Commit, push, and green this exact implementation before
+> the sole registered qualification. Stage S-A2 payload, retained-source,
+> fresh-final, EDF semantic, target, model, score, or claim operation remains
+> closed until the result and separate proof closeout are also green.
 
 > **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its

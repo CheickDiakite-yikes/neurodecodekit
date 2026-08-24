@@ -231,11 +231,25 @@ Tier C packet, and the maintainer's next exact message was `continue`.
 
 Read the Stage S-A authorization decision, machine decision, and matching
 test. The decision quotes those exact eight UTF-8 bytes and binds six unchanged
-request/proof artifacts totaling 44,910 bytes. Immediate gate: verify, commit,
-push, and remotely green this decision. Do not implement or qualify the
-downloader, make a network request, inspect an existing local payload, or open
-EDF content before that. The 54 retained source files, 30 fresh-final files,
-targets, models, scores, release, devices, and claim surfaces remain closed.
+request/proof artifacts totaling 44,910 bytes. Exact decision
+`1b5c9195f384e5867f18131aa7d669f7c9cd0e2b` passed Base job
+`97426157639`, Optional Neuro Readers job `97426157381`, and CI
+`32725633524` before Stage S-A1 implementation.
+
+Read the Stage S-A1 implementation document and machine registry, the new
+isolated source-acquisition module and sidecar CLI, and their matching tests.
+The local implementation freezes a 27-case generated qualification, exact
+15,498,816-byte sentinel streams, checksum-before-payload ordering, 1 MiB
+stream reads, six opaque post-write hashes, durable consumed state, complete-
+bundle-only no-replace publication, target-detail-free public receipts, and a
+proof-before-live-opener gate. No live execute CLI exists.
+
+Immediate gate: verify, commit, push, and remotely green this exact
+implementation before the sole registered generated qualification. Do not run
+that qualification early, make a network request, inspect an existing local
+payload, or open EDF content. The 54 retained source files, 30 fresh-final
+files, targets, models, scores, release, devices, and claim surfaces remain
+closed.
 
 ### Historical VR39P path
 

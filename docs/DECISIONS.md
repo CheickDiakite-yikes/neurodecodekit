@@ -13236,3 +13236,41 @@ commit is pushed and both required CI jobs pass.
 Firewall decision: keep all 54 retained source EDFs and all 30 fresh-final
 EDFs at zero operations. Stage S, targets, models, scores, devices, releases,
 and scientific claims remain outside this decision.
+
+## 0467 - Isolate And Freeze The Stage S-A1 Acquisition Implementation
+
+Proof decision: exact packet-bound decision
+`1b5c9195f384e5867f18131aa7d669f7c9cd0e2b` passed CI `32725633524`, Base
+Python job `97426157639`, and Optional Neuro Readers job `97426157381` before
+implementation.
+
+Isolation decision: add a new source-only acquisition module and sidecar CLI.
+Do not modify the proof-bound Stage G or Stage M modules, central CLI,
+contracts, amendments, inventories, or consumed results. Expose only `plan`
+and generated `qualify`; keep live execution absent from CLI.
+
+Transport decision: freeze one checksum request followed by six exact payload
+requests, direct HTTPS identity, strict conditional and response headers,
+checksum freeze before payload, at-most-1-MiB sequential reads, no complete EDF
+buffer, no redirect/proxy/retry/range/compression/fallback, and no EDF semantic
+read.
+
+Persistence decision: sync one exclusive consumed marker before the first
+opener call, write no-follow single-link temporary files, hash each transfer,
+perform exactly one opaque post-write size/SHA-256 pass per EDF, verify one
+canonical private manifest and exact bundle membership, then publish only the
+complete bundle with atomic no-replace promotion. Cleanup is limited to
+revalidated invocation-created temporary inodes.
+
+Qualification decision: freeze 27 ordered generated cases over exact-size
+sentinel streams, deterministic replay, checksum and response mutations,
+short/oversized/non-byte bodies, collisions, second invocation, resources,
+and fresh-final refusal. Do not run the sole registered aggregate
+qualification until this exact implementation commit is pushed and both CI
+jobs pass.
+
+Boundary decision: current registered qualification, network, real payload,
+EDF semantic, retained-source, fresh-final, target, model, training,
+prediction, score, release, and claim counters remain zero. Stage S-A2 stays
+closed until the measured S-A1 result and a separate proof-only closeout are
+each remotely green.

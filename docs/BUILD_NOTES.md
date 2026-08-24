@@ -15185,3 +15185,32 @@ required before generated implementation.
 
 Immediate gate: verify, commit, push, and remotely green the exact decision.
 Only then may the additive generated/mock Stage S-A1 implementation begin.
+
+### EEGMMIDB-UG1 Stage S-A1 implementation ready; qualification not run
+
+- Packet-bound decision `1b5c9195f384e5867f18131aa7d669f7c9cd0e2b`
+  passed Base Python job `97426157639`, Optional Neuro Readers job
+  `97426157381`, and CI `32725633524` before implementation.
+- Added one isolated standard-library source-acquisition module without
+  modifying proof-bound Stage G, Stage M, central CLI, contracts, amendments,
+  or consumed results.
+- Frozen exact official-checksum parsing, seven-request order, conditional
+  headers, direct response identity, 1 MiB stream reads, transfer hashes, six
+  opaque post-write passes, and complete-bundle-only atomic publication.
+- Added a durable pre-request consumed marker, no-follow single-link files,
+  exact temporary membership, private canonical manifest, aggregate receipt
+  firewall, inode-checked narrow cleanup, and full resource enforcement.
+- Added an isolated sidecar with only `plan` and generated `qualify`; the
+  internal live entry refuses before opener construction without future exact
+  remotely green Stage S-A1 proof evidence.
+- Added 27 ordered generated cases and focused tests over exact 15,498,816-byte
+  sentinel streams, replay, checksum and header attacks, body framing,
+  collisions, consumption, caps, fresh-final refusal, and no heavy reader.
+- Registered qualification, real network, real URL/path, real payload, EDF
+  semantic, fresh-final, retained-source, target, model, training, prediction,
+  score, release, and claim counters remain zero.
+
+Immediate gate: verify, commit, push, and remotely green this exact
+implementation. Only then run the sole registered Stage S-A1 generated/mock
+qualification. Stage S-A2 remains closed until that measured result and a
+separate proof-only closeout are each remotely green.

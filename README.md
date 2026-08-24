@@ -114,8 +114,16 @@ proof-only closeout binds the three request artifacts totaling 33,704 bytes
 without implementation, network, payload, target, model, or score access.
 Proof closeout `b0b4632` then passed both jobs in CI `32724357118`. The
 maintainer's next exact `continue` is now recorded in a packet-bound decision;
-that decision must itself pass both CI jobs before generated-only Stage S-A1
-implementation can begin.
+decision `1b5c919` passed Base job `97426157639`, Optional Neuro Readers job
+`97426157381`, and CI `32725633524`. The isolated Stage S-A1 implementation is
+now locally ready: it streams exact-size generated payloads in at most 1 MiB
+chunks, freezes official checksums before payload requests, performs one opaque
+post-write hash per file, publishes only a complete no-replace bundle, and
+exposes only `plan` and generated `qualify` commands. Its 27-case registered
+qualification has not run and must wait for this exact implementation commit
+to pass both remote jobs. Stage S-A2 network access, real EEG parsing, source
+LOSO training, fresh participants, targets, scoring, and claim upgrades remain
+closed.
 
 ## Results At A Glance
 
