@@ -6,10 +6,11 @@
 > `32720013549`, permanently closing Stage M. The new all-false Stage S-A
 > request binds eleven exact artifacts totaling 116,444 bytes and proposes
 > only one future official-checksum request plus six opaque S001-S003 run-04/
-> run-08 EDF requests totaling 15,498,816 successful bytes. Commit, push, and
-> green the request, then separately green its proof-only closeout. No payload,
-> retained-source, fresh-final, EDF, target, model, score, or claim operation is
-> authorized now.
+> run-08 EDF requests totaling 15,498,816 successful bytes. Exact request
+> `2085ea0` passed both jobs in CI `32722744301`. Its pending proof-only
+> closeout binds three unchanged request artifacts totaling 33,704 bytes.
+> Commit, push, and green that proof. No payload, retained-source, fresh-final,
+> EDF, target, model, score, or claim operation is authorized now.
 
 > **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its
@@ -3948,7 +3949,7 @@ then may the one registered target-free structural discriminator execute.
 
 ### EEGMMIDB-UG1 - Unseen-Participant Generalization
 
-Status: **Stage M remotely closed; Stage S-A all-false request pending remote green**
+Status: **Stage M closed; Stage S-A request green; request proof pending**
 
 This lane replaces the consumed VR39P structural branch with a direct
 scientific question. One model will be fitted on S001-S015 and, only after a
@@ -4040,11 +4041,17 @@ Stage M2 result `818ef1f` and proof closeout `00f795f` passed both required
 jobs in CI `32718796222` and `32720013549`, respectively. The body-blind pass
 froze 92,414,976 declared bytes; Stage M is consumed and closed.
 
-Current gate: commit, push, and remotely green the exact all-false Stage S-A
-source-acquisition request, then separately green its proof-only closeout. It
-proposes one future checksum-manifest request and only six source payloads /
-15,498,816 bytes. It does not authorize implementation or access now, and it
-keeps the 54 retained source files plus all 30 fresh-final files sealed.
+Exact Stage S-A request `2085ea0` passed Base job `97417435948`, Optional job
+`97417435670`, and CI `32722744301`. Its proof-only closeout binds the three
+unchanged request artifacts totaling 33,704 bytes under canonical artifact-set
+SHA-256
+`8f91ca0ae7e9a4ef47ce1a2ab7d71c9b24f805ae737587d02edf9b23b6deb4d0`.
+
+Current gate: commit, push, and remotely green that exact proof closeout. The
+packet proposes one future checksum-manifest request and only six source
+payloads / 15,498,816 bytes, but it does not authorize implementation or
+access now. The 54 retained source files and all 30 fresh-final files remain
+sealed.
 
 ### MARC2-VR34P - All-False Exact-Count Private Confirmation Request Prepared
 

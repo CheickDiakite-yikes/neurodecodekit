@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: EEGMMIDB-UG1 Stage S-A All-False Request
+## Current Gate: EEGMMIDB-UG1 Stage S-A Request Proof
 
 VR39P result closeout `474d49f53e1a46633b99b0ef2ff62b9abebe7a9c`
 passed Base job `97317987437`, Optional job `97317987655`, and CI
@@ -175,11 +175,20 @@ training gate. It binds eleven exact upstream artifacts totaling 116,444 bytes
 and freezes only one future checksum-manifest request plus six source EDF
 requests totaling 15,498,816 successful payload bytes.
 
-Immediate gate: verify, commit, push, and green this exact request, then create
-and separately green its proof-only closeout. No implementation, qualification,
-network request, local data access, payload acquisition, EDF parse, target,
-model, training, score, release, or claim action is authorized now. The 54
-retained source EDFs and all 30 fresh-final EDFs remain untouched.
+Exact request
+`2085ea061d936bb18ef08e93fb7d3f874ef0f9d8` has now passed Base job
+`97417435948`, Optional Neuro Readers job `97417435670`, and CI
+`32722744301`.
+
+Read the request proof-only closeout, machine proof, and matching test. They
+bind the three unchanged request artifacts totaling 33,704 bytes under
+canonical artifact-set SHA-256
+`8f91ca0ae7e9a4ef47ce1a2ab7d71c9b24f805ae737587d02edf9b23b6deb4d0`.
+Immediate gate: commit, push, and green that exact proof closeout. No
+implementation, qualification, network request, local data access, payload
+acquisition, EDF parse, target, model, training, score, release, or claim
+action is authorized now. The 54 retained source EDFs and all 30 fresh-final
+EDFs remain untouched.
 
 ## Previous Gate: MARC2-VR39P Aggregate R2 Closeout
 

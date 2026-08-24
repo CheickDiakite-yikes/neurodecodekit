@@ -15149,3 +15149,23 @@ does not authorize payload access.
 Immediate gate: verify, commit, push, and remotely green this all-false
 request, then create and separately green a proof-only closeout. Do not
 implement, qualify, request, download, parse, or inspect real data now.
+
+### EEGMMIDB-UG1 Stage S-A request remotely green; proof closeout recorded
+
+- Exact all-false request `2085ea061d936bb18ef08e93fb7d3f874ef0f9d8`
+  passed Base Python job `97417435948`, Optional Neuro Readers job
+  `97417435670`, and CI `32722744301`.
+- Bound the three unchanged request artifacts totaling 33,704 bytes by exact
+  size, SHA-256, and Git blob. Canonical artifact-set SHA-256 is
+  `8f91ca0ae7e9a4ef47ce1a2ab7d71c9b24f805ae737587d02edf9b23b6deb4d0`.
+- Performed only three tracked-artifact and three Git-proof reads. No
+  implementation, generated qualification, network, checksum, real path, EDF,
+  payload, target, model, training, prediction, score, release, or claim
+  operation occurred.
+- Preserved the exact six-file / 15,498,816-byte proposed source boundary, the
+  54-file retained-source seal, and the 30-file fresh-final seal.
+
+Immediate gate: commit, push, and remotely green this proof-only closeout.
+Only then may Stage S-A be identified as the sole active Tier C packet; a fresh
+packet-bound maintainer instruction and a separately green decision remain
+required before generated implementation.

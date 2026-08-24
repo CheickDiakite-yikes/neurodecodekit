@@ -13188,3 +13188,26 @@ Authority decision: every request authority remains false. Commit and remotely
 green the request, then separately close its proof before identifying it as the
 sole Tier C packet. No implementation, generated qualification, network, local
 payload, model, score, release, or claim operation is authorized now.
+
+## 0465 - Bind The Stage S-A Request Without Activating It
+
+Proof decision: exact all-false Stage S-A request
+`2085ea061d936bb18ef08e93fb7d3f874ef0f9d8` passed CI `32722744301`, Base
+Python job `97417435948`, and Optional Neuro Readers job `97417435670`.
+
+Binding decision: freeze the three unchanged request artifacts totaling 33,704
+bytes by exact size, SHA-256, and Git blob. Preserve canonical artifact-set
+SHA-256
+`8f91ca0ae7e9a4ef47ce1a2ab7d71c9b24f805ae737587d02edf9b23b6deb4d0`.
+
+Operation decision: perform only three tracked-artifact reads and three Git
+proof reads. Perform no implementation, generated qualification, network,
+checksum-manifest, real path, EDF, payload, target, model, training,
+prediction, score, release, or claim operation.
+
+Transition decision: after this exact closeout is pushed and both remote jobs
+pass, identify `EEGMMIDB-UG1-SA` as the sole active Tier C packet. Require a
+fresh packet-bound maintainer instruction and a separately committed, pushed,
+and remotely green authorization decision before Stage S-A1 implementation.
+This proof grants no authority and does not bring Stage S-A2 acquisition
+forward.

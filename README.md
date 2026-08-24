@@ -109,6 +109,9 @@ is all-false: it proposes only a generated-qualified, checksum-bound acquisition
 of the six missing S001-S003 run-04/run-08 source files totaling 15,498,816
 bytes. It does not authorize a download, touch the 54 retained source files or
 30 fresh-final files, parse EEG, train a model, or upgrade a scientific claim.
+The exact request `2085ea0` passed both jobs in CI `32722744301`. Its pending
+proof-only closeout binds the three request artifacts totaling 33,704 bytes
+without implementation, network, payload, target, model, or score access.
 
 ## Results At A Glance
 

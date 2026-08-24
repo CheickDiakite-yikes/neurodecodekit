@@ -217,12 +217,18 @@ It proposes an additive generated/mock downloader qualification and, only after
 all later proof barriers, one checksum-manifest request plus six sequential
 opaque EDF requests totaling exactly 15,498,816 successful payload bytes.
 
-Immediate gate: verify, commit, push, and remotely green the all-false Stage
-S-A request, then add and separately green a non-scope-changing proof-only
-closeout. Do not implement or qualify the downloader, make a network request,
-inspect an existing local payload, or open EDF content now. The 54 retained
-source files, 30 fresh-final files, targets, models, scores, release, devices,
-and claim surfaces remain closed.
+Exact Stage S-A request `2085ea061d936bb18ef08e93fb7d3f874ef0f9d8`
+passed Base job `97417435948`, Optional Neuro Readers job `97417435670`, and
+CI `32722744301`. Read the request proof-only closeout, machine proof, and
+matching test. They bind the three unchanged request artifacts totaling 33,704
+bytes under canonical artifact-set SHA-256
+`8f91ca0ae7e9a4ef47ce1a2ab7d71c9b24f805ae737587d02edf9b23b6deb4d0`.
+
+Immediate gate: commit, push, and remotely green the non-scope-changing Stage
+S-A request proof closeout. Do not implement or qualify the downloader, make a
+network request, inspect an existing local payload, or open EDF content now.
+The 54 retained source files, 30 fresh-final files, targets, models, scores,
+release, devices, and claim surfaces remain closed.
 
 ### Historical VR39P path
 

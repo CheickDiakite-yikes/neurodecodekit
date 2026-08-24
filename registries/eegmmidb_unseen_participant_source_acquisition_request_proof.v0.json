@@ -1,0 +1,93 @@
+{
+  "schema_name": "neurodecodekit.eegmmidb_unseen_participant_source_acquisition_request_proof",
+  "schema_version": "0.1.0",
+  "lane_id": "EEGMMIDB-UG1-SA-PROOF",
+  "recorded_at_local": "2026-08-24",
+  "request_id": "EEGMMIDB-UG1-SA",
+  "status": "proof_only_closeout_pending_exact_commit_remote_green",
+  "green_request_commit": {
+    "commit": "2085ea061d936bb18ef08e93fb7d3f874ef0f9d8",
+    "CI_run_id": 32722744301,
+    "base_python_job_id": 97417435948,
+    "optional_neuro_readers_job_id": 97417435670,
+    "both_required_jobs_green": true
+  },
+  "bound_request_artifacts": [
+    {
+      "path": "docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_AUTHORIZATION_PACKET.md",
+      "bytes": 8937,
+      "sha256": "2590c2796897ac32902a2d4795176a4f6023256295478846fd303b758ba54b50",
+      "git_blob": "d04f519eaf7ea7adb7d8c21b7533ce299d147307"
+    },
+    {
+      "path": "registries/eegmmidb_unseen_participant_source_acquisition_authorization_request.v0.json",
+      "bytes": 14580,
+      "sha256": "791710dfff61bc6bd752d1d17ad5fafcc19e07db96b9f04705990dfddc6022f3",
+      "git_blob": "98a36ee90a70e4ba8cbcbbb837b316c26d842e84"
+    },
+    {
+      "path": "tests/test_eegmmidb_unseen_participant_source_acquisition_authorization_request.py",
+      "bytes": 10187,
+      "sha256": "2e02405ae50007c0349034a761e359b457ead7591e51f50c6918d3b3c304db1a",
+      "git_blob": "a839684dc7934b49978e8701001e390f91c1f314"
+    }
+  ],
+  "bound_request_artifact_summary": {
+    "count": 3,
+    "bytes": 33704,
+    "canonical_artifact_set_sha256": "8f91ca0ae7e9a4ef47ce1a2ab7d71c9b24f805ae737587d02edf9b23b6deb4d0"
+  },
+  "scope_preservation": {
+    "request_artifacts_unchanged": true,
+    "source_participants_runs_paths_sizes_order_and_total_unchanged": true,
+    "official_checksum_and_direct_conditional_GET_contract_unchanged": true,
+    "retained_source_and_fresh_final_firewalls_unchanged": true,
+    "generated_first_and_remote_green_barriers_unchanged": true,
+    "resource_caps_and_one_shot_semantics_unchanged": true,
+    "authority_expanded": false,
+    "claim_boundary_changed": false
+  },
+  "operation_counters": {
+    "tracked_artifact_reads": 3,
+    "Git_proof_reads": 3,
+    "implementation_operations": 0,
+    "generated_qualification_invocations": 0,
+    "network_requests": 0,
+    "checksum_manifest_requests": 0,
+    "remote_response_headers": 0,
+    "response_body_reads": 0,
+    "response_body_bytes": 0,
+    "real_URL_or_local_data_path_operations": 0,
+    "EDF_body_header_annotation_event_or_signal_reads": 0,
+    "source_payload_download_bytes": 0,
+    "fresh_final_operations": 0,
+    "retained_source_operations": 0,
+    "parameter_update_fits": 0,
+    "model_inference_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scoring_events": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "transition": {
+    "effective_before_this_closeout_commit_remote_green": false,
+    "may_identify_as_sole_active_Tier_C_packet_after_remote_green": true,
+    "implementation_authorized_by_closeout": false,
+    "generated_qualification_authorized_by_closeout": false,
+    "network_or_real_acquisition_authorized_by_closeout": false,
+    "fresh_packet_bound_maintainer_words_required": true,
+    "authorization_decision_must_be_remotely_green_before_stage_SA1": true,
+    "stage_SA2_remains_behind_stage_SA1_result_and_proof_remote_green": true
+  },
+  "claim_boundary": {
+    "engineering_proof_added": "The exact all-false six-file source-acquisition request is independently hash and Git bound for later review.",
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "neural_or_decoding_advantage_established": false,
+    "unseen_participant_generalization_established": false,
+    "movement_intention_or_motor_cortex_origin_established": false,
+    "eye_independence_language_or_live_decoding_established": false
+  }
+}
