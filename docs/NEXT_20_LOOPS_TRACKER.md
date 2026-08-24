@@ -3,15 +3,16 @@
 > **Immediate gate (2026-08-24):** EEGMMIDB-UG1 Stage S-A2 is consumed and
 > permanently parked. Activation repair `9cc2688` passed both jobs in CI
 > `32738530528`; the sole invocation then retained its 212-byte marker and
-> failed local certificate-chain verification during the checksum-manifest TLS
-> handshake. It received no HTTP response, made zero EDF requests, transferred
-> zero payload bytes, and produced no target, model, prediction, score, or
-> scientific claim. Result `ba8645e` passed both jobs in CI `32740773041`.
-> The pending proof-only closeout binds six tracked artifacts totaling 108,663
-> bytes and performs no ignored-state or real operation. Commit and green that
-> closeout. Do not retry, repair, resume, bypass, substitute, or alter ignored
-> state. The dependent source-LOSO stage is blocked; future science requires a
-> separate preregistered lane and Tier C decision.
+> failed local certificate-chain verification before any HTTP response, EDF
+> request, or payload byte. Result `ba8645e` passed both jobs in CI
+> `32740773041`; proof-only closeout `d9eae69` passed both jobs in CI
+> `32742694237`. Never retry, repair, resume, bypass, substitute, or alter its
+> ignored state. Independent Tier A research now selects `BNCI-C3C5-1`: the 18
+> original NEMAR `nm000139` `v1.0.2` MAT files total 779,873,919 bytes and can
+> support a future nine-fold zero-calibration four-class comparison of
+> EOG-only, EEG-only, EOG+EEG, and EOG+deranged-EEG conditions. Commit and
+> green the research record, then prepare a separate all-false packet. No
+> payload, event table, target, model, prediction, score, or claim is open.
 
 > **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its

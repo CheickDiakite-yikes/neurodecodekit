@@ -13390,3 +13390,35 @@ Transition decision: Stage S-A2 remains terminally consumed and the dependent
 UG1 source-LOSO stage remains blocked. Commit and remotely green this proof-
 only closeout. Then a safe artifact-only strategy pass may design a separate
 lane, but no new Tier C action is implied.
+
+## 0473 - Select BNCI 2014-001 For Independent C3 And EOG-Conditional Gain
+
+Proof decision: exact Stage S-A2 proof-only closeout
+`d9eae69d0361bc1ddfcbeaf7d3a105ad83502206` passed CI `32742694237`, Base
+Python job `97480690428`, and Optional Neuro Readers job `97480690862`. The
+consumed EEGMMIDB lane remains untouched and closed.
+
+Source decision: select only the 18 original byte-for-byte MAT files in NEMAR
+`nm000139` tag `v1.0.2`, peeled commit
+`15cf4f87975f4b5ee2ac39f703b9ac85b0ff97dc`. Their aggregate size is
+779,873,919 bytes and every member has a published SHA-256 digest. Exclude the
+duplicate BDF conversion and HTML derivatives.
+
+Scientific decision: make four-class, zero-calibration participant transfer
+the primary C3 endpoint. Pair it with a conditional C5-partial endpoint that
+requires EOG+EEG participant-macro log loss to beat both recorded EOG alone
+and a size-matched EOG+deranged-EEG condition. Use fold-scoped target
+capabilities so no model can access the signal, target, normalization,
+alignment, calibration, or threshold state of the person it predicts.
+
+Claim decision: a future complete pass can establish only participant-
+independent BNCI protocol-condition prediction and incremental scalp-EEG
+sensor information beyond the three recorded EOG channels. It cannot establish
+language, arbitrary thought, executed movement intention, exclusive motor-
+cortex origin, freedom from unrecorded EMG or other artifacts, live decoding,
+hardware, or clinical utility.
+
+Authority decision: this is Tier A public-metadata research. It authorizes no
+MAT/BDF payload, event table, target, model, prediction, score, release, or
+claim operation. Commit and remotely green the research record, then prepare
+a separate all-false preregistration and Tier C acquisition request.

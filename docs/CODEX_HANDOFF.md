@@ -1,5 +1,20 @@
 # Codex Handoff - NeuroDecodeKit
 
+> Current independent scientific lane, 2026-08-24: exact EEGMMIDB-UG1 Stage
+> S-A2 proof closeout `d9eae69d0361bc1ddfcbeaf7d3a105ad83502206`
+> passed Base job `97480690428`, Optional Neuro Readers job `97480690862`, and
+> CI `32742694237`; do not touch or retry its consumed state. Read
+> `docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_PRIMARY_SOURCE_RESEARCH.md`,
+> its machine record, and matching tests. The Tier A decision pins NEMAR
+> `nm000139` tag `v1.0.2`, peeled commit
+> `15cf4f87975f4b5ee2ac39f703b9ac85b0ff97dc`, and 18 byte-for-byte upstream
+> MAT files totaling 779,873,919 bytes. A future `BNCI-C3C5-1` experiment uses
+> nine fold-isolated, zero-calibration participant tests and compares EOG-only,
+> EEG-only, EOG+EEG, and EOG+deranged-EEG probabilities. Immediate gate:
+> commit, push, and green this research-only record, then freeze a separate
+> all-false preregistration and acquisition packet. No real payload, event
+> table, target, model, prediction, score, release, or claim is authorized.
+
 > Current EEGMMIDB-UG1 Stage S-A2 consumed result, 2026-08-24:
 > activation repair `9cc2688d90dc9bf75bd64751a63a7e318b4276ce`
 > passed Base job `97467118679`, Optional Neuro Readers job `97467118486`,

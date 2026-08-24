@@ -15334,3 +15334,27 @@ LOSO stage is blocked.
 Immediate gate: verify, commit, push, and remotely green the exact closeout.
 Then design only a genuinely independent scientific lane; real-data, target,
 model, and score operations remain behind a new Tier C packet.
+
+### Independent BNCI-C3C5-1 source decision recorded
+
+- Confirmed Stage S-A2 proof-only closeout `d9eae69` passed Base job
+  `97480690428`, Optional Neuro Readers job `97480690862`, and CI
+  `32742694237`; its consumed and ignored state was not touched.
+- Compared official BNCI, BCI Competition IV, NEMAR, MOABB, and recent
+  cross-participant evidence surfaces without downloading neural payload.
+- Pinned NEMAR `nm000139` tag `v1.0.2`, peeled commit
+  `15cf4f87975f4b5ee2ac39f703b9ac85b0ff97dc`, its 769-record manifest, and
+  the 18 original byte-for-byte upstream MAT files totaling 779,873,919 bytes.
+- Selected a future nine-fold, four-class, zero-calibration participant test
+  with source-cross-fitted EOG-only, EEG-only, EOG+EEG, and
+  EOG+deranged-EEG conditions.
+- Limited the maximum future evidence to participant-independent BNCI
+  protocol-condition prediction and incremental scalp-EEG information beyond
+  the three recorded EOG channels.
+- Read public metadata only. MAT/BDF body, event table, target, signal sample,
+  model fit, prediction, score, retained download, consumed-state operation,
+  and scientific-claim counters remained zero.
+
+Immediate gate: verify, commit, push, and remotely green this Tier A research
+record. Then prepare a separate all-false preregistration and acquisition
+packet; no real payload or evidence operation is authorized by this decision.

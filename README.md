@@ -43,11 +43,14 @@ separately. The full evidence definitions and experiment order live in
 | EEG beyond eyes and other peripheral signals | Not established | On identical held-out trials, `P+E` must improve participant-macro log loss over `P`, `P+D(E)`, timing-only, and no-signal conditions |
 
 VR39P's terminal cohort attempt returned aggregate R2, so no cohort was frozen
-and the Freewill/CIL1 lane is permanently parked. The immediate path now moves
-to an independent preregistered scientific lane rather than debugging private
-VR39P state. Language, motor, unseen-person, peripheral-control, and live work
-remain separate evidence tracks so success on one cannot silently upgrade the
-others.
+and the Freewill/CIL1 lane is permanently parked. The new independent
+[BNCI-C3C5-1 source decision](docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_PRIMARY_SOURCE_RESEARCH.md)
+selects 18 original, hash-pinned BNCI 2014-001 MAT files totaling 779,873,919
+bytes. Its future nine-fold design holds out one person completely and asks
+whether a four-class model generalizes with zero calibration and whether EEG
+improves log loss over recorded EOG alone. Language, motor, unseen-person,
+peripheral-control, and live work remain separate evidence tracks so success
+on one cannot silently upgrade the others.
 
 Current result: [EEGMMIDB-UG1 Stage S-A2](docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md)
 failed closed during verified TLS certificate-chain validation before an HTTP
@@ -57,8 +60,17 @@ prediction, or score. This is useful engineering evidence that partial or
 unverified data cannot silently enter the research pipeline, but it is not a
 scientific result. The dependent source-LOSO experiment is blocked and cannot
 be repaired or retried under this lane. Exact result `ba8645e` passed both
-jobs in CI `32740773041`; its pending proof-only closeout binds six tracked
-artifacts without reopening the consumed marker or payload paths.
+jobs in CI `32740773041`; proof-only closeout `d9eae69` passed both jobs in CI
+`32742694237` without reopening the consumed marker or payload paths.
+
+BNCI-C3C5-1 is currently research only. The public metadata pass pinned NEMAR
+`nm000139` `v1.0.2` and the exact original source slice, but opened zero MAT or
+BDF bodies, event tables, targets, models, predictions, or scores. A later
+Tier C packet must separately authorize acquisition and every irreversible
+evidence stage. Even a maximum pass would establish only participant-
+independent BNCI protocol-condition prediction and incremental EEG sensor
+information beyond three recorded EOG channels, not thought reading, language,
+movement intention, exclusive motor-cortex origin, live use, or hardware.
 
 The frozen [EEGMMIDB-UG1 research design](docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_RESEARCH.md)
 was the direct unseen-person experiment. Its

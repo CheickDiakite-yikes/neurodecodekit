@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: EEGMMIDB-UG1 Stage S-A2 Consumed Failure
+## Current Gate: Independent BNCI-C3C5-1 Research Decision
 
 Read
 `docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md`
@@ -22,11 +22,23 @@ Stage S-A2 has no retry, rerun, repair, resume, fallback, or substitution. Do
 not open or alter its ignored marker, and do not complete the six-file bundle
 through another client. The dependent UG1 source-LOSO stage is blocked.
 
-Exact result `ba8645e` passed both jobs in CI `32740773041`. Read the pending
-proof-only closeout and its machine record; they bind six tracked artifacts
-totaling 108,663 bytes and perform no ignored-state or real operation. The
-immediate safe task is to commit and remotely green that closeout. A later
-scientific lane requires a new preregistration and exact Tier C decision.
+Exact result `ba8645e` passed both jobs in CI `32740773041`. Its proof-only
+closeout `d9eae69` then passed Base job `97480690428`, Optional Neuro Readers
+job `97480690862`, and CI `32742694237`. It bound six tracked artifacts and
+performed no ignored-state or real operation. EEGMMIDB-UG1 is closed.
+
+Read
+`docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_PRIMARY_SOURCE_RESEARCH.md`
+and its machine record next. This Tier A decision selects only the 18 original
+MAT files in NEMAR `nm000139` `v1.0.2`, totaling 779,873,919 bytes, for a
+future independent experiment. The proposed nine-fold protocol holds out one
+person completely and compares EOG-only, EEG-only, EOG+EEG, and
+EOG+deranged-EEG probabilities on the same four-class rows.
+
+The immediate safe task is to commit and remotely green this research record,
+then prepare a separate all-false preregistration and acquisition packet. No
+MAT or BDF payload, event table, target, model, prediction, score, or new
+scientific claim is authorized now.
 
 ## Historical UG1 Context
 

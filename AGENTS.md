@@ -66,9 +66,29 @@ and CI `32740773041`. Read the new proof-only closeout, machine proof, and
 matching test. They bind six exact result/proof/module artifacts totaling
 108,663 bytes and do not inspect ignored state.
 
-Immediate safe gate: commit, push, and remotely green the exact proof-only
-closeout. Any future scientific experiment must be a genuinely separate
-frozen lane and Tier C decision, not an S-A2 retry.
+Exact proof-only closeout `d9eae69d0361bc1ddfcbeaf7d3a105ad83502206`
+passed Base job `97480690428`, Optional Neuro Readers job `97480690862`, and
+CI `32742694237`. Stage S-A2 and its ignored state are permanently closed.
+
+Read the new independent Tier A source decision and machine record:
+
+- `docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_PRIMARY_SOURCE_RESEARCH.md`;
+- `registries/bnci_2014_001_cross_participant_eeg_gain_research.v0.json`; and
+- `tests/test_bnci_2014_001_cross_participant_eeg_gain_research.py`.
+
+They select NEMAR `nm000139` tag `v1.0.2`, peeled commit
+`15cf4f87975f4b5ee2ac39f703b9ac85b0ff97dc`, and only its 18 byte-for-byte
+upstream MAT files totaling 779,873,919 bytes for a future independent
+`BNCI-C3C5-1` lane. The proposed four-class protocol uses nine isolated
+zero-calibration participant folds and cross-fitted EOG-only, EEG-only,
+EOG+EEG, and EOG+deranged-EEG conditions. It can at most test unseen-person
+protocol-condition prediction and incremental EEG sensor information beyond
+the three recorded EOG channels.
+
+Immediate safe gate: commit, push, and remotely green this research-only
+decision, then prepare a separate all-false preregistration and acquisition
+packet. No MAT/BDF payload, event table, target, model, prediction, score, or
+claim operation is authorized now.
 
 Historical UG1 setup follows. Read its research
 document and registry, preregistration and contract, authorization packet and
