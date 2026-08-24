@@ -5,6 +5,7 @@ import tempfile
 import unittest
 from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
+from unittest.mock import patch
 
 from neurodecodekit.cli import main
 
@@ -50,7 +51,13 @@ class CausalReplayCliTests(unittest.TestCase):
                 "--max-report-mb",
                 "1",
             ]
-            with redirect_stdout(io.StringIO()):
+            with (
+                redirect_stdout(io.StringIO()),
+                patch(
+                    "neurodecodekit.experiments.causal_replay_gate._peak_rss_bytes",
+                    return_value=128 * 1024 * 1024,
+                ),
+            ):
                 code = main(args)
             report = json.loads(out_json.read_text(encoding="utf-8"))
             stderr = io.StringIO()

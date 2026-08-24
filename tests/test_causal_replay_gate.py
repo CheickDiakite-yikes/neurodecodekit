@@ -57,7 +57,13 @@ class CausalReplayGateTests(unittest.TestCase):
             source = self._source(root)
             out_json = root / "gate.json"
             out_md = root / "gate.md"
-            with patch("numpy.load", side_effect=tracking_load):
+            with (
+                patch("numpy.load", side_effect=tracking_load),
+                patch(
+                    "neurodecodekit.experiments.causal_replay_gate._peak_rss_bytes",
+                    return_value=128 * 1024 * 1024,
+                ),
+            ):
                 report = run_causal_replay_gate(
                     source_cache_path=source,
                     out_json_path=out_json,
@@ -177,6 +183,25 @@ class CausalReplayGateTests(unittest.TestCase):
                     max_report_mb=0.001,
                 )
             self.assertFalse((root / "report-cap.json").exists())
+            with patch(
+                "neurodecodekit.experiments.causal_replay_gate._peak_rss_bytes",
+                return_value=257 * 1024 * 1024,
+            ):
+                rss_report = run_causal_replay_gate(
+                    source_cache_path=source,
+                    out_json_path=root / "rss-cap.json",
+                    max_items=32,
+                    max_source_mb=1,
+                    max_samples_per_item=128,
+                    max_chunk_samples=128,
+                    max_tokens_per_item=128,
+                    max_peak_rss_mb=256,
+                )
+            self.assertFalse(rss_report["gate_passed"])
+            self.assertIn(
+                "peak_rss_within_cap_or_unavailable",
+                rss_report["failed_gate_checks"],
+            )
 
     def test_refuses_fractional_input_lengths(self):
         import numpy as np
