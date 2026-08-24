@@ -13564,3 +13564,32 @@ data access, model fit, prediction, target delivery, scoring, release, or
 claim upgrade. Commit, push, and green it in both jobs before naming the
 recovery request as the sole active Tier C packet. An earlier `continue` is
 not retroactive authority.
+
+## 0479 - Authorize One Generated BNCI G1 Recovery By Fresh Short Form
+
+Proof decision: exact recovery proof closeout
+`e1ad1eae373e0175eb05b2bb42f2f4a567a0fd49` passed CI `32761632135`,
+Base Python job `97541580862`, and Optional Neuro Readers job `97541580606`
+before `BNCI-C3C5-1-G1-recovery` was identified as the sole active Tier C
+packet.
+
+Maintainer decision: the next exact message was the eight UTF-8 bytes
+`continue`, SHA-256
+`e256ee8e7aff6957a781d8328f0f68e26996564c81fa458da59fbca2305138ad`.
+Incorporate only the unchanged, remotely green recovery packet by reference.
+Do not fabricate a long utterance or infer scope expansion.
+
+Binding decision: bind six packet/proof artifacts totaling 25,369 bytes under
+canonical SHA-256
+`970d1ca5a10f51c4d73367ba5e9c7ebe9af8bf0811c43ae8c6cb500de5a99923`.
+
+Execution decision: after this decision itself passes both remote jobs,
+authorize exactly one generated/mock replacement G1 qualification with nine
+sequential folds, 468 synthetic fits, 495 synthetic prediction sets, one
+generated target delivery, one synthetic score, and zero network or real-data
+operations. A refusal parks the lane; a pass must be recorded and remotely
+proven. Stop before Stage A in either case.
+
+Claim decision: decision recording is not neural evidence. Real MAT access,
+scientific scoring, retry, release, and every decoding, unseen-person, or EEG-
+beyond-EOG claim remain closed.

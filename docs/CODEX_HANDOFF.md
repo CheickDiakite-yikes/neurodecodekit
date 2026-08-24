@@ -1,17 +1,14 @@
 # Codex Handoff - NeuroDecodeKit
 
-> **Current gate, 2026-08-24:** the unchanged BNCI G1 recovery request is green
-> at repair commit `b1f68e5`, Base job `97534565977`, Optional job
-> `97534565813`, and CI `32759468410`. The first implementation commit's two
-> optional-suite failures were historical whole-process lifetime-RSS test
-> defects; repair changed only two tests and preserved production enforcement.
-> Read the G1 failure record, all-false recovery packet/request, proof-only
-> closeout, machine proof, and proof test. The closeout binds seven exact
-> artifacts / 22,514 bytes under canonical SHA-256
-> `931089ec08bb154f95181f918b3f13f448987d91473207c59d49704ef476d447`.
-> Immediate gate: commit, push, and green this closeout. Only afterward identify
-> `BNCI-C3C5-1-G1-recovery` as the sole Tier C packet and wait for a fresh
-> maintainer message. Do not rerun G1, begin Stage A, or open real BNCI data.
+> **Current gate, 2026-08-24:** G1 recovery proof `e1ad1ea` passed Base job
+> `97541580862`, Optional job `97541580606`, and CI `32761632135`. After
+> `BNCI-C3C5-1-G1-recovery` was named as the sole active Tier C packet, the
+> maintainer's next exact message was `continue`. Read the new recovery
+> decision, machine record, and test. They bind those eight UTF-8 bytes and six
+> exact packet/proof artifacts totaling 25,369 bytes. Immediate gate: commit,
+> push, and green the decision. Only then run the single generated/mock
+> recovery and stop before Stage A. Real data, network, scientific scoring,
+> retry, release, and claim surfaces remain closed.
 
 > Current independent scientific lane, 2026-08-24: exact EEGMMIDB-UG1 Stage
 > S-A2 proof closeout `d9eae69d0361bc1ddfcbeaf7d3a105ad83502206`

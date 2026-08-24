@@ -7,26 +7,25 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: BNCI-C3C5-1 G1 Recovery Proof
+## Current Gate: BNCI-C3C5-1 G1 Recovery Decision
 
-The unchanged all-false recovery request is green at commit `b1f68e5`, Base
-job `97534565977`, Optional Neuro Readers job `97534565813`, and CI
-`32759468410`. The two historical optional-suite failures at the first
-implementation commit were lifetime-RSS test-harness defects; the repair
-changed no production file and added an explicit over-cap refusal assertion.
+Recovery proof closeout `e1ad1ea` passed Base job `97541580862`, Optional job
+`97541580606`, and CI `32761632135`. Codex identified
+`BNCI-C3C5-1-G1-recovery` as the sole active Tier C packet, and the
+maintainer's next exact message was `continue`.
 
-Read the BNCI implementation and G1 failure records, recovery authorization
-packet, machine request, new proof-only closeout, machine proof, and matching
-proof test. The closeout binds seven exact artifacts totaling 22,514 bytes
-under canonical SHA-256
-`931089ec08bb154f95181f918b3f13f448987d91473207c59d49704ef476d447`.
-It performs zero replacement qualifications and zero real operations.
+Read the recovery packet/request/proof, then the new authorization decision,
+machine decision, and matching test. The decision quotes those exact eight
+bytes and binds six unchanged artifacts totaling 25,369 bytes under canonical
+SHA-256
+`970d1ca5a10f51c4d73367ba5e9c7ebe9af8bf0811c43ae8c6cb500de5a99923`.
+It has delayed effect.
 
-Commit, push, and green the exact proof closeout in both jobs. Only then may
-`BNCI-C3C5-1-G1-recovery` be identified as the sole active Tier C packet and
-the maintainer's next fresh `continue`, `approve`, or `proceed` bind it by
-reference. Do not rerun G1 or access real BNCI data now; Stage A and every
-scientific operation remain closed.
+Commit, push, and green this decision in both jobs. Only afterward run the one
+replacement generated/mock G1 qualification with exactly 468 synthetic fits,
+495 synthetic prediction sets, one generated target delivery, and one
+synthetic score. Stop before Stage A. Real BNCI data, network, scientific
+scoring, retries, releases, and claims remain closed.
 
 ## Historical BNCI Decision Gate
 

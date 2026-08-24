@@ -45,29 +45,26 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-The unchanged `BNCI-C3C5-1-G1-recovery` request is remotely green at repair
-commit `b1f68e50823792ccedb5ef8962c584c1bb573f3a`, Base Python job
-`97534565977`, Optional Neuro Readers job `97534565813`, and CI
-`32759468410`. Read the Stage G1 failure record, all-false recovery packet,
-new proof-only closeout, machine proof, and matching proof test.
+Exact G1 recovery proof closeout
+`e1ad1eae373e0175eb05b2bb42f2f4a567a0fd49` passed Base Python job
+`97541580862`, Optional Neuro Readers job `97541580606`, and CI
+`32761632135`. `BNCI-C3C5-1-G1-recovery` was then identified as the sole
+active Tier C packet. The maintainer's next exact message was `continue`.
 
-The original implementation/request commit
-`d65294967ec80c08844af55354da72b11f1dacc1` passed Base and every focused
-BNCI check, but its optional complete suite exposed two historical causal-
-replay tests that compared a 256 MiB fixture cap with the lifetime RSS of the
-whole test process. Repair commit `b1f68e5` changed only those two tests,
-injecting bounded synthetic RSS in success paths and adding an explicit
-257 MiB over-cap refusal. Production RSS measurement and BNCI source are
-unchanged. Base passed 5,970 tests; Optional passed 6,026.
+Read the new Stage G1 recovery authorization decision document, machine
+decision, and matching test. They preserve those exact eight UTF-8 bytes and
+bind six unchanged packet/proof artifacts totaling 25,369 bytes under
+canonical SHA-256
+`970d1ca5a10f51c4d73367ba5e9c7ebe9af8bf0811c43ae8c6cb500de5a99923`.
+The decision conditionally authorizes only one replacement generated/mock G1
+qualification: nine sequential folds, exactly 468 synthetic fits, 495
+synthetic prediction sets, one generated target delivery, and one synthetic
+score under zero network and real-data operations.
 
-The proof-only closeout binds seven unchanged implementation, failure, and
-recovery-request artifacts totaling 22,514 bytes under canonical SHA-256
-`931089ec08bb154f95181f918b3f13f448987d91473207c59d49704ef476d447`.
-It performs no replacement qualification or real operation. Immediate gate:
-commit, push, and green this exact closeout in both jobs. Only afterward may
-the recovery request be identified as the sole active Tier C packet and a
-fresh maintainer message accepted. Do not rerun G1, begin Stage A, open real
-MAT data, train or score a real model, release, or upgrade a claim now.
+Immediate gate: test, commit, push, and green this exact decision in both
+jobs. Only then run the one replacement generated qualification and stop
+before Stage A. Do not open real MAT data, acquire payload, run a real model or
+scientific score, retry, release, or upgrade a claim.
 
 ## Prior Lane Context
 

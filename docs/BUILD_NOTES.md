@@ -15494,3 +15494,27 @@ decision before any replacement pass.
 Immediate gate: verify, commit, push, and green this proof-only closeout. Only
 then identify `BNCI-C3C5-1-G1-recovery` as the sole active Tier C packet and
 wait for a fresh maintainer message. Stage A remains closed.
+
+### BNCI-C3C5-1 G1 recovery decision recorded
+
+- Exact recovery proof `e1ad1eae373e0175eb05b2bb42f2f4a567a0fd49`
+  passed Base job `97541580862` in 6m33s, Optional Neuro Readers job
+  `97541580606` in 5m59s, and CI `32761632135`.
+- Codex identified `BNCI-C3C5-1-G1-recovery` as the sole active Tier C packet,
+  named its exact green proof, generated-only scope, Stage A stop, and need for
+  fresh permission. The maintainer's next exact message was `continue`.
+- The decision preserves those eight UTF-8 bytes and binds six unchanged
+  packet/proof artifacts totaling 25,369 bytes under canonical SHA-256
+  `970d1ca5a10f51c4d73367ba5e9c7ebe9af8bf0811c43ae8c6cb500de5a99923`.
+- It conditionally authorizes one generated/mock replacement only after its
+  own remote proof: exactly 468 synthetic fits, 495 synthetic prediction sets,
+  one generated target delivery, one synthetic score, and zero network or real
+  operations.
+- Decision recording performed zero qualification, MAT, mock transport, fit,
+  prediction, target, score, Stage A, release, or claim operations.
+- Local verification passed 8 decision tests, all 64 focused BNCI tests, and
+  all 5,984 dependency-free tests with 216 expected skips in 209.188 seconds.
+  Pinned Ruff, compilation, JSON registry parsing, and diff hygiene also pass.
+
+Immediate gate: test, commit, push, and green this decision in both jobs. Then
+run the sole replacement generated qualification and stop before Stage A.

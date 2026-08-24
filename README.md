@@ -99,6 +99,14 @@ binds seven exact artifacts totaling 22,514 bytes. It must itself become
 remotely green before a fresh packet-bound decision can authorize one
 replacement generated pass.
 
+That closeout is now green at `e1ad1ea` in CI `32761632135`. After the
+recovery packet was named as the sole active Tier C gate, the maintainer's
+next exact message was `continue`. The additive
+[recovery authorization decision](docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_STAGE_G1_RECOVERY_AUTHORIZATION_DECISION.md)
+quotes that word and conditionally permits exactly one generated/mock pass
+only after the decision itself is remotely green. It still permits no real
+data, network, Stage A, scientific score, retry, or claim upgrade.
+
 Current result: [EEGMMIDB-UG1 Stage S-A2](docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md)
 failed closed during verified TLS certificate-chain validation before an HTTP
 response or EDF request. The one-shot invocation is consumed: it retained only

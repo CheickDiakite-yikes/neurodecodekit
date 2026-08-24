@@ -1,0 +1,197 @@
+{
+  "schema_name": "neurodecodekit.bnci_2014_001_cross_participant_eeg_gain_stage_g1_recovery_authorization_decision",
+  "schema_version": "0.1.0",
+  "decision_id": "BNCI-C3C5-1-G1-recovery-authorization-decision-v0",
+  "lane_id": "BNCI-C3C5-1",
+  "stage": "G1-recovery",
+  "recorded_at_local": "2026-08-24",
+  "status": "short_form_packet_bound_authorized_effective_only_after_decision_remote_green_zero_recovery_or_real_operations_at_recording",
+  "proof_posture": "actual_maintainer_word_quote_green_proof_hash_bound_scope_no_fabricated_recital_or_inferred_expansion",
+  "authorization_parent_commit": "e1ad1eae373e0175eb05b2bb42f2f4a567a0fd49",
+  "effective_only_after_this_record_is_tested_committed_pushed_and_both_CI_jobs_green": true,
+  "green_recovery_proof": {
+    "commit": "e1ad1eae373e0175eb05b2bb42f2f4a567a0fd49",
+    "commit_subject": "Close BNCI G1 recovery request proof",
+    "branch": "codex/loop-54a-vhdr-preregistration",
+    "CI_run_id": 32761632135,
+    "CI_url": "https://github.com/CheickDiakite-yikes/neurodecodekit/actions/runs/32761632135",
+    "base_python_job_id": 97541580862,
+    "base_python_duration": "6m33s",
+    "base_python_conclusion": "success",
+    "optional_neuro_job_id": 97541580606,
+    "optional_neuro_duration": "5m59s",
+    "optional_neuro_conclusion": "success",
+    "both_required_jobs_green": true,
+    "canonical_recovery_artifact_set_sha256": "931089ec08bb154f95181f918b3f13f448987d91473207c59d49704ef476d447"
+  },
+  "bound_artifacts": [
+    {
+      "path": "docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_STAGE_G1_RECOVERY_AUTHORIZATION_PACKET.md",
+      "bytes": 3217,
+      "sha256": "83af994af6887efb2cc4eb0b9b8e2e6401c280f4a4b8ec57c5fc0844c66bc29a",
+      "git_blob": "3c0dc614891599a2e9736e2b75191f1020ada27a"
+    },
+    {
+      "path": "registries/bnci_2014_001_cross_participant_eeg_gain_stage_g1_recovery_authorization_request.v0.json",
+      "bytes": 4894,
+      "sha256": "229880d8dba629d9ae42a7b6b28f9487de88e2fbec95cdd646ff644d6f33c604",
+      "git_blob": "e2a3a10ce42b0aea983df1c043784b867c404417"
+    },
+    {
+      "path": "tests/test_bnci_2014_001_cross_participant_eeg_gain_stage_g1_recovery_request.py",
+      "bytes": 1943,
+      "sha256": "61389c49b8b3caf7902f976433ee4f3cae2c588dc73fb776258f7aeca33cf93d",
+      "git_blob": "bc546a480d7eecbf3ce97f5ec542b984cde1526b"
+    },
+    {
+      "path": "docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_STAGE_G1_RECOVERY_REQUEST_PROOF_CLOSEOUT.md",
+      "bytes": 3818,
+      "sha256": "866adede765303b8fd76bbded1888054687d8941a2a665a5294cf9a0abc0a194",
+      "git_blob": "99863e6df3c702eb574376d3ef48b681e0a7f968"
+    },
+    {
+      "path": "registries/bnci_2014_001_cross_participant_eeg_gain_stage_g1_recovery_request_proof.v0.json",
+      "bytes": 6803,
+      "sha256": "f91f8b6cb945a0646c218bb497da1cfa7301b8b05c74b3cafbe0d5e88930a3ac",
+      "git_blob": "fb4c7b335713fb79d03e4cc99fc930a37e6eed54"
+    },
+    {
+      "path": "tests/test_bnci_2014_001_cross_participant_eeg_gain_stage_g1_recovery_request_proof.py",
+      "bytes": 4694,
+      "sha256": "63f2a993feb8049ef400ea121bd81b6ba67bc5365f1b5ea134d2d74cead6691b",
+      "git_blob": "69bb2b5dfd7a5340568aa883dc75c6db5370623d"
+    }
+  ],
+  "bound_artifact_summary": {
+    "count": 6,
+    "bytes": 25369,
+    "canonical_artifact_set_sha256": "970d1ca5a10f51c4d73367ba5e9c7ebe9af8bf0811c43ae8c6cb500de5a99923"
+  },
+  "user_authorization": {
+    "actual_message_verbatim": "continue",
+    "actual_message_utf8_bytes": 8,
+    "actual_message_sha256": "e256ee8e7aff6957a781d8328f0f68e26996564c81fa458da59fbca2305138ad",
+    "communication_mode": "short_form_packet_reference",
+    "immediately_preceded_by_named_packet_commit_CI_scope_and_gate": true,
+    "sole_active_Tier_C_packet": "BNCI-C3C5-1-G1-recovery",
+    "scope_incorporated_by_reference": "docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_STAGE_G1_RECOVERY_AUTHORIZATION_PACKET.md",
+    "long_form_sentence_claimed_as_user_utterance": false,
+    "procedural_recital_waived_for_this_decision": true,
+    "substantive_registered_scope_unchanged": true,
+    "scope_may_not_expand_by_inference": true
+  },
+  "short_form_packet_rule": {
+    "separate_Tier_C_permission_satisfied_for_this_packet": true,
+    "exactly_one_active_packet_required": true,
+    "packet_and_proof_were_green_before_message": true,
+    "assistant_named_packet_commit_CI_scope_and_decision_gate": true,
+    "maintainer_unambiguously_said_continue": true,
+    "decision_quotes_actual_words_and_binds_immutable_scope": true,
+    "decision_commit_must_be_remotely_green_before_qualification": true,
+    "scope_expansion_by_short_form_allowed": false,
+    "ambiguity_multiple_packets_changed_packet_or_missing_green_evidence_policy": "fail_closed"
+  },
+  "authorization_after_decision_green": {
+    "replacement_generated_qualification": true,
+    "generated_MAT_fixture_write_and_parse": true,
+    "mock_transport": true,
+    "synthetic_feature_and_target_creation": true,
+    "synthetic_parameter_update_and_inference": true,
+    "synthetic_prediction_freeze": true,
+    "synthetic_target_delivery_and_score": true,
+    "aggregate_result_publication": true,
+    "invocation_created_generated_cleanup": true,
+    "existing_exact_optional_environment_reuse": true,
+    "network_or_download": false,
+    "existing_ignored_consumed_or_other_project_path_access": false,
+    "real_MAT_or_neural_access": false,
+    "real_feature_model_prediction_target_or_score": false,
+    "Stage_A_or_later_stage": false,
+    "dependency_installation_resolution_or_substitution": false,
+    "provider_language_model_RW3_stream_device_or_hardware": false,
+    "release_publication_or_claim_upgrade": false,
+    "retry_rerun_resume_restart_or_second_score": false
+  },
+  "registered_recovery": {
+    "replacement_generated_qualification_invocations": 1,
+    "generated_only": true,
+    "mock_transport_only": true,
+    "outer_fold_processes": 9,
+    "active_workers_maximum": 1,
+    "synthetic_parameter_update_fits_exact": 468,
+    "synthetic_prediction_sets_exact": 495,
+    "synthetic_target_deliveries": 1,
+    "synthetic_scoring_events": 1,
+    "aggregate_result_files": 1,
+    "real_or_existing_payload_operations": 0,
+    "network_bytes": 0,
+    "retry_after_replacement": false,
+    "stop_before_Stage_A": true
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds": 3600,
+    "peak_process_tree_RSS_bytes": 1073741824,
+    "private_generated_bytes": 536870912,
+    "public_output_bytes": 4194304,
+    "minimum_free_disk_bytes": 5368709120,
+    "network_bytes": 0
+  },
+  "required_execution_order": [
+    "test_commit_push_and_obtain_green_CI_for_this_decision",
+    "run_one_replacement_generated_G1_qualification",
+    "record_test_commit_push_and_obtain_green_CI_for_exact_G1_result",
+    "stop_before_Stage_A"
+  ],
+  "authorization_only_measurements": {
+    "GitHub_CI_verification_calls": 1,
+    "replacement_generated_qualification_invocations": 0,
+    "generated_MAT_writes_or_parses": 0,
+    "mock_transport_calls": 0,
+    "synthetic_parameter_update_fits": 0,
+    "synthetic_prediction_sets": 0,
+    "synthetic_target_deliveries": 0,
+    "synthetic_scoring_events": 0,
+    "aggregate_result_files": 0,
+    "protected_or_payload_network_requests": 0,
+    "protected_or_payload_network_bytes": 0,
+    "real_retained_ignored_consumed_or_other_project_path_operations": 0,
+    "MAT_BDF_signal_event_target_or_label_opens": 0,
+    "Stage_A_or_later_operations": 0,
+    "dependency_installs": 0,
+    "provider_language_model_RW3_stream_device_or_hardware_operations": 0,
+    "release_or_publication_operations": 0,
+    "scientific_claim_upgrades": 0,
+    "end_to_end_latency_measured": false
+  },
+  "local_verification_before_commit": {
+    "decision_tests_passed": 8,
+    "decision_tests_seconds": 0.108,
+    "focused_BNCI_tests_passed": 64,
+    "focused_BNCI_tests_seconds": 5.406,
+    "full_dependency_free_tests_passed": 5984,
+    "full_dependency_free_tests_skipped": 216,
+    "full_dependency_free_tests_seconds": 209.188,
+    "pinned_ruff_passed": true,
+    "compileall_passed": true,
+    "all_JSON_registries_parsed": true,
+    "git_diff_check_passed": true,
+    "replacement_qualification_executed": false,
+    "real_ignored_consumed_or_other_project_payload_touched": false
+  },
+  "next_gate": {
+    "decision_commit_required": true,
+    "decision_push_required": true,
+    "both_remote_CI_jobs_green_required": true,
+    "replacement_qualification_may_begin_before_green": false,
+    "real_or_Stage_A_operation_may_begin_after_green_decision": false,
+    "registered_sequence_ordinal": 1,
+    "retry_or_rerun_available": false
+  },
+  "claim_boundary": {
+    "engineering_capability_authorized_for_testing": "one_clean_bounded_replacement_run_of_the_generated_target_firewalled_BNCI_pipeline",
+    "scientific_claim_not_established": "this_decision_is_not_neural_data_or_a_result_and_establishes_no_decoding_unseen_person_or_EEG_beyond_EOG_finding"
+  }
+}

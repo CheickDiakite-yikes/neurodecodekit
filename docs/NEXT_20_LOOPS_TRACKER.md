@@ -1,16 +1,14 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate gate (2026-08-24):** the unchanged BNCI G1 recovery request is
-> green at commit `b1f68e5` in CI `32759468410` after Base passed 5,970 tests
-> and Optional passed 6,026. The repair changed only two historical lifetime-
-> RSS test success paths and added a real over-cap refusal assertion; no
-> production source or recovery scope changed. The proof-only closeout binds
-> seven exact artifacts / 22,514 bytes under canonical SHA-256
-> `931089ec08bb154f95181f918b3f13f448987d91473207c59d49704ef476d447`.
-> Immediate gate: commit, push, and green this closeout, then identify
-> `BNCI-C3C5-1-G1-recovery` as the sole active Tier C packet and wait for a
-> fresh decision. No replacement run, Stage A, real BNCI payload, target,
-> model, score, release, or claim work is open now.
+> **Immediate gate (2026-08-24):** G1 recovery proof `e1ad1ea` passed both
+> jobs in CI `32761632135`. After `BNCI-C3C5-1-G1-recovery` was identified as
+> the sole active Tier C packet, the maintainer's next exact message was
+> `continue`. The new decision binds those eight bytes and six unchanged
+> packet/proof artifacts / 25,369 bytes. Immediate gate: commit, push, and
+> green the decision, then run exactly one generated/mock replacement pass
+> with 468 synthetic fits, 495 synthetic prediction sets, one generated target
+> delivery, and one synthetic score. Stop before Stage A. Real data, network,
+> retry, release, and scientific claim work remain closed.
 
 > **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its
