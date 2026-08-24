@@ -45,13 +45,7 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-`MARC2-VR39P` is consumed at aggregate R2. Exact result closeout
-`474d49f53e1a46633b99b0ef2ff62b9abebe7a9c` passed Base Python job
-`97317987437`, Optional Neuro Readers job `97317987655`, and CI
-`32688563490`. No cohort was frozen, Freewill/CIL1 is permanently parked, and
-VR39P has no retry, successor, private reinspection, cleanup, or amendment.
-
-The independent next lane is all-false `EEGMMIDB-UG1`. Read its research
+The independent current lane is `EEGMMIDB-UG1`. Read its research
 document and registry, preregistration and contract, authorization packet and
 machine request, and matching tests. It freezes S001-S015 as source and
 S016-S030 as completely fresh final participants, with execution 03/07 -> 11,
@@ -96,10 +90,28 @@ freezes exact channels, SOS/filter state, windows, controls, fit schedule,
 participant firewall, completeness, statistics, checkpoint/prediction
 serialization, and resource semantics. It only narrows or clarifies scope.
 
-Immediate gate: commit, push, and remotely green exact Amendment 1. Do not
-implement generated Stage G before that barrier. Stage M and every real-path
-operation remain closed until the amended Stage G is itself committed, pushed,
-and remotely green.
+Exact Amendment 1 commit `9ab8639b4d6fa28a30321687c82b185b13b1813a`
+passed both jobs in CI `32696449436`. Exact Stage G implementation
+`da2be31a3ea4b7a438f86039c1d80b182e628ccf` passed Base job
+`97363993816`, Optional Neuro Readers job `97363993465`, and CI
+`32704970582` before execution.
+
+Read the UG1 implementation closeout and its implementation and Stage G result
+registries. The sole generated/mock qualification passed all 17 registered
+case classes with 61 fits, 420 participant-condition prediction sets, 111
+model-inference calls, 172 total model runs, one synthetic target delivery,
+and one synthetic score. It processed 25,975,920 generated input bytes in
+443.246267 seconds at 276,856,832-byte peak RSS and emitted a 3,911-byte
+aggregate result with SHA-256
+`08bd7568c596c423825b799b2d4e1e67cf4066e2fd7ebd329eeb1a76ccc23359`.
+Real path, EDF, cache, raw-data, real-target, network, and new-payload counts
+were zero. The synthetic R4 route has no scientific claim value. Do not repeat
+Stage G.
+
+Immediate gate: verify, commit, push, and remotely green the exact Stage G
+closeout. Stage M metadata, source/fresh acquisition, real EEG, targets,
+models, scores, releases, devices, and claim upgrades remain closed pending a
+separate exact Tier C decision.
 
 ### Historical VR39P path
 

@@ -12918,3 +12918,38 @@ modules. Freeze literal channels, SOS, controls, fit counts, participant
 firewall, exact 225+225 rows, canonical non-pickle checkpoints and prediction
 JSONL, stricter temporal/spatial gates, and process-tree resource enforcement.
 Stage G remains closed until the exact amendment commit passes both CI jobs.
+
+## 0455 - Consume the Sole UG1 Generated Qualification at G1
+
+Proof decision: exact Amendment 1 commit
+`9ab8639b4d6fa28a30321687c82b185b13b1813a` passed both required jobs in CI
+`32696449436`. Exact implementation commit
+`da2be31a3ea4b7a438f86039c1d80b182e628ccf` then passed Base Python job
+`97363993816`, Optional Neuro Readers job `97363993465`, and CI
+`32704970582` before execution.
+
+Execution decision: invoke the registered generated/mock Stage G command once
+under one CPU thread, one worker, one numerical job, zero network, and the
+frozen wall, RSS, output, and disk caps. The invocation passed all 17 case
+classes with 61 fits, 420 prediction sets, 111 inference calls, 172 model
+runs, one synthetic target delivery, and one synthetic score.
+
+Measurement decision: record 25,975,920 generated input bytes, 3,911 canonical
+output bytes, 1,450,304 peak incremental output bytes, 443.246267 seconds,
+276,856,832-byte peak process-tree RSS, and 99,378,757,632 initial free disk.
+Bind the aggregate output SHA-256
+`08bd7568c596c423825b799b2d4e1e67cf4066e2fd7ebd329eeb1a76ccc23359`.
+
+Integrity decision: retain zero real path, raw-data, cache, EDF semantic parse,
+real-target, network, or new-payload operation. Do not commit the temporary
+qualification artifact. Preserve the unrelated tracker inspection file.
+
+Claim decision: the synthetic R4 route has no scientific value. It proves the
+bounded experiment machinery can execute and refuse malformed paths before
+real use; it does not establish neural advantage, unseen-person
+generalization, movement intention, motor-cortex origin, eye-independent
+information, language/thought decoding, live decoding, or hardware use.
+
+Transition decision: consume Stage G with no repeat. Stage M remains closed
+until this closeout is committed, pushed, remotely green, and a separate exact
+Tier C metadata decision is recorded.

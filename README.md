@@ -60,8 +60,7 @@ the stronger no-signal/timing control or the lane stops before fresh
 acquisition. Even a maximum R4 result would establish only
 participant-independent EEGMMIDB protocol-condition prediction; cue/ocular
 compatibility, motor-cortex origin, movement intention, language, and live
-decoding would remain unproven. Every real-operation authority flag is
-currently false. Exact request `c642d90` passed Base job `97322606634`,
+decoding would remain unproven. Exact request `c642d90` passed Base job `97322606634`,
 Optional Neuro job `97322606501`, and CI `32690289547`. Its proof-only
 closeout `9117b1d` passed Base job `97324487895`, Optional Neuro job
 `97324488042`, and CI `32690987778`. The maintainer's next exact message was
@@ -71,8 +70,14 @@ job `97333988474`, and CI `32694496933`. Two independent pre-execution reviews
 then found reproducibility gaps in the control gates, predictor firewall, and
 prediction-freeze binding. A narrowing
 [Amendment 1](docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_AMENDMENT_1.md)
-now freezes those details locally and must be remotely green before generated
-Stage G. No real operation has started.
+froze those details and passed CI `32696449436` before implementation. Exact
+implementation `da2be31` then passed Base job `97363993816`, Optional job
+`97363993465`, and CI `32704970582`. The sole generated/mock Stage G
+qualification passed all 17 case classes with 61 fits and 420 prediction sets
+in 443.246267 seconds at 276,856,832-byte peak RSS. It read zero real paths,
+EEG payloads, caches, or real targets. This is an executable-pipeline result,
+not unseen-person or neural evidence; Stage M and every real operation remain
+closed.
 
 ## Results At A Glance
 
@@ -84,7 +89,7 @@ Stage G. No real operation has started.
 
 | Evidence layer | Strongest result so far | What that means now |
 |---|---|---|
-| Unseen-person test | EEGMMIDB-UG1 now freezes a single 320-feature source-pooled model, S001-S015 source rows, S016-S030 fresh final rows, zero calibration, a 15-participant LOSO stop gate, 12 primary/control conditions, and one sealed 450-target score | This is preregistered design, not a result. The real sequence remains all-false until its packet is remotely proven and separately authorized; the maximum future claim is protocol-condition prediction in unseen people, not neural or cortical origin |
+| Unseen-person test | EEGMMIDB-UG1 Stage G passed once: all 17 generated/mock case classes, 61 fits, 420 prediction sets, target-swap and participant-relabel invariance, exact causal replay, canonical checkpoints, and bounded atomic output | The pipeline is qualified before real use, but zero real EEG paths or targets were opened. The synthetic R4 route has no scientific value; unseen-person, neural, cortical, language, and live claims remain unestablished |
 | Real EEG predictive effect | The frozen WO9R low-frequency model reached balanced accuracy `0.680975` for executed movement and `0.728014` for imagery across 12 held-out-run participants, versus approximately chance no-signal controls | This is a real repeatable condition signal, but the early cue (`0.762865`) and frontal proxy (`0.671821`) beat or matched the central sensorimotor view (`0.647575`), so cue, visual, or ocular activity is the leading explanation rather than proven motor-cortex decoding |
 | Trial identity | All 66 S21 session-1 trials and all 63 performed session-2 trials reconcile to MAT provenance; empty session-2 slots remain explicit | The real MEG evidence has exact trial identity instead of fuzzy sentence matching |
 | Local neurodata access | Six EEG/MEG file families are covered by 40 bounded fixtures: 38 readable and 2 exact refusals | Contributors can test metadata, readers, privacy, and caps without sharing participant recordings |

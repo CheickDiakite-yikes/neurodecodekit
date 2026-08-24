@@ -1,0 +1,142 @@
+{
+  "schema_name": "neurodecodekit.eegmmidb_unseen_participant_stage_g_result",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-24",
+  "lane_id": "EEGMMIDB-UG1",
+  "status": "passed_generated_mocked_qualification_only",
+  "execution_binding": {
+    "implementation_commit": "da2be31a3ea4b7a438f86039c1d80b182e628ccf",
+    "implementation_CI_run_id": 32704970582,
+    "base_python_job_id": 97363993816,
+    "optional_neuro_readers_job_id": 97363993465,
+    "all_required_jobs_green_before_execution": true,
+    "qualification_invocations": 1,
+    "qualification_may_be_repeated": false,
+    "canonical_source_output_bytes": 3911,
+    "canonical_source_output_sha256": "08bd7568c596c423825b799b2d4e1e67cf4066e2fd7ebd329eeb1a76ccc23359",
+    "canonical_source_output_committed": false
+  },
+  "case_classes": [
+    "acausal_filter_refusal",
+    "annotation_missing_duplicate_extra_reorder_handling",
+    "atomic_crash_destination_traversal_redirect_output_RSS_wall_and_second_invocation_refusal",
+    "checkpoint_configuration_prediction_row_order_and_freeze_mutation_refusal",
+    "chunk_replay",
+    "exact_windows_views_and_CAR_order",
+    "execution_and_imagery_exact_counts",
+    "future_impulse_causality",
+    "literal_channel_permutation",
+    "literal_event_displacement",
+    "literal_label_derangement",
+    "participant_relabel_invariance",
+    "run_reset",
+    "sign_flip_ties_and_router_thresholds",
+    "split_overlap_alias_symlink_hardlink_duplicate_forbidden_run_refusal",
+    "target_swap_and_canary_invariance",
+    "valid_replay_source_immutability"
+  ],
+  "case_classes_passed": 17,
+  "case_evidence": {
+    "acausal_filter_refusal": {"cases": 1},
+    "annotation_missing_duplicate_extra_reorder_handling": {
+      "canonical_reorders": 1,
+      "refusals": 3
+    },
+    "atomic_crash_destination_traversal_redirect_output_RSS_wall_and_second_invocation_refusal": {
+      "acquisition_refusals": 11,
+      "atomic_refusals": 3,
+      "path_refusals": 2,
+      "resource_refusals": 5
+    },
+    "checkpoint_configuration_prediction_row_order_and_freeze_mutation_refusal": {
+      "checkpoint_members": 64,
+      "mutation_refusals": 7
+    },
+    "chunk_replay": {"cases": 1},
+    "exact_windows_views_and_CAR_order": {
+      "car_assertions": 2,
+      "window_view_assertions": 120
+    },
+    "execution_and_imagery_exact_counts": {
+      "fresh_rows": 450,
+      "prediction_rows": 5400,
+      "source_rows": 900
+    },
+    "future_impulse_causality": {"cases": 1},
+    "literal_channel_permutation": {"cases": 15},
+    "literal_event_displacement": {"cases": 15},
+    "literal_label_derangement": {"cases": 1},
+    "participant_relabel_invariance": {
+      "checkpoint_mutations": 0,
+      "tasks_checked": 2
+    },
+    "run_reset": {"cases": 1},
+    "sign_flip_ties_and_router_thresholds": {
+      "exclusive_fail_cases": 22,
+      "inclusive_pass_cases": 2,
+      "router_routes": 5
+    },
+    "split_overlap_alias_symlink_hardlink_duplicate_forbidden_run_refusal": {
+      "acquisition_refusals": 11,
+      "joint_overlap_alias_refusals": 2
+    },
+    "target_swap_and_canary_invariance": {
+      "checkpoint_mutations": 0,
+      "target_bearing_predictor_refusals": 2,
+      "tasks_checked": 2
+    },
+    "valid_replay_source_immutability": {
+      "feature_sha256": "e64a59eea9be5c677e6bb234a3244e12797fadbffcee5eaeab2db3b50ed3a2ec",
+      "replays": 1,
+      "source_mutations": 0
+    }
+  },
+  "measurements": {
+    "input_bytes": 25975920,
+    "output_bytes": 3911,
+    "peak_incremental_output_bytes": 1450304,
+    "runtime_seconds": 443.246267,
+    "runtime_measurement_cutoff": "immediately_before_atomic_publication",
+    "peak_process_tree_RSS_bytes": 276856832,
+    "initial_free_disk_bytes": 99378757632,
+    "parameter_update_fits": 61,
+    "prediction_sets": 420,
+    "training_runs": 61,
+    "model_inference_runs": 111,
+    "qualification_replay_model_inference_runs": 44,
+    "model_runs": 172,
+    "target_deliveries": 1,
+    "synthetic_target_deliveries": 1,
+    "real_target_deliveries": 0,
+    "scoring_events": 1,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "real_path_reads": 0,
+    "real_EDF_semantic_parses": 0,
+    "network_bytes": 0,
+    "new_payload_bytes": 0,
+    "producer_is_causal": true,
+    "end_to_end_latency_measured": false,
+    "post_publication_resource_check_required": true
+  },
+  "synthetic_router_route": "EEGMMIDBUG1-R4",
+  "warnings": [
+    "generated_fixture_is_interface_qualification_not_scientific_evidence",
+    "synthetic_router_route_has_no_claim_value",
+    "no_real_EEG_or_retained_payload_was_opened",
+    "no_unseen_participant_decoding_result_is_established",
+    "visual_cue_and_ocular_compatibility_remain",
+    "end_to_end_latency_was_not_measured"
+  ],
+  "claim_boundary": {
+    "maximum_route_unchanged": "EEGMMIDBUG1-R4",
+    "maximum_claim_unchanged": "zero-calibration participant-independent left-right EEGMMIDB protocol-condition prediction across 15 unseen participants",
+    "scientific_claim_established_by_stage_G": false,
+    "unseen_participant_generalization": false,
+    "EEG_beyond_eye_visual_or_peripheral_signals": false,
+    "movement_intention_or_motor_cortex_origin": false,
+    "language_or_thought_decoding": false,
+    "live_decoding": false,
+    "portable_hardware_or_clinical_use": false
+  }
+}

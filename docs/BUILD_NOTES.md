@@ -14902,3 +14902,34 @@ Stage G qualification. Stage M remains closed meanwhile.
 
 Immediate gate: commit, push, and remotely green exact Amendment 1. Stage G
 and every real operation remain closed until that barrier passes.
+
+### EEGMMIDB-UG1 Stage G implementation and sole qualification passed
+
+- Amendment 1 commit `9ab8639b4d6fa28a30321687c82b185b13b1813a`
+  passed both required jobs in CI `32696449436` before implementation.
+- Added independent UG1 acquisition, causal experiment, isolated scorer, and
+  sidecar CLI modules plus focused tests. The historically proof-bound central
+  CLI remained byte-identical.
+- Exact implementation `da2be31a3ea4b7a438f86039c1d80b182e628ccf`
+  passed Base Python job `97363993816`, Optional Neuro Readers job
+  `97363993465`, and CI `32704970582` before the one qualification.
+- Independent read-only audit found no P0/P1 blocker and returned GO for the
+  single generated/mock run.
+- The sole Stage G execution passed all 17 registered case classes, exact 61
+  parameter-update fits, 420 participant-condition prediction sets, 111 model
+  inference calls, 172 total model runs, target-swap and participant-relabel
+  invariance, causal replay, checkpoint/freeze mutation refusals, and all
+  resource/no-clobber boundaries.
+- Measured 25,975,920 generated input bytes, 3,911 canonical output bytes,
+  1,450,304 peak incremental output bytes, 443.246267 seconds runtime,
+  276,856,832-byte peak process-tree RSS, and 99,378,757,632 initial free disk.
+- Real path, raw-data, cache, EDF semantic parse, real-target, network, and new
+  payload counts were zero. One synthetic target delivery and one synthetic
+  scoring event occurred as required.
+- The synthetic router reached R4, which has no scientific claim value. The
+  producer passed mechanical causal checks, but end-to-end latency was not
+  measured and visual/ocular compatibility remains unresolved.
+
+Immediate gate: commit, push, and remotely green this exact closeout. Stage G
+is consumed and may not be repeated. Stage M and every real operation remain
+closed pending a separate exact Tier C decision.

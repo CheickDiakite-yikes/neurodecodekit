@@ -1,0 +1,105 @@
+{
+  "schema_name": "neurodecodekit.eegmmidb_unseen_participant_generalization_implementation",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-24",
+  "lane_id": "EEGMMIDB-UG1",
+  "status": "stage_G_passed_once_pending_closeout_remote_green",
+  "authorization_binding": {
+    "decision_commit": "3e173f6dc61b1f6b32dcc9839aa74a67759b9b3f",
+    "decision_CI_run_id": 32694496933,
+    "amendment_commit": "9ab8639b4d6fa28a30321687c82b185b13b1813a",
+    "amendment_CI_run_id": 32696449436,
+    "all_required_preimplementation_barriers_green": true
+  },
+  "implementation_proof": {
+    "commit": "da2be31a3ea4b7a438f86039c1d80b182e628ccf",
+    "CI_run_id": 32704970582,
+    "base_python_job_id": 97363993816,
+    "optional_neuro_readers_job_id": 97363993465,
+    "both_required_jobs_green_before_stage_G": true,
+    "central_CLI_sha256": "24d8db0faee0d742f6a2ba85af4e9a1ccb6468d09589dd9e4d06d66487b9e6d0",
+    "central_CLI_git_blob": "948c24b70f3accc19bb73132e4f22e73e6908963"
+  },
+  "implementation_artifacts": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "53ea7e06c7989c7e3ae8030eafe7184aad4916fcefca2f8cfcc05ba7a87c2fc3",
+      "git_blob": "4246b7c7f6f8570df53b1b89705b496b30e38a78"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/eegmmidb_unseen_participant_acquisition.py",
+      "sha256": "cfc9d9e515877f7c09309c249fafe15b835da2794c2b188f6fd58cbdd6579b4b",
+      "git_blob": "85d767496f2a84aa7e6a43c2b1ba0f8d778536e6"
+    },
+    {
+      "path": "src/neurodecodekit/eegmmidb_ug1_cli.py",
+      "sha256": "4980be763ff184923532f74f59b0a2d33869be2bb7ce3fef038b5e715457628a",
+      "git_blob": "66b1769db42c7408af08eb50a542bcc719407ede"
+    },
+    {
+      "path": "src/neurodecodekit/evaluation/eegmmidb_unseen_participant_score.py",
+      "sha256": "333755a355ec199e289f3e314474de162a49f649fa47c3789087f11ed59a4665",
+      "git_blob": "ea6daaee96a1b19137c9f98a7f51458522927bab"
+    },
+    {
+      "path": "src/neurodecodekit/experiments/eegmmidb_unseen_participant_generalization.py",
+      "sha256": "c0f98ada6393f2e3213c597c898bf508b484e543b9196c4e62800ce11e2a573c",
+      "git_blob": "2e8ef1615a54548c3ec633f854a60436973984e3"
+    },
+    {
+      "path": "tests/test_eegmmidb_unseen_participant_acquisition.py",
+      "sha256": "0ba7fbb62ef3e1bf2eb16ce9e9d945096e6b5e300184f5b590f137dc62a9d6f7",
+      "git_blob": "a3b9f7982fc6288364981a8a47e8ad06aa2e9ea0"
+    },
+    {
+      "path": "tests/test_eegmmidb_unseen_participant_generalization.py",
+      "sha256": "6e440bcb076a0b9defbcf63129fd8f3ffa14fbe75eb7828700e8eeebdffef42c",
+      "git_blob": "7058181fe2f23b5d4f7b44422fe866b09fba0dfe"
+    },
+    {
+      "path": "tests/test_eegmmidb_unseen_participant_score.py",
+      "sha256": "e000da18a5d5c90192e65a660f0f02f7e3d1a131e9cdded5ed7c7e5d70657f65",
+      "git_blob": "c42a018b43b6612598a4266b29db4bf96657990a"
+    }
+  ],
+  "implemented_surfaces": {
+    "generated_mock_exact_acquisition_plan": true,
+    "real_network_acquisition_implemented": false,
+    "source_fresh_split_firewall": true,
+    "participant_identity_excluded_from_predictor_features": true,
+    "fresh_targets_excluded_from_predictive_code": true,
+    "causal_preprocessing_and_chunk_replay": true,
+    "fixed_model_and_twelve_condition_matrix": true,
+    "canonical_non_pickle_checkpoint": true,
+    "hash_only_prediction_freeze": true,
+    "checkpoint_rehash_before_target_delivery": true,
+    "atomic_no_clobber_publication": true,
+    "process_tree_resource_monitors": true,
+    "central_CLI_modified": false,
+    "sidecar_CLI": "python -m neurodecodekit.eegmmidb_ug1_cli",
+    "base_dependencies_added": []
+  },
+  "stage_G_execution": {
+    "qualification_invocations_allowed": 1,
+    "qualification_invocations_completed": 1,
+    "qualification_may_be_repeated": false,
+    "result_registry": "registries/eegmmidb_unseen_participant_generalization_stage_g_result.v0.json",
+    "canonical_output_bytes": 3911,
+    "canonical_output_sha256": "08bd7568c596c423825b799b2d4e1e67cf4066e2fd7ebd329eeb1a76ccc23359"
+  },
+  "next_gate": {
+    "stage_G_closeout_remote_green_required": true,
+    "stage_M_metadata_authorized_now": false,
+    "real_path_or_EDF_access_authorized_now": false,
+    "source_stage_authorized_now": false,
+    "fresh_stage_authorized_now": false,
+    "target_or_scoring_stage_authorized_now": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "A bounded leakage-resistant causal checkpointed target-firewalled unseen-participant experiment pipeline passed its sole generated and mocked qualification.",
+    "scientific_claim_established": false,
+    "unseen_participant_generalization_established": false,
+    "neural_advantage_established": false,
+    "real_EEG_opened_or_scored": false
+  }
+}

@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: EEGMMIDB-UG1 Unseen-Participant Test
+## Current Gate: EEGMMIDB-UG1 Stage G Closeout
 
 VR39P result closeout `474d49f53e1a46633b99b0ef2ff62b9abebe7a9c`
 passed Base job `97317987437`, Optional job `97317987655`, and CI
@@ -57,13 +57,25 @@ Exact authorization decision `3e173f6dc61b1f6b32dcc9839aa74a67759b9b3f`
 passed Base job `97333988408`, Optional Neuro job `97333988474`, and CI
 `32694496933`.
 
-Read `docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_AMENDMENT_1.md`, its
-machine amendment, and matching test. They freeze exact channel/control math,
-causal state, participant isolation, completeness, canonical predictions, and
-resource enforcement without widening scope.
+Exact Amendment 1 commit `9ab8639b4d6fa28a30321687c82b185b13b1813a`
+passed both required jobs in CI `32696449436` before implementation. Exact
+implementation commit `da2be31a3ea4b7a438f86039c1d80b182e628ccf`
+then passed Base job `97363993816`, Optional Neuro Readers job `97363993465`,
+and CI `32704970582` before the one Stage G invocation.
 
-Immediate gate: commit, push, and remotely green exact Amendment 1. Do not
-implement Stage G or access any real path before that remaining barrier.
+Read
+`docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_IMPLEMENTATION.md` and its
+two machine records. The sole generated/mock qualification passed all 17 case
+classes, 61 fits, 420 participant-condition prediction sets, exact causal and
+firewall replays, and every frozen refusal boundary. It used 25,975,920
+generated input bytes in 443.246267 seconds at 276,856,832-byte peak RSS and
+emitted a 3,911-byte aggregate result. Real path, EDF, cache, raw-data, real
+target, and network counts were zero. The synthetic R4 route has no scientific
+claim value and qualification may not be repeated.
+
+Immediate gate: commit, push, and remotely green this Stage G closeout. Stage
+M and every real-path operation remain closed pending their own exact Tier C
+decision. Do not invoke Stage G again.
 
 ## Previous Gate: MARC2-VR39P Aggregate R2 Closeout
 
