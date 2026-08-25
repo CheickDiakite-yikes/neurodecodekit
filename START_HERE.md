@@ -122,8 +122,17 @@ aggregate freeze. All nine source-only selectors chose E1. Held-out targets
 remained sealed and no score occurred. Repeated frozen-cap LBFGS convergence
 warnings were observed and recorded without a model change or rerun.
 
-Immediate gate: commit, push, and remotely green the exact prediction freeze.
-Only then may the separate Stage T activation be created and greened.
+Exact prediction freeze `2517fd1` passed Base job `97996323987`, Optional Neuro
+Readers job `97996324203`, and CI `32908059166`.
+
+Read the Stage T activation next:
+
+1. `docs/BNCI_2014_001_STAGE_T_SCORING_ACTIVATION.md`;
+2. `registries/bnci_2014_001_stage_t_scoring_activation.v0.json`; and
+3. `tests/test_bnci_2014_001_stage_t_activation.py`.
+
+Immediate gate: commit, push, and remotely green that exact activation before
+the one target delivery and score.
 
 ## Scientific Goal And Sequence
 
@@ -137,7 +146,7 @@ G1 generated proof -> A opaque acquisition -> Q target-blind validation
 ```
 
 Stage Q and target-blind Stage P are complete; one scientific score remains
-closed behind the freeze and Stage T green barriers. Even a maximum later pass can establish only
+closed behind the Stage T green barrier. Even a maximum later pass can establish only
 participant-independent BNCI protocol-condition prediction and incremental EEG
 sensor information beyond recorded EOG under this protocol. It cannot establish
 thought or language decoding, movement intention, exclusive motor-cortex

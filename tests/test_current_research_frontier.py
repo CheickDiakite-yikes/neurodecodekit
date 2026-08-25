@@ -17,10 +17,10 @@ class CurrentResearchFrontierTests(unittest.TestCase):
             "neurodecodekit.current_research_frontier",
         )
         self.assertEqual(self.frontier["schema_version"], "0.1.0")
-        self.assertEqual(self.frontier["active_lane_id"], "BNCI-C3C5-1-P")
+        self.assertEqual(self.frontier["active_lane_id"], "BNCI-C3C5-1-T")
         self.assertEqual(
             self.frontier["status"],
-            "Stage_P_prediction_freeze_created_pending_commit_push_and_remote_green",
+            "Stage_T_scoring_activation_prepared_pending_commit_push_and_remote_green",
         )
 
     def test_proof_chain_records_green_recovery_activation(self):
@@ -82,6 +82,12 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         )
         self.assertEqual(proof["Stage_P_activation_CI_run_id"], 32_906_928_931)
         self.assertTrue(proof["both_Stage_P_activation_jobs_green"])
+        self.assertEqual(
+            proof["Stage_P_prediction_freeze_commit"],
+            "2517fd16e7bf4cca077c46686320fe26c992ed69",
+        )
+        self.assertEqual(proof["Stage_P_prediction_freeze_CI_run_id"], 32_908_059_166)
+        self.assertTrue(proof["both_Stage_P_prediction_freeze_jobs_green"])
 
     def test_prelaunch_rejection_did_not_consume_recovery(self):
         rejection = self.frontier["prelaunch_rejection"]

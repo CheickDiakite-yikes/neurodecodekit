@@ -154,8 +154,13 @@ were observed; their exact count was not retained, and no model setting was
 changed.
 
 Read `docs/BNCI_2014_001_STAGE_P_RESULT.md`, the exact public prediction freeze,
+and matching test. Exact freeze `2517fd16e7bf4cca077c46686320fe26c992ed69`
+passed Base job `97996323987`, Optional Neuro Readers job `97996324203`, and CI
+`32908059166`.
+
+Read `docs/BNCI_2014_001_STAGE_T_SCORING_ACTIVATION.md`, its machine activation,
 and matching test. Immediate gate: commit, push, and remotely green that exact
-freeze before creating a separate Stage T activation. Do not inspect, modify,
+activation before the one target delivery and score. Do not inspect, modify,
 move, delete, publish, retry, rerun, or tune the private Stage P output.
 
 Current scientific boundary: real BNCI semantics, target-firewalled derivatives,

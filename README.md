@@ -159,9 +159,12 @@ The machine-readable current state is
 [`registries/current_research_frontier.v0.json`](registries/current_research_frontier.v0.json).
 It freezes the active lane, proof commits, consumed one-shot state, measured
 result, resource caps, five scientific goals, claim boundary, and exact next
-transition so handoffs cannot silently return to an older gate. The current
-gate is to commit, push, and remotely prove the exact prediction freeze before
-creating the separate one-score Stage T activation.
+transition so handoffs cannot silently return to an older gate. Prediction
+freeze `2517fd1` passed Base job `97996323987`, Optional job `97996324203`, and
+CI `32908059166`.
+The [Stage T scoring activation](docs/BNCI_2014_001_STAGE_T_SCORING_ACTIVATION.md)
+is now prepared with delayed effect; the current gate is to remotely green it
+before the one target delivery and score.
 
 Current result: [EEGMMIDB-UG1 Stage S-A2](docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md)
 failed closed during verified TLS certificate-chain validation before an HTTP

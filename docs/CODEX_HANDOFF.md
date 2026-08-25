@@ -35,7 +35,10 @@
 > private bytes and one 5,037-byte public freeze. All nine source-only selectors
 > chose E1. Targets and scores stayed sealed/zero; frozen-cap LBFGS warnings
 > were observed without tuning or rerun. Immediate gate: commit, push, and green
-> the exact prediction freeze. Stage T remains closed behind that barrier, and
+> the exact prediction freeze. Freeze `2517fd1` passed Base `97996323987`,
+> Optional `97996324203`, and CI `32908059166`. The one-score Stage T activation
+> is prepared with delayed effect. Immediate gate: commit, push, and green that
+> activation before target delivery. Stage T remains closed behind that barrier, and
 > no BNCI scientific claim has been established. All older `Current
 > gate` blocks below are append-only history, not executable instructions.
 
