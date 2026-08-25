@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: BNCI-C3C5-1 Stage Q Result
+## Current Gate: BNCI-C3C5-1 Stage P/T Live Implementation
 
 Start with `registries/current_research_frontier.v0.json`, the machine-readable
 snapshot of the active lane, proof chain, consumed status, measurements, goals,
@@ -82,9 +82,25 @@ seconds at 910,704,640-byte peak RSS. No held-out-T row entered a fold
 capability. Models, training, predictions, target deliveries, and scores were
 all zero.
 
-Immediate gate: verify, commit, push, and remotely green this exact aggregate
-result. Stage P remains closed until then, and Stage T remains closed behind a
-later green prediction-freeze proof.
+Exact Stage Q result `9832ae5` passed Base job `97740061957`, Optional Neuro
+Readers job `97740061602`, and CI `32827957362`. Stage P is now open only to a
+separately green implementation and activation.
+
+Read the current implementation next:
+
+1. `docs/BNCI_2014_001_STAGE_P_T_IMPLEMENTATION.md`;
+2. `registries/bnci_2014_001_stage_p_t_implementation.v0.json`; and
+3. `tests/test_bnci_2014_001_stage_p_t_live.py`.
+
+The implementation adds the fold-scoped Stage Q loader, exact 9 x 6 x 48
+completeness firewall, sequential fold-local model controller, aggregate
+hash-only prediction freeze, and separately activated Stage T target transport
+and scorer. It changes no frozen scientific model or gate.
+
+Immediate gate: commit, push, and remotely green the exact Stage P/T
+implementation. Then add and green the Stage P activation before the one real
+model execution. Stage T remains closed behind the later remotely green
+prediction freeze and its own activation.
 
 ## Scientific Goal And Sequence
 
@@ -97,7 +113,8 @@ G1 generated proof -> A opaque acquisition -> Q target-blind validation
                    -> P target-firewalled prediction freeze -> T one score
 ```
 
-Stage Q is complete; P and T remain closed. Even a maximum later pass can establish only
+Stage Q is complete; Stage P implementation is active and real execution remains
+closed behind its green activation. Even a maximum later pass can establish only
 participant-independent BNCI protocol-condition prediction and incremental EEG
 sensor information beyond recorded EOG under this protocol. It cannot establish
 thought or language decoding, movement intention, exclusive motor-cortex

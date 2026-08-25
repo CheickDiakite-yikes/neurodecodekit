@@ -52,7 +52,7 @@ and its exact result is remotely green. Read, in order:
 2. `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_RESULT.md`;
 3. `registries/bnci_2014_001_stage_a_redirect_recovery_result.v0.json`;
 4. `docs/BNCI_2014_001_STAGE_Q_IMPLEMENTATION.md`; and
-5. `registries/bnci_2014_001_stage_q_implementation.v0.json`.
+5. `registries/bnci_2014_001_stage_q_result.v0.json`.
 
 Control-plane commit `21cedd5da3c82e4378162ddfd687d669874d8c3f`
 passed Base job `97691784130`, Optional Neuro Readers job `97691784315`, and
@@ -124,10 +124,21 @@ Model, training, prediction, target-delivery, score, and analysis-network
 counters were zero. Do not reopen, retry, rerun, inspect, publish, or modify the
 private payload, derivatives, receipt, target envelopes, keys, or marker.
 
-Immediate gate: verify, commit, push, and remotely green the exact aggregate
-Stage Q result. Stage P remains closed until that result is green. Stage T
-remains closed until a later prediction-freeze record is committed, pushed,
-and remotely green.
+Exact Stage Q result `9832ae5e60c42bf975ccfdd22740267ef802d191`
+passed Base job `97740061957`, Optional Neuro Readers job `97740061602`, and
+CI `32827957362`. Stage P is now the active gate.
+
+Read `docs/BNCI_2014_001_STAGE_P_T_IMPLEMENTATION.md`, its machine
+implementation record, the Stage P/T live modules, and matching test. The live
+adapter must enforce the exact nine-participant, six-run, 48-trial grid, run
+one fold-local child at a time, preserve the existing 468-fit / 495-prediction-
+set schedule, expose no held-out target or T-session row, and publish only an
+aggregate hash-only freeze.
+
+Immediate gate: verify, commit, push, and remotely green the exact Stage P/T
+implementation. Then add and remotely green a minimal Stage P activation
+before the single real model execution. Stage T remains closed until the exact
+prediction-freeze record is committed, pushed, and remotely green.
 
 Current scientific boundary: real BNCI MAT readability, aggregate semantics,
 and target-firewalled derivative construction are proven engineering. No model

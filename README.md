@@ -130,13 +130,22 @@ peak RSS. No held-out-T row entered a fold capability, and held-out-E targets
 and scoring keys remain sealed. Model, training, prediction, target-delivery,
 score, and analysis-network counters were zero.
 
+Exact Stage Q result `9832ae5` passed Base job `97740061957`, Optional Neuro
+Readers job `97740061602`, and CI `32827957362`. The current
+[Stage P/T live implementation](docs/BNCI_2014_001_STAGE_P_T_IMPLEMENTATION.md)
+adds the missing fold-scoped real-model adapter, exact 9 x 6 x 48 completeness
+firewall, sequential one-fold child execution, streamed private predictions,
+aggregate hash-only prediction freeze, and separately activated one-shot Stage
+T scorer. It reuses the frozen 468-fit / 495-prediction-set schedule and changes
+no preregistered model, control, threshold, or claim boundary.
+
 The machine-readable current state is
 [`registries/current_research_frontier.v0.json`](registries/current_research_frontier.v0.json).
 It freezes the active lane, proof commits, consumed one-shot state, measured
 result, resource caps, five scientific goals, claim boundary, and exact next
 transition so handoffs cannot silently return to an older gate. The current
-gate is to verify, commit, push, and remotely prove the exact aggregate Stage Q
-result before Stage P.
+gate is to commit, push, and remotely prove the exact Stage P/T implementation,
+then separately green the Stage P activation before its one real model run.
 
 Current result: [EEGMMIDB-UG1 Stage S-A2](docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md)
 failed closed during verified TLS certificate-chain validation before an HTTP

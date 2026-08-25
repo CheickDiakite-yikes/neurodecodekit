@@ -1,6 +1,6 @@
 # Codex Handoff - NeuroDecodeKit
 
-> **Current gate, 2026-08-25:** `BNCI-C3C5-1-Q` Stage A passed, is
+> **Current gate, 2026-08-25:** `BNCI-C3C5-1-P` Stage A passed, is
 > consumed. Start with `registries/current_research_frontier.v0.json` and
 > `docs/BNCI_2014_001_STAGE_Q_IMPLEMENTATION.md`. Exactly 18 files /
 > 779,873,919 payload bytes were acquired and opaque-verified in 113.066
@@ -21,8 +21,15 @@
 > 5,184 trials, 22 EEG plus three EOG channels at 250 Hz, and 72,666,213 private
 > derivative bytes in 34.464444 seconds at 910,704,640-byte peak RSS. Held-out-T
 > exposure, models, training, predictions, deliveries, and scores were zero.
-> Immediate gate: green the exact aggregate result before Stage P. P and T
-> remain ordered and closed, and no BNCI scientific claim has been established. All older `Current
+> Exact Stage Q result `9832ae5` passed Base `97740061957`, Optional
+> `97740061602`, and CI `32827957362`. Read
+> `docs/BNCI_2014_001_STAGE_P_T_IMPLEMENTATION.md` and its machine record. The
+> new live bridge enforces the exact 9 x 6 x 48 grid, one fold-local child at a
+> time, the frozen 468-fit / 495-prediction-set schedule, a hash-only public
+> freeze, and a separately gated one-shot scorer. Immediate gate: test, commit,
+> push, and green this implementation, then add and green the minimal Stage P
+> activation. Stage T remains closed behind the green prediction freeze, and
+> no BNCI scientific claim has been established. All older `Current
 > gate` blocks below are append-only history, not executable instructions.
 
 > **Current gate, 2026-08-24:** exact G1 result `4ef12dd` passed Base job

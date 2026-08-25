@@ -1,0 +1,85 @@
+{
+  "schema_name": "neurodecodekit.bnci_2014_001_stage_p_t_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "BNCI-C3C5-1-P-T-live-v0",
+  "recorded_at_local": "2026-08-25",
+  "status": "implemented_generated_fixture_qualified_pending_commit_push_and_remote_green",
+  "parent_stage_q_result_commit": "9832ae5e60c42bf975ccfdd22740267ef802d191",
+  "scientific_protocol_changed": false,
+  "runtime_components": [
+    "fold_scoped_stage_q_capability_loader",
+    "exact_9_by_6_by_48_completeness_firewall",
+    "fresh_fold_local_child_model_execution",
+    "canonical_private_prediction_stream",
+    "aggregate_hash_only_prediction_freeze",
+    "encrypted_target_transport_binding",
+    "one_shot_stage_t_unsealing_and_aggregate_scorer",
+    "remote_green_and_consumed_marker_controls"
+  ],
+  "stage_p_schedule": {
+    "folds": 9,
+    "source_rows_per_fold": 4608,
+    "held_out_E_rows_per_fold": 288,
+    "held_out_T_rows_used": 0,
+    "parameter_update_fits": 468,
+    "prediction_sets": 495,
+    "private_prediction_rows": 41472,
+    "target_deliveries": 0,
+    "scores": 0
+  },
+  "stage_t_schedule": {
+    "sealed_fold_target_sets": 9,
+    "target_deliveries": 1,
+    "scores": 1,
+    "post_target_updates": 0,
+    "reruns": 0
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds_maximum": 3600,
+    "peak_RSS_bytes_maximum": 1073741824,
+    "private_output_bytes_maximum": 536870912,
+    "public_output_bytes_maximum": 4194304,
+    "parameter_update_fits_maximum": 540,
+    "prediction_sets_maximum": 900,
+    "analysis_network_bytes": 0
+  },
+  "activation_state": {
+    "Stage_P_enabled": false,
+    "Stage_T_enabled": false,
+    "real_model_runs": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "claim_upgrade": false
+  },
+  "local_verification": {
+    "complete_base_suite": {
+      "tests_run": 6125,
+      "optional_skips": 230,
+      "runtime_seconds": 254.22,
+      "passed": true
+    },
+    "focused_bnci_base_suite": {
+      "tests_run": 51,
+      "optional_skips": 9,
+      "passed": true
+    },
+    "focused_bnci_optional_suite": {
+      "tests_run": 38,
+      "passed": true
+    },
+    "exact_shape_generated_fold": {
+      "source_rows": 4608,
+      "held_out_rows": 288,
+      "parameter_update_fits": 52,
+      "prediction_sets": 55,
+      "passed": true
+    },
+    "ruff_0_15_20": "passed",
+    "git_diff_check": "passed",
+    "CLI_help_and_plans": "passed"
+  },
+  "next_gate": "commit_push_and_remotely_green_exact_implementation_before_stage_p_activation"
+}

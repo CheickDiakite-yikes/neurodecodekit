@@ -1,6 +1,6 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Stage Q result gate (2026-08-25):** Stage A result commit `96d7f0`
+> **Stage P/T implementation gate (2026-08-25):** Stage A result commit `96d7f0`
 > passed Base job `97700176631`, Optional Neuro Readers job `97700176787`, and
 > CI `32814564120`. The 18-file / 779,873,919-byte opaque acquisition is consumed.
 > The generated-only Stage Q core passed once over 40,069,562 bytes, six task
@@ -17,8 +17,14 @@
 > 108 task runs, 5,184 trials, 22 EEG plus three EOG channels at 250 Hz, and
 > 72,666,213 private derivative bytes in 34.464444 seconds at 910,704,640-byte
 > peak RSS. No held-out-T row was exposed; model, training, prediction,
-> delivery, and score counters were zero. Current gate: green the exact
-> aggregate Stage Q result. Stage P and T remain closed.
+> delivery, and score counters were zero. Exact Stage Q result `9832ae5`
+> passed Base `97740061957`, Optional `97740061602`, and CI `32827957362`.
+> The Stage P/T live implementation now adds an exact 9 x 6 x 48 completeness
+> firewall, sequential fold-local execution, the frozen 468-fit / 495-
+> prediction-set schedule, an aggregate hash-only freeze, and a separately
+> gated one-score Stage T path. Current gate: commit, push, and green the exact
+> implementation, then separately green the Stage P activation. No real model,
+> prediction freeze, target delivery, score, or claim upgrade has occurred.
 >
 > **Stage A result history (2026-08-25):** control-plane commit `21cedd5` passed
 > both jobs in CI `32811586786` before the sole signed-object recovery. Stage A

@@ -2,7 +2,6 @@ import json
 import unittest
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "registries/current_research_frontier.v0.json"
 
@@ -18,10 +17,10 @@ class CurrentResearchFrontierTests(unittest.TestCase):
             "neurodecodekit.current_research_frontier",
         )
         self.assertEqual(self.frontier["schema_version"], "0.1.0")
-        self.assertEqual(self.frontier["active_lane_id"], "BNCI-C3C5-1-Q")
+        self.assertEqual(self.frontier["active_lane_id"], "BNCI-C3C5-1-P")
         self.assertEqual(
             self.frontier["status"],
-            "Stage_Q_passed_consumed_result_pending_remote_green",
+            "Stage_Q_result_remotely_green_Stage_P_live_implementation_pending_green",
         )
 
     def test_proof_chain_records_green_recovery_activation(self):
@@ -66,6 +65,11 @@ class CurrentResearchFrontierTests(unittest.TestCase):
             "0e36993fb3b4e0651d53d62818df672c5ed5f04b",
         )
         self.assertTrue(proof["both_Stage_Q_activation_jobs_green"])
+        self.assertEqual(
+            proof["Stage_Q_result_commit"],
+            "9832ae5e60c42bf975ccfdd22740267ef802d191",
+        )
+        self.assertTrue(proof["both_Stage_Q_result_jobs_green"])
 
     def test_prelaunch_rejection_did_not_consume_recovery(self):
         rejection = self.frontier["prelaunch_rejection"]
@@ -137,10 +141,10 @@ class CurrentResearchFrontierTests(unittest.TestCase):
     def test_control_plane_entrypoints_name_the_current_gate(self):
         expected = {
             "AGENTS.md": "Stage Q passed and is consumed",
-            "START_HERE.md": "Current Gate: BNCI-C3C5-1 Stage Q Result",
-            "README.md": "The [Stage Q result]",
+            "START_HERE.md": "Current Gate: BNCI-C3C5-1 Stage P/T Live Implementation",
+            "README.md": "Stage P/T live implementation",
             "docs/CODEX_HANDOFF.md": "Current gate, 2026-08-25",
-            "docs/NEXT_20_LOOPS_TRACKER.md": "Stage Q result gate (2026-08-25)",
+            "docs/NEXT_20_LOOPS_TRACKER.md": "Stage P/T implementation gate (2026-08-25)",
         }
         for path, phrase in expected.items():
             text = (ROOT / path).read_text(encoding="utf-8")
