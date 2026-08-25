@@ -118,15 +118,16 @@ disk, and fresh remote proof that the activation commit and both CI jobs passed.
 Initial activation commit `e678095` failed Base CI only because its proof tests
 depended on an ancestor object absent from the shallow Actions checkout. It had
 no effect and performed no private operation. A test-only compatibility barrier
-must pass before the activation is rebound and greened.
+passed as `52b681e` in CI `32824921855`; the activation is now rebound to that
+exact green commit and still awaits its own remote-green proof.
 
 The machine-readable current state is
 [`registries/current_research_frontier.v0.json`](registries/current_research_frontier.v0.json).
 It freezes the active lane, proof commits, consumed one-shot state, measured
 result, resource caps, five scientific goals, claim boundary, and exact next
 transition so handoffs cannot silently return to an older gate. The current
-gate is to remotely prove the compatibility correction and then the exact Stage
-Q activation before any private manifest or MAT semantic open.
+gate is to remotely prove the exact rebound Stage Q activation before any
+private manifest or MAT semantic open.
 
 Current result: [EEGMMIDB-UG1 Stage S-A2](docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md)
 failed closed during verified TLS certificate-chain validation before an HTTP

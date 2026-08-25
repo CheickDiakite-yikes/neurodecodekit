@@ -21,7 +21,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(self.frontier["active_lane_id"], "BNCI-C3C5-1-Q")
         self.assertEqual(
             self.frontier["status"],
-            "Stage_Q_activation_compatibility_repair_pending_remote_green",
+            "Stage_Q_live_activation_rebound_pending_remote_green",
         )
 
     def test_proof_chain_records_green_recovery_activation(self):
@@ -56,6 +56,11 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         )
         self.assertFalse(proof["first_Stage_Q_activation_green"])
         self.assertEqual(proof["first_Stage_Q_activation_private_operations"], 0)
+        self.assertEqual(
+            proof["Stage_Q_compatibility_commit"],
+            "52b681ed7ec3991527f04f2fc555452d2246c481",
+        )
+        self.assertTrue(proof["both_Stage_Q_compatibility_jobs_green"])
 
     def test_prelaunch_rejection_did_not_consume_recovery(self):
         rejection = self.frontier["prelaunch_rejection"]

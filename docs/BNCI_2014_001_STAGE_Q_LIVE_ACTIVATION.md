@@ -2,7 +2,7 @@
 
 Date: 2026-08-25
 Lane: `BNCI-C3C5-1-Q`
-Status: inactive after failed first proof; compatibility correction pending
+Status: prepared with delayed effect pending final activation proof
 
 ## Exact Green Predecessors
 
@@ -35,6 +35,14 @@ model, prediction, score, marker, or derivative was touched. This failure has
 no activation effect. A test-only compatibility commit must first pass both
 jobs; the activation must then be rebound to that exact green commit and pass
 both jobs itself.
+
+Compatibility commit `52b681ed7ec3991527f04f2fc555452d2246c481`
+then passed Base Python job `97730713400`, Optional Neuro Readers job
+`97730713304`, and CI `32824921855`. This activation is now rebound to that
+exact commit and the corrected 21,981-byte live-control test identity. Every
+qualified runtime artifact and the consumed generated result remain unchanged.
+The rebind still has delayed effect until its own exact commit is pushed and
+both required jobs pass.
 
 Immediately before the semantic executor, the public live CLI must obtain a
 fresh remote branch SHA and GitHub Actions result for the activation commit.

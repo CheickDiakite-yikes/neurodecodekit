@@ -10,8 +10,9 @@
 > exact live activation is prepared with delayed effect. Current gate: commit,
 > push, and remotely green that activation. Initial activation `e678095` failed
 > only because its proof tests read an unavailable ancestor in the shallow CI
-> checkout; it had no effect or private operation. Current gate is now the
-> test-only compatibility barrier, followed by one rebound activation. The
+> checkout; it had no effect or private operation. Compatibility `52b681e`
+> passed both jobs in CI `32824921855`, and the activation is rebound to that
+> exact commit. Current gate is to green the rebound activation. The
 > future live path requires fresh
 > remote proof, both activation-commit CI jobs, and a 227,843,968-byte
 > conservative storage preflight before consumption. Stage P and T remain closed.

@@ -106,9 +106,13 @@ The activation had no effect and no private operation occurred. The same pass
 also exposed that one historical test inside the immutable artifact table had
 to be narrowed from permanent activation absence to CLI behavior.
 
-Immediate gate: remotely green the test-only compatibility correction, then
-rebind and green the activation to that exact commit. Do not open the private
-manifest or any MAT before both final activation CI jobs pass. Afterward, the
+Compatibility commit `52b681ed7ec3991527f04f2fc555452d2246c481`
+passed Base job `97730713400`, Optional job `97730713304`, and CI
+`32824921855`. The activation is rebound to that exact green commit.
+
+Immediate gate: commit, push, and remotely green the rebound activation. Do
+not open the private manifest or any MAT before both final activation CI jobs
+pass. Afterward, the
 public live CLI must freshly prove the activation commit's remote SHA and both
 successful jobs before the one semantic invocation can consume.
 Stage P remains closed until the aggregate Q result is green. Stage T remains

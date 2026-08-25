@@ -13,9 +13,10 @@
 > `97723744450`, and CI `32822604745`. Its exact live activation is prepared
 > with delayed effect. Initial activation `e678095` failed Base CI because its
 > proof tests assumed ancestor objects in a shallow Actions checkout; it had no
-> effect and touched no private path. Immediate gate: green the test-only
-> compatibility correction, then rebind and green the activation. No private
-> manifest or MAT may be opened yet. The future live CLI
+> effect and touched no private path. Compatibility `52b681e` then passed Base
+> `97730713400`, Optional `97730713304`, and CI `32824921855`; the activation is
+> rebound to that exact commit. Immediate gate: green the rebound activation.
+> No private manifest or MAT may be opened yet. The future live CLI
 > must freshly prove the activation commit and both CI jobs before consumption,
 > and its 227,843,968-byte conservative layout bound leaves 309,026,944 bytes of
 > headroom under the private cap. P and T remain ordered

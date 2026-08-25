@@ -9,14 +9,14 @@
     "both_required_jobs_green": true
   },
   "green_implementation": {
-    "commit": "e5ca6a24f65beab12b89eddad938c96fe4ecaf00",
-    "CI_head_sha": "e5ca6a24f65beab12b89eddad938c96fe4ecaf00",
+    "commit": "52b681ed7ec3991527f04f2fc555452d2246c481",
+    "CI_head_sha": "52b681ed7ec3991527f04f2fc555452d2246c481",
     "CI_conclusion": "success",
-    "CI_run_id": 32822604745,
-    "base_python_job_id": 97723744136,
+    "CI_run_id": 32824921855,
+    "base_python_job_id": 97730713400,
     "base_python_job_name": "Base Python",
     "base_python_job_conclusion": "success",
-    "optional_neuro_readers_job_id": 97723744450,
+    "optional_neuro_readers_job_id": 97730713304,
     "optional_neuro_readers_job_name": "Optional Neuro Readers",
     "optional_neuro_readers_job_conclusion": "success",
     "both_required_jobs_green": true
@@ -55,8 +55,8 @@
     },
     {
       "path": "tests/test_zz_bnci_2014_001_stage_q_live_control.py",
-      "bytes": 22091,
-      "sha256": "4d1348e0a9e0715708aef555239b940c38128165f0734d5f91aac286be3fd65a"
+      "bytes": 21981,
+      "sha256": "49d408ae1a799aef47d92bf9f35fd502507fb83aae5e96265686c83236bd70bc"
     },
     {
       "path": "tests/test_zz_bnci_2014_001_stage_q_implementation_record.py",

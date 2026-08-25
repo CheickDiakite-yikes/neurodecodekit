@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "recorded_at_local": "2026-08-25",
   "active_lane_id": "BNCI-C3C5-1-Q",
-  "status": "Stage_Q_activation_compatibility_repair_pending_remote_green",
+  "status": "Stage_Q_live_activation_rebound_pending_remote_green",
   "evidence_sequence": [
     "G1_generated_proof",
     "A_opaque_acquisition",
@@ -44,7 +44,12 @@
     "first_Stage_Q_activation_CI_run_id": 32823864546,
     "first_Stage_Q_activation_base_python_job_id": 97727563579,
     "first_Stage_Q_activation_green": false,
-    "first_Stage_Q_activation_private_operations": 0
+    "first_Stage_Q_activation_private_operations": 0,
+    "Stage_Q_compatibility_commit": "52b681ed7ec3991527f04f2fc555452d2246c481",
+    "Stage_Q_compatibility_CI_run_id": 32824921855,
+    "Stage_Q_compatibility_base_python_job_id": 97730713400,
+    "Stage_Q_compatibility_optional_neuro_readers_job_id": 97730713304,
+    "both_Stage_Q_compatibility_jobs_green": true
   },
   "consumed_operations": {
     "G1_generated_invocation_consumed": true,
@@ -132,7 +137,7 @@
   "stage_state": {
     "control_plane_update": "complete_remotely_green",
     "A_opaque_acquisition": "complete_consumed_result_remotely_green",
-    "Q_target_blind_validation": "implementation_remotely_green_activation_compatibility_repair_pending_remote_green",
+    "Q_target_blind_validation": "implementation_and_compatibility_remotely_green_live_activation_rebound_pending_remote_green",
     "P_prediction_freeze": "closed_pending_green_Q_result",
     "T_one_score": "closed_pending_green_prediction_freeze",
     "release": "closed",
@@ -146,7 +151,7 @@
     "EEG_beyond_recorded_peripheral_controls": "not_established"
   },
   "nearest_decisive_goal": "test_incremental_EEG_sensor_information_beyond_recorded_EOG_on_completely_held_out_participants",
-  "immediate_next_gate": "green_test_only_compatibility_repair_then_rebind_and_green_Stage_Q_activation_before_private_or_MAT_access",
+  "immediate_next_gate": "commit_push_and_remotely_green_rebound_Stage_Q_activation_before_private_or_MAT_access",
   "claim_boundary": {
     "engineering_capability_established": "generated_only_target_firewalled_one_copy_Stage_Q_semantic_and_feature_interface_over_the_green_exact_private_BNCI_bundle",
     "verified_recovery_bundle_acquired": true,

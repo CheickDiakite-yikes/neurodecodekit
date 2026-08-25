@@ -29,15 +29,14 @@ class BNCIStageQLiveActivationTests(unittest.TestCase):
         validated = live.validate_activation_document(self.activation)
         self.assertEqual(validated["lane_id"], core.LANE_ID)
         green = validated["green_implementation"]
-        self.assertEqual(green["commit"], "e5ca6a24f65beab12b89eddad938c96fe4ecaf00")
+        self.assertEqual(green["commit"], "52b681ed7ec3991527f04f2fc555452d2246c481")
         self.assertEqual(green["CI_head_sha"], green["commit"])
-        self.assertEqual(green["CI_run_id"], 32_822_604_745)
-        self.assertEqual(green["base_python_job_id"], 97_723_744_136)
-        self.assertEqual(green["optional_neuro_readers_job_id"], 97_723_744_450)
+        self.assertEqual(green["CI_run_id"], 32_824_921_855)
+        self.assertEqual(green["base_python_job_id"], 97_730_713_400)
+        self.assertEqual(green["optional_neuro_readers_job_id"], 97_730_713_304)
         self.assertTrue(green["both_required_jobs_green"])
 
     def test_every_implementation_artifact_identity_is_bound(self) -> None:
-        compatibility_path = "tests/test_zz_bnci_2014_001_stage_q_live_control.py"
         for row in self.activation["implementation_artifacts"]:
             payload = (ROOT / row["path"]).read_bytes()
             current = {
@@ -45,17 +44,7 @@ class BNCIStageQLiveActivationTests(unittest.TestCase):
                 "bytes": len(payload),
                 "sha256": hashlib.sha256(payload).hexdigest(),
             }
-            if current != row:
-                self.assertEqual(row["path"], compatibility_path)
-                self.assertEqual(
-                    self.activation["green_implementation"]["commit"],
-                    "e5ca6a24f65beab12b89eddad938c96fe4ecaf00",
-                )
-                self.assertEqual(row["bytes"], 22_091)
-                self.assertEqual(
-                    row["sha256"],
-                    "4d1348e0a9e0715708aef555239b940c38128165f0734d5f91aac286be3fd65a",
-                )
+            self.assertEqual(current, row, row["path"])
 
     def test_authority_is_one_Q_only_and_scientific_work_remains_closed(self) -> None:
         authority = self.activation["authority"]

@@ -62,9 +62,13 @@ Initial activation commit `e678095` failed Base job `97727563579` in CI
 `32823864546` because its tests assumed the prior implementation commit existed
 in the shallow Actions checkout. It had no effect and opened no private path.
 
-Immediate gate: remotely green the test-only compatibility correction, then
-rebind and green the exact activation. The private manifest and MAT payloads
-remain closed until both final activation CI jobs pass. The live CLI must then
+Compatibility commit `52b681e` passed Base job `97730713400`, Optional job
+`97730713304`, and CI `32824921855`. The activation is rebound to that exact
+green commit.
+
+Immediate gate: commit, push, and remotely green the rebound activation. The
+private manifest and MAT payloads remain closed until both final activation CI
+jobs pass. The live CLI must then
 prove a fresh remote SHA and both successful jobs before its zero-network
 semantic executor can write the consumed marker.
 
