@@ -175,6 +175,12 @@ improved log loss over EOG alone by 0.02552 and over EOG+deranged-EEG by
 people, and were not significant. This is a real held-out scientific result
 and a useful near-miss, not a validated EEG-specific decoding claim.
 
+Exact R2 result `af8dcc9` passed Base job `98001418110`, Optional Neuro Readers
+job `98001417963`, and CI `32909763799`. The lane is closed and consumed; its
+targets and private predictions will not be reused for tuning. The next work is
+an artifact-only postmortem and a fresh independent replication design focused
+on posterior/visual and EOG confounds.
+
 Current result: [EEGMMIDB-UG1 Stage S-A2](docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md)
 failed closed during verified TLS certificate-chain validation before an HTTP
 response or EDF request. The one-shot invocation is consumed: it retained only

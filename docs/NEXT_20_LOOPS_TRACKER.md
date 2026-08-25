@@ -38,7 +38,10 @@
 > score. Stage T returned R2: selected EEG beat no-signal/timing but lost to
 > posterior EEG; C5 showed small directional gains below every frozen gate.
 > C3 and C5-partial failed. Current gate: commit, push, and green the exact
-> result with no tuning or rerun. No claim upgrade has occurred.
+> result with no tuning or rerun. Exact result `af8dcc9` passed Base
+> `98001418110`, Optional `98001417963`, and CI `32909763799`. This lane is
+> closed and consumed. Next: artifact-only postmortem and fresh independent
+> replication design. No claim upgrade has occurred.
 >
 > **Stage A result history (2026-08-25):** control-plane commit `21cedd5` passed
 > both jobs in CI `32811586786` before the sole signed-object recovery. Stage A

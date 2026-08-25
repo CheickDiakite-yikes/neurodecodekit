@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "recorded_at_local": "2026-08-25",
   "active_lane_id": "BNCI-C3C5-1-closeout",
-  "status": "Stage_T_R2_result_created_pending_commit_push_and_remote_green",
+  "status": "Stage_T_R2_result_remotely_green_closed_consumed",
   "evidence_sequence": [
     "G1_generated_proof",
     "A_opaque_acquisition",
@@ -79,7 +79,12 @@
     "Stage_T_activation_CI_run_id": 32908763353,
     "Stage_T_activation_base_python_job_id": 97998435433,
     "Stage_T_activation_optional_neuro_readers_job_id": 97998435729,
-    "both_Stage_T_activation_jobs_green": true
+    "both_Stage_T_activation_jobs_green": true,
+    "Stage_T_result_commit": "af8dcc998b5b5eb6bda3ecae1c9e6c787fabc0f2",
+    "Stage_T_result_CI_run_id": 32909763799,
+    "Stage_T_result_base_python_job_id": 98001418110,
+    "Stage_T_result_optional_neuro_readers_job_id": 98001417963,
+    "both_Stage_T_result_jobs_green": true
   },
   "consumed_operations": {
     "G1_generated_invocation_consumed": true,
@@ -247,7 +252,7 @@
     "A_opaque_acquisition": "complete_consumed_result_remotely_green",
     "Q_target_blind_validation": "complete_consumed_result_remotely_green",
     "P_prediction_freeze": "complete_consumed_result_remotely_green",
-    "T_one_score": "complete_consumed_R2_result_pending_commit_push_and_remote_green",
+    "T_one_score": "complete_consumed_R2_result_remotely_green",
     "release": "closed",
     "claim_upgrade": "closed"
   },
@@ -259,7 +264,7 @@
     "EEG_beyond_recorded_peripheral_controls": "not_established"
   },
   "nearest_decisive_goal": "design_fresh_independent_replication_that_discriminates_selected_EEG_from_posterior_visual_and_recorded_EOG_information_without_reusing_consumed_targets",
-  "immediate_next_gate": "commit_push_and_remotely_green_exact_Stage_T_R2_result_and_closeout_no_rerun",
+  "immediate_next_gate": "Tier_A_artifact_only_postmortem_and_fresh_independent_replication_design_no_consumed_target_or_private_artifact_access",
   "claim_boundary": {
     "engineering_capability_established": "real_18_MAT_target_firewalled_nine_fold_derivatives_and_41472_hash_frozen_target_blind_prediction_rows",
     "verified_recovery_bundle_acquired": true,

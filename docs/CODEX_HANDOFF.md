@@ -43,8 +43,10 @@
 > score. Stage T returned R2: selected EEG 0.38349 versus 0.25 no-signal and
 > 0.29668 timing, but posterior EEG 0.39236, only 5/9 positive participants,
 > and `p=0.06641`; C5 deltas 0.02552 / 0.01843, 6/9 positive, and nonsignificant.
-> C3 and C5-partial both failed. Immediate gate: commit, push, and green the
-> exact result; no tuning or rerun. All older `Current
+> C3 and C5-partial both failed. Exact result `af8dcc9` passed Base
+> `98001418110`, Optional `98001417963`, and CI `32909763799`. The lane is
+> closed and consumed. Immediate gate: artifact-only postmortem and fresh
+> independent replication design; no private reopen, tuning, or rerun. All older `Current
 > gate` blocks below are append-only history, not executable instructions.
 
 > **Current gate, 2026-08-24:** exact G1 result `4ef12dd` passed Base job

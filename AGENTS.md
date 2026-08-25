@@ -174,9 +174,14 @@ improved log loss over EOG alone by 0.02552 and over EOG+deranged-EEG by
 updates, and zero reruns.
 
 Read `docs/BNCI_2014_001_STAGE_T_RESULT.md`, its machine result, and matching
-test. Immediate gate: verify, commit, push, and remotely green the exact R2
-result and closeout. Do not inspect, modify, move, delete, publish, retry,
-rerun, or tune any private Stage Q/P/T artifact or consumed target.
+test. Exact R2 result `af8dcc998b5b5eb6bda3ecae1c9e6c787fabc0f2`
+passed Base job `98001418110`, Optional Neuro Readers job `98001417963`, and CI
+`32909763799`. The G1 -> A -> Q -> P -> T lane is closed and consumed.
+
+Immediate gate: Tier A artifact-only postmortem and design of a fresh,
+independent replication that discriminates selected EEG from posterior/visual
+and recorded-EOG information. Do not inspect, modify, move, delete, publish,
+retry, rerun, or tune any private Stage Q/P/T artifact or consumed target.
 
 Current scientific boundary: a real held-out score shows above-chance and
 above-timing EEG candidate performance plus a small directionally positive EEG

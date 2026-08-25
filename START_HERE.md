@@ -146,8 +146,12 @@ timing, but posterior EEG reached 39.24%, only 5/9 participants improved, and
 `p=0.0664`. EOG+EEG moved log loss in the desired direction but missed the
 frozen effect-size, consistency, and significance gates.
 
-Immediate gate: verify, commit, push, and remotely green this exact result and
-closeout. The score is consumed with no tuning or rerun.
+Exact R2 result `af8dcc9` passed Base job `98001418110`, Optional Neuro Readers
+job `98001417963`, and CI `32909763799`. The lane is closed and consumed with
+no tuning or rerun.
+
+Immediate gate: artifact-only postmortem and a fresh independent replication
+design. Do not reopen any consumed target, prediction, or private artifact.
 
 ## Scientific Goal And Sequence
 
