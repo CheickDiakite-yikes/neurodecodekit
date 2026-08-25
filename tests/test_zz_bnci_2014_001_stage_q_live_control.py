@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import importlib.util
 import io
 import inspect
 import json
@@ -20,6 +21,9 @@ if str(SRC) not in sys.path:
 
 from neurodecodekit.datasets import bnci_2014_001_stage_q as core  # noqa: E402
 from neurodecodekit.datasets import bnci_2014_001_stage_q_live as live  # noqa: E402
+
+
+NUMPY_AVAILABLE = importlib.util.find_spec("numpy") is not None
 
 
 class BNCIStageQLiveControlTests(unittest.TestCase):
@@ -194,6 +198,7 @@ class BNCIStageQLiveControlTests(unittest.TestCase):
                     ROOT, runner=mock.Mock(side_effect=responses)
                 )
 
+    @unittest.skipUnless(NUMPY_AVAILABLE, "Stage Q fold-array test requires NumPy")
     def test_fold_capabilities_exclude_held_out_T_and_source_labels(self) -> None:
         np = core._np()
         participants = np.repeat(np.arange(9, dtype="uint8"), 2 * 288)
@@ -203,6 +208,7 @@ class BNCIStageQLiveControlTests(unittest.TestCase):
         self.assertFalse(source[participants == 0].any())
         self.assertFalse(held_out_e[sessions == 0].any())
 
+    @unittest.skipUnless(NUMPY_AVAILABLE, "Stage Q derivative test requires NumPy")
     def test_one_copy_shards_and_fold_manifests_exclude_held_out_T(self) -> None:
         np = core._np()
         with tempfile.TemporaryDirectory() as temporary:
@@ -301,6 +307,7 @@ class BNCIStageQLiveControlTests(unittest.TestCase):
                 live._exclusive_directory(root, candidate)
             self.assertEqual((candidate / "unrelated.txt").read_text(encoding="utf-8"), "keep")
 
+    @unittest.skipUnless(NUMPY_AVAILABLE, "Stage Q orchestration test requires NumPy")
     def test_generated_end_to_end_live_orchestration_orders_marker_and_receipt(self) -> None:
         np = core._np()
         members = (

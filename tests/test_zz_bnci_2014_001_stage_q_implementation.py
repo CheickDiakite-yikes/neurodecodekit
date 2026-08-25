@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import importlib.util
 import json
 import os
 import subprocess
@@ -19,14 +20,19 @@ from neurodecodekit.datasets import bnci_2014_001_stage_q as stage_q  # noqa: E4
 
 
 THREAD_ENV = {name: "1" for name in stage_q.THREAD_ENVIRONMENT}
+NUMERICAL_AVAILABLE = (
+    importlib.util.find_spec("numpy") is not None
+    and importlib.util.find_spec("scipy") is not None
+)
 
 
 class BNCIStageQImplementationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.np = stage_q._np()
-        _loadmat, savemat = stage_q._scipy_io()
-        cls.savemat = staticmethod(savemat)
+        cls.np = stage_q._np() if NUMERICAL_AVAILABLE else None
+        if NUMERICAL_AVAILABLE:
+            _loadmat, savemat = stage_q._scipy_io()
+            cls.savemat = staticmethod(savemat)
 
     def _task_run(self) -> dict[str, object]:
         starts = 1 + self.np.arange(48, dtype="float64") * 1500
@@ -71,6 +77,7 @@ class BNCIStageQImplementationTests(unittest.TestCase):
         for field in ("network_bytes", "model_runs", "training_runs", "prediction_sets", "target_deliveries", "scores"):
             self.assertEqual(plan[field], 0)
 
+    @unittest.skipUnless(NUMERICAL_AVAILABLE, "Stage Q parser test requires classical extra")
     def test_parser_accepts_integral_matlab_floats_and_six_task_runs(self) -> None:
         payload, member = self._payload()
         runs, calibration = self._parse_bounded(payload, member)
@@ -78,6 +85,7 @@ class BNCIStageQImplementationTests(unittest.TestCase):
         self.assertEqual(runs[0].starts.dtype.name, "int64")
         self.assertEqual(runs[0].targets.dtype.name, "uint8")
 
+    @unittest.skipUnless(NUMERICAL_AVAILABLE, "Stage Q parser test requires classical extra")
     def test_parser_accepts_empty_calibration_structs_without_signal_use(self) -> None:
         empty = self._task_run()
         empty["X"] = self.np.full((1, 25), self.np.nan)
@@ -93,6 +101,7 @@ class BNCIStageQImplementationTests(unittest.TestCase):
         parsed, calibration = self._parse_bounded(payload, member)
         self.assertEqual((len(parsed), calibration), (6, 3))
 
+    @unittest.skipUnless(NUMERICAL_AVAILABLE, "Stage Q parser test requires classical extra")
     def test_parser_refuses_fractional_trial_indices(self) -> None:
         def mutate(runs):
             runs[0]["trial"][0] = 1.5
@@ -101,6 +110,7 @@ class BNCIStageQImplementationTests(unittest.TestCase):
         with self.assertRaisesRegex(stage_q.BNCIStageQRefusal, "trial indices"):
             self._parse_bounded(payload, member)
 
+    @unittest.skipUnless(NUMERICAL_AVAILABLE, "Stage Q parser test requires classical extra")
     def test_parser_refuses_overlap_bad_balance_and_nonbinary_artifacts(self) -> None:
         mutations = [
             lambda runs: runs[0]["trial"].__setitem__(1, 1000),
@@ -113,6 +123,7 @@ class BNCIStageQImplementationTests(unittest.TestCase):
                 with self.assertRaises(stage_q.BNCIStageQRefusal):
                     self._parse_bounded(payload, member)
 
+    @unittest.skipUnless(NUMERICAL_AVAILABLE, "Stage Q parser test requires classical extra")
     def test_parser_refuses_extra_top_level_variable_and_digest_change(self) -> None:
         runs = [self._task_run() for _ in range(6)]
         payload, member = self._payload(
@@ -124,6 +135,7 @@ class BNCIStageQImplementationTests(unittest.TestCase):
         with self.assertRaisesRegex(stage_q.BNCIStageQRefusal, "identity"):
             self._parse_bounded(payload, changed)
 
+    @unittest.skipUnless(NUMERICAL_AVAILABLE, "Stage Q feature test requires classical extra")
     def test_target_free_features_are_deterministic_and_target_invariant(self) -> None:
         rng = self.np.random.default_rng(42)
         signal = rng.normal(0.0, 0.05, size=(1_500, 25)).astype("float32")
@@ -139,6 +151,7 @@ class BNCIStageQImplementationTests(unittest.TestCase):
         )
         self.assertEqual(set(first), set(stage_q.FEATURE_DIMENSIONS))
 
+    @unittest.skipUnless(NUMERICAL_AVAILABLE, "Stage Q archive test requires classical extra")
     def test_predictive_archive_has_no_target_or_artifact_array(self) -> None:
         arrays = {
             name: [self.np.zeros(dimension, dtype="float32")]
