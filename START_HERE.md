@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: BNCI-C3C5-1 Stage Q Implementation
+## Current Gate: BNCI-C3C5-1 Stage Q Live Activation
 
 Start with `registries/current_research_frontier.v0.json`, the machine-readable
 snapshot of the active lane, proof chain, consumed status, measurements, goals,
@@ -54,13 +54,14 @@ The one generated qualification passed and is consumed. It processed
 498,434,048-byte peak RSS. It opened no private or real path and ran no model,
 training, prediction, target delivery, or score.
 
-Immediate gate: commit, push, and remotely green the exact Stage Q
-implementation and generated result. No live activation exists, so the private
-manifest and MAT payloads remain closed. After both implementation CI jobs are
-green, create and remotely prove one exact activation before the single real Q
-semantic qualification. The live CLI then requires a fresh remote SHA and both
-successful activation-commit CI jobs before its zero-network semantic executor
-can write the consumed marker.
+Exact final implementation `e5ca6a2` passed Base Python job `97723744136`,
+Optional Neuro Readers job `97723744450`, and CI `32822604745`. Read
+`docs/BNCI_2014_001_STAGE_Q_LIVE_ACTIVATION.md` and its machine activation.
+
+Immediate gate: commit, push, and remotely green that exact activation. The
+private manifest and MAT payloads remain closed until both activation CI jobs
+pass. The live CLI must then prove a fresh remote SHA and both successful jobs
+before its zero-network semantic executor can write the consumed marker.
 
 ## Scientific Goal And Sequence
 

@@ -109,8 +109,10 @@ six task runs, 288 trials, 3.657 seconds, 498,434,048-byte peak RSS, and a
 644,708-byte deterministic target-free feature archive. Private/real reads,
 models, training, predictions, target deliveries, and scores were all zero.
 That qualification is consumed. Its additive live control plane remains
-disabled until this exact implementation is committed, pushed, and green,
-followed by a separate exact green activation. Before consumption, it also
+disabled until a separate exact activation is committed, pushed, and green.
+Final implementation `e5ca6a2` passed both jobs in CI `32822604745`; the
+[live activation](docs/BNCI_2014_001_STAGE_Q_LIVE_ACTIVATION.md) now binds its
+11 exact artifacts with delayed effect. Before consumption, the live path also
 requires a conservative 227,843,968-byte layout bound, 2 GiB additional free
 disk, and fresh remote proof that the activation commit and both CI jobs passed.
 
@@ -119,7 +121,7 @@ The machine-readable current state is
 It freezes the active lane, proof commits, consumed one-shot state, measured
 result, resource caps, five scientific goals, claim boundary, and exact next
 transition so handoffs cannot silently return to an older gate. The current
-gate is to remotely prove the exact Stage Q implementation before any private
+gate is to remotely prove the exact Stage Q activation before any private
 manifest or MAT semantic open.
 
 Current result: [EEGMMIDB-UG1 Stage S-A2](docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md)

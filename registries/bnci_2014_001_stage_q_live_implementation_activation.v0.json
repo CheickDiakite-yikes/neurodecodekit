@@ -1,0 +1,100 @@
+{
+  "lane_id": "BNCI-C3C5-1-Q",
+  "status": "remotely_green_live_execution_enabled",
+  "green_stage_a_result": {
+    "commit": "96d7f0569a54b05f8031d2e3943658ef598e38a5",
+    "CI_run_id": 32814564120,
+    "base_python_job_id": 97700176631,
+    "optional_neuro_readers_job_id": 97700176787,
+    "both_required_jobs_green": true
+  },
+  "green_implementation": {
+    "commit": "e5ca6a24f65beab12b89eddad938c96fe4ecaf00",
+    "CI_head_sha": "e5ca6a24f65beab12b89eddad938c96fe4ecaf00",
+    "CI_conclusion": "success",
+    "CI_run_id": 32822604745,
+    "base_python_job_id": 97723744136,
+    "base_python_job_name": "Base Python",
+    "base_python_job_conclusion": "success",
+    "optional_neuro_readers_job_id": 97723744450,
+    "optional_neuro_readers_job_name": "Optional Neuro Readers",
+    "optional_neuro_readers_job_conclusion": "success",
+    "both_required_jobs_green": true
+  },
+  "qualified_generated_core": {
+    "path": "registries/bnci_2014_001_stage_q_generated_result.v0.json",
+    "sha256": "a240b4852b5e5a908ce929d5b07d32a4090d3371df576007bbe5020eac76620b",
+    "consumed": true,
+    "may_be_repeated": false
+  },
+  "implementation_artifacts": [
+    {
+      "path": "src/neurodecodekit/datasets/bnci_2014_001_stage_q.py",
+      "bytes": 48569,
+      "sha256": "4f07decba3b8653af2a5397627123df1daafaf0757060d9a5f9aa32b54323a74"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/bnci_2014_001_stage_q_live.py",
+      "bytes": 40869,
+      "sha256": "994eaeef6d20e0bc8c4f5a78dd6064296dcd391741cd968335e02f9edffc9233"
+    },
+    {
+      "path": "src/neurodecodekit/bnci_c3c5_stage_q_cli.py",
+      "bytes": 1492,
+      "sha256": "d6e2ef694a563f85c981d5317eac1a5ec2e23174ca48563dcff471dbb51cf9a4"
+    },
+    {
+      "path": "src/neurodecodekit/bnci_c3c5_stage_q_live_cli.py",
+      "bytes": 970,
+      "sha256": "c57340eba4a3bc4e541923716d261b717b9848be68085f358641d7d632a5bd0b"
+    },
+    {
+      "path": "tests/test_zz_bnci_2014_001_stage_q_implementation.py",
+      "bytes": 10037,
+      "sha256": "56cca2fe18be6fe4fdeda8c785688998e2ca9482658071187694f6cba1cdade6"
+    },
+    {
+      "path": "tests/test_zz_bnci_2014_001_stage_q_live_control.py",
+      "bytes": 22091,
+      "sha256": "4d1348e0a9e0715708aef555239b940c38128165f0734d5f91aac286be3fd65a"
+    },
+    {
+      "path": "tests/test_zz_bnci_2014_001_stage_q_implementation_record.py",
+      "bytes": 2654,
+      "sha256": "b8c6f28fef01631249f40d1b1ef44587a57d71cdbaae098ca1ed920e29ce5fd9"
+    },
+    {
+      "path": "tests/test_zz_bnci_2014_001_stage_q_generated_result.py",
+      "bytes": 2330,
+      "sha256": "28a466bd15fb71c0d267d5a3d4e63e637e39a8223ee77071593054cef4f706cb"
+    },
+    {
+      "path": "docs/BNCI_2014_001_STAGE_Q_IMPLEMENTATION.md",
+      "bytes": 8596,
+      "sha256": "e1c640facdb89d6feb719f7b5d50d3e3ffae1ee14f49b362e3da946ab1315dc7"
+    },
+    {
+      "path": "registries/bnci_2014_001_stage_q_implementation.v0.json",
+      "bytes": 8742,
+      "sha256": "0994d1fd18cea6b6d7e8c28ffdfe42c2c9daa9d2b11a4fc83900562bdd0adb5e"
+    },
+    {
+      "path": "registries/bnci_2014_001_stage_q_generated_result.v0.json",
+      "bytes": 1503,
+      "sha256": "a240b4852b5e5a908ce929d5b07d32a4090d3371df576007bbe5020eac76620b"
+    }
+  ],
+  "authority": {
+    "one_live_Stage_Q_execution": true,
+    "network_bytes": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "reruns": 0,
+    "Stage_P": false,
+    "Stage_T": false,
+    "claim_upgrade": false
+  }
+}

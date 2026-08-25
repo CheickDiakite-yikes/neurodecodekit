@@ -90,11 +90,19 @@ scoring keys outside every fold capability tree. It requires the 227,843,968-
 byte conservative layout bound plus at least 2 GiB free before consumption,
 reserves temporary output before the marker, proves the activation commit and
 both CI jobs from fresh remote metadata, and promotes the passed receipt only
-after its final resource gate. Immediate gate: verify, commit, push, and
-remotely green the exact Stage
-Q implementation and generated result. Do not create an activation or open the
-private manifest or any MAT before both required implementation CI jobs pass.
-Only a later exact green activation may enable the one real Q invocation.
+after its final resource gate.
+
+Exact final implementation `e5ca6a24f65beab12b89eddad938c96fe4ecaf00`
+passed Base Python job `97723744136`, Optional Neuro Readers job
+`97723744450`, and CI `32822604745`. Read
+`docs/BNCI_2014_001_STAGE_Q_LIVE_ACTIVATION.md`, its machine activation, and
+matching test. The Stage Q live activation binds all 11 exact implementation
+artifacts and has delayed effect.
+
+Immediate gate: verify, commit, push, and remotely green that exact activation.
+Do not open the private manifest or any MAT before both activation CI jobs pass.
+Afterward, the public live CLI must freshly prove the activation commit's remote
+SHA and both successful jobs before the one semantic invocation can consume.
 Stage P remains closed until the aggregate Q result is green. Stage T remains
 closed until the prediction-freeze record is committed, pushed, and remotely
 green.

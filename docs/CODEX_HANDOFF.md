@@ -9,8 +9,10 @@
 > `96d7f0` passed both jobs in CI `32814564120`. The generated Stage Q core then
 > passed once over 40,069,562 synthetic bytes / 288 trials in 3.657 seconds at
 > 498,434,048-byte peak RSS with zero private or scientific operations. Immediate
-> gate: commit, push, and remotely green that exact implementation. No activation
-> exists and no private manifest or MAT may be opened yet. The future live CLI
+> final implementation `e5ca6a2` passed Base job `97723744136`, Optional job
+> `97723744450`, and CI `32822604745`. Its exact live activation is prepared
+> with delayed effect. Immediate gate: commit, push, and remotely green that
+> activation; no private manifest or MAT may be opened yet. The future live CLI
 > must freshly prove the activation commit and both CI jobs before consumption,
 > and its 227,843,968-byte conservative layout bound leaves 309,026,944 bytes of
 > headroom under the private cap. P and T remain ordered

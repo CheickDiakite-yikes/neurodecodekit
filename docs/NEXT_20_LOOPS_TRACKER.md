@@ -6,8 +6,9 @@
 > The generated-only Stage Q core passed once over 40,069,562 bytes, six task
 > runs, and 288 trials in 3.657 seconds at 498,434,048-byte peak RSS; all private,
 > real, model, prediction, target-delivery, and score counters were zero. Current
-> gate: commit, push, and remotely green the exact Stage Q implementation before
-> creating a separate live activation. The future live path requires fresh
+> final implementation `e5ca6a2` passed both jobs in CI `32822604745`; its
+> exact live activation is prepared with delayed effect. Current gate: commit,
+> push, and remotely green that activation. The future live path requires fresh
 > remote proof, both activation-commit CI jobs, and a 227,843,968-byte
 > conservative storage preflight before consumption. Stage P and T remain closed.
 >

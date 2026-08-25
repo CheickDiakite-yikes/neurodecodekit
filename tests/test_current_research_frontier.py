@@ -21,7 +21,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(self.frontier["active_lane_id"], "BNCI-C3C5-1-Q")
         self.assertEqual(
             self.frontier["status"],
-            "Stage_Q_implementation_and_generated_core_prepared_pending_remote_green",
+            "Stage_Q_live_activation_prepared_pending_remote_green",
         )
 
     def test_proof_chain_records_green_recovery_activation(self):
@@ -45,6 +45,11 @@ class CurrentResearchFrontierTests(unittest.TestCase):
             "96d7f0569a54b05f8031d2e3943658ef598e38a5",
         )
         self.assertTrue(proof["both_Stage_A_result_jobs_green"])
+        self.assertEqual(
+            proof["Stage_Q_implementation_commit"],
+            "e5ca6a24f65beab12b89eddad938c96fe4ecaf00",
+        )
+        self.assertTrue(proof["both_Stage_Q_implementation_jobs_green"])
 
     def test_prelaunch_rejection_did_not_consume_recovery(self):
         rejection = self.frontier["prelaunch_rejection"]
@@ -108,8 +113,8 @@ class CurrentResearchFrontierTests(unittest.TestCase):
 
     def test_control_plane_entrypoints_name_the_current_gate(self):
         expected = {
-            "AGENTS.md": "Stage Q generated semantic core",
-            "START_HERE.md": "Current Gate: BNCI-C3C5-1 Stage Q Implementation",
+            "AGENTS.md": "Stage Q live activation",
+            "START_HERE.md": "Current Gate: BNCI-C3C5-1 Stage Q Live Activation",
             "README.md": "Stage Q implementation",
             "docs/CODEX_HANDOFF.md": "Current gate, 2026-08-25",
             "docs/NEXT_20_LOOPS_TRACKER.md": "Stage Q implementation gate (2026-08-25)",
