@@ -102,12 +102,25 @@ prediction sets, target deliveries, and scores were all zero. The invocation
 is consumed and cannot be retried or rerun. Its private payload and evidence
 remain Git-ignored.
 
+The exact Stage A result commit `96d7f0` passed both required jobs in CI
+`32814564120`. The new generated-only [Stage Q implementation](docs/BNCI_2014_001_STAGE_Q_IMPLEMENTATION.md)
+has also passed its one local qualification: 40,069,562 generated input bytes,
+six task runs, 288 trials, 3.657 seconds, 498,434,048-byte peak RSS, and a
+644,708-byte deterministic target-free feature archive. Private/real reads,
+models, training, predictions, target deliveries, and scores were all zero.
+That qualification is consumed. Its additive live control plane remains
+disabled until this exact implementation is committed, pushed, and green,
+followed by a separate exact green activation. Before consumption, it also
+requires a conservative 227,843,968-byte layout bound, 2 GiB additional free
+disk, and fresh remote proof that the activation commit and both CI jobs passed.
+
 The machine-readable current state is
 [`registries/current_research_frontier.v0.json`](registries/current_research_frontier.v0.json).
 It freezes the active lane, proof commits, consumed one-shot state, measured
 result, resource caps, five scientific goals, claim boundary, and exact next
 transition so handoffs cannot silently return to an older gate. The current
-gate is to remotely prove the aggregate Stage A result before Stage Q.
+gate is to remotely prove the exact Stage Q implementation before any private
+manifest or MAT semantic open.
 
 Current result: [EEGMMIDB-UG1 Stage S-A2](docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md)
 failed closed during verified TLS certificate-chain validation before an HTTP
@@ -120,8 +133,9 @@ be repaired or retried under this lane. Exact result `ba8645e` passed both
 jobs in CI `32740773041`; proof-only closeout `d9eae69` passed both jobs in CI
 `32742694237` without reopening the consumed marker or payload paths.
 
-BNCI-C3C5-1 now has a verified opaque recovery bundle, but no MAT semantic
-validation, real-model run, prediction freeze, or scientific score. Even a
+BNCI-C3C5-1 now has a verified opaque recovery bundle and a generated-qualified
+Stage Q interface, but no real MAT semantic validation, real-model run,
+prediction freeze, or scientific score. Even a
 future maximum pass would establish only participant-independent BNCI
 protocol-condition prediction and incremental EEG sensor information beyond
 three recorded EOG channels, not thought reading, language, movement intention,

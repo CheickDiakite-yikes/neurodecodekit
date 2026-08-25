@@ -18,10 +18,10 @@ class CurrentResearchFrontierTests(unittest.TestCase):
             "neurodecodekit.current_research_frontier",
         )
         self.assertEqual(self.frontier["schema_version"], "0.1.0")
-        self.assertEqual(self.frontier["active_lane_id"], "BNCI-C3C5-1-A-R")
+        self.assertEqual(self.frontier["active_lane_id"], "BNCI-C3C5-1-Q")
         self.assertEqual(
             self.frontier["status"],
-            "Stage_A_recovery_complete_pending_aggregate_result_remote_green",
+            "Stage_Q_implementation_and_generated_core_prepared_pending_remote_green",
         )
 
     def test_proof_chain_records_green_recovery_activation(self):
@@ -40,6 +40,11 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         )
         self.assertEqual(proof["redirect_recovery_activation_CI_run_id"], 32_807_676_008)
         self.assertTrue(proof["both_activation_jobs_green"])
+        self.assertEqual(
+            proof["Stage_A_result_commit"],
+            "96d7f0569a54b05f8031d2e3943658ef598e38a5",
+        )
+        self.assertTrue(proof["both_Stage_A_result_jobs_green"])
 
     def test_prelaunch_rejection_did_not_consume_recovery(self):
         rejection = self.frontier["prelaunch_rejection"]
@@ -60,10 +65,9 @@ class CurrentResearchFrontierTests(unittest.TestCase):
             self.assertEqual(rejection[key], 0, key)
 
     def test_recovery_resources_and_stage_order_are_frozen(self):
-        envelope = self.frontier["active_recovery_envelope"]
-        self.assertEqual(envelope["registered_invocations_remaining"], 0)
-        self.assertEqual(envelope["payload_files_exact"], 18)
-        self.assertEqual(envelope["accepted_payload_bytes_exact"], 779_873_919)
+        envelope = self.frontier["active_Stage_Q_envelope"]
+        self.assertEqual(envelope["registered_invocations_remaining_after_activation"], 1)
+        self.assertEqual(envelope["MAT_content_opens_maximum"], 18)
         self.assertEqual(envelope["CPU_threads"], 1)
         self.assertEqual(envelope["workers"], 1)
         self.assertEqual(envelope["reruns"], 0)
@@ -83,6 +87,10 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(result["MAT_semantic_opens"], 0)
         self.assertEqual(result["model_runs"], 0)
         self.assertEqual(result["scores"], 0)
+        generated = self.frontier["Stage_Q_generated_qualification_result"]
+        self.assertEqual(generated["generated_trials"], 288)
+        self.assertEqual(generated["real_or_private_path_opens"], 0)
+        self.assertEqual(generated["model_runs"], 0)
 
     def test_all_five_scientific_goals_and_claims_remain_unestablished(self):
         self.assertEqual(
@@ -100,11 +108,11 @@ class CurrentResearchFrontierTests(unittest.TestCase):
 
     def test_control_plane_entrypoints_name_the_current_gate(self):
         expected = {
-            "AGENTS.md": "BNCI-C3C5-1-A-R",
-            "START_HERE.md": "Current Gate: BNCI-C3C5-1 Stage A Result Closeout",
-            "README.md": "redirect-recovery packet",
+            "AGENTS.md": "Stage Q generated semantic core",
+            "START_HERE.md": "Current Gate: BNCI-C3C5-1 Stage Q Implementation",
+            "README.md": "Stage Q implementation",
             "docs/CODEX_HANDOFF.md": "Current gate, 2026-08-25",
-            "docs/NEXT_20_LOOPS_TRACKER.md": "Stage A result gate (2026-08-25)",
+            "docs/NEXT_20_LOOPS_TRACKER.md": "Stage Q implementation gate (2026-08-25)",
         }
         for path, phrase in expected.items():
             text = (ROOT / path).read_text(encoding="utf-8")

@@ -1,0 +1,209 @@
+{
+  "schema_name": "neurodecodekit.bnci_2014_001_stage_q_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "BNCI-C3C5-1-Q-implementation-v0",
+  "lane_id": "BNCI-C3C5-1-Q",
+  "recorded_at_local": "2026-08-25",
+  "status": "generated_qualification_passed_live_activation_pending",
+  "green_stage_a_result": {
+    "commit": "96d7f0569a54b05f8031d2e3943658ef598e38a5",
+    "CI_run_id": 32814564120,
+    "base_python_job_id": 97700176631,
+    "optional_neuro_readers_job_id": 97700176787,
+    "both_required_jobs_green": true,
+    "Stage_Q_started": false
+  },
+  "bound_public_artifacts": [
+    {
+      "path": "registries/bnci_2014_001_cross_participant_eeg_gain_research.v0.json",
+      "bytes": 9016,
+      "sha256": "5a333709dbbf8c2e30f33c9f47240d8830d34b78ac9eda5ae22ede68a751ded2"
+    },
+    {
+      "path": "registries/bnci_2014_001_cross_participant_eeg_gain_contract.v0.json",
+      "bytes": 12156,
+      "sha256": "e11dad351f5a4736dc6ac3ffdad28a65e37b18b40c5bfa9e861f5b0754ad2b74"
+    },
+    {
+      "path": "registries/bnci_2014_001_cross_participant_eeg_gain_authorization_decision.v0.json",
+      "bytes": 9511,
+      "sha256": "687ed0d5afa64ba7c34ab86bf3e0c4f79d08d21041dd1e9e6aa3642629d0f559"
+    },
+    {
+      "path": "registries/bnci_2014_001_stage_a_redirect_recovery_result.v0.json",
+      "bytes": 6425,
+      "sha256": "66232ceeb3cc61b3402d1d01970d6630b5e4a25cf7685e5c65f8f50f8f952ae2"
+    }
+  ],
+  "implementation_artifacts": [
+    "src/neurodecodekit/datasets/bnci_2014_001_stage_q.py",
+    "src/neurodecodekit/datasets/bnci_2014_001_stage_q_live.py",
+    "src/neurodecodekit/bnci_c3c5_stage_q_cli.py",
+    "src/neurodecodekit/bnci_c3c5_stage_q_live_cli.py",
+    "tests/test_zz_bnci_2014_001_stage_q_implementation.py",
+    "tests/test_zz_bnci_2014_001_stage_q_live_control.py",
+    "tests/test_zz_bnci_2014_001_stage_q_implementation_record.py",
+    "tests/test_zz_bnci_2014_001_stage_q_generated_result.py",
+    "docs/BNCI_2014_001_STAGE_Q_IMPLEMENTATION.md",
+    "registries/bnci_2014_001_stage_q_implementation.v0.json",
+    "registries/bnci_2014_001_stage_q_generated_result.v0.json"
+  ],
+  "generated_qualification": {
+    "status": "passed_consumed_no_repeat",
+    "result_path": "registries/bnci_2014_001_stage_q_generated_result.v0.json",
+    "result_bytes": 1503,
+    "result_sha256": "a240b4852b5e5a908ce929d5b07d32a4090d3371df576007bbe5020eac76620b",
+    "case_classes_passed": 6,
+    "generated_input_bytes": 40069562,
+    "generated_task_runs": 6,
+    "generated_trials": 288,
+    "runtime_seconds": 3.6570341249462217,
+    "peak_process_RSS_bytes": 498434048,
+    "real_or_private_path_opens": 0,
+    "real_MAT_semantic_opens": 0,
+    "network_bytes": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "may_be_repeated": false
+  },
+  "generated_qualification_coverage": {
+    "directly_exercised": [
+      "MAT_identity_and_semantic_parse",
+      "empty_trial_calibration_recognition",
+      "run_bound_causal_feature_core",
+      "target_mutation_invariance",
+      "deterministic_target_free_archive",
+      "malformed_identity_refusal"
+    ],
+    "not_claimed_as_directly_exercised": [
+      "real_18_member_orchestration",
+      "private_Stage_A_manifest",
+      "live_activation_Git_and_CI_binding",
+      "private_fold_capability_publication"
+    ],
+    "additive_adversarial_tests_cover": [
+      "exact_activation_schema_and_artifact_set",
+      "authenticated_source_and_scoring_target_envelopes",
+      "one_copy_signal_shards_and_fold_delivery_exclude_held_out_T",
+      "artifact_value_and_availability_sealing",
+      "symlink_ancestor_refusal",
+      "conservative_storage_preflight_and_progressive_output_cap",
+      "final_runtime_RSS_and_output_caps",
+      "activation_CI_head_SHA_and_exact_job_conclusions",
+      "fresh_remote_activation_green_metadata_preflight",
+      "atomic_derivative_and_passed_receipt_promotion"
+    ],
+    "post_result_fail_closed_amendment": {
+      "MAT_parser_or_feature_computation_changed": false,
+      "qualification_output_fixed_to_registered_path": true,
+      "qualification_repeat_mechanically_refused": true,
+      "original_core_live_entry_mechanically_refused": true,
+      "scope_expanded": false
+    }
+  },
+  "implementation_scope": {
+    "sequential_verified_MAT_opens_maximum": 18,
+    "expected_task_runs": 108,
+    "expected_trials": 5184,
+    "predictive_derivative_target_free": true,
+    "fold_scoped_source_label_capabilities": 9,
+    "source_rows_per_fold": 4608,
+    "sealed_held_out_E_target_sets": 9,
+    "sealed_held_out_E_rows_per_fold": 288,
+    "held_out_T_rows_exposed_per_fold": 0,
+    "global_predictive_archive_exists": false,
+    "one_copy_participant_session_signal_shards": 18,
+    "fold_delivery_manifests_reference_source_and_held_out_E_only": true,
+    "source_labels_exist_only_inside_the_matching_fold_capability": true,
+    "conservative_private_layout_preflight_required": true,
+    "progressive_private_output_cap_enforcement": true,
+    "free_disk_bytes_minimum_plus_layout_bound": 2147483648,
+    "temporary_directory_reserved_before_consumed_marker": true,
+    "passed_receipt_promoted_atomically_after_final_resource_gate": true,
+    "held_out_scoring_targets_authenticated_and_encrypted": true,
+    "scoring_key_vault_outside_every_fold_capability_tree": true,
+    "artifact_flags_sealed_outside_predictive_derivative": true,
+    "artifact_availability_mask_sealed": true,
+    "target_or_artifact_derived_exclusion": false,
+    "analysis_network_bytes": 0,
+    "pre_analysis_control_plane_network": "Git_remote_and_GitHub_Actions_metadata_only",
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "reruns": 0
+  },
+  "semantic_contract": {
+    "top_level_key": "data",
+    "empty_trial_calibration_struct_signal_use": false,
+    "task_runs_per_file": 6,
+    "trials_per_task_run": 48,
+    "sampling_rate_hz": 250,
+    "channels": 25,
+    "EEG_channels": 22,
+    "EOG_channels": 3,
+    "source_trial_indices_one_based": true,
+    "complete_window_samples": 1500,
+    "class_balance_per_task_run": [12, 12, 12, 12],
+    "artifact_flags_binary_if_available": true,
+    "geometry_available_from_payload": false
+  },
+  "preprocessing_contract": {
+    "common_average_channels": 22,
+    "filter_order": 4,
+    "filter_direction": "forward_causal_only",
+    "filter_initial_state": "exact_zero",
+    "filter_state_reset_boundary": "run_only",
+    "trial_boundary_reset": false,
+    "first_trial_previous_interval_seconds_sentinel": 0.0,
+    "target_or_artifact_argument_accepted_by_feature_extractor": false
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "analysis_runtime_seconds_maximum": 3600,
+    "peak_RSS_bytes_maximum": 1073741824,
+    "private_derivative_bytes_maximum": 536870912,
+    "public_output_bytes_maximum": 4194304,
+    "analysis_network_bytes": 0,
+    "minimum_free_disk_bytes_plus_layout_bound": 2147483648
+  },
+  "proof_sequence": [
+    "generated_qualification_once",
+    "implementation_and_generated_result_commit_push_and_both_CI_jobs_green",
+    "exact_implementation_activation_commit_push_and_both_CI_jobs_green",
+    "one_real_Stage_Q_execution",
+    "aggregate_result_commit_push_and_both_CI_jobs_green",
+    "stop_before_Stage_P"
+  ],
+  "authority": {
+    "generated_qualification_now": false,
+    "generated_qualification_consumed": true,
+    "generated_core_original_live_activation_path_must_remain_absent": true,
+    "additive_live_control_plane_requires_exact_green_activation": true,
+    "activation_binds_CI_head_SHA_exact_job_names_IDs_and_success_conclusions": true,
+    "fresh_remote_fetch_and_GitHub_CI_verification_required_before_live_execute": true,
+    "private_manifest_or_MAT_access_before_activation_green": false,
+    "real_Stage_Q_execution_before_activation_green": false,
+    "Stage_P_modeling": false,
+    "Stage_T_target_delivery_or_score": false,
+    "release": false,
+    "claim_upgrade": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "strict target-firewalled semantic and feature qualification over the exact acquired BNCI MAT cohort",
+    "scientific_claim_established": false,
+    "neural_information": false,
+    "EEG_beyond_EOG": false,
+    "unseen_person_generalization": false,
+    "decoding_accuracy": false,
+    "language_or_thought_decoding": false,
+    "motor_cortex_origin": false,
+    "live_or_portable_result": false
+  }
+}

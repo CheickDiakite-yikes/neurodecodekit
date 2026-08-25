@@ -1,14 +1,20 @@
 # Codex Handoff - NeuroDecodeKit
 
-> **Current gate, 2026-08-25:** `BNCI-C3C5-1-A-R` Stage A passed and is
+> **Current gate, 2026-08-25:** `BNCI-C3C5-1-Q` Stage A passed, is
 > consumed. Start with `registries/current_research_frontier.v0.json` and
-> `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_RESULT.md`. Exactly 18 files /
+> `docs/BNCI_2014_001_STAGE_Q_IMPLEMENTATION.md`. Exactly 18 files /
 > 779,873,919 payload bytes were acquired and opaque-verified in 113.066
 > seconds at 42,893,312-byte peak RSS. All MAT semantic, signal/target, model,
-> prediction, training, delivery, and score counters were zero. Immediate gate:
-> commit, push, and remotely green the aggregate result, then stop before Stage
-> Q. The recovery has no retry or rerun. Stages Q, P, and T remain ordered and
-> closed, and no BNCI scientific claim has been established. All older `Current
+> prediction, training, delivery, and score counters were zero. Result commit
+> `96d7f0` passed both jobs in CI `32814564120`. The generated Stage Q core then
+> passed once over 40,069,562 synthetic bytes / 288 trials in 3.657 seconds at
+> 498,434,048-byte peak RSS with zero private or scientific operations. Immediate
+> gate: commit, push, and remotely green that exact implementation. No activation
+> exists and no private manifest or MAT may be opened yet. The future live CLI
+> must freshly prove the activation commit and both CI jobs before consumption,
+> and its 227,843,968-byte conservative layout bound leaves 309,026,944 bytes of
+> headroom under the private cap. P and T remain ordered
+> and closed, and no BNCI scientific claim has been established. All older `Current
 > gate` blocks below are append-only history, not executable instructions.
 
 > **Current gate, 2026-08-24:** exact G1 result `4ef12dd` passed Base job

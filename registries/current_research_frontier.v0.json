@@ -2,8 +2,8 @@
   "schema_name": "neurodecodekit.current_research_frontier",
   "schema_version": "0.1.0",
   "recorded_at_local": "2026-08-25",
-  "active_lane_id": "BNCI-C3C5-1-A-R",
-  "status": "Stage_A_recovery_complete_pending_aggregate_result_remote_green",
+  "active_lane_id": "BNCI-C3C5-1-Q",
+  "status": "Stage_Q_implementation_and_generated_core_prepared_pending_remote_green",
   "evidence_sequence": [
     "G1_generated_proof",
     "A_opaque_acquisition",
@@ -29,7 +29,12 @@
     "control_plane_CI_run_id": 32811586786,
     "control_plane_base_python_job_id": 97691784130,
     "control_plane_optional_neuro_readers_job_id": 97691784315,
-    "both_control_plane_jobs_green": true
+    "both_control_plane_jobs_green": true,
+    "Stage_A_result_commit": "96d7f0569a54b05f8031d2e3943658ef598e38a5",
+    "Stage_A_result_CI_run_id": 32814564120,
+    "Stage_A_result_base_python_job_id": 97700176631,
+    "Stage_A_result_optional_neuro_readers_job_id": 97700176787,
+    "both_Stage_A_result_jobs_green": true
   },
   "consumed_operations": {
     "G1_generated_invocation_consumed": true,
@@ -41,7 +46,9 @@
     "redirect_recovery_generated_qualification_consumed": true,
     "redirect_recovery_generated_qualification_rerun_allowed": false,
     "redirect_recovery_live_invocation_consumed": true,
-    "redirect_recovery_retry_or_rerun_allowed": false
+    "redirect_recovery_retry_or_rerun_allowed": false,
+    "Stage_Q_generated_qualification_consumed": true,
+    "Stage_Q_generated_qualification_rerun_allowed": false
   },
   "prelaunch_rejection": {
     "reason": "obsolete_AGENTS_stop_before_Stage_A_instruction",
@@ -58,19 +65,21 @@
     "target_deliveries": 0,
     "scores": 0
   },
-  "active_recovery_envelope": {
-    "registered_invocations_remaining": 0,
-    "payload_files_exact": 18,
-    "accepted_payload_bytes_exact": 779873919,
+  "active_Stage_Q_envelope": {
+    "registered_invocations_remaining_after_activation": 1,
+    "MAT_content_opens_maximum": 18,
     "CPU_threads": 1,
     "workers": 1,
     "numerical_jobs": 1,
-    "runtime_seconds_maximum": 1800,
+    "runtime_seconds_maximum": 3600,
     "peak_RSS_bytes_maximum": 1073741824,
-    "incremental_disk_bytes_maximum": 2147483648,
-    "network_bytes_maximum": 2684354560,
-    "free_disk_bytes_minimum": 5368709120,
-    "MAT_semantic_opens": 0,
+    "private_derivative_bytes_maximum": 536870912,
+    "public_output_bytes_maximum": 4194304,
+    "analysis_network_bytes": 0,
+    "pre_analysis_control_plane_network": "Git_remote_and_GitHub_Actions_metadata_only",
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
     "target_deliveries": 0,
     "scores": 0,
     "reruns": 0
@@ -91,10 +100,29 @@
     "scores": 0,
     "aggregate_result_path": "registries/bnci_2014_001_stage_a_redirect_recovery_result.v0.json"
   },
+  "Stage_Q_generated_qualification_result": {
+    "status": "passed_generated_only_consumed_no_private_or_real_operation",
+    "generated_input_bytes": 40069562,
+    "generated_calibration_structs": 3,
+    "generated_task_runs": 6,
+    "generated_trials": 288,
+    "target_free_feature_bytes": 644708,
+    "runtime_seconds": 3.6570341249462217,
+    "peak_process_RSS_bytes": 498434048,
+    "real_or_private_path_opens": 0,
+    "real_MAT_semantic_opens": 0,
+    "network_bytes": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "result_path": "registries/bnci_2014_001_stage_q_generated_result.v0.json"
+  },
   "stage_state": {
     "control_plane_update": "complete_remotely_green",
-    "A_opaque_acquisition": "complete_consumed_pending_aggregate_result_remote_green",
-    "Q_target_blind_validation": "closed_pending_green_A_result",
+    "A_opaque_acquisition": "complete_consumed_result_remotely_green",
+    "Q_target_blind_validation": "implementation_and_generated_core_prepared_pending_remote_green_then_activation",
     "P_prediction_freeze": "closed_pending_green_Q_result",
     "T_one_score": "closed_pending_green_prediction_freeze",
     "release": "closed",
@@ -108,10 +136,11 @@
     "EEG_beyond_recorded_peripheral_controls": "not_established"
   },
   "nearest_decisive_goal": "test_incremental_EEG_sensor_information_beyond_recorded_EOG_on_completely_held_out_participants",
-  "immediate_next_gate": "commit_push_and_remotely_green_aggregate_Stage_A_result_before_Stage_Q",
+  "immediate_next_gate": "commit_push_and_remotely_green_exact_Stage_Q_implementation_before_live_activation",
   "claim_boundary": {
-    "engineering_capability_established": "exact_private_BNCI_payload_bundle_acquired_via_validated_signed_objects",
+    "engineering_capability_established": "generated_only_target_firewalled_one_copy_Stage_Q_semantic_and_feature_interface_over_the_green_exact_private_BNCI_bundle",
     "verified_recovery_bundle_acquired": true,
+    "real_MAT_semantics_validated": false,
     "real_neural_model_run": false,
     "scientific_score_produced": false,
     "unseen_person_generalization": false,
