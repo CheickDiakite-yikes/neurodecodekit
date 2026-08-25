@@ -17,10 +17,10 @@ class CurrentResearchFrontierTests(unittest.TestCase):
             "neurodecodekit.current_research_frontier",
         )
         self.assertEqual(self.frontier["schema_version"], "0.1.0")
-        self.assertEqual(self.frontier["active_lane_id"], "BNCI-C3C5-1-T")
+        self.assertEqual(self.frontier["active_lane_id"], "BNCI-C3C5-1-closeout")
         self.assertEqual(
             self.frontier["status"],
-            "Stage_T_scoring_activation_prepared_pending_commit_push_and_remote_green",
+            "Stage_T_R2_result_created_pending_commit_push_and_remote_green",
         )
 
     def test_proof_chain_records_green_recovery_activation(self):
@@ -88,6 +88,12 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         )
         self.assertEqual(proof["Stage_P_prediction_freeze_CI_run_id"], 32_908_059_166)
         self.assertTrue(proof["both_Stage_P_prediction_freeze_jobs_green"])
+        self.assertEqual(
+            proof["Stage_T_activation_commit"],
+            "06e29cb094e67e9c946012f2aa716ea510501251",
+        )
+        self.assertEqual(proof["Stage_T_activation_CI_run_id"], 32_908_763_353)
+        self.assertTrue(proof["both_Stage_T_activation_jobs_green"])
 
     def test_prelaunch_rejection_did_not_consume_recovery(self):
         rejection = self.frontier["prelaunch_rejection"]
@@ -145,6 +151,13 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(stage_p_result["private_prediction_rows"], 41_472)
         self.assertEqual(stage_p_result["target_deliveries"], 0)
         self.assertEqual(stage_p_result["scores"], 0)
+        stage_t_result = self.frontier["Stage_T_live_result"]
+        self.assertEqual(stage_t_result["route"], "BNCIC3C5-R2")
+        self.assertFalse(stage_t_result["C3_passed"])
+        self.assertFalse(stage_t_result["C5_partial_passed"])
+        self.assertEqual(stage_t_result["target_deliveries"], 1)
+        self.assertEqual(stage_t_result["scores"], 1)
+        self.assertEqual(stage_t_result["reruns"], 0)
 
     def test_all_five_scientific_goals_and_claims_remain_unestablished(self):
         self.assertEqual(
@@ -158,11 +171,19 @@ class CurrentResearchFrontierTests(unittest.TestCase):
                 "verified_recovery_bundle_acquired",
                 "real_MAT_semantics_validated",
                 "real_neural_model_run",
+                "scientific_score_produced",
+                "real_held_out_scoring_completed",
+                "candidate_EEG_beats_no_signal_and_timing_macro",
             }:
                 self.assertFalse(value, key)
         self.assertTrue(claims["verified_recovery_bundle_acquired"])
         self.assertTrue(claims["real_MAT_semantics_validated"])
         self.assertTrue(claims["real_neural_model_run"])
+        self.assertTrue(claims["scientific_score_produced"])
+        self.assertTrue(claims["real_held_out_scoring_completed"])
+        self.assertTrue(claims["candidate_EEG_beats_no_signal_and_timing_macro"])
+        self.assertFalse(claims["registered_C3_passed"])
+        self.assertFalse(claims["registered_C5_partial_passed"])
 
     def test_control_plane_entrypoints_name_the_current_gate(self):
         expected = {

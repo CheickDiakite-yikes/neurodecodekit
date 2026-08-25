@@ -33,7 +33,12 @@
 > the exact freeze before Stage T activation. Freeze `2517fd1` passed Base
 > `97996323987`, Optional `97996324203`, and CI `32908059166`. The exact
 > one-score Stage T activation is prepared with delayed effect. Current gate:
-> commit, push, and green that activation. No claim upgrade has occurred.
+> commit, push, and green that activation. Activation `06e29cb` passed Base
+> `97998435433`, Optional `97998435729`, and CI `32908763353` before the sole
+> score. Stage T returned R2: selected EEG beat no-signal/timing but lost to
+> posterior EEG; C5 showed small directional gains below every frozen gate.
+> C3 and C5-partial failed. Current gate: commit, push, and green the exact
+> result with no tuning or rerun. No claim upgrade has occurred.
 >
 > **Stage A result history (2026-08-25):** control-plane commit `21cedd5` passed
 > both jobs in CI `32811586786` before the sole signed-object recovery. Stage A

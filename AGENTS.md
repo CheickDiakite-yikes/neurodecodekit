@@ -159,15 +159,30 @@ passed Base job `97996323987`, Optional Neuro Readers job `97996324203`, and CI
 `32908059166`.
 
 Read `docs/BNCI_2014_001_STAGE_T_SCORING_ACTIVATION.md`, its machine activation,
-and matching test. Immediate gate: commit, push, and remotely green that exact
-activation before the one target delivery and score. Do not inspect, modify,
-move, delete, publish, retry, rerun, or tune the private Stage P output.
+and matching test. Stage T activation
+`06e29cb094e67e9c946012f2aa716ea510501251` passed Base job `97998435433`,
+Optional Neuro Readers job `97998435729`, and CI `32908763353` before the sole
+scoring event.
 
-Current scientific boundary: real BNCI semantics, target-firewalled derivatives,
-and target-blind frozen real-model predictions are proven engineering. No
-target or scientific score has been opened, so no unseen-person,
-EEG-beyond-EOG, decoding, language, movement-intention, live, hardware, or
-clinical claim is established.
+Stage T scored once and is consumed at route `BNCIC3C5-R2`: C3 and C5-partial
+both failed. Selected EEG reached 0.38349 macro balanced accuracy versus 0.25
+no-signal and 0.29668 timing, but posterior EEG reached 0.39236, only 5/9
+participants had positive primary margins, and sign-flip `p=0.06641`. EOG+EEG
+improved log loss over EOG alone by 0.02552 and over EOG+deranged-EEG by
+0.01843, but both missed 0.03, were positive in only 6/9 participants, and had
+`p=0.29102` / `p=0.32227`. There was one target delivery, one score, zero
+updates, and zero reruns.
+
+Read `docs/BNCI_2014_001_STAGE_T_RESULT.md`, its machine result, and matching
+test. Immediate gate: verify, commit, push, and remotely green the exact R2
+result and closeout. Do not inspect, modify, move, delete, publish, retry,
+rerun, or tune any private Stage Q/P/T artifact or consumed target.
+
+Current scientific boundary: a real held-out score shows above-chance and
+above-timing EEG candidate performance plus a small directionally positive EEG
+increment over EOG. The preregistered EEG-specific and participant-consistency
+gates failed, so no unseen-person, EEG-beyond-EOG, decoding, language,
+movement-intention, live, hardware, or clinical claim is established.
 
 ## Prior Lane Context
 

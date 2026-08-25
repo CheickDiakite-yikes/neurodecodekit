@@ -38,8 +38,13 @@
 > the exact prediction freeze. Freeze `2517fd1` passed Base `97996323987`,
 > Optional `97996324203`, and CI `32908059166`. The one-score Stage T activation
 > is prepared with delayed effect. Immediate gate: commit, push, and green that
-> activation before target delivery. Stage T remains closed behind that barrier, and
-> no BNCI scientific claim has been established. All older `Current
+> activation before target delivery. Activation `06e29cb` passed Base
+> `97998435433`, Optional `97998435729`, and CI `32908763353` before the sole
+> score. Stage T returned R2: selected EEG 0.38349 versus 0.25 no-signal and
+> 0.29668 timing, but posterior EEG 0.39236, only 5/9 positive participants,
+> and `p=0.06641`; C5 deltas 0.02552 / 0.01843, 6/9 positive, and nonsignificant.
+> C3 and C5-partial both failed. Immediate gate: commit, push, and green the
+> exact result; no tuning or rerun. All older `Current
 > gate` blocks below are append-only history, not executable instructions.
 
 > **Current gate, 2026-08-24:** exact G1 result `4ef12dd` passed Base job

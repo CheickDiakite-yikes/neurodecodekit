@@ -131,8 +131,23 @@ Read the Stage T activation next:
 2. `registries/bnci_2014_001_stage_t_scoring_activation.v0.json`; and
 3. `tests/test_bnci_2014_001_stage_t_activation.py`.
 
-Immediate gate: commit, push, and remotely green that exact activation before
-the one target delivery and score.
+Stage T activation `06e29cb` passed Base job `97998435433`, Optional Neuro
+Readers job `97998435729`, and CI `32908763353` before the sole score.
+
+Read the Stage T result next:
+
+1. `docs/BNCI_2014_001_STAGE_T_RESULT.md`;
+2. `registries/bnci_2014_001_stage_t_result.v0.json`; and
+3. `tests/test_bnci_2014_001_stage_t_result.py`.
+
+The registered result is `BNCIC3C5-R2`: C3 and C5-partial both failed.
+Selected EEG reached 38.35% balanced accuracy versus 25% no-signal and 29.67%
+timing, but posterior EEG reached 39.24%, only 5/9 participants improved, and
+`p=0.0664`. EOG+EEG moved log loss in the desired direction but missed the
+frozen effect-size, consistency, and significance gates.
+
+Immediate gate: verify, commit, push, and remotely green this exact result and
+closeout. The score is consumed with no tuning or rerun.
 
 ## Scientific Goal And Sequence
 
@@ -145,8 +160,8 @@ G1 generated proof -> A opaque acquisition -> Q target-blind validation
                    -> P target-firewalled prediction freeze -> T one score
 ```
 
-Stage Q and target-blind Stage P are complete; one scientific score remains
-closed behind the Stage T green barrier. Even a maximum later pass can establish only
+Stages Q, P, and T are complete and consumed at R2. This lane established a
+real held-out score but no registered scientific claim. A future independent pass can establish only
 participant-independent BNCI protocol-condition prediction and incremental EEG
 sensor information beyond recorded EOG under this protocol. It cannot establish
 thought or language decoding, movement intention, exclusive motor-cortex

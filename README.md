@@ -163,8 +163,17 @@ transition so handoffs cannot silently return to an older gate. Prediction
 freeze `2517fd1` passed Base job `97996323987`, Optional job `97996324203`, and
 CI `32908059166`.
 The [Stage T scoring activation](docs/BNCI_2014_001_STAGE_T_SCORING_ACTIVATION.md)
-is now prepared with delayed effect; the current gate is to remotely green it
-before the one target delivery and score.
+passed as `06e29cb` with Base job `97998435433`, Optional job `97998435729`,
+and CI `32908763353` before the sole score.
+
+The [Stage T result](docs/BNCI_2014_001_STAGE_T_RESULT.md) is registered route
+`BNCIC3C5-R2`: neither C3 nor C5-partial passed. Selected EEG scored 38.35%
+balanced accuracy versus 25% no-signal and 29.67% timing, but posterior EEG was
+slightly higher at 39.24%, only 5/9 people improved, and `p=0.0664`. EOG+EEG
+improved log loss over EOG alone by 0.02552 and over EOG+deranged-EEG by
+0.01843, but both gains missed the frozen 0.03 threshold, appeared in only 6/9
+people, and were not significant. This is a real held-out scientific result
+and a useful near-miss, not a validated EEG-specific decoding claim.
 
 Current result: [EEGMMIDB-UG1 Stage S-A2](docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md)
 failed closed during verified TLS certificate-chain validation before an HTTP
