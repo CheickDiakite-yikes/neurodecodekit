@@ -1,0 +1,71 @@
+{
+  "schema_name": "neurodecodekit.bnci_2014_001_stage_a_redirect_recovery_implementation_activation",
+  "schema_version": "0.1.0",
+  "activation_id": "BNCI-C3C5-1-A-R-activation-2026-08-24",
+  "recorded_at_local": "2026-08-24",
+  "lane_id": "BNCI-C3C5-1-A-R",
+  "status": "implementation_activation_effective_after_own_remote_green",
+  "green_implementation": {
+    "commit": "09a19d1c1c498bdd6e0ece2fbecb6d15917bdefa",
+    "CI_run_id": 32806186972,
+    "base_python_job_id": 97676637882,
+    "optional_neuro_readers_job_id": 97676637728,
+    "both_required_jobs_green": true
+  },
+  "implementation_artifacts": [
+    {
+      "path": "src/neurodecodekit/datasets/bnci_2014_001_stage_a_redirect_recovery.py",
+      "bytes": 66403,
+      "sha256": "e059b2d1d268e83fcbb08d88abb7ebf0111d38c478e30ff0d343ceb7d4320c1b",
+      "Git_blob": "982caecc8df2f9ea02371b18c0e2f0acd06ff739"
+    },
+    {
+      "path": "src/neurodecodekit/bnci_c3c5_stage_a_redirect_recovery_cli.py",
+      "bytes": 2299,
+      "sha256": "b4297cb53989ad3e24d0f7465e562fabbcf5c6dab14542984249b8d66d49108c",
+      "Git_blob": "cc5002937a8bc59b1ee70cca9c98d27aee238471"
+    },
+    {
+      "path": "tests/test_bnci_2014_001_stage_a_redirect_recovery_implementation.py",
+      "bytes": 12214,
+      "sha256": "9038fd94e6103a3e39bfdc85cc1a3c3213d17ea7e87b81d1320a72960a7960dd",
+      "Git_blob": "017edcb0b11f495efcb173b3d0dbc1c77c5edb53"
+    }
+  ],
+  "activation_conditions": {
+    "this_activation_committed": false,
+    "this_activation_pushed": false,
+    "this_activation_both_required_CI_jobs_green": false,
+    "entire_tracked_tree_clean_at_execution": true,
+    "activation_byte_identical_to_HEAD_at_execution": true,
+    "implementation_commit_ancestor_of_HEAD_at_execution": true,
+    "implementation_artifacts_byte_identical_to_green_commit_at_execution": true
+  },
+  "authority_after_own_remote_green": {
+    "one_manifest_GET": true,
+    "one_replacement_Stage_A_recovery_invocation": true,
+    "exact_18_signed_objects_only": true,
+    "accepted_payload_bytes_exact": 779873919,
+    "MAT_semantic_content_opens": 0,
+    "model_runs": 0,
+    "target_deliveries": 0,
+    "scores": 0
+  },
+  "still_forbidden": [
+    "execution_before_this_activation_commit_push_and_both_CI_jobs_green",
+    "repeat_generated_qualification",
+    "modify_delete_or_reuse_original_consumed_marker",
+    "additional_host_path_file_participant_dataset_or_representation",
+    "MAT_semantic_parse_signal_event_target_or_label_read_during_recovery",
+    "Stage_Q_before_aggregate_recovery_result_remote_green",
+    "model_prediction_target_delivery_or_scoring_during_recovery",
+    "rerun_release_or_claim_upgrade"
+  ],
+  "claim_boundary": {
+    "engineering_authority": "one_exact_signed_object_recovery_after_own_remote_green",
+    "scientific_claim_established": false,
+    "unseen_person_generalization": false,
+    "EEG_beyond_EOG": false,
+    "decoding_performance": false
+  }
+}
