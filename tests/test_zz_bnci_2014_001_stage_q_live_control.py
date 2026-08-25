@@ -363,7 +363,7 @@ class BNCIStageQLiveControlTests(unittest.TestCase):
                 for patcher in patches:
                     patcher.start()
                 try:
-                    receipt = live.execute_registered_stage_q_live(
+                    receipt = live._execute_registered_stage_q_live(
                         root,
                         environ={name: "1" for name in core.THREAD_ENVIRONMENT},
                         remote_green_proof=self._remote_proof(),
@@ -402,13 +402,35 @@ class BNCIStageQLiveControlTests(unittest.TestCase):
                 mock.patch.object(core, "_private_manifest") as private_manifest,
             ):
                 with self.assertRaisesRegex(core.BNCIStageQRefusal, "free-disk"):
-                    live.execute_registered_stage_q_live(
+                    live._execute_registered_stage_q_live(
                         root,
                         environ={name: "1" for name in core.THREAD_ENVIRONMENT},
                         remote_green_proof=self._remote_proof(),
+                        key_factory=lambda size: bytes([9]) * size,
                     )
             self.assertFalse((root / core.STAGE_Q_MARKER_RELATIVE_PATH).exists())
             private_manifest.assert_not_called()
+
+    def test_public_executor_has_no_proof_or_key_override(self) -> None:
+        parameters = inspect.signature(live.execute_registered_stage_q_live).parameters
+        self.assertEqual(set(parameters), {"root", "environ"})
+        proof = self._remote_proof()
+        with (
+            mock.patch.object(live, "collect_remote_green_proof", return_value=proof),
+            mock.patch.object(
+                live,
+                "_execute_registered_stage_q_live",
+                return_value={"status": "fixture"},
+            ) as private_execute,
+        ):
+            result = live.execute_registered_stage_q_live(ROOT, environ={})
+        self.assertEqual(result, {"status": "fixture"})
+        private_execute.assert_called_once_with(
+            ROOT,
+            environ={},
+            remote_green_proof=proof,
+            key_factory=live.secrets.token_bytes,
+        )
 
     def test_final_resource_enforcement_refuses_runtime_rss_and_output(self) -> None:
         with mock.patch.object(time, "perf_counter", return_value=core.RUNTIME_CAP_SECONDS + 1):
@@ -428,7 +450,7 @@ class BNCIStageQLiveControlTests(unittest.TestCase):
                 )
 
     def test_consumption_and_success_publication_order_is_fail_closed(self) -> None:
-        source = inspect.getsource(live.execute_registered_stage_q_live)
+        source = inspect.getsource(live._execute_registered_stage_q_live)
         marker_write = source.index("_exclusive_write(repo, marker, marker_payload)")
         self.assertLess(source.index("layout_bound ="), marker_write)
         self.assertLess(source.index("free_before ="), marker_write)

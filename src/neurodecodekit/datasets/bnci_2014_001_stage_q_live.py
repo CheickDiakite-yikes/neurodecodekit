@@ -694,12 +694,12 @@ def _write_live_derivatives(
     return manifest, total
 
 
-def execute_registered_stage_q_live(
+def _execute_registered_stage_q_live(
     root: str | Path,
     *,
     environ: Mapping[str, str],
     remote_green_proof: Mapping[str, Any],
-    key_factory: Callable[[int], bytes] = secrets.token_bytes,
+    key_factory: Callable[[int], bytes],
 ) -> dict[str, Any]:
     repo = Path(root).resolve()
     if repo != core._repo_root():
@@ -900,3 +900,19 @@ def execute_registered_stage_q_live(
         if scoring_key_path.exists() and not output.exists():
             os.unlink(scoring_key_path)
         raise
+
+
+def execute_registered_stage_q_live(
+    root: str | Path,
+    *,
+    environ: Mapping[str, str],
+) -> dict[str, Any]:
+    """Run the public fixed live path with fresh proof and secure sealing keys."""
+
+    remote_proof = collect_remote_green_proof(root)
+    return _execute_registered_stage_q_live(
+        root,
+        environ=environ,
+        remote_green_proof=remote_proof,
+        key_factory=secrets.token_bytes,
+    )

@@ -105,7 +105,10 @@ job names, IDs, and successful conclusions. Immediately before the zero-network
 semantic executor, the live CLI performs metadata-only `git ls-remote` and
 GitHub Actions checks for the activation commit itself. It then passes an
 in-memory exact proof into the executor, which requires the local, remote, CI,
-and activation head SHAs to agree before writing the consumed marker.
+and activation head SHAs to agree before writing the consumed marker. The
+public executor exposes no proof or key override: it collects that proof itself
+and always seals targets with `secrets.token_bytes`. Only the private
+generated-test helper accepts injected proof and key factories.
 
 The generated run directly qualified the MAT identity/parser, calibration
 recognition, run-bound feature core, target invariance, deterministic archive,

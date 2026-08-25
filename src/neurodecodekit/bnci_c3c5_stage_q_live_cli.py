@@ -9,7 +9,6 @@ from pathlib import Path
 from typing import Sequence
 
 from neurodecodekit.datasets.bnci_2014_001_stage_q_live import (
-    collect_remote_green_proof,
     execute_registered_stage_q_live,
 )
 
@@ -26,11 +25,9 @@ def build_parser() -> argparse.ArgumentParser:
 def main(argv: Sequence[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     root = Path(args.repo_root)
-    remote_proof = collect_remote_green_proof(root)
     result = execute_registered_stage_q_live(
         root,
         environ=os.environ,
-        remote_green_proof=remote_proof,
     )
     print(json.dumps(result, sort_keys=True, indent=2))
     return 0
