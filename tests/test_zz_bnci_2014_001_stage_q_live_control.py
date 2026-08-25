@@ -461,7 +461,7 @@ class BNCIStageQLiveControlTests(unittest.TestCase):
         self.assertLess(receipt_write, final_gate)
         self.assertLess(final_gate, promotion)
 
-    def test_live_cli_help_and_pre_activation_commit_is_fail_closed(self) -> None:
+    def test_live_cli_help(self) -> None:
         environment = os.environ.copy()
         environment["PYTHONPATH"] = str(SRC)
         completed = subprocess.run(
@@ -473,19 +473,6 @@ class BNCIStageQLiveControlTests(unittest.TestCase):
             check=True,
         )
         self.assertIn("green-activated", completed.stdout)
-        pre_activation_commit = "e5ca6a24f65beab12b89eddad938c96fe4ecaf00"
-        absent = subprocess.run(
-            [
-                "git",
-                "cat-file",
-                "-e",
-                f"{pre_activation_commit}:{live.LIVE_ACTIVATION_RELATIVE_PATH.as_posix()}",
-            ],
-            cwd=ROOT,
-            capture_output=True,
-            text=True,
-        )
-        self.assertNotEqual(absent.returncode, 0)
 
 
 if __name__ == "__main__":

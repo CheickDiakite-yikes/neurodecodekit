@@ -2,7 +2,7 @@
 
 Date: 2026-08-25
 Lane: `BNCI-C3C5-1-Q`
-Status: prepared with delayed effect pending this activation commit's remote-green proof
+Status: inactive after failed first proof; compatibility correction pending
 
 ## Exact Green Predecessors
 
@@ -22,9 +22,19 @@ the exact pre-activation implementation commit was fail-closed.
 
 ## Delayed Effect
 
-This activation has no live effect while uncommitted, unpushed, or remotely
-unproven. The one Stage Q execution becomes eligible only after the exact
-activation commit is pushed and both required CI jobs pass.
+This activation has delayed effect and no live effect while uncommitted,
+unpushed, or remotely unproven. The one Stage Q execution becomes eligible
+only after the exact activation commit is pushed. The transition remains
+closed until both required CI jobs pass.
+
+Initial activation commit `e67809593de548bf8dd2afb1f1298b7a2c9b26eb`
+failed Base job `97727563579` in CI `32823864546`. The failing tests attempted
+to read the prior implementation commit from a shallow Actions checkout and
+therefore raised before completing the suite. No private path, MAT, target,
+model, prediction, score, marker, or derivative was touched. This failure has
+no activation effect. A test-only compatibility commit must first pass both
+jobs; the activation must then be rebound to that exact green commit and pass
+both jobs itself.
 
 Immediately before the semantic executor, the public live CLI must obtain a
 fresh remote branch SHA and GitHub Actions result for the activation commit.

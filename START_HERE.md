@@ -58,10 +58,15 @@ Exact final implementation `e5ca6a2` passed Base Python job `97723744136`,
 Optional Neuro Readers job `97723744450`, and CI `32822604745`. Read
 `docs/BNCI_2014_001_STAGE_Q_LIVE_ACTIVATION.md` and its machine activation.
 
-Immediate gate: commit, push, and remotely green that exact activation. The
-private manifest and MAT payloads remain closed until both activation CI jobs
-pass. The live CLI must then prove a fresh remote SHA and both successful jobs
-before its zero-network semantic executor can write the consumed marker.
+Initial activation commit `e678095` failed Base job `97727563579` in CI
+`32823864546` because its tests assumed the prior implementation commit existed
+in the shallow Actions checkout. It had no effect and opened no private path.
+
+Immediate gate: remotely green the test-only compatibility correction, then
+rebind and green the exact activation. The private manifest and MAT payloads
+remain closed until both final activation CI jobs pass. The live CLI must then
+prove a fresh remote SHA and both successful jobs before its zero-network
+semantic executor can write the consumed marker.
 
 ## Scientific Goal And Sequence
 

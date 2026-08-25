@@ -11,8 +11,11 @@
 > 498,434,048-byte peak RSS with zero private or scientific operations. Immediate
 > final implementation `e5ca6a2` passed Base job `97723744136`, Optional job
 > `97723744450`, and CI `32822604745`. Its exact live activation is prepared
-> with delayed effect. Immediate gate: commit, push, and remotely green that
-> activation; no private manifest or MAT may be opened yet. The future live CLI
+> with delayed effect. Initial activation `e678095` failed Base CI because its
+> proof tests assumed ancestor objects in a shallow Actions checkout; it had no
+> effect and touched no private path. Immediate gate: green the test-only
+> compatibility correction, then rebind and green the activation. No private
+> manifest or MAT may be opened yet. The future live CLI
 > must freshly prove the activation commit and both CI jobs before consumption,
 > and its 227,843,968-byte conservative layout bound leaves 309,026,944 bytes of
 > headroom under the private cap. P and T remain ordered

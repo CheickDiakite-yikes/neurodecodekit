@@ -99,10 +99,18 @@ passed Base Python job `97723744136`, Optional Neuro Readers job
 matching test. The Stage Q live activation binds all 11 exact implementation
 artifacts and has delayed effect.
 
-Immediate gate: verify, commit, push, and remotely green that exact activation.
-Do not open the private manifest or any MAT before both activation CI jobs pass.
-Afterward, the public live CLI must freshly prove the activation commit's remote
-SHA and both successful jobs before the one semantic invocation can consume.
+Initial activation commit `e67809593de548bf8dd2afb1f1298b7a2c9b26eb`
+failed Base job `97727563579` in CI `32823864546` because two activation tests
+required an ancestor Git object unavailable in the shallow Actions checkout.
+The activation had no effect and no private operation occurred. The same pass
+also exposed that one historical test inside the immutable artifact table had
+to be narrowed from permanent activation absence to CLI behavior.
+
+Immediate gate: remotely green the test-only compatibility correction, then
+rebind and green the activation to that exact commit. Do not open the private
+manifest or any MAT before both final activation CI jobs pass. Afterward, the
+public live CLI must freshly prove the activation commit's remote SHA and both
+successful jobs before the one semantic invocation can consume.
 Stage P remains closed until the aggregate Q result is green. Stage T remains
 closed until the prediction-freeze record is committed, pushed, and remotely
 green.
