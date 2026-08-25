@@ -1,0 +1,57 @@
+{
+  "schema_name": "neurodecodekit.bnci_2014_001_stage_a_redirect_recovery_generated_result",
+  "schema_version": "0.1.0",
+  "result_id": "BNCI-C3C5-1-A-R-G1-result-2026-08-24",
+  "recorded_at_local": "2026-08-24",
+  "lane_id": "BNCI-C3C5-1-A-R",
+  "status": "passed_generated_manifest_and_transport_qualification_only",
+  "case_classes_passed": 18,
+  "validated_exact_members": 18,
+  "validated_exact_member_bytes": 779873919,
+  "deterministic_replays": 1,
+  "direct_refusals": 12,
+  "generated_operations": {
+    "manifest_requests": 1,
+    "payload_requests": 4,
+    "resume_requests": 1,
+    "accepted_files": 3,
+    "accepted_bytes": 76,
+    "mock_adapter_calls": 1
+  },
+  "measurements": {
+    "generated_fixture_bytes": 11558,
+    "temporary_generated_payload_bytes": 76,
+    "retained_generated_payload_bytes": 0,
+    "runtime_seconds": 0.010994000011123717,
+    "peak_process_RSS_bytes": 29786112
+  },
+  "resources": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1
+  },
+  "real_operations": {
+    "manifest_requests": 0,
+    "payload_requests": 0,
+    "payload_bytes": 0,
+    "ignored_path_operations": 0,
+    "MAT_semantic_content_opens": 0,
+    "MAT_semantic_parses": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0
+  },
+  "closed": {
+    "qualification_may_be_repeated": false,
+    "result_registry_presence_enforced_by_implementation": true,
+    "live_recovery_open_now": false
+  },
+  "claim_boundary": {
+    "scientific_claim_established": false,
+    "unseen_person_generalization": false,
+    "EEG_beyond_EOG": false,
+    "decoding_performance": false
+  }
+}

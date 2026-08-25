@@ -1,0 +1,102 @@
+{
+  "schema_name": "neurodecodekit.bnci_2014_001_stage_a_redirect_recovery_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "BNCI-C3C5-1-A-R-implementation-2026-08-24",
+  "recorded_at_local": "2026-08-24",
+  "lane_id": "BNCI-C3C5-1-A-R",
+  "status": "generated_qualified_live_recovery_closed_pending_own_remote_green_and_activation",
+  "green_authorization_decision": {
+    "commit": "588dd70c62a6f7041d677f9baf35e476ef739627",
+    "CI_run_id": 32803138246,
+    "base_python_job_id": 97667897074,
+    "optional_neuro_readers_job_id": 97667896798,
+    "both_required_jobs_green": true,
+    "decision_sha256": "fe8ec85f92b871e41a5c5abf6ff28f3de2b0681f0e93852946565fef587a875d"
+  },
+  "implementation_artifacts": [
+    {
+      "path": "src/neurodecodekit/datasets/bnci_2014_001_stage_a_redirect_recovery.py",
+      "bytes": 66403,
+      "sha256": "e059b2d1d268e83fcbb08d88abb7ebf0111d38c478e30ff0d343ceb7d4320c1b",
+      "Git_blob": "982caecc8df2f9ea02371b18c0e2f0acd06ff739"
+    },
+    {
+      "path": "src/neurodecodekit/bnci_c3c5_stage_a_redirect_recovery_cli.py",
+      "bytes": 2299,
+      "sha256": "b4297cb53989ad3e24d0f7465e562fabbcf5c6dab14542984249b8d66d49108c",
+      "Git_blob": "cc5002937a8bc59b1ee70cca9c98d27aee238471"
+    },
+    {
+      "path": "tests/test_bnci_2014_001_stage_a_redirect_recovery_implementation.py",
+      "bytes": 12214,
+      "sha256": "9038fd94e6103a3e39bfdc85cc1a3c3213d17ea7e87b81d1320a72960a7960dd",
+      "Git_blob": "017edcb0b11f495efcb173b3d0dbc1c77c5edb53"
+    }
+  ],
+  "manifest_contract": {
+    "GETs_per_live_invocation_exact": 1,
+    "body_bytes_maximum": 1048576,
+    "redirects": 0,
+    "content_encoding": "identity",
+    "selected_records_exact": 18,
+    "selected_payload_bytes_exact": 779873919,
+    "duplicate_JSON_keys_allowed": false,
+    "nonfinite_JSON_values_allowed": false
+  },
+  "signed_object_contract": {
+    "scheme": "https",
+    "host_allowlist": ["nemar.s3.us-east-2.amazonaws.com"],
+    "object_path_bound_to_registered_size_and_sha256": true,
+    "query_keys_allowlisted": true,
+    "response_redirects": 0,
+    "signed_credentials_retained": false
+  },
+  "filesystem_contract": {
+    "directory_descriptor_anchored": true,
+    "O_NOFOLLOW": true,
+    "exclusive_marker_and_receipt": true,
+    "atomic_bundle_publication": true,
+    "cleanup_scope": "invocation_created_descriptor_anchored_temporary_directory_only",
+    "original_consumed_marker_mutation": false
+  },
+  "live_proof_gate": {
+    "tracked_clean_activation_required": true,
+    "activation_must_match_HEAD": true,
+    "implementation_artifacts_must_match_green_commit": true,
+    "entire_tracked_tree_must_be_clean": true,
+    "activation_exists_now": false,
+    "live_recovery_open_now": false
+  },
+  "generated_qualification": {
+    "case_classes_passed": 18,
+    "direct_refusals": 12,
+    "generated_manifest_requests": 1,
+    "generated_payload_requests": 4,
+    "generated_resume_requests": 1,
+    "temporary_generated_payload_bytes": 76,
+    "retained_generated_payload_bytes": 0,
+    "real_operations": 0,
+    "qualification_may_be_repeated": false
+  },
+  "verification": {
+    "focused_implementation_tests_passed": 17,
+    "focused_BNCI_tests_passed": 129,
+    "focused_BNCI_tests_skipped": 4,
+    "full_dependency_light_tests_passed": 6049,
+    "full_dependency_light_tests_skipped": 216,
+    "full_dependency_light_runtime_seconds": 275.733,
+    "ruff_passed": true,
+    "git_diff_check_passed": true,
+    "real_network_requests": 0,
+    "ignored_path_operations": 0,
+    "scientific_scores": 0
+  },
+  "next_gate": "commit_push_green_then_commit_push_green_implementation_activation_before_live_recovery",
+  "claim_boundary": {
+    "engineering_capability": "generated_qualified_signed_object_recovery",
+    "scientific_claim_established": false,
+    "unseen_person_generalization": false,
+    "EEG_beyond_EOG": false,
+    "decoding_performance": false
+  }
+}
