@@ -106,9 +106,24 @@ Read the current activation next:
 2. `registries/bnci_2014_001_stage_p_implementation_activation.v0.json`; and
 3. `tests/test_bnci_2014_001_stage_p_activation.py`.
 
-Immediate gate: commit, push, and remotely green this exact activation before
-the one real target-blind model execution. Stage T remains closed behind the
-later remotely green prediction freeze and its own activation.
+Stage P activation `a49609b` passed Base job `97992958552`, Optional Neuro
+Readers job `97992958346`, and CI `32906928931` before the one real execution.
+
+Read the Stage P result next:
+
+1. `docs/BNCI_2014_001_STAGE_P_RESULT.md`;
+2. `registries/bnci_2014_001_stage_p_prediction_freeze.v0.json`; and
+3. `tests/test_bnci_2014_001_stage_p_prediction_freeze.py`.
+
+Stage P passed and is consumed: 468 fits, 495 inference/prediction sets, and
+41,472 private target-blind prediction rows completed in 55.674016 seconds at
+629,194,752-byte peak RSS. It emitted 11,298,505 private bytes and a 5,037-byte
+aggregate freeze. All nine source-only selectors chose E1. Held-out targets
+remained sealed and no score occurred. Repeated frozen-cap LBFGS convergence
+warnings were observed and recorded without a model change or rerun.
+
+Immediate gate: commit, push, and remotely green the exact prediction freeze.
+Only then may the separate Stage T activation be created and greened.
 
 ## Scientific Goal And Sequence
 
@@ -121,8 +136,8 @@ G1 generated proof -> A opaque acquisition -> Q target-blind validation
                    -> P target-firewalled prediction freeze -> T one score
 ```
 
-Stage Q and the Stage P implementation are complete; real execution remains
-closed behind the activation's green barrier. Even a maximum later pass can establish only
+Stage Q and target-blind Stage P are complete; one scientific score remains
+closed behind the freeze and Stage T green barriers. Even a maximum later pass can establish only
 participant-independent BNCI protocol-condition prediction and incremental EEG
 sensor information beyond recorded EOG under this protocol. It cannot establish
 thought or language decoding, movement intention, exclusive motor-cortex

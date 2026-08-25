@@ -139,16 +139,30 @@ Exact Stage P/T implementation `7ba4f7c30f260bc7603e8928ad8d9ff010e54872`
 passed Base Python job `97990455561`, Optional Neuro Readers job `97990455765`,
 and CI `32906104408`.
 
-Read `docs/BNCI_2014_001_STAGE_P_LIVE_ACTIVATION.md`, its machine activation,
-and matching test. Immediate gate: commit, push, and remotely green that exact
-activation. Only then may the single real target-blind Stage P model execution
-run. Stage T remains closed until the exact prediction-freeze record is
-committed, pushed, and remotely green.
+Stage P activation `a49609b77fb9407f7c8ea8368c72b84c03fc446c`
+passed Base job `97992958552`, Optional Neuro Readers job `97992958346`, and CI
+`32906928931` before the one real invocation.
 
-Current scientific boundary: real BNCI MAT readability, aggregate semantics,
-and target-firewalled derivative construction are proven engineering. No model
-or scientific score has run, so no unseen-person, EEG-beyond-EOG, decoding,
-language, movement-intention, live, hardware, or clinical claim is established.
+Stage P passed and is consumed. It completed 468 fits, 495 inference/prediction
+sets, and 41,472 private prediction rows in 55.674016 seconds at 629,194,752-
+byte peak process-tree RSS, emitting 11,298,505 private bytes and one 5,037-
+byte aggregate hash-only freeze. All nine source-only selectors chose E1.
+Held-out-E targets and scoring keys remained sealed; held-out-T use, target
+deliveries, scores, post-target updates, reruns, and analysis network bytes
+were zero. Repeated LBFGS convergence warnings at the frozen 80-iteration cap
+were observed; their exact count was not retained, and no model setting was
+changed.
+
+Read `docs/BNCI_2014_001_STAGE_P_RESULT.md`, the exact public prediction freeze,
+and matching test. Immediate gate: commit, push, and remotely green that exact
+freeze before creating a separate Stage T activation. Do not inspect, modify,
+move, delete, publish, retry, rerun, or tune the private Stage P output.
+
+Current scientific boundary: real BNCI semantics, target-firewalled derivatives,
+and target-blind frozen real-model predictions are proven engineering. No
+target or scientific score has been opened, so no unseen-person,
+EEG-beyond-EOG, decoding, language, movement-intention, live, hardware, or
+clinical claim is established.
 
 ## Prior Lane Context
 

@@ -145,13 +145,23 @@ Neuro Readers job `97990455765`, and CI `32906104408`. The minimal
 binds that green implementation and its six exact artifacts with delayed
 effect. It enables no work until its own commit is pushed and both CI jobs pass.
 
+Activation `a49609b` passed Base job `97992958552`, Optional Neuro Readers job
+`97992958346`, and CI `32906928931` before the one real target-blind Stage P
+run. The [prediction-freeze result](docs/BNCI_2014_001_STAGE_P_RESULT.md)
+completed all nine folds: 468 fits, 495 inference/prediction sets, and 41,472
+private prediction rows in 55.674 seconds at 629,194,752-byte peak RSS. It
+emitted 11,298,505 private bytes and a 5,037-byte aggregate public freeze. All
+nine source-only selectors chose E1. Held-out targets remained sealed, and no
+score or claim upgrade occurred. Repeated convergence warnings at the frozen
+80-iteration cap were recorded without changing or rerunning the models.
+
 The machine-readable current state is
 [`registries/current_research_frontier.v0.json`](registries/current_research_frontier.v0.json).
 It freezes the active lane, proof commits, consumed one-shot state, measured
 result, resource caps, five scientific goals, claim boundary, and exact next
 transition so handoffs cannot silently return to an older gate. The current
-gate is to commit, push, and remotely prove the exact Stage P activation before
-its one real target-blind model run.
+gate is to commit, push, and remotely prove the exact prediction freeze before
+creating the separate one-score Stage T activation.
 
 Current result: [EEGMMIDB-UG1 Stage S-A2](docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md)
 failed closed during verified TLS certificate-chain validation before an HTTP
@@ -164,8 +174,8 @@ be repaired or retried under this lane. Exact result `ba8645e` passed both
 jobs in CI `32740773041`; proof-only closeout `d9eae69` passed both jobs in CI
 `32742694237` without reopening the consumed marker or payload paths.
 
-BNCI-C3C5-1 now has a verified recovery bundle and real target-firewalled Stage
-Q semantic derivatives, but no real-model run, prediction freeze, or scientific score. Even a
+BNCI-C3C5-1 now has a verified recovery bundle, real target-firewalled Stage Q
+derivatives, and frozen real-model predictions, but no target delivery or scientific score. Even a
 future maximum pass would establish only participant-independent BNCI
 protocol-condition prediction and incremental EEG sensor information beyond
 three recorded EOG channels, not thought reading, language, movement intention,

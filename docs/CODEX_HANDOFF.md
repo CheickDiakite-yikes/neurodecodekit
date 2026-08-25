@@ -28,9 +28,14 @@
 > time, the frozen 468-fit / 495-prediction-set schedule, a hash-only public
 > freeze, and a separately gated one-shot scorer. Exact implementation
 > `7ba4f7c` passed Base `97990455561`, Optional `97990455765`, and CI
-> `32906104408`. Its six-artifact Stage P activation is prepared with delayed
-> effect. Immediate gate: commit, push, and green that activation before the
-> one target-blind real model run. Stage T remains closed behind the green prediction freeze, and
+> `32906104408`. Stage P activation `a49609b` then passed Base `97992958552`,
+> Optional `97992958346`, and CI `32906928931` before the one live run. Stage P
+> passed and is consumed: 468 fits, 495 prediction sets, and 41,472 private
+> rows in 55.674016 seconds at 629,194,752-byte peak RSS, with 11,298,505
+> private bytes and one 5,037-byte public freeze. All nine source-only selectors
+> chose E1. Targets and scores stayed sealed/zero; frozen-cap LBFGS warnings
+> were observed without tuning or rerun. Immediate gate: commit, push, and green
+> the exact prediction freeze. Stage T remains closed behind that barrier, and
 > no BNCI scientific claim has been established. All older `Current
 > gate` blocks below are append-only history, not executable instructions.
 

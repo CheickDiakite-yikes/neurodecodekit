@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "recorded_at_local": "2026-08-25",
   "active_lane_id": "BNCI-C3C5-1-P",
-  "status": "Stage_P_activation_prepared_pending_commit_push_and_remote_green",
+  "status": "Stage_P_prediction_freeze_created_pending_commit_push_and_remote_green",
   "evidence_sequence": [
     "G1_generated_proof",
     "A_opaque_acquisition",
@@ -64,7 +64,12 @@
     "Stage_P_T_implementation_CI_run_id": 32906104408,
     "Stage_P_T_implementation_base_python_job_id": 97990455561,
     "Stage_P_T_implementation_optional_neuro_readers_job_id": 97990455765,
-    "both_Stage_P_T_implementation_jobs_green": true
+    "both_Stage_P_T_implementation_jobs_green": true,
+    "Stage_P_activation_commit": "a49609b77fb9407f7c8ea8368c72b84c03fc446c",
+    "Stage_P_activation_CI_run_id": 32906928931,
+    "Stage_P_activation_base_python_job_id": 97992958552,
+    "Stage_P_activation_optional_neuro_readers_job_id": 97992958346,
+    "both_Stage_P_activation_jobs_green": true
   },
   "consumed_operations": {
     "G1_generated_invocation_consumed": true,
@@ -80,7 +85,9 @@
     "Stage_Q_generated_qualification_consumed": true,
     "Stage_Q_generated_qualification_rerun_allowed": false,
     "Stage_Q_live_invocation_consumed": true,
-    "Stage_Q_live_retry_or_rerun_allowed": false
+    "Stage_Q_live_retry_or_rerun_allowed": false,
+    "Stage_P_live_invocation_consumed": true,
+    "Stage_P_live_retry_or_rerun_allowed": false
   },
   "prelaunch_rejection": {
     "reason": "obsolete_AGENTS_stop_before_Stage_A_instruction",
@@ -172,11 +179,33 @@
     "scores": 0,
     "result_path": "registries/bnci_2014_001_stage_q_result.v0.json"
   },
+  "Stage_P_live_result": {
+    "status": "target_blind_predictions_frozen_targets_and_scoring_keys_still_sealed",
+    "folds": 9,
+    "held_out_participants": 9,
+    "parameter_update_fits": 468,
+    "model_inference_runs": 495,
+    "prediction_sets": 495,
+    "private_prediction_rows": 41472,
+    "private_generated_bytes": 11298505,
+    "runtime_seconds": 55.67401558405254,
+    "peak_process_tree_RSS_bytes": 629194752,
+    "held_out_T_rows_used": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "reruns": 0,
+    "aggregate_source_only_selection": {
+      "E1_folds": 9,
+      "E2_folds": 0
+    },
+    "runtime_warning": "scikit_learn_LBFGS_ConvergenceWarning_at_frozen_80_iteration_cap_exact_count_not_retained",
+    "result_path": "registries/bnci_2014_001_stage_p_prediction_freeze.v0.json"
+  },
   "stage_state": {
     "control_plane_update": "complete_remotely_green",
     "A_opaque_acquisition": "complete_consumed_result_remotely_green",
     "Q_target_blind_validation": "complete_consumed_result_remotely_green",
-    "P_prediction_freeze": "activation_prepared_pending_commit_push_and_remote_green",
+    "P_prediction_freeze": "complete_consumed_pending_commit_push_and_remote_green",
     "T_one_score": "closed_pending_green_prediction_freeze",
     "release": "closed",
     "claim_upgrade": "closed"
@@ -189,12 +218,12 @@
     "EEG_beyond_recorded_peripheral_controls": "not_established"
   },
   "nearest_decisive_goal": "test_incremental_EEG_sensor_information_beyond_recorded_EOG_on_completely_held_out_participants",
-  "immediate_next_gate": "commit_push_and_remotely_green_exact_Stage_P_activation_before_one_real_target_blind_model_execution",
+  "immediate_next_gate": "commit_push_and_remotely_green_exact_Stage_P_prediction_freeze_before_Stage_T_activation",
   "claim_boundary": {
-    "engineering_capability_established": "real_18_MAT_108_run_5184_trial_semantic_validation_and_target_firewalled_nine_fold_derivatives",
+    "engineering_capability_established": "real_18_MAT_target_firewalled_nine_fold_derivatives_and_41472_hash_frozen_target_blind_prediction_rows",
     "verified_recovery_bundle_acquired": true,
     "real_MAT_semantics_validated": true,
-    "real_neural_model_run": false,
+    "real_neural_model_run": true,
     "scientific_score_produced": false,
     "unseen_person_generalization": false,
     "EEG_beyond_EOG": false,

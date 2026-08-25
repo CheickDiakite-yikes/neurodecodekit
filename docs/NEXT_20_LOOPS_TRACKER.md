@@ -24,9 +24,13 @@
 > prediction-set schedule, an aggregate hash-only freeze, and a separately
 > gated one-score Stage T path. Exact implementation `7ba4f7c` passed Base
 > `97990455561`, Optional `97990455765`, and CI `32906104408`. Its exact
-> six-artifact activation is prepared with delayed effect. Current gate:
-> commit, push, and green that activation before the one real Stage P run. No real model,
-> prediction freeze, target delivery, score, or claim upgrade has occurred.
+> six-artifact activation `a49609b` passed Base `97992958552`, Optional
+> `97992958346`, and CI `32906928931` before the one real Stage P run. Stage P
+> passed and is consumed: 468 fits, 495 prediction sets, 41,472 private rows,
+> 55.674016 seconds, 629,194,752-byte peak RSS, 11,298,505 private bytes, and
+> one 5,037-byte aggregate freeze. All nine source-only selectors chose E1.
+> Targets and scores stayed sealed/zero. Current gate: commit, push, and green
+> the exact freeze before Stage T activation. No claim upgrade has occurred.
 >
 > **Stage A result history (2026-08-25):** control-plane commit `21cedd5` passed
 > both jobs in CI `32811586786` before the sole signed-object recovery. Stage A

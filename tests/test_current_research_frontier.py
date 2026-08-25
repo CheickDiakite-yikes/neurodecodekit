@@ -20,7 +20,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(self.frontier["active_lane_id"], "BNCI-C3C5-1-P")
         self.assertEqual(
             self.frontier["status"],
-            "Stage_P_activation_prepared_pending_commit_push_and_remote_green",
+            "Stage_P_prediction_freeze_created_pending_commit_push_and_remote_green",
         )
 
     def test_proof_chain_records_green_recovery_activation(self):
@@ -76,6 +76,12 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         )
         self.assertEqual(proof["Stage_P_T_implementation_CI_run_id"], 32_906_104_408)
         self.assertTrue(proof["both_Stage_P_T_implementation_jobs_green"])
+        self.assertEqual(
+            proof["Stage_P_activation_commit"],
+            "a49609b77fb9407f7c8ea8368c72b84c03fc446c",
+        )
+        self.assertEqual(proof["Stage_P_activation_CI_run_id"], 32_906_928_931)
+        self.assertTrue(proof["both_Stage_P_activation_jobs_green"])
 
     def test_prelaunch_rejection_did_not_consume_recovery(self):
         rejection = self.frontier["prelaunch_rejection"]
@@ -127,6 +133,12 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(live_result["task_runs"], 108)
         self.assertEqual(live_result["trials"], 5_184)
         self.assertEqual(live_result["scores"], 0)
+        stage_p_result = self.frontier["Stage_P_live_result"]
+        self.assertEqual(stage_p_result["parameter_update_fits"], 468)
+        self.assertEqual(stage_p_result["prediction_sets"], 495)
+        self.assertEqual(stage_p_result["private_prediction_rows"], 41_472)
+        self.assertEqual(stage_p_result["target_deliveries"], 0)
+        self.assertEqual(stage_p_result["scores"], 0)
 
     def test_all_five_scientific_goals_and_claims_remain_unestablished(self):
         self.assertEqual(
@@ -139,10 +151,12 @@ class CurrentResearchFrontierTests(unittest.TestCase):
                 "engineering_capability_established",
                 "verified_recovery_bundle_acquired",
                 "real_MAT_semantics_validated",
+                "real_neural_model_run",
             }:
                 self.assertFalse(value, key)
         self.assertTrue(claims["verified_recovery_bundle_acquired"])
         self.assertTrue(claims["real_MAT_semantics_validated"])
+        self.assertTrue(claims["real_neural_model_run"])
 
     def test_control_plane_entrypoints_name_the_current_gate(self):
         expected = {
