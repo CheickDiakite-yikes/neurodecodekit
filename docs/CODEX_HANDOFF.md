@@ -26,9 +26,11 @@
 > `docs/BNCI_2014_001_STAGE_P_T_IMPLEMENTATION.md` and its machine record. The
 > new live bridge enforces the exact 9 x 6 x 48 grid, one fold-local child at a
 > time, the frozen 468-fit / 495-prediction-set schedule, a hash-only public
-> freeze, and a separately gated one-shot scorer. Immediate gate: test, commit,
-> push, and green this implementation, then add and green the minimal Stage P
-> activation. Stage T remains closed behind the green prediction freeze, and
+> freeze, and a separately gated one-shot scorer. Exact implementation
+> `7ba4f7c` passed Base `97990455561`, Optional `97990455765`, and CI
+> `32906104408`. Its six-artifact Stage P activation is prepared with delayed
+> effect. Immediate gate: commit, push, and green that activation before the
+> one target-blind real model run. Stage T remains closed behind the green prediction freeze, and
 > no BNCI scientific claim has been established. All older `Current
 > gate` blocks below are append-only history, not executable instructions.
 

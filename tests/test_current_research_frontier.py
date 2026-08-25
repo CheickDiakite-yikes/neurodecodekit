@@ -20,7 +20,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(self.frontier["active_lane_id"], "BNCI-C3C5-1-P")
         self.assertEqual(
             self.frontier["status"],
-            "Stage_Q_result_remotely_green_Stage_P_live_implementation_pending_green",
+            "Stage_P_activation_prepared_pending_commit_push_and_remote_green",
         )
 
     def test_proof_chain_records_green_recovery_activation(self):
@@ -70,6 +70,12 @@ class CurrentResearchFrontierTests(unittest.TestCase):
             "9832ae5e60c42bf975ccfdd22740267ef802d191",
         )
         self.assertTrue(proof["both_Stage_Q_result_jobs_green"])
+        self.assertEqual(
+            proof["Stage_P_T_implementation_commit"],
+            "7ba4f7c30f260bc7603e8928ad8d9ff010e54872",
+        )
+        self.assertEqual(proof["Stage_P_T_implementation_CI_run_id"], 32_906_104_408)
+        self.assertTrue(proof["both_Stage_P_T_implementation_jobs_green"])
 
     def test_prelaunch_rejection_did_not_consume_recovery(self):
         rejection = self.frontier["prelaunch_rejection"]

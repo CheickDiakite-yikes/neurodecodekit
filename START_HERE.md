@@ -97,10 +97,18 @@ completeness firewall, sequential fold-local model controller, aggregate
 hash-only prediction freeze, and separately activated Stage T target transport
 and scorer. It changes no frozen scientific model or gate.
 
-Immediate gate: commit, push, and remotely green the exact Stage P/T
-implementation. Then add and green the Stage P activation before the one real
-model execution. Stage T remains closed behind the later remotely green
-prediction freeze and its own activation.
+Exact implementation `7ba4f7c` passed Base Python job `97990455561`, Optional
+Neuro Readers job `97990455765`, and CI `32906104408`.
+
+Read the current activation next:
+
+1. `docs/BNCI_2014_001_STAGE_P_LIVE_ACTIVATION.md`;
+2. `registries/bnci_2014_001_stage_p_implementation_activation.v0.json`; and
+3. `tests/test_bnci_2014_001_stage_p_activation.py`.
+
+Immediate gate: commit, push, and remotely green this exact activation before
+the one real target-blind model execution. Stage T remains closed behind the
+later remotely green prediction freeze and its own activation.
 
 ## Scientific Goal And Sequence
 
@@ -113,8 +121,8 @@ G1 generated proof -> A opaque acquisition -> Q target-blind validation
                    -> P target-firewalled prediction freeze -> T one score
 ```
 
-Stage Q is complete; Stage P implementation is active and real execution remains
-closed behind its green activation. Even a maximum later pass can establish only
+Stage Q and the Stage P implementation are complete; real execution remains
+closed behind the activation's green barrier. Even a maximum later pass can establish only
 participant-independent BNCI protocol-condition prediction and incremental EEG
 sensor information beyond recorded EOG under this protocol. It cannot establish
 thought or language decoding, movement intention, exclusive motor-cortex

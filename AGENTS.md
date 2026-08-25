@@ -135,10 +135,15 @@ one fold-local child at a time, preserve the existing 468-fit / 495-prediction-
 set schedule, expose no held-out target or T-session row, and publish only an
 aggregate hash-only freeze.
 
-Immediate gate: verify, commit, push, and remotely green the exact Stage P/T
-implementation. Then add and remotely green a minimal Stage P activation
-before the single real model execution. Stage T remains closed until the exact
-prediction-freeze record is committed, pushed, and remotely green.
+Exact Stage P/T implementation `7ba4f7c30f260bc7603e8928ad8d9ff010e54872`
+passed Base Python job `97990455561`, Optional Neuro Readers job `97990455765`,
+and CI `32906104408`.
+
+Read `docs/BNCI_2014_001_STAGE_P_LIVE_ACTIVATION.md`, its machine activation,
+and matching test. Immediate gate: commit, push, and remotely green that exact
+activation. Only then may the single real target-blind Stage P model execution
+run. Stage T remains closed until the exact prediction-freeze record is
+committed, pushed, and remotely green.
 
 Current scientific boundary: real BNCI MAT readability, aggregate semantics,
 and target-firewalled derivative construction are proven engineering. No model

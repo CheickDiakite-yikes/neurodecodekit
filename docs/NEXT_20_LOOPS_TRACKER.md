@@ -22,8 +22,10 @@
 > The Stage P/T live implementation now adds an exact 9 x 6 x 48 completeness
 > firewall, sequential fold-local execution, the frozen 468-fit / 495-
 > prediction-set schedule, an aggregate hash-only freeze, and a separately
-> gated one-score Stage T path. Current gate: commit, push, and green the exact
-> implementation, then separately green the Stage P activation. No real model,
+> gated one-score Stage T path. Exact implementation `7ba4f7c` passed Base
+> `97990455561`, Optional `97990455765`, and CI `32906104408`. Its exact
+> six-artifact activation is prepared with delayed effect. Current gate:
+> commit, push, and green that activation before the one real Stage P run. No real model,
 > prediction freeze, target delivery, score, or claim upgrade has occurred.
 >
 > **Stage A result history (2026-08-25):** control-plane commit `21cedd5` passed

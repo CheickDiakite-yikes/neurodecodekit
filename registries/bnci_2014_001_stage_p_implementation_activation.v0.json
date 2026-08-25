@@ -1,0 +1,67 @@
+{
+  "lane_id": "BNCI-C3C5-1-P",
+  "status": "remotely_green_stage_p_enabled",
+  "green_stage_q_result": {
+    "commit": "9832ae5e60c42bf975ccfdd22740267ef802d191",
+    "CI_run_id": 32827957362,
+    "base_python_job_id": 97740061957,
+    "optional_neuro_readers_job_id": 97740061602,
+    "both_required_jobs_green": true
+  },
+  "green_implementation": {
+    "commit": "7ba4f7c30f260bc7603e8928ad8d9ff010e54872",
+    "CI_run_id": 32906104408,
+    "CI_head_sha": "7ba4f7c30f260bc7603e8928ad8d9ff010e54872",
+    "CI_conclusion": "success",
+    "base_python_job_id": 97990455561,
+    "base_python_job_name": "Base Python",
+    "base_python_job_conclusion": "success",
+    "optional_neuro_readers_job_id": 97990455765,
+    "optional_neuro_readers_job_name": "Optional Neuro Readers",
+    "optional_neuro_readers_job_conclusion": "success",
+    "both_required_jobs_green": true
+  },
+  "implementation_artifacts": [
+    {
+      "path": "src/neurodecodekit/experiments/bnci_2014_001_stage_p_live.py",
+      "bytes": 42529,
+      "sha256": "12d9c305778e34af7057c9f823aa19f5d7f593fe59f5088414a76331411da637"
+    },
+    {
+      "path": "src/neurodecodekit/evaluation/bnci_2014_001_stage_t_live.py",
+      "bytes": 24990,
+      "sha256": "a2972f4fd0b6d2b26ab08ba5f07ee3dabe5c7bb0ec84ca335b2163a9483e627c"
+    },
+    {
+      "path": "src/neurodecodekit/bnci_c3c5_stage_p_t_cli.py",
+      "bytes": 1727,
+      "sha256": "0b0c8d7b5bd3cfd0c2707be09dce2291c4f798bced21344aad38cb8e8149d7b4"
+    },
+    {
+      "path": "tests/test_bnci_2014_001_stage_p_t_live.py",
+      "bytes": 15792,
+      "sha256": "e02f07e792702a72b9d1e562e7a579a89077a12b613bd04201cb5cd4a28d400e"
+    },
+    {
+      "path": "docs/BNCI_2014_001_STAGE_P_T_IMPLEMENTATION.md",
+      "bytes": 6490,
+      "sha256": "cfefe1ce4ce68ae6e822d26626c6061a20774ac018e5ac074eafe332c649b487"
+    },
+    {
+      "path": "registries/bnci_2014_001_stage_p_t_implementation.v0.json",
+      "bytes": 2559,
+      "sha256": "921e81f24167949f6dc1adddb05574eb250e538719a7927b8aa53a408fb55f92"
+    }
+  ],
+  "authority": {
+    "one_real_Stage_P_execution": true,
+    "parameter_update_fits_maximum": 540,
+    "prediction_sets_maximum": 900,
+    "held_out_E_target_delivery": false,
+    "held_out_T_signal_or_target_delivery": false,
+    "Stage_T": false,
+    "reruns": 0,
+    "post_target_updates": 0,
+    "claim_upgrade": false
+  }
+}

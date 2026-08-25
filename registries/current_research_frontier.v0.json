@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "recorded_at_local": "2026-08-25",
   "active_lane_id": "BNCI-C3C5-1-P",
-  "status": "Stage_Q_result_remotely_green_Stage_P_live_implementation_pending_green",
+  "status": "Stage_P_activation_prepared_pending_commit_push_and_remote_green",
   "evidence_sequence": [
     "G1_generated_proof",
     "A_opaque_acquisition",
@@ -59,7 +59,12 @@
     "Stage_Q_result_CI_run_id": 32827957362,
     "Stage_Q_result_base_python_job_id": 97740061957,
     "Stage_Q_result_optional_neuro_readers_job_id": 97740061602,
-    "both_Stage_Q_result_jobs_green": true
+    "both_Stage_Q_result_jobs_green": true,
+    "Stage_P_T_implementation_commit": "7ba4f7c30f260bc7603e8928ad8d9ff010e54872",
+    "Stage_P_T_implementation_CI_run_id": 32906104408,
+    "Stage_P_T_implementation_base_python_job_id": 97990455561,
+    "Stage_P_T_implementation_optional_neuro_readers_job_id": 97990455765,
+    "both_Stage_P_T_implementation_jobs_green": true
   },
   "consumed_operations": {
     "G1_generated_invocation_consumed": true,
@@ -171,7 +176,7 @@
     "control_plane_update": "complete_remotely_green",
     "A_opaque_acquisition": "complete_consumed_result_remotely_green",
     "Q_target_blind_validation": "complete_consumed_result_remotely_green",
-    "P_prediction_freeze": "implementation_pending_commit_push_and_remote_green",
+    "P_prediction_freeze": "activation_prepared_pending_commit_push_and_remote_green",
     "T_one_score": "closed_pending_green_prediction_freeze",
     "release": "closed",
     "claim_upgrade": "closed"
@@ -184,7 +189,7 @@
     "EEG_beyond_recorded_peripheral_controls": "not_established"
   },
   "nearest_decisive_goal": "test_incremental_EEG_sensor_information_beyond_recorded_EOG_on_completely_held_out_participants",
-  "immediate_next_gate": "commit_push_and_remotely_green_exact_Stage_P_T_live_implementation_before_Stage_P_activation",
+  "immediate_next_gate": "commit_push_and_remotely_green_exact_Stage_P_activation_before_one_real_target_blind_model_execution",
   "claim_boundary": {
     "engineering_capability_established": "real_18_MAT_108_run_5184_trial_semantic_validation_and_target_firewalled_nine_fold_derivatives",
     "verified_recovery_bundle_acquired": true,
