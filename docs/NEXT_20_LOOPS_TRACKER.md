@@ -1,6 +1,6 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Stage Q implementation gate (2026-08-25):** Stage A result commit `96d7f0`
+> **Stage Q result gate (2026-08-25):** Stage A result commit `96d7f0`
 > passed Base job `97700176631`, Optional Neuro Readers job `97700176787`, and
 > CI `32814564120`. The 18-file / 779,873,919-byte opaque acquisition is consumed.
 > The generated-only Stage Q core passed once over 40,069,562 bytes, six task
@@ -12,10 +12,13 @@
 > only because its proof tests read an unavailable ancestor in the shallow CI
 > checkout; it had no effect or private operation. Compatibility `52b681e`
 > passed both jobs in CI `32824921855`, and the activation is rebound to that
-> exact commit. Current gate is to green the rebound activation. The
-> future live path requires fresh
-> remote proof, both activation-commit CI jobs, and a 227,843,968-byte
-> conservative storage preflight before consumption. Stage P and T remain closed.
+> exact commit. Final activation `0e36993` passed both jobs in CI `32825946085`
+> before the one live invocation. Stage Q passed and is consumed: 18 MAT files,
+> 108 task runs, 5,184 trials, 22 EEG plus three EOG channels at 250 Hz, and
+> 72,666,213 private derivative bytes in 34.464444 seconds at 910,704,640-byte
+> peak RSS. No held-out-T row was exposed; model, training, prediction,
+> delivery, and score counters were zero. Current gate: green the exact
+> aggregate Stage Q result. Stage P and T remain closed.
 >
 > **Stage A result history (2026-08-25):** control-plane commit `21cedd5` passed
 > both jobs in CI `32811586786` before the sole signed-object recovery. Stage A

@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "recorded_at_local": "2026-08-25",
   "active_lane_id": "BNCI-C3C5-1-Q",
-  "status": "Stage_Q_live_activation_rebound_pending_remote_green",
+  "status": "Stage_Q_passed_consumed_result_pending_remote_green",
   "evidence_sequence": [
     "G1_generated_proof",
     "A_opaque_acquisition",
@@ -49,7 +49,12 @@
     "Stage_Q_compatibility_CI_run_id": 32824921855,
     "Stage_Q_compatibility_base_python_job_id": 97730713400,
     "Stage_Q_compatibility_optional_neuro_readers_job_id": 97730713304,
-    "both_Stage_Q_compatibility_jobs_green": true
+    "both_Stage_Q_compatibility_jobs_green": true,
+    "Stage_Q_activation_commit": "0e36993fb3b4e0651d53d62818df672c5ed5f04b",
+    "Stage_Q_activation_CI_run_id": 32825946085,
+    "Stage_Q_activation_base_python_job_id": 97733856845,
+    "Stage_Q_activation_optional_neuro_readers_job_id": 97733856470,
+    "both_Stage_Q_activation_jobs_green": true
   },
   "consumed_operations": {
     "G1_generated_invocation_consumed": true,
@@ -63,7 +68,9 @@
     "redirect_recovery_live_invocation_consumed": true,
     "redirect_recovery_retry_or_rerun_allowed": false,
     "Stage_Q_generated_qualification_consumed": true,
-    "Stage_Q_generated_qualification_rerun_allowed": false
+    "Stage_Q_generated_qualification_rerun_allowed": false,
+    "Stage_Q_live_invocation_consumed": true,
+    "Stage_Q_live_retry_or_rerun_allowed": false
   },
   "prelaunch_rejection": {
     "reason": "obsolete_AGENTS_stop_before_Stage_A_instruction",
@@ -81,7 +88,7 @@
     "scores": 0
   },
   "active_Stage_Q_envelope": {
-    "registered_invocations_remaining_after_activation": 1,
+    "registered_invocations_remaining_after_activation": 0,
     "MAT_content_opens_maximum": 18,
     "CPU_threads": 1,
     "workers": 1,
@@ -134,10 +141,31 @@
     "scores": 0,
     "result_path": "registries/bnci_2014_001_stage_q_generated_result.v0.json"
   },
+  "Stage_Q_live_result": {
+    "status": "passed_consumed_target_firewalled_semantic_qualification",
+    "MAT_files": 18,
+    "task_runs": 108,
+    "trials": 5184,
+    "EEG_channels": 22,
+    "EOG_channels": 3,
+    "sampling_rate_hz": 250.0,
+    "folds": 9,
+    "held_out_T_rows_exposed_per_fold": 0,
+    "input_payload_bytes": 779873919,
+    "private_derivative_bytes": 72666213,
+    "runtime_seconds": 34.46444408304524,
+    "peak_process_RSS_bytes": 910704640,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "result_path": "registries/bnci_2014_001_stage_q_result.v0.json"
+  },
   "stage_state": {
     "control_plane_update": "complete_remotely_green",
     "A_opaque_acquisition": "complete_consumed_result_remotely_green",
-    "Q_target_blind_validation": "implementation_and_compatibility_remotely_green_live_activation_rebound_pending_remote_green",
+    "Q_target_blind_validation": "complete_consumed_result_pending_remote_green",
     "P_prediction_freeze": "closed_pending_green_Q_result",
     "T_one_score": "closed_pending_green_prediction_freeze",
     "release": "closed",
@@ -151,11 +179,11 @@
     "EEG_beyond_recorded_peripheral_controls": "not_established"
   },
   "nearest_decisive_goal": "test_incremental_EEG_sensor_information_beyond_recorded_EOG_on_completely_held_out_participants",
-  "immediate_next_gate": "commit_push_and_remotely_green_rebound_Stage_Q_activation_before_private_or_MAT_access",
+  "immediate_next_gate": "verify_commit_push_and_remotely_green_exact_Stage_Q_aggregate_result_before_Stage_P",
   "claim_boundary": {
-    "engineering_capability_established": "generated_only_target_firewalled_one_copy_Stage_Q_semantic_and_feature_interface_over_the_green_exact_private_BNCI_bundle",
+    "engineering_capability_established": "real_18_MAT_108_run_5184_trial_semantic_validation_and_target_firewalled_nine_fold_derivatives",
     "verified_recovery_bundle_acquired": true,
-    "real_MAT_semantics_validated": false,
+    "real_MAT_semantics_validated": true,
     "real_neural_model_run": false,
     "scientific_score_produced": false,
     "unseen_person_generalization": false,

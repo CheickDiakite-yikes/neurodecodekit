@@ -1,0 +1,176 @@
+{
+  "schema_name": "neurodecodekit.bnci_2014_001_stage_q_result",
+  "schema_version": "0.1.0",
+  "result_id": "BNCI-C3C5-1-Q-result-2026-08-25",
+  "recorded_at_local": "2026-08-25",
+  "status": "passed_consumed_target_firewalled_semantic_qualification_no_rerun",
+  "proof_posture": "real_MAT_semantic_and_target_isolation_engineering_only_no_model_prediction_or_score",
+  "ordered_evidence": {
+    "Stage_A_result_commit": "96d7f0569a54b05f8031d2e3943658ef598e38a5",
+    "Stage_A_result_CI_run_id": 32814564120,
+    "Stage_Q_runtime_implementation_commit": "e5ca6a24f65beab12b89eddad938c96fe4ecaf00",
+    "Stage_Q_runtime_implementation_CI_run_id": 32822604745,
+    "Stage_Q_compatibility_commit": "52b681ed7ec3991527f04f2fc555452d2246c481",
+    "Stage_Q_compatibility_CI_run_id": 32824921855,
+    "Stage_Q_activation_commit": "0e36993fb3b4e0651d53d62818df672c5ed5f04b",
+    "Stage_Q_activation_CI_run_id": 32825946085,
+    "Stage_Q_activation_base_python_job_id": 97733856845,
+    "Stage_Q_activation_optional_neuro_readers_job_id": 97733856470,
+    "all_prior_gates_green_before_execution": true
+  },
+  "execution": {
+    "registered_invocation_count": 1,
+    "registered_invocations_remaining": 0,
+    "consumed": true,
+    "retry_allowed": false,
+    "rerun_allowed": false,
+    "complete_private_derivative_created": true,
+    "Stage_P_started": false,
+    "Stage_T_started": false
+  },
+  "inventory": {
+    "MAT_files": 18,
+    "calibration_structs_recognized": 52,
+    "task_runs": 108,
+    "trials": 5184,
+    "channels": 25,
+    "EEG_channels": 22,
+    "EOG_channels": 3,
+    "sampling_rate_hz": 250.0,
+    "folds": 9,
+    "source_rows_per_fold": 4608,
+    "sealed_held_out_E_rows_per_fold": 288,
+    "held_out_T_rows_exposed_per_fold": 0,
+    "artifact_flag_unavailable_runs": 0,
+    "geometry_available_from_payload": false
+  },
+  "measurements": {
+    "input_payload_bytes": 779873919,
+    "private_derivative_bytes": 72666213,
+    "private_receipt_bytes": 2230,
+    "runtime_seconds": 34.46444408304524,
+    "peak_process_RSS_bytes": 910704640,
+    "free_disk_bytes_before": 92395732992,
+    "free_disk_bytes_after": 92320219136,
+    "end_to_end_decoding_latency_measured": false
+  },
+  "registered_caps": {
+    "MAT_content_opens_maximum": 18,
+    "runtime_seconds_maximum": 3600.0,
+    "peak_RSS_bytes_maximum": 1073741824,
+    "private_derivative_bytes_maximum": 536870912,
+    "public_output_bytes_maximum": 4194304,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "analysis_network_bytes": 0,
+    "all_resource_caps_passed": true
+  },
+  "operation_counters": {
+    "private_manifest_opens": 1,
+    "MAT_content_opens": 18,
+    "MAT_semantic_parses": 18,
+    "calibration_signal_runs_read": 0,
+    "task_signal_runs_read": 108,
+    "target_vectors_isolated": 108,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "analysis_network_bytes": 0
+  },
+  "target_firewall": {
+    "one_copy_target_free_signal_derivatives": true,
+    "fold_scoped_source_labels": true,
+    "held_out_T_delivered_to_fold_capabilities": false,
+    "held_out_E_targets_sealed": true,
+    "scoring_keys_outside_every_fold_capability": true,
+    "participant_level_outcomes_public": false,
+    "private_paths_or_derivative_hashes_public": false
+  },
+  "remote_green_control_plane": {
+    "branch": "codex/loop-54a-vhdr-preregistration",
+    "head_sha": "0e36993fb3b4e0651d53d62818df672c5ed5f04b",
+    "remote_head_sha": "0e36993fb3b4e0651d53d62818df672c5ed5f04b",
+    "CI_run_id": 32825946085,
+    "CI_head_sha": "0e36993fb3b4e0651d53d62818df672c5ed5f04b",
+    "CI_conclusion": "success",
+    "base_python_job_id": 97733856845,
+    "base_python_job_conclusion": "success",
+    "optional_neuro_readers_job_id": 97733856470,
+    "optional_neuro_readers_job_conclusion": "success"
+  },
+  "acceptance_gates": {
+    "exact_green_control_plane_before_execution": true,
+    "exact_18_MAT_108_run_5184_trial_inventory": true,
+    "exact_22_EEG_3_EOG_250_Hz_semantics": true,
+    "zero_held_out_T_rows_exposed_per_fold": true,
+    "held_out_E_targets_and_scoring_keys_isolated": true,
+    "runtime_RSS_output_free_space_and_concurrency_caps_passed": true,
+    "all_forbidden_model_prediction_delivery_and_score_counters_zero": true,
+    "one_registered_invocation_consumed_without_retry_or_rerun": true,
+    "private_payload_derivatives_receipt_and_targets_not_committed_or_uploaded": true
+  },
+  "unavailable_fields": [
+    "payload_geometry",
+    "public_channel_names",
+    "public_participant_or_fold_outcomes",
+    "model_accuracy",
+    "no_signal_comparison",
+    "EEG_beyond_EOG",
+    "unseen_person_generalization",
+    "decoding_performance",
+    "end_to_end_decoding_latency"
+  ],
+  "warnings": [
+    "payload_geometry_is_unavailable",
+    "first_trial_previous_interval_uses_exact_zero_sentinel",
+    "artifact_flags_and_availability_are_sealed_and_never_used_for_primary_exclusion",
+    "held_out_scoring_keys_are_outside_every_fold_capability",
+    "semantic_qualification_is_not_model_training_prediction_scoring_or_a_scientific_result",
+    "private_payload_derivatives_receipt_targets_and_keys_are_Git_ignored_and_unpublished",
+    "Stage_Q_is_consumed_and_cannot_be_retried_or_rerun"
+  ],
+  "software_versions": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.0"
+  },
+  "post_result_verification": {
+    "focused_Stage_Q_tests_passed": 52,
+    "focused_dependency_free_expected_skips": 10,
+    "complete_suite_discovered_tests": 6166,
+    "complete_suite_first_process_passed_tests": 6144,
+    "complete_suite_expected_skips": 17,
+    "environment_sensitive_modules": 5,
+    "environment_sensitive_first_process_failures_or_errors": 5,
+    "isolated_module_tests_passed": 62,
+    "isolated_module_runtime_seconds": 22.388,
+    "process_isolated_complete_verification_passed": true,
+    "ruff_passed": true,
+    "compileall_passed": true,
+    "CLI_help_passed": true,
+    "registry_JSON_files_parsed": 488,
+    "git_diff_check_passed": true
+  },
+  "next_gate": {
+    "Stage_Q_complete": true,
+    "Stage_Q_consumed": true,
+    "Stage_Q_rerun_allowed": false,
+    "aggregate_result_must_be_committed_pushed_and_remotely_green": true,
+    "Stage_P_allowed_before_green_result": false,
+    "Stage_P_started": false,
+    "Stage_T_started": false
+  },
+  "five_scientific_goals": {
+    "EEG_language_information": "not_established",
+    "motor_cortex_consistent_movement_information": "not_established",
+    "completely_unseen_person_generalization": "not_established",
+    "live_end_to_end_decoding": "not_established",
+    "EEG_beyond_recorded_peripheral_controls": "not_established"
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "NeuroDecodeKit semantically validated the exact real 18-file BNCI bundle and created bounded target-firewalled nine-fold derivatives with held-out targets and scoring keys isolated from model capabilities.",
+    "scientific_claim_not_established": "No model training prediction target delivery or score ran so Stage Q establishes no neural advantage EEG-beyond-EOG effect unseen-person generalization decoding accuracy language movement-intention live hardware or clinical result."
+  }
+}

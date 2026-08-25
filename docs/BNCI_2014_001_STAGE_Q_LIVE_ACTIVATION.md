@@ -2,7 +2,7 @@
 
 Date: 2026-08-25
 Lane: `BNCI-C3C5-1-Q`
-Status: prepared with delayed effect pending final activation proof
+Status: remotely green; consumed by one passed Stage Q execution
 
 ## Exact Green Predecessors
 
@@ -43,6 +43,12 @@ exact commit and the corrected 21,981-byte live-control test identity. Every
 qualified runtime artifact and the consumed generated result remain unchanged.
 The rebind still has delayed effect until its own exact commit is pushed and
 both required jobs pass.
+
+Final activation commit `0e36993fb3b4e0651d53d62818df672c5ed5f04b`
+passed Base Python job `97733856845`, Optional Neuro Readers job
+`97733856470`, and CI `32825946085`. The one live execution then passed and is
+consumed. Read `docs/BNCI_2014_001_STAGE_Q_RESULT.md`; this activation cannot be
+used again.
 
 Immediately before the semantic executor, the public live CLI must obtain a
 fresh remote branch SHA and GitHub Actions result for the activation commit.

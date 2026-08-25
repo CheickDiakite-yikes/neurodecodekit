@@ -7,7 +7,7 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: BNCI-C3C5-1 Stage Q Live Activation
+## Current Gate: BNCI-C3C5-1 Stage Q Result
 
 Start with `registries/current_research_frontier.v0.json`, the machine-readable
 snapshot of the active lane, proof chain, consumed status, measurements, goals,
@@ -66,11 +66,25 @@ Compatibility commit `52b681e` passed Base job `97730713400`, Optional job
 `97730713304`, and CI `32824921855`. The activation is rebound to that exact
 green commit.
 
-Immediate gate: commit, push, and remotely green the rebound activation. The
-private manifest and MAT payloads remain closed until both final activation CI
-jobs pass. The live CLI must then
-prove a fresh remote SHA and both successful jobs before its zero-network
-semantic executor can write the consumed marker.
+Final activation `0e36993` passed Base job `97733856845`, Optional job
+`97733856470`, and CI `32825946085` before the one semantic invocation.
+
+Read the current aggregate result next:
+
+1. `docs/BNCI_2014_001_STAGE_Q_RESULT.md`;
+2. `registries/bnci_2014_001_stage_q_result.v0.json`; and
+3. `tests/test_bnci_2014_001_stage_q_result.py`.
+
+Stage Q passed and is consumed. Exactly 18 MAT files, 108 task runs, and 5,184
+trials validated with 22 EEG plus three EOG channels at 250 Hz. The executor
+created 72,666,213 private target-firewalled derivative bytes in 34.464444
+seconds at 910,704,640-byte peak RSS. No held-out-T row entered a fold
+capability. Models, training, predictions, target deliveries, and scores were
+all zero.
+
+Immediate gate: verify, commit, push, and remotely green this exact aggregate
+result. Stage P remains closed until then, and Stage T remains closed behind a
+later green prediction-freeze proof.
 
 ## Scientific Goal And Sequence
 
@@ -83,7 +97,7 @@ G1 generated proof -> A opaque acquisition -> Q target-blind validation
                    -> P target-firewalled prediction freeze -> T one score
 ```
 
-Live Stage Q, P, and T remain closed. Even a maximum pass can establish only
+Stage Q is complete; P and T remain closed. Even a maximum later pass can establish only
 participant-independent BNCI protocol-condition prediction and incremental EEG
 sensor information beyond recorded EOG under this protocol. It cannot establish
 thought or language decoding, movement intention, exclusive motor-cortex

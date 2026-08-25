@@ -110,21 +110,29 @@ Compatibility commit `52b681ed7ec3991527f04f2fc555452d2246c481`
 passed Base job `97730713400`, Optional job `97730713304`, and CI
 `32824921855`. The activation is rebound to that exact green commit.
 
-Immediate gate: commit, push, and remotely green the rebound activation. Do
-not open the private manifest or any MAT before both final activation CI jobs
-pass. Afterward, the
-public live CLI must freshly prove the activation commit's remote SHA and both
-successful jobs before the one semantic invocation can consume.
-Stage P remains closed until the aggregate Q result is green. Stage T remains
-closed until the prediction-freeze record is committed, pushed, and remotely
-green.
+Final activation `0e36993fb3b4e0651d53d62818df672c5ed5f04b` passed
+Base job `97733856845`, Optional job `97733856470`, and CI `32825946085`
+before the one live invocation. Read the Stage Q result document, machine
+result, and matching test.
 
-Current scientific boundary: source identity, bounded acquisition mechanics,
-and the generated Stage Q interface are now proven, but no real MAT neural
-semantics have been read and no real model or scientific score has run in this
-lane. No unseen-person, EEG-beyond-EOG,
-decoding, language, movement-intention, live, hardware, or clinical claim is
-established.
+Stage Q passed and is consumed. It semantically parsed exactly 18 real MAT
+files, 108 task runs, and 5,184 trials with 22 EEG plus three EOG channels at
+250 Hz. It created 72,666,213 private target-firewalled derivative bytes in
+34.464444 seconds at 910,704,640-byte peak RSS. Held-out-T exposure was zero;
+held-out-E targets and scoring keys remain sealed outside fold capabilities.
+Model, training, prediction, target-delivery, score, and analysis-network
+counters were zero. Do not reopen, retry, rerun, inspect, publish, or modify the
+private payload, derivatives, receipt, target envelopes, keys, or marker.
+
+Immediate gate: verify, commit, push, and remotely green the exact aggregate
+Stage Q result. Stage P remains closed until that result is green. Stage T
+remains closed until a later prediction-freeze record is committed, pushed,
+and remotely green.
+
+Current scientific boundary: real BNCI MAT readability, aggregate semantics,
+and target-firewalled derivative construction are proven engineering. No model
+or scientific score has run, so no unseen-person, EEG-beyond-EOG, decoding,
+language, movement-intention, live, hardware, or clinical claim is established.
 
 ## Prior Lane Context
 

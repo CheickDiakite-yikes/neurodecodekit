@@ -21,7 +21,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(self.frontier["active_lane_id"], "BNCI-C3C5-1-Q")
         self.assertEqual(
             self.frontier["status"],
-            "Stage_Q_live_activation_rebound_pending_remote_green",
+            "Stage_Q_passed_consumed_result_pending_remote_green",
         )
 
     def test_proof_chain_records_green_recovery_activation(self):
@@ -61,6 +61,11 @@ class CurrentResearchFrontierTests(unittest.TestCase):
             "52b681ed7ec3991527f04f2fc555452d2246c481",
         )
         self.assertTrue(proof["both_Stage_Q_compatibility_jobs_green"])
+        self.assertEqual(
+            proof["Stage_Q_activation_commit"],
+            "0e36993fb3b4e0651d53d62818df672c5ed5f04b",
+        )
+        self.assertTrue(proof["both_Stage_Q_activation_jobs_green"])
 
     def test_prelaunch_rejection_did_not_consume_recovery(self):
         rejection = self.frontier["prelaunch_rejection"]
@@ -82,7 +87,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
 
     def test_recovery_resources_and_stage_order_are_frozen(self):
         envelope = self.frontier["active_Stage_Q_envelope"]
-        self.assertEqual(envelope["registered_invocations_remaining_after_activation"], 1)
+        self.assertEqual(envelope["registered_invocations_remaining_after_activation"], 0)
         self.assertEqual(envelope["MAT_content_opens_maximum"], 18)
         self.assertEqual(envelope["CPU_threads"], 1)
         self.assertEqual(envelope["workers"], 1)
@@ -107,6 +112,11 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(generated["generated_trials"], 288)
         self.assertEqual(generated["real_or_private_path_opens"], 0)
         self.assertEqual(generated["model_runs"], 0)
+        live_result = self.frontier["Stage_Q_live_result"]
+        self.assertEqual(live_result["MAT_files"], 18)
+        self.assertEqual(live_result["task_runs"], 108)
+        self.assertEqual(live_result["trials"], 5_184)
+        self.assertEqual(live_result["scores"], 0)
 
     def test_all_five_scientific_goals_and_claims_remain_unestablished(self):
         self.assertEqual(
@@ -118,17 +128,19 @@ class CurrentResearchFrontierTests(unittest.TestCase):
             if key not in {
                 "engineering_capability_established",
                 "verified_recovery_bundle_acquired",
+                "real_MAT_semantics_validated",
             }:
                 self.assertFalse(value, key)
         self.assertTrue(claims["verified_recovery_bundle_acquired"])
+        self.assertTrue(claims["real_MAT_semantics_validated"])
 
     def test_control_plane_entrypoints_name_the_current_gate(self):
         expected = {
-            "AGENTS.md": "Stage Q live activation",
-            "START_HERE.md": "Current Gate: BNCI-C3C5-1 Stage Q Live Activation",
-            "README.md": "Stage Q implementation",
+            "AGENTS.md": "Stage Q passed and is consumed",
+            "START_HERE.md": "Current Gate: BNCI-C3C5-1 Stage Q Result",
+            "README.md": "The [Stage Q result]",
             "docs/CODEX_HANDOFF.md": "Current gate, 2026-08-25",
-            "docs/NEXT_20_LOOPS_TRACKER.md": "Stage Q implementation gate (2026-08-25)",
+            "docs/NEXT_20_LOOPS_TRACKER.md": "Stage Q result gate (2026-08-25)",
         }
         for path, phrase in expected.items():
             text = (ROOT / path).read_text(encoding="utf-8")

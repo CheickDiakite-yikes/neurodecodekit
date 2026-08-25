@@ -15,12 +15,14 @@
 > proof tests assumed ancestor objects in a shallow Actions checkout; it had no
 > effect and touched no private path. Compatibility `52b681e` then passed Base
 > `97730713400`, Optional `97730713304`, and CI `32824921855`; the activation is
-> rebound to that exact commit. Immediate gate: green the rebound activation.
-> No private manifest or MAT may be opened yet. The future live CLI
-> must freshly prove the activation commit and both CI jobs before consumption,
-> and its 227,843,968-byte conservative layout bound leaves 309,026,944 bytes of
-> headroom under the private cap. P and T remain ordered
-> and closed, and no BNCI scientific claim has been established. All older `Current
+> rebound to that exact commit. Final activation `0e36993` passed Base
+> `97733856845`, Optional `97733856470`, and CI `32825946085` before the one
+> live invocation. Stage Q passed and is consumed: 18 MAT files, 108 task runs,
+> 5,184 trials, 22 EEG plus three EOG channels at 250 Hz, and 72,666,213 private
+> derivative bytes in 34.464444 seconds at 910,704,640-byte peak RSS. Held-out-T
+> exposure, models, training, predictions, deliveries, and scores were zero.
+> Immediate gate: green the exact aggregate result before Stage P. P and T
+> remain ordered and closed, and no BNCI scientific claim has been established. All older `Current
 > gate` blocks below are append-only history, not executable instructions.
 
 > **Current gate, 2026-08-24:** exact G1 result `4ef12dd` passed Base job
