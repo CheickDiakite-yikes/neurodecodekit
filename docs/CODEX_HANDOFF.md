@@ -1,17 +1,15 @@
 # Codex Handoff - NeuroDecodeKit
 
-> **Current gate, 2026-08-25:** `BNCI-C3C5-1-A-R` is the sole active lane.
-> Start with `registries/current_research_frontier.v0.json`. Original Stage A
-> is consumed at HTTP 302 refusal with zero payload body bytes. The additive
-> signed-object recovery implementation `09a19d1` and activation correction
-> `492a36a` are remotely green in CI `32806186972` and `32807676008`.
-> A later launch was rejected before process creation by obsolete repository
-> instructions, so the replacement invocation remains available exactly once.
-> Immediate gate: green this control-plane update, then run only the registered
-> 18-file / 779,873,919-byte opaque recovery and green its aggregate result.
-> Stages Q, P, and T remain ordered and closed. No BNCI scientific result or
-> claim upgrade has occurred. All older `Current gate` blocks below are an
-> append-only historical chronology, not executable instructions.
+> **Current gate, 2026-08-25:** `BNCI-C3C5-1-A-R` Stage A passed and is
+> consumed. Start with `registries/current_research_frontier.v0.json` and
+> `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_RESULT.md`. Exactly 18 files /
+> 779,873,919 payload bytes were acquired and opaque-verified in 113.066
+> seconds at 42,893,312-byte peak RSS. All MAT semantic, signal/target, model,
+> prediction, training, delivery, and score counters were zero. Immediate gate:
+> commit, push, and remotely green the aggregate result, then stop before Stage
+> Q. The recovery has no retry or rerun. Stages Q, P, and T remain ordered and
+> closed, and no BNCI scientific claim has been established. All older `Current
+> gate` blocks below are append-only history, not executable instructions.
 
 > **Current gate, 2026-08-24:** exact G1 result `4ef12dd` passed Base job
 > `97553936562`, Optional job `97553936838`, and CI `32765504463`. The
@@ -7850,3 +7848,30 @@ exists yet. The five public goals remain unestablished.
 
 Keep `docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx.inspect.ndjson` untouched. It is
 unrelated untracked work and must not be read, staged, edited, or deleted.
+
+## 2026-08-25 BNCI-C3C5-1 Stage A Result Handoff
+
+Stage A recovery passed and is consumed. Read:
+
+1. `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_RESULT.md`;
+2. `registries/bnci_2014_001_stage_a_redirect_recovery_result.v0.json`; and
+3. `tests/test_bnci_2014_001_stage_a_redirect_recovery_result.py`.
+
+Control-plane commit `21cedd5` passed Base job `97691784130`, Optional Neuro
+Readers job `97691784315`, and CI `32811586786` before execution. The sole live
+recovery accepted exactly 18 files / 779,873,919 bytes, completed in
+113.06611395801883 seconds at 42,893,312-byte peak RSS, and left
+92,111,536,128 free-disk bytes.
+
+The private bundle is complete. The original 297-byte marker stayed
+byte-identical. The new invocation is consumed with no retry or rerun. Do not
+open, inspect, move, delete, overwrite, upload, release, repair, or substitute
+its payload, private manifest, marker, or receipt.
+
+MAT semantic opens/parses, signal/event/target/label reads, model/training runs,
+predictions, target deliveries, and scores were all zero. This is verified
+source acquisition, not scientific evidence of neural information.
+
+Immediate gate: commit, push, and remotely green the aggregate result. Stop
+before Stage Q. Q may later perform only the frozen target-blind semantic
+validation after a separate bounded transition. P and T remain closed.

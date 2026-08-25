@@ -1,0 +1,155 @@
+{
+  "schema_name": "neurodecodekit.bnci_2014_001_stage_a_redirect_recovery_result",
+  "schema_version": "0.1.0",
+  "result_id": "BNCI-C3C5-1-A-R-result-2026-08-25",
+  "recorded_at_local": "2026-08-25",
+  "status": "passed_complete_consumed_no_retry_no_rerun",
+  "proof_posture": "opaque_payload_identity_and_acquisition_mechanics_only_no_MAT_semantics",
+  "ordered_evidence": {
+    "recovery_decision_commit": "588dd70c62a6f7041d677f9baf35e476ef739627",
+    "recovery_decision_CI_run_id": 32803138246,
+    "recovery_implementation_commit": "09a19d1c1c498bdd6e0ece2fbecb6d15917bdefa",
+    "recovery_implementation_CI_run_id": 32806186972,
+    "recovery_activation_commit": "492a36a818bb00ca6bb86de6592c6cd0d5134f90",
+    "recovery_activation_CI_run_id": 32807676008,
+    "control_plane_commit": "21cedd5da3c82e4378162ddfd687d669874d8c3f",
+    "control_plane_CI_run_id": 32811586786,
+    "control_plane_base_python_job_id": 97691784130,
+    "control_plane_optional_neuro_readers_job_id": 97691784315,
+    "all_prior_gates_green_before_execution": true
+  },
+  "execution": {
+    "registered_invocation_count": 1,
+    "registered_invocations_remaining": 0,
+    "consumed": true,
+    "retry_allowed": false,
+    "rerun_allowed": false,
+    "complete_bundle_created": true,
+    "partial_bundle_qualified": false,
+    "Stage_Q_started": false
+  },
+  "measurements": {
+    "manifest_input_bytes": 401826,
+    "payload_network_bytes": 779873919,
+    "total_network_bytes": 780275745,
+    "accepted_payload_bytes": 779873919,
+    "payload_files": 18,
+    "bundle_manifest_bytes": 2943,
+    "incremental_output_bytes_excluding_marker_and_receipt": 779876862,
+    "recovery_marker_bytes": 423,
+    "private_receipt_bytes": 2347,
+    "runtime_seconds": 113.06611395801883,
+    "peak_process_RSS_bytes": 42893312,
+    "free_disk_bytes_before": 92905000960,
+    "free_disk_bytes_after": 92111536128,
+    "end_to_end_decoding_latency_measured": false
+  },
+  "registered_caps": {
+    "payload_files_exact": 18,
+    "payload_bytes_exact": 779873919,
+    "payload_requests_maximum": 54,
+    "attempts_per_file_maximum": 3,
+    "network_bytes_maximum": 2685403136,
+    "incremental_disk_bytes_maximum": 2147483648,
+    "free_disk_bytes_minimum": 5368709120,
+    "runtime_seconds_maximum": 1800,
+    "peak_RSS_bytes_maximum": 1073741824,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "all_resource_caps_passed": true
+  },
+  "operation_counters": {
+    "manifest_GETs": 1,
+    "payload_requests": 18,
+    "opaque_post_write_hash_opens": 18,
+    "original_marker_identity_reads": 2,
+    "MAT_semantic_content_opens": 0,
+    "MAT_semantic_parses": 0,
+    "signal_event_target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0
+  },
+  "original_consumed_marker": {
+    "bytes": 297,
+    "sha256_before": "e30e2abf7c1e55eca6663e5ed06b0d36d3e351865213af78bb3d9ccb6b94b854",
+    "sha256_after": "e30e2abf7c1e55eca6663e5ed06b0d36d3e351865213af78bb3d9ccb6b94b854",
+    "byte_identical": true
+  },
+  "private_evidence_binding": {
+    "aggregate_receipt_bytes": 2347,
+    "aggregate_receipt_sha256": "ac8c18238905112db5a80ddfb8cf37e4c4fcca1be5098f34dd034630ff347b22",
+    "aggregate_receipt_committed_or_uploaded": false,
+    "payload_or_private_manifest_committed_or_uploaded": false
+  },
+  "acceptance_gates": {
+    "decision_implementation_activation_and_control_plane_remotely_green": true,
+    "exact_18_file_779873919_byte_bundle": true,
+    "one_opaque_post_write_hash_open_per_payload": true,
+    "original_consumed_marker_preserved_byte_identical": true,
+    "runtime_RSS_network_disk_free_space_and_concurrency_caps_passed": true,
+    "all_forbidden_semantic_model_target_and_score_counters_zero": true,
+    "one_registered_invocation_consumed_without_retry_or_rerun": true,
+    "private_payload_receipt_and_manifest_not_committed_or_uploaded": true
+  },
+  "unavailable_fields": [
+    "MAT_readability",
+    "participant_or_trial_semantics",
+    "observed_channel_names",
+    "observed_EEG_or_EOG_geometry",
+    "observed_sampling_rate_hz",
+    "observed_event_count",
+    "observed_target_balance",
+    "observed_signal_quality",
+    "usable_trial_count",
+    "model_accuracy",
+    "no_signal_comparison",
+    "EEG_beyond_EOG",
+    "unseen_person_generalization",
+    "decoding_performance",
+    "end_to_end_decoding_latency"
+  ],
+  "warnings": [
+    "payload_is_private_and_Git_ignored",
+    "signed_URL_credentials_were_not_retained",
+    "payload_bytes_were_hashed_but_not_semantically_interpreted",
+    "recovery_is_consumed_and_cannot_be_retried_or_rerun",
+    "bundle_identity_does_not_establish_MAT_readability_signal_quality_or_neural_information",
+    "no_scientific_decoding_neural_realtime_portable_home_or_clinical_claim_is_established"
+  ],
+  "post_result_verification": {
+    "focused_BNCI_tests_passed": 140,
+    "focused_BNCI_expected_skips": 5,
+    "complete_suite_passed_tests": 6066,
+    "complete_suite_expected_skips": 217,
+    "complete_suite_runtime_seconds": 223.003,
+    "ruff_passed": true,
+    "compileall_passed": true,
+    "registry_JSON_files_parsed": 484,
+    "git_diff_check_passed": true
+  },
+  "next_gate": {
+    "Stage_A_complete": true,
+    "Stage_A_consumed": true,
+    "Stage_A_rerun_allowed": false,
+    "aggregate_result_must_be_committed_pushed_and_remotely_green": true,
+    "Stage_Q_started": false,
+    "Stage_Q_allowed_before_green_result": false,
+    "Stage_P_started": false,
+    "Stage_T_started": false
+  },
+  "five_scientific_goals": {
+    "EEG_language_information": "not_established",
+    "motor_cortex_consistent_movement_information": "not_established",
+    "completely_unseen_person_generalization": "not_established",
+    "live_end_to_end_decoding": "not_established",
+    "EEG_beyond_recorded_peripheral_controls": "not_established"
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "NeuroDecodeKit acquired and opaque-verified the exact isolated 18-file BNCI-C3C5-1 bundle through validated signed objects under the registered proof identity resource and no-rerun controls.",
+    "scientific_claim_not_established": "No MAT semantics signal event target or label was read and no model prediction or score ran so this acquisition establishes no neural advantage unseen-person generalization decoding language movement-intention live hardware or clinical result."
+  }
+}

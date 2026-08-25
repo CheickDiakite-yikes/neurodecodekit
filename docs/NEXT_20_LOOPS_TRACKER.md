@@ -1,17 +1,15 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate gate (2026-08-25):** BNCI-C3C5-1 G1 and its proof closeout are
-> remotely green and consumed. The first real Stage A invocation consumed at
-> HTTP-302 direct-response refusal with zero payload body bytes. A separately
-> authorized signed-object recovery passed 18 generated case classes and 12
-> refusals; implementation `09a19d1` passed CI `32806186972`, and corrected
-> activation `492a36a` passed both jobs in CI `32807676008`. A later local live
-> command was rejected before process creation by the stale `AGENTS.md` gate,
-> so the one recovery remains unstarted and available exactly once. Green this
-> control-plane update, run one 18-file / 779,873,919-byte opaque acquisition,
-> and green its aggregate result before target-blind Q. P and T remain closed.
-> No real neural model, prediction freeze, scientific score, unseen-person
-> result, or EEG-beyond-EOG advantage exists yet.
+> **Stage A result gate (2026-08-25):** control-plane commit `21cedd5` passed
+> both jobs in CI `32811586786` before the sole signed-object recovery. Stage A
+> then acquired and opaque-verified exactly 18 files / 779,873,919 payload bytes
+> in 113.066 seconds at 42,893,312-byte peak RSS, leaving 92,111,536,128 free
+> disk bytes. MAT semantic, signal/event/target/label, model, prediction,
+> training, target-delivery, and score counters were all zero. The invocation
+> is consumed with no retry or rerun. Commit, push, and green its aggregate
+> result before target-blind Q. P and T remain closed. No scientific score,
+> unseen-person result, decoding performance, or EEG-beyond-EOG advantage
+> exists yet.
 
 > **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its

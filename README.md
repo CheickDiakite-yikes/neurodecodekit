@@ -89,18 +89,25 @@ refusals, one tiny end-to-end signed-object roundtrip, 0.010994 seconds runtime,
 and performed no MAT semantic read, fit, prediction, target delivery, or score.
 The generated invocation is consumed and cannot be repeated.
 
-One later live command was rejected before process creation because the
-repository's old `AGENTS.md` still said to stop before Stage A. It made no
-manifest or payload request and did not consume the recovery invocation. The
-current gate is to green the corrected control-plane docs, then run that one
-authorized opaque acquisition and remotely prove its aggregate result before
-any Stage Q semantic validation.
+Control-plane commit `21cedd5` then passed Base job `97691784130`, Optional
+Neuro Readers job `97691784315`, and CI `32811586786`. The maintainer explicitly
+approved the exact one-shot recovery after its transfer and consumption risk
+were restated. The [Stage A result](docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_RESULT.md)
+passed: all 18 signed objects and 779,873,919 payload bytes were acquired and
+opaque-verified in 113.066 seconds at 42,893,312-byte peak RSS. Total network
+bytes were 780,275,745, and about 92.1 GB remained free.
+
+MAT semantic opens, signal/event/target/label reads, model and training runs,
+prediction sets, target deliveries, and scores were all zero. The invocation
+is consumed and cannot be retried or rerun. Its private payload and evidence
+remain Git-ignored.
 
 The machine-readable current state is
 [`registries/current_research_frontier.v0.json`](registries/current_research_frontier.v0.json).
-It freezes the active lane, proof commits, consumed and unconsumed one-shot
-states, resource caps, five scientific goals, claim boundary, and exact next
-transition so handoffs cannot silently return to an older gate.
+It freezes the active lane, proof commits, consumed one-shot state, measured
+result, resource caps, five scientific goals, claim boundary, and exact next
+transition so handoffs cannot silently return to an older gate. The current
+gate is to remotely prove the aggregate Stage A result before Stage Q.
 
 Current result: [EEGMMIDB-UG1 Stage S-A2](docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md)
 failed closed during verified TLS certificate-chain validation before an HTTP
@@ -113,12 +120,13 @@ be repaired or retried under this lane. Exact result `ba8645e` passed both
 jobs in CI `32740773041`; proof-only closeout `d9eae69` passed both jobs in CI
 `32742694237` without reopening the consumed marker or payload paths.
 
-BNCI-C3C5-1 has not yet produced a verified recovery bundle, real-model run,
-prediction freeze, or scientific score. Even a future maximum pass would
-establish only participant-independent BNCI protocol-condition prediction and
-incremental EEG sensor information beyond three recorded EOG channels, not
-thought reading, language, movement intention, exclusive motor-cortex origin,
-live use, portable hardware, home use, or clinical utility.
+BNCI-C3C5-1 now has a verified opaque recovery bundle, but no MAT semantic
+validation, real-model run, prediction freeze, or scientific score. Even a
+future maximum pass would establish only participant-independent BNCI
+protocol-condition prediction and incremental EEG sensor information beyond
+three recorded EOG channels, not thought reading, language, movement intention,
+exclusive motor-cortex origin, live use, portable hardware, home use, or
+clinical utility.
 
 The frozen [EEGMMIDB-UG1 research design](docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_RESEARCH.md)
 was the direct unseen-person experiment. Its

@@ -7,49 +7,41 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: BNCI-C3C5-1 Stage A Redirect Recovery
+## Current Gate: BNCI-C3C5-1 Stage A Result Closeout
 
 Start with `registries/current_research_frontier.v0.json`, the machine-readable
-snapshot of the active lane, proof chain, one-shot status, caps, goals, and next
-transition.
+snapshot of the active lane, proof chain, consumed status, measurements, goals,
+and next transition.
 
 The generated G1 pipeline is complete, remotely proven, and consumed. Its
-synthetic result is engineering evidence only. The original real Stage A
-attempt is also consumed: NEMAR returned HTTP 302, the direct-response client
-refused, zero payload body bytes were read, and the original 297-byte marker is
-immutable.
+synthetic result is engineering evidence only. The original direct-response
+Stage A attempt is also consumed at HTTP-302 refusal with zero payload body
+bytes.
 
-Read the current lane in this order:
+The separately authorized signed-object recovery has now completed and is
+consumed. Read the current result first:
 
-1. `docs/BNCI_2014_001_STAGE_A_FAILURE.md`;
-2. `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_AUTHORIZATION_PACKET.md`;
-3. `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_REQUEST_PROOF_CLOSEOUT.md`;
-4. `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_AUTHORIZATION_DECISION.md`;
-5. `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_IMPLEMENTATION.md`; and
-6. `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_IMPLEMENTATION_ACTIVATION.md`.
+1. `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_RESULT.md`;
+2. `registries/bnci_2014_001_stage_a_redirect_recovery_result.v0.json`; and
+3. `tests/test_bnci_2014_001_stage_a_redirect_recovery_result.py`.
 
-The recovery decision `588dd70` passed CI `32803138246`. The exact generated-
-qualified implementation `09a19d1` passed CI `32806186972`. The activation's
-first CI `32806829323` exposed a shallow-checkout-only proof-test assumption;
-the implementation did not fail. Corrective activation commit `492a36a`
-passed Base job `97680849177`, Optional Neuro Readers job `97680849465`, and
-CI `32807676008`.
+Control-plane commit `21cedd5` passed Base job `97691784130`, Optional Neuro
+Readers job `97691784315`, and CI `32811586786` before the one registered live
+invocation. The maintainer explicitly accepted its exact 779,873,919-byte
+transfer and irreversible-consumption risk.
 
-The recovery qualification passed 18 generated case classes and 12 direct
-refusals, including a tiny end-to-end signed-object resume roundtrip. It made
-zero real network requests and performed zero MAT semantic, model, target, or
-score operations. It is consumed and must not be repeated.
+The live recovery acquired and opaque-verified exactly 18 signed objects and
+779,873,919 payload bytes in 113.066114 seconds at 42,893,312-byte peak RSS.
+Total network bytes were 780,275,745, and 92,111,536,128 free-disk bytes
+remained. The original 297-byte consumed marker stayed byte-identical.
 
-One later local live command was rejected before process creation because
-`AGENTS.md` still said to stop before Stage A. That prelaunch rejection made no
-manifest or payload request and did not consume the separately registered
-recovery invocation. The control-plane documentation is being corrected now.
+MAT semantic opens, signal/event/target/label reads, model and training runs,
+prediction sets, target deliveries, and scores were all zero. The payload and
+private evidence stay Git-ignored. The recovery cannot be retried or rerun.
 
-Immediate gate: commit, push, and remotely green the exact control-plane
-update. Then run the one authorized recovery acquisition for exactly 18 opaque
-MAT files and 779,873,919 accepted bytes under the frozen storage, network,
-runtime, memory, and one-thread limits. Do not parse MAT semantics during
-recovery. Commit, push, and remotely green its aggregate result before Stage Q.
+Immediate gate: verify, commit, push, and remotely green the exact aggregate
+Stage A result. Stop before Stage Q in this milestone. Stage Q remains closed
+until that proof barrier passes.
 
 ## Scientific Goal And Sequence
 

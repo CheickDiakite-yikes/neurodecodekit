@@ -2,9 +2,8 @@
 
 Date: 2026-08-24
 
-Status: **generated qualification passed; exact implementation and corrected
-activation are remotely green; live recovery is pending the control-plane
-documentation proof**
+Status: **generated qualification and activation remotely green; sole live
+recovery passed and is consumed; aggregate result proof pending**
 
 Machine records:
 
@@ -61,11 +60,10 @@ gate; no generated behavior changed and the consumed qualification was not rerun
 
 ## Next Gate
 
-The implementation and activation barriers are complete. Commit, push, and
-remotely green the aligned control-plane documentation and current-frontier
-record. Only then may the one replacement Stage A recovery read the public
-manifest and acquire the exact 18 opaque payloads. Record and remotely green
-its aggregate result before Stage Q.
+The implementation, activation, and control-plane barriers completed before
+the one live recovery. It acquired and opaque-verified all 18 registered
+payloads and is consumed. Verify, commit, push, and remotely green its aggregate
+result before Stage Q; do not retry, rerun, or inspect the private bundle.
 
 Engineering capability added: a generated-qualified, path-anchored signed-object
 recovery can reproduce the registered Stage A payload identity after proof gates.

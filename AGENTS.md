@@ -45,55 +45,43 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-`BNCI-C3C5-1-A-R` is the sole active research lane. Read, in order:
+`BNCI-C3C5-1-A-R` Stage A has completed successfully and is permanently
+consumed. Read, in order:
 
 1. `registries/current_research_frontier.v0.json`;
-2. `docs/BNCI_2014_001_STAGE_A_FAILURE.md` and its machine result;
-3. the Stage A redirect-recovery packet, request proof, and authorization
-   decision;
-4. `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_IMPLEMENTATION.md` and its
-   generated result; and
-5. `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_IMPLEMENTATION_ACTIVATION.md`.
+2. `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_RESULT.md`; and
+3. `registries/bnci_2014_001_stage_a_redirect_recovery_result.v0.json`.
 
-The original Stage A invocation is consumed at direct-response refusal
-`BNCIC3C5-A-R1`: NEMAR returned HTTP 302, zero payload body bytes were read,
-and only the original 297-byte consumed marker remains. Never retry, resume,
-repair, delete, overwrite, or reuse that original invocation or marker.
+Control-plane commit `21cedd5da3c82e4378162ddfd687d669874d8c3f`
+passed Base job `97691784130`, Optional Neuro Readers job `97691784315`, and
+CI `32811586786` before execution. The maintainer then explicitly approved the
+one-shot operation after the 779,873,919-byte transfer and irreversible
+consumption risk were stated.
 
-The additive signed-object recovery is separately authorized and generated-
-qualified. Exact implementation `09a19d1c1c498bdd6e0ece2fbecb6d15917bdefa`
-passed CI `32806186972`. Activation/cross-platform correction
-`492a36a818bb00ca6bb86de6592c6cd0d5134f90` passed Base job `97680849177`,
-Optional Neuro Readers job `97680849465`, and CI `32807676008`. The initial
-activation commit's CI `32806829323` failed only because shallow checkout did
-not contain the prior implementation commit; preserve that failure record.
+The recovery acquired and opaque-verified exactly 18 signed NEMAR objects and
+779,873,919 accepted payload bytes in 113.06611395801883 seconds at
+42,893,312-byte peak process RSS. Total measured network bytes were
+780,275,745, and 92,111,536,128 free-disk bytes remained. The original
+297-byte consumed marker stayed byte-identical.
 
-One local launch request after the green activation was rejected before
-process creation because this file still contained the obsolete instruction
-to stop before Stage A. Therefore the replacement recovery has not started,
-made no manifest or payload request, written no recovery marker, and remains
-available exactly once under the existing packet. Do not reinterpret that
-prelaunch rejection as a consumed scientific invocation.
+MAT semantic opens, semantic parses, signal/event/target/label reads, model
+runs, training runs, prediction sets, target deliveries, and scores were all
+zero. The private payload, private manifest, recovery marker, and aggregate
+receipt remain Git-ignored. Do not open, inspect, move, delete, overwrite,
+upload, release, retry, rerun, repair, or substitute the consumed recovery.
 
-Immediate gate: update the control-plane docs and current-frontier record,
-test them, commit, push, and remotely green the exact documentation milestone.
-Only then run the one registered recovery invocation over exactly 18 opaque
-MAT payloads totaling 779,873,919 accepted bytes under one thread/worker/job,
-the 1,800-second, 1 GiB RSS, 2 GiB incremental-disk, 2.5 GiB network, and
-5 GiB free-disk gates. Do not semantically open MAT content during recovery.
-Commit, push, and remotely green the aggregate recovery result before Stage Q.
+Immediate gate: verify, commit, push, and remotely green the exact aggregate
+Stage A result. Stop before Stage Q in this milestone. Only after that result
+is green may a separately bounded Stage Q perform the frozen target-blind MAT
+semantic validation. Stage P may train and freeze target-blind predictions
+only after Q is green. Stage T may deliver targets and score once only after
+the prediction-freeze record is committed, pushed, and remotely green.
 
-Stage Q, Stage P, and Stage T remain ordered and closed. Stage Q may perform
-only the registered target-blind semantic validation after a green Stage A
-result. Stage P may train and freeze target-blind predictions only after Q is
-green. Stage T may deliver the frozen aggregate targets and score exactly once
-only after the prediction-freeze record is committed, pushed, and remotely
-green. No post-target update, rerun, release, or claim upgrade is allowed.
-
-Current scientific boundary: generated engineering is proven, but no verified
-BNCI payload bundle has been acquired by the recovery, no real neural model has
-run in this lane, and no unseen-person, EEG-beyond-EOG, decoding, language,
-movement-intention, live, hardware, or clinical claim is established.
+Current scientific boundary: source identity and bounded acquisition mechanics
+are now proven, but no MAT neural semantics have been read and no real model or
+scientific score has run in this lane. No unseen-person, EEG-beyond-EOG,
+decoding, language, movement-intention, live, hardware, or clinical claim is
+established.
 
 ## Prior Lane Context
 

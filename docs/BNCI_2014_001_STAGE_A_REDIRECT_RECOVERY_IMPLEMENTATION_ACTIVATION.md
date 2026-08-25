@@ -3,7 +3,7 @@
 Date: 2026-08-24
 
 Status: **activation remotely green after a shallow-checkout proof-test
-correction; one live recovery remains unstarted**
+correction; sole live recovery passed and is consumed**
 
 Machine activation:
 
@@ -37,8 +37,10 @@ release, or claim change. A later local execute command was rejected before
 process creation by the obsolete repository stop instruction; it made zero
 request and did not consume the replacement recovery.
 
-The immediate gate is the remotely green control-plane update. After that
-proof, the one replacement recovery may begin under the already frozen packet.
+Control-plane commit `21cedd5` passed both required jobs in CI `32811586786`
+before the one replacement recovery. The recovery then completed exactly once.
+The immediate gate is the aggregate result's commit, push, and remote-green
+proof before Stage Q.
 
 Engineering authority added after green activation: the exact generated-qualified
 implementation may perform one bounded signed-object Stage A recovery.

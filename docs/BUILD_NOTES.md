@@ -15605,3 +15605,35 @@ milestone. Then run the one registered 18-file / 779,873,919-byte opaque
 recovery and record its aggregate outcome once. Stage Q, model work, targets,
 scoring, release, and claim promotion remain closed until their exact ordered
 barriers pass.
+
+### BNCI-C3C5-1 Stage A signed-object recovery passed
+
+- Control-plane commit `21cedd5` passed Base job `97691784130`, Optional Neuro
+  Readers job `97691784315`, and CI `32811586786` before execution.
+- The maintainer explicitly approved the one-shot 18-file operation after its
+  779,873,919-byte transfer and irreversible-consumption risk were restated.
+  Earlier launch requests remained pre-process rejections with zero state
+  change.
+- The sole registered recovery passed: 18 payload requests, 18 accepted files,
+  779,873,919 payload network and accepted bytes, and 18 opaque post-write hash
+  opens. The complete private bundle was created and the original 297-byte
+  marker remained byte-identical.
+- Runtime was 113.06611395801883 seconds; peak process RSS was 42,893,312
+  bytes; total network was 780,275,745 bytes; output excluding marker/receipt
+  was 779,876,862 bytes; free disk moved from 92,905,000,960 to 92,111,536,128
+  bytes.
+- MAT semantic opens/parses, signal/event/target/label reads, model/training
+  runs, predictions, target deliveries, and scores were all zero.
+- The 2,347-byte aggregate receipt is privately bound by SHA-256
+  `ac8c18238905112db5a80ddfb8cf37e4c4fcca1be5098f34dd034630ff347b22`.
+  Payload, private manifest, marker, and receipt remain Git-ignored and
+  uncommitted.
+- Added a sanitized result document, machine result, tests, and synchronized
+  current-frontier, entry-point, tracker, decision, build, and handoff state.
+- Local verification passed all 140 focused BNCI tests with five expected
+  skips and all 6,066 dependency-free tests with 217 expected skips in
+  223.003 seconds. Ruff, compilation, 484 registry JSON parses, and diff
+  hygiene also passed.
+
+Immediate gate: verify, commit, push, and remotely green the aggregate result.
+Stop before Stage Q. The recovery is consumed with no retry or rerun.

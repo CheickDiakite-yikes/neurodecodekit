@@ -21,7 +21,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(self.frontier["active_lane_id"], "BNCI-C3C5-1-A-R")
         self.assertEqual(
             self.frontier["status"],
-            "control_plane_update_pending_own_remote_green_before_one_live_recovery",
+            "Stage_A_recovery_complete_pending_aggregate_result_remote_green",
         )
 
     def test_proof_chain_records_green_recovery_activation(self):
@@ -61,7 +61,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
 
     def test_recovery_resources_and_stage_order_are_frozen(self):
         envelope = self.frontier["active_recovery_envelope"]
-        self.assertEqual(envelope["registered_invocations_remaining"], 1)
+        self.assertEqual(envelope["registered_invocations_remaining"], 0)
         self.assertEqual(envelope["payload_files_exact"], 18)
         self.assertEqual(envelope["accepted_payload_bytes_exact"], 779_873_919)
         self.assertEqual(envelope["CPU_threads"], 1)
@@ -77,6 +77,12 @@ class CurrentResearchFrontierTests(unittest.TestCase):
                 "T_one_frozen_score",
             ],
         )
+        result = self.frontier["Stage_A_recovery_result"]
+        self.assertEqual(result["payload_files"], 18)
+        self.assertEqual(result["accepted_payload_bytes"], 779_873_919)
+        self.assertEqual(result["MAT_semantic_opens"], 0)
+        self.assertEqual(result["model_runs"], 0)
+        self.assertEqual(result["scores"], 0)
 
     def test_all_five_scientific_goals_and_claims_remain_unestablished(self):
         self.assertEqual(
@@ -85,16 +91,20 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         )
         claims = self.frontier["claim_boundary"]
         for key, value in claims.items():
-            if key != "engineering_capability_established":
+            if key not in {
+                "engineering_capability_established",
+                "verified_recovery_bundle_acquired",
+            }:
                 self.assertFalse(value, key)
+        self.assertTrue(claims["verified_recovery_bundle_acquired"])
 
     def test_control_plane_entrypoints_name_the_current_gate(self):
         expected = {
             "AGENTS.md": "BNCI-C3C5-1-A-R",
-            "START_HERE.md": "Current Gate: BNCI-C3C5-1 Stage A Redirect Recovery",
+            "START_HERE.md": "Current Gate: BNCI-C3C5-1 Stage A Result Closeout",
             "README.md": "redirect-recovery packet",
             "docs/CODEX_HANDOFF.md": "Current gate, 2026-08-25",
-            "docs/NEXT_20_LOOPS_TRACKER.md": "Immediate gate (2026-08-25)",
+            "docs/NEXT_20_LOOPS_TRACKER.md": "Stage A result gate (2026-08-25)",
         }
         for path, phrase in expected.items():
             text = (ROOT / path).read_text(encoding="utf-8")

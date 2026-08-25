@@ -13676,3 +13676,37 @@ after that barrier may the one 18-file, 779,873,919-byte redirect-recovery
 invocation run. Stage Q remains closed until its aggregate Stage A result is
 committed, pushed, and remotely green; P and T remain closed behind their own
 ordered evidence barriers.
+
+## 0483 - Accept The Exact BNCI Stage A Recovery Result
+
+Execution decision: accept the maintainer's explicit one-shot approval only
+after the exact 18-file, 779,873,919-byte transfer and irreversible-consumption
+risk were restated. Earlier short-form launch attempts were rejected before
+process creation and did not consume or alter recovery state.
+
+Result decision: the sole registered signed-object recovery passed. It made one
+bounded manifest request and 18 payload requests, accepted exactly 779,873,919
+payload bytes, performed 18 opaque post-write hash opens, created one complete
+isolated private bundle, and preserved the original 297-byte consumed marker
+byte-identical. It completed in 113.06611395801883 seconds at 42,893,312-byte
+peak process RSS with 780,275,745 total network bytes and 92,111,536,128 free
+disk bytes remaining.
+
+Privacy decision: retain the payload, private manifest, recovery marker, and
+aggregate receipt only in Git-ignored state. Bind the 2,347-byte aggregate
+receipt by SHA-256
+`ac8c18238905112db5a80ddfb8cf37e4c4fcca1be5098f34dd034630ff347b22`
+without committing, uploading, or publishing it or its local path. Do not
+inspect, move, delete, overwrite, retry, rerun, repair, or substitute the
+consumed recovery.
+
+Scientific decision: MAT semantic opens/parses, signal/event/target/label
+reads, model and training runs, prediction sets, target deliveries, and scores
+were all zero. This establishes exact source identity and bounded acquisition
+mechanics only, not a neural effect, unseen-person generalization, EEG beyond
+EOG, decoding, language, movement intention, live use, hardware, or clinical
+value.
+
+Transition decision: verify, commit, push, and remotely green the sanitized
+aggregate result before Stage Q. Stop before Stage Q in this milestone. P and T
+remain closed behind their ordered target-firewall and remote-proof barriers.
