@@ -7,76 +7,79 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: BNCI-C3C5-1 G1 Proof Closeout
+## Current Gate: BNCI-C3C5-1 Stage A Redirect Recovery
 
-Exact G1 result `4ef12dd` passed Base job `97553936562`, Optional job
-`97553936838`, and CI `32765504463`. The sole replacement generated/mock
-qualification passed all 11 registered case classes across nine isolated
-folds with 468 synthetic fits, 495 synthetic prediction sets, one generated
-target delivery, and one synthetic score.
+Start with `registries/current_research_frontier.v0.json`, the machine-readable
+snapshot of the active lane, proof chain, one-shot status, caps, goals, and next
+transition.
 
-Read the G1 result artifacts, then the new proof-only closeout, machine proof,
-and proof test. The closeout binds three unchanged result artifacts totaling
-17,134 bytes under canonical SHA-256
-`90f006d84089af6167ad920d5c90a0ea434cf28b0c04a60ef883ef373649f58b`.
-It repeats no qualification and performs no Stage A or real-data operation.
+The generated G1 pipeline is complete, remotely proven, and consumed. Its
+synthetic result is engineering evidence only. The original real Stage A
+attempt is also consumed: NEMAR returned HTTP 302, the direct-response client
+refused, zero payload body bytes were read, and the original 297-byte marker is
+immutable.
 
-Test, commit, push, and green the proof-only closeout, then stop before Stage
-A. The G1 invocation is consumed and cannot be retried or rerun. Real BNCI
-data, scientific scoring, releases, and claims remain closed in this
-milestone.
+Read the current lane in this order:
 
-## Historical BNCI Decision Gate
+1. `docs/BNCI_2014_001_STAGE_A_FAILURE.md`;
+2. `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_AUTHORIZATION_PACKET.md`;
+3. `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_REQUEST_PROOF_CLOSEOUT.md`;
+4. `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_AUTHORIZATION_DECISION.md`;
+5. `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_IMPLEMENTATION.md`; and
+6. `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_IMPLEMENTATION_ACTIVATION.md`.
 
-Read
-`docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md`
-and its machine result first. Activation repair `9cc2688` passed both jobs in
-CI `32738530528` before the sole registered invocation. The executor wrote its
-durable consumed marker, then failed certificate-chain verification during the
-initial checksum-manifest TLS handshake. It received no HTTP response and made
-zero EDF requests; zero payload bytes, targets, models, predictions, or scores
-were produced.
+The recovery decision `588dd70` passed CI `32803138246`. The exact generated-
+qualified implementation `09a19d1` passed CI `32806186972`. The activation's
+first CI `32806829323` exposed a shallow-checkout-only proof-test assumption;
+the implementation did not fail. Corrective activation commit `492a36a`
+passed Base job `97680849177`, Optional Neuro Readers job `97680849465`, and
+CI `32807676008`.
 
-Stage S-A2 has no retry, rerun, repair, resume, fallback, or substitution. Do
-not open or alter its ignored marker, and do not complete the six-file bundle
-through another client. The dependent UG1 source-LOSO stage is blocked.
+The recovery qualification passed 18 generated case classes and 12 direct
+refusals, including a tiny end-to-end signed-object resume roundtrip. It made
+zero real network requests and performed zero MAT semantic, model, target, or
+score operations. It is consumed and must not be repeated.
 
-Exact result `ba8645e` passed both jobs in CI `32740773041`. Its proof-only
-closeout `d9eae69` then passed Base job `97480690428`, Optional Neuro Readers
-job `97480690862`, and CI `32742694237`. It bound six tracked artifacts and
-performed no ignored-state or real operation. EEGMMIDB-UG1 is closed.
+One later local live command was rejected before process creation because
+`AGENTS.md` still said to stop before Stage A. That prelaunch rejection made no
+manifest or payload request and did not consume the separately registered
+recovery invocation. The control-plane documentation is being corrected now.
 
-Read
-`docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_PRIMARY_SOURCE_RESEARCH.md`
-and its machine record next. Exact Tier A research decision `f435296` passed
-Base job `97491066752`, Optional Neuro Readers job `97491066455`, and CI
-`32745853616`. It selects only the 18 original MAT files in NEMAR `nm000139`
-`v1.0.2`, totaling 779,873,919 bytes, for a future independent experiment.
+Immediate gate: commit, push, and remotely green the exact control-plane
+update. Then run the one authorized recovery acquisition for exactly 18 opaque
+MAT files and 779,873,919 accepted bytes under the frozen storage, network,
+runtime, memory, and one-thread limits. Do not parse MAT semantics during
+recovery. Commit, push, and remotely green its aggregate result before Stage Q.
 
-Then read the BNCI-C3C5-1 preregistration, machine contract, all-false
-authorization packet, machine request, and matching tests. The nine-fold
-protocol holds out one person completely. EEG-only C3 must beat no-signal,
-timing, derangement, temporal, and spatial controls. Conditional C5-partial
-requires EOG+EEG log loss to beat both recorded EOG alone and an equally sized
-EOG+deranged-EEG fusion at the participant level.
+## Scientific Goal And Sequence
 
-Exact request `3197390` passed Base job `97503845918`, Optional Neuro Readers
-job `97503846151`, and CI `32749812954`. Read the new request proof closeout,
-machine proof, and matching test. They bind nine exact artifacts totaling
-87,813 bytes under canonical SHA-256
-`72e7ebf7de421b723a668ee2076c223c45c0ab5fca724457d66314951a1e3823`.
+The decisive bounded question is whether scalp EEG adds held-out information
+beyond the three recorded EOG channels, not merely whether a classifier can
+exploit protocol timing or eye movement. The fixed order remains:
 
-Exact proof closeout `9e7c70d` passed Base job `97509285137`, Optional Neuro
-Readers job `97509285462`, and CI `32751503586`. BNCI-C3C5-1 was then named as
-the sole active Tier C packet, and the maintainer's next exact message was
-`continue`.
+```text
+G1 generated proof -> A opaque acquisition -> Q target-blind validation
+                   -> P target-firewalled prediction freeze -> T one score
+```
 
-Read the authorization decision document, machine record, and matching test.
-They preserve those exact eight UTF-8 bytes and bind only the unchanged staged
-packet. The decision has delayed effect: commit, push, and green it in both
-jobs before implementing the one generated/mock G1 qualification. Acquisition,
-MAT parsing, model work, target delivery, scoring, release, and claim upgrades
-remain closed until their exact registered predecessor barriers pass.
+Stage Q, P, and T remain closed. Even a maximum pass can establish only
+participant-independent BNCI protocol-condition prediction and incremental EEG
+sensor information beyond recorded EOG under this protocol. It cannot establish
+thought or language decoding, movement intention, exclusive motor-cortex
+origin, live decoding, portable hardware, home use, or clinical utility.
+
+## Historical BNCI And UG1 Context
+
+The BNCI source decision selected only 18 original MAT files in NEMAR
+`nm000139` tag `v1.0.2`, totaling 779,873,919 bytes. The nine-fold protocol
+holds out one person completely. EEG-only C3 must beat no-signal, timing,
+derangement, temporal, and spatial controls. C5-partial requires EOG+EEG log
+loss to beat both recorded EOG alone and a size-matched EOG+deranged-EEG
+fusion at the participant level.
+
+The older `EEGMMIDB-UG1` Stage S-A2 invocation failed TLS verification before
+an HTTP response or EDF request. Its marker is consumed and immutable, its
+dependent lane is closed, and it must not be retried or substituted.
 
 ## Historical UG1 Context
 

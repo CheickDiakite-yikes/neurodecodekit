@@ -2,8 +2,9 @@
 
 Date: 2026-08-24
 
-Status: **generated qualification passed; live recovery remains closed until
-this exact implementation is committed, pushed, remotely green, and activated**
+Status: **generated qualification passed; exact implementation and corrected
+activation are remotely green; live recovery is pending the control-plane
+documentation proof**
 
 Machine records:
 
@@ -24,11 +25,12 @@ directory descriptors so a changed pathname cannot redirect mutation outside
 the repository. A process wall-clock alarm plus per-chunk runtime, RSS, network,
 and disk checks enforce the registered resource envelope.
 
-Live execution requires a later tracked activation record that is clean against
+Live execution requires a tracked activation record that is clean against
 `HEAD` and proves every implementation artifact byte-identical to its remotely
 green implementation commit. The entire tracked tree must also be clean, so a
-modified imported dependency cannot alter execution. That activation record
-does not exist in this milestone.
+modified imported dependency cannot alter execution. That activation now
+exists: corrected activation `492a36a` passed both required jobs in CI
+`32807676008`.
 
 ## Generated Qualification
 
@@ -59,10 +61,11 @@ gate; no generated behavior changed and the consumed qualification was not rerun
 
 ## Next Gate
 
-Commit and push this exact implementation and wait for both required CI jobs.
-Then create, commit, push, and green the implementation activation record.
-Only after that second proof barrier may the one replacement Stage A recovery
-read the public manifest and acquire the exact 18 opaque payloads.
+The implementation and activation barriers are complete. Commit, push, and
+remotely green the aligned control-plane documentation and current-frontier
+record. Only then may the one replacement Stage A recovery read the public
+manifest and acquire the exact 18 opaque payloads. Record and remotely green
+its aggregate result before Stage Q.
 
 Engineering capability added: a generated-qualified, path-anchored signed-object
 recovery can reproduce the registered Stage A payload identity after proof gates.

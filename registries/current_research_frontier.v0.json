@@ -1,0 +1,102 @@
+{
+  "schema_name": "neurodecodekit.current_research_frontier",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-25",
+  "active_lane_id": "BNCI-C3C5-1-A-R",
+  "status": "control_plane_update_pending_own_remote_green_before_one_live_recovery",
+  "evidence_sequence": [
+    "G1_generated_proof",
+    "A_opaque_acquisition",
+    "Q_target_blind_validation",
+    "P_target_firewalled_prediction_freeze",
+    "T_one_frozen_score"
+  ],
+  "completed_proof": {
+    "G1_proof_closeout_commit": "cf476982d70cbd6c710b7d0a67352765155c6bc1",
+    "G1_proof_closeout_CI_run_id": 32767245101,
+    "original_Stage_A_failure_commit": "162fddcfa2f399f4e5919a2daa0de4d7d33bf1f4",
+    "original_Stage_A_failure_CI_run_id": 32782670936,
+    "redirect_recovery_decision_commit": "588dd70c62a6f7041d677f9baf35e476ef739627",
+    "redirect_recovery_decision_CI_run_id": 32803138246,
+    "redirect_recovery_implementation_commit": "09a19d1c1c498bdd6e0ece2fbecb6d15917bdefa",
+    "redirect_recovery_implementation_CI_run_id": 32806186972,
+    "redirect_recovery_activation_commit": "492a36a818bb00ca6bb86de6592c6cd0d5134f90",
+    "redirect_recovery_activation_CI_run_id": 32807676008,
+    "redirect_recovery_activation_base_job_id": 97680849177,
+    "redirect_recovery_activation_optional_job_id": 97680849465,
+    "both_activation_jobs_green": true
+  },
+  "consumed_operations": {
+    "G1_generated_invocation_consumed": true,
+    "G1_generated_rerun_allowed": false,
+    "original_Stage_A_invocation_consumed": true,
+    "original_Stage_A_retry_resume_or_repair_allowed": false,
+    "original_Stage_A_payload_body_bytes": 0,
+    "original_Stage_A_retained_marker_bytes": 297,
+    "redirect_recovery_generated_qualification_consumed": true,
+    "redirect_recovery_generated_qualification_rerun_allowed": false
+  },
+  "prelaunch_rejection": {
+    "reason": "obsolete_AGENTS_stop_before_Stage_A_instruction",
+    "process_created": false,
+    "replacement_recovery_invocation_consumed": false,
+    "manifest_requests": 0,
+    "payload_requests": 0,
+    "network_body_bytes": 0,
+    "accepted_payload_bytes": 0,
+    "recovery_marker_writes": 0,
+    "ignored_path_operations": 0,
+    "MAT_semantic_opens": 0,
+    "model_runs": 0,
+    "target_deliveries": 0,
+    "scores": 0
+  },
+  "active_recovery_envelope": {
+    "registered_invocations_remaining": 1,
+    "payload_files_exact": 18,
+    "accepted_payload_bytes_exact": 779873919,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "runtime_seconds_maximum": 1800,
+    "peak_RSS_bytes_maximum": 1073741824,
+    "incremental_disk_bytes_maximum": 2147483648,
+    "network_bytes_maximum": 2684354560,
+    "free_disk_bytes_minimum": 5368709120,
+    "MAT_semantic_opens": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "reruns": 0
+  },
+  "stage_state": {
+    "control_plane_update": "in_progress_pending_commit_push_and_remote_green",
+    "A_opaque_acquisition": "authorized_once_after_control_plane_remote_green",
+    "Q_target_blind_validation": "closed_pending_green_A_result",
+    "P_prediction_freeze": "closed_pending_green_Q_result",
+    "T_one_score": "closed_pending_green_prediction_freeze",
+    "release": "closed",
+    "claim_upgrade": "closed"
+  },
+  "five_scientific_goals": {
+    "EEG_language_information": "not_established",
+    "motor_cortex_consistent_movement_information": "not_established",
+    "completely_unseen_person_generalization": "not_established",
+    "live_end_to_end_decoding": "not_established",
+    "EEG_beyond_recorded_peripheral_controls": "not_established"
+  },
+  "nearest_decisive_goal": "test_incremental_EEG_sensor_information_beyond_recorded_EOG_on_completely_held_out_participants",
+  "immediate_next_gate": "commit_push_and_remotely_green_this_control_plane_update_then_run_one_registered_redirect_recovery",
+  "claim_boundary": {
+    "engineering_capability_established": "generated_qualified_proof_gated_signed_object_recovery",
+    "verified_recovery_bundle_acquired": false,
+    "real_neural_model_run": false,
+    "scientific_score_produced": false,
+    "unseen_person_generalization": false,
+    "EEG_beyond_EOG": false,
+    "decoding_performance": false,
+    "thought_or_language_decoding": false,
+    "movement_intention_or_motor_cortex_origin": false,
+    "live_or_portable_hardware": false,
+    "clinical_utility": false
+  }
+}

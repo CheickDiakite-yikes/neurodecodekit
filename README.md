@@ -52,72 +52,55 @@ improves log loss over recorded EOG alone. Language, motor, unseen-person,
 peripheral-control, and live work remain separate evidence tracks so success
 on one cannot silently upgrade the others.
 
-The exact [BNCI-C3C5-1 preregistration](docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_PREREGISTRATION.md),
-[machine contract](registries/bnci_2014_001_cross_participant_eeg_gain_contract.v0.json),
-and [all-false authorization packet](docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_AUTHORIZATION_PACKET.md)
-now freeze the experiment before data access. C3 requires a causal late-imagery
-EEG model to beat no-signal, timing, derangement, early/pre-cue, and spatial
-controls across nine completely held-out people. C5-partial separately asks
-whether a source-cross-fitted EOG+EEG fusion improves participant-macro log
-loss over recorded EOG alone and an equally sized EOG+deranged-EEG fusion.
-The request is not authorization: no real payload, model, prediction, or score
-has been produced.
+The exact [BNCI-C3C5-1 preregistration](docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_PREREGISTRATION.md)
+and [machine contract](registries/bnci_2014_001_cross_participant_eeg_gain_contract.v0.json)
+freeze the experiment as `G1 -> A -> Q -> P -> T`. C3 requires causal
+late-imagery EEG to beat no-signal, timing, derangement, early/pre-cue, and
+spatial controls across nine completely held-out people. C5-partial asks
+whether source-cross-fitted EOG+EEG improves participant-macro log loss over
+both recorded EOG alone and an equally sized EOG+deranged-EEG fusion.
 
-Exact all-false request `3197390` passed Base job `97503845918`, Optional
-Neuro Readers job `97503846151`, and CI `32749812954`. Proof-only closeout
-`9e7c70d` passed Base job `97509285137`, Optional job `97509285462`, and CI
-`32751503586`. After BNCI-C3C5-1 was identified as the sole active Tier C
-packet, the maintainer's next exact message was `continue`; the packet-bound
-[authorization decision](docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_AUTHORIZATION_DECISION.md)
-is recorded with delayed effect. It authorizes only the unchanged G1 -> A -> Q
--> P -> T sequence after this decision itself is remotely green.
-
-Decision `617991b` passed Base job `97516278409`, Optional Neuro Readers job
-`97516278093`, and CI `32753700516`. The generated implementation now includes
-strict mocked acquisition, causal E1/E2/P features, nine spawned
-target-firewalled participant folds, 16 frozen conditions, prediction hashes,
-and a one-delivery aggregate scorer. Twelve focused component tests pass.
-
-The sole registered G1 launcher attempt nevertheless refused before its first
-generated case because an existing coordinator root was passed to a helper
-requiring a new child directory. The [R1 incident](docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_STAGE_G1_FAILURE.md)
-record shows zero fixture writes, fits, predictions, target deliveries, scores,
-real-data operations, network bytes, and output bytes. The one-line wiring fix
-is component-tested but was not rerun under consumed authority. A new
-[all-false recovery request](docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_STAGE_G1_RECOVERY_AUTHORIZATION_PACKET.md)
-asks only for one replacement generated G1 pass and explicitly stops before
-Stage A.
-
-The unchanged recovery request is now green at repair commit `b1f68e5`, Base
-job `97534565977`, Optional Neuro Readers job `97534565813`, and CI
-`32759468410`. The repair changed only two historical causal-replay tests so
-their synthetic success paths no longer inherit whole-suite lifetime RSS;
-production resource enforcement is unchanged and an explicit over-cap refusal
-test was added. The new
-[recovery request proof closeout](docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_STAGE_G1_RECOVERY_REQUEST_PROOF_CLOSEOUT.md)
-binds seven exact artifacts totaling 22,514 bytes. It must itself become
-remotely green before a fresh packet-bound decision can authorize one
-replacement generated pass.
-
-That closeout is now green at `e1ad1ea` in CI `32761632135`. After the
-recovery packet was named as the sole active Tier C gate, the maintainer's
-next exact message was `continue`. The additive
-[recovery authorization decision](docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_STAGE_G1_RECOVERY_AUTHORIZATION_DECISION.md)
-quotes that word and conditionally permits exactly one generated/mock pass
-only after the decision itself is remotely green. It still permits no real
-data, network, Stage A, scientific score, retry, or claim upgrade.
-
-Decision `c5dd49b` then passed both jobs in CI `32763519623`. The sole
-replacement [G1 qualification](docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_STAGE_G1_RESULT.md)
+The sole replacement [G1 qualification](docs/BNCI_2014_001_CROSS_PARTICIPANT_EEG_GAIN_STAGE_G1_RESULT.md)
 passed all 11 generated engineering case classes across nine isolated folds:
 468 synthetic fits, 495 synthetic prediction sets, one generated target
-delivery, and one synthetic score in 17.790 seconds. It used zero network and
-zero real-data operations and retained zero generated payload bytes. This is a
-complete generated pipeline proof, not a neural result; its synthetic route
-has no scientific value. Exact result `4ef12dd` is now green in CI
-`32765504463`. A proof-only closeout binds its three result artifacts and must
-itself become remotely green before the repository advances to Stage A; no
-real data or model operation is part of that closeout.
+delivery, and one synthetic score in 17.790 seconds. It used zero real data or
+network bytes and has no scientific value. G1 result `4ef12dd` and proof
+closeout `cf47698` are remotely green, and G1 is consumed.
+
+The first real [Stage A attempt](docs/BNCI_2014_001_STAGE_A_FAILURE.md) then
+failed closed when NEMAR returned HTTP 302 to a direct-response-only client.
+It read zero payload body bytes and retained only its immutable 297-byte
+consumed marker. That invocation cannot be retried, repaired, resumed, or
+reused.
+
+The separately scoped [redirect-recovery packet](docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_AUTHORIZATION_PACKET.md)
+permits one exact replacement acquisition through allowlisted signed NEMAR
+objects. Its decision `588dd70` passed CI `32803138246`; generated-qualified
+implementation `09a19d1` passed CI `32806186972`; and corrected activation
+`492a36a` passed Base job `97680849177`, Optional Neuro Readers job
+`97680849465`, and CI `32807676008`. The implementation validates 18 exact
+identities totaling 779,873,919 bytes, keeps signed credentials in memory,
+anchors writes to no-follow directory descriptors, supports bounded resume,
+and enforces one-thread runtime, memory, network, disk, and free-space limits.
+
+The recovery's 18-case generated qualification passed with 12 direct
+refusals, one tiny end-to-end signed-object roundtrip, 0.010994 seconds runtime,
+29,786,112-byte peak RSS, and zero retained payload. It made no real request
+and performed no MAT semantic read, fit, prediction, target delivery, or score.
+The generated invocation is consumed and cannot be repeated.
+
+One later live command was rejected before process creation because the
+repository's old `AGENTS.md` still said to stop before Stage A. It made no
+manifest or payload request and did not consume the recovery invocation. The
+current gate is to green the corrected control-plane docs, then run that one
+authorized opaque acquisition and remotely prove its aggregate result before
+any Stage Q semantic validation.
+
+The machine-readable current state is
+[`registries/current_research_frontier.v0.json`](registries/current_research_frontier.v0.json).
+It freezes the active lane, proof commits, consumed and unconsumed one-shot
+states, resource caps, five scientific goals, claim boundary, and exact next
+transition so handoffs cannot silently return to an older gate.
 
 Current result: [EEGMMIDB-UG1 Stage S-A2](docs/EEGMMIDB_UNSEEN_PARTICIPANT_SOURCE_ACQUISITION_STAGE_SA2_RESULT.md)
 failed closed during verified TLS certificate-chain validation before an HTTP
@@ -130,14 +113,12 @@ be repaired or retried under this lane. Exact result `ba8645e` passed both
 jobs in CI `32740773041`; proof-only closeout `d9eae69` passed both jobs in CI
 `32742694237` without reopening the consumed marker or payload paths.
 
-BNCI-C3C5-1 has a component-tested generated implementation, but full G1 is R1
-and its one-pass recovery is not yet authorized. Acquisition remains closed.
-Zero real MAT or BDF bodies, event tables, targets, models, predictions, or
-scores have been opened or produced. Even a future maximum pass would
-establish only participant-
-independent BNCI protocol-condition prediction and incremental EEG sensor
-information beyond three recorded EOG channels, not thought reading, language,
-movement intention, exclusive motor-cortex origin, live use, or hardware.
+BNCI-C3C5-1 has not yet produced a verified recovery bundle, real-model run,
+prediction freeze, or scientific score. Even a future maximum pass would
+establish only participant-independent BNCI protocol-condition prediction and
+incremental EEG sensor information beyond three recorded EOG channels, not
+thought reading, language, movement intention, exclusive motor-cortex origin,
+live use, portable hardware, home use, or clinical utility.
 
 The frozen [EEGMMIDB-UG1 research design](docs/EEGMMIDB_UNSEEN_PARTICIPANT_GENERALIZATION_RESEARCH.md)
 was the direct unseen-person experiment. Its

@@ -1,14 +1,17 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Immediate gate (2026-08-24):** exact G1 result `4ef12dd` passed both jobs
-> in CI `32765504463`. Its sole generated/mock pass completed all 11 case
-> classes across nine isolated folds with 468 synthetic fits, 495 prediction
-> sets, one generated target delivery, and one synthetic score in 17.790
-> seconds. The new proof-only closeout binds three exact result artifacts /
-> 17,134 bytes under canonical SHA-256 `90f006d8...649f58b`. Immediate gate:
-> commit, push, and green the closeout, then stop before Stage A. G1 is
-> consumed; retry, real data, scientific score, release, and claim work remain
-> closed in this milestone.
+> **Immediate gate (2026-08-25):** BNCI-C3C5-1 G1 and its proof closeout are
+> remotely green and consumed. The first real Stage A invocation consumed at
+> HTTP-302 direct-response refusal with zero payload body bytes. A separately
+> authorized signed-object recovery passed 18 generated case classes and 12
+> refusals; implementation `09a19d1` passed CI `32806186972`, and corrected
+> activation `492a36a` passed both jobs in CI `32807676008`. A later local live
+> command was rejected before process creation by the stale `AGENTS.md` gate,
+> so the one recovery remains unstarted and available exactly once. Green this
+> control-plane update, run one 18-file / 779,873,919-byte opaque acquisition,
+> and green its aggregate result before target-blind Q. P and T remain closed.
+> No real neural model, prediction freeze, scientific score, unseen-person
+> result, or EEG-beyond-EOG advantage exists yet.
 
 > **Immediate gate (2026-08-23):** exact VR39P Stage 1 `4d48cb3` passed Base
 > job `97310285688`, Optional job `97310285728`, and CI `32685719113` after its

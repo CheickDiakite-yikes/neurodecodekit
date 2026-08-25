@@ -2,8 +2,8 @@
 
 Date: 2026-08-24
 
-Status: **activation recorded; delayed until this exact activation is committed,
-pushed, and both required CI jobs are green**
+Status: **activation remotely green after a shallow-checkout proof-test
+correction; one live recovery remains unstarted**
 
 Machine activation:
 
@@ -21,12 +21,24 @@ still match the green commit, this activation matches `HEAD`, the implementation
 is an ancestor of `HEAD`, and the complete tracked tree is clean. The unrelated
 untracked tracker-inspection artifact is neither read nor bound.
 
+The first activation commit `0dd507a` failed CI `32806829323` because GitHub's
+depth-one checkout did not contain the prior implementation commit required by
+two proof tests. Production code and implementation artifacts did not fail.
+The test-only correction verifies checked-out Git blobs and explicit fail-
+closed behavior when ancestry is unavailable. Corrected activation
+`492a36a818bb00ca6bb86de6592c6cd0d5134f90` passed Base job `97680849177`,
+Optional Neuro Readers job `97680849465`, and CI `32807676008`.
+
 ## Delayed Effect
 
-This record performs no ignored-path read, manifest request, payload request,
-MAT open, model operation, target delivery, score, release, or claim change.
-Only after this exact activation is committed, pushed, and remotely green may
-the one replacement recovery invocation begin.
+This record and its correction performed no ignored-path read, manifest
+request, payload request, MAT open, model operation, target delivery, score,
+release, or claim change. A later local execute command was rejected before
+process creation by the obsolete repository stop instruction; it made zero
+request and did not consume the replacement recovery.
+
+The immediate gate is the remotely green control-plane update. After that
+proof, the one replacement recovery may begin under the already frozen packet.
 
 Engineering authority added after green activation: the exact generated-qualified
 implementation may perform one bounded signed-object Stage A recovery.

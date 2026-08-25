@@ -15567,3 +15567,41 @@ before Stage A; no real BNCI payload or scientific score has been opened.
 
 Immediate gate: verify, commit, push, and green the proof-only closeout, then
 stop before Stage A.
+
+### BNCI-C3C5-1 control plane advanced to signed-object recovery
+
+- G1 proof closeout `cf47698` passed CI `32767245101`; generated G1 remains
+  consumed and scientifically inert.
+- Original Stage A implementation `619105b` passed CI `32781910547`. Its sole
+  invocation received HTTP 302, refused before a payload body, retained only
+  the 297-byte consumed marker, and was closed at `162fddc` in CI
+  `32782670936`.
+- The separately authorized redirect-recovery decision `588dd70` passed CI
+  `32803138246`. Generated-qualified implementation `09a19d1` passed CI
+  `32806186972` after 18 generated cases, 12 direct refusals, one tiny resume
+  roundtrip, zero real requests, and zero retained generated payload.
+- Activation CI `32806829323` failed because GitHub's shallow checkout lacked
+  the prior implementation commit. The implementation remained unchanged.
+  Corrective activation `492a36a` validates checked-out blobs and fail-closed
+  ancestry behavior; it passed Base job `97680849177`, Optional job
+  `97680849465`, and CI `32807676008`.
+- A later execute command was rejected before process creation because the
+  repository instruction still said to stop before Stage A. No process,
+  request, marker, ignored-path operation, accepted byte, or consumed recovery
+  resulted.
+- Updated `AGENTS.md`, `START_HERE.md`, `README.md`, and the tracker. Added
+  `registries/current_research_frontier.v0.json` plus tests so the active lane,
+  proof chain, one-shot state, caps, five scientific goals, and A -> Q -> P ->
+  T order are machine checked.
+- Preserved the unrelated untracked tracker-inspection NDJSON without reading,
+  staging, editing, or deleting it.
+- Local verification passed all 134 focused BNCI tests with five expected
+  skips and all 6,060 dependency-free tests with 217 expected skips in
+  214.350 seconds. The new current-frontier contract contributed six passing
+  tests.
+
+Immediate gate: verify, commit, push, and remotely green this control-plane
+milestone. Then run the one registered 18-file / 779,873,919-byte opaque
+recovery and record its aggregate outcome once. Stage Q, model work, targets,
+scoring, release, and claim promotion remain closed until their exact ordered
+barriers pass.

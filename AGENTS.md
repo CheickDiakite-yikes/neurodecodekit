@@ -45,25 +45,55 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-Exact G1 result `4ef12dd056358907ab6734c7a2a21e6776f6f6af` passed Base
-Python job `97553936562`, Optional Neuro Readers job `97553936838`, and CI
-`32765504463`. Read the result document, machine result, result test, new
-proof-only closeout, machine proof, and proof test.
+`BNCI-C3C5-1-A-R` is the sole active research lane. Read, in order:
 
-The generated/mock qualification passed all 11 case classes across nine
-isolated folds with exactly 468 synthetic fits, 495 synthetic prediction
-sets, one generated target delivery, and one synthetic score. It completed in
-17.790334874996915 seconds at 566,231,040-byte peak process-tree RSS, emitted
-3,296 aggregate bytes, and retained zero generated payload bytes. Network and
-every real-data/model/target/score counter were zero. The synthetic
-`BNCIC3C5-R2` route has no claim value. The invocation is consumed.
+1. `registries/current_research_frontier.v0.json`;
+2. `docs/BNCI_2014_001_STAGE_A_FAILURE.md` and its machine result;
+3. the Stage A redirect-recovery packet, request proof, and authorization
+   decision;
+4. `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_IMPLEMENTATION.md` and its
+   generated result; and
+5. `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_IMPLEMENTATION_ACTIVATION.md`.
 
-The proof-only closeout binds three exact result artifacts totaling 17,134
-bytes under canonical SHA-256
-`90f006d84089af6167ad920d5c90a0ea434cf28b0c04a60ef883ef373649f58b`.
-Immediate gate: test, commit, push, and green this closeout, then stop before
-Stage A. Do not rerun G1, acquire/open real BNCI data, run a real model or
-scientific score, release, or upgrade a claim in this milestone.
+The original Stage A invocation is consumed at direct-response refusal
+`BNCIC3C5-A-R1`: NEMAR returned HTTP 302, zero payload body bytes were read,
+and only the original 297-byte consumed marker remains. Never retry, resume,
+repair, delete, overwrite, or reuse that original invocation or marker.
+
+The additive signed-object recovery is separately authorized and generated-
+qualified. Exact implementation `09a19d1c1c498bdd6e0ece2fbecb6d15917bdefa`
+passed CI `32806186972`. Activation/cross-platform correction
+`492a36a818bb00ca6bb86de6592c6cd0d5134f90` passed Base job `97680849177`,
+Optional Neuro Readers job `97680849465`, and CI `32807676008`. The initial
+activation commit's CI `32806829323` failed only because shallow checkout did
+not contain the prior implementation commit; preserve that failure record.
+
+One local launch request after the green activation was rejected before
+process creation because this file still contained the obsolete instruction
+to stop before Stage A. Therefore the replacement recovery has not started,
+made no manifest or payload request, written no recovery marker, and remains
+available exactly once under the existing packet. Do not reinterpret that
+prelaunch rejection as a consumed scientific invocation.
+
+Immediate gate: update the control-plane docs and current-frontier record,
+test them, commit, push, and remotely green the exact documentation milestone.
+Only then run the one registered recovery invocation over exactly 18 opaque
+MAT payloads totaling 779,873,919 accepted bytes under one thread/worker/job,
+the 1,800-second, 1 GiB RSS, 2 GiB incremental-disk, 2.5 GiB network, and
+5 GiB free-disk gates. Do not semantically open MAT content during recovery.
+Commit, push, and remotely green the aggregate recovery result before Stage Q.
+
+Stage Q, Stage P, and Stage T remain ordered and closed. Stage Q may perform
+only the registered target-blind semantic validation after a green Stage A
+result. Stage P may train and freeze target-blind predictions only after Q is
+green. Stage T may deliver the frozen aggregate targets and score exactly once
+only after the prediction-freeze record is committed, pushed, and remotely
+green. No post-target update, rerun, release, or claim upgrade is allowed.
+
+Current scientific boundary: generated engineering is proven, but no verified
+BNCI payload bundle has been acquired by the recovery, no real neural model has
+run in this lane, and no unseen-person, EEG-beyond-EOG, decoding, language,
+movement-intention, live, hardware, or clinical claim is established.
 
 ## Prior Lane Context
 
@@ -131,11 +161,11 @@ those exact eight UTF-8 bytes and binds only the unchanged G1 -> A -> Q -> P ->
 T packet. It has delayed effect until its own commit is pushed and both jobs
 are green.
 
-Immediate safe gate: verify, commit, push, and remotely green the decision.
-Only then implement and run the sole generated/mock G1 qualification. Do not
-begin acquisition until the exact G1 implementation and result are also
-committed, pushed, and remotely green. MAT/BDF payload, semantic parse, target,
-model, prediction, score, release, and claim operations remain closed now.
+Historical transition, now complete: the authorization decision, generated G1
+implementation/result, G1 proof closeout, original Stage A implementation and
+failure record, redirect-recovery request/proof/decision, generated recovery
+implementation, and activation each crossed their required proof barriers.
+Use the current gate above; do not regress to this historical transition.
 
 Historical UG1 setup follows. Read its research
 document and registry, preregistration and contract, authorization packet and
@@ -368,7 +398,7 @@ green closeout into the frozen executor's fail-closed proof fields and binds
 the future evidence values. It performs zero real operation and has no effect
 until its own commit passes both required CI jobs.
 
-Immediate gate: commit, push, and remotely green this exact activation before
+Historical gate at that milestone: commit, push, and remotely green this exact activation before
 the one possible Stage S-A2 invocation. Do not make a network request, inspect
 an existing local payload, or open EDF content before that barrier. The 54
 retained source files, 30 fresh-final files, targets, models, scores, release,
@@ -456,7 +486,7 @@ inspect, or amend it. Do not touch
 archive member, neural payload, target, model, score, FW2/CIL1, device,
 release, or claim surface.
 
-Immediate gate: commit, push, and green the aggregate-only R2 result closeout.
+Historical gate at that milestone: commit, push, and green the aggregate-only R2 result closeout.
 Then choose an independent preregistered scientific lane; Freewill/CIL1 and
 VR39P have no successor.
 
@@ -1125,7 +1155,7 @@ conversion, and keeps semantic runs 1/2/3 plus every identity, companion,
 split, storage, and privacy guard exact. Its 24-path matrix covers six widths
 or width patterns, two orders, two replays, and at least 48 direct refusals.
 
-Immediate gate: commit, push, and green this exact registration before
+Historical gate at that milestone: commit, push, and green this exact registration before
 implementation. Do not implement early, touch VR15P private/consumed state, or
 infer its hidden token. Another private read or any cohort freeze requires a
 new Tier C packet and fresh packet-bound decision. FW2 and CIL1 remain

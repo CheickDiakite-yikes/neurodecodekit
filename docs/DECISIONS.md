@@ -13636,3 +13636,43 @@ Stage A, release, or claim operation.
 Transition decision: remotely green this proof closeout, then stop before
 Stage A. G1 is consumed and may not be retried, rerun, resumed, restarted, or
 scored again. Its synthetic route carries no scientific claim.
+
+## 0482 - Advance The BNCI Control Plane To The Proven Recovery Gate
+
+Proof decision: preserve the complete transition after the G1 closeout.
+Original Stage A implementation `619105bda3c39c063bb47bda6793af2ece9e1f53`
+passed CI `32781910547`; its one invocation consumed at HTTP-302 direct-
+response refusal, read zero payload body bytes, and was closed at result commit
+`162fddcfa2f399f4e5919a2daa0de4d7d33bf1f4` in CI `32782670936`.
+
+Recovery decision: bind the separately authorized signed-object recovery.
+Decision `588dd70c62a6f7041d677f9baf35e476ef739627` passed CI
+`32803138246`; generated-qualified implementation
+`09a19d1c1c498bdd6e0ece2fbecb6d15917bdefa` passed CI `32806186972`.
+Preserve failed activation CI `32806829323` as a shallow-checkout proof-test
+finding, not an implementation failure. Corrective activation
+`492a36a818bb00ca6bb86de6592c6cd0d5134f90` passed Base job
+`97680849177`, Optional Neuro Readers job `97680849465`, and CI
+`32807676008`.
+
+State decision: a later local execute command was rejected before process
+creation because `AGENTS.md` still contained the obsolete G1-era instruction
+to stop before Stage A. The rejection made zero manifest or payload request,
+wrote zero recovery marker, touched zero ignored path, and did not consume the
+replacement invocation. Update the control plane instead of weakening or
+replacing the registered executor.
+
+Goal decision: keep the five scientific targets separate and false. The
+nearest decisive target is incremental EEG sensor information beyond recorded
+EOG on completely held-out participants. The recovery can only create a
+verified opaque source bundle; it cannot itself establish a neural effect,
+unseen-person generalization, decoding accuracy, thought or language decoding,
+movement intention, motor-cortex origin, live use, hardware, or clinical value.
+
+Transition decision: add one machine-readable current-frontier record, align
+`AGENTS.md`, `START_HERE.md`, `README.md`, the tracker, build notes, and handoff,
+then commit, push, and remotely green this exact documentation milestone. Only
+after that barrier may the one 18-file, 779,873,919-byte redirect-recovery
+invocation run. Stage Q remains closed until its aggregate Stage A result is
+committed, pushed, and remotely green; P and T remain closed behind their own
+ordered evidence barriers.

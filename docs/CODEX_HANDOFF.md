@@ -1,5 +1,18 @@
 # Codex Handoff - NeuroDecodeKit
 
+> **Current gate, 2026-08-25:** `BNCI-C3C5-1-A-R` is the sole active lane.
+> Start with `registries/current_research_frontier.v0.json`. Original Stage A
+> is consumed at HTTP 302 refusal with zero payload body bytes. The additive
+> signed-object recovery implementation `09a19d1` and activation correction
+> `492a36a` are remotely green in CI `32806186972` and `32807676008`.
+> A later launch was rejected before process creation by obsolete repository
+> instructions, so the replacement invocation remains available exactly once.
+> Immediate gate: green this control-plane update, then run only the registered
+> 18-file / 779,873,919-byte opaque recovery and green its aggregate result.
+> Stages Q, P, and T remain ordered and closed. No BNCI scientific result or
+> claim upgrade has occurred. All older `Current gate` blocks below are an
+> append-only historical chronology, not executable instructions.
+
 > **Current gate, 2026-08-24:** exact G1 result `4ef12dd` passed Base job
 > `97553936562`, Optional job `97553936838`, and CI `32765504463`. The
 > generated/mock pass completed all 11 case classes across nine isolated folds
@@ -7789,3 +7802,51 @@ VR20P be identified as the sole active Tier C packet for a fresh short-form
 maintainer decision. Until that decision and its own remote proof, do not
 implement the wrapper or touch `.codex_work`, the private source, consumed
 VR18P state, or a real output root.
+
+## 2026-08-25 BNCI-C3C5-1 Redirect-Recovery Handoff
+
+Active lane: `BNCI-C3C5-1-A-R`.
+
+Read first:
+
+1. `registries/current_research_frontier.v0.json`;
+2. `docs/BNCI_2014_001_STAGE_A_FAILURE.md`;
+3. `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_AUTHORIZATION_DECISION.md`;
+4. `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_IMPLEMENTATION.md`; and
+5. `docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_IMPLEMENTATION_ACTIVATION.md`.
+
+G1 proof closeout `cf47698` is green and G1 is consumed. The original Stage A
+attempt is also consumed at HTTP-302 direct-response refusal with zero payload
+body bytes; never touch, delete, repair, retry, resume, or reuse its 297-byte
+marker or invocation.
+
+The additive recovery is a distinct one-shot lane. Decision `588dd70` passed
+CI `32803138246`; generated-qualified implementation `09a19d1` passed CI
+`32806186972`; corrected activation `492a36a` passed Base job `97680849177`,
+Optional job `97680849465`, and CI `32807676008`. Preserve failed activation
+CI `32806829323` as the shallow-checkout finding that motivated the test-only
+correction.
+
+One subsequent live command was rejected before process creation by the stale
+`AGENTS.md` instruction. It made no network request, wrote no recovery marker,
+performed no ignored-path operation, and did not consume the replacement
+recovery. Do not write a failure result for an invocation that never began.
+
+Immediate gate: commit, push, and remotely green the current control-plane
+update. Only then run exactly one live recovery over the 18 registered opaque
+MAT objects totaling 779,873,919 accepted bytes. Use one CPU thread, one
+worker, one numerical job, at most 1,800 seconds, 1 GiB RSS, 2 GiB incremental
+disk, 2.5 GiB network, and at least 5 GiB free disk. Do not open MAT semantics.
+
+After execution, record only the aggregate result, test it, commit it, push it,
+and wait for both CI jobs. Stage Q is target-blind and remains closed until
+that green result. Stage P cannot start until Q is green. Stage T can deliver
+targets and score once only after the prediction freeze is committed, pushed,
+and remotely green. No post-target changes or reruns are permitted.
+
+Scientific boundary: no verified recovery bundle, real model run, frozen real
+prediction, scientific score, unseen-person result, or EEG-beyond-EOG advantage
+exists yet. The five public goals remain unestablished.
+
+Keep `docs/NEURODECODEKIT_20_LOOP_TRACKER.xlsx.inspect.ndjson` untouched. It is
+unrelated untracked work and must not be read, staged, edited, or deleted.
