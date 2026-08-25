@@ -1,0 +1,114 @@
+{
+  "schema_name": "neurodecodekit.bnci_2014_001_stage_a_redirect_recovery_authorization_decision",
+  "schema_version": "0.1.0",
+  "decision_id": "BNCI-C3C5-1-A-R-decision-2026-08-24",
+  "recorded_at_local": "2026-08-24",
+  "lane_id": "BNCI-C3C5-1-A-R",
+  "status": "packet_bound_short_form_authorized_delayed_effect_until_own_remote_green",
+  "maintainer_decision": {
+    "message": "continue, ",
+    "utf8_hex": "636f6e74696e75652c20",
+    "utf8_bytes": 10,
+    "sha256": "ce4f9af7b90d5ee833a97e706595b5d72470f09570be4c2c69050971f3defb4f",
+    "interpreted_under_short_form_charter_rule": true
+  },
+  "green_request": {
+    "commit": "69527929cbe590cf4d8a83cfc68bbff9867c28c9",
+    "CI_run_id": 32783593146,
+    "base_python_job_id": 97610714226,
+    "optional_neuro_readers_job_id": 97610714567,
+    "both_required_jobs_green": true
+  },
+  "green_request_proof": {
+    "commit": "326c23a06888e2ee2787bc3c6feac98dfb6d747b",
+    "CI_run_id": 32784392927,
+    "base_python_job_id": 97613152711,
+    "optional_neuro_readers_job_id": 97613152840,
+    "both_required_jobs_green": true
+  },
+  "bound_packet_artifacts": [
+    {
+      "path": "docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_AUTHORIZATION_PACKET.md",
+      "bytes": 3205,
+      "sha256": "7123de40eff225d5b4fec369e924bd165a5a0805bba4562b6a7fed401cf03b87",
+      "Git_blob": "a9d64b6ee97303e404fc9bfe3e5161916849f48a"
+    },
+    {
+      "path": "registries/bnci_2014_001_stage_a_redirect_recovery_authorization_request.v0.json",
+      "bytes": 6375,
+      "sha256": "acdc51cd92369a79b46189fc83750e3c015c6d09e12c032e7e78bda511c0537e",
+      "Git_blob": "027a490764fb5c6a3f2a592a3b7f11bc92833f5f"
+    },
+    {
+      "path": "tests/test_bnci_2014_001_stage_a_redirect_recovery_request.py",
+      "bytes": 2982,
+      "sha256": "546121e9cb9b0b4e1d2f10f4e9e781af9ff8d91ab0a625d11ccda71807a1a44c",
+      "Git_blob": "7e85690f32887b51dcbb4fc21ed7b151f105daae"
+    },
+    {
+      "path": "docs/BNCI_2014_001_STAGE_A_REDIRECT_RECOVERY_REQUEST_PROOF_CLOSEOUT.md",
+      "bytes": 1311,
+      "sha256": "d1116c620e673c6556fd5e774523bb29bb162969b4228c1e0ed12c446d84bd1f",
+      "Git_blob": "f342a583782dc0a10a3b4db06840f08859cca503"
+    },
+    {
+      "path": "registries/bnci_2014_001_stage_a_redirect_recovery_request_proof.v0.json",
+      "bytes": 2527,
+      "sha256": "4214d864b13e88b774785562a72210a091459bca7efd9495288217c646d890dc",
+      "Git_blob": "04b213e11cfadb961aaad1918a1b5a21624c8f66"
+    },
+    {
+      "path": "tests/test_bnci_2014_001_stage_a_redirect_recovery_request_proof.py",
+      "bytes": 2638,
+      "sha256": "5fd5e0325ad9c1e6235b78a10d33621c5c52f6c50d4a4ac3b8912e6fb7d7bf28",
+      "Git_blob": "f73b700b5e1572ae9eafd5918e6c43218613f087"
+    }
+  ],
+  "bound_summary": {
+    "artifact_count": 6,
+    "artifact_bytes": 19038
+  },
+  "authorized_after_own_remote_green": {
+    "one_generated_recovery_implementation": true,
+    "one_generated_recovery_qualification": true,
+    "one_pinned_manifest_GET": true,
+    "one_replacement_Stage_A_recovery_invocation": true,
+    "exact_18_signed_objects_only": true,
+    "aggregate_result_closeout": true
+  },
+  "still_forbidden": [
+    "operation_before_this_decision_commit_push_and_both_CI_jobs_green",
+    "modify_delete_or_reuse_original_consumed_marker",
+    "arbitrary_redirect_host_path_file_participant_dataset_or_representation",
+    "MAT_semantic_parse_signal_event_target_or_label_read_during_recovery",
+    "Stage_Q_before_recovery_result_remote_green",
+    "model_fit_inference_prediction_target_delivery_or_score_during_recovery",
+    "scientific_rerun_post_target_update_release_or_claim_upgrade"
+  ],
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "payload_files_exact": 18,
+    "payload_bytes_exact": 779873919,
+    "network_bytes_maximum": 2685403136,
+    "incremental_disk_bytes_maximum": 2147483648,
+    "free_disk_bytes_minimum": 5368709120,
+    "runtime_seconds_maximum": 1800,
+    "peak_RSS_bytes_maximum": 1073741824,
+    "public_output_bytes_maximum": 4194304
+  },
+  "delayed_effect": {
+    "decision_commit_pushed": false,
+    "both_required_CI_jobs_green": false,
+    "recovery_implementation_open_now": false,
+    "network_or_payload_open_now": false
+  },
+  "claim_boundary": {
+    "engineering_authority": "one_narrow_signed_URL_Stage_A_recovery_after_proof_barriers",
+    "scientific_claim_established": false,
+    "unseen_person_generalization": false,
+    "EEG_beyond_EOG": false,
+    "decoding_performance": false
+  }
+}
