@@ -15,11 +15,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
     commands = parser.add_subparsers(dest="command", required=True)
     commands.add_parser("plan", help="Show the bounded artifact-only envelope.")
-    run = commands.add_parser("run", help="Create the one no-clobber aggregate report.")
-    run.add_argument("--implementation-commit", required=True)
-    run.add_argument("--ci-run-id", required=True, type=int)
-    run.add_argument("--base-job-id", required=True, type=int)
-    run.add_argument("--optional-job-id", required=True, type=int)
+    commands.add_parser("run", help="Create the one proof-verified aggregate report.")
     commands.add_parser("inspect", help="Validate and summarize the report.")
     return parser
 
@@ -34,13 +30,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     elif args.command == "inspect":
         result = postmortem.inspect_postmortem(root)
     else:
-        result = postmortem.run_registered_postmortem(
-            root,
-            implementation_commit=args.implementation_commit,
-            ci_run_id=args.ci_run_id,
-            base_job_id=args.base_job_id,
-            optional_job_id=args.optional_job_id,
-        )
+        result = postmortem.run_registered_postmortem(root)
     print(json.dumps(result, indent=2, sort_keys=True))
     return 0
 

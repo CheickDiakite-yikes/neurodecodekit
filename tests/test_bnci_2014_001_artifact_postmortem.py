@@ -1,8 +1,11 @@
 from __future__ import annotations
 
 import copy
+import hashlib
 import json
+import os
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -31,6 +34,11 @@ class BNCIArtifactPostmortemTests(unittest.TestCase):
         self.assertEqual(source["path"], postmortem.INPUT_RELATIVE_PATH.as_posix())
         self.assertEqual(source["bytes"], 4_951)
         self.assertEqual(source["sha256"], postmortem.INPUT_SHA256)
+        self.assertEqual(postmortem.CONTRACT_BYTES, len(CONTRACT_PATH.read_bytes()))
+        self.assertEqual(
+            postmortem.CONTRACT_SHA256,
+            hashlib.sha256(CONTRACT_PATH.read_bytes()).hexdigest(),
+        )
         self.assertEqual(self.contract["status"], "tier_a_post_outcome_artifact_only_protocol_frozen")
         self.assertFalse(self.contract["claim_boundary"]["root_cause_established"])
         self.assertTrue(all(value == 0 for value in self.contract["forbidden_operations"].values()))
@@ -87,20 +95,57 @@ class BNCIArtifactPostmortemTests(unittest.TestCase):
         self.assertEqual(plan["target_reads"], 0)
         parser = cli.build_parser()
         self.assertEqual(parser.parse_args(["plan"]).command, "plan")
-        run = parser.parse_args(
-            [
-                "run",
-                "--implementation-commit",
-                "a" * 40,
-                "--ci-run-id",
-                "1",
-                "--base-job-id",
-                "2",
-                "--optional-job-id",
-                "3",
-            ]
-        )
-        self.assertEqual(run.optional_job_id, 3)
+        self.assertEqual(parser.parse_args(["run"]).command, "run")
+
+    def test_contract_drift_and_false_remote_proof_fail_closed(self) -> None:
+        drifted = copy.deepcopy(self.contract)
+        drifted["resource_caps"]["workers"] = 2
+        with self.assertRaises(postmortem.ArtifactPostmortemRefusal):
+            postmortem._validate_contract(drifted)
+        proof = {
+            "head_sha": "a" * 40,
+            "remote_head_sha": "a" * 40,
+            "CI_head_sha": "a" * 40,
+            "CI_conclusion": "failure",
+            "CI_run_id": 1,
+            "base_python_job_id": 2,
+            "base_python_job_name": "Base Python",
+            "base_python_job_conclusion": "success",
+            "optional_neuro_readers_job_id": 3,
+            "optional_neuro_readers_job_name": "Optional Neuro Readers",
+            "optional_neuro_readers_job_conclusion": "success",
+        }
+        with self.assertRaises(postmortem.ArtifactPostmortemRefusal):
+            postmortem._collect_remote_green_proof(
+                ROOT,
+                head="a" * 40,
+                collector=lambda _root: proof,
+            )
+
+    def test_complete_write_loop_and_no_clobber(self) -> None:
+        payload = b"bounded-postmortem-output\n"
+        real_write = os.write
+
+        def short_writer(descriptor: int, view: memoryview) -> int:
+            return real_write(descriptor, view[:3])
+
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "result.json"
+            postmortem._write_no_clobber(path, payload, writer=short_writer)
+            self.assertEqual(path.read_bytes(), payload)
+            with self.assertRaises(FileExistsError):
+                postmortem._write_no_clobber(path, payload)
+
+    def test_no_progress_write_cleans_only_its_new_file(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "result.json"
+            with self.assertRaises(postmortem.ArtifactPostmortemRefusal):
+                postmortem._write_no_clobber(
+                    path,
+                    b"payload",
+                    writer=lambda _descriptor, _view: 0,
+                )
+            self.assertFalse(path.exists())
 
     def test_module_has_no_heavy_dependency_or_private_path(self) -> None:
         source = (SRC / "neurodecodekit/experiments/bnci_2014_001_artifact_postmortem.py").read_text(

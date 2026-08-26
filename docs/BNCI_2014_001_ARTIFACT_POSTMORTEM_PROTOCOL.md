@@ -29,7 +29,10 @@ The sole analytical input is the committed 4,951-byte aggregate Stage T result:
 
 Its required SHA-256 is
 `e836cefb9daf9df090f6f74a12ad90ae6448156d73850414fcca3367e81da9b2`.
-The analyzer refuses a byte, schema, status, or route mismatch. It never reads
+The analyzer refuses a byte, schema, status, route, or contract mismatch. It
+also verifies from fresh Git remote and GitHub Actions metadata that its exact
+implementation commit is the remote branch head and both required CI jobs are
+green before reading the analytical input. It never reads
 individual targets, predictions, probabilities, participant outcomes, private
 derivatives, checkpoints, MAT files, or ignored paths.
 
@@ -53,7 +56,8 @@ cause.
 ## Resource And Claim Boundary
 
 The pass is limited to one CPU thread, one worker, 30 seconds, 256 MiB peak
-RSS, and 1 MiB public output. Network, downloads, training, inference, scoring,
+RSS, and 1 MiB public output. Only the pre-analysis Git/GitHub metadata proof
+may use the network. Analysis network, downloads, training, inference, scoring,
 target delivery, reruns, and scientific claim upgrades are all zero.
 
 Maximum meaning: a reproducible descriptive map of one already committed

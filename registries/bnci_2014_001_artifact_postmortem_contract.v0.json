@@ -90,7 +90,7 @@
     "model_or_checkpoint_reads": 0,
     "training_runs": 0,
     "inference_runs": 0,
-    "network_calls": 0,
+    "analysis_network_calls": 0,
     "downloads": 0,
     "scientific_reruns": 0,
     "claim_upgrades": 0
@@ -101,6 +101,13 @@
     "runtime_seconds_maximum": 30,
     "peak_RSS_bytes_maximum": 268435456,
     "public_output_bytes_maximum": 1048576
+  },
+  "remote_proof_preflight": {
+    "fresh_origin_branch_head_required": true,
+    "exact_HEAD_CI_success_required": true,
+    "Base_Python_job_success_required": true,
+    "Optional_Neuro_Readers_job_success_required": true,
+    "allowed_network_scope": "Git_remote_and_GitHub_Actions_metadata_only_before_artifact_analysis"
   },
   "claim_boundary": {
     "maximum_claim": "descriptive_localization_of_failure_patterns_in_one_committed_aggregate_result",
