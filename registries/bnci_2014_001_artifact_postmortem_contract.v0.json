@@ -1,0 +1,115 @@
+{
+  "schema_name": "neurodecodekit.bnci_2014_001_artifact_postmortem_contract",
+  "schema_version": "0.1.0",
+  "contract_id": "BNCI-C3C5-PM1",
+  "recorded_at_local": "2026-08-25",
+  "status": "tier_a_post_outcome_artifact_only_protocol_frozen",
+  "proof_posture": "descriptive_failure_localization_not_prospective_scientific_validation",
+  "input_artifact": {
+    "path": "registries/bnci_2014_001_stage_t_result.v0.json",
+    "bytes": 4951,
+    "sha256": "e836cefb9daf9df090f6f74a12ad90ae6448156d73850414fcca3367e81da9b2",
+    "required_schema_name": "neurodecodekit.bnci_2014_001_stage_t_result",
+    "required_status": "scored_once_frozen_router_applied_consumed",
+    "required_route": "BNCIC3C5-R2"
+  },
+  "derived_measurements": {
+    "C3_detectability": [
+      "selected_E_minus_equal_prior_balanced_accuracy",
+      "selected_E_minus_timing_balanced_accuracy"
+    ],
+    "C3_spatial_specificity": [
+      "selected_E_minus_posterior_EEG_balanced_accuracy",
+      "selected_E_minus_central_EEG_balanced_accuracy",
+      "selected_E_minus_frontal_EEG_balanced_accuracy"
+    ],
+    "C3_temporal_specificity": [
+      "selected_E_minus_early_cue_EEG_balanced_accuracy",
+      "selected_E_minus_pre_cue_EEG_balanced_accuracy"
+    ],
+    "C3_structure_dependence": [
+      "selected_E_minus_trial_displacement_EEG_balanced_accuracy",
+      "selected_E_minus_channel_rotation_EEG_balanced_accuracy",
+      "selected_E_minus_source_label_rotation_EEG_balanced_accuracy"
+    ],
+    "C3_calibration": [
+      "selected_E_minus_equal_prior_log_loss",
+      "selected_E_minus_timing_log_loss",
+      "posterior_EEG_minus_equal_prior_log_loss"
+    ],
+    "C5_incremental_EEG": [
+      "P_plus_E_minus_P_balanced_accuracy",
+      "P_plus_E_minus_P_plus_D_E_balanced_accuracy",
+      "P_minus_P_plus_E_log_loss",
+      "P_plus_D_E_minus_P_plus_E_log_loss"
+    ]
+  },
+  "diagnostic_rules": [
+    {
+      "id": "D1",
+      "name": "aggregate_candidate_protocol_information",
+      "supported_if": "C3_accuracy_threshold_and_no_signal_timing_margin_both_pass"
+    },
+    {
+      "id": "D2",
+      "name": "posterior_visual_specificity",
+      "failed_if": "selected_E_does_not_exceed_posterior_EEG_by_0.02_balanced_accuracy"
+    },
+    {
+      "id": "D3",
+      "name": "probability_calibration_reliability",
+      "failed_if": "selected_E_log_loss_is_not_better_than_equal_prior_log_loss"
+    },
+    {
+      "id": "D4",
+      "name": "incremental_EEG_beyond_recorded_EOG",
+      "weak_directional_only_if": "both_log_loss_deltas_are_positive_but_C5_partial_failed"
+    },
+    {
+      "id": "D5",
+      "name": "held_out_participant_consistency",
+      "failed_if": "C3_or_C5_participant_consistency_or_sign_flip_gate_failed"
+    },
+    {
+      "id": "D6",
+      "name": "brain_specific_causal_origin",
+      "state": "unavailable_from_aggregate_artifact"
+    }
+  ],
+  "replication_priority_order": [
+    "separate_selected_EEG_from_posterior_visual_information",
+    "estimate_EEG_increment_after_source_cross_fitted_EOG_residualization",
+    "freeze_probability_calibration_on_source_participants_only",
+    "test_consistency_in_a_fresh_independent_participant_cohort"
+  ],
+  "forbidden_operations": {
+    "git_ignored_or_private_artifact_reads": 0,
+    "raw_MAT_or_EEG_reads": 0,
+    "target_or_label_reads": 0,
+    "individual_prediction_probability_or_participant_outcome_reads": 0,
+    "model_or_checkpoint_reads": 0,
+    "training_runs": 0,
+    "inference_runs": 0,
+    "network_calls": 0,
+    "downloads": 0,
+    "scientific_reruns": 0,
+    "claim_upgrades": 0
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "runtime_seconds_maximum": 30,
+    "peak_RSS_bytes_maximum": 268435456,
+    "public_output_bytes_maximum": 1048576
+  },
+  "claim_boundary": {
+    "maximum_claim": "descriptive_localization_of_failure_patterns_in_one_committed_aggregate_result",
+    "root_cause_established": false,
+    "fresh_independent_replication": false,
+    "unseen_person_EEG_decoding": false,
+    "EEG_beyond_EOG": false,
+    "brain_specific_origin": false,
+    "movement_intention_or_language_decoding": false,
+    "live_hardware_or_clinical_result": false
+  }
+}
