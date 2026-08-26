@@ -1,0 +1,143 @@
+{
+  "schema_name": "neurodecodekit.dreyer_c5r_1_generated_implementation",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-26",
+  "lane_id": "DREYER-C5R-1",
+  "status": "implementation_ready_pending_commit_push_remote_green_before_registered_generated_qualification",
+  "contract": {
+    "path": "registries/dreyer_c5r_1_contract.v0.json",
+    "bytes": 8922,
+    "sha256": "ea6357a7b079aa3de885ef0a7c0e391c7810e2b94cbbb1702f934f65cc6b8fed"
+  },
+  "preregistration_green_proof": {
+    "commit": "8d72f8b43c3c4e2f135a7a0e8654e0cac64f6414",
+    "CI_run_id": 32927671087,
+    "base_python_job_id": 98053700149,
+    "optional_neuro_readers_job_id": 98053700308,
+    "both_required_jobs_green": true
+  },
+  "artifact_set": {
+    "artifact_count": 12,
+    "artifact_bytes": 166417,
+    "canonical_sha256": "6b79c4e8173989c74d94c51e27d14caba3296c34fa1f77111410a61c4a1a2733",
+    "artifacts": [
+      {
+        "path": "docs/DREYER_2023_DATASET_A_REPLICATION_PRIMARY_SOURCE_RESEARCH.md",
+        "bytes": 5623,
+        "sha256": "dd1c1ce77c6644be4c4d79fc613ff302d5c1f8bc6e4638d92bc8bc9e2e57fddb"
+      },
+      {
+        "path": "docs/DREYER_C5R_1_PREREGISTRATION.md",
+        "bytes": 10383,
+        "sha256": "9cc368444709de0ea051c4cafdc36e8dca09e7044e022ec5e2fd2cdb0d66ad1f"
+      },
+      {
+        "path": "registries/dreyer_2023_dataset_a_replication_research.v0.json",
+        "bytes": 4381,
+        "sha256": "13547e5dd8c02b73edf89dc5d471c0e641559e0c7ec8610f36b4dd5e4f188201"
+      },
+      {
+        "path": "registries/dreyer_2023_dataset_a_r1_r2_payload_manifest.v0.json",
+        "bytes": 41723,
+        "sha256": "b21b720138915ae223d8381ed005a03dac3f6062e1d3651676303f41424d7c78"
+      },
+      {
+        "path": "registries/dreyer_c5r_1_contract.v0.json",
+        "bytes": 8922,
+        "sha256": "ea6357a7b079aa3de885ef0a7c0e391c7810e2b94cbbb1702f934f65cc6b8fed"
+      },
+      {
+        "path": "src/neurodecodekit/datasets/dreyer_c5r_1.py",
+        "bytes": 11271,
+        "sha256": "eb774c6eaeb4e2be8c5a951b84b8a9f6bd90a9b1d3b9bf7df495e05215c09b75"
+      },
+      {
+        "path": "src/neurodecodekit/evaluation/dreyer_c5r_1_score.py",
+        "bytes": 16144,
+        "sha256": "fa4f452316e30535a5aef4b80bac1fae89f3b8bf70baeb915263247a4e8e9430"
+      },
+      {
+        "path": "src/neurodecodekit/experiments/dreyer_c5r_1.py",
+        "bytes": 45754,
+        "sha256": "0bf5661ad970c967b9c98c0c2c63b07fae192148bb0bb149009221e7ecbd28cb"
+      },
+      {
+        "path": "src/neurodecodekit/dreyer_c5r_1_cli.py",
+        "bytes": 1931,
+        "sha256": "4582522a185212c5baf3308f12845771a01f508af18c9b422e918369e53fa908"
+      },
+      {
+        "path": "tests/test_dreyer_2023_dataset_a_replication_research.py",
+        "bytes": 4225,
+        "sha256": "f2142f666d4fe1037b6ec2d5bc758f8fb53a66d599d67ca049e14d3be2c6f6f9"
+      },
+      {
+        "path": "tests/test_dreyer_c5r_1_preregistration.py",
+        "bytes": 4836,
+        "sha256": "7733e2ca2b481ca6d76c25e6b35e041eb1c5645a8ecdc64b207a374293bc4ff7"
+      },
+      {
+        "path": "tests/test_dreyer_c5r_1_generated_implementation.py",
+        "bytes": 11224,
+        "sha256": "aa9cb88474a13bb507082e837d0665c2240a6ed7d4280f9684e79d54a8adec97"
+      }
+    ]
+  },
+  "capabilities": {
+    "strict_EDF_fixed_header_parser": true,
+    "causal_spectral_features": true,
+    "source_only_nuisance_residualization": true,
+    "compact_fixed_logistic_family": true,
+    "source_only_temperature_calibration": true,
+    "held_out_target_firewall": true,
+    "aggregate_hash_only_prediction_freeze": true,
+    "one_delivery_aggregate_scorer": true,
+    "real_execute_command": false,
+    "real_score_command": false
+  },
+  "real_schedule": {
+    "outer_folds": 60,
+    "parameter_update_fits": 4740,
+    "model_inference_runs": 3660,
+    "held_out_prediction_sets": 1020,
+    "held_out_prediction_rows": 81600
+  },
+  "development_generated_measurement": {
+    "participants": 6,
+    "identity_rows": 120,
+    "parameter_update_fits": 330,
+    "model_inference_runs": 258,
+    "held_out_prediction_sets": 102,
+    "prediction_rows": 2040,
+    "synthetic_route": "DREYERC5R-R1",
+    "runtime_seconds_approximate": 2.0,
+    "peak_process_tree_RSS_bytes": 176865280,
+    "generated_input_bytes": 197632,
+    "private_temporary_prediction_bytes": 296120,
+    "public_output_bytes": 2831,
+    "scientific_value": "none_generated_positive_control_only"
+  },
+  "access_counters": {
+    "real_or_private_path_opens": 0,
+    "real_EDF_payload_downloads": 0,
+    "real_EDF_header_reads": 0,
+    "real_annotation_reads": 0,
+    "real_signal_sample_reads": 0,
+    "real_target_or_label_reads": 0,
+    "real_training_runs": 0,
+    "real_prediction_sets": 0,
+    "real_target_deliveries": 0,
+    "real_scores": 0,
+    "network_bytes": 0,
+    "claim_upgrades": 0
+  },
+  "registered_generated_qualification": {
+    "executed": false,
+    "result_path": "registries/dreyer_c5r_1_generated_qualification_result.v0.json",
+    "required_before_execution": "exact_implementation_commit_pushed_and_both_required_CI_jobs_green"
+  },
+  "claim_boundary": {
+    "engineering_capability": "generated_target_firewall_compact_model_prediction_freeze_and_aggregate_scorer",
+    "scientific_claim_not_established": "any_real_EEG_information_unseen_person_generalization_EEG_beyond_peripherals_movement_intention_language_live_hardware_or_clinical_result"
+  }
+}
