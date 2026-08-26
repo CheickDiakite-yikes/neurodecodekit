@@ -1,0 +1,86 @@
+{
+  "schema_name": "neurodecodekit.dreyer_c5r_1_stage_h_live_preflight_request_proof",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-26",
+  "packet_id": "DREYER-C5R-1-HL",
+  "status": "proof_only_closeout_pending_exact_commit_remote_green",
+  "green_request_commit": {
+    "commit": "5191e79e2ccfa50b5042a24357c0c22d68d8f088",
+    "CI_run_id": 32934958878,
+    "base_python_job_id": 98074322914,
+    "optional_neuro_readers_job_id": 98074322739,
+    "both_required_jobs_green": true
+  },
+  "bound_request_artifacts": [
+    {
+      "path": "docs/DREYER_C5R_1_STAGE_H_LIVE_PREFLIGHT_AUTHORIZATION_PACKET.md",
+      "bytes": 8231,
+      "sha256": "c5dbc973c8da2b1301d7e5553518d53735a1d01d9480a774db8e07b137ccefb5",
+      "git_blob": "dfae223537355c2b4fbfdf91ab9397af941e3d69"
+    },
+    {
+      "path": "registries/dreyer_c5r_1_stage_h_live_preflight_authorization_request.v0.json",
+      "bytes": 10812,
+      "sha256": "61e9d09cd3afe2bfff5fd8f31bc6543b250f8d09a806bc7a4c134f9ddeda2e5b",
+      "git_blob": "6679f31e42ff941c875ce4d2759acb8d695f81ec"
+    },
+    {
+      "path": "tests/test_dreyer_c5r_1_stage_h_live_preflight_authorization_request.py",
+      "bytes": 4907,
+      "sha256": "b9132714e70210d6dd4c5e6a10a55a932ecd804c7e64122f0b9bec178e32aa5c",
+      "git_blob": "a8a55f2fe503d8095390e2c3984ba96fea555ab7"
+    }
+  ],
+  "bound_request_artifact_summary": {
+    "count": 3,
+    "bytes": 23950,
+    "canonical_artifact_set_sha256": "e41870d4d1623861f02f52adc390c2e4b9f9e38247867e6a40acb9d4dcda07d4"
+  },
+  "scope_preservation": {
+    "request_artifacts_unchanged": true,
+    "exact_member_dataset_revision_path_URL_size_and_SHA256_unchanged": true,
+    "sensor_gate_and_H1_H0_router_unchanged": true,
+    "one_direct_GET_zero_redirect_zero_retry_zero_rerun_contract_unchanged": true,
+    "resource_caps_unchanged": true,
+    "authority_expanded": false,
+    "claim_boundary_changed": false
+  },
+  "operation_counters": {
+    "tracked_artifact_reads": 3,
+    "Git_proof_reads": 3,
+    "implementation_operations": 0,
+    "generated_qualification_invocations": 0,
+    "network_requests": 0,
+    "real_URL_or_local_path_reads": 0,
+    "real_EDF_body_bytes": 0,
+    "real_EDF_header_reads": 0,
+    "annotation_or_signal_sample_reads": 0,
+    "split_feature_cache_or_derivative_creations": 0,
+    "parameter_update_fits": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scoring_events": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "transition": {
+    "effective_before_this_closeout_commit_remote_green": false,
+    "may_identify_as_sole_active_Tier_C_packet_after_remote_green": true,
+    "implementation_authorized_by_closeout": false,
+    "network_or_real_operation_authorized_by_closeout": false,
+    "fresh_packet_bound_maintainer_words_required": true,
+    "authorization_decision_must_be_remotely_green_before_stage_HL1": true,
+    "stage_HL1_implementation_and_activation_must_be_remotely_green_before_stage_HL2": true
+  },
+  "claim_boundary": {
+    "engineering_proof_added": "The exact all-false one-file sensor-preflight request is independently hash and Git bound for later review.",
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_participant_generalization_established": false,
+    "movement_intention_or_motor_cortex_origin_established": false,
+    "language_or_thought_decoding_established": false,
+    "live_neural_decoding_established": false
+  }
+}
