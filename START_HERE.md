@@ -7,11 +7,57 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-## Current Gate: BNCI-C3C5-1 Stage P/T Live Implementation
+## Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight
 
 Start with `registries/current_research_frontier.v0.json`, the machine-readable
 snapshot of the active lane, proof chain, consumed status, measurements, goals,
 and next transition.
+
+The prior BNCI experiment found real held-out protocol information, but it did
+not establish an EEG-specific effect: posterior EEG slightly beat the selected
+candidate, candidate probabilities were poorly calibrated, and the small EEG
+increment over recorded EOG was inconsistent across participants. Read the
+aggregate-only result first:
+
+1. `docs/BNCI_2014_001_ARTIFACT_POSTMORTEM_RESULT.md`;
+2. `registries/bnci_2014_001_artifact_postmortem_result.v0.json`; and
+3. `tests/test_bnci_2014_001_artifact_postmortem_result.py`.
+
+The fresh independent replication is now frozen around those failures. Dreyer
+Dataset A contributes 60 new participants, 27 reported EEG channels, three
+reported EOG channels, two reported wrist-EMG channels, 512 Hz acquisition,
+and 120 selected R1/R2 source EDFs totaling 1,779,763,388 declared bytes. The
+60-fold protocol asks whether central EEG residualized against EOG, EMG,
+posterior EEG, and timing adds information in a completely unseen person.
+
+Read, in order:
+
+1. `docs/DREYER_2023_DATASET_A_REPLICATION_PRIMARY_SOURCE_RESEARCH.md`;
+2. `docs/DREYER_C5R_1_PREREGISTRATION.md`;
+3. `registries/dreyer_c5r_1_contract.v0.json`;
+4. `docs/DREYER_C5R_1_GENERATED_QUALIFICATION_RESULT.md`;
+5. `docs/DREYER_C5R_1_STAGE_H_GENERATED_QUALIFICATION_RESULT.md`;
+6. `docs/DREYER_C5R_1_STAGE_H_LIVE_PREFLIGHT_AUTHORIZATION_PACKET.md`; and
+7. `docs/DREYER_C5R_1_STAGE_H_LIVE_PREFLIGHT_REQUEST_PROOF_CLOSEOUT.md`.
+
+The full generated firewall/model/scorer passed once, and the streaming
+fixed-header preflight passed two valid replays plus 18 adversarial refusals.
+Both qualifications are consumed and have no scientific value. No real Dreyer
+payload, header, annotation, signal, target, model outcome, prediction, or
+score has been read.
+
+All-false request `5191e79e2ccfa50b5042a24357c0c22d68d8f088` passed CI
+`32934958878`. Its proof-only closeout
+`821fad17e06914375c50a7d0dd7017458b2df838` passed Base job `98077895278`,
+Optional Neuro Readers job `98077895460`, and CI `32936247679`.
+`DREYER-C5R-1-HL` is therefore the sole active Tier C packet. The next fresh,
+unambiguous maintainer `approve`, `continue`, or `proceed` may authorize only
+the packet's proof-gated generated live wrapper and one exact 14,805,604-byte
+EDF header preflight after all intermediate green barriers. It does not
+authorize the remaining 119 files, signal or target reads, training, scoring,
+release, or a claim upgrade.
+
+## Historical BNCI-C3C5-1 Closed Lane
 
 The generated G1 pipeline is complete, remotely proven, and consumed. Its
 synthetic result is engineering evidence only. The original direct-response

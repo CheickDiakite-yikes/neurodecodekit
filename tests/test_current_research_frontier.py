@@ -17,10 +17,10 @@ class CurrentResearchFrontierTests(unittest.TestCase):
             "neurodecodekit.current_research_frontier",
         )
         self.assertEqual(self.frontier["schema_version"], "0.1.0")
-        self.assertEqual(self.frontier["active_lane_id"], "BNCI-C3C5-1-closeout")
+        self.assertEqual(self.frontier["active_lane_id"], "DREYER-C5R-1-HL")
         self.assertEqual(
             self.frontier["status"],
-            "Stage_T_R2_result_remotely_green_closed_consumed",
+            "all_false_request_and_proof_remotely_green_awaiting_exact_Tier_C_decision",
         )
 
     def test_proof_chain_records_green_recovery_activation(self):
@@ -127,7 +127,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(envelope["workers"], 1)
         self.assertEqual(envelope["reruns"], 0)
         self.assertEqual(
-            self.frontier["evidence_sequence"],
+            self.frontier["historical_BNCI_evidence_sequence"],
             [
                 "G1_generated_proof",
                 "A_opaque_acquisition",
@@ -165,6 +165,51 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(stage_t_result["scores"], 1)
         self.assertEqual(stage_t_result["reruns"], 0)
 
+    def test_fresh_replication_and_active_preflight_are_exact(self):
+        self.assertEqual(
+            self.frontier["evidence_sequence"],
+            [
+                "D_aggregate_only_BNCI_failure_localization",
+                "R_fresh_cohort_primary_source_selection",
+                "C_stronger_control_preregistration",
+                "G_generated_model_firewall_and_scorer_qualification",
+                "H_generated_one_file_sensor_preflight_qualification",
+                "HL_packet_bound_authorization_decision",
+                "HL1_generated_live_wrapper_qualification_and_activation",
+                "HL2_one_real_EDF_header_preflight",
+            ],
+        )
+        fresh = self.frontier["fresh_replication"]
+        self.assertEqual(fresh["cohort"]["participants"], 60)
+        self.assertEqual(fresh["cohort"]["files"], 120)
+        self.assertEqual(fresh["cohort"]["declared_payload_bytes"], 1_779_763_388)
+        self.assertFalse(fresh["cohort"]["source_EDF_sensor_roster_verified"])
+        self.assertEqual(fresh["frozen_protocol"]["outer_folds"], 60)
+        self.assertEqual(
+            fresh["frozen_protocol"]["real_parameter_update_fits_planned"], 4740
+        )
+        self.assertTrue(fresh["frozen_protocol"]["producer_causal"])
+        packet = fresh["active_Tier_C_packet"]
+        self.assertEqual(packet["packet_id"], "DREYER-C5R-1-HL")
+        self.assertEqual(
+            packet["proof_closeout_commit"],
+            "821fad17e06914375c50a7d0dd7017458b2df838",
+        )
+        self.assertEqual(packet["proof_closeout_CI_run_id"], 32_936_247_679)
+        self.assertTrue(packet["both_request_and_proof_required_jobs_green"])
+        self.assertTrue(packet["all_authority_flags_false"])
+        for key in (
+            "real_requests",
+            "real_network_bytes",
+            "real_EDF_bytes",
+            "real_EDF_header_reads",
+            "training_runs",
+            "prediction_sets",
+            "target_deliveries",
+            "scores",
+        ):
+            self.assertEqual(packet[key], 0, key)
+
     def test_all_five_scientific_goals_and_claims_remain_unestablished(self):
         self.assertEqual(
             set(self.frontier["five_scientific_goals"].values()),
@@ -180,6 +225,9 @@ class CurrentResearchFrontierTests(unittest.TestCase):
                 "scientific_score_produced",
                 "real_held_out_scoring_completed",
                 "candidate_EEG_beats_no_signal_and_timing_macro",
+                "fresh_replication_design_frozen",
+                "generated_model_and_firewall_qualified",
+                "generated_sensor_preflight_qualified",
             }:
                 self.assertFalse(value, key)
         self.assertTrue(claims["verified_recovery_bundle_acquired"])
@@ -188,22 +236,26 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertTrue(claims["scientific_score_produced"])
         self.assertTrue(claims["real_held_out_scoring_completed"])
         self.assertTrue(claims["candidate_EEG_beats_no_signal_and_timing_macro"])
+        self.assertTrue(claims["fresh_replication_design_frozen"])
+        self.assertTrue(claims["generated_model_and_firewall_qualified"])
+        self.assertTrue(claims["generated_sensor_preflight_qualified"])
         self.assertFalse(claims["registered_C3_passed"])
         self.assertFalse(claims["registered_C5_partial_passed"])
+        self.assertFalse(claims["real_Dreyer_EEG_accessed"])
 
     def test_control_plane_entrypoints_name_the_current_gate(self):
         expected = {
-            "AGENTS.md": "Stage Q passed and is consumed",
-            "START_HERE.md": "Current Gate: BNCI-C3C5-1 Stage P/T Live Implementation",
-            "README.md": "Stage P/T live implementation",
-            "docs/CODEX_HANDOFF.md": "Current gate, 2026-08-25",
-            "docs/NEXT_20_LOOPS_TRACKER.md": "Stage P/T implementation gate (2026-08-25)",
+            "AGENTS.md": "DREYER-C5R-1-HL",
+            "START_HERE.md": "Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight",
+            "README.md": "DREYER-C5R-1",
+            "docs/CODEX_HANDOFF.md": "Current gate, 2026-08-26",
+            "docs/NEXT_20_LOOPS_TRACKER.md": "DREYER-C5R-1 frontier",
         }
         for path, phrase in expected.items():
             text = (ROOT / path).read_text(encoding="utf-8")
             self.assertIn(phrase, text, path)
         start = (ROOT / "START_HERE.md").read_text(encoding="utf-8")[:8_000]
-        self.assertNotIn("Current Gate: BNCI-C3C5-1 G1 Proof Closeout", start)
+        self.assertNotIn("Current Gate: BNCI-C3C5-1", start)
 
 
 if __name__ == "__main__":

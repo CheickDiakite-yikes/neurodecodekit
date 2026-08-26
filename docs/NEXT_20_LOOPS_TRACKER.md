@@ -1,5 +1,24 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
+> **DREYER-C5R-1 frontier (2026-08-26):** the six-step independent-replication
+> build is complete through the real-data gate. (1) The aggregate-only BNCI
+> postmortem localized posterior/visual, calibration, EOG-increment, and
+> participant-consistency failures. (2) Dreyer Dataset A was selected with 60
+> fresh participants, 120 R1/R2 EDFs, 1,779,763,388 declared bytes, and
+> reported EEG/EOG/EMG sensors at 512 Hz. (3) A 60-fold zero-calibration
+> protocol now freezes residualized central EEG, posterior ablation, EOG, EMG,
+> derangement, cue, timing, and source-label controls. (4) One compact L2
+> logistic family with source-only calibration is frozen. (5) Generated Stage
+> G and H qualifications passed once: 330 fits / 102 prediction sets, then two
+> valid sensor-header replays plus 18 adversarial refusals, all with zero real
+> operations. (6) The all-false one-file preflight request `5191e79` and proof
+> closeout `821fad1` are remotely green in CI `32934958878` and `32936247679`.
+> `DREYER-C5R-1-HL` is now the sole active Tier C packet. The next transition
+> requires one fresh packet-bound decision, then a remotely proven live wrapper
+> before one 14,805,604-byte EDF fixed-header check. The other 119 files,
+> signal/target reads, training, prediction freeze, scoring, release, and every
+> scientific claim remain closed.
+
 > **Stage P/T implementation gate (2026-08-25):** Stage A result commit `96d7f0`
 > passed Base job `97700176631`, Optional Neuro Readers job `97700176787`, and
 > CI `32814564120`. The 18-file / 779,873,919-byte opaque acquisition is consumed.

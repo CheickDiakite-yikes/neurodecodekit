@@ -28,6 +28,62 @@ routine code, tests, synthetic work, bounded development experiments, commits,
 pushes, and CI proceed autonomously while reserving exact approval for those
 irreversible Tier C events.
 
+## Current Research Frontier
+
+The first preregistered BNCI held-out experiment produced a useful negative
+result. Selected EEG reached 38.35% participant-macro balanced accuracy versus
+25% no-signal and 29.67% timing, so the pipeline recovered task-related
+information. But posterior EEG reached 39.24%, candidate log loss was worse
+than the equal prior, only 5 of 9 participants had a positive primary margin,
+and the small EOG+EEG gains missed the frozen effect-size, consistency, and
+significance gates. That is evidence of protocol information, not evidence of
+an EEG-specific or participant-general decoding advantage. The
+[aggregate-only postmortem](docs/BNCI_2014_001_ARTIFACT_POSTMORTEM_RESULT.md)
+records the exact failure map without reopening private predictions or targets.
+
+The active independent lane is
+[`DREYER-C5R-1`](docs/DREYER_C5R_1_PREREGISTRATION.md), built specifically to
+resolve those failures:
+
+| Design element | Why it matters |
+|---|---|
+| 60 fresh participants, held out one person at a time | Replaces a 9-person consistency signal with a substantially larger zero-calibration test |
+| 27 EEG, 3 EOG, and 2 wrist-EMG sensors reported at 512 Hz | Makes eye and muscle shortcuts explicit model inputs and controls |
+| Central EEG residualized against EOG, EMG, posterior EEG, and timing | Tests incremental central-sensor information instead of EEG versus chance |
+| Posterior ablation, deranged EEG, pre-cue, cue, timing, and label-rotation controls | Challenges visual, temporal, and pipeline shortcuts prospectively |
+| One fixed L2 logistic family with source-only temperature calibration | Addresses probability reliability without growing model capacity |
+| 60 participant-held-out folds and one frozen score | Prevents held-out-person tuning and post-result model changes |
+
+The selected R1/R2 surface is 120 exact source EDFs totaling 1,779,763,388
+declared bytes and 4,800 expected trials. Primary-source details and licensing
+are recorded in the
+[cohort decision](docs/DREYER_2023_DATASET_A_REPLICATION_PRIMARY_SOURCE_RESEARCH.md),
+with links to the peer-reviewed paper and official NEMAR revision.
+
+Engineering qualification is complete for the target firewall, compact model
+schedule, prediction freezer, scorer, and streaming fixed-header verifier. The
+model/firewall fixture completed 330 fits, 258 inference runs, 102 prediction
+sets, and 2,040 synthetic prediction rows; the sensor preflight completed two
+valid deterministic replays and 18 adversarial refusals. Both used generated
+data only and establish no scientific result.
+
+The sole active Tier C packet is
+[`DREYER-C5R-1-HL`](docs/DREYER_C5R_1_STAGE_H_LIVE_PREFLIGHT_AUTHORIZATION_PACKET.md).
+Its request and proof are remotely green, but every authority flag remains
+false pending one fresh packet-bound decision. The immediate real operation is
+deliberately only one 14,805,604-byte EDF download and fixed-header check. It
+will verify whether the source file actually exposes the preregistered EEG,
+EOG, EMG, and 512 Hz roster before risking the other 119 files.
+
+**What is proven now:** NeuroDecodeKit can localize a failed neural claim from
+aggregate evidence, freeze a stronger independent experiment, enforce its
+target firewall, and qualify its bounded preflight reproducibly.
+
+**What is not proven:** no fresh Dreyer EEG has been accessed, and there is
+still no established EEG-beyond-peripheral advantage, unseen-person neural
+decoding, movement-intention or motor-cortex claim, language or thought
+decoding, live system, portable-hardware result, or clinical utility.
+
 ## Five Scientific Targets
 
 NeuroDecodeKit is now organized around five claims that must be earned

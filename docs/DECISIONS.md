@@ -13710,3 +13710,47 @@ value.
 Transition decision: verify, commit, push, and remotely green the sanitized
 aggregate result before Stage Q. Stop before Stage Q in this milestone. P and T
 remain closed behind their ordered target-firewall and remote-proof barriers.
+
+## 0484 - Advance To A Fresh Failure-Driven Dreyer Replication Gate
+
+Postmortem decision: accept the aggregate-only BNCI diagnostic map. The prior
+run contained descriptive protocol information, but posterior EEG outperformed
+the selected candidate, candidate log loss was worse than equal prior, EEG's
+increment over recorded EOG missed every frozen gate, and participant
+consistency failed. Do not increase model size or reopen consumed evidence.
+
+Cohort decision: select Dreyer Dataset A `nm000250` revision `v1.0.4`, 60
+participants, R1/R2 only, and 120 exact source EDFs totaling 1,779,763,388
+declared bytes. Freeze one 14,805,604-byte `sub-01` R1 member as the only
+preflight candidate. Keep R3-R6 and all alternatives closed.
+
+Scientific-design decision: use 60 isolated held-out-person folds and ask
+whether central EEG residualized against recorded EOG, wrist EMG, posterior
+EEG, and timing improves source-calibrated log loss over nuisance alone and
+nuisance plus deranged residual EEG. Preserve posterior ablation, pre-cue,
+cue, timing, and source-label-rotation controls. Freeze one L2 logistic family;
+no larger or additional model is justified by the postmortem.
+
+Engineering decision: accept the consumed generated Stage G pass at result
+commit `8f102541a9dd968b5f6574697ddbf7377b0a7372` and CI
+`32931598972`, and the consumed generated Stage H pass at result commit
+`af161844a9b49423a769440ed8f424bdae7836a0` and CI `32934121394`.
+They establish target-firewall and fixed-header verifier behavior only.
+
+Proof decision: exact all-false request
+`5191e79e2ccfa50b5042a24357c0c22d68d8f088` passed Base job
+`98074322914`, Optional job `98074322739`, and CI `32934958878`. Its proof
+closeout `821fad17e06914375c50a7d0dd7017458b2df838` passed Base job
+`98077895278`, Optional job `98077895460`, and CI `32936247679`.
+
+Transition decision: identify `DREYER-C5R-1-HL` as the sole active Tier C
+packet. Wait for one fresh unambiguous packet-bound maintainer decision. Only a
+separately green decision may open generated H-L1 implementation; only a later
+green implementation and activation may open one H-L2 request and fixed-header
+read. The remaining 119 files, annotations, samples, targets, models, scores,
+release, and claim surfaces stay closed.
+
+Claim decision: no Dreyer EEG has been accessed. The fresh design and generated
+qualifications establish engineering readiness only, not EEG beyond peripheral
+controls, unseen-person generalization, movement intention, motor-cortex
+origin, language decoding, live use, hardware performance, or clinical value.

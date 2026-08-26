@@ -1,5 +1,27 @@
 # Codex Handoff - NeuroDecodeKit
 
+> **Current gate, 2026-08-26:** `DREYER-C5R-1-HL` is the sole active Tier C
+> packet. The aggregate-only BNCI postmortem localized four design failures:
+> posterior/visual specificity failed, probability reliability failed, EEG
+> beyond EOG was weak and unvalidated, and participant consistency failed. A
+> fresh 60-participant Dreyer Dataset A replication is now frozen with 27
+> reported EEG, three EOG, two wrist-EMG channels, 512 Hz, 120 R1/R2 EDFs,
+> 4,800 expected trials, 60 zero-calibration held-out-person folds, central EEG
+> residualized against EOG/EMG/posterior/timing, matched derangement and cue
+> controls, and one compact calibrated logistic family. Generated Stage G and
+> Stage H qualifications passed once and are consumed: 330 fits / 102
+> prediction sets for the synthetic scientific pipeline, followed by two valid
+> fixed-header replays and 18 adversarial refusals. No real Dreyer request,
+> network byte, EDF byte, header, signal, target, model outcome, prediction, or
+> score has occurred. Request `5191e79` passed CI `32934958878`; proof closeout
+> `821fad1` passed Base `98077895278`, Optional `98077895460`, and CI
+> `32936247679`. The next fresh `approve`, `continue`, or `proceed` may bind
+> only this exact packet through H-L1 and then one 14,805,604-byte H-L2 source-
+> EDF header preflight after separate green barriers. It does not authorize the
+> other 119 files, semantic signal/target work, training, scoring, release, or
+> claim promotion. Start with `registries/current_research_frontier.v0.json`.
+> Every older `Current gate` block below is append-only history.
+
 > **Current gate, 2026-08-25:** `BNCI-C3C5-1-P` Stage A passed, is
 > consumed. Start with `registries/current_research_frontier.v0.json` and
 > `docs/BNCI_2014_001_STAGE_Q_IMPLEMENTATION.md`. Exactly 18 files /
