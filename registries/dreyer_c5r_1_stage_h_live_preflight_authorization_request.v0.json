@@ -1,0 +1,282 @@
+{
+  "schema_name": "neurodecodekit.dreyer_c5r_1_stage_h_live_preflight_authorization_request",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-26",
+  "packet_id": "DREYER-C5R-1-HL",
+  "lane_id": "DREYER-C5R-1-H",
+  "parent_lane_id": "DREYER-C5R-1",
+  "status": "request_only_all_authority_false",
+  "proof_anchors": {
+    "Stage_G_result_commit": "8f102541a9dd968b5f6574697ddbf7377b0a7372",
+    "Stage_G_result_CI_run_id": 32931598972,
+    "Stage_G_result_base_python_job_id": 98064782133,
+    "Stage_G_result_optional_neuro_readers_job_id": 98064781988,
+    "Stage_H_implementation_commit": "634fc9826f16352abb4fa1fc940c7bc6c2a0a795",
+    "Stage_H_implementation_CI_run_id": 32933431849,
+    "Stage_H_implementation_base_python_job_id": 98069988213,
+    "Stage_H_implementation_optional_neuro_readers_job_id": 98069988451,
+    "Stage_H_generated_result_commit": "af161844a9b49423a769440ed8f424bdae7836a0",
+    "Stage_H_generated_result_CI_run_id": 32934121394,
+    "Stage_H_generated_result_base_python_job_id": 98071967562,
+    "Stage_H_generated_result_optional_neuro_readers_job_id": 98071967693,
+    "all_named_jobs_green": true
+  },
+  "artifact_set": {
+    "artifact_count": 16,
+    "artifact_bytes": 151485,
+    "canonical_sha256": "7dc3197fb88f3960fe34bd59414726defd9d29f4ba65e2ba609eaba6f27b2664",
+    "artifacts": [
+      {
+        "path": "docs/DREYER_2023_DATASET_A_REPLICATION_PRIMARY_SOURCE_RESEARCH.md",
+        "bytes": 5623,
+        "sha256": "dd1c1ce77c6644be4c4d79fc613ff302d5c1f8bc6e4638d92bc8bc9e2e57fddb"
+      },
+      {
+        "path": "docs/DREYER_C5R_1_PREREGISTRATION.md",
+        "bytes": 10383,
+        "sha256": "9cc368444709de0ea051c4cafdc36e8dca09e7044e022ec5e2fd2cdb0d66ad1f"
+      },
+      {
+        "path": "registries/dreyer_2023_dataset_a_replication_research.v0.json",
+        "bytes": 4381,
+        "sha256": "13547e5dd8c02b73edf89dc5d471c0e641559e0c7ec8610f36b4dd5e4f188201"
+      },
+      {
+        "path": "registries/dreyer_2023_dataset_a_r1_r2_payload_manifest.v0.json",
+        "bytes": 41723,
+        "sha256": "b21b720138915ae223d8381ed005a03dac3f6062e1d3651676303f41424d7c78"
+      },
+      {
+        "path": "registries/dreyer_c5r_1_contract.v0.json",
+        "bytes": 8922,
+        "sha256": "ea6357a7b079aa3de885ef0a7c0e391c7810e2b94cbbb1702f934f65cc6b8fed"
+      },
+      {
+        "path": "registries/dreyer_c5r_1_generated_qualification_result.v0.json",
+        "bytes": 3695,
+        "sha256": "58fa7207a935edefc1337813319aa17ee8a3e9faee126970733fa52436a03a74"
+      },
+      {
+        "path": "registries/dreyer_c5r_1_stage_h_preflight_contract.v0.json",
+        "bytes": 7404,
+        "sha256": "5c2c795340bd90a5a361b4be47216d927fa918a474913d7d16af0310036252e9"
+      },
+      {
+        "path": "registries/dreyer_c5r_1_stage_h_generated_implementation.v0.json",
+        "bytes": 4719,
+        "sha256": "a75592ff2df964a6da52eda8294ebf8f928e22c5b65d956977ee207104f69a5c"
+      },
+      {
+        "path": "docs/DREYER_C5R_1_STAGE_H_PREFLIGHT_IMPLEMENTATION.md",
+        "bytes": 3953,
+        "sha256": "68a09870df9bd3eb7515cb2a353d12eb523a97b2e064c7af11fad8d1d27d021e"
+      },
+      {
+        "path": "src/neurodecodekit/datasets/dreyer_c5r_1_stage_h.py",
+        "bytes": 27855,
+        "sha256": "02c1726aaa1611ca4ca9de0db376881532123007e8fa4aa4e2c28ce6614ed20a"
+      },
+      {
+        "path": "src/neurodecodekit/dreyer_c5r_1_stage_h_cli.py",
+        "bytes": 2148,
+        "sha256": "0c1db3b4f449e14d2f7ca43fc75554027bc263a1c7e259746093fd588a2301a9"
+      },
+      {
+        "path": "tests/test_dreyer_c5r_1_stage_h_preflight.py",
+        "bytes": 14319,
+        "sha256": "fd562952520eaee2b9b35b86173f86169ec7d63fb70cb9c76c569b1e5cd120c7"
+      },
+      {
+        "path": "tests/test_dreyer_c5r_1_stage_h_implementation_record.py",
+        "bytes": 2954,
+        "sha256": "a4c4278c43d60a8b471a1883760e962d910a88f218c9492ed9eaa16a8fcee093"
+      },
+      {
+        "path": "registries/dreyer_c5r_1_stage_h_generated_qualification_result.v0.json",
+        "bytes": 4707,
+        "sha256": "3472c0b8e391ea2464491cf2347aefcf62994726543f818a492d298babc4cd10"
+      },
+      {
+        "path": "docs/DREYER_C5R_1_STAGE_H_GENERATED_QUALIFICATION_RESULT.md",
+        "bytes": 3400,
+        "sha256": "dcf58dddc4a6758e807efa909dce0ff125c6eb06fa6a854f40e1a78f8ce87493"
+      },
+      {
+        "path": "tests/test_dreyer_c5r_1_stage_h_generated_qualification_result.py",
+        "bytes": 5299,
+        "sha256": "94b88550ace2f83f695a4cc8f025819aa09236e1d8e2219d6245d3c8ba345c4c"
+      }
+    ]
+  },
+  "exact_member": {
+    "dataset": "Dreyer_et_al_2023_Dataset_A",
+    "NEMAR_dataset": "nm000250",
+    "revision": "v1.0.4",
+    "peeled_commit": "86c5e1a6dc066313c8a1aa12f2d7a75dd5ff58f0",
+    "license": "CC_BY_4.0",
+    "participant": "sub-01",
+    "run": "R1",
+    "path": "sourcedata/sub-01/eeg/sub-01_task-R1acquisition_eeg.edf",
+    "url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-01/eeg/sub-01_task-R1acquisition_eeg.edf",
+    "bytes": 14805604,
+    "sha256": "a678fe6d37e0496eb381dcac6b877b047d02dfffc659ae4cfc38226f4850e185"
+  },
+  "requested_stage_HL1_generated_live_wrapper": {
+    "requires_authorization_decision_commit_pushed_and_both_jobs_green": true,
+    "existing_qualified_artifacts_must_remain_byte_identical": true,
+    "standard_library_only": true,
+    "generated_payloads_and_mock_opener_only": true,
+    "registered_generated_qualifications_maximum": 1,
+    "live_command_before_activation": false,
+    "durable_no_clobber_marker_before_real_opener": true,
+    "fresh_remote_decision_implementation_activation_and_two_job_proof": true,
+    "adversarial_case_families": [
+      "remote_proof_and_marker",
+      "TLS_and_direct_URL",
+      "redirect_status_and_header_multiplicity",
+      "short_oversized_nonbytes_and_hash_mismatch",
+      "fixed_header_sensor_contract",
+      "resource_caps_no_clobber_and_cleanup",
+      "one_invocation_and_consumed_rerun_refusal"
+    ],
+    "real_or_private_path_opens": 0,
+    "real_HTTP_requests": 0,
+    "real_network_bytes": 0,
+    "real_EDF_bytes_or_header_reads": 0,
+    "annotation_signal_target_model_training_prediction_or_score_operations": 0
+  },
+  "requested_stage_HL2_one_real_invocation": {
+    "requires_exact_HL1_implementation_and_activation_commits_pushed_and_both_jobs_green": true,
+    "registered_invocations_maximum": 1,
+    "durable_consumed_marker_writes": 1,
+    "HTTP_GET_requests_exact": 1,
+    "redirects": 0,
+    "retries": 0,
+    "ranges_or_resume": 0,
+    "substitutions": 0,
+    "successful_payload_body_bytes_exact": 14805604,
+    "opaque_payload_SHA256_passes_maximum": 1,
+    "fixed_EDF_header_semantic_parses_maximum": 1,
+    "annotation_record_reads": 0,
+    "signal_sample_semantic_reads": 0,
+    "target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "remaining_119_payload_requests": 0,
+    "reruns": 0
+  },
+  "sensor_gate": {
+    "EEG_labels": [
+      "Fz",
+      "FCz",
+      "Cz",
+      "CPz",
+      "Pz",
+      "C1",
+      "C3",
+      "C5",
+      "C2",
+      "C4",
+      "C6",
+      "F4",
+      "FC2",
+      "FC4",
+      "FC6",
+      "CP2",
+      "CP4",
+      "CP6",
+      "P4",
+      "F3",
+      "FC1",
+      "FC3",
+      "FC5",
+      "CP1",
+      "CP3",
+      "CP5",
+      "P3"
+    ],
+    "EEG_count": 27,
+    "EOG_count": 3,
+    "EMG_count": 2,
+    "annotation_channel_count_maximum": 1,
+    "unknown_blank_or_duplicate_labels": 0,
+    "physiological_sampling_rate_hz": 512,
+    "sampling_rate_tolerance_hz": 0,
+    "H1_next_authority": "narrowing_amendment_request_only_no_stage_A_authority",
+    "H0_action": "permanently_park_Dreyer_lane"
+  },
+  "resource_envelope": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 0,
+    "runtime_seconds_maximum": 300,
+    "peak_process_tree_RSS_bytes_maximum": 268435456,
+    "payload_network_bytes_maximum": 16777216,
+    "incremental_disk_bytes_maximum": 33554432,
+    "public_output_bytes_maximum": 1048576,
+    "stream_chunk_bytes_maximum": 1048576,
+    "free_disk_bytes_minimum": 10737418240,
+    "analysis_network_bytes": 0,
+    "retries": 0,
+    "reruns": 0
+  },
+  "private_publication_boundary": {
+    "private_payload_Git_ignored": true,
+    "private_marker_Git_ignored": true,
+    "raw_patient_recording_date_header_annotation_signal_or_target_publication": false,
+    "individual_participant_outcome_publication": false,
+    "public_result": "aggregate_H1_or_H0_sensor_contract_resource_and_operation_ledger_only"
+  },
+  "explicit_exclusions": [
+    "remaining_119_R1_R2_EDFs",
+    "all_R3_R6_files_and_sidecars",
+    "additional_participant_file_dataset_download_redirect_retry_or_substitution",
+    "raw_header_annotation_event_trial_task_target_label_signal_quality_reference_or_geometry_publication",
+    "split_epoch_window_feature_cache_derivative_checkpoint_or_model_input_creation",
+    "model_training_inference_calibration_selection_prediction_target_delivery_or_scoring",
+    "consumed_BNCI_EEGMMIDB_S20_S21_S24_S25_SpanishBCBL_or_other_private_artifact_access",
+    "language_model_provider_RW3_stream_device_hardware_upload_release_or_publication",
+    "scientific_neural_decoding_unseen_person_motor_intention_motor_cortex_eye_independent_language_live_portable_home_assistive_or_clinical_claim_upgrade"
+  ],
+  "authority": {
+    "implement_HL1_live_wrapper": false,
+    "run_HL1_registered_generated_qualification": false,
+    "create_HL2_activation": false,
+    "make_real_HTTP_request": false,
+    "write_or_open_real_payload": false,
+    "parse_real_EDF_fixed_header": false,
+    "acquire_remaining_119_payloads": false,
+    "read_annotation_signal_target_or_label": false,
+    "create_split_feature_cache_or_derivative": false,
+    "access_model_or_checkpoint": false,
+    "train_or_infer": false,
+    "deliver_target_or_score": false,
+    "use_language_model_or_provider": false,
+    "touch_other_project": false,
+    "release_or_publish": false,
+    "upgrade_scientific_claim": false
+  },
+  "operation_counters_at_request": {
+    "real_or_private_path_opens": 0,
+    "real_HTTP_requests": 0,
+    "real_network_bytes": 0,
+    "real_EDF_payload_bytes": 0,
+    "real_EDF_header_reads": 0,
+    "real_annotation_reads": 0,
+    "real_signal_sample_reads": 0,
+    "real_target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "claim_upgrades": 0
+  },
+  "claim_boundary": {
+    "maximum_H1_result": "technical_confirmation_of_one_exact_payload_and_fixed_sensor_header_contract",
+    "scientific_claim_not_established": "any_EEG_information_unseen_person_generalization_EEG_beyond_peripherals_movement_intention_language_live_hardware_or_clinical_result"
+  }
+}
