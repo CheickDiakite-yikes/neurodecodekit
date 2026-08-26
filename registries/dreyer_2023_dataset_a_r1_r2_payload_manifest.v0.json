@@ -1,0 +1,845 @@
+{
+  "dataset": {
+    "doi": "10.1038/s41597-023-02445-z",
+    "license": "CC BY 4.0",
+    "nemar_dataset_id": "nm000250",
+    "nemar_peeled_commit": "86c5e1a6dc066313c8a1aa12f2d7a75dd5ff58f0",
+    "nemar_tag": "v1.0.4",
+    "nemar_tag_object": "df70f07d535f78f17f3e0e4d453891280483935f",
+    "title": "A large EEG database with users profile information for motor imagery brain-computer interface research"
+  },
+  "lane_id": "DREYER-C5R-1",
+  "preflight_member": {
+    "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-01/eeg/sub-01_task-R1acquisition_eeg.edf",
+    "path": "sourcedata/sub-01/eeg/sub-01_task-R1acquisition_eeg.edf",
+    "sha256": "a678fe6d37e0496eb381dcac6b877b047d02dfffc659ae4cfc38226f4850e185",
+    "size": 14805604
+  },
+  "preserved_independent_surface": {
+    "payloads_opened": 0,
+    "runs_not_selected": [
+      "R3",
+      "R4",
+      "R5",
+      "R6"
+    ]
+  },
+  "recorded_at_local": "2026-08-25",
+  "research_access_counters": {
+    "EDF_header_reads": 0,
+    "EDF_payload_downloads": 0,
+    "EDF_semantic_reads": 0,
+    "annotation_reads": 0,
+    "model_runs": 0,
+    "official_manifest_bytes": 2364825,
+    "official_manifest_downloads": 1,
+    "scores": 0,
+    "signal_sample_reads": 0,
+    "target_or_label_reads": 0,
+    "training_runs": 0
+  },
+  "schema_name": "neurodecodekit.dreyer_2023_dataset_a_r1_r2_payload_manifest",
+  "schema_version": "0.1.0",
+  "selection": {
+    "dataset_partition": "A",
+    "member_count": 120,
+    "member_list_sha256": "afaf5e0da1b26058f9a57b13beeace7a6a958bde9c931f347aec85376dc0ccea",
+    "members": [
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-01/eeg/sub-01_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-01/eeg/sub-01_task-R1acquisition_eeg.edf",
+        "sha256": "a678fe6d37e0496eb381dcac6b877b047d02dfffc659ae4cfc38226f4850e185",
+        "size": 14805604
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-01/eeg/sub-01_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-01/eeg/sub-01_task-R2acquisition_eeg.edf",
+        "sha256": "e956c7f68aca5912c2cb9dbd75ea76bdfff6e2cca0ba1071ae70f08aa4aab5bf",
+        "size": 14805604
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-02/eeg/sub-02_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-02/eeg/sub-02_task-R1acquisition_eeg.edf",
+        "sha256": "8f3f9619d48c8ab5297e4fba5876fe12570cc5adb2807b0c4ab579842edbc9ee",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-02/eeg/sub-02_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-02/eeg/sub-02_task-R2acquisition_eeg.edf",
+        "sha256": "03505e6aa89754dfdfaf9e99b1f9e436f8bbb29c607cb35935b084804b8f17cd",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-03/eeg/sub-03_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-03/eeg/sub-03_task-R1acquisition_eeg.edf",
+        "sha256": "f34039aac8975a6b7b951f90648ff3ccb1f81f99ae29319b6478ec4d419f495e",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-03/eeg/sub-03_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-03/eeg/sub-03_task-R2acquisition_eeg.edf",
+        "sha256": "ace4601375b7a035b4dab55a8b196d1e19ca8b52bce3b61ac8a9c9451c8a2057",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-04/eeg/sub-04_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-04/eeg/sub-04_task-R1acquisition_eeg.edf",
+        "sha256": "071119dc6e8628c2d5824205d46c87f1455348d333b072bdb21487367ebc63a3",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-04/eeg/sub-04_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-04/eeg/sub-04_task-R2acquisition_eeg.edf",
+        "sha256": "ba737bb6650abbff8aa33f7e6d147dbe95d529004760d9e63de0acd540ec9f67",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-05/eeg/sub-05_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-05/eeg/sub-05_task-R1acquisition_eeg.edf",
+        "sha256": "29e1b7511ca0a5f70bc6871f53e425041905e1406294e1fa1dd25544dc68be74",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-05/eeg/sub-05_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-05/eeg/sub-05_task-R2acquisition_eeg.edf",
+        "sha256": "edf21e8790152103adcb15bc6106ce4a004a46d77e45fa1d8989d426f92b8a10",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-06/eeg/sub-06_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-06/eeg/sub-06_task-R1acquisition_eeg.edf",
+        "sha256": "2f38b5eac588600cd222de940a7ab3a8a969a517a70e09894000bd45434b4232",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-06/eeg/sub-06_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-06/eeg/sub-06_task-R2acquisition_eeg.edf",
+        "sha256": "03253b225d49caa5f9b67d67015914fad4a16841f1ca6fb8b3d06e24c6c28a6f",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-07/eeg/sub-07_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-07/eeg/sub-07_task-R1acquisition_eeg.edf",
+        "sha256": "3b4e0ea8a9e6c8621ad6435cfedf1e72c635fe12df53cc8a57533dfb8bc24bd2",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-07/eeg/sub-07_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-07/eeg/sub-07_task-R2acquisition_eeg.edf",
+        "sha256": "0fed5b038190b5cbd3fe1682b8217f0393788d96ce3c683ae71bc4c322f17517",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-08/eeg/sub-08_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-08/eeg/sub-08_task-R1acquisition_eeg.edf",
+        "sha256": "c275f9aacc4bd8bfded5761fa0ce6fc2cba89e2be9dafa63f2d4489b02d83bc2",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-08/eeg/sub-08_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-08/eeg/sub-08_task-R2acquisition_eeg.edf",
+        "sha256": "a9dc771229eb0be5e755be1c8a3ae08132f1fdb4a7075ea1807e3b356cdb51d5",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-09/eeg/sub-09_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-09/eeg/sub-09_task-R1acquisition_eeg.edf",
+        "sha256": "8ec44b05360d0634baab803a39ee06fee27d66eb0756354b8d339fe73b19641b",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-09/eeg/sub-09_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-09/eeg/sub-09_task-R2acquisition_eeg.edf",
+        "sha256": "f4157c6fd8fd0ed86070507bb39c6c56511cc19847e93a0e76e8d8580b5f212d",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-10/eeg/sub-10_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-10/eeg/sub-10_task-R1acquisition_eeg.edf",
+        "sha256": "7e470d00d4ab699f9a97841ed9abac84cb8e02133880476c1c65620013589b0e",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-10/eeg/sub-10_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-10/eeg/sub-10_task-R2acquisition_eeg.edf",
+        "sha256": "a4764e21d66b8556d3196aac4728366ad4ff2e5d75d8df9dd94fdc84541a8c00",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-11/eeg/sub-11_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-11/eeg/sub-11_task-R1acquisition_eeg.edf",
+        "sha256": "653f9e0b97e213482602cbc44f2c2e43072892b882ec42a5922e512e1c02cf47",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-11/eeg/sub-11_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-11/eeg/sub-11_task-R2acquisition_eeg.edf",
+        "sha256": "cf849d174f0b8e841c7b0f4942c3a0e0d7264eba007667eb718ba5669e6b21ef",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-12/eeg/sub-12_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-12/eeg/sub-12_task-R1acquisition_eeg.edf",
+        "sha256": "52a9e9860f0a84848a19bd5f8265d92ba1e616fca5287fde9d52c51fcf9bc66d",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-12/eeg/sub-12_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-12/eeg/sub-12_task-R2acquisition_eeg.edf",
+        "sha256": "01304fba021405f30f839da82bf21f652acaaa238a5fccbbb2fb351cdec57f1a",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-13/eeg/sub-13_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-13/eeg/sub-13_task-R1acquisition_eeg.edf",
+        "sha256": "b65ebce34d01f1b577c3c015c07ed6b1a1fcf7fe6437dcd7baebd30837becbda",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-13/eeg/sub-13_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-13/eeg/sub-13_task-R2acquisition_eeg.edf",
+        "sha256": "ac211e4160e20cbf31c614e03760f855ca96a438338367e8b12a18360bf84370",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-14/eeg/sub-14_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-14/eeg/sub-14_task-R1acquisition_eeg.edf",
+        "sha256": "b3b8c77a09d77f87ffef60ace2e9c43080b218d7d73c1c05d982a455bfe48a34",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-14/eeg/sub-14_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-14/eeg/sub-14_task-R2acquisition_eeg.edf",
+        "sha256": "3590c3b0cde5af0930979f98bd74fd6b321ed56b66708922db28762bb41f7b10",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-15/eeg/sub-15_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-15/eeg/sub-15_task-R1acquisition_eeg.edf",
+        "sha256": "769e2c07f4b32278144723124978a8dae7389a25067b409f32e41a20aa4680ba",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-15/eeg/sub-15_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-15/eeg/sub-15_task-R2acquisition_eeg.edf",
+        "sha256": "79aa0b6bd28ee04f6cb44843a31135bb4b45a8b7cbeaeee3846158407874330c",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-16/eeg/sub-16_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-16/eeg/sub-16_task-R1acquisition_eeg.edf",
+        "sha256": "ed867410d50d6a4f6b71e8689a1ec6578da51ccd0fa586587c55a8cc622f4691",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-16/eeg/sub-16_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-16/eeg/sub-16_task-R2acquisition_eeg.edf",
+        "sha256": "78d6a8462867cad776a93bef8448b44ff41a1361659a8309eb279b25631cb296",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-17/eeg/sub-17_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-17/eeg/sub-17_task-R1acquisition_eeg.edf",
+        "sha256": "cde05a777bf16b56cb7aea945834b30777e3678cdc1ee74817a314710ee21c2e",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-17/eeg/sub-17_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-17/eeg/sub-17_task-R2acquisition_eeg.edf",
+        "sha256": "95d7c5adb84594423bb76a507cf27f1d6f782603e1dd969b5aba76712b167d26",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-18/eeg/sub-18_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-18/eeg/sub-18_task-R1acquisition_eeg.edf",
+        "sha256": "23d10609a1d0ecfd874980afd86a013bbd18bcdf7725b021acea0aa6e88b835a",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-18/eeg/sub-18_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-18/eeg/sub-18_task-R2acquisition_eeg.edf",
+        "sha256": "e69c5d80d1683789ecb9addc18545f1a52d7dc187cf295a76297dc1951ba5109",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-19/eeg/sub-19_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-19/eeg/sub-19_task-R1acquisition_eeg.edf",
+        "sha256": "fb75e8c8edeb098dd3ab5b8432f5c1c6f2e531f26537f132c41b581f96038db2",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-19/eeg/sub-19_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-19/eeg/sub-19_task-R2acquisition_eeg.edf",
+        "sha256": "8cf738420fb21357ed42f9c50e842d8c296d56ec376af554bbf587bd3c3d9b49",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-20/eeg/sub-20_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-20/eeg/sub-20_task-R1acquisition_eeg.edf",
+        "sha256": "b3c45ac4a2a42cfd2eb7bb7ef8fa4a31203bb7105ffdc3b82b1e896722ebaaa3",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-20/eeg/sub-20_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-20/eeg/sub-20_task-R2acquisition_eeg.edf",
+        "sha256": "2528c1462f692c9fc21800d1a886383e2e858bdd6d1a48ab71140b756392190f",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-21/eeg/sub-21_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-21/eeg/sub-21_task-R1acquisition_eeg.edf",
+        "sha256": "adc0e608b432ad31d14e177abdda6cafe677dd7ff234393cf7b75c4eae08a54c",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-21/eeg/sub-21_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-21/eeg/sub-21_task-R2acquisition_eeg.edf",
+        "sha256": "b36a42b42634ffae4367fa708e4b2196c0e1c42931d63506df2a3c2117577c1d",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-22/eeg/sub-22_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-22/eeg/sub-22_task-R1acquisition_eeg.edf",
+        "sha256": "bcdf676e4aad5d8082002805c9a8225ad08bd5a122c2f5b05647c2834e0eaf7f",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-22/eeg/sub-22_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-22/eeg/sub-22_task-R2acquisition_eeg.edf",
+        "sha256": "265519031407b950f65bd40455fa577123c259702e066c7b773015ffcf8babdf",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-23/eeg/sub-23_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-23/eeg/sub-23_task-R1acquisition_eeg.edf",
+        "sha256": "9d74cb9d8c5bf5b4e2b0592dcb9a411b9f6d60dfee401090da44c6883c403695",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-23/eeg/sub-23_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-23/eeg/sub-23_task-R2acquisition_eeg.edf",
+        "sha256": "7a6e97b806bbc43bfc2494a7886ee1762f7c1d476e3dbe49f9919174456a7c76",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-24/eeg/sub-24_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-24/eeg/sub-24_task-R1acquisition_eeg.edf",
+        "sha256": "60ebab899965f819dd5a44131af8ab6ff6fd578df66250f8fa4c0adf1e9ceaf9",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-24/eeg/sub-24_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-24/eeg/sub-24_task-R2acquisition_eeg.edf",
+        "sha256": "643d5cc19e1b922cfcc572ee0a3a62c40ca8ccd07614857453d101d5940428f2",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-25/eeg/sub-25_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-25/eeg/sub-25_task-R1acquisition_eeg.edf",
+        "sha256": "0cf1fff2dc0febb0b223c0297ddbef063a244aeadf5981ae2201d1638bdf930b",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-25/eeg/sub-25_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-25/eeg/sub-25_task-R2acquisition_eeg.edf",
+        "sha256": "56e36b6a38477c6cde54825ebb0d14ec4a3cd7e226649f6d1c749f8888d57891",
+        "size": 14772722
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-26/eeg/sub-26_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-26/eeg/sub-26_task-R1acquisition_eeg.edf",
+        "sha256": "f318f3c2d6b60e69f8e5b4d6f29d84c34ba4687aa9f4f08acf43080d67edcc9c",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-26/eeg/sub-26_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-26/eeg/sub-26_task-R2acquisition_eeg.edf",
+        "sha256": "6c208f369a0d37940dedb304399df1c53114cd628ea41c31bbd70603591bf333",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-27/eeg/sub-27_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-27/eeg/sub-27_task-R1acquisition_eeg.edf",
+        "sha256": "662f950163c5339ad044f1c94669999a2988973b84ff32fb9ecbb84fb562a43c",
+        "size": 14805604
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-27/eeg/sub-27_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-27/eeg/sub-27_task-R2acquisition_eeg.edf",
+        "sha256": "0ec6e83f4496c818858974a0495d285b5d3de285fec741e912fff81393c38935",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-28/eeg/sub-28_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-28/eeg/sub-28_task-R1acquisition_eeg.edf",
+        "sha256": "a98d3c501c1276c47919c14ed1a595fbd29608e902fd0942d146d34c32e2ccc5",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-28/eeg/sub-28_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-28/eeg/sub-28_task-R2acquisition_eeg.edf",
+        "sha256": "a97af4de877151a2c29e5cda12529a62d434b474f935f20e75db124a44bf7cb3",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-29/eeg/sub-29_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-29/eeg/sub-29_task-R1acquisition_eeg.edf",
+        "sha256": "11626d8464e1eed93c1b8804034ab21c3759774d6bde91b8aa82a7bba99bd614",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-29/eeg/sub-29_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-29/eeg/sub-29_task-R2acquisition_eeg.edf",
+        "sha256": "ab27005db5f15040b3ddd76637a404c1593b5f252c907c734536a2c67e3427d0",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-30/eeg/sub-30_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-30/eeg/sub-30_task-R1acquisition_eeg.edf",
+        "sha256": "5b56fffb184d73f6dae9625d2a0cfeaafe187538daf55278b4f80301f3d09eef",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-30/eeg/sub-30_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-30/eeg/sub-30_task-R2acquisition_eeg.edf",
+        "sha256": "6698e51d3a32b0ebad96e804c124c008af60c78b12d205486557740268d76588",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-31/eeg/sub-31_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-31/eeg/sub-31_task-R1acquisition_eeg.edf",
+        "sha256": "488803a357bf10df554e56e97a9141d2bdceaf285ae941ab2763bd95af0f2389",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-31/eeg/sub-31_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-31/eeg/sub-31_task-R2acquisition_eeg.edf",
+        "sha256": "744be793d1654286c614bd36d99a66db8a3ec56130a3433827efad7391d34e7b",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-32/eeg/sub-32_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-32/eeg/sub-32_task-R1acquisition_eeg.edf",
+        "sha256": "2c391e6e0e476c8d09115faf6f2853498d2895acfadaf14ceb65ca8a52ddca68",
+        "size": 14706958
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-32/eeg/sub-32_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-32/eeg/sub-32_task-R2acquisition_eeg.edf",
+        "sha256": "c5d077877d6247d2cda6f4304d7bd8981edb098f55536ed5041bc9e5c6db3217",
+        "size": 14706958
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-33/eeg/sub-33_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-33/eeg/sub-33_task-R1acquisition_eeg.edf",
+        "sha256": "bf936fa35701c71c593278f65703ae63bd5bb808ba549992ba6a98bcd3393cfd",
+        "size": 14805604
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-33/eeg/sub-33_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-33/eeg/sub-33_task-R2acquisition_eeg.edf",
+        "sha256": "3cffe5bd3a7518d815b0688a6a5fd25c36e0247feb2cff55ad20d5a1612623ef",
+        "size": 14739840
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-34/eeg/sub-34_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-34/eeg/sub-34_task-R1acquisition_eeg.edf",
+        "sha256": "a23668b1c48a8069b3687a3b015e09322dc7c7d97d4364f780566f345db59aac",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-34/eeg/sub-34_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-34/eeg/sub-34_task-R2acquisition_eeg.edf",
+        "sha256": "3f794b3bbc0400a35543b47c9d414593497a1f20d17d5d195510c20ffeeffdc1",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-35/eeg/sub-35_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-35/eeg/sub-35_task-R1acquisition_eeg.edf",
+        "sha256": "374dee8d7dcfac560e87da39391ebbd806a9a28acc0a46588feddd32dd319728",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-35/eeg/sub-35_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-35/eeg/sub-35_task-R2acquisition_eeg.edf",
+        "sha256": "66d4b2106c6540929ef253c901ea560c7ebd0a2ee789304cc38e22cb416c1f37",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-36/eeg/sub-36_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-36/eeg/sub-36_task-R1acquisition_eeg.edf",
+        "sha256": "d6f72b05f99b157ef3d3e8e653f545d02d5b2f5ecd6aaa62787ae969694d99e8",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-36/eeg/sub-36_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-36/eeg/sub-36_task-R2acquisition_eeg.edf",
+        "sha256": "f737a6e48a10378eb2f9a899d9a32c542b82041b4bea48e5eb07696f22027431",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-37/eeg/sub-37_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-37/eeg/sub-37_task-R1acquisition_eeg.edf",
+        "sha256": "a506b7079fe879a489e2a8726332156a18a690a19880f35db7f07534a6f7e236",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-37/eeg/sub-37_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-37/eeg/sub-37_task-R2acquisition_eeg.edf",
+        "sha256": "db4a92b08d705483224666730d993276178a575b6e999152cba9a948475753af",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-38/eeg/sub-38_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-38/eeg/sub-38_task-R1acquisition_eeg.edf",
+        "sha256": "129c9afefd7f66e5ef06e9a9b0341c19f50b57a482fcc4d8503a1d670d483b54",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-38/eeg/sub-38_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-38/eeg/sub-38_task-R2acquisition_eeg.edf",
+        "sha256": "8737a8107638c81565a06b5fdeab79b940b0a745d11e88887dc4faba809bce3e",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-39/eeg/sub-39_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-39/eeg/sub-39_task-R1acquisition_eeg.edf",
+        "sha256": "2c54e20f2f0b3b71b61333d2401831e227080be3f77a2a4f9856d3a2758fe8bf",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-39/eeg/sub-39_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-39/eeg/sub-39_task-R2acquisition_eeg.edf",
+        "sha256": "a08237a61c6f19fc8152b57e907799b94e1234ecf28d8d9199e51a31ebec4379",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-40/eeg/sub-40_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-40/eeg/sub-40_task-R1acquisition_eeg.edf",
+        "sha256": "d96addfe6b05191fe5ab08c188fd7a3746121faccd6f1b1986bc219fc7e84b40",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-40/eeg/sub-40_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-40/eeg/sub-40_task-R2acquisition_eeg.edf",
+        "sha256": "823d2ec2b3634d1f385ad990da1b9f2f33a16d57fee403a484e10a7adabf795d",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-41/eeg/sub-41_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-41/eeg/sub-41_task-R1acquisition_eeg.edf",
+        "sha256": "1377fab5e1005b72b6d193a0b722e241f28544ed1efa05e8dacb8eec67dc5411",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-41/eeg/sub-41_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-41/eeg/sub-41_task-R2acquisition_eeg.edf",
+        "sha256": "a20f375162e67a57f40d1047d3a1e1084da2ed47806481b2b27719bbaf04920f",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-42/eeg/sub-42_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-42/eeg/sub-42_task-R1acquisition_eeg.edf",
+        "sha256": "03d60314cead82749567724fee4682b9657a6ff8798c38f7222d434a1ff41b3b",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-42/eeg/sub-42_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-42/eeg/sub-42_task-R2acquisition_eeg.edf",
+        "sha256": "b871c887e319afb4716cbd48512956961605c774d44b3648bfebb6f8b6e03423",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-43/eeg/sub-43_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-43/eeg/sub-43_task-R1acquisition_eeg.edf",
+        "sha256": "7acbf1ceed6ee4b288d8b9bb97c27f52fabd81fed19a07732dd5cc2f1ce841f1",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-43/eeg/sub-43_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-43/eeg/sub-43_task-R2acquisition_eeg.edf",
+        "sha256": "352342d2a9c645330fe3329c604d1fc4586474ab39293376482f3e05b45ff3d3",
+        "size": 14772722
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-44/eeg/sub-44_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-44/eeg/sub-44_task-R1acquisition_eeg.edf",
+        "sha256": "b8186dfd26a0a74b088ca7f1269b400cc676b0e813f9e6480e68eaefca4ab914",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-44/eeg/sub-44_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-44/eeg/sub-44_task-R2acquisition_eeg.edf",
+        "sha256": "db8ac32b99ec4d5273447b9eb1f50460364ac39b39271760d1968aefe062e1a0",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-45/eeg/sub-45_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-45/eeg/sub-45_task-R1acquisition_eeg.edf",
+        "sha256": "71749df611bddb11e6efb947292db2841c4d982265e6c5ba5d210df20d118a97",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-45/eeg/sub-45_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-45/eeg/sub-45_task-R2acquisition_eeg.edf",
+        "sha256": "918dd0d21ad54de33892bcaeaa787bd3c87eddf44c6541dae53f081efcfe8a18",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-46/eeg/sub-46_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-46/eeg/sub-46_task-R1acquisition_eeg.edf",
+        "sha256": "413ac681e6f17742b6ac7bbc50ea7499eccecbd98cbb0675eca927e75da38f21",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-46/eeg/sub-46_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-46/eeg/sub-46_task-R2acquisition_eeg.edf",
+        "sha256": "0e0284a624f76bc7d6a054c881a749dc88d83b34db5fd3719ea103d03b048483",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-47/eeg/sub-47_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-47/eeg/sub-47_task-R1acquisition_eeg.edf",
+        "sha256": "3158c44f481db222de8c34823d69ea98a8bed28c83de570292ecb8d89b2a8924",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-47/eeg/sub-47_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-47/eeg/sub-47_task-R2acquisition_eeg.edf",
+        "sha256": "67929ca77cfbe364d77bf0df488b61c13fbc7783b9986a2ca313f637bc4b19d5",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-48/eeg/sub-48_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-48/eeg/sub-48_task-R1acquisition_eeg.edf",
+        "sha256": "35f01dd89d93f958ce2035a3d68d5c20686cf41b0c5c7ebc51bd415941147454",
+        "size": 14674076
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-48/eeg/sub-48_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-48/eeg/sub-48_task-R2acquisition_eeg.edf",
+        "sha256": "fb6ad5319eff8a4c8788fdbcc3f719c60489a6832d88f1559365a8fc70a40567",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-49/eeg/sub-49_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-49/eeg/sub-49_task-R1acquisition_eeg.edf",
+        "sha256": "12733eaf8d216bb702b9ec8581216289faee6fa6d75b3573c5bce5b06a92adbc",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-49/eeg/sub-49_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-49/eeg/sub-49_task-R2acquisition_eeg.edf",
+        "sha256": "ef5f24197a959bf61feaf9480fa298beebf0d23d5df2c426942957ae838f3544",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-50/eeg/sub-50_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-50/eeg/sub-50_task-R1acquisition_eeg.edf",
+        "sha256": "6912a7820277103e75d08c64fa2a9c4c1a31bf45b9a40b54efbafa1657f3b4a5",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-50/eeg/sub-50_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-50/eeg/sub-50_task-R2acquisition_eeg.edf",
+        "sha256": "ab38bbabe38ea4edb406b4e37e42fb938629540a405ddbc1122e7621f078da5a",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-51/eeg/sub-51_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-51/eeg/sub-51_task-R1acquisition_eeg.edf",
+        "sha256": "7c71c597ce95d6ef4d833a95b33d72f508cb88669a446e9cabaae809f0d0d884",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-51/eeg/sub-51_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-51/eeg/sub-51_task-R2acquisition_eeg.edf",
+        "sha256": "5e5d4b3768196bac9f7e41296c37447a7a0e630aa563c0fa602123b8019268c9",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-52/eeg/sub-52_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-52/eeg/sub-52_task-R1acquisition_eeg.edf",
+        "sha256": "ac24f9813d7762ac5331bdaa702d5037e47604818db8952ddac0ff7a3475b7d8",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-52/eeg/sub-52_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-52/eeg/sub-52_task-R2acquisition_eeg.edf",
+        "sha256": "1cbfe365d8b4e894bb3e4896ab0ebaef9065eebe3fb0ad6d4497387ece63be64",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-53/eeg/sub-53_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-53/eeg/sub-53_task-R1acquisition_eeg.edf",
+        "sha256": "21b67d79d0f23824c1fc9167519dc7a92e9455e8942fe3ec7d0a08add7990db8",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-53/eeg/sub-53_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-53/eeg/sub-53_task-R2acquisition_eeg.edf",
+        "sha256": "21c1dbbd0b64f1db1aa57cd5966f1b56536bf4b89ec6248adc99e1fa28305bf4",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-54/eeg/sub-54_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-54/eeg/sub-54_task-R1acquisition_eeg.edf",
+        "sha256": "28cdf91b8dd9d68e6b336e85d919b8a396158a4927c1a6559fa022d1fbe8baad",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-54/eeg/sub-54_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-54/eeg/sub-54_task-R2acquisition_eeg.edf",
+        "sha256": "7f07ed890f0730938df4093fa4809f27ad8f72f197b99f69dda6639eee07dda4",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-55/eeg/sub-55_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-55/eeg/sub-55_task-R1acquisition_eeg.edf",
+        "sha256": "5935bbd4eb53f77a7d3fcfb1749e9a8164f6bbf18ff254103f4c687d8eca688f",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-55/eeg/sub-55_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-55/eeg/sub-55_task-R2acquisition_eeg.edf",
+        "sha256": "5573d052b8689db52501d47fde7239d2a400fcb647e78c827da303d6166e14b1",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-56/eeg/sub-56_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-56/eeg/sub-56_task-R1acquisition_eeg.edf",
+        "sha256": "625cbb90a65dce4d56a2758cfcaea35901265493fc427e0c04675a82cf8cc270",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-56/eeg/sub-56_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-56/eeg/sub-56_task-R2acquisition_eeg.edf",
+        "sha256": "73715eadd24ab0d5cf4ba73f6353ab579a8b1cc19514361e1f1d960a0d4f70a2",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-57/eeg/sub-57_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-57/eeg/sub-57_task-R1acquisition_eeg.edf",
+        "sha256": "9c07fd4de68e989b9ec251beaf03baa02c91c2ed8994148805d908b93ff4887d",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-57/eeg/sub-57_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-57/eeg/sub-57_task-R2acquisition_eeg.edf",
+        "sha256": "f5684815010e78bf170475acd7b4aae95437f63ddc440cf704302b58bdcda8d3",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-58/eeg/sub-58_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-58/eeg/sub-58_task-R1acquisition_eeg.edf",
+        "sha256": "f6c17ce449e3c776a195f4b8be8a1a71e9656f093f2304845023e8e17afd33f6",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-58/eeg/sub-58_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-58/eeg/sub-58_task-R2acquisition_eeg.edf",
+        "sha256": "1fa520f50f489413ed7fbeaa0a2726af8ecc25ff66d1f6f2e76ecbc2349a9636",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-59/eeg/sub-59_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-59/eeg/sub-59_task-R1acquisition_eeg.edf",
+        "sha256": "bbf686b06fa1f21e4e6df93becf777b2e1a70faf06c25eb864659c38e1ab1bae",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-59/eeg/sub-59_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-59/eeg/sub-59_task-R2acquisition_eeg.edf",
+        "sha256": "dd3626c31d6b305a0cf2dcd6dbb20b44eb6ab4720a7a95acadb506a02edf9b1a",
+        "size": 14772722
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-60/eeg/sub-60_task-R1acquisition_eeg.edf",
+        "path": "sourcedata/sub-60/eeg/sub-60_task-R1acquisition_eeg.edf",
+        "sha256": "044b97e51f96753a771b5616e5b9212ba435496cffe147862ac95ddaac8780d6",
+        "size": 14838486
+      },
+      {
+        "bytes_url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-60/eeg/sub-60_task-R2acquisition_eeg.edf",
+        "path": "sourcedata/sub-60/eeg/sub-60_task-R2acquisition_eeg.edf",
+        "sha256": "a2a28697360c192754cc7cc9abec980ae6dd40484e78d6e3c9d4ea94631dcbea",
+        "size": 14838486
+      }
+    ],
+    "participant_ids": [
+      "sub-01",
+      "sub-02",
+      "sub-03",
+      "sub-04",
+      "sub-05",
+      "sub-06",
+      "sub-07",
+      "sub-08",
+      "sub-09",
+      "sub-10",
+      "sub-11",
+      "sub-12",
+      "sub-13",
+      "sub-14",
+      "sub-15",
+      "sub-16",
+      "sub-17",
+      "sub-18",
+      "sub-19",
+      "sub-20",
+      "sub-21",
+      "sub-22",
+      "sub-23",
+      "sub-24",
+      "sub-25",
+      "sub-26",
+      "sub-27",
+      "sub-28",
+      "sub-29",
+      "sub-30",
+      "sub-31",
+      "sub-32",
+      "sub-33",
+      "sub-34",
+      "sub-35",
+      "sub-36",
+      "sub-37",
+      "sub-38",
+      "sub-39",
+      "sub-40",
+      "sub-41",
+      "sub-42",
+      "sub-43",
+      "sub-44",
+      "sub-45",
+      "sub-46",
+      "sub-47",
+      "sub-48",
+      "sub-49",
+      "sub-50",
+      "sub-51",
+      "sub-52",
+      "sub-53",
+      "sub-54",
+      "sub-55",
+      "sub-56",
+      "sub-57",
+      "sub-58",
+      "sub-59",
+      "sub-60"
+    ],
+    "representation": "source_EDF",
+    "runs": [
+      "R1",
+      "R2"
+    ],
+    "selector": "^sourcedata/sub-(0[1-9]|[1-5][0-9]|60)/eeg/sub-\\1_task-R[12]acquisition_eeg[.]edf$",
+    "total_bytes": 1779763388
+  },
+  "source_manifest": {
+    "bytes": 2364825,
+    "sha256": "35eea9dc14e4a9e09bbf25fbc832a6c5db7ccf967c9606e625234e153ab66f3a",
+    "url": "https://data.nemar.org/nm000250/v1.0.4/manifest.json"
+  },
+  "status": "conditionally_selected_pending_exact_source_EDF_header_preflight"
+}

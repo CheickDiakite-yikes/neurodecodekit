@@ -1,0 +1,251 @@
+{
+  "schema_name": "neurodecodekit.dreyer_c5r_1_contract",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-25",
+  "lane_id": "DREYER-C5R-1",
+  "status": "prospectively_frozen_no_real_data_authority",
+  "evidence_sequence": [
+    "G_generated_qualification",
+    "H_one_source_EDF_header_preflight",
+    "A_exact_120_member_bundle_completion",
+    "Q_target_firewalled_semantic_derivatives",
+    "P_source_only_models_and_hash_frozen_predictions",
+    "T_one_target_delivery_and_one_frozen_score"
+  ],
+  "bindings": {
+    "research_registry_path": "registries/dreyer_2023_dataset_a_replication_research.v0.json",
+    "research_registry_bytes": 4381,
+    "research_registry_sha256": "13547e5dd8c02b73edf89dc5d471c0e641559e0c7ec8610f36b4dd5e4f188201",
+    "payload_manifest_path": "registries/dreyer_2023_dataset_a_r1_r2_payload_manifest.v0.json",
+    "payload_manifest_bytes": 41723,
+    "payload_manifest_sha256": "b21b720138915ae223d8381ed005a03dac3f6062e1d3651676303f41424d7c78",
+    "prior_postmortem_result_path": "registries/bnci_2014_001_artifact_postmortem_result.v0.json",
+    "prior_postmortem_result_bytes": 6091,
+    "prior_postmortem_result_sha256": "b211f894658beb642cebc40e54dba9c33a9bd3cf7664b91a6170b086dfd96c8a"
+  },
+  "cohort": {
+    "participants": 60,
+    "participant_ids": "sub-01_through_sub-60_inclusive",
+    "runs": [
+      "R1",
+      "R2"
+    ],
+    "trials_per_run": 40,
+    "trials_per_participant": 80,
+    "total_trials": 4800,
+    "classes": [
+      "left",
+      "right"
+    ],
+    "class_encoding": {
+      "left": 0,
+      "right": 1
+    },
+    "outer_split": "60_fold_leave_one_participant_out_zero_calibration",
+    "source_participants_per_fold": 59,
+    "held_out_participants_per_fold": 1,
+    "preserved_runs": [
+      "R3",
+      "R4",
+      "R5",
+      "R6"
+    ]
+  },
+  "preflight": {
+    "path": "sourcedata/sub-01/eeg/sub-01_task-R1acquisition_eeg.edf",
+    "bytes": 14805604,
+    "sha256": "a678fe6d37e0496eb381dcac6b877b047d02dfffc659ae4cfc38226f4850e185",
+    "expected_sampling_rate_hz": 512,
+    "expected_EEG_channels": 27,
+    "expected_EOG_channels": 3,
+    "expected_EMG_channels": 2,
+    "required_action_on_mismatch": "park_before_bulk_acquisition",
+    "exact_observed_EOG_EMG_labels_must_be_bound_by_narrowing_amendment": true
+  },
+  "sensors": {
+    "central_pairs": [
+      ["C1", "C2"],
+      ["C3", "C4"],
+      ["C5", "C6"],
+      ["FC1", "FC2"],
+      ["FC3", "FC4"],
+      ["FC5", "FC6"],
+      ["CP1", "CP2"],
+      ["CP3", "CP4"],
+      ["CP5", "CP6"]
+    ],
+    "posterior": ["P3", "Pz", "P4"],
+    "frontal": ["F3", "Fz", "F4"],
+    "rereference": "preserve_recorded_left_ear_reference",
+    "forbidden": [
+      "common_average_rereference",
+      "participant_specific_channel_selection",
+      "channel_deletion",
+      "interpolation",
+      "ICA",
+      "CSP",
+      "source_localization",
+      "target_derived_artifact_rejection"
+    ]
+  },
+  "features": {
+    "sampling_rate_hz": 512,
+    "segment_seconds": 1.0,
+    "segment_samples": 512,
+    "window_function": "periodic_Hann",
+    "transform": "numpy_fft_rfft_squared_magnitude_over_window_energy",
+    "bands_half_open_except_final_upper_inclusive_hz": [
+      [8.0, 12.0],
+      [12.0, 20.0],
+      [20.0, 30.0]
+    ],
+    "normalization_band_hz": [5.0, 35.0],
+    "epsilon": 1e-18,
+    "channel_feature": "log10_band_power_minus_log10_5_35Hz_power",
+    "central_feature": "left_minus_right_homologous_pair_channel_feature",
+    "central_dimensions": 27,
+    "windows_seconds": {
+      "pre": [[1.0, 2.0]],
+      "cue": [[3.0, 4.0]],
+      "late": [[5.0, 6.0], [6.0, 7.0], [7.0, 8.0]]
+    },
+    "late_aggregation": "arithmetic_mean_across_three_segments",
+    "timing_features": [
+      "R2_indicator",
+      "trial_index_divided_by_39",
+      "sin_2pi_trial_index_divided_by_40",
+      "cos_2pi_trial_index_divided_by_40"
+    ],
+    "producer_causal": true,
+    "required_context_seconds": 1.0,
+    "decision_time_seconds_after_trial_start": 8.0,
+    "end_to_end_latency_measured": false
+  },
+  "residualization": {
+    "predictand": "27_central_pair_features",
+    "predictors": ["EOG", "EMG", "posterior_EEG", "timing"],
+    "family": "sklearn_Ridge",
+    "alpha": 10.0,
+    "fit_intercept": true,
+    "standardization": "source_only_zero_variance_to_one",
+    "labels_used": false,
+    "held_out_rows_used_for_fit": false,
+    "derangement": "adjacent_pair_swap_within_each_participant_and_run_nonwrapping"
+  },
+  "classifier": {
+    "family": "sklearn_LogisticRegression_L2",
+    "C": 0.1,
+    "solver": "lbfgs",
+    "max_iter": 1000,
+    "tol": 1e-6,
+    "class_weight": null,
+    "source_standardization": true,
+    "zero_variance_scale": 1.0,
+    "probability_clip": [1e-6, 0.999999],
+    "nonconvergence_action": "park",
+    "CPU_threads": 1
+  },
+  "calibration": {
+    "method": "source_only_temperature_grid",
+    "inner_folds": 5,
+    "inner_fold_assignment": "participant_number_minus_one_modulo_5",
+    "temperature_grid": "2**(k/16)_for_integer_k_minus32_through_32",
+    "tie_break": "minimum_log_loss_then_distance_to_one_then_lower_temperature",
+    "calibrated_conditions": [
+      "late_N",
+      "late_N_plus_R",
+      "late_N_plus_deranged_R",
+      "late_N_without_posterior",
+      "late_N_without_posterior_plus_R",
+      "pre_N",
+      "pre_N_plus_R",
+      "cue_N",
+      "cue_N_plus_R"
+    ]
+  },
+  "conditions": [
+    "equal_prior",
+    "timing_only",
+    "EOG_only",
+    "EMG_only",
+    "posterior_only",
+    "late_N",
+    "late_central_E",
+    "late_residual_R",
+    "late_N_plus_R",
+    "late_N_plus_deranged_R",
+    "late_N_without_posterior",
+    "late_N_without_posterior_plus_R",
+    "pre_N",
+    "pre_N_plus_R",
+    "cue_N",
+    "cue_N_plus_R",
+    "source_label_rotated_late_N_plus_R"
+  ],
+  "schedule": {
+    "outer_folds": 60,
+    "conditions_per_fold": 17,
+    "parameter_update_fits": 4740,
+    "held_out_prediction_sets": 1020,
+    "held_out_prediction_rows": 81600,
+    "target_deliveries_before_freeze_green": 0,
+    "scores_before_freeze_green": 0,
+    "post_target_updates": 0,
+    "reruns": 0
+  },
+  "primary_gate": {
+    "nuisance_log_loss_delta_minimum": 0.02,
+    "deranged_log_loss_delta_minimum": 0.02,
+    "positive_participants_minimum_each_coprimary": 39,
+    "one_sided_exact_binomial_sign_p_maximum_each_coprimary": 0.025,
+    "posterior_ablation_log_loss_delta_minimum": 0.015,
+    "late_minus_precue_increment_minimum": 0.01,
+    "late_N_plus_R_log_loss_maximum_exclusive": 0.6931471805599453,
+    "late_N_plus_R_ECE_maximum": 0.1,
+    "late_N_plus_R_balanced_accuracy_minimum": 0.6,
+    "late_N_plus_R_no_signal_or_timing_margin_minimum": 0.05,
+    "structural_and_firewall_assertions_all_required": true,
+    "multiple_testing": "two_coprimary_exact_sign_tests_Bonferroni_0.025_each"
+  },
+  "routes": {
+    "DREYERC5R-R1": "all_primary_components_passed",
+    "DREYERC5R-R2": "candidate_information_but_specificity_consistency_calibration_or_effect_gate_failed",
+    "DREYERC5R-R3": "no_registered_candidate_advantage",
+    "DREYERC5R-R0": "structural_proof_firewall_resource_or_completeness_failure_no_accepted_score"
+  },
+  "firewall": {
+    "source_features_and_targets_delivered_per_fold": true,
+    "held_out_features_delivered_per_fold": true,
+    "held_out_targets_sealed_until_freeze_commit_remotely_green": true,
+    "fold_capability_can_traverse_other_fold": false,
+    "individual_public_predictions_probabilities_targets_or_participant_outcomes": false,
+    "public_freeze": "aggregate_identity_count_dimension_condition_and_hash_only",
+    "target_deliveries_maximum": 1,
+    "scores_maximum": 1
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "free_disk_bytes_minimum": 10737418240,
+    "payload_network_bytes_maximum": 2147483648,
+    "incremental_disk_bytes_maximum": 3221225472,
+    "private_generated_bytes_maximum": 268435456,
+    "public_output_bytes_per_stage_maximum": 4194304,
+    "peak_process_tree_RSS_bytes_maximum": 1610612736,
+    "runtime_seconds_per_real_stage_maximum": 7200,
+    "analysis_network_bytes": 0,
+    "retries": 0,
+    "reruns": 0
+  },
+  "claim_ceiling_on_R1": "participant_independent_visually_cued_left_right_motor_imagery_protocol_condition_information_with_incremental_predeclared_central_EEG_sensor_information_beyond_recorded_EOG_wrist_EMG_posterior_EEG_timing_and_derangement_controls_in_Dreyer_Dataset_A_R1_R2",
+  "not_established_even_on_R1": "spontaneous_movement_intention_exclusive_motor_cortex_origin_eye_independent_causation_thought_or_language_decoding_live_decoding_portable_hardware_home_use_or_clinical_utility",
+  "authority": {
+    "generated_qualification": "Tier_B_after_implementation_green",
+    "real_header_payload_or_semantic_access": false,
+    "real_acquisition": false,
+    "real_training_or_inference": false,
+    "real_target_delivery_or_scoring": false,
+    "claim_upgrade": false
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "schema_name": "neurodecodekit.dreyer_2023_dataset_a_replication_research",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-25",
+  "lane_id": "DREYER-C5R-1",
+  "status": "conditionally_selected_pending_exact_source_EDF_header_preflight",
+  "decision": "select_Dreyer_2023_Dataset_A_source_EDF_R1_R2_for_fresh_participant_held_out_replication",
+  "primary_sources": {
+    "paper_DOI": "10.1038/s41597-023-02445-z",
+    "paper_URL": "https://www.nature.com/articles/s41597-023-02445-z",
+    "nemar_dataset_id": "nm000250",
+    "nemar_dataset_URL": "https://nemar.org/dataset/nm000250",
+    "nemar_tag": "v1.0.4",
+    "nemar_tag_object": "df70f07d535f78f17f3e0e4d453891280483935f",
+    "nemar_peeled_commit": "86c5e1a6dc066313c8a1aa12f2d7a75dd5ff58f0",
+    "official_manifest_URL": "https://data.nemar.org/nm000250/v1.0.4/manifest.json",
+    "official_manifest_bytes": 2364825,
+    "official_manifest_sha256": "35eea9dc14e4a9e09bbf25fbc832a6c5db7ccf967c9606e625234e153ab66f3a",
+    "license": "CC BY 4.0"
+  },
+  "expected_semantics_from_primary_paper": {
+    "participants": 60,
+    "sessions_per_participant": 1,
+    "selected_runs_per_participant": 2,
+    "trials_per_selected_run": 40,
+    "left_trials_per_selected_run": 20,
+    "right_trials_per_selected_run": 20,
+    "total_selected_trials": 4800,
+    "sampling_rate_hz": 512,
+    "EEG_channels": 27,
+    "EOG_channels": 3,
+    "EMG_channels": 2,
+    "task": "visually_cued_left_versus_right_hand_motor_imagery",
+    "R1_R2_feedback": "target_side_sham_magnitude_feedback",
+    "cue_onset_seconds": 3.0,
+    "cue_offset_seconds": 4.25,
+    "feedback_onset_seconds": 4.25,
+    "trial_end_seconds": 8.0
+  },
+  "selection": {
+    "participant_ids": "sub-01_through_sub-60_inclusive",
+    "runs": [
+      "R1",
+      "R2"
+    ],
+    "representation": "source_EDF",
+    "payload_member_count": 120,
+    "payload_bytes": 1779763388,
+    "payload_manifest_path": "registries/dreyer_2023_dataset_a_r1_r2_payload_manifest.v0.json",
+    "payload_manifest_bytes": 41723,
+    "payload_manifest_sha256": "b21b720138915ae223d8381ed005a03dac3f6062e1d3651676303f41424d7c78",
+    "preserved_runs": [
+      "R3",
+      "R4",
+      "R5",
+      "R6"
+    ]
+  },
+  "preflight": {
+    "required": true,
+    "member_path": "sourcedata/sub-01/eeg/sub-01_task-R1acquisition_eeg.edf",
+    "member_bytes": 14805604,
+    "member_sha256": "a678fe6d37e0496eb381dcac6b877b047d02dfffc659ae4cfc38226f4850e185",
+    "must_confirm_EEG_channels": 27,
+    "must_confirm_EOG_channels": 3,
+    "must_confirm_EMG_channels": 2,
+    "must_confirm_sampling_rate_hz": 512,
+    "failure_action": "park_lane_before_bulk_acquisition_no_substitution"
+  },
+  "structural_invariants": {
+    "participants": 60,
+    "runs_per_participant": 2,
+    "trials_per_run": 40,
+    "balanced_targets_per_run": true,
+    "segmentation_uses_end_trial_trigger": false,
+    "participant_A1_missing_end_triggers_permitted_only_if_start_and_cue_invariants_pass": true,
+    "post_target_participant_exclusion_allowed": false
+  },
+  "prior_artifact_postmortem_binding": {
+    "path": "registries/bnci_2014_001_artifact_postmortem_result.v0.json",
+    "bytes": 6091,
+    "sha256": "b211f894658beb642cebc40e54dba9c33a9bd3cf7664b91a6170b086dfd96c8a",
+    "priority_order": [
+      "separate_selected_EEG_from_posterior_visual_information",
+      "estimate_EEG_increment_after_source_cross_fitted_EOG_residualization",
+      "freeze_probability_calibration_on_source_participants_only",
+      "test_consistency_in_a_fresh_independent_participant_cohort"
+    ]
+  },
+  "claim_ceiling": "participant_independent_visually_cued_left_right_motor_imagery_protocol_condition_information_with_incremental_predeclared_central_EEG_sensor_information_beyond_recorded_EOG_wrist_EMG_posterior_EEG_timing_and_derangement_controls_in_Dreyer_Dataset_A_R1_R2",
+  "not_established_even_if_passed": "spontaneous_movement_intention_exclusive_motor_cortex_origin_eye_independent_causation_thought_or_language_decoding_live_decoding_portable_hardware_home_use_or_clinical_utility",
+  "access_counters": {
+    "official_manifest_downloads": 1,
+    "official_manifest_bytes": 2364825,
+    "EDF_payload_downloads": 0,
+    "EDF_header_reads": 0,
+    "EDF_annotation_reads": 0,
+    "signal_sample_reads": 0,
+    "target_or_label_reads": 0,
+    "training_runs": 0,
+    "inference_runs": 0,
+    "scores": 0
+  }
+}
