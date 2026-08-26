@@ -18,8 +18,8 @@
   },
   "artifact_set": {
     "artifact_count": 12,
-    "artifact_bytes": 166417,
-    "canonical_sha256": "6b79c4e8173989c74d94c51e27d14caba3296c34fa1f77111410a61c4a1a2733",
+    "artifact_bytes": 175360,
+    "canonical_sha256": "37e31b060526b720a007b96d97f0f266396b40c3d77c3e6d8b1b88bc4a5b549b",
     "artifacts": [
       {
         "path": "docs/DREYER_2023_DATASET_A_REPLICATION_PRIMARY_SOURCE_RESEARCH.md",
@@ -58,8 +58,8 @@
       },
       {
         "path": "src/neurodecodekit/experiments/dreyer_c5r_1.py",
-        "bytes": 45754,
-        "sha256": "0bf5661ad970c967b9c98c0c2c63b07fae192148bb0bb149009221e7ecbd28cb"
+        "bytes": 53075,
+        "sha256": "e5ab563997adf4797d223963428559f2e1e9c0f847bb7955e78287fe18b5b1cb"
       },
       {
         "path": "src/neurodecodekit/dreyer_c5r_1_cli.py",
@@ -78,8 +78,8 @@
       },
       {
         "path": "tests/test_dreyer_c5r_1_generated_implementation.py",
-        "bytes": 11224,
-        "sha256": "aa9cb88474a13bb507082e837d0665c2240a6ed7d4280f9684e79d54a8adec97"
+        "bytes": 12846,
+        "sha256": "8b330daa4cec5dc2282a2664d5fc88ed901d7dfb721d09d6855ad322dede6b78"
       }
     ]
   },
@@ -92,6 +92,7 @@
     "held_out_target_firewall": true,
     "aggregate_hash_only_prediction_freeze": true,
     "one_delivery_aggregate_scorer": true,
+    "fresh_remote_green_proof_before_numerical_work": true,
     "real_execute_command": false,
     "real_score_command": false
   },
@@ -111,10 +112,10 @@
     "prediction_rows": 2040,
     "synthetic_route": "DREYERC5R-R1",
     "runtime_seconds_approximate": 2.0,
-    "peak_process_tree_RSS_bytes": 176865280,
+    "peak_process_tree_RSS_bytes": 173850624,
     "generated_input_bytes": 197632,
-    "private_temporary_prediction_bytes": 296120,
-    "public_output_bytes": 2831,
+    "private_temporary_prediction_bytes": 297663,
+    "public_output_bytes": 3548,
     "scientific_value": "none_generated_positive_control_only"
   },
   "access_counters": {

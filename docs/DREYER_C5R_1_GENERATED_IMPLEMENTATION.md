@@ -23,7 +23,9 @@ generated-fixture-only executable surface:
   held-out features, but no held-out target;
 - 17-condition target-blind predictions and an aggregate hash-only freeze;
 - one-delivery target-vault behavior and an aggregate-only scorer with frozen
-  R1/R2/R3 routing; and
+  R1/R2/R3 routing;
+- fresh remote-head, CI-run, Base-job, and Optional-job proof collection before
+  generated numerical work; and
 - a sidecar CLI exposing only `plan`, `qualify`, and `inspect`.
 
 There is deliberately no real download, header preflight, semantic parse,
@@ -57,9 +59,9 @@ Separate tests force uniform predictions to R3 and a subthreshold candidate to
 R2. These routes only validate software behavior; generated success has no
 scientific value.
 
-The measured temporary pass completed in about 2 seconds at 176,865,280 bytes
-peak process-tree RSS, with 197,632 generated input bytes, 296,120 private
-temporary prediction bytes, and a 2,831-byte public result. These are
+The measured temporary pass completed in about 2 seconds at 173,850,624 bytes
+peak process-tree RSS, with 197,632 generated input bytes, 297,663 private
+temporary prediction bytes, and a 3,548-byte public result. These are
 development measurements, not the registered Stage G result.
 
 ## Adversarial Coverage
@@ -79,16 +81,16 @@ The focused suite checks:
 - no-clobber output and readback verification; and
 - base-install behavior when optional numerical dependencies are absent.
 
-Local focused verification passed 24 tests with the optional environment and
-13 tests with eight numerical tests correctly skipped in the dependency-free
-base environment. Pinned Ruff and Python compilation passed.
+Local focused verification passed 29 tests with the optional environment. In
+the dependency-free base environment, 21 tests pass and eight numerical tests
+skip explicitly. Pinned Ruff and Python compilation passed.
 
 ## Proof Binding
 
 The implementation is bound to contract SHA-256
 `ea6357a7b079aa3de885ef0a7c0e391c7810e2b94cbbb1702f934f65cc6b8fed`.
-The 12 pre-result artifacts total 166,417 bytes under canonical artifact-set
-SHA-256 `6b79c4e8173989c74d94c51e27d14caba3296c34fa1f77111410a61c4a1a2733`.
+The 12 pre-result artifacts total 175,360 bytes under canonical artifact-set
+SHA-256 `37e31b060526b720a007b96d97f0f266396b40c3d77c3e6d8b1b88bc4a5b549b`.
 
 The preceding research/preregistration commit
 `8d72f8b43c3c4e2f135a7a0e8654e0cac64f6414` passed Base Python job

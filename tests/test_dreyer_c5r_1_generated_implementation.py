@@ -34,6 +34,24 @@ NUMERICAL_AVAILABLE = all(
 CONTRACT_PATH = ROOT / experiment.CONTRACT_RELATIVE_PATH
 
 
+def _fake_remote_proof() -> dict[str, object]:
+    commit = "a" * 40
+    return {
+        "branch": "codex/generated-proof-test",
+        "head_sha": commit,
+        "remote_head_sha": commit,
+        "CI_run_id": 101,
+        "CI_head_sha": commit,
+        "CI_conclusion": "success",
+        "base_python_job_id": 102,
+        "base_python_job_name": "Base Python",
+        "base_python_job_conclusion": "success",
+        "optional_neuro_readers_job_id": 103,
+        "optional_neuro_readers_job_name": "Optional Neuro Readers",
+        "optional_neuro_readers_job_conclusion": "success",
+    }
+
+
 class DreyerC5R1GeneratedBaseTests(unittest.TestCase):
     def test_contract_hash_condition_inventory_and_real_schedule_are_exact(self) -> None:
         payload = CONTRACT_PATH.read_bytes()
@@ -91,6 +109,17 @@ class DreyerC5R1GeneratedBaseTests(unittest.TestCase):
         for forbidden in ("execute-real", "download", "score-real", "acquire"):
             self.assertNotIn(forbidden, help_text)
 
+    def test_remote_proof_validator_refuses_false_or_incomplete_green_state(self) -> None:
+        valid = _fake_remote_proof()
+        self.assertEqual(experiment.validate_remote_green_proof(valid), valid)
+        for mutation in (
+            {**valid, "CI_conclusion": "failure"},
+            {**valid, "remote_head_sha": "b" * 40},
+            {key: value for key, value in valid.items() if key != "CI_run_id"},
+        ):
+            with self.assertRaises(experiment.DreyerExperimentRefusal):
+                experiment.validate_remote_green_proof(mutation)
+
 
 @unittest.skipUnless(NUMERICAL_AVAILABLE, "optional classical dependencies are not installed")
 class DreyerC5R1GeneratedNumericalTests(unittest.TestCase):
@@ -102,7 +131,11 @@ class DreyerC5R1GeneratedNumericalTests(unittest.TestCase):
         os.environ.update({name: "1" for name in experiment.THREAD_ENVIRONMENT})
         cls.temporary = tempfile.TemporaryDirectory()
         cls.output_path = Path(cls.temporary.name) / "qualification.json"
-        cls.result = experiment.run_generated_qualification(cls.output_path, root=ROOT)
+        cls.result = experiment.run_generated_qualification(
+            cls.output_path,
+            root=ROOT,
+            remote_proof_collector=lambda _root: _fake_remote_proof(),
+        )
         cls.output_bytes = cls.output_path.read_bytes()
 
     @classmethod
@@ -135,8 +168,14 @@ class DreyerC5R1GeneratedNumericalTests(unittest.TestCase):
         self.assertTrue(measurements["producer_causal"])
         self.assertFalse(measurements["end_to_end_latency_measured"])
         counters = self.result["access_counters"]
+        self.assertEqual(counters["pre_qualification_Git_remote_metadata_calls"], 1)
+        self.assertEqual(counters["pre_qualification_GitHub_Actions_metadata_calls"], 2)
         for key, value in counters.items():
-            self.assertEqual(value, 0, key)
+            if key not in {
+                "pre_qualification_Git_remote_metadata_calls",
+                "pre_qualification_GitHub_Actions_metadata_calls",
+            }:
+                self.assertEqual(value, 0, key)
 
     def test_firewall_freeze_tamper_and_delivery_cases_all_passed(self) -> None:
         cases = self.result["cases"]

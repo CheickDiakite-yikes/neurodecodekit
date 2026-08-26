@@ -8,12 +8,13 @@ import math
 import os
 import resource
 import stat
+import subprocess
 import time
 import warnings
 from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Mapping, Sequence
+from typing import Any, Callable, Mapping, Sequence
 
 from neurodecodekit.datasets.dreyer_c5r_1 import (
     DreyerDataRefusal,
@@ -72,6 +73,20 @@ GENERATED_QUALIFICATION_CAPS = {
     "generated_input_bytes_maximum": 33_554_432,
     "private_temporary_bytes_maximum": 33_554_432,
     "public_output_bytes_maximum": 1_048_576,
+}
+REMOTE_PROOF_FIELDS = {
+    "branch",
+    "head_sha",
+    "remote_head_sha",
+    "CI_run_id",
+    "CI_head_sha",
+    "CI_conclusion",
+    "base_python_job_id",
+    "base_python_job_name",
+    "base_python_job_conclusion",
+    "optional_neuro_readers_job_id",
+    "optional_neuro_readers_job_name",
+    "optional_neuro_readers_job_conclusion",
 }
 
 
@@ -252,6 +267,182 @@ def _prepare_output_path(path: str | Path) -> Path:
     if candidate.exists() or candidate.is_symlink():
         raise DreyerExperimentRefusal("generated output already exists")
     return candidate
+
+
+def _git_text(root: Path, *arguments: str) -> str:
+    try:
+        completed = subprocess.run(
+            ["git", *arguments],
+            cwd=root,
+            capture_output=True,
+            text=True,
+            check=True,
+            timeout=30,
+        )
+    except (OSError, subprocess.SubprocessError) as exc:
+        raise DreyerExperimentRefusal(f"Git proof command failed: {arguments[0]}") from exc
+    return completed.stdout.strip()
+
+
+def validate_remote_green_proof(value: Any) -> dict[str, Any]:
+    if not isinstance(value, dict) or set(value) != REMOTE_PROOF_FIELDS:
+        raise DreyerExperimentRefusal("remote-green proof field inventory differs")
+    commits = (value["head_sha"], value["remote_head_sha"], value["CI_head_sha"])
+    if (
+        any(
+            not isinstance(commit, str)
+            or len(commit) != 40
+            or any(character not in "0123456789abcdef" for character in commit)
+            for commit in commits
+        )
+        or len(set(commits)) != 1
+        or not isinstance(value["branch"], str)
+        or not value["branch"]
+        or value["branch"] == "HEAD"
+        or value["CI_conclusion"] != "success"
+        or value["base_python_job_name"] != "Base Python"
+        or value["base_python_job_conclusion"] != "success"
+        or value["optional_neuro_readers_job_name"] != "Optional Neuro Readers"
+        or value["optional_neuro_readers_job_conclusion"] != "success"
+        or not all(
+            isinstance(value[field], int) and value[field] > 0
+            for field in (
+                "CI_run_id",
+                "base_python_job_id",
+                "optional_neuro_readers_job_id",
+            )
+        )
+    ):
+        raise DreyerExperimentRefusal("remote-green proof content differs")
+    return dict(value)
+
+
+def collect_remote_green_proof(
+    root: str | Path,
+    *,
+    runner: Callable[..., Any] = subprocess.run,
+) -> dict[str, Any]:
+    """Collect fresh pushed-HEAD and two-job CI proof before generated work."""
+
+    repository = Path(root).resolve()
+    branch = _git_text(repository, "rev-parse", "--abbrev-ref", "HEAD")
+    head = _git_text(repository, "rev-parse", "HEAD")
+    if not branch or branch == "HEAD" or len(head) != 40:
+        raise DreyerExperimentRefusal("remote proof requires a branch commit")
+    try:
+        subprocess.run(
+            ["git", "diff", "--quiet", "HEAD", "--"],
+            cwd=repository,
+            check=True,
+            timeout=30,
+        )
+        subprocess.run(
+            ["git", "diff", "--cached", "--quiet", "--"],
+            cwd=repository,
+            check=True,
+            timeout=30,
+        )
+        remote = runner(
+            ["git", "ls-remote", "--heads", "origin", f"refs/heads/{branch}"],
+            cwd=repository,
+            capture_output=True,
+            text=True,
+            check=True,
+            timeout=30,
+        )
+        fields = remote.stdout.strip().split()
+        if len(fields) != 2 or fields[0] != head:
+            raise DreyerExperimentRefusal("fresh remote branch head differs")
+        listed = runner(
+            [
+                "gh",
+                "run",
+                "list",
+                "--workflow",
+                "ci.yml",
+                "--branch",
+                branch,
+                "--commit",
+                head,
+                "--limit",
+                "20",
+                "--json",
+                "databaseId,headSha,status,conclusion",
+            ],
+            cwd=repository,
+            capture_output=True,
+            text=True,
+            check=True,
+            timeout=30,
+        )
+        candidates = json.loads(listed.stdout)
+        successes = [
+            row
+            for row in candidates
+            if isinstance(row, dict)
+            and row.get("headSha") == head
+            and row.get("status") == "completed"
+            and row.get("conclusion") == "success"
+            and isinstance(row.get("databaseId"), int)
+        ]
+        if not successes:
+            raise DreyerExperimentRefusal("current implementation commit is not green")
+        run_id = max(int(row["databaseId"]) for row in successes)
+        viewed = runner(
+            [
+                "gh",
+                "run",
+                "view",
+                str(run_id),
+                "--json",
+                "headSha,status,conclusion,jobs",
+            ],
+            cwd=repository,
+            capture_output=True,
+            text=True,
+            check=True,
+            timeout=30,
+        )
+        run = json.loads(viewed.stdout)
+    except DreyerExperimentRefusal:
+        raise
+    except (OSError, subprocess.SubprocessError, json.JSONDecodeError, TypeError) as exc:
+        raise DreyerExperimentRefusal("remote-green proof collection failed") from exc
+    if not isinstance(run, dict) or not isinstance(run.get("jobs"), list):
+        raise DreyerExperimentRefusal("remote CI run payload differs")
+    if (
+        run.get("headSha") != head
+        or run.get("status") != "completed"
+        or run.get("conclusion") != "success"
+    ):
+        raise DreyerExperimentRefusal("remote CI run is not complete and successful")
+    jobs = {job.get("name"): job for job in run["jobs"] if isinstance(job, dict)}
+    base = jobs.get("Base Python")
+    optional = jobs.get("Optional Neuro Readers")
+    if (
+        not isinstance(base, dict)
+        or not isinstance(optional, dict)
+        or base.get("status") != "completed"
+        or optional.get("status") != "completed"
+        or base.get("conclusion") != "success"
+        or optional.get("conclusion") != "success"
+    ):
+        raise DreyerExperimentRefusal("required remote CI jobs are not green")
+    proof = {
+        "branch": branch,
+        "head_sha": head,
+        "remote_head_sha": fields[0],
+        "CI_run_id": run_id,
+        "CI_head_sha": run["headSha"],
+        "CI_conclusion": run["conclusion"],
+        "base_python_job_id": base.get("databaseId"),
+        "base_python_job_name": base.get("name"),
+        "base_python_job_conclusion": base.get("conclusion"),
+        "optional_neuro_readers_job_id": optional.get("databaseId"),
+        "optional_neuro_readers_job_name": optional.get("name"),
+        "optional_neuro_readers_job_conclusion": optional.get("conclusion"),
+    }
+    return validate_remote_green_proof(proof)
 
 
 def plan_real_schedule() -> dict[str, int]:
@@ -907,12 +1098,15 @@ def run_generated_qualification(
     output_path: str | Path,
     *,
     root: str | Path | None = None,
+    remote_proof_collector: Callable[[str | Path], dict[str, Any]] = collect_remote_green_proof,
 ) -> dict[str, Any]:
     """Run one bounded generated-only qualification and publish one result."""
 
     assert_single_thread_environment()
-    load_contract(root)
+    repository = Path(root) if root is not None else _repo_root()
+    load_contract(repository)
     output = _prepare_output_path(output_path)
+    remote_proof = validate_remote_green_proof(remote_proof_collector(repository))
     started = time.monotonic()
     header_cases = _generated_header_cases()
     spectral_case = _generated_spectral_case()
@@ -1014,6 +1208,10 @@ def run_generated_qualification(
             "sha256": CONTRACT_SHA256,
             "verified": True,
         },
+        "implementation_proof": {
+            "fresh_remote_proof_collected_before_generated_numerical_work": True,
+            "remote_green": remote_proof,
+        },
         "cases": {
             "EDF_fixed_header": header_cases,
             "causal_spectral_feature": spectral_case,
@@ -1052,6 +1250,9 @@ def run_generated_qualification(
         },
         "access_counters": {
             "real_or_private_path_opens": 0,
+            "pre_qualification_Git_remote_metadata_calls": 1,
+            "pre_qualification_GitHub_Actions_metadata_calls": 2,
+            "analysis_network_calls": 0,
             "real_EDF_payload_downloads": 0,
             "real_EDF_header_reads": 0,
             "real_annotation_reads": 0,
