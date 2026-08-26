@@ -67,6 +67,7 @@ THREAD_ENVIRONMENT = (
     "NUMEXPR_NUM_THREADS",
     "VECLIB_MAXIMUM_THREADS",
 )
+SPECTRAL_FINGERPRINT_DECIMAL_PLACES = 9
 GENERATED_QUALIFICATION_CAPS = {
     "runtime_seconds_maximum": 180,
     "peak_process_tree_RSS_bytes_maximum": 805_306_368,
@@ -1073,11 +1074,20 @@ def _generated_spectral_case() -> dict[str, Any]:
         raise DreyerExperimentRefusal("generated spectral replay differs")
     if [int(np.argmax(row)) for row in first] != [0, 1, 2]:
         raise DreyerExperimentRefusal("generated spectral band localization differs")
+    scale = 10**SPECTRAL_FINGERPRINT_DECIMAL_PLACES
+    quantized = np.rint(first * scale).astype("<i8")
+    fingerprint = {
+        "decimal_places": SPECTRAL_FINGERPRINT_DECIMAL_PLACES,
+        "shape": list(first.shape),
+        "values": quantized.tolist(),
+    }
     return {
         "channels": 3,
         "samples": 512,
         "feature_shape": [3, 3],
-        "sha256": _sha256(np.ascontiguousarray(first).tobytes()),
+        "fingerprint_method": "canonical_quantized_log_relative_band_power",
+        "fingerprint_decimal_places": SPECTRAL_FINGERPRINT_DECIMAL_PLACES,
+        "sha256": _sha256(_canonical_bytes(fingerprint)),
     }
 
 

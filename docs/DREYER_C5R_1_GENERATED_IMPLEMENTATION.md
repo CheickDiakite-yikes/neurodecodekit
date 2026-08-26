@@ -59,6 +59,11 @@ Separate tests force uniform predictions to R3 and a subthreshold candidate to
 R2. These routes only validate software behavior; generated success has no
 scientific value.
 
+The spectral positive control fingerprints log-relative band power after
+rounding to nine decimal places and canonical JSON serialization. Exact
+same-process replay remains byte-for-byte checked, while the public fingerprint
+does not depend on insignificant platform-specific FFT rounding.
+
 The measured temporary pass completed in about 2 seconds at 173,850,624 bytes
 peak process-tree RSS, with 197,632 generated input bytes, 297,663 private
 temporary prediction bytes, and a 3,548-byte public result. These are
@@ -89,8 +94,10 @@ skip explicitly. Pinned Ruff and Python compilation passed.
 
 The implementation is bound to contract SHA-256
 `ea6357a7b079aa3de885ef0a7c0e391c7810e2b94cbbb1702f934f65cc6b8fed`.
-The 12 pre-result artifacts total 175,360 bytes under canonical artifact-set
-SHA-256 `37e31b060526b720a007b96d97f0f266396b40c3d77c3e6d8b1b88bc4a5b549b`.
+The machine implementation record binds the exact 12-artifact set, byte counts,
+individual SHA-256 values, and canonical artifact-set SHA-256. Keeping those
+values in the machine record avoids a self-referential digest in this document,
+which is itself one of the bound artifacts.
 
 The preceding research/preregistration commit
 `8d72f8b43c3c4e2f135a7a0e8654e0cac64f6414` passed Base Python job

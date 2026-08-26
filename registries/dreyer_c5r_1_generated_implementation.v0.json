@@ -18,8 +18,8 @@
   },
   "artifact_set": {
     "artifact_count": 12,
-    "artifact_bytes": 176413,
-    "canonical_sha256": "81625044bc540ec476d9ac9c8c1a541671ce7ca5c1650874c84fc7cfbb63203d",
+    "artifact_bytes": 177100,
+    "canonical_sha256": "b8ef5649f7019a6e0e762a39cf41553a59cb7acc60fca85c8191269a5d7a1237",
     "artifacts": [
       {
         "path": "docs/DREYER_2023_DATASET_A_REPLICATION_PRIMARY_SOURCE_RESEARCH.md",
@@ -58,8 +58,8 @@
       },
       {
         "path": "src/neurodecodekit/experiments/dreyer_c5r_1.py",
-        "bytes": 53275,
-        "sha256": "ce0ba612ed75efeb40521a5cc25f7afaa655d42e728077ab37fb68302d84376d"
+        "bytes": 53727,
+        "sha256": "4aed4f06e952316e90730c1dd0e83392fbd136a6c6a9327dfb9e62efff3bd45a"
       },
       {
         "path": "src/neurodecodekit/dreyer_c5r_1_cli.py",
@@ -78,8 +78,8 @@
       },
       {
         "path": "tests/test_dreyer_c5r_1_generated_implementation.py",
-        "bytes": 13699,
-        "sha256": "232450b99375c39bf32d85ca3037ff36a628d317e1aac3257638a27aa963ba1d"
+        "bytes": 13934,
+        "sha256": "a1c0ed8e54c7779176bdef1a788d482f4035e236efa3b55d466d33f5486f360c"
       }
     ]
   },

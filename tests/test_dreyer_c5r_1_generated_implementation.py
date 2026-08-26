@@ -191,9 +191,15 @@ class DreyerC5R1GeneratedNumericalTests(unittest.TestCase):
 
     def test_fixture_replay_and_spectral_localization_are_stable(self) -> None:
         self.assertTrue(self.result["cases"]["deterministic_feature_replay"])
+        spectral = self.result["cases"]["causal_spectral_feature"]
         self.assertEqual(
-            self.result["cases"]["causal_spectral_feature"]["sha256"],
-            "f712325a77aeb129f1bdb4e3072edaf1671d2a00056f17196b69cec0e1052bfd",
+            spectral["fingerprint_method"],
+            "canonical_quantized_log_relative_band_power",
+        )
+        self.assertEqual(spectral["fingerprint_decimal_places"], 9)
+        self.assertEqual(
+            spectral["sha256"],
+            "26568a6a11fc2c40d9f94a2d366d18272577d78f680ba61630ba1ee33e143c88",
         )
         first = experiment.generate_feature_fixture()
         second = experiment.generate_feature_fixture()
