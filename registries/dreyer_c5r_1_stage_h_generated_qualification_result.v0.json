@@ -1,0 +1,136 @@
+{
+  "access_counters": {
+    "claim_upgrades": 0,
+    "pre_qualification_GitHub_Actions_metadata_calls": 2,
+    "pre_qualification_Git_remote_metadata_calls": 1,
+    "real_EDF_header_reads": 0,
+    "real_EDF_payload_bytes": 0,
+    "real_HTTP_requests": 0,
+    "real_annotation_reads": 0,
+    "real_network_bytes": 0,
+    "real_or_private_path_opens": 0,
+    "real_prediction_sets": 0,
+    "real_scores": 0,
+    "real_signal_sample_reads": 0,
+    "real_target_deliveries": 0,
+    "real_target_or_label_reads": 0,
+    "real_training_runs": 0
+  },
+  "cases": {
+    "adversarial_case_names": [
+      "HTTP_status",
+      "redirect",
+      "missing_Content_Length",
+      "duplicate_Content_Length",
+      "wrong_Content_Length",
+      "content_encoding",
+      "short_body",
+      "oversized_body",
+      "digest_mismatch",
+      "nonbytes_body",
+      "malformed_fixed_header",
+      "missing_EEG",
+      "wrong_EOG_count",
+      "wrong_EMG_count",
+      "duplicate_label",
+      "unknown_label",
+      "wrong_sampling_rate",
+      "no_clobber"
+    ],
+    "adversarial_cases_refused": 18,
+    "deterministic_replay": true,
+    "payload_sha256": "c610db8334cc8c3db20455c428465c5ca1ec9cbdb175afa6f5c861620ceb6fe9",
+    "sensor_contract": {
+      "EEG_channel_count": 27,
+      "EEG_roster_matches_frozen_27": true,
+      "EMG_channel_count": 2,
+      "EMG_labels": [
+        "EMG-LH",
+        "EMG-RH"
+      ],
+      "EOG_channel_count": 3,
+      "EOG_labels": [
+        "EOG-VU",
+        "EOG-VD",
+        "EOG-H"
+      ],
+      "all_physiological_channels_match_sampling_rate": true,
+      "annotation_channel_count": 1,
+      "header_bytes": 8704,
+      "physiological_sampling_rate_hz": 512.0,
+      "signal_count": 33
+    },
+    "valid_cases_passed": 2
+  },
+  "claim_boundary": {
+    "engineering_capability": "bounded_stream_hash_fixed_EDF_header_sensor_contract_and_cleanup",
+    "scientific_claim_not_established": "any_real_EEG_information_unseen_person_generalization_EEG_beyond_peripherals_movement_intention_language_live_hardware_or_clinical_result"
+  },
+  "contract": {
+    "path": "registries/dreyer_c5r_1_stage_h_preflight_contract.v0.json",
+    "sha256": "5c2c795340bd90a5a361b4be47216d927fa918a474913d7d16af0310036252e9",
+    "verified": true
+  },
+  "implementation_proof": {
+    "fresh_remote_proof_collected_before_generated_fixture_work": true,
+    "remote_green": {
+      "CI_conclusion": "success",
+      "CI_head_sha": "634fc9826f16352abb4fa1fc940c7bc6c2a0a795",
+      "CI_run_id": 32933431849,
+      "base_python_job_conclusion": "success",
+      "base_python_job_id": 98069988213,
+      "base_python_job_name": "Base Python",
+      "branch": "codex/loop-54a-vhdr-preregistration",
+      "head_sha": "634fc9826f16352abb4fa1fc940c7bc6c2a0a795",
+      "optional_neuro_readers_job_conclusion": "success",
+      "optional_neuro_readers_job_id": 98069988451,
+      "optional_neuro_readers_job_name": "Optional Neuro Readers",
+      "remote_head_sha": "634fc9826f16352abb4fa1fc940c7bc6c2a0a795"
+    }
+  },
+  "lane_id": "DREYER-C5R-1-H",
+  "measurements": {
+    "HTTP_requests": 0,
+    "annotation_semantic_reads": 0,
+    "end_to_end_latency_measured": false,
+    "fixed_header_semantic_parses": 0,
+    "generated_input_bytes": 194048,
+    "model_runs": 0,
+    "network_bytes": 0,
+    "payload_hash_passes": 0,
+    "peak_process_tree_RSS_bytes": 69681152,
+    "prediction_sets": 0,
+    "private_temporary_bytes": 19456,
+    "producer_causal": false,
+    "public_output_bytes": 4707,
+    "required_context_seconds": null,
+    "runtime_seconds": 0.01751233299728483,
+    "scores": 0,
+    "signal_sample_semantic_reads": 0,
+    "target_deliveries": 0,
+    "target_or_label_reads": 0,
+    "training_runs": 0
+  },
+  "planned_real_preflight": {
+    "HTTP_GET_requests_maximum": 1,
+    "fixed_header_semantic_parses_maximum": 1,
+    "member": {
+      "bytes": 14805604,
+      "path": "sourcedata/sub-01/eeg/sub-01_task-R1acquisition_eeg.edf",
+      "sha256": "a678fe6d37e0496eb381dcac6b877b047d02dfffc659ae4cfc38226f4850e185",
+      "url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-01/eeg/sub-01_task-R1acquisition_eeg.edf"
+    },
+    "payload_hash_passes_maximum": 1,
+    "real_authority": false,
+    "remaining_cohort_payload_requests": 0
+  },
+  "schema_name": "neurodecodekit.dreyer_c5r_1_stage_h_generated_qualification_result",
+  "schema_version": "0.1.0",
+  "status": "passed_generated_mock_only_no_real_data_or_network",
+  "warnings": [
+    "generated_mock_preflight_has_no_scientific_claim_value",
+    "real_source_EDF_sensor_roster_remains_unverified",
+    "no_live_network_entry_point_exists",
+    "causality_and_end_to_end_latency_are_not_applicable_to_header_preflight"
+  ]
+}
