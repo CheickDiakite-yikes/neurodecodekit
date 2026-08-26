@@ -11,8 +11,8 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from neurodecodekit import bnci_c3c5_postmortem_cli as cli
-from neurodecodekit.experiments import (
+from neurodecodekit import bnci_c3c5_postmortem_cli as cli  # noqa: E402
+from neurodecodekit.experiments import (  # noqa: E402
     bnci_2014_001_artifact_postmortem as postmortem,
 )
 
