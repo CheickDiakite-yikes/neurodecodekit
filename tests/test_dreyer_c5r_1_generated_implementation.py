@@ -135,6 +135,7 @@ class DreyerC5R1GeneratedNumericalTests(unittest.TestCase):
             cls.output_path,
             root=ROOT,
             remote_proof_collector=lambda _root: _fake_remote_proof(),
+            peak_rss_reader=lambda: 200_000_000,
         )
         cls.output_bytes = cls.output_path.read_bytes()
 
@@ -217,6 +218,22 @@ class DreyerC5R1GeneratedNumericalTests(unittest.TestCase):
         self.assertEqual(summary["synthetic_route"], "DREYERC5R-R1")
         self.assertNotIn("prediction_freeze", summary)
         self.assertNotIn("generated_fixture", summary)
+
+    def test_registered_RSS_cap_and_measurement_type_fail_closed(self) -> None:
+        caps = experiment.GENERATED_QUALIFICATION_CAPS
+        for index, value in enumerate(
+            (caps["peak_process_tree_RSS_bytes_maximum"] + 1, -1, True)
+        ):
+            output = Path(self.temporary.name) / f"rss-refusal-{index}.json"
+            with self.subTest(value=value):
+                with self.assertRaises(experiment.DreyerExperimentRefusal):
+                    experiment.run_generated_qualification(
+                        output,
+                        root=ROOT,
+                        remote_proof_collector=lambda _root: _fake_remote_proof(),
+                        peak_rss_reader=lambda value=value: value,
+                    )
+                self.assertFalse(output.exists())
 
     def test_scorer_routes_null_predictions_to_R3(self) -> None:
         rows, targets = _constant_prediction_fixture(probability_margin=0.0)

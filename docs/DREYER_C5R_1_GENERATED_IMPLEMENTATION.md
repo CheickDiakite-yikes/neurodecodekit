@@ -81,8 +81,8 @@ The focused suite checks:
 - no-clobber output and readback verification; and
 - base-install behavior when optional numerical dependencies are absent.
 
-Local focused verification passed 29 tests with the optional environment. In
-the dependency-free base environment, 21 tests pass and eight numerical tests
+Local focused verification passed 30 tests with the optional environment. In
+the dependency-free base environment, 21 tests pass and nine numerical tests
 skip explicitly. Pinned Ruff and Python compilation passed.
 
 ## Proof Binding

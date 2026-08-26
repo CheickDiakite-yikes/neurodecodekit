@@ -1099,6 +1099,7 @@ def run_generated_qualification(
     *,
     root: str | Path | None = None,
     remote_proof_collector: Callable[[str | Path], dict[str, Any]] = collect_remote_green_proof,
+    peak_rss_reader: Callable[[], int] = peak_process_tree_rss_bytes,
 ) -> dict[str, Any]:
     """Run one bounded generated-only qualification and publish one result."""
 
@@ -1180,7 +1181,9 @@ def run_generated_qualification(
     private_prediction_bytes = len(_canonical_bytes(predictions))
     generated_input_bytes = generated_feature_bytes + header_cases["header_bytes"] + 3 * 512 * 8
     runtime = time.monotonic() - started
-    peak_rss = peak_process_tree_rss_bytes()
+    peak_rss = peak_rss_reader()
+    if type(peak_rss) is not int or peak_rss < 0:
+        raise DreyerExperimentRefusal("generated qualification RSS measurement is invalid")
     expected_fits = 6 * (12 * 3 + 19)
     expected_inference = 6 * (9 * 3 + 16)
     if ledger.parameter_update_fits != expected_fits:
