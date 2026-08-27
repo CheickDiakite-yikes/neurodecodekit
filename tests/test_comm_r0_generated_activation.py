@@ -15,6 +15,10 @@ ACTIVATION_PATH = (
 RESULT_PATH = (
     ROOT / "registries/communication_eeg_independent_replication_generated_result.v0.json"
 )
+ACTIVATION_PROOF_PATH = (
+    ROOT
+    / "registries/communication_eeg_independent_replication_generated_activation_proof.v0.json"
+)
 
 
 class CommR0GeneratedActivationTests(unittest.TestCase):
@@ -45,11 +49,16 @@ class CommR0GeneratedActivationTests(unittest.TestCase):
             ).strip()
             self.assertEqual(observed_blob, artifact["Git_blob"])
 
-    def test_activation_loads_but_proof_and_result_remain_absent(self) -> None:
+    def test_activation_loads_and_later_surfaces_remain_strict(self) -> None:
         self.assertEqual(experiment.load_activation(ROOT)["lane_id"], "COMM-R0-G")
-        with self.assertRaisesRegex(Exception, "ACTIVATION-PROOF-ABSENT"):
-            experiment.load_activation_proof(ROOT)
-        self.assertFalse(RESULT_PATH.exists())
+        if ACTIVATION_PROOF_PATH.exists():
+            proof = experiment.load_activation_proof(ROOT)
+            self.assertEqual(proof["lane_id"], "COMM-R0-G")
+        else:
+            with self.assertRaisesRegex(Exception, "ACTIVATION-PROOF-ABSENT"):
+                experiment.load_activation_proof(ROOT)
+        if RESULT_PATH.exists():
+            self.assertEqual(experiment.inspect_result(root=ROOT)["lane_id"], "COMM-R0-G")
 
     def test_authority_is_generated_only_and_delayed(self) -> None:
         authority = self.activation["authority"]

@@ -14275,3 +14275,10 @@ passed Base `98590992544`, Optional `98590992988`, and CI `33093134150`.
 Create a proof-only closeout that binds its three tracked artifacts and performs
 no fixture or scientific operation. Require that closeout to become remotely
 green before creating the final tracked activation-proof record.
+
+Compatibility decision: initial closeout
+`9ad801581b4e22f26601de5de62f0490d1f8f0a9` passed CI `33094079488`, but its
+activation test treated proof/result absence as permanent. Replace only that
+transition assertion, rebind the corrected activation test, and require a new
+green closeout commit. Do not create the activation proof or run qualification
+from the superseded closeout.

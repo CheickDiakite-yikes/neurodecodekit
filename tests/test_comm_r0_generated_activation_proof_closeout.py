@@ -30,7 +30,7 @@ class CommR0GeneratedActivationProofCloseoutTests(unittest.TestCase):
     def test_three_activation_artifacts_are_exact(self) -> None:
         artifacts = self.closeout["bound_activation_artifacts"]
         self.assertEqual(len(artifacts), 3)
-        self.assertEqual(sum(row["bytes"] for row in artifacts), 9_576)
+        self.assertEqual(sum(row["bytes"] for row in artifacts), 9_968)
         for artifact in artifacts:
             path = ROOT / artifact["path"]
             payload = path.read_bytes()

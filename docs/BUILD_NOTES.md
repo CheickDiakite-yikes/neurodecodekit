@@ -16152,3 +16152,8 @@ and require both remote jobs green before the one official qualification.
   `98590992544`, Optional `98590992988`, and CI `33093134150`. Added a
   proof-only closeout binding its three exact artifacts / 9,576 bytes. The
   closeout itself performs zero generated, real, model, target, or score work.
+- Initial closeout `9ad801581b4e22f26601de5de62f0490d1f8f0a9` passed
+  Base `98594283841`, Optional `98594283557`, and CI `33094079488`. Before the
+  next barrier, review found its activation test would permanently require the
+  future proof and result to remain absent. The corrected test accepts absence
+  before each barrier and strictly validates the surface after it appears.
