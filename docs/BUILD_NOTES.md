@@ -16100,3 +16100,29 @@ and require both remote jobs green before the one official qualification.
 - Added a proof-only closeout binding the three exact registration artifacts /
   47,205 bytes by byte count, SHA-256, and Git blob. It changes no authority and
   performs no irreversible or scientific operation.
+
+### COMM-R0 generated replication implementation
+
+- Added a new generated-only `COMM-R0-G` executor and sidecar CLI without
+  modifying or rerunning consumed COMM-G1/G2 qualifications. Their reused
+  utility bytes are bound explicitly in the implementation record.
+- Added 12-participant full-control fictional arrays, zero-calibration
+  participant folds, source-only nuisance residualization, every `K - 1`
+  four-class cyclic shift, separate cue/timing/EOG/oral-EMG/posterior controls,
+  and exact participant-macro router statistics.
+- Added a neural-only prediction freeze before provider-free language arms,
+  then an identity-bound complete-freeze capability before synthetic target
+  delivery. Runtime proof uses committed local records and consumes zero
+  analysis-network bytes.
+- Added explicit event onset, frozen offset, decision and feature-availability
+  timestamps, left/right context, and trial-oracle disclosure. Partial-route
+  missing sensors are unavailable rather than zero-filled or proxied.
+- Focused optional-dependency tests pass all 16 registered refusal families.
+  One unretained development replay completed 12 residualizer plus 144
+  classifier/prior fits, 144 inference runs, 180 prediction sets, 4,320 rows,
+  one synthetic target delivery, and one synthetic score. This was not the
+  official qualification and has no scientific value.
+- The official two-replay qualification remains fail-closed until separate
+  activation and proof-closeout records are committed, pushed, and remotely
+  green. Every real/private, network, provider, stream, device, release, and
+  claim counter remains zero.

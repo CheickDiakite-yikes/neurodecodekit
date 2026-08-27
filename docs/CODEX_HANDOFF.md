@@ -1,5 +1,17 @@
 # Codex Handoff - NeuroDecodeKit
 
+> **Parallel COMM-R0-G status, 2026-08-27:** the independently preregistered
+> communication analysis now has a generated-only implementation, sidecar CLI,
+> implementation record, and focused tests. It uses 12 fictional participants,
+> all `K - 1` four-class source derangements, two-stage neural/complete freezes,
+> provider-free language controls, exact participant statistics, and explicit
+> offline-oracle timing. One unretained development replay passed the 156-fit /
+> 4,320-prediction-row schedule. The official two-replay qualification is still
+> inactive and requires a separate activation plus proof closeout. No real or
+> private path, network, EEG, target, provider, stream, device, release, or
+> scientific operation occurred. This Tier B lane does not displace the sole
+> all-false Tier C gate `DREYER-C5R-1-HL` described below.
+
 > **Current gate, 2026-08-26:** `DREYER-C5R-1-HL` is the sole active Tier C
 > packet. The aggregate-only BNCI postmortem localized four design failures:
 > posterior/visual specificity failed, probability reliability failed, EEG

@@ -14207,3 +14207,39 @@ Proof decision: exact preregistration
 Optional Neuro Readers job `98530039228`, and CI `33075946525`. Bind its three
 core artifacts in a proof-only closeout before implementation. The closeout
 adds no execution authority and leaves every scientific requirement unchanged.
+
+## 0502 - Implement COMM-R0 On Generated Arrays Before Source Access
+
+Architecture decision: create an additive `COMM-R0-G` executor instead of
+modifying or repeating the consumed COMM-G1/G2 lanes. Bind the exact reused
+utility bytes, keep the new sidecar free of real/download/live commands, and
+require separate activation plus activation-proof records before the one
+official generated qualification.
+
+Firewall decision: predict neural and nuisance conditions without held-out
+targets, freeze that neural inventory before deriving provider-free language
+arms, then validate and bind the complete inventory before arming the target
+vault. A Boolean is not sufficient evidence of freezing; delivery requires the
+exact committed-freeze capability created by that vault.
+
+Control decision: run all `K - 1` cyclic source-class shifts and average aligned
+held-out probabilities. Record cue, timing, EOG, oral EMG, posterior EEG,
+nuisance context, central EEG, and residual EEG separately. Missing partial-
+route sensors are declared unavailable and lower the claim ceiling; they are
+never zero-filled or proxied.
+
+Causality decision: persist event onset, frozen offset, decision timestamp,
+feature-availability timestamp, source samples, left/right context, and the
+offline trial-boundary oracle. This permits only sample-causal offline
+accounting and cannot establish continuous endpointing, latency, or live use.
+
+Qualification decision: require two deterministic 12-participant replays, 312
+total parameter-update fits, 288 inference runs, 360 prediction sets, 8,640
+prediction rows, two synthetic deliveries/scores, and all 16 registered
+refusals under the parent resource caps. Runtime proof is local and committed,
+so analysis network remains zero.
+
+Authority decision: bounded development replay is Tier B. The official
+qualification remains inactive pending separate green barriers. No real or
+private data, source metadata, provider, stream, device, release, or scientific
+claim authority changes, and `DREYER-C5R-1-HL` remains sole Tier C.

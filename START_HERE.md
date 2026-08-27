@@ -116,6 +116,17 @@ delivery. SilentSpeech-EEG is not yet operationally qualified; TESSCCo and Kara
 One remain partial challenges. This is Tier A preregistration only and changes
 neither the active Dreyer gate nor any real-data authority.
 
+The generated-only `COMM-R0-G` implementation now lives in
+`src/neurodecodekit/experiments/comm_r0_generated.py`; use
+`python -m neurodecodekit.comm_r0_cli plan` to inspect its bounded schedule.
+It separates the neural freeze from later provider-free language controls,
+requires an identity-bound complete freeze before synthetic target delivery,
+fits all three four-class cyclic derangements, records the offline trial oracle
+explicitly, and refuses to proxy missing partial-route sensors. One local
+development replay passed, but the official two-replay qualification remains
+inactive until a separate activation and proof closeout are remotely green.
+No real EEG or scientific claim is created by this implementation.
+
 Exact generated result `f64d4f3` passed both required jobs in CI
 `33038718183`. Its proof-only closeout binds the three exact result artifacts
 without rerunning the qualification or reading ignored state. Exact closeout

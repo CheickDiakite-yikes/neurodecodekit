@@ -127,6 +127,21 @@ self-endpointed, real-time, or live decoding; those remain later `NDK_STREAM`
 and `NDK_LIVE` gates. The fixed-command experiment also permits no external or
 generative language model: its language-only control is the source class prior.
 
+The matching generated-only implementation is now available through
+`python -m neurodecodekit.comm_r0_cli plan`. It exercises the frozen analysis
+with 12 fictional participants, all `K - 1` four-class derangements, separate
+cue/timing/EOG/oral-EMG/posterior controls, a neural-only freeze before the
+provider-free language arms, and an identity-bound complete freeze before any
+synthetic target can be delivered. A partial route explicitly marks missing
+sensors unavailable instead of replacing them with zeros or proxies. See the
+[`COMM-R0 generated implementation`](docs/COMMUNICATION_EEG_INDEPENDENT_REPLICATION_GENERATED_IMPLEMENTATION.md).
+
+The official generated qualification is still inactive pending a separate
+remotely proven activation. A bounded development replay passed locally, but
+that is only evidence that the synthetic numerical path executes. It is not a
+real EEG result, independent replication, unseen-person evidence, or live
+decoding.
+
 SilentSpeech-EEG remains only a full-control watchlist source until its public
 identity, license, manifest, hashes, loader, and exact EOG/oral-EMG roles are
 verified. TESSCCo and Kara One are frozen as explicitly partial independent

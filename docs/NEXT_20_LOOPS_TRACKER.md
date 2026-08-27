@@ -27,6 +27,20 @@
 > partial routes that cannot upgrade the full claim. This registration made
 > zero real/private operations and leaves `DREYER-C5R-1-HL` sole and all-false.
 
+> **COMM-R0 generated implementation (2026-08-27):** the replication lock now
+> has an additive generated-only execution core and sidecar CLI. Twelve
+> fictional participants exercise source-only nuisance residualization, all
+> three four-class cyclic derangements, exact participant-macro scoring, a
+> neural-only freeze before provider-free language controls, and an identity-
+> bound complete freeze before synthetic target delivery. Explicit causal
+> records disclose the offline trial-boundary oracle, and partial routes mark
+> missing sensors unavailable instead of zero-filling or proxying them. The 16
+> registered malformed families pass focused tests, and one unretained
+> development replay completed the 156-fit / 4,320-row numerical schedule. The
+> official two-replay qualification remains inactive pending separate remotely
+> green activation and proof records. Real/private, network, provider, stream,
+> device, release, and scientific operations remain zero.
+
 > **DREYER-C5R-1 frontier (2026-08-26):** the six-step independent-replication
 > build is complete through the real-data gate. (1) The aggregate-only BNCI
 > postmortem localized posterior/visual, calibration, EOG-increment, and

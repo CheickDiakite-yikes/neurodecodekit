@@ -273,6 +273,19 @@ packet, authorizes no source access, and does not displace
 `docs/COMMUNICATION_EEG_INDEPENDENT_REPLICATION_PREREGISTRATION.md` and its
 machine contract before changing communication replication routing.
 
+The generated-only replication implementation is now prepared in
+`src/neurodecodekit/experiments/comm_r0_generated.py`, with its sidecar CLI,
+machine implementation record, focused tests, and implementation document.
+It uses 12 fictional participants, source-only nuisance fits, all three
+four-class cyclic derangements, a neural-only freeze before provider-free
+language arms, a complete aggregate freeze before synthetic target delivery,
+exact participant statistics, and explicit offline-oracle timing. It performs
+no runtime proof network request and has no real-data command. The official
+qualification remains inactive until separate activation and proof-closeout
+records become remotely green. Development replay has engineering value only;
+do not present it as real EEG, unseen-person evidence, replication, or live
+decoding. This additive Tier B lane does not displace `DREYER-C5R-1-HL`.
+
 ### Historical BNCI-C3C5-1 Lane
 
 `BNCI-C3C5-1-A-R` Stage A has completed successfully, is permanently consumed,

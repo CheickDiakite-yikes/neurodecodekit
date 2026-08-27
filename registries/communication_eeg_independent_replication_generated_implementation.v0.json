@@ -1,0 +1,196 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_independent_replication_generated_implementation",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-27",
+  "lane_id": "COMM-R0-G",
+  "registration_id": "COMM-R0-REPLICATION-v0",
+  "status": "implementation_ready_official_generated_qualification_inactive",
+  "parent_proof": {
+    "registration_commit": "dc80adb76fe5fc45add07cc515e02521a5110ae9",
+    "registration_CI_run_id": 33075946525,
+    "proof_closeout_commit": "d876872ba6dc4434b0c363f3b397a407ad6f8d53",
+    "proof_closeout_CI_run_id": 33084099278,
+    "both_required_jobs_green": true,
+    "contract_path": "registries/communication_eeg_independent_replication_contract.v0.json",
+    "contract_sha256": "2f04ff2d6ea427c490807460a79baaa1d4f5a30f27d88ce90519806eed53d579",
+    "proof_path": "registries/communication_eeg_independent_replication_proof.v0.json",
+    "proof_sha256": "63a64cde8f3cee9662a5a63390e7b7ceaccc673da27b9370dc86ab3226cbf32e"
+  },
+  "implementation_artifacts": [
+    {
+      "path": "src/neurodecodekit/experiments/comm_r0_generated.py",
+      "bytes": 56344,
+      "sha256": "bde85801a1e0a3f088bd1279de3daeacaa14d27acc905a6c5d17328c2c5556bd"
+    },
+    {
+      "path": "src/neurodecodekit/comm_r0_cli.py",
+      "bytes": 1307,
+      "sha256": "961f0bbde57a6ecdf78e8411e0b5f377c0d2685f80e7565552409f3ba0ab028a"
+    },
+    {
+      "path": "tests/test_comm_r0_generated_implementation.py",
+      "bytes": 16392,
+      "sha256": "d9e889e94104372f3fdd4f34e4a1e77755e822dedefbf806ed5bcfcd6f25d15b"
+    }
+  ],
+  "bound_reused_generated_utilities": [
+    {
+      "path": "src/neurodecodekit/experiments/comm_g1_generated.py",
+      "bytes": 46496,
+      "sha256": "99178d463558c27dcfe8c4346d6f47c207cb8dc60b6d45cd6ad3dab4b08fb3f4",
+      "modified_or_officially_rerun": false
+    },
+    {
+      "path": "src/neurodecodekit/experiments/comm_g2_generated_proof.py",
+      "bytes": 56109,
+      "sha256": "ccfc48a32402bd35de97e3582e96358ce7d0be9c77316c11037e701def7bbd84",
+      "modified_or_officially_rerun": false
+    }
+  ],
+  "generated_fixture": {
+    "route": "full_control",
+    "participants": 12,
+    "sessions_per_participant": 3,
+    "classes": 4,
+    "repeats_per_class_per_session": 2,
+    "rows": 288,
+    "real_words_reference_text_or_intended_text": false,
+    "causal_timing_record_complete": true,
+    "offline_trial_boundary_oracle_explicit": true,
+    "partial_route_missing_sensors_are_unavailable_not_zero_filled_or_proxied": true
+  },
+  "firewall": {
+    "held_out_targets_in_predictor_signature": false,
+    "source_only_residualizer_and_model_fit": true,
+    "neural_prediction_freeze_before_language_arms": true,
+    "complete_prediction_freeze_before_target_delivery": true,
+    "vault_delivery_requires_identity_bound_committed_freeze_capability": true,
+    "public_freeze_aggregate_hash_only": true,
+    "public_freeze_contains_individual_prediction_probability_target_participant_outcome_or_private_path": false,
+    "post_target_updates": 0,
+    "provider_calls": 0
+  },
+  "schedule_per_replay": {
+    "residualizer_fits": 12,
+    "classifier_or_prior_fits": 144,
+    "total_parameter_update_fits": 156,
+    "model_inference_runs": 144,
+    "neural_prediction_sets": 132,
+    "language_prediction_sets": 48,
+    "prediction_sets": 180,
+    "prediction_rows": 4320,
+    "synthetic_target_deliveries": 1,
+    "synthetic_scores": 1
+  },
+  "official_qualification_schedule": {
+    "deterministic_full_replays": 2,
+    "total_parameter_update_fits": 312,
+    "model_inference_runs": 288,
+    "prediction_sets": 360,
+    "prediction_rows": 8640,
+    "synthetic_target_deliveries": 2,
+    "synthetic_scores": 2,
+    "post_target_updates": 0,
+    "official_invocations_maximum": 1,
+    "reruns": 0
+  },
+  "derangement": {
+    "source_only": true,
+    "group_by": ["participant_id", "session_id", "repeat_index"],
+    "all_K_minus_1_cyclic_shifts": true,
+    "generated_K": 4,
+    "generated_shifts": [1, 2, 3],
+    "probabilities_averaged_after_aligned_inference": true,
+    "held_out_rows_or_targets_permuted": false
+  },
+  "language_controls": {
+    "provider_free": true,
+    "neural_freeze_precedes_language_processing": true,
+    "participant_identity_in_item_derangement_digest": false,
+    "held_out_target_or_text_in_item_derangement": false,
+    "language_arms_can_change_neural_router": false
+  },
+  "adversarial_qualification": {
+    "all_named_families_implemented": true,
+    "families": [
+      "identity_mismatch",
+      "split_leak",
+      "target_leak",
+      "future_sample_use",
+      "channel_role_mismatch",
+      "missing_required_control",
+      "derangement_scope_mismatch",
+      "prediction_tamper",
+      "pre_freeze_target_delivery",
+      "repeated_target_delivery",
+      "output_clobber",
+      "symlink_escape",
+      "nondeterministic_replay",
+      "output_cap_breach",
+      "RSS_cap_breach",
+      "timeout"
+    ]
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "wall_time_seconds": 300,
+    "peak_process_tree_RSS_bytes": 805306368,
+    "generated_input_bytes": 33554432,
+    "private_output_bytes": 67108864,
+    "temporary_disk_bytes": 134217728,
+    "public_output_bytes": 1048576,
+    "analysis_network_bytes": 0,
+    "provider_bytes": 0,
+    "write_outside_NeuroDecodeKit": false
+  },
+  "activation_sequence": {
+    "implementation_commit": null,
+    "implementation_CI_run_id": null,
+    "both_required_jobs_green": false,
+    "separate_activation_required": true,
+    "separate_activation_proof_closeout_required": true,
+    "qualifier_uses_only_local_committed_proof_records": true,
+    "runtime_green_proof_network_request": false,
+    "result_path": "registries/communication_eeg_independent_replication_generated_result.v0.json"
+  },
+  "authority": {
+    "development_replay": true,
+    "official_generated_qualification": false,
+    "real_or_private_data": false,
+    "network": false,
+    "real_training_or_inference": false,
+    "real_target_delivery_or_score": false,
+    "provider": false,
+    "stream_or_device": false,
+    "release": false,
+    "scientific_claim_upgrade": false
+  },
+  "operation_counters": {
+    "official_generated_qualification_invocations": 0,
+    "real_or_private_path_reads": 0,
+    "network_bytes": 0,
+    "real_signal_samples": 0,
+    "real_targets_or_labels": 0,
+    "real_training_runs": 0,
+    "real_model_inference_runs": 0,
+    "real_prediction_sets": 0,
+    "real_target_deliveries": 0,
+    "real_scores": 0,
+    "provider_calls": 0,
+    "stream_or_device_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "generated_full_control_replication_firewall_router_and_exact_participant_statistics",
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "causal_continuous_decoding_established": false,
+    "live_neural_decoding_established": false
+  }
+}
