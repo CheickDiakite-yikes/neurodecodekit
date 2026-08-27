@@ -14,7 +14,8 @@
 > correction requires a new prospective generated gate. Post-failure
 > hardening now makes the consumed entry point refuse with `R0G-CONSUMED` and
 > regression-tests no-follow cleanup of the expected adversarial fixture; it
-> does not execute either replay. No real EEG, network,
+> does not execute either replay. Hardening `51ce306` passed Base
+> `98618341009`, Optional `98618340732`, and CI `33100996577`. No real EEG, network,
 > provider, private artifact, or scientific claim occurred, and sole active
 > Tier C gate `DREYER-C5R-1-HL` remains unchanged and all-false.
 

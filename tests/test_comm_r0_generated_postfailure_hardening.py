@@ -57,6 +57,17 @@ class CommR0GeneratedPostfailureHardeningTests(unittest.TestCase):
         self.assertFalse(self.record["hardening"]["official_qualification_executed"])
         self.assertFalse(self.record["hardening"]["development_full_replay_executed"])
 
+    def test_hardening_is_remotely_green(self) -> None:
+        proof = self.record["proof"]
+        self.assertEqual(
+            proof["hardening_commit"],
+            "51ce306f272f6a61494241debc29fb151fd77e1c",
+        )
+        self.assertEqual(proof["hardening_CI_run_id"], 33100996577)
+        self.assertEqual(proof["hardening_base_python_job_id"], 98618341009)
+        self.assertEqual(proof["hardening_optional_neuro_readers_job_id"], 98618340732)
+        self.assertTrue(proof["both_required_jobs_green"])
+
     def test_no_real_operation_or_claim_upgrade(self) -> None:
         self.assertTrue(all(value == 0 for value in self.record["operation_counters"].values()))
         claims = self.record["claim_boundary"]

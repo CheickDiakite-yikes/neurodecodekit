@@ -16177,4 +16177,5 @@ and require both remote jobs green before the one official qualification.
   no-follow symlink fixture and regression-tests the final tree audit. Original
   execution hashes remain in the failure record; an additive transition record
   binds the corrected hashes. Real/private/network/scientific counters stay
-  zero.
+  zero. Commit `51ce306` passed Base `98618341009`, Optional `98618340732`,
+  and CI `33100996577`.

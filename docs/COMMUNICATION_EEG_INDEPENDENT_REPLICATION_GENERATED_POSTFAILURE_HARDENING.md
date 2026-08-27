@@ -40,6 +40,21 @@ score, network, provider, stream, device, hardware, release, or scientific
 operation is authorized or performed here. `DREYER-C5R-1-HL` remains the sole
 active all-false Tier C gate.
 
+## Verification
+
+Sixty-three focused COMM-R0/frontier tests pass with one expected opt-in replay
+skip. Repository-wide pinned Ruff, compilation, 532 registry JSON parses, and
+diff hygiene pass. A cumulative local process with optional numerical and
+plotting stacks loaded ran 6,531 tests but ended with seven environment-bound
+failures: one runtime-added OpenMP variable in two strict child checks, two RSS
+cap failures at roughly 907 MB, one sandboxed multiprocessing socket refusal,
+and two downstream mechanical-gate failures. No failure implicated the
+post-failure transition assertions.
+
+Clean remote proof is authoritative for acceptance: hardening commit
+`51ce306` passed Base Python job `98618341009`, Optional Neuro Readers job
+`98618340732`, and CI `33100996577`, including both complete suites.
+
 ## Claim Boundary
 
 Engineering capability added: the consumed generated entry point now refuses

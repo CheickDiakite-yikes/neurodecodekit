@@ -225,15 +225,17 @@
           "postfailure_hardening": {
             "document": "docs/COMMUNICATION_EEG_INDEPENDENT_REPLICATION_GENERATED_POSTFAILURE_HARDENING.md",
             "registry": "registries/communication_eeg_independent_replication_generated_postfailure_hardening.v0.json",
-            "status": "generated_tests_only_consumed_entrypoint_closed_pending_remote_proof",
+            "status": "remotely_green_generated_tests_only_consumed_entrypoint_closed",
             "consumed_refusal_id": "R0G-CONSUMED",
             "expected_adversarial_fixture_cleanup_corrected": true,
             "official_qualification_rerun": false,
             "development_full_replay": false,
             "real_or_private_operations": 0,
-            "hardening_commit": null,
-            "hardening_CI_run_id": null,
-            "both_required_jobs_green": false
+            "hardening_commit": "51ce306f272f6a61494241debc29fb151fd77e1c",
+            "hardening_CI_run_id": 33100996577,
+            "hardening_base_python_job_id": 98618341009,
+            "hardening_optional_neuro_readers_job_id": 98618340732,
+            "both_required_jobs_green": true
           },
           "real_or_private_operations": 0,
           "analysis_network_bytes": 0,
