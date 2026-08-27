@@ -86,6 +86,18 @@ no qualification or real operation.
 Proof-only closeout `4acd82bcc460f3e7a7668ec3c1c6a49c8d964aca`
 passed Base job `98409242950`, Optional Neuro Readers job `98409242802`, and CI
 `33039371687`. COMM-L0 generated engineering is therefore closed. Read the
+all-false queued metadata packet in
+`docs/COMMUNICATION_EEG_SOURCE_IDENTITY_METADATA_AUTHORIZATION_PACKET.md` and
+`registries/communication_eeg_source_identity_metadata_authorization_request.v0.json`.
+`COMM-L0-META` proposes, after its own later decision and proof barriers, one
+361-byte GraphQL POST and at most 16 MiB of target-free metadata with zero BDF
+payload requests. Read Amendment 1 before this packet: it prospectively raises
+only the response boundary while requiring generated boundary qualification,
+durable no-follow marker semantics, one decision hash through M1/M2/M3, and an
+8 MiB disk envelope. It is not active, cannot displace `DREYER-C5R-1-HL`, and
+authorizes nothing now.
+
+Also read the
 new Tier A replication-source refresh and machine record before proposing a
 second communication cohort. SilentSpeech-EEG is the strongest full-control
 watchlist candidate found, but its public payload identity, dataset license,
@@ -95,8 +107,8 @@ is promoted, no acquisition packet is created, and no payload is authorized.
 
 Do not implement `NDK_STREAM1` or RW3 Stage A under general continuation. The
 existing stream contracts still set implementation and generated execution to
-false. The next authorized communication engineering work is Tier A contract
-design for `COMM-G1`; any SourceChunk implementation requires its own narrowed
+false. COMM-G1 and COMM-G2 are now separately consumed at R0; do not rerun or
+repair either. Any SourceChunk implementation requires its own narrowed
 authorization and remains secondary to the scientific discovery path.
 
 The COMM-G1 generated experiment is prospectively frozen in

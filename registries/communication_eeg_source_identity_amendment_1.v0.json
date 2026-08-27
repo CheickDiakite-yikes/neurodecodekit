@@ -1,0 +1,102 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_source_identity_amendment_1",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-27",
+  "amendment_id": "COMM-L0-source-identity-amendment-1",
+  "status": "prospective_future_metadata_transport_correction_no_authority",
+  "reason": "real_recursive_tree_count_is_prefit_unknown_and_generated_121_row_fixture_does_not_prove_the_original_2_MiB_one_shot_response_ceiling",
+  "parent_contract": {
+    "path": "registries/communication_eeg_source_identity_contract.v0.json",
+    "bytes": 14221,
+    "sha256": "1c2dc0eaf9321fed7e115c5021002a1c93ba4a631a1e952b6f31b28249de88b3"
+  },
+  "consumed_generated_implementation_preserved": {
+    "module_path": "src/neurodecodekit/datasets/communication_eeg_source_identity.py",
+    "module_bytes": 37672,
+    "module_sha256": "b03818b32e8e248a35a32271f3fcd10b3417351f46bab95402bb32951164fa2d",
+    "result_commit": "f64d4f303edf51e3b3ea66962bdc7152ff7346fd",
+    "proof_closeout_commit": "4acd82bcc460f3e7a7668ec3c1c6a49c8d964aca",
+    "modified_or_rerun": false
+  },
+  "overrides_for_future_additive_wrapper_only": {
+    "response_body_cap_bytes_original": 2097152,
+    "response_body_cap_bytes_amended": 16777216,
+    "read_limit_bytes_original": 2097153,
+    "read_limit_bytes_amended": 16777217,
+    "peak_process_tree_RSS_bytes": 268435456,
+    "generated_boundary_fixture_bytes_total_maximum": 50331648,
+    "network_requests_during_generated_qualification": 0,
+    "real_payload_requests": 0,
+    "real_payload_bytes": 0
+  },
+  "required_generated_qualification": {
+    "new_additive_wrapper_required": true,
+    "existing_consumed_module_modified": false,
+    "existing_generated_qualification_rerun": false,
+    "boundary_cases_bytes": [16777215, 16777216, 16777217],
+    "over_cap_refuses": true,
+    "truncation_and_declared_length_mismatch_refuse": true,
+    "non_identity_encoding_refuses": true,
+    "timeout_and_process_tree_RSS_refuse": true,
+    "deterministic_replays": 2,
+    "canonical_equivalence_with_frozen_module_below_original_cap": true,
+    "must_be_committed_pushed_and_remotely_green_before_activation": true
+  },
+  "unchanged_contract_surfaces": {
+    "GraphQL_query_endpoint_body_and_hashes": true,
+    "snapshot_and_recursive_tree_shape": true,
+    "all_ten_participants_and_three_sessions": true,
+    "lexicographically_first_common_session_selection": true,
+    "size_or_outcome_based_selection_forbidden": true,
+    "selected_raw_payload_ceiling_bytes": 10737418240,
+    "strict_JSON_and_privacy": true,
+    "public_output_cap_bytes": 1048576,
+    "target_model_prediction_score_stream_device_and_claim_boundaries": true
+  },
+  "authority_now": {
+    "implementation": false,
+    "generated_qualification": false,
+    "activation": false,
+    "dataset_specific_GraphQL_request": false,
+    "metadata_response_read": false,
+    "private_manifest_write": false,
+    "payload_request_or_download": false,
+    "real_or_private_path_read": false,
+    "BDF_header_or_signal_read": false,
+    "event_target_or_label_read": false,
+    "training_or_inference": false,
+    "prediction_freeze_or_scoring": false,
+    "stream_device_or_hardware": false,
+    "release_or_publication": false,
+    "scientific_claim_upgrade": false
+  },
+  "operation_counters": {
+    "tracked_artifact_reads": 3,
+    "network_requests": 0,
+    "response_bytes": 0,
+    "payload_requests": 0,
+    "payload_bytes": 0,
+    "real_or_private_path_bytes": 0,
+    "signal_samples": 0,
+    "event_target_or_label_rows": 0,
+    "model_runs": 0,
+    "prediction_sets": 0,
+    "scores": 0,
+    "stream_or_device_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "active_gate_preserved": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "sole_active_Tier_C_packet": true,
+    "changed_by_this_amendment": false
+  },
+  "claim_boundary": {
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "unseen_participant_generalization_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "live_neural_decoding_established": false
+  }
+}

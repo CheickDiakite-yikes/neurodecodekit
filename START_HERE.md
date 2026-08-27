@@ -102,7 +102,13 @@ Exact generated result `f64d4f3` passed both required jobs in CI
 `33038718183`. Its proof-only closeout binds the three exact result artifacts
 without rerunning the qualification or reading ignored state. Exact closeout
 `4acd82b` passed both required jobs in CI `33039371687`, so COMM-L0 generated
-engineering is closed. Real metadata remains a separate Tier C gate.
+engineering is closed. Read the queued all-false packet in
+`docs/COMMUNICATION_EEG_SOURCE_IDENTITY_METADATA_AUTHORIZATION_PACKET.md`.
+`COMM-L0-META` proposes one future 361-byte OpenNeuro request, a 16 MiB response
+cap, zero BDF payload bytes, and one target-free private manifest. Amendment 1
+adds generated boundary qualification, durable no-follow marker rules, exact
+decision binding across M1/M2/M3, and an 8 MiB disk envelope. It is not active,
+authorizes nothing now, and cannot displace `DREYER-C5R-1-HL`.
 
 Before proposing an independent communication cohort, read
 `docs/COMMUNICATION_EEG_REPLICATION_SOURCE_REFRESH_2026_08_27.md` and its
@@ -113,14 +119,11 @@ manifest, dataset license, loader, and exact external-channel roster. The
 other reviewed sources provide only partial controls. No source was promoted,
 downloaded, or authorized by that Tier A pass.
 
-Then read `docs/COMM_G1_GENERATED_EXPERIMENT_PREREGISTRATION.md` and
-`registries/comm_g1_generated_experiment_contract.v0.json`. This pending
-registration freezes the generated reader/control/firewall/model/freezer/scorer
-qualification around six fictional participants, 144 rows, ten control arms,
-60 fits, and 60 prediction sets. It must become remotely green before
-generated implementation begins. It is not a real-data or scientific stage,
-and it does not authorize OpenNeuro metadata, payload, signal, target, model
-evidence, score, stream, or device operations.
+COMM-G1 and its COMM-G2 proof successor were later implemented and each
+consumed at R0; read their closeouts near the end of this file. Do not rerun or
+repair either lane. Neither is real-data or scientific evidence, and neither
+authorizes OpenNeuro metadata, payload, signal, target, model evidence, score,
+stream, or device operations.
 
 ## Historical BNCI-C3C5-1 Closed Lane
 

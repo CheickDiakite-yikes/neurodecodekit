@@ -109,7 +109,17 @@ neural result. See the
 [`COMM-L0 generated qualification result`](docs/COMMUNICATION_EEG_SOURCE_IDENTITY_GENERATED_QUALIFICATION_RESULT.md).
 
 COMM-L0's proof-only closeout is now remotely green, so its generated
-engineering is closed. A fresh
+engineering is closed. The queued
+[`COMM-L0-META` authorization packet](docs/COMMUNICATION_EEG_SOURCE_IDENTITY_METADATA_AUTHORIZATION_PACKET.md)
+now freezes the next real-source step: one future metadata-only OpenNeuro
+request, at most 16 MiB of response data, zero BDF payload bytes, and a
+target-free private acquisition manifest. Its prospective amendment adds
+boundary-size qualification, durable no-follow marker creation, exact decision
+binding across all future stages, and an 8 MiB disk envelope. Every authority
+flag remains false; the packet is not active and cannot displace the current
+Dreyer gate.
+
+A fresh
 [replication-source review](docs/COMMUNICATION_EEG_REPLICATION_SOURCE_REFRESH_2026_08_27.md)
 found no second public cohort that is yet verified with the complete raw EEG,
 eye, oral-muscle, immutable-identity, license, and loader surface needed for a

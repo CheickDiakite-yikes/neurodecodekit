@@ -60,6 +60,26 @@
         "qualification_reruns": 0,
         "network_or_real_operations": 0
       },
+      "queued_metadata_authorization_request": {
+        "packet_id": "COMM-L0-META",
+        "document": "docs/COMMUNICATION_EEG_SOURCE_IDENTITY_METADATA_AUTHORIZATION_PACKET.md",
+        "registry": "registries/communication_eeg_source_identity_metadata_authorization_request.v0.json",
+        "amendment_document": "docs/COMMUNICATION_EEG_SOURCE_IDENTITY_AMENDMENT_1.md",
+        "amendment_registry": "registries/communication_eeg_source_identity_amendment_1.v0.json",
+        "status": "all_false_queued_request_pending_exact_commit_push_remote_green",
+        "bound_artifacts": 20,
+        "bound_artifact_bytes": 156361,
+        "bound_artifact_set_sha256": "1064a40baa933be5158bfa45ec87a4697d40c058d1761c76833758227f654518",
+        "future_metadata_requests_maximum": 1,
+        "future_metadata_response_bytes_maximum": 16777216,
+        "future_payload_requests": 0,
+        "future_payload_bytes": 0,
+        "active_now": false,
+        "may_displace_DREYER_C5R_1_HL": false,
+        "authority_now": false,
+        "real_or_private_operations": 0,
+        "scientific_value": "none_request_only"
+      },
       "replication_source_refresh": {
         "document": "docs/COMMUNICATION_EEG_REPLICATION_SOURCE_REFRESH_2026_08_27.md",
         "registry": "registries/communication_eeg_replication_source_refresh.v0.json",

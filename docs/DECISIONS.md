@@ -14082,3 +14082,44 @@ update, prediction, target-delivery, and score counts are unavailable and must
 not be inferred from development runs. A future proof attempt requires a new
 prospective lane with observable timeout diagnostics. No real-data or
 scientific authority changes; `DREYER-C5R-1-HL` remains sole and all-false.
+
+## 0499 - Queue One Metadata-Only COMM-L0 Source Identity Packet
+
+Research decision: move the communication program toward real source identity
+instead of creating another generated numerical lane. Byte-bind the 20 exact
+program, source-contract, Amendment 1, implementation, generated-result, proof,
+and test artifacts that already passed their remote barriers.
+
+Scope decision: request at most one future 361-byte OpenNeuro GraphQL POST and
+a 16 MiB target-free metadata response. Require generated/mock transport-wrapper
+qualification including the response boundary, exact remote-green
+implementation and activation barriers, a durable no-follow pre-network
+consumed marker, strict canonicalization, one private no-clobber manifest,
+aggregate-only publication, an 8 MiB disk envelope, zero BDF requests, and zero
+semantic, target, model, score, stream, device, or claim operations.
+
+Sequencing decision: every authority flag remains false. `COMM-L0-META` is
+queued, not active, cannot displace `DREYER-C5R-1-HL`, and cannot receive a
+decision until the current gate is closed or parked and this packet is
+explicitly activated. This adds a concrete route to a real communication cohort
+without accessing data or creating a scientific result.
+
+Amendment decision: require the fresh packet-bound decision before M1 and bind
+that same decision artifact by hash in M1, M2, and M3. A generated fixture at or
+below the former 2 MiB boundary does not establish that the real recursive tree
+fits there, so the prospective wrapper must refuse after 16 MiB plus one byte
+and qualify below, at, and above that limit without changing the immutable
+consumed COMM-L0 implementation.
+
+Outcome-durability decision: reserve 60 seconds of the 300-second wall envelope
+for termination, temporary cleanup, and receipt publication. Refuse a
+preexisting or symlink-routed public result before marker creation, then require
+descriptor-relative same-parent hard-link promotion that fails on `EEXIST` and
+a file-and-parent-fsynced aggregate success or failure receipt after every
+post-marker route. Generated qualification must inject a destination between
+preflight and promotion and prove it remains byte-identical while the consumed
+marker permanently parks the attempt. Cleanup may remove only invocation-created
+private temporary files and the exact inode-verified public-result temporary
+file. That same-parent public temporary must be created descriptor-relatively
+with `O_CREAT|O_EXCL|O_NOFOLLOW` and mode `0600`; cleanup may never remove the
+consumed marker, a competing destination, or the published result.

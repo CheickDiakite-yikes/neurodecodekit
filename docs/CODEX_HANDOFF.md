@@ -8150,3 +8150,24 @@ byte, update, prediction, target-delivery, or score receipt, so those fields are
 explicitly unavailable. No real/private operation or scientific claim occurred;
 `DREYER-C5R-1-HL` remains the sole active all-false Tier C packet. Preserve the
 unrelated tracker inspection NDJSON.
+
+## 2026-08-27 COMM-L0 Metadata Request Handoff
+
+Read `docs/COMMUNICATION_EEG_SOURCE_IDENTITY_METADATA_AUTHORIZATION_PACKET.md`,
+`registries/communication_eeg_source_identity_metadata_authorization_request.v0.json`,
+and its matching test.
+
+The all-false request binds 20 exact prior COMM-L0 and Amendment 1 artifacts /
+156,361 bytes and proposes one future direct OpenNeuro metadata POST only after
+a packet-bound decision, generated wrapper, implementation proof, and
+activation proof. The same remotely green decision hash must bind M1, M2, and
+M3. The future response is capped at 16 MiB; BDF requests and bytes remain zero.
+The raw body is not retained, the private canonical manifest is capped at 1 MiB,
+the public result is aggregate-only, and the complete incremental disk envelope
+is 8 MiB.
+
+Immediate gate: verify, commit, push, and remotely green this request, then add
+a proof-only closeout without activating it. `DREYER-C5R-1-HL` remains the sole
+active Tier C packet. Do not query OpenNeuro, create the wrapper, write a private
+manifest, touch another project, or commit the unrelated tracker inspection
+NDJSON under this request milestone.

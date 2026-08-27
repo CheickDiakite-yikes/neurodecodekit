@@ -16023,3 +16023,23 @@ and require both remote jobs green before the one official qualification.
   in-place repair. Real/private dataset reads, provider calls, stream/device
   operations, releases, and claim upgrades stayed zero. The result has no
   scientific value and does not alter `DREYER-C5R-1-HL`.
+
+### COMM-L0 metadata-only request packet queued
+
+- Bound 20 exact remotely proven communication-program, source-identity,
+  amendment, implementation, generated-result, proof, and test artifacts
+  totaling 156,361 bytes under the canonical set digest recorded by the
+  machine request.
+- Froze one future direct OpenNeuro POST with a 361-byte request body, 16 MiB
+  response cap, zero redirects/retries/reruns, zero BDF payload requests, 8 MiB
+  incremental-disk cap, and at least 10 GiB plus that envelope free.
+- Required a generated/mock live-wrapper qualification, separately green
+  implementation and activation, durable pre-network consumed marker, strict
+  in-memory canonicalization, private 0600 no-clobber manifest, and
+  aggregate-only public result before the one possible response can be used.
+- Amendment 1 requires generated 16 MiB boundary cases, no-follow exclusive
+  marker creation with fsync and permanent retention, and the same remotely
+  green decision hash across M1, M2, and M3.
+- Every authority and operation counter remains false or zero. The packet is
+  queued behind `DREYER-C5R-1-HL`, cannot displace it, touched no real/private
+  path, and establishes no scientific claim.
