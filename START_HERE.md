@@ -63,6 +63,15 @@ EDF header preflight after all intermediate green barriers. It does not
 authorize the remaining 119 files, signal or target reads, training, scoring,
 release, or a claim upgrade.
 
+The parallel end-to-end plan is tracked in
+`docs/COMMUNICATION_EEG_SCIENTIFIC_CLAIM_PROGRAM.md`. It selects OpenNeuro
+`ds003626-v2.1.2` for a future four-command EEG-versus-EOG-and-oral-EMG
+discovery test, then requires a separately qualified replication cohort,
+dropout-safe causal replay, source-only endpointing, and one consented
+unseen-person device stream. This Tier A plan made zero data, model, target,
+score, provider, stream, or hardware operations and does not change the Dreyer
+gate.
+
 ## Historical BNCI-C3C5-1 Closed Lane
 
 The generated G1 pipeline is complete, remotely proven, and consumed. Its

@@ -13779,3 +13779,35 @@ Authority decision: this static review performs zero ignored/private access,
 real request, network byte, EDF read, model run, target delivery, score, or
 claim upgrade. Every H-L1/H-L2 authority remains false pending the fresh
 packet-bound maintainer decision and later green barriers.
+
+## 0486 - Connect The Current Gate To A Falsifiable Communication End Goal
+
+Goal decision: define success as independently replicated, unseen-person,
+causal live decoding of user-intended communication where EEG improves over
+every recorded peripheral and language-only control. Keep prompted command
+information, unrestricted thought reading, replication, and live evidence as
+distinct claim levels.
+
+Source decision: select OpenNeuro `ds003626-v2.1.2` as the future discovery
+cohort because it combines randomized four-command inner-speech trials with
+128 EEG, four EOG, two oral-EMG, and visualized-direction controls in ten
+participants. Kara One is the leading partial eye/face-controlled replication
+candidate. No second source is yet verified for a full EOG-plus-oral-EMG
+replication.
+
+Architecture decision: reuse causal preprocessing, bounded token streaming,
+incremental CTC, participant firewalls, derangement, provenance, and frozen
+scoring patterns. Missing live work is a real source adapter, explicit gap and
+reconnect semantics, persistent model state, neural abstention, source-only
+endpointing, and capture-to-presentation clocks.
+
+Sequence decision: preserve Dreyer H-L1/H-L2 and A -> Q -> P -> T, then run a
+separately registered communication source qualification, generated firewall,
+bounded acquisition, prediction freeze, one score, independent replication,
+stream qualification, and one prospective live event. A partial-control
+replication cannot upgrade the full claim.
+
+Authority decision: this Tier A record changes no active gate and performs zero
+dataset API or file-manifest request, payload, private read, signal, target,
+model, prediction, score, provider, stream, device, release, or claim
+operation. Public papers and public web records were read for this decision.

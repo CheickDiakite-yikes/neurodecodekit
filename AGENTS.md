@@ -45,6 +45,15 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
+The parallel Tier A route from controlled communication evidence through
+independent replication and causal live operation is frozen in
+`docs/COMMUNICATION_EEG_SCIENTIFIC_CLAIM_PROGRAM.md` and
+`registries/communication_eeg_scientific_claim_program.v0.json`. It selects
+OpenNeuro `ds003626-v2.1.2` as the first future peripheral-controlled
+communication cohort, but authorizes no metadata request, payload, signal,
+target, model, score, stream, provider, device, or claim operation. It does not
+replace or compete with the sole active Tier C gate below.
+
 `DREYER-C5R-1-HL` is the sole active Tier C packet. Read, in order:
 
 1. `registries/current_research_frontier.v0.json`;

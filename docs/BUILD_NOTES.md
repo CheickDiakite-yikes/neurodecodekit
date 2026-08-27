@@ -15701,3 +15701,34 @@ score, release, or claim operation is currently authorized or completed.
 
 Immediate gate: verify, commit, push, and remotely green this static safety
 review. Then wait for a fresh packet-bound decision before H-L1 implementation.
+
+### Communication EEG end-goal program frozen
+
+- Verified the public source ranking against primary papers and official
+  dataset records without downloading a payload.
+- Selected OpenNeuro `ds003626-v2.1.2` as the future discovery source because
+  its ten participants, randomized four-command trials, 128 EEG, four EOG, two
+  oral-EMG, and visualized-direction condition support the strongest available
+  peripheral-adjusted communication test.
+- Ranked Kara One as a partial eye/face-controlled replication candidate and
+  kept SilentSpeech-EEG, TESSCCo, and Directional Word as unqualified
+  watchlist/reserve sources. No full second EOG-plus-oral replication source is
+  currently verified.
+- Audited causal architecture. Forward-only preprocessing, bounded token
+  streaming, incremental CTC, participant firewalls, derangement, provenance,
+  and freeze/scorer patterns are reusable. A source adapter, gap/reconnect
+  recovery, persistent model state, neural abstention, source-only endpointing,
+  and capture-to-output clocks remain missing.
+- Added a 12-gate machine-tested program from the current Dreyer preflight
+  through discovery, one score, independent replication, stream qualification,
+  and one prospective unseen-person live run.
+- This Tier A milestone performed zero dataset API/file-manifest request,
+  payload, private, signal, target, model, score, provider, stream, device,
+  release, or claim operation and left `DREYER-C5R-1-HL` as the sole active
+  Tier C packet. Public papers and public web records were read.
+- Focused validation passed 34 tests. The complete dependency-light suite
+  passed all 6,250 tests with 239 expected skips in 218.581 seconds, versus the
+  6,237/239 pre-change baseline. Registry parsing, compilation, Ruff, and diff
+  hygiene passed. An initial suite command omitted `PYTHONPATH=src` and produced
+  eight import-only failures; the corrected baseline command is the reported
+  green result.

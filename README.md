@@ -3604,6 +3604,14 @@ independent and is not endorsed by those projects or institutions.
 
 ## Plain-English Bottom Line
 
+The all-the-way research route is explicit in
+[Communication EEG Scientific Claim Program](docs/COMMUNICATION_EEG_SCIENTIFIC_CLAIM_PROGRAM.md):
+first establish EEG information beyond recorded eyes, mouth, cue, timing, and
+no-signal shortcuts; reproduce it in a separate cohort; then qualify
+dropout-safe causal streaming and one prospective unseen-person live run.
+OpenNeuro `ds003626-v2.1.2` is the leading future communication cohort, but the
+planning record authorizes no new data access or scientific claim.
+
 **Engineering capability:** NeuroDecodeKit provides a bounded, local,
 reproducible path from neurodata discovery and file qualification through
 caches, controls, small baselines, causal interface tests, and inspectable

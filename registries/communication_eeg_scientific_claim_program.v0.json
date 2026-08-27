@@ -1,0 +1,237 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_scientific_claim_program",
+  "schema_version": "0.1.0",
+  "program_id": "NDK-COMM-CLAIM-2026-08-26-v0",
+  "prepared_at": "2026-08-26",
+  "status": "tier_A_program_decision_complete_zero_real_or_private_operations",
+  "objective": "Demonstrate independently replicated unseen-person causal live decoding of user-intended communication where EEG adds measurable information beyond every recorded peripheral and language-only control, then release reproducible aggregate evidence and honest limitations.",
+  "active_gate_preserved": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "sole_active_Tier_C_packet": true,
+    "fresh_packet_bound_maintainer_decision_received": false,
+    "H_L1_authorized_now": false,
+    "H_L2_authorized_now": false,
+    "authority_changed_by_this_record": false
+  },
+  "claim_levels": [
+    {
+      "level": "CL1",
+      "name": "controlled_communication_information",
+      "established": false,
+      "primary_endpoint": "participant_macro_log_loss_P_minus_P_plus_E",
+      "required_comparators": [
+        "peripheral_only_P",
+        "P_plus_participant_matched_deranged_EEG",
+        "cue_and_elapsed_time",
+        "visualized_direction",
+        "posterior_only_EEG",
+        "no_signal_prior"
+      ],
+      "maximum_claim_if_passed": "prompted_closed_set_inner_speech_command_information_beyond_recorded_controls"
+    },
+    {
+      "level": "CL2",
+      "name": "strict_unseen_person_generalization",
+      "established": false,
+      "held_out_person_signal_fit_rows": 0,
+      "held_out_person_target_fit_rows": 0,
+      "held_out_person_calibration_rows": 0,
+      "held_out_person_threshold_selection_rows": 0,
+      "held_out_person_adaptation_rows": 0
+    },
+    {
+      "level": "CL3",
+      "name": "independent_replication",
+      "established": false,
+      "separate_source_cohort_required": true,
+      "separate_prediction_freeze_and_score_required": true,
+      "partial_control_replication_may_upgrade_full_claim": false
+    },
+    {
+      "level": "CL4",
+      "name": "causal_live_decoding",
+      "established": false,
+      "actual_device_stream_required": true,
+      "known_event_onset_allowed": false,
+      "known_trial_end_allowed": false,
+      "capture_to_output_latency_required": true,
+      "dropout_reconnect_and_abstention_required": true
+    }
+  ],
+  "source_decision": {
+    "discovery": {
+      "source_id": "OpenNeuro_ds003626_v2.1.2",
+      "dataset": "Thinking_Out_Loud_Inner_Speech",
+      "participants": 10,
+      "sessions_per_participant": 3,
+      "commands": 4,
+      "conditions": ["inner_speech", "pronounced_speech", "visualized_direction"],
+      "EEG_channels": 128,
+      "horizontal_vertical_EOG_channels": 4,
+      "oral_EMG_channels": 2,
+      "reference_channels": 2,
+      "source_sampling_rate_hz": 1024,
+      "trial_class_order_randomized": true,
+      "participant_held_out_evaluation_feasible": true,
+      "full_peripheral_adjusted_candidate": true,
+      "payload_manifest_qualified": false,
+      "payload_downloaded_by_this_record": false
+    },
+    "replication_ranking": [
+      {
+        "rank": 1,
+        "source_id": "Kara_One",
+        "role": "partial_eye_and_face_controlled_replication_candidate",
+        "participants": 14,
+        "verified_EOG": true,
+        "verified_face_tracking": true,
+        "verified_oral_EMG": false,
+        "license_and_complete_peripheral_qualification_required": true,
+        "full_peripheral_adjusted_replication_ready": false
+      },
+      {
+        "rank": 2,
+        "source_id": "SilentSpeech_EEG_2026",
+        "role": "high_density_watchlist_candidate",
+        "reported_usable_participants": 10,
+        "reported_words": 24,
+        "reported_trials": 60000,
+        "reported_EEG_channels": 128,
+        "reported_external_channels": 8,
+        "public_payload_identity_and_license_verified": false,
+        "exact_peripheral_roles_verified": false,
+        "reported_primary_split_is_within_person_session_wise": true,
+        "full_peripheral_adjusted_replication_ready": false
+      },
+      {
+        "rank": 3,
+        "source_id": "TESSCCo_2026",
+        "role": "sample_size_replication_watchlist",
+        "participants": 24,
+        "commands": 5,
+        "verified_EOG": false,
+        "verified_oral_EMG": false,
+        "payload_and_dataset_license_qualified": false,
+        "full_peripheral_adjusted_replication_ready": false
+      },
+      {
+        "rank": 4,
+        "source_id": "Directional_Word_2026",
+        "role": "confounded_reserve",
+        "participants": 22,
+        "participants_with_EMG": 6,
+        "fixed_word_blocks": true,
+        "right_hand_marker_press": true,
+        "full_peripheral_adjusted_replication_ready": false
+      }
+    ],
+    "no_full_independent_replication_source_verified_now": true,
+    "prospective_recording_is_fallback_only_after_ethics_privacy_hardware_and_Tier_C_decision": true
+  },
+  "program_sequence": [
+    {"order": 1, "gate_id": "DREYER_HL1_HL2", "claim_producing": false, "purpose": "Verify the fresh source sensor header before risking the Dreyer cohort."},
+    {"order": 2, "gate_id": "DREYER_A_Q_P_T", "claim_producing": true, "communication_claim_producing": false, "purpose": "Test unseen-person EEG information beyond EOG EMG posterior EEG timing and derangement in a fresh motor cohort."},
+    {"order": 3, "gate_id": "COMM_L0_SOURCE_IDENTITY", "claim_producing": false, "purpose": "Freeze exact ds003626 snapshot license file manifest channel roles event grammar participant grid and bounded payload slice."},
+    {"order": 4, "gate_id": "COMM_G1_GENERATED_QUALIFICATION", "claim_producing": false, "purpose": "Qualify reader participant firewall causal preprocessing controls model schedule freezer scorer and resource monitors on generated fixtures."},
+    {"order": 5, "gate_id": "COMM_A1_BOUNDED_ACQUISITION", "claim_producing": false, "purpose": "Acquire only registered files under the 10 GiB cap and create isolated target-firewalled derivatives."},
+    {"order": 6, "gate_id": "COMM_P1_PREDICTION_FREEZE", "claim_producing": false, "purpose": "Fit source-participant compact models and freeze aggregate prediction hashes before target delivery."},
+    {"order": 7, "gate_id": "COMM_T1_ONE_SCORE", "claim_producing": true, "purpose": "Score once against peripheral timing cue visualized posterior derangement and no-signal controls."},
+    {"order": 8, "gate_id": "COMM_R0_REPLICATION_SOURCE", "claim_producing": false, "purpose": "Qualify a separate cohort and define whether it supports full or partial control replication."},
+    {"order": 9, "gate_id": "COMM_R1_REPLICATION_FREEZE_SCORE", "claim_producing": true, "purpose": "Run one independent target-firewalled prediction freeze and score without discovery-target tuning."},
+    {"order": 10, "gate_id": "NDK_STREAM1", "claim_producing": false, "purpose": "Implement SourceChunk gap generation reconnect semantics persistent model state and offline versus incremental parity."},
+    {"order": 11, "gate_id": "NDK_LIVE_G1", "claim_producing": false, "purpose": "Qualify source to preprocessing to model to decoder to abstention to commit on generated and actual-time replay streams."},
+    {"order": 12, "gate_id": "NDK_LIVE1", "claim_producing": true, "purpose": "Run one consented actual-device unseen-person stream without onset or end oracle and measure capture-to-output latency."}
+  ],
+  "language_control_arms": [
+    "language_only",
+    "neural_only",
+    "neural_plus_language",
+    "item_deranged_neural_plus_language"
+  ],
+  "architecture_readiness": {
+    "reusable_now": [
+      "forward_only_stateful_preprocessing",
+      "bounded_temporal_token_streaming",
+      "incremental_CTC_decoding",
+      "participant_target_firewalls",
+      "matched_derangement_controls",
+      "cache_provenance_and_split_binding",
+      "prediction_freeze_and_isolated_scorer_patterns"
+    ],
+    "missing": [
+      "real_device_source_adapter",
+      "gap_records_stream_generations_and_bounded_recovery",
+      "persistent_per_stream_model_state",
+      "neural_signal_quality_and_confidence_abstention",
+      "source_only_onset_and_endpointer",
+      "capture_host_preprocess_model_commit_and_presentation_clocks"
+    ],
+    "larger_or_pretrained_model_eligible_now": false,
+    "eligibility_rule": "Only after a compact frozen family fails for a measured representation reason on generated or training-only diagnostics."
+  },
+  "resource_policy": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "maximum_incremental_payload_bytes": 10737418240,
+    "simultaneous_real_data_lanes": 1,
+    "provider_calls_before_neural_prediction_freeze": 0,
+    "operation_outside_declared_NeuroDecodeKit_roots": false,
+    "unrelated_cleanup_or_deletion": false
+  },
+  "authorization_flags": {
+    "new_dataset_API_or_file_manifest_request": false,
+    "new_download": false,
+    "real_or_private_path_read": false,
+    "signal_read": false,
+    "target_or_label_read": false,
+    "training": false,
+    "inference": false,
+    "prediction_freeze": false,
+    "scoring": false,
+    "provider_call": false,
+    "stream": false,
+    "device_or_hardware": false,
+    "prospective_human_recording": false,
+    "release": false,
+    "scientific_claim_upgrade": false
+  },
+  "operation_counters": {
+    "dataset_payload_bytes": 0,
+    "private_path_bytes": 0,
+    "signal_samples": 0,
+    "target_rows": 0,
+    "training_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "scores": 0,
+    "provider_calls": 0,
+    "stream_samples": 0,
+    "hardware_operations": 0,
+    "claim_upgrades": 0
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "A source-ranked architecture-aware sequence connects the current proof gate to controlled communication discovery independent replication and causal live evidence.",
+    "scientific_claim_not_established": "No payload signal target model score stream or device operation occurred and no communication EEG unseen-person replication live or peripheral-adjusted claim is established.",
+    "forbidden_current_claims": [
+      "unrestricted_thought_reading",
+      "open_vocabulary_thought_to_text",
+      "inner_speech_decoding",
+      "EEG_beyond_EOG_or_oral_EMG",
+      "unseen_person_communication_generalization",
+      "independent_replication",
+      "live_neural_decoding",
+      "portable_hardware_performance",
+      "clinical_value"
+    ]
+  },
+  "primary_sources": {
+    "Thinking_Out_Loud_descriptor": "https://www.nature.com/articles/s41597-022-01147-2",
+    "OpenNeuro_ds003626": "https://openneuro.org/datasets/ds003626/versions/2.1.2",
+    "NEMAR_on003626": "https://nemar.org/dataset/on003626",
+    "Kara_One": "https://www.cs.toronto.edu/~complingweb/data/karaOne/karaOne.html",
+    "BrainStack_SilentSpeech_EEG": "https://arxiv.org/abs/2601.21148",
+    "TESSCCo": "https://www.nature.com/articles/s41597-026-07745-8",
+    "Directional_Word": "https://www.nature.com/articles/s41597-026-07809-9"
+  }
+}

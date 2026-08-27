@@ -4,6 +4,15 @@
   "recorded_at_local": "2026-08-26",
   "active_lane_id": "DREYER-C5R-1-HL",
   "status": "all_false_request_and_proof_remotely_green_awaiting_exact_Tier_C_decision",
+  "parallel_tier_A_communication_program": {
+    "program_id": "NDK-COMM-CLAIM-2026-08-26-v0",
+    "document": "docs/COMMUNICATION_EEG_SCIENTIFIC_CLAIM_PROGRAM.md",
+    "registry": "registries/communication_eeg_scientific_claim_program.v0.json",
+    "discovery_source": "OpenNeuro_ds003626_v2.1.2",
+    "full_independent_replication_source_verified": false,
+    "active_Tier_C_gate_changed": false,
+    "real_or_private_operations": 0
+  },
   "evidence_sequence": [
     "D_aggregate_only_BNCI_failure_localization",
     "R_fresh_cohort_primary_source_selection",
