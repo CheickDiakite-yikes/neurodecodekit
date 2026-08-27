@@ -1,5 +1,18 @@
 # Codex Handoff - NeuroDecodeKit
 
+> **COMM-R0-G closeout, 2026-08-27:** final activation proof `0071843`
+> passed Base `98600920033`, Optional `98600920329`, and CI `33095990523`.
+> The sole generated-only qualification then failed closed with
+> `G2-TEMPORARY-SYMLINK`: its required symlink-escape adversarial fixture was
+> still present when the executor audited the temporary tree for zero
+> symlinks. Both fictional-data replays and the refusal sequence returned, but
+> no official result was published. Cleanup removed all invocation-created
+> state; the run is consumed and may not be rerun. Exact runtime/RSS/byte
+> measurements are unavailable rather than recorded as zero. A future source
+> correction requires a new prospective generated gate. No real EEG, network,
+> provider, private artifact, or scientific claim occurred, and sole active
+> Tier C gate `DREYER-C5R-1-HL` remains unchanged and all-false.
+
 > **Parallel COMM-R0-G status, 2026-08-27:** the independently preregistered
 > communication analysis now has a generated-only implementation, sidecar CLI,
 > implementation record, and focused tests. It uses 12 fictional participants,

@@ -16162,3 +16162,11 @@ and require both remote jobs green before the one official qualification.
   Added the final tracked activation-proof record binding its three exact
   artifacts / 7,641 bytes. It performs zero qualification or scientific work
   and still requires its own remote-green CI before execution.
+- 2026-08-27: The sole activated `COMM-R0-G` generated qualification failed
+  closed at `G2-TEMPORARY-SYMLINK`. The required symlink-escape adversarial
+  fixture remained inside the isolated worktree and was then rejected by the
+  final zero-symlink tree audit. Both generated replays returned, but no
+  official result was published; `finally` cleanup removed the temporary tree.
+  The invocation is consumed with no retry or rerun. Exact runtime, RSS, and
+  generated-byte measurements are unavailable because result assembly was not
+  reached. Real/private/network/provider/scientific operations remained zero.

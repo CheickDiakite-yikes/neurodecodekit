@@ -14289,3 +14289,11 @@ Optional `98597572816`, and CI `33095028205`. Create the tracked activation
 proof binding that exact green closeout and the earlier green activation. The
 proof has delayed effect until its own commit is pushed and both jobs are
 green; only then may the single generated qualification run.
+- 2026-08-27: Park `COMM-R0-G` after its sole official generated invocation
+  failed closed at `G2-TEMPORARY-SYMLINK`. The failure came from ordering two
+  valid safety checks incorrectly: the adversarial symlink fixture was retained
+  until a later audit that forbids all symlinks. Do not rerun or repair this
+  consumed invocation. A narrow source correction is allowed only as
+  future-facing Tier A/B engineering and any execution of the corrected path
+  requires a new prospective generated qualification gate. Preserve
+  `DREYER-C5R-1-HL` as the sole all-false Tier C gate.
