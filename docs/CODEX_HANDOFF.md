@@ -8093,3 +8093,22 @@ COMM-G1 is consumed. Do not rerun, repair, overwrite, or reinterpret it as an
 accepted qualification. A successor requires a new lane and prospective
 contract. No real/private operation or scientific claim occurred, and
 `DREYER-C5R-1-HL` remains the sole active all-false Tier C packet.
+
+## 2026-08-27 COMM-G2 Preregistration Handoff
+
+Read `docs/COMM_G2_GENERATED_PROOF_QUALIFICATION_PREREGISTRATION.md`,
+`registries/comm_g2_generated_proof_qualification_contract.v0.json`, and
+`tests/test_comm_g2_generated_proof_qualification_contract.py`.
+
+COMM-G2 is a new generated-only successor to consumed COMM-G1 R0. It preserves
+the exact scientific module and duplicates the 60-update schedule only across
+two isolated child-process replays. It adds complete fixture and prediction
+digests, target-vault/process isolation, exact row completeness, no-follow
+non-replacing publication, and explicit execution of every named refusal
+family.
+
+Immediate gate: verify, commit, push, and remotely green this exact
+registration. Only then may Tier B implement the separate wrapper. Do not
+modify the frozen COMM-G1 module, run a qualification, read real/private data,
+or alter `DREYER-C5R-1-HL` under this milestone. Preserve the unrelated tracker
+inspection NDJSON.

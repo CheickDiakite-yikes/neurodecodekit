@@ -148,6 +148,14 @@ exercised. The run is consumed and will not be rerun or repaired in place.
 This is useful control-plane failure localization, not EEG or communication
 decoding evidence.
 
+The prospective [`COMM-G2 proof qualification`](docs/COMM_G2_GENERATED_PROOF_QUALIFICATION_PREREGISTRATION.md)
+keeps the scientific model, features, conditions, and thresholds byte-frozen.
+It changes only the evidence machinery: two genuinely isolated full replays,
+complete row and array hashing, model/scorer target separation, safer
+non-replacing publication, and explicit coverage of every registered refusal
+family. It is not yet implemented or executed and cannot create a scientific
+claim.
+
 It specifies a six-participant synthetic leave-one-person-out matrix with ten
 fixed arms: priors, cue/time, EOG, oral EMG, all peripheral/context controls,
 selected EEG, posterior EEG, peripheral plus residual EEG, and a matched

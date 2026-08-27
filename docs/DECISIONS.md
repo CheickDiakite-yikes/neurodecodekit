@@ -14031,3 +14031,22 @@ rerun or in-place repair, and require any successor to use a new prospective
 lane. This is generated proof-completeness failure localization, not a neural,
 communication, unseen-person, live, hardware, or clinical result. Preserve
 `DREYER-C5R-1-HL` as the sole all-false Tier C packet.
+
+## 0496 - Freeze COMM-G2 as a Proof-Only Successor
+
+Successor decision: create a new generated-only lane rather than repairing or
+rerunning consumed COMM-G1. Byte-bind the exact COMM-G1 scientific module,
+feature transform, residualizer, derangement, classifier, ten conditions,
+router thresholds, and 60-update per-replay schedule.
+
+Proof decision: require two complete isolated child-process replays, canonical
+digests over every row field and array byte, fold-level source/held-out identity
+proof, predictor/scorer target separation, exact prediction completeness,
+non-replacing no-follow publication, and explicit execution of all 35 named
+refusal families. Two replays create 120 total generated updates solely to test
+determinism; they add no model or scientific hypothesis.
+
+Authority decision: implementation and qualification remain false until their
+separate green barriers. No real/private data, network, provider, stream,
+device, release, or claim operation is authorized. `DREYER-C5R-1-HL` remains
+the sole all-false Tier C packet.

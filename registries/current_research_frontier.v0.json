@@ -143,6 +143,28 @@
         "scientific_value": "none_generated_engineering_only",
         "active_Tier_C_gate_changed": false
       },
+      "generated_proof_successor_preregistration": {
+        "gate_id": "COMM-G2_GENERATED_PROOF_QUALIFICATION",
+        "document": "docs/COMM_G2_GENERATED_PROOF_QUALIFICATION_PREREGISTRATION.md",
+        "contract": "registries/comm_g2_generated_proof_qualification_contract.v0.json",
+        "status": "prospective_registration_pending_exact_commit_push_remote_green",
+        "parent_lane": "COMM-G1",
+        "parent_binding_route": "COMM-G1-R0",
+        "parent_closeout_commit": "adc1b41be6e42a662ea465e21e5dd713cada0cd4",
+        "parent_closeout_CI_run_id": 33050807943,
+        "frozen_scientific_module_sha256": "99178d463558c27dcfe8c4346d6f47c207cb8dc60b6d45cd6ad3dab4b08fb3f4",
+        "full_isolated_replays": 2,
+        "parameter_updates_per_replay": 60,
+        "total_parameter_updates": 120,
+        "total_prediction_sets": 120,
+        "total_prediction_rows": 2880,
+        "minimum_distinct_refusal_ids": 35,
+        "generated_implementation_authorized_now": false,
+        "generated_qualification_authorized_now": false,
+        "real_or_private_operations": 0,
+        "scientific_value": "none_generated_engineering_only",
+        "active_Tier_C_gate_changed": false
+      },
       "dataset_specific_GraphQL_authorized_now": false,
       "generated_implementation_authorized_now": false,
       "real_or_private_operations": 0

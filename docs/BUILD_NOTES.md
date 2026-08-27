@@ -15963,3 +15963,25 @@ hash; the exact pinned local command `.venv/bin/ruff check .` then passed.
   `COMM-G1-R0` consumes the run with no rerun or in-place repair. Every real,
   private, network, provider, stream, device, release, and claim counter stayed
   zero; the run has no scientific value.
+
+### COMM-G2 generated proof successor preregistered
+
+- Bound the exact green COMM-G1 R0 closeout at commit
+  `adc1b41be6e42a662ea465e21e5dd713cada0cd4`, CI `33050807943`, while
+  preserving its consumed/no-rerun status.
+- Byte-froze the 46,496-byte COMM-G1 scientific module plus its contract,
+  amendment, and implementation record. Feature, residualizer, derangement,
+  classifier, conditions, thresholds, and model-selection behavior cannot
+  change under COMM-G2.
+- Registered two full isolated replays, 120 total generated updates, 120
+  prediction sets, 2,880 prediction rows, complete row/array digests,
+  predictor/scorer target separation, non-replacing publication, and 35 named
+  adversarial families.
+- Caps remain one active worker/thread/job, 180 seconds, 512 MiB RSS, 80 MiB
+  generated input, 64 MiB private generated output, 1 MiB public output, 96 MiB
+  temporary disk, and zero network or real/private bytes.
+- No implementation or qualification ran. All real-data and scientific-claim
+  authority remains false.
+
+Immediate gate: commit, push, and remotely green this exact registration before
+implementing the separate COMM-G2 proof wrapper.

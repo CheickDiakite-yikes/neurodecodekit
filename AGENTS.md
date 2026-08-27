@@ -134,6 +134,16 @@ did not explicitly exercise symlink-escape or resource-cap-breach families.
 Do not rerun, repair, overwrite, or reinterpret COMM-G1 as accepted. It has no
 scientific value. Every real operation remains Tier C.
 
+The prospective successor is `COMM-G2`. Read
+`docs/COMM_G2_GENERATED_PROOF_QUALIFICATION_PREREGISTRATION.md` and
+`registries/comm_g2_generated_proof_qualification_contract.v0.json`. It freezes
+the exact COMM-G1 scientific module and adds only proof architecture: two full
+isolated child-process replays, complete row/array digests, scorer-held target
+isolation, non-replacing filesystem publication, and explicit execution of all
+35 named refusal families. This registration must be committed, pushed, and
+remotely green before implementation. Current implementation and qualification
+authority are false; every real operation remains Tier C.
+
 `DREYER-C5R-1-HL` is the sole active Tier C packet. Read, in order:
 
 1. `registries/current_research_frontier.v0.json`;

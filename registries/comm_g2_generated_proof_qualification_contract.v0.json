@@ -1,0 +1,346 @@
+{
+  "schema_name": "neurodecodekit.comm_g2_generated_proof_qualification_contract",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-27",
+  "contract_id": "COMM-G2-generated-proof-qualification-contract-v0",
+  "program_id": "NDK-COMM-CLAIM-2026-08-26-v0",
+  "status": "prospectively_frozen_generated_only_no_current_execution_authority",
+  "purpose": "new_lane_to_correct_COMM_G1_proof_architecture_without_rerunning_or_upgrading_COMM_G1",
+  "parent_closeout": {
+    "lane_id": "COMM-G1",
+    "binding_route": "COMM-G1-R0",
+    "consumed": true,
+    "rerun_allowed": false,
+    "commit": "adc1b41be6e42a662ea465e21e5dd713cada0cd4",
+    "CI_run_id": 33050807943,
+    "base_python_job_id": 98445568611,
+    "optional_neuro_readers_job_id": 98445568299,
+    "both_required_jobs_green": true,
+    "artifacts": [
+      {
+        "path": "docs/COMM_G1_GENERATED_QUALIFICATION_CLOSEOUT.md",
+        "bytes": 3372,
+        "sha256": "ff13a0784f95f03c97031017dfa01be8edd6a89f59bed71a373e4f4e5508387b"
+      },
+      {
+        "path": "registries/comm_g1_generated_qualification_closeout.v0.json",
+        "bytes": 3470,
+        "sha256": "8143217bb1dc14143cf286c2285ef0f297185ce8d94063801786f7b57c0233f6"
+      },
+      {
+        "path": "registries/comm_g1_generated_qualification_result.v0.json",
+        "bytes": 6271,
+        "sha256": "696fe4236a5ff45b1b9a61761e6381f456a5e722aa5fa03fffa4008a3e29ce4e"
+      },
+      {
+        "path": "tests/test_comm_g1_generated_qualification_closeout.py",
+        "bytes": 5252,
+        "sha256": "d5f4410cf4755faec0cc8b3c206d7b0fb65153e76967737cb69968db7fc11c0d"
+      }
+    ],
+    "acceptance_failures": [
+      "incomplete_replay_fingerprint",
+      "replays_not_isolated",
+      "adversarial_family_incomplete"
+    ]
+  },
+  "frozen_scientific_core": {
+    "module": {
+      "path": "src/neurodecodekit/experiments/comm_g1_generated.py",
+      "bytes": 46496,
+      "sha256": "99178d463558c27dcfe8c4346d6f47c207cb8dc60b6d45cd6ad3dab4b08fb3f4",
+      "may_be_modified_by_COMM_G2": false
+    },
+    "bound_records": [
+      {
+        "path": "registries/comm_g1_generated_experiment_contract.v0.json",
+        "bytes": 12417,
+        "sha256": "cfdd4f8eeb42543b2d5a6226e0665740304517fd9a8b738c2b1e00a5613e5469"
+      },
+      {
+        "path": "registries/comm_g1_generated_experiment_amendment_1.v0.json",
+        "bytes": 3614,
+        "sha256": "a885b8317263bf0bdb5737be2e3bbfca227620d7ca50ef837685d2772d90ef3a"
+      },
+      {
+        "path": "registries/comm_g1_generated_implementation.v0.json",
+        "bytes": 4632,
+        "sha256": "30f033a1c50c56ad7f7a3172fe74a44feef39a2bb9de2321b4e87dd4375efce5"
+      }
+    ],
+    "generated_participants": 6,
+    "generated_sessions_per_participant": 3,
+    "generated_classes": 4,
+    "generated_rows": 144,
+    "outer_folds": 6,
+    "held_out_participant_calibration_rows": 0,
+    "conditions": [
+      "equal_prior",
+      "source_class_prior",
+      "cue_plus_timing",
+      "EOG_only",
+      "oral_EMG_only",
+      "peripheral_context_P",
+      "selected_EEG_only",
+      "posterior_EEG_only",
+      "P_plus_residual_EEG",
+      "P_plus_deranged_residual_EEG"
+    ],
+    "features_residualizer_derangement_classifier_thresholds_and_seed_selection_changed": false,
+    "hyperparameter_or_model_selection": false
+  },
+  "canonical_replay_digest": {
+    "row_fields": [
+      "item_id",
+      "participant_id",
+      "session_id",
+      "trial_id",
+      "repeat_id",
+      "outer_fold_id",
+      "cue_id",
+      "timing_id",
+      "source_sample_start",
+      "source_sample_stop",
+      "source_time_start_seconds",
+      "source_time_stop_seconds",
+      "source_sampling_rate_hz",
+      "true_length",
+      "padding_mask",
+      "channel_names",
+      "channel_roles",
+      "channel_geometry",
+      "signal",
+      "synthetic_target"
+    ],
+    "array_binding": ["dtype", "byte_order", "shape", "C_contiguous_bytes"],
+    "metadata_encoding": "UTF8_JSON_sorted_keys_compact_separators_allow_nan_false",
+    "missing_extra_reordered_or_type_changed_field_action": "refuse_or_digest_mismatch",
+    "digest": "SHA256",
+    "two_isolated_replays_required": true,
+    "runtime_and_RSS_excluded_from_equivalence_digest": true
+  },
+  "process_isolation": {
+    "replays": 2,
+    "separate_child_processes": true,
+    "exclusive_clean_workdirs": true,
+    "distinct_workdir_inode_or_file_identity_required": true,
+    "process_environment_allowlist_exact": true,
+    "preparation_prediction_and_scoring_capabilities_separate": true,
+    "prediction_worker_can_open_target_vault": false,
+    "scorer_can_update_model_or_transform": false,
+    "coordinator_can_deliver_targets_before_prediction_freeze": false,
+    "equivalence_surfaces": [
+      "fixture_digest",
+      "split_manifest",
+      "capability_manifest",
+      "fit_and_inference_schedule",
+      "aggregate_prediction_freeze_digest",
+      "aggregate_score_without_runtime_or_RSS",
+      "router_outcome",
+      "adversarial_refusal_ledger"
+    ]
+  },
+  "target_and_split_firewall": {
+    "source_participants_per_fold": 5,
+    "held_out_participants_per_fold": 1,
+    "source_and_held_out_identity_hashes_bound": true,
+    "source_only_fit_row_hashes_bound": true,
+    "held_out_signal_fit_rows": 0,
+    "held_out_target_fit_rows": 0,
+    "held_out_calibration_rows": 0,
+    "held_out_threshold_selection_rows": 0,
+    "held_out_adaptation_rows": 0,
+    "target_vault_created_before_prediction_but_unavailable_to_predictor": true,
+    "aggregate_prediction_freeze_before_target_delivery": true,
+    "target_deliveries_per_replay": 1,
+    "scores_per_replay": 1,
+    "post_target_updates": 0,
+    "prediction_completeness": {
+      "one_row_per_participant_item_and_condition": true,
+      "duplicate_or_missing_rows_allowed": false,
+      "class_probability_count": 4,
+      "finite_probabilities_required": true,
+      "probability_sum_absolute_tolerance": 1e-12
+    }
+  },
+  "filesystem_contract": {
+    "output_parent_no_follow_directory_capability": true,
+    "workdir_no_follow_directory_capability": true,
+    "temporary_file_creation": "exclusive_no_follow",
+    "final_publication": "non_replacing_same_directory",
+    "file_fsync_before_publication": true,
+    "directory_fsync_after_publication": true,
+    "cleanup_scope": "invocation_owned_temporary_files_only",
+    "forbidden": [
+      "path_check_then_replace",
+      "ancestor_symlink",
+      "leaf_symlink",
+      "nonregular_output",
+      "existing_output_clobber",
+      "cross_workdir_traversal",
+      "cleanup_of_preexisting_path"
+    ]
+  },
+  "adversarial_qualification": {
+    "every_named_family_must_execute": true,
+    "families": [
+      "participant_collision",
+      "session_collision",
+      "split_leak",
+      "capability_escape",
+      "row_reorder",
+      "role_mismatch",
+      "channel_mismatch",
+      "mask_mismatch",
+      "timestamp_mismatch",
+      "geometry_mismatch",
+      "sampling_rate_mismatch",
+      "held_out_state_fit",
+      "residualizer_target_leak",
+      "derangement_scope_mismatch",
+      "prediction_tamper",
+      "prediction_duplicate",
+      "prediction_missing",
+      "probability_nonfinite",
+      "probability_sum_mismatch",
+      "pre_freeze_target_delivery",
+      "repeated_target_delivery",
+      "scorer_row_mismatch",
+      "output_clobber",
+      "ancestor_symlink_escape",
+      "leaf_symlink_escape",
+      "publication_race",
+      "nonregular_output",
+      "cross_workdir_traversal",
+      "resource_runtime_cap_breach",
+      "resource_RSS_cap_breach",
+      "resource_generated_input_cap_breach",
+      "resource_private_output_cap_breach",
+      "resource_public_output_cap_breach",
+      "nondeterministic_fixture_replay",
+      "nondeterministic_prediction_replay"
+    ],
+    "minimum_distinct_refusal_ids": 35,
+    "missing_named_family_action": "COMM-G2-R0"
+  },
+  "schedule": {
+    "full_isolated_replays": 2,
+    "generated_rows_per_replay": 144,
+    "residualizer_fits_per_replay": 6,
+    "classifier_or_prior_fits_per_replay": 54,
+    "parameter_updates_per_replay": 60,
+    "total_parameter_updates": 120,
+    "prediction_sets_per_replay": 60,
+    "total_prediction_sets": 120,
+    "prediction_rows_per_replay": 1440,
+    "total_prediction_rows": 2880,
+    "synthetic_target_deliveries": 2,
+    "synthetic_scores": 2,
+    "post_target_updates": 0,
+    "official_invocations": 1,
+    "reruns": 0
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "active_workers_maximum": 1,
+    "active_numerical_jobs_maximum": 1,
+    "wall_time_seconds": 180,
+    "peak_process_tree_RSS_bytes": 536870912,
+    "generated_input_bytes_total_maximum": 83886080,
+    "private_generated_output_bytes_total_maximum": 67108864,
+    "public_output_bytes_maximum": 1048576,
+    "temporary_disk_bytes_maximum": 100663296,
+    "network_bytes": 0,
+    "provider_bytes": 0,
+    "real_or_private_dataset_bytes": 0,
+    "incremental_real_payload_bytes": 0,
+    "maximum_total_incremental_research_storage_bytes": 21474836480,
+    "maximum_selected_raw_bytes": 10737418240,
+    "cleanup_only_invocation_created_temporary_files": true,
+    "operation_outside_NeuroDecodeKit": false
+  },
+  "router": {
+    "COMM-G2-R1": "both_replays_equivalent_all_proofs_pass_positive_fixture_meets_frozen_thresholds",
+    "COMM-G2-R2": "proof_complete_but_frozen_effect_or_consistency_gate_failed",
+    "COMM-G2-R3": "proof_complete_but_shortcut_or_no_increment_condition",
+    "COMM-G2-R0": "structural_isolation_firewall_replay_filesystem_resource_completeness_or_refusal_failure",
+    "scientific_value": "none_generated_engineering_only"
+  },
+  "interfaces": {
+    "future_module": "src/neurodecodekit/experiments/comm_g2_generated_proof.py",
+    "future_sidecar_CLI": "src/neurodecodekit/comm_g2_cli.py",
+    "commands": ["plan", "qualify", "inspect"],
+    "real_dataset_or_provider_mode": false,
+    "aggregate_inspection_only": true
+  },
+  "ordered_gates": {
+    "registration": {
+      "current_stage": true,
+      "must_be_committed_pushed_and_remotely_green": true
+    },
+    "generated_implementation": {
+      "authorized_after_green_registration_under_Tier_B": true,
+      "authorized_now": false,
+      "must_be_committed_pushed_and_remotely_green_before_qualification": true
+    },
+    "generated_qualification": {
+      "authorized_after_green_implementation_under_Tier_B": true,
+      "authorized_now": false,
+      "invocations_maximum": 1,
+      "rerun_allowed": false
+    },
+    "real_operation": {
+      "authorized_now": false,
+      "separate_Tier_C_packet_and_decision_required": true
+    }
+  },
+  "authorization_state": {
+    "generated_implementation_now": false,
+    "generated_qualification_now": false,
+    "dataset_specific_metadata_request": false,
+    "payload_request_or_download": false,
+    "real_or_private_path_read": false,
+    "real_header_signal_event_target_or_label_read": false,
+    "real_training_or_model_inference": false,
+    "real_prediction_freeze": false,
+    "real_target_delivery_or_score": false,
+    "provider_call": false,
+    "stream_or_device_operation": false,
+    "release": false,
+    "scientific_claim_upgrade": false
+  },
+  "operation_counters": {
+    "generated_implementation_runs": 0,
+    "generated_qualification_runs": 0,
+    "network_bytes": 0,
+    "real_or_private_path_reads": 0,
+    "payload_bytes": 0,
+    "real_signal_samples": 0,
+    "real_event_target_or_label_rows": 0,
+    "real_training_runs": 0,
+    "real_model_inference_runs": 0,
+    "real_prediction_sets": 0,
+    "real_target_deliveries": 0,
+    "real_scores": 0,
+    "provider_calls": 0,
+    "stream_or_device_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "active_gate_preserved": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "sole_active_Tier_C_packet": true,
+    "all_authority_flags_false": true,
+    "changed_by_this_contract": false
+  },
+  "claim_boundary": {
+    "engineering_capability_proposed": "complete_isolated_deterministic_generated_proof_wrapper_around_frozen_COMM_G1_scientific_core",
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_EOG_or_oral_EMG_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "live_neural_decoding_established": false
+  }
+}

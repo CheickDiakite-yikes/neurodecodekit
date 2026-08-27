@@ -3905,3 +3905,11 @@ route is `COMM-G1-R0` because the replay digest was incomplete, the two replays
 were not isolated in clean workdirs, and two named refusal families were not
 explicitly exercised. Do not rerun or repair COMM-G1. Its score is not accepted
 and it has no scientific value.
+
+Next read `docs/COMM_G2_GENERATED_PROOF_QUALIFICATION_PREREGISTRATION.md`
+and `registries/comm_g2_generated_proof_qualification_contract.v0.json`.
+COMM-G2 is a new prospective lane, not a COMM-G1 repair. It freezes the exact
+scientific module and proposes only stronger proof isolation, complete digests,
+target separation, filesystem publication guards, and full named refusal
+coverage. Implementation and qualification remain false until their respective
+remote-green gates.
