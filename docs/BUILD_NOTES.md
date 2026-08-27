@@ -16253,3 +16253,11 @@ and require both remote jobs green before the one official qualification.
   annotations required by repository-pinned Ruff 0.15.20. Restore those exact
   annotations and use `.venv/bin/ruff check .` for parity. This is not a green
   implementation proof, and no official qualification ran or was consumed.
+- 2026-08-27: Initial green implementation `6cedb3c` exposed a future-proof
+  presence assumption before proof commit. Corrected implementation `bc9bb10`
+  tests missing proof in an isolated root and passed Base `98694674092`,
+  Optional Neuro Readers `98694674289`, and CI `33123115516`, then
+  fast-forwarded to GitHub `main`. Added a proof-only record binding eight
+  executable/test artifacts totaling 214,757 bytes. The proof performs zero
+  qualification or protected operations and must itself pass both CI jobs
+  before the sole generated invocation.

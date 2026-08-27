@@ -1,0 +1,110 @@
+{
+  "schema_name": "neurodecodekit.communication_live_session_g0_implementation_proof",
+  "schema_version": "0.1.0",
+  "proof_id": "COMM-LIVE-G0-implementation-remote-proof-v0",
+  "lane_id": "COMM-LIVE-G0",
+  "recorded_at_local": "2026-08-27",
+  "status": "implementation_remotely_green",
+  "implementation_commit": "bc9bb109c9c82b56afe06d983d82b5b8ece669cf",
+  "remote_proof": {
+    "head_sha": "bc9bb109c9c82b56afe06d983d82b5b8ece669cf",
+    "CI_conclusion": "success",
+    "CI_run_id": 33123115516,
+    "jobs": [
+      {
+        "name": "Base Python",
+        "conclusion": "success",
+        "job_id": 98694674092
+      },
+      {
+        "name": "Optional Neuro Readers",
+        "conclusion": "success",
+        "job_id": 98694674289
+      }
+    ]
+  },
+  "artifact_count": 8,
+  "artifact_bytes": 214757,
+  "artifacts": [
+    {
+      "path": "src/neurodecodekit/streaming/__init__.py",
+      "bytes": 74,
+      "sha256": "8a24f210f78517a095b0a7842957c741c4c67da20223778a8860a1899ae6d5e3",
+      "Git_blob": "d0cc24a49a2d3b3dd187254cd57d52133728e258"
+    },
+    {
+      "path": "src/neurodecodekit/streaming/source_chunk.py",
+      "bytes": 57627,
+      "sha256": "5b7d36a20b4ae3d92a4c6e21c350dafa64606713ed7c5fc9bef2290d1fa3a785",
+      "Git_blob": "af7fdea758b29b13a526d2de8d225ae270f91f66"
+    },
+    {
+      "path": "src/neurodecodekit/streaming/live_session.py",
+      "bytes": 67018,
+      "sha256": "dc6713f5395e76e3f8c17f0719c1f72b506887d3e9588f7ae96f81b9c63d49e6",
+      "Git_blob": "40067788de93068880eed0e44e10b8ca3e1348ae"
+    },
+    {
+      "path": "src/neurodecodekit/experiments/comm_live_g0_generated.py",
+      "bytes": 50369,
+      "sha256": "5f54dde406461b3053f76f1e24f0b83e90b808fdb054d7bd5f0bf9023969324d",
+      "Git_blob": "5582135b099098dc4bc80d71c7e1635be019879e"
+    },
+    {
+      "path": "src/neurodecodekit/comm_live_g0_cli.py",
+      "bytes": 1313,
+      "sha256": "f4ce605584f9add340db97951623b83c5248513a836176c1b15cc27dea76bab2",
+      "Git_blob": "8114d8a230f997721fd7996d3bec6c9e38a8ed51"
+    },
+    {
+      "path": "tests/test_communication_source_chunk_v0.py",
+      "bytes": 13116,
+      "sha256": "e47a5c37a80dfa6c85c9f49e20876dff5f00597c02e8f8a46cceb061ae73bd92",
+      "Git_blob": "8b1c8cad4e4334d2fe997014ef5022f521405a23"
+    },
+    {
+      "path": "tests/test_communication_live_session.py",
+      "bytes": 15253,
+      "sha256": "10f6503c1b03c458953ebc9312fb0556a0c0e588a4e90026ec2d020f4db3e569",
+      "Git_blob": "a19aecf502964f36f8d5981ec584a9630ba389ae"
+    },
+    {
+      "path": "tests/test_communication_live_session_g0_implementation.py",
+      "bytes": 9987,
+      "sha256": "fdb933dfa6134352d744bd7ee2d37bb077be6203c619dd393278a3979b183a24",
+      "Git_blob": "287d631db32152dcbfa6cc5497eadffbf5ceb2a0"
+    }
+  ],
+  "proof_transition": {
+    "this_proof_commit_push_and_both_jobs_green_required_before_official_qualification": true,
+    "official_qualification_authorized_before_this_proof_is_remotely_green": false,
+    "fixed_result_path": "registries/communication_live_session_g0_generated_result.v0.json",
+    "fixed_ignored_consumed_marker": ".codex_work/communication_live_session_g0_official_consumed.v0.json",
+    "official_invocations_maximum": 1,
+    "rerun_or_output_substitution_allowed": false
+  },
+  "proof_operations": {
+    "generated_qualification_runs": 0,
+    "real_or_private_path_operations": 0,
+    "real_signal_or_target_reads": 0,
+    "model_or_training_runs": 0,
+    "network_or_provider_calls": 0,
+    "physical_stream_or_device_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "active_Tier_C_gate": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "changed": false,
+    "all_authority_flags_false": true
+  },
+  "claim_boundary": {
+    "engineering_capability": "exact_remote_green_proof_for_generated_causal_live_session_implementation",
+    "scientific_value": "none_proof_only",
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "live_neural_decoding_established": false
+  }
+}

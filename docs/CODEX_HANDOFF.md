@@ -1,5 +1,15 @@
 # Codex Handoff - NeuroDecodeKit
 
+> **COMM-LIVE-G0 implementation green, proof pending, 2026-08-27:** exact
+> implementation `bc9bb109c9c82b56afe06d983d82b5b8ece669cf` passed Base
+> `98694674092`, Optional Neuro Readers `98694674289`, and CI `33123115516`,
+> and is present on GitHub `main`. The proof-only record binds eight artifacts
+> totaling 214,757 bytes and performs zero qualification or protected
+> operations. Commit, push, and require both jobs green for that proof before
+> the sole official generated qualification. Preserve `DREYER-C5R-1-HL` as the
+> sole all-false Tier C gate and leave the unrelated tracker inspection file
+> untracked.
+
 > **COMM-LIVE-G0 Amendment 1 pending, 2026-08-27:** independent review found
 > chunk-count warm-up incompatible with partition invariance, cross-domain
 > clock subtraction unsafe without a verified mapping, and hash preimages

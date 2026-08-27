@@ -384,7 +384,7 @@
       "document": "docs/COMMUNICATION_LIVE_SESSION_G0_PREREGISTRATION.md",
       "contract": "registries/communication_live_session_g0_contract.v0.json",
       "status": "registration_remotely_green",
-      "current_status": "implementation_ready_pending_exact_commit_push_and_remote_green",
+      "current_status": "implementation_remotely_green_proof_record_pending_own_remote_green",
       "purpose": "compose_existing_RW3_SourceChunk_and_freeze_gap_reconnect_clock_abstention_and_stable_commit_semantics",
       "existing_SourceChunk_schema": "neurodecodekit.source_chunk.v0.1.0",
       "RW3_stage_A_review_scope": "dependency_free_existing_schema_validator_factory_and_generated_fixtures_only_after_registration_green",
@@ -431,7 +431,16 @@
       "live_session_implementation": {
         "document": "docs/COMMUNICATION_LIVE_SESSION_G0_IMPLEMENTATION.md",
         "registry": "registries/communication_live_session_g0_implementation.v0.json",
-        "status": "pending_exact_commit_push_and_remote_green",
+        "status": "remotely_green_and_present_on_GitHub_main",
+        "commit": "bc9bb109c9c82b56afe06d983d82b5b8ece669cf",
+        "CI_run_id": 33123115516,
+        "base_job_id": 98694674092,
+        "optional_job_id": 98694674289,
+        "implementation_proof": {
+          "document": "docs/COMMUNICATION_LIVE_SESSION_G0_IMPLEMENTATION_PROOF.md",
+          "registry": "registries/communication_live_session_g0_implementation_proof.v0.json",
+          "status": "pending_own_commit_push_and_both_jobs_green"
+        },
         "official_qualification_executed": false,
         "official_invocation_consumed": false,
         "real_or_private_operations": 0,

@@ -14364,3 +14364,10 @@ green; only then may the single generated qualification run.
   survives the full neuro-enabled suite. Restore only the two E402 annotations
   rejected by pinned Ruff 0.15.20, rerun repository-wide pinned lint, and
   require a new exact commit with both jobs green before proof or qualification.
+- 2026-08-27: Accept `bc9bb109c9c82b56afe06d983d82b5b8ece669cf`
+  as the exact remotely green COMM-LIVE-G0 implementation after correcting the
+  future-proof-presence test and passing Base `98694674092`, Optional Neuro
+  Readers `98694674289`, and CI `33123115516`. Bind its eight executable/test
+  artifacts in a separate proof-only record. Require that proof's own commit
+  to pass both jobs before the one generated qualification; keep every
+  real/private and scientific surface closed.

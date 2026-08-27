@@ -7,6 +7,14 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
+> COMM-LIVE-G0 implementation status, 2026-08-27: exact implementation
+> `bc9bb109c9c82b56afe06d983d82b5b8ece669cf` passed Base `98694674092`,
+> Optional Neuro Readers `98694674289`, and CI `33123115516`, and is present on
+> GitHub `main`. A proof-only record now binds its eight executable/test
+> artifacts. The proof record must itself be pushed and pass both jobs before
+> the sole generated qualification. No real EEG, target, model, provider,
+> stream, device, or scientific operation occurred.
+
 ## Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight
 
 Start with `registries/current_research_frontier.v0.json`, the machine-readable
@@ -72,12 +80,11 @@ unseen-person device stream. This Tier A plan made zero data, model, target,
 score, provider, stream, or hardware operations and does not change the Dreyer
 gate.
 
-The generated-only live-session boundary is implemented in
+The generated-only live-session boundary is implemented and remotely green in
 `src/neurodecodekit/streaming/live_session.py` and documented in
-`docs/COMMUNICATION_LIVE_SESSION_G0_IMPLEMENTATION.md`. It passed repeatable
-development checks over fictional SourceChunk streams, but its one official
-qualification remains closed until the exact implementation commit and both CI
-jobs are remotely green and recorded in an implementation proof. This is
+`docs/COMMUNICATION_LIVE_SESSION_G0_IMPLEMENTATION.md`. Its one official
+qualification remains closed until the separate implementation-proof record
+is itself committed, pushed, and remotely green. This is
 interface engineering only: it is not a live device run or neural result.
 
 The next communication milestone is now prospectively frozen in
