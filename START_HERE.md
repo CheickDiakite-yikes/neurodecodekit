@@ -113,6 +113,15 @@ manifest, dataset license, loader, and exact external-channel roster. The
 other reviewed sources provide only partial controls. No source was promoted,
 downloaded, or authorized by that Tier A pass.
 
+Then read `docs/COMM_G1_GENERATED_EXPERIMENT_PREREGISTRATION.md` and
+`registries/comm_g1_generated_experiment_contract.v0.json`. This pending
+registration freezes the generated reader/control/firewall/model/freezer/scorer
+qualification around six fictional participants, 144 rows, ten control arms,
+60 fits, and 60 prediction sets. It must become remotely green before
+generated implementation begins. It is not a real-data or scientific stage,
+and it does not authorize OpenNeuro metadata, payload, signal, target, model
+evidence, score, stream, or device operations.
+
 ## Historical BNCI-C3C5-1 Closed Lane
 
 The generated G1 pipeline is complete, remotely proven, and consumed. Its

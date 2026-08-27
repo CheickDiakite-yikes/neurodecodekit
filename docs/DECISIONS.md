@@ -13959,3 +13959,37 @@ Authority decision: no dataset-specific metadata request, payload, private
 path, header, sample, event, target, model, prediction, score, stream, device,
 release, cleanup, or claim operation is authorized or performed. Keep
 `DREYER-C5R-1-HL` sole and all-false.
+
+## 0492 - Freeze COMM-G1 Around Shortcut Discrimination Before Real Data
+
+Experiment decision: qualify the full communication analysis control plane on
+generated data before reading a real signal. Use six fictional participants,
+three sessions, four classes, 144 rows, and six zero-calibration held-out-person
+folds. Preserve causal timing, true lengths, masks, source rate, role identity,
+and participant/session/trial/split identity.
+
+Control decision: compare equal and source priors, cue/time, EOG, oral EMG,
+all peripheral/context controls, selected EEG, posterior EEG, peripheral plus
+residual EEG, and peripheral plus matched deranged residual EEG. Freeze one
+source-only ridge residualizer and one compact L2 multinomial logistic family;
+no hyperparameter selection or larger model is eligible.
+
+Firewall decision: allow each fold only five source participants' generated
+signals and targets plus one held-out participant's generated signals. Seal
+held-out synthetic targets until an aggregate hash-only prediction freeze,
+then permit exactly one synthetic delivery and score with zero later update.
+
+Qualification decision: require one injected residual-EEG positive route,
+seven shortcut-only negative routes, 22 adversarial families, at least 30
+independent refusals, and deterministic two-workdir replay. A generated pass
+has no scientific value.
+
+Resource decision: one thread, worker, and numerical job; 180 seconds; 512 MiB
+RSS; 32 MiB generated input; 32 MiB private generated output; 1 MiB public
+output; zero network, provider, real/private, stream, or device bytes.
+
+Authority decision: implementation begins only after this registration is
+committed, pushed, and remotely green under Tier B. The one official generated
+qualification waits for the exact implementation to become remotely green.
+Every real operation remains Tier C, and `DREYER-C5R-1-HL` remains the sole
+active Tier C packet with all flags false.

@@ -121,6 +121,17 @@ remain useful partial candidates whose missing controls must be stated rather
 than silently treated as equivalent evidence. This review made no payload or
 private-data operation and created no acquisition authority.
 
+The next control-plane step is now frozen in the
+[`COMM-G1 generated experiment contract`](docs/COMM_G1_GENERATED_EXPERIMENT_PREREGISTRATION.md).
+It specifies a six-participant synthetic leave-one-person-out matrix with ten
+fixed arms: priors, cue/time, EOG, oral EMG, all peripheral/context controls,
+selected EEG, posterior EEG, peripheral plus residual EEG, and a matched
+deranged-EEG control. Its target firewall, 60-fit compact schedule, aggregate
+prediction freeze, isolated synthetic scorer, and shortcut-only negative
+fixtures must pass before any real analysis can be proposed. The contract is
+not yet implemented and has no scientific value; it authorizes no real data,
+model evidence, stream, device, or claim operation.
+
 ## Five Scientific Targets
 
 NeuroDecodeKit is now organized around five claims that must be earned

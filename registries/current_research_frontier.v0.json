@@ -72,6 +72,24 @@
         "payload_or_private_operations": 0,
         "active_Tier_C_gate_changed": false
       },
+      "generated_experiment_preregistration": {
+        "gate_id": "COMM-G1_GENERATED_QUALIFICATION",
+        "document": "docs/COMM_G1_GENERATED_EXPERIMENT_PREREGISTRATION.md",
+        "contract": "registries/comm_g1_generated_experiment_contract.v0.json",
+        "status": "prospective_registration_pending_exact_commit_remote_green",
+        "generated_participants": 6,
+        "generated_rows": 144,
+        "outer_folds": 6,
+        "fixed_conditions": 10,
+        "planned_parameter_update_fits": 60,
+        "planned_prediction_sets": 60,
+        "planned_prediction_rows": 1440,
+        "generated_implementation_authorized_now": false,
+        "generated_qualification_authorized_now": false,
+        "real_or_private_operations": 0,
+        "scientific_value": "none_generated_engineering_only",
+        "active_Tier_C_gate_changed": false
+      },
       "dataset_specific_GraphQL_authorized_now": false,
       "generated_implementation_authorized_now": false,
       "real_or_private_operations": 0

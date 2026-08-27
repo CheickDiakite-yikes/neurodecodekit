@@ -8003,3 +8003,29 @@ private state, signal, target, model, prediction, score, stream, device,
 release, cleanup, or claim operation occurred. Preserve the 20 GiB total and
 10 GiB selected-raw caps and keep the unrelated tracker inspection NDJSON
 untouched.
+
+## 2026-08-27 COMM-G1 Preregistration Handoff
+
+Read:
+
+1. `docs/COMM_G1_GENERATED_EXPERIMENT_PREREGISTRATION.md`;
+2. `registries/comm_g1_generated_experiment_contract.v0.json`; and
+3. `tests/test_comm_g1_generated_experiment_contract.py`.
+
+COMM-G1 is a pending generated-only registration. It freezes six fictional
+participants / 144 rows, six held-out-person folds, ten fixed control arms,
+one ridge residualizer, one compact L2 logistic family, 60 fits, 60 prediction
+sets, 1,440 prediction rows, one aggregate freeze, one synthetic target
+delivery, one synthetic score, and zero reruns. The fixture matrix includes an
+injected residual-EEG positive and seven eye, mouth, posterior, cue, timing,
+no-signal, or no-increment negative routes.
+
+Current generated implementation and qualification authority are false. First
+commit, push, and remotely green the registration. Then Tier B may implement
+only generated `plan`, `qualify`, and aggregate `inspect`; the sole official
+qualification waits for that exact implementation to become remotely green.
+
+Do not query or download OpenNeuro, read real/private state, implement RW3 or
+NDK_STREAM1, use a provider, stream a device, or claim a neural result under
+this registration. Keep `DREYER-C5R-1-HL` sole and all-false, preserve the 20
+GiB total / 10 GiB raw caps, and leave the unrelated tracker NDJSON untouched.

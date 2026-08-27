@@ -15866,3 +15866,29 @@ Immediate gate: keep the source watchlist public and target-free. Prepare only
 Tier A `COMM-G1` generated reader/control/firewall contract design; do not
 implement RW3/NDK_STREAM1 or create a real-data packet under general
 continuation.
+
+### COMM-G1 generated experiment preregistered
+
+- Bound the exact green communication program, COMM-L0 proof closeout, and
+  replication-source refresh as parent evidence.
+- Froze six fictional participants / 144 generated rows in six zero-calibration
+  held-out-person folds with eight EEG, four EOG, two oral-EMG channels, and
+  source identity, timestamp, length, and mask preservation.
+- Froze one source-only ridge residualizer and one compact multinomial L2
+  logistic family across ten controls. The exact generated schedule is six
+  residualizer plus 54 classifier/prior fits, 60 prediction sets, 1,440 rows,
+  one aggregate freeze, one synthetic target delivery, one synthetic score,
+  zero updates, and zero reruns.
+- Added positive residual-EEG routing, seven shortcut-only negative fixtures,
+  22 adversarial families, at least 30 refusal IDs, deterministic replay, and
+  no real path or network mode.
+- Capped a future generated run at one thread/worker/job, 180 seconds, 512 MiB
+  peak RSS, 32 MiB generated input, 32 MiB private generated output, and 1 MiB
+  public output. The 20 GiB total / 10 GiB raw limits remain unchanged.
+- Focused contract, JSON, Ruff, and diff checks passed. Generated
+  implementation and qualification remain false until their respective green
+  barriers; real operations and scientific claims remain false.
+
+Immediate gate: commit, push, and remotely green this exact registration.
+After that, implement generated-only COMM-G1 under Tier B without real source,
+provider, stream, device, or target access.
