@@ -15818,3 +15818,20 @@ generated qualification.
 Immediate gate: commit, push, and remotely green this result closeout. Real
 OpenNeuro metadata remains a separate Tier C operation and no payload request
 is authorized. `DREYER-C5R-1-HL` remains the sole active Tier C packet.
+
+### COMM-L0 generated result remotely proven
+
+- Result commit `f64d4f303edf51e3b3ea66962bdc7152ff7346fd`
+  passed Base Python job `98407229142`, Optional Neuro Readers job
+  `98407229028`, and CI `33038718183`.
+- Added a proof-only closeout binding the exact human result, machine result,
+  and result test: three tracked artifacts / 10,500 bytes under canonical
+  artifact-set SHA-256
+  `356a4db3be2bd4255efcf294e2abe657735c9d0762244333d64a54ec22692063`.
+- The closeout repeats no qualification and performs zero ignored-state,
+  network, real/private, payload, signal, target, model, prediction, score,
+  release, or claim operation.
+
+Immediate gate: commit, push, and remotely green this proof-only closeout.
+Then COMM-L0 generated engineering is closed. Real source metadata remains a
+separate Tier C operation; no payload operation is authorized.

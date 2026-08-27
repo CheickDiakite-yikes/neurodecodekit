@@ -32,6 +32,10 @@
       "generated_qualification_result": {
         "document": "docs/COMMUNICATION_EEG_SOURCE_IDENTITY_GENERATED_QUALIFICATION_RESULT.md",
         "registry": "registries/communication_eeg_source_identity_generated_qualification_result.v0.json",
+        "result_commit": "f64d4f303edf51e3b3ea66962bdc7152ff7346fd",
+        "result_CI_run_id": 33038718183,
+        "result_base_python_job_id": 98407229142,
+        "result_optional_neuro_readers_job_id": 98407229028,
         "success_replays": 2,
         "adversarial_refusals": 20,
         "generated_input_bytes": 39137,
@@ -41,6 +45,15 @@
         "consumed": true,
         "rerun_allowed": false,
         "scientific_value": "none_generated_engineering_only"
+      },
+      "generated_qualification_proof_closeout": {
+        "document": "docs/COMMUNICATION_EEG_SOURCE_IDENTITY_GENERATED_QUALIFICATION_PROOF_CLOSEOUT.md",
+        "registry": "registries/communication_eeg_source_identity_generated_qualification_proof.v0.json",
+        "status": "proof_only_pending_exact_commit_remote_green",
+        "bound_artifacts": 3,
+        "bound_bytes": 10500,
+        "qualification_reruns": 0,
+        "network_or_real_operations": 0
       },
       "dataset_specific_GraphQL_authorized_now": false,
       "generated_implementation_authorized_now": false,

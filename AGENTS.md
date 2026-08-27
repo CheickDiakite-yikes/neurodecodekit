@@ -77,6 +77,12 @@ its machine result. The qualification is consumed and must not be rerun. It
 made zero network or real/private operation and has no scientific value. Real
 metadata and payload access remain closed.
 
+Exact generated result `f64d4f303edf51e3b3ea66962bdc7152ff7346fd`
+passed Base job `98407229142`, Optional Neuro Readers job `98407229028`, and
+CI `33038718183`. Read the proof-only closeout before preparing any later
+COMM-L0 transition. It binds three result artifacts / 10,500 bytes and repeats
+no qualification or real operation.
+
 `DREYER-C5R-1-HL` is the sole active Tier C packet. Read, in order:
 
 1. `registries/current_research_frontier.v0.json`;

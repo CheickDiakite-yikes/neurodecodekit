@@ -7962,3 +7962,10 @@ packet. `DREYER-C5R-1-HL` remains the sole active Tier C gate, and the current
 result does not authorize or replace it. Keep the 20 GiB total / 10 GiB raw
 caps, preserve the unrelated tracker inspection file, and touch no other
 project.
+
+Result commit `f64d4f303edf51e3b3ea66962bdc7152ff7346fd` passed Base
+job `98407229142`, Optional Neuro Readers job `98407229028`, and CI
+`33038718183`. The proof-only closeout now binds the exact three result
+artifacts / 10,500 bytes without rerunning qualification or reading ignored
+state. Commit, push, and green the closeout before considering COMM-L0
+generated engineering closed.

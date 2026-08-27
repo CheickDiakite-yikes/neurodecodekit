@@ -98,6 +98,12 @@ must not be rerun. Read
 Real metadata, payloads, signals, targets, models, scores, and claims remain
 closed.
 
+Exact generated result `f64d4f3` passed both required jobs in CI
+`33038718183`. Its proof-only closeout binds the three exact result artifacts
+without rerunning the qualification or reading ignored state. After that
+closeout is remotely green, COMM-L0 generated engineering is closed; real
+metadata remains a separate Tier C gate.
+
 ## Historical BNCI-C3C5-1 Closed Lane
 
 The generated G1 pipeline is complete, remotely proven, and consumed. Its

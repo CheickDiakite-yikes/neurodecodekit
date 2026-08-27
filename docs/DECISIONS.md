@@ -13908,3 +13908,22 @@ touch no other project, and preserve unrelated untracked work.
 Gate decision: a real `ds003626` metadata response remains a separate Tier C
 operation with its own request, proof, and exact maintainer decision.
 `DREYER-C5R-1-HL` remains the sole active Tier C packet.
+
+## 0490 - Close COMM-L0 Generated Evidence With Remote Proof
+
+Remote-proof decision: accept result commit
+`f64d4f303edf51e3b3ea66962bdc7152ff7346fd` only after Base Python job
+`98407229142`, Optional Neuro Readers job `98407229028`, and CI
+`33038718183` pass.
+
+Binding decision: proof-read only the three committed result artifacts and
+their Git blob identities, totaling 10,500 bytes. Bind their canonical set to
+SHA-256 `356a4db3be2bd4255efcf294e2abe657735c9d0762244333d64a54ec22692063`.
+
+Consumption decision: do not rerun or inspect the ignored qualification. The
+result remains one consumed generated invocation with no scientific value.
+
+Authority decision: this proof-only closeout authorizes no OpenNeuro query,
+payload, BDF read, signal/event/target/label access, model, prediction, score,
+stream, hardware, release, or claim upgrade. Preserve the 20 GiB total / 10
+GiB raw caps and the existing sole Tier C packet.

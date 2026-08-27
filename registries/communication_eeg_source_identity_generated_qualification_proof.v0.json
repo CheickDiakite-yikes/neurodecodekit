@@ -1,0 +1,85 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_source_identity_generated_qualification_proof",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-27",
+  "lane_id": "COMM-L0",
+  "status": "proof_only_closeout_pending_exact_commit_remote_green",
+  "green_result_commit": {
+    "commit": "f64d4f303edf51e3b3ea66962bdc7152ff7346fd",
+    "CI_run_id": 33038718183,
+    "base_python_job_id": 98407229142,
+    "optional_neuro_readers_job_id": 98407229028,
+    "both_required_jobs_green": true
+  },
+  "bound_result_artifacts": [
+    {
+      "path": "docs/COMMUNICATION_EEG_SOURCE_IDENTITY_GENERATED_QUALIFICATION_RESULT.md",
+      "bytes": 3389,
+      "sha256": "be7207c8092279d85f84817950604a731d6be0319f8905ce92eb3f9cf0f4ef19",
+      "git_blob": "fdfb7309ac020b7b4dfe8dc052594ed2ebce7d5c"
+    },
+    {
+      "path": "registries/communication_eeg_source_identity_generated_qualification_result.v0.json",
+      "bytes": 3001,
+      "sha256": "39b0833ac821246a7159fda7575f6cfa3c1f621fd3acb64af6f3fa07fe3fb48d",
+      "git_blob": "c384d08b91a35f139eb47c5b66265e245687f133"
+    },
+    {
+      "path": "tests/test_communication_eeg_source_identity_generated_qualification_result.py",
+      "bytes": 4110,
+      "sha256": "0b3eae1901fca13f263e59c841d50e8f57b24ec919ca6c25c65833d9e49f4323",
+      "git_blob": "552545b0dae5c24a46fbe7af01202a34690bf24e"
+    }
+  ],
+  "bound_result_artifact_summary": {
+    "count": 3,
+    "bytes": 10500,
+    "canonical_artifact_set_sha256": "356a4db3be2bd4255efcf294e2abe657735c9d0762244333d64a54ec22692063"
+  },
+  "scope_preservation": {
+    "qualified_module_unchanged": true,
+    "implementation_record_unchanged": true,
+    "result_artifacts_unchanged": true,
+    "qualification_rerun": false,
+    "resource_caps_unchanged": true,
+    "authority_expanded": false,
+    "claim_boundary_changed": false
+  },
+  "operation_counters": {
+    "tracked_artifact_reads": 3,
+    "Git_proof_reads": 3,
+    "generated_qualification_invocations": 0,
+    "dataset_specific_GraphQL_requests": 0,
+    "network_bytes": 0,
+    "real_or_private_path_reads": 0,
+    "payload_requests": 0,
+    "payload_bytes": 0,
+    "BDF_header_reads": 0,
+    "signal_samples": 0,
+    "event_target_or_label_rows": 0,
+    "model_runs": 0,
+    "prediction_sets": 0,
+    "scores": 0,
+    "stream_or_device_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "transition": {
+    "effective_before_this_closeout_commit_remote_green": false,
+    "generated_engineering_closed_after_remote_green": true,
+    "real_metadata_operation_authorized_by_closeout": false,
+    "payload_operation_authorized_by_closeout": false,
+    "fresh_Tier_C_packet_and_decision_required": true,
+    "DREYER_C5R_1_HL_remains_sole_active_Tier_C_packet": true
+  },
+  "claim_boundary": {
+    "engineering_proof_added": "The exact generated COMM-L0 result is independently hash size Git-blob and remote-CI bound.",
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_participant_generalization_established": false,
+    "independent_replication_established": false,
+    "live_neural_decoding_established": false
+  }
+}
