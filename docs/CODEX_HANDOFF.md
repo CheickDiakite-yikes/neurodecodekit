@@ -8166,8 +8166,15 @@ The raw body is not retained, the private canonical manifest is capped at 1 MiB,
 the public result is aggregate-only, and the complete incremental disk envelope
 is 8 MiB.
 
-Immediate gate: verify, commit, push, and remotely green this request, then add
-a proof-only closeout without activating it. `DREYER-C5R-1-HL` remains the sole
-active Tier C packet. Do not query OpenNeuro, create the wrapper, write a private
-manifest, touch another project, or commit the unrelated tracker inspection
-NDJSON under this request milestone.
+Exact request `12e4e9f6e669bd1645911804b8e1c265fb04be29` passed Base
+job `98483805541`, Optional Neuro Readers job `98483805735`, and CI
+`33062307015`. Proof-only closeout
+`3e1322d8f405c000c3d5009ff9e3597d25423613` passed Base job
+`98486676966`, Optional Neuro Readers job `98486676639`, and CI
+`33063157757`.
+
+Immediate gate: none of that activates the packet. `DREYER-C5R-1-HL` remains
+the sole active Tier C packet. Do not query OpenNeuro, create the wrapper, write
+a private manifest, touch another project, or commit the unrelated tracker
+inspection NDJSON. COMM-L0-META can advance only after Dreyer is separately
+closed or parked and a fresh packet-bound decision is remotely green before M1.

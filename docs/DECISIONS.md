@@ -14123,3 +14123,10 @@ private temporary files and the exact inode-verified public-result temporary
 file. That same-parent public temporary must be created descriptor-relatively
 with `O_CREAT|O_EXCL|O_NOFOLLOW` and mode `0600`; cleanup may never remove the
 consumed marker, a competing destination, or the published result.
+
+Proof decision: exact request `12e4e9f6e669bd1645911804b8e1c265fb04be29`
+passed both jobs in CI `33062307015`. Its proof-only closeout
+`3e1322d8f405c000c3d5009ff9e3597d25423613` passed both jobs in CI
+`33063157757` and binds three request artifacts totaling 33,996 bytes. Treat
+the packet as remotely reviewable but still queued and all-false. No active
+gate, authority, real-data operation, or scientific claim changed.

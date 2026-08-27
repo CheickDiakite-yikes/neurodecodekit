@@ -110,6 +110,11 @@ adds generated boundary qualification, durable no-follow marker rules, exact
 decision binding across M1/M2/M3, and an 8 MiB disk envelope. It is not active,
 authorizes nothing now, and cannot displace `DREYER-C5R-1-HL`.
 
+Exact request `12e4e9f` passed both required jobs in CI `33062307015`.
+Proof-only closeout `3e1322d` passed both required jobs in CI `33063157757`.
+The packet is now reviewable but remains queued and all-false; those green
+proofs do not authorize M1, a metadata request, or any EEG operation.
+
 Before proposing an independent communication cohort, read
 `docs/COMMUNICATION_EEG_REPLICATION_SOURCE_REFRESH_2026_08_27.md` and its
 machine registry. The refresh found no public source yet qualified for the

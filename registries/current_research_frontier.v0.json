@@ -66,7 +66,7 @@
         "registry": "registries/communication_eeg_source_identity_metadata_authorization_request.v0.json",
         "amendment_document": "docs/COMMUNICATION_EEG_SOURCE_IDENTITY_AMENDMENT_1.md",
         "amendment_registry": "registries/communication_eeg_source_identity_amendment_1.v0.json",
-        "status": "all_false_request_remotely_green_proof_only_closeout_pending_exact_commit_push_remote_green",
+        "status": "all_false_request_and_proof_closeout_remotely_green_queued_not_active",
         "bound_artifacts": 20,
         "bound_artifact_bytes": 156361,
         "bound_artifact_set_sha256": "1064a40baa933be5158bfa45ec87a4697d40c058d1761c76833758227f654518",
@@ -86,7 +86,12 @@
         "proof_only_closeout": {
           "document": "docs/COMMUNICATION_EEG_SOURCE_IDENTITY_METADATA_REQUEST_PROOF_CLOSEOUT.md",
           "registry": "registries/communication_eeg_source_identity_metadata_request_proof.v0.json",
-          "status": "pending_exact_commit_push_remote_green",
+          "status": "proof_only_closeout_remotely_green",
+          "proof_commit": "3e1322d8f405c000c3d5009ff9e3597d25423613",
+          "proof_CI_run_id": 33063157757,
+          "proof_base_python_job_id": 98486676966,
+          "proof_optional_neuro_readers_job_id": 98486676639,
+          "both_required_jobs_green": true,
           "network_or_real_operations": 0,
           "authority_expanded": false
         }

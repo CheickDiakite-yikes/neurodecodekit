@@ -97,6 +97,15 @@ durable no-follow marker semantics, one decision hash through M1/M2/M3, and an
 8 MiB disk envelope. It is not active, cannot displace `DREYER-C5R-1-HL`, and
 authorizes nothing now.
 
+Exact request `12e4e9f6e669bd1645911804b8e1c265fb04be29` passed Base
+job `98483805541`, Optional Neuro Readers job `98483805735`, and CI
+`33062307015`. Its proof-only closeout
+`3e1322d8f405c000c3d5009ff9e3597d25423613` passed Base job
+`98486676966`, Optional Neuro Readers job `98486676639`, and CI
+`33063157757`. COMM-L0-META is therefore reviewable but remains queued,
+all-false, and inactive. Do not implement M1 or contact OpenNeuro under general
+continuation.
+
 Also read the
 new Tier A replication-source refresh and machine record before proposing a
 second communication cohort. SilentSpeech-EEG is the strongest full-control

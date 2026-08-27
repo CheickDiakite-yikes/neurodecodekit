@@ -119,6 +119,11 @@ binding across all future stages, and an 8 MiB disk envelope. Every authority
 flag remains false; the packet is not active and cannot displace the current
 Dreyer gate.
 
+The exact request and its proof-only closeout are remotely green at commits
+`12e4e9f` and `3e1322d`. That establishes a reviewable, fail-closed route to
+source identity, not permission to run it: no OpenNeuro response, BDF payload,
+real EEG, model, or score was accessed.
+
 A fresh
 [replication-source review](docs/COMMUNICATION_EEG_REPLICATION_SOURCE_REFRESH_2026_08_27.md)
 found no second public cohort that is yet verified with the complete raw EEG,

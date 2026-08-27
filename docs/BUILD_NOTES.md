@@ -16043,3 +16043,11 @@ and require both remote jobs green before the one official qualification.
 - Every authority and operation counter remains false or zero. The packet is
   queued behind `DREYER-C5R-1-HL`, cannot displace it, touched no real/private
   path, and establishes no scientific claim.
+- Exact request `12e4e9f6e669bd1645911804b8e1c265fb04be29` passed Base
+  job `98483805541`, Optional Neuro Readers job `98483805735`, and CI
+  `33062307015`.
+- Proof-only closeout `3e1322d8f405c000c3d5009ff9e3597d25423613`
+  passed Base job `98486676966`, Optional Neuro Readers job `98486676639`,
+  and CI `33063157757`. It bound three exact request artifacts / 33,996 bytes
+  without a generated, network, payload, private-path, model, or score
+  operation.
