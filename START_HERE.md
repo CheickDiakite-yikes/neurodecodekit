@@ -37,14 +37,20 @@ Read, in order:
 3. `registries/dreyer_c5r_1_contract.v0.json`;
 4. `docs/DREYER_C5R_1_GENERATED_QUALIFICATION_RESULT.md`;
 5. `docs/DREYER_C5R_1_STAGE_H_GENERATED_QUALIFICATION_RESULT.md`;
-6. `docs/DREYER_C5R_1_STAGE_H_LIVE_PREFLIGHT_AUTHORIZATION_PACKET.md`; and
-7. `docs/DREYER_C5R_1_STAGE_H_LIVE_PREFLIGHT_REQUEST_PROOF_CLOSEOUT.md`.
+6. `docs/DREYER_C5R_1_STAGE_H_LIVE_PREFLIGHT_AUTHORIZATION_PACKET.md`;
+7. `docs/DREYER_C5R_1_STAGE_H_LIVE_PREFLIGHT_REQUEST_PROOF_CLOSEOUT.md`; and
+8. `docs/DREYER_C5R_1_STAGE_H_LIVE_IMPLEMENTATION_SAFETY_REVIEW.md`.
 
 The full generated firewall/model/scorer passed once, and the streaming
 fixed-header preflight passed two valid replays plus 18 adversarial refusals.
 Both qualifications are consumed and have no scientific value. No real Dreyer
 payload, header, annotation, signal, target, model outcome, prediction, or
 score has been read.
+
+The static live-implementation safety review closes the known path-race,
+atomic-promotion, transport, resource, exception-privacy, and EDF
+header-to-payload geometry requirements before H-L1. It performs no live
+operation and changes no authority.
 
 All-false request `5191e79e2ccfa50b5042a24357c0c22d68d8f088` passed CI
 `32934958878`. Its proof-only closeout

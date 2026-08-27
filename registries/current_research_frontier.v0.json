@@ -125,6 +125,17 @@
       "proof_closeout_base_python_job_id": 98077895278,
       "proof_closeout_optional_neuro_readers_job_id": 98077895460,
       "both_request_and_proof_required_jobs_green": true,
+      "pre_implementation_safety_review": {
+        "document": "docs/DREYER_C5R_1_STAGE_H_LIVE_IMPLEMENTATION_SAFETY_REVIEW.md",
+        "document_bytes": 6901,
+        "document_sha256": "b5c4898163e25b943349290aec35f2b65af9e77948f81653f97bba4165aca58d",
+        "registry": "registries/dreyer_c5r_1_stage_h_live_implementation_safety_review.v0.json",
+        "registry_bytes": 4417,
+        "registry_sha256": "32a62b11ad5613a533d4dc20f1f86a209e67a13ca6ae86fa6a2b89154d5d4fff",
+        "required_wrapper_controls": 9,
+        "authority_change": false,
+        "real_or_private_operations": 0
+      },
       "exact_member_bytes": 14805604,
       "exact_member_sha256": "a678fe6d37e0496eb381dcac6b877b047d02dfffc659ae4cfc38226f4850e185",
       "all_authority_flags_false": true,

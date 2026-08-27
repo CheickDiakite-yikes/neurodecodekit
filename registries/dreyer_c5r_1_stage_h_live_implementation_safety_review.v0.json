@@ -1,0 +1,106 @@
+{
+  "schema_name": "neurodecodekit.dreyer_c5r_1_stage_h_live_implementation_safety_review",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-26",
+  "lane_id": "DREYER-C5R-1-HL",
+  "status": "pre_decision_static_review_no_authority_change",
+  "reviewed_artifacts": [
+    {
+      "path": "docs/DREYER_C5R_1_STAGE_H_LIVE_PREFLIGHT_AUTHORIZATION_PACKET.md",
+      "bytes": 8231,
+      "sha256": "c5dbc973c8da2b1301d7e5553518d53735a1d01d9480a774db8e07b137ccefb5"
+    },
+    {
+      "path": "registries/dreyer_c5r_1_stage_h_live_preflight_authorization_request.v0.json",
+      "bytes": 10812,
+      "sha256": "61e9d09cd3afe2bfff5fd8f31bc6543b250f8d09a806bc7a4c134f9ddeda2e5b"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/dreyer_c5r_1_stage_h.py",
+      "bytes": 27855,
+      "sha256": "02c1726aaa1611ca4ca9de0db376881532123007e8fa4aa4e2c28ce6614ed20a"
+    },
+    {
+      "path": "src/neurodecodekit/dreyer_c5r_1_stage_h_cli.py",
+      "bytes": 2148,
+      "sha256": "0c1db3b4f449e14d2f7ca43fc75554027bc263a1c7e259746093fd588a2301a9"
+    },
+    {
+      "path": "tests/test_dreyer_c5r_1_stage_h_preflight.py",
+      "bytes": 14319,
+      "sha256": "fd562952520eaee2b9b35b86173f86169ec7d63fb70cb9c76c569b1e5cd120c7"
+    }
+  ],
+  "decision": {
+    "active_packet_unchanged": "DREYER-C5R-1-HL",
+    "one_file_preflight_remains_shortest_credible_route": true,
+    "preflight_payload_bytes": 14805604,
+    "protected_cohort_payload_bytes": 1779763388,
+    "existing_qualified_stage_H_artifacts_must_remain_byte_identical": true,
+    "H_L1_must_be_additive": true
+  },
+  "required_wrapper_controls": [
+    "fresh_exact_remote_proof_before_live_capability",
+    "durable_exclusive_nofollow_consumed_marker_before_opener",
+    "capability_safe_non_symlink_path_chain",
+    "private_staging_and_atomic_no_replace_promotion",
+    "proxy_free_verified_TLS_direct_GET_no_redirect_or_retry",
+    "bounded_deterministically_closed_response",
+    "continuous_resource_and_operation_ledger_enforcement",
+    "aggregate_allowlisted_H1_or_H0_publication_only",
+    "fixed_header_record_geometry_matches_exact_payload_bytes"
+  ],
+  "mandatory_generated_case_families": [
+    "locked_artifact_and_remote_proof",
+    "consumed_marker_durability_and_ordering",
+    "path_capability_symlink_hardlink_and_race",
+    "TLS_proxy_redirect_method_and_request_headers",
+    "response_status_URL_header_body_hash_EOF_and_close",
+    "fixed_header_sensor_roster_sampling_and_payload_geometry",
+    "runtime_RSS_network_disk_chunk_and_output_caps",
+    "cleanup_ownership_no_clobber_and_rerun_refusal",
+    "aggregate_privacy_and_zero_scientific_operation_counters"
+  ],
+  "evidence_ladder": [
+    "HL1_generated_live_wrapper_qualification_and_green_activation",
+    "HL2_one_exact_fixed_header_preflight",
+    "H1_narrowing_amendment_only",
+    "A_remaining_119_payload_acquisition",
+    "Q_complete_cohort_semantics_and_target_firewall",
+    "P_target_blind_prediction_freeze",
+    "T_one_frozen_score",
+    "untouched_R3_R6_then_external_cohort_replication",
+    "prospective_streaming_only_after_replication"
+  ],
+  "authority": {
+    "record_static_review": true,
+    "implement_HL1_live_wrapper": false,
+    "run_HL1_generated_qualification": false,
+    "create_HL2_activation": false,
+    "make_real_HTTP_request": false,
+    "open_or_write_real_payload": false,
+    "parse_real_EDF_header": false,
+    "acquire_remaining_119_payloads": false,
+    "read_annotation_signal_target_or_label": false,
+    "train_infer_deliver_target_or_score": false,
+    "release_publish_or_upgrade_claim": false
+  },
+  "operation_counters": {
+    "ignored_or_private_path_reads": 0,
+    "real_HTTP_requests": 0,
+    "real_network_bytes": 0,
+    "real_EDF_payload_bytes": 0,
+    "real_EDF_header_reads": 0,
+    "real_annotation_or_signal_reads": 0,
+    "real_target_or_label_reads": 0,
+    "model_or_training_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "claim_upgrades": 0
+  },
+  "claim_boundary": {
+    "maximum_future_R1_claim": "participant_independent_visually_cued_left_right_motor_imagery_condition_information_with_incremental_central_EEG_sensor_contribution_beyond_recorded_EOG_EMG_posterior_EEG_timing_and_derangement_controls_in_this_cohort",
+    "not_established": "spontaneous_intention_motor_cortex_causation_thought_or_language_decoding_live_decoding_hardware_home_or_clinical_utility"
+  }
+}

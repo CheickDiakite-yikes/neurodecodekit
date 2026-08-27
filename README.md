@@ -75,6 +75,13 @@ deliberately only one 14,805,604-byte EDF download and fixed-header check. It
 will verify whether the source file actually exposes the preregistered EEG,
 EOG, EMG, and 512 Hz roster before risking the other 119 files.
 
+The [live-wrapper safety review](docs/DREYER_C5R_1_STAGE_H_LIVE_IMPLEMENTATION_SAFETY_REVIEW.md)
+now freezes the missing one-shot protections: durable marker ordering,
+no-follow path capabilities, atomic no-replace publication, proxy-free TLS,
+continuous resource checks, sanitized failure output, and exact EDF
+header-to-payload geometry. It is a static engineering review, not permission
+or evidence.
+
 **What is proven now:** NeuroDecodeKit can localize a failed neural claim from
 aggregate evidence, freeze a stronger independent experiment, enforce its
 target firewall, and qualify its bounded preflight reproducibly.

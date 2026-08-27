@@ -13754,3 +13754,28 @@ Claim decision: no Dreyer EEG has been accessed. The fresh design and generated
 qualifications establish engineering readiness only, not EEG beyond peripheral
 controls, unseen-person generalization, movement intention, motor-cortex
 origin, language decoding, live use, hardware performance, or clinical value.
+
+## 0485 - Freeze The H-L1 Safety Shell Without Changing Authority
+
+Path decision: keep the one-file 14,805,604-byte Stage H preflight as the
+shortest credible next step because it tests the source sensor-header
+assumption before the remaining 1,779,763,388-byte cohort is risked. Treat
+Q -> P -> T, not header inspection, as the scientific center of gravity.
+
+Implementation decision: preserve the five qualified Stage H artifacts
+byte-identical. Require H-L1 to be an additive capability-safe wrapper with
+fresh exact remote proof, a durable exclusive no-follow marker before opener
+construction, proxy-free verified TLS, atomic no-replace final promotion,
+continuous runtime/RSS/network/disk/output enforcement, sanitized aggregate
+H0/H1 output, and an exact fixed-header record-geometry-to-payload-byte check.
+
+Qualification decision: generated/mock tests must exercise proof, marker
+ordering, symlink and destination races, redirects and proxies, transfer
+encoding, response closure, secret-bearing exceptions, resource limits,
+structural payload geometry, cleanup ownership, and rerun refusal before an
+activation can expose H-L2.
+
+Authority decision: this static review performs zero ignored/private access,
+real request, network byte, EDF read, model run, target delivery, score, or
+claim upgrade. Every H-L1/H-L2 authority remains false pending the fresh
+packet-bound maintainer decision and later green barriers.
