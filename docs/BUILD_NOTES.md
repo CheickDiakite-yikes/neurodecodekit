@@ -16196,3 +16196,11 @@ and require both remote jobs green before the one official qualification.
   set hash `c0b59f2a84e5dd912546ad8c35af4e1f9ce92276c24635eecdb018680c890be7`.
   The narrow generated implementation authority is now effective; the official
   qualification remains closed until implementation is separately green.
+- 2026-08-27: Added narrow `COMM-LIVE-G0-A1` after independent review found
+  three preimplementation ambiguities. The amendment replaces chunk-count
+  warm-up with fixed 16-sample frames and 32-sample warm-up, makes clock checks
+  domain-local unless a verified mapping exists, freezes sample-major semantic
+  hash chaining and self-excluding envelope/snapshot hashes, and requires
+  transactional pushes. Implementation is paused pending the amendment's own
+  remote-green proof. Runtime, data, network, model, device, and claim counters
+  remain zero.

@@ -97,8 +97,12 @@ class CommunicationLiveSessionG0RegistrationProofTests(unittest.TestCase):
         self.assertEqual(live["registration_commit"], self.proof["registration_commit"])
         self.assertEqual(live["registration_CI_run_id"], 33104044102)
         self.assertTrue(live["both_required_jobs_green"])
-        self.assertTrue(live["generated_implementation_authorized_now"])
+        self.assertFalse(live["generated_implementation_authorized_now"])
         self.assertFalse(live["generated_qualification_authorized_now"])
+        self.assertEqual(
+            live["amendment_1"]["status"], "pending_own_remote_green"
+        )
+        self.assertTrue(live["amendment_1"]["implementation_paused"])
 
 
 if __name__ == "__main__":

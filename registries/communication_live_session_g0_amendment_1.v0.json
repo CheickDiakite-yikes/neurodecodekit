@@ -1,0 +1,205 @@
+{
+  "schema_name": "neurodecodekit.communication_live_session_g0_amendment",
+  "schema_version": "0.1.0",
+  "amendment_id": "COMM-LIVE-G0-A1",
+  "gate_id": "COMM-LIVE-G0",
+  "recorded_at_local": "2026-08-27",
+  "status": "prospective_narrow_amendment_no_operation",
+  "parent_registration": {
+    "commit": "fb69324262b27ba9d8f0db1b42725e438c29d385",
+    "CI_run_id": 33104044102,
+    "document": {
+      "path": "docs/COMMUNICATION_LIVE_SESSION_G0_PREREGISTRATION.md",
+      "bytes": 9945,
+      "sha256": "d2a58d1f2bd970df435300dac7b33422fbd77c84fac5e34e81be8e8ae8461fa6"
+    },
+    "contract": {
+      "path": "registries/communication_live_session_g0_contract.v0.json",
+      "bytes": 9985,
+      "sha256": "3601df30a0823d2116ade758745ba86de7de155593c4e95f2162b6a7f5eac245"
+    }
+  },
+  "parent_proof": {
+    "commit": "7aae437229ccb0bba48619297ccd2fe40d0a0494",
+    "CI_run_id": 33104990326,
+    "base_job_id": 98632331055,
+    "optional_neuro_readers_job_id": 98632330691,
+    "document": {
+      "path": "docs/COMMUNICATION_LIVE_SESSION_G0_REGISTRATION_PROOF_CLOSEOUT.md",
+      "bytes": 1731,
+      "sha256": "d840920a12f78f3eae5226338e9dfccb4f56a1298b0fa56eda21d3cdec93933c"
+    },
+    "registry": {
+      "path": "registries/communication_live_session_g0_registration_proof.v0.json",
+      "bytes": 2884,
+      "sha256": "bc6f8816cba7f27b6cc7b4cf9e7280b228541bb30f44cab63d8bfd16e64b7b30"
+    }
+  },
+  "superseded_fields": {
+    "commit_policy.warmup_chunks_per_generation": 2
+  },
+  "sample_cadence": {
+    "processor_frame_valid_samples": 16,
+    "warmup_valid_samples_per_generation": 32,
+    "first_output_eligible_frame_index": 2,
+    "frame_index_origin": 0,
+    "frame_origin": "generation_relative_valid_sample_zero",
+    "incomplete_tail_buffered": true,
+    "transport_chunks_define_processor_updates": false,
+    "processor_events_per_chunk": "zero_one_or_many",
+    "gap_or_reconnect_discards_incomplete_tail": true,
+    "partition_schedules_required": [
+      "one_sample",
+      "fixed_width",
+      "jittered",
+      "whole_stream"
+    ],
+    "partition_invariant_surfaces": [
+      "semantic_prefix_sha256",
+      "processor_frame_events",
+      "abstentions",
+      "provisional_hypotheses",
+      "stable_commits",
+      "resets",
+      "frame_level_latency_records"
+    ]
+  },
+  "clock_domains": {
+    "order_checks_are_domain_local": true,
+    "numeric_values_from_different_domains_may_be_subtracted": false,
+    "cross_domain_latency_requires_verified_mapping": true,
+    "required_mapping_conditions": [
+      "named_correction_method",
+      "valid_correction_ledger_sha256",
+      "shared_declared_monotonic_domain",
+      "no_unrepresented_reset_or_regression",
+      "causal_ordering_valid"
+    ],
+    "unavailable_value": null,
+    "unavailable_flag_required": true,
+    "unavailable_reason_required": true,
+    "generated_common_domain": "synthetic_relative_monotonic",
+    "chunk_local_arrival_boundaries_in_replay_equivalence_payload": false,
+    "frame_level_clocks_partition_invariant": true
+  },
+  "canonical_encoding": {
+    "format": "UTF-8_JSON",
+    "sort_keys": true,
+    "separators": [",", ":"],
+    "allow_nan": false,
+    "terminal_newline_bytes": 1,
+    "unknown_fields_allowed": false
+  },
+  "hash_preimages": {
+    "valid_payload_sha256": {
+      "domain_ascii": "NDK-SOURCE-VALID-PAYLOAD-v0",
+      "domain_terminator_hex": "00",
+      "order": "sample_major_channel_order_frozen",
+      "byte_order": "little_endian",
+      "binds": [
+        "dtype",
+        "channel_count",
+        "valid_sample_count",
+        "packed_valid_values"
+      ],
+      "padding_included": false
+    },
+    "semantic_prefix_sha256": {
+      "domain_ascii": "NDK-SOURCE-SEMANTIC-v0",
+      "domain_terminator_hex": "00",
+      "initial_digest_binds_immutable_source_bindings": true,
+      "step": "SHA256(domain||previous_digest||uint64_be_element_length||element)",
+      "data_element_order": "one_logical_sample_then_channels_in_frozen_order",
+      "control_events_are_explicit_elements": true,
+      "snapshot_persists_digest_bytes_and_element_count": true,
+      "implementation_specific_hash_object_serialized": false
+    },
+    "chunk_envelope_sha256": {
+      "computed_last": true,
+      "canonical_envelope_field_omitted": "hashes.chunk_envelope_sha256",
+      "other_hash_fields_remain_in_preimage": true,
+      "self_reference_allowed": false
+    },
+    "snapshot_sha256": {
+      "computed_last": true,
+      "canonical_snapshot_field_omitted": "snapshot_sha256",
+      "self_reference_allowed": false
+    }
+  },
+  "transactional_push": {
+    "candidate_copy_required": true,
+    "state_committed_only_after_all_checks_pass": true,
+    "refusal_leaves_snapshot_byte_identical": true,
+    "processor_exception_leaves_snapshot_byte_identical": true,
+    "resource_refusal_leaves_snapshot_byte_identical": true
+  },
+  "snapshot_binding_fields": [
+    "source_identity",
+    "channel_contract",
+    "source_config_split_adapter_hashes",
+    "processor_model_decoder_policy_hashes",
+    "generation_sequence_and_correction_segment",
+    "next_source_sample",
+    "semantic_digest_and_element_count",
+    "frame_buffer_and_frame_index",
+    "warmup_state",
+    "provisional_and_committed_output",
+    "stability_and_rearm_state",
+    "bounded_counters",
+    "snapshot_sha256"
+  ],
+  "forbidden_key_scan_surfaces": [
+    "SourceChunk",
+    "bindings",
+    "processor_event",
+    "LiveUpdate",
+    "LiveSessionState"
+  ],
+  "proof_sequence": {
+    "amendment_commit_push_and_both_CI_jobs_green_before_implementation": true,
+    "amended_implementation_commit_push_and_both_CI_jobs_green_before_qualification": true,
+    "official_qualification_invocations_maximum": 1,
+    "rerun_allowed": false
+  },
+  "authority": {
+    "generated_implementation_after_amendment_green": true,
+    "generated_qualification_after_amended_implementation_green": true,
+    "real_or_private_data": false,
+    "target_or_label": false,
+    "model_or_training": false,
+    "provider_or_language_model": false,
+    "network": false,
+    "stream_or_device": false,
+    "later_RW3_adapter_stage": false,
+    "release": false,
+    "scientific_claim_upgrade": false,
+    "active_Tier_C_gate_changed": false
+  },
+  "operation_counters": {
+    "generated_qualification_runs": 0,
+    "real_or_private_path_operations": 0,
+    "real_signal_reads": 0,
+    "target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "provider_calls": 0,
+    "network_bytes": 0,
+    "physical_stream_or_device_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "active_gate": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "changed": false,
+    "all_authority_flags_false": true
+  },
+  "claim_boundary": {
+    "engineering_capability_established_now": false,
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "unseen_person_generalization_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "live_device_latency_established": false,
+    "human_benefit_established": false
+  }
+}

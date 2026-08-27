@@ -401,8 +401,18 @@
       "registration_optional_job_id": 98629018115,
       "both_required_jobs_green": true,
       "registration_proof": "registries/communication_live_session_g0_registration_proof.v0.json",
-      "generated_implementation_authorized_now": true,
+      "generated_implementation_authorized_now": false,
       "generated_qualification_authorized_now": false,
+      "amendment_1": {
+        "amendment_id": "COMM-LIVE-G0-A1",
+        "document": "docs/COMMUNICATION_LIVE_SESSION_G0_AMENDMENT_1.md",
+        "registry": "registries/communication_live_session_g0_amendment_1.v0.json",
+        "status": "pending_own_remote_green",
+        "reason": "freeze_sample_based_partition_invariance_cross_domain_clock_availability_and_exact_hash_preimages",
+        "implementation_paused": true,
+        "real_or_private_operations": 0,
+        "scientific_value": "none_specification_only"
+      },
       "scientific_value": "none_generated_engineering_only",
       "active_Tier_C_gate_changed": false
     },

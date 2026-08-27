@@ -14322,3 +14322,11 @@ green; only then may the single generated qualification run.
   qualification closed until the implementation commit is itself remotely
   green; keep every real/private, adapter, stream, device, and claim surface
   closed.
+- 2026-08-27: Pause `COMM-LIVE-G0` implementation for narrow Amendment 1.
+  Processor cadence and warm-up must be defined by fixed logical sample
+  boundaries, never transport chunk count. Treat source and host clocks as
+  incomparable unless a verified ledger maps them into one monotonic domain.
+  Freeze valid-payload, semantic-prefix, envelope, and snapshot hash preimages
+  before code. Require transactional push so every refusal leaves the previous
+  snapshot byte-identical. Resume generated implementation only after the
+  amendment commit is pushed and both remote jobs are green.

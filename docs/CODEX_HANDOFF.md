@@ -1,5 +1,14 @@
 # Codex Handoff - NeuroDecodeKit
 
+> **COMM-LIVE-G0 Amendment 1 pending, 2026-08-27:** independent review found
+> chunk-count warm-up incompatible with partition invariance, cross-domain
+> clock subtraction unsafe without a verified mapping, and hash preimages
+> underspecified. `COMM-LIVE-G0-A1` freezes 16-sample frames, 32-sample warm-up,
+> domain-local clock validation with explicit unavailable latency, sample-major
+> semantic chaining, self-excluding envelope/snapshot hashes, and transactional
+> push. Implementation is paused until this amendment is remotely green. No
+> runtime or scientific operation occurred.
+
 > **COMM-LIVE-G0 registration green, 2026-08-27:** exact registration
 > `fb69324262b27ba9d8f0db1b42725e438c29d385` passed Base `98629017931`,
 > Optional Neuro Readers `98629018115`, and CI `33104044102`. The proof binds
