@@ -1,5 +1,15 @@
 # Codex Handoff - NeuroDecodeKit
 
+> **COMM-LIVE-G0 registration green, 2026-08-27:** exact registration
+> `fb69324262b27ba9d8f0db1b42725e438c29d385` passed Base `98629017931`,
+> Optional Neuro Readers `98629018115`, and CI `33104044102`. The proof binds
+> three core artifacts totaling 27,168 bytes. The dependency-free existing
+> SourceChunk validator/factory, generated fixtures, and generated-only
+> LiveSession implementation may now begin. The sole generated qualification
+> remains closed until that implementation is separately committed, pushed,
+> and remotely green. No runtime, real/private, device, or claim operation
+> occurred.
+
 > **Parallel COMM-LIVE-G0 registration, 2026-08-27:** a prospective
 > generated-only contract now composes the existing RW3 `SourceChunk` schema
 > and supplies the narrow Stage A review for its dependency-free validator and

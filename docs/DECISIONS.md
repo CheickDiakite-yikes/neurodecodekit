@@ -14314,3 +14314,11 @@ green; only then may the single generated qualification run.
   streams and deterministic fake processors in this Tier B lane. Do not let a
   generated pass imply device latency, neural information, communication
   decoding, unseen-person generalization, or EEG beyond recorded controls.
+- 2026-08-27: Accept remote-green registration proof for `COMM-LIVE-G0` at
+  commit `fb69324262b27ba9d8f0db1b42725e438c29d385`, CI `33104044102`, Base
+  `98629017931`, and Optional Neuro Readers `98629018115`. Activate only the
+  dependency-free existing SourceChunk validator/factory, generated fixtures,
+  and generated LiveSession implementation. Keep the one official generated
+  qualification closed until the implementation commit is itself remotely
+  green; keep every real/private, adapter, stream, device, and claim surface
+  closed.

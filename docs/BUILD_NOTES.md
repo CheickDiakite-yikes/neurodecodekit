@@ -16189,3 +16189,10 @@ and require both remote jobs green before the one official qualification.
   eight clocks, two replays, three schedules, 33 adversarial refusals, and
   strict resource caps. No implementation, generated qualification,
   real/private operation, device, provider, release, or claim upgrade occurred.
+- 2026-08-27: Closed the `COMM-LIVE-G0` registration proof. Exact commit
+  `fb69324262b27ba9d8f0db1b42725e438c29d385` passed Base `98629017931`,
+  Optional Neuro Readers `98629018115`, and CI `33104044102`. The proof binds
+  three immutable registration artifacts totaling 27,168 bytes under canonical
+  set hash `c0b59f2a84e5dd912546ad8c35af4e1f9ce92276c24635eecdb018680c890be7`.
+  The narrow generated implementation authority is now effective; the official
+  qualification remains closed until implementation is separately green.

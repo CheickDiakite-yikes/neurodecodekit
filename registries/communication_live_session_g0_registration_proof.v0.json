@@ -1,0 +1,84 @@
+{
+  "schema_name": "neurodecodekit.communication_live_session_g0_registration_proof",
+  "schema_version": "0.1.0",
+  "gate_id": "COMM-LIVE-G0",
+  "recorded_at_local": "2026-08-27",
+  "status": "registration_remotely_green_proof_only_no_operation",
+  "registration_commit": "fb69324262b27ba9d8f0db1b42725e438c29d385",
+  "remote_proof": {
+    "repository": "CheickDiakite-yikes/neurodecodekit",
+    "workflow": "CI",
+    "CI_run_id": 33104044102,
+    "CI_conclusion": "success",
+    "head_sha": "fb69324262b27ba9d8f0db1b42725e438c29d385",
+    "jobs": [
+      {
+        "name": "Base Python",
+        "job_id": 98629017931,
+        "conclusion": "success"
+      },
+      {
+        "name": "Optional Neuro Readers",
+        "job_id": 98629018115,
+        "conclusion": "success"
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "docs/COMMUNICATION_LIVE_SESSION_G0_PREREGISTRATION.md",
+      "bytes": 9945,
+      "sha256": "d2a58d1f2bd970df435300dac7b33422fbd77c84fac5e34e81be8e8ae8461fa6"
+    },
+    {
+      "path": "registries/communication_live_session_g0_contract.v0.json",
+      "bytes": 9985,
+      "sha256": "3601df30a0823d2116ade758745ba86de7de155593c4e95f2162b6a7f5eac245"
+    },
+    {
+      "path": "tests/test_communication_live_session_g0_contract.py",
+      "bytes": 7238,
+      "sha256": "b737248861da407143af32d9bf63ec0b0757d64f6833fe7ede0e4ea6210791cc"
+    }
+  ],
+  "artifact_count": 3,
+  "artifact_bytes_total": 27168,
+  "canonical_artifact_set_sha256": "c0b59f2a84e5dd912546ad8c35af4e1f9ce92276c24635eecdb018680c890be7",
+  "effect": {
+    "RW3_stage_A_SourceChunk_implementation_authorized": true,
+    "RW3_stage_A_synthetic_fixture_generation_authorized": true,
+    "generated_LiveSession_implementation_authorized": true,
+    "generated_qualification_authorized_now": false,
+    "generated_qualification_requires_implementation_commit_push_and_both_jobs_green": true,
+    "later_RW3_adapter_stage_authorized": false
+  },
+  "operation_counters": {
+    "generated_qualification_runs": 0,
+    "real_or_private_path_operations": 0,
+    "real_signal_reads": 0,
+    "real_target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "provider_calls": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "physical_stream_or_device_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "active_gate": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "changed": false,
+    "all_authority_flags_false": true
+  },
+  "claim_boundary": {
+    "engineering_registration_proven": true,
+    "generated_live_session_implemented": false,
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "unseen_person_generalization_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "live_device_latency_established": false,
+    "human_benefit_established": false
+  }
+}
