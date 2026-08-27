@@ -148,28 +148,25 @@ exercised. The run is consumed and will not be rerun or repaired in place.
 This is useful control-plane failure localization, not EEG or communication
 decoding evidence.
 
-The prospective [`COMM-G2 proof qualification`](docs/COMM_G2_GENERATED_PROOF_QUALIFICATION_PREREGISTRATION.md)
-keeps the scientific model, features, conditions, and thresholds byte-frozen.
-It changes only the evidence machinery: two genuinely isolated full replays,
-complete row and array hashing, model/scorer target separation, safer
-non-replacing publication, and explicit coverage of every registered refusal
-family. It is not yet implemented or executed and cannot create a scientific
-claim.
-
-The COMM-G2 wrapper is now implemented separately from the frozen scientific
-core. A single opt-in development replay passed its 60-update schedule and all
-35 refusal families within the registered per-replay resource envelope. The
-official two-replay qualification remains unexecuted and cannot run until this
-exact implementation is remotely green.
+The [`COMM-G2 proof qualification`](docs/COMM_G2_GENERATED_PROOF_QUALIFICATION_PREREGISTRATION.md)
+kept the scientific model, features, conditions, and thresholds byte-frozen and
+changed only the evidence machinery. Its exact implementation became remotely
+green before the one official generated invocation. That invocation failed
+closed at the first replay's 85-second child deadline with
+`G2-CHILD-TIMEOUT`; it published no result and left no invocation temporary
+directory. The strict
+[`COMM-G2 closeout`](docs/COMM_G2_GENERATED_PROOF_QUALIFICATION_CLOSEOUT.md)
+binds `COMM-G2-R0`, consumes the lane, and permits no rerun.
 
 It specifies a six-participant synthetic leave-one-person-out matrix with ten
 fixed arms: priors, cue/time, EOG, oral EMG, all peripheral/context controls,
 selected EEG, posterior EEG, peripheral plus residual EEG, and a matched
 deranged-EEG control. Its target firewall, 60-fit compact schedule, aggregate
 prediction freeze, isolated synthetic scorer, and shortcut-only negative
-fixtures must pass before any real analysis can be proposed. The official
-generated qualification is not yet executed and has no scientific value; this
-lane authorizes no real data, model evidence, stream, device, or claim operation.
+fixtures were intended to qualify the proof wrapper before any real analysis.
+Because the two-replay proof did not complete, no generated score is accepted.
+The lane has no scientific value and authorized no real data, model evidence,
+stream, device, or claim operation.
 
 ## Five Scientific Targets
 

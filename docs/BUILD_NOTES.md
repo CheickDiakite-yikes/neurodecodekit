@@ -16004,3 +16004,22 @@ implementing the separate COMM-G2 proof wrapper.
 
 Immediate gate: complete verification, commit and push the exact implementation,
 and require both remote jobs green before the one official qualification.
+
+### COMM-G2 official qualification consumed at R0
+
+- Exact implementation `83658976fb334a6b125a441af5dbc8cccf416e1f`
+  passed Base Python job `98465586781`, Optional Neuro Readers job
+  `98465586951`, and CI `33056826167` before the sole official invocation.
+- The first replay coordinator refused with `G2-CHILD-TIMEOUT` at its frozen
+  85-second child deadline. Zero complete replay records returned to the parent,
+  so replay equivalence and the complete adversarial ledger were not proven.
+- The executor published zero result bytes. Its secure finally path removed the
+  invocation-owned tree; a post-failure scan found zero `.comm-g2-*`
+  directories. No unrelated file was removed or modified.
+- The failing path did not persist a measurement receipt. Exact RSS, generated
+  input, private output, temporary peak, updates, predictions, target deliveries,
+  and scores are unavailable rather than reported as zero.
+- Binding route `COMM-G2-R0` consumes the one invocation with no rerun or
+  in-place repair. Real/private dataset reads, provider calls, stream/device
+  operations, releases, and claim upgrades stayed zero. The result has no
+  scientific value and does not alter `DREYER-C5R-1-HL`.

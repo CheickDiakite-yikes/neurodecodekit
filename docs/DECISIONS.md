@@ -14065,3 +14065,20 @@ integration but cannot satisfy or consume the official two-replay gate. The
 official qualification remains at zero until this exact implementation is
 committed, pushed, and remotely green. No real/private or scientific authority
 changes.
+
+## 0498 - Consume COMM-G2 at R0 After Its Child Timeout
+
+Evidence decision: exact implementation
+`83658976fb334a6b125a441af5dbc8cccf416e1f` passed Base job `98465586781`,
+Optional Neuro Readers job `98465586951`, and CI `33056826167` before the sole
+official qualification invocation. The first replay coordinator then refused
+with `G2-CHILD-TIMEOUT` at its frozen 85-second deadline. No official result
+was published, and secure cleanup left no invocation temporary directory.
+
+Binding decision: apply `COMM-G2-R0`, consume the invocation, and permit no
+rerun, in-place repair, overwrite, or numerical interpretation. Because the
+failure path persisted no measurement receipt, exact RSS, generated-byte,
+update, prediction, target-delivery, and score counts are unavailable and must
+not be inferred from development runs. A future proof attempt requires a new
+prospective lane with observable timeout diagnostics. No real-data or
+scientific authority changes; `DREYER-C5R-1-HL` remains sole and all-false.

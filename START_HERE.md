@@ -3906,18 +3906,19 @@ were not isolated in clean workdirs, and two named refusal families were not
 explicitly exercised. Do not rerun or repair COMM-G1. Its score is not accepted
 and it has no scientific value.
 
-Next read `docs/COMM_G2_GENERATED_PROOF_QUALIFICATION_PREREGISTRATION.md`
-and `registries/comm_g2_generated_proof_qualification_contract.v0.json`.
-COMM-G2 is a new prospective lane, not a COMM-G1 repair. It freezes the exact
-scientific module and proposes only stronger proof isolation, complete digests,
-target separation, filesystem publication guards, and full named refusal
-coverage. Implementation and qualification remain false until their respective
-remote-green gates.
+Next read `docs/COMM_G2_GENERATED_PROOF_QUALIFICATION_PREREGISTRATION.md`,
+`registries/comm_g2_generated_proof_qualification_contract.v0.json`, and the
+binding `docs/COMM_G2_GENERATED_PROOF_QUALIFICATION_CLOSEOUT.md`. COMM-G2 was a
+new lane, not a COMM-G1 repair. It froze the exact scientific module and added
+only stronger proof isolation, complete digests, target separation, filesystem
+publication guards, and full named refusal coverage.
 
 The registration is green at `38f5e725f46ad7a8a18ff92dae665a1569e13d07`.
 The separate implementation is documented in
 `docs/COMM_G2_GENERATED_PROOF_IMPLEMENTATION.md` and
-`registries/comm_g2_generated_proof_implementation.v0.json`. Its one opt-in
-single-replay development probe passed, but the official two-replay
-qualification remains unexecuted. The exact implementation must become
-remotely green first.
+`registries/comm_g2_generated_proof_implementation.v0.json`. Exact
+implementation `83658976fb334a6b125a441af5dbc8cccf416e1f` passed CI
+`33056826167` before the one official invocation. That invocation refused with
+`G2-CHILD-TIMEOUT` before the first replay returned, published no official
+result, and left no temporary directory. COMM-G2 is consumed at `COMM-G2-R0`;
+do not rerun, repair, overwrite, or reinterpret it as accepted.

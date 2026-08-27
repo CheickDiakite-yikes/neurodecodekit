@@ -8130,3 +8130,23 @@ Immediate gate: verify, commit, push, and remotely green the exact
 implementation. Only then run the one official generated qualification. Do not
 modify COMM-G1, touch real/private data, alter `DREYER-C5R-1-HL`, or commit the
 unrelated tracker inspection NDJSON.
+
+## 2026-08-27 COMM-G2 Qualification Closeout Handoff
+
+Read `docs/COMM_G2_GENERATED_PROOF_QUALIFICATION_CLOSEOUT.md`,
+`registries/comm_g2_generated_proof_qualification_closeout.v0.json`, and
+`tests/test_comm_g2_generated_proof_qualification_closeout.py`.
+
+Exact implementation `83658976fb334a6b125a441af5dbc8cccf416e1f` passed
+Base job `98465586781`, Optional Neuro Readers job `98465586951`, and CI
+`33056826167` before the sole official invocation. The first replay coordinator
+refused with `G2-CHILD-TIMEOUT` at the frozen 85-second child deadline. No
+complete replay record returned, no official result was published, and secure
+cleanup left no invocation temporary directory.
+
+COMM-G2 is consumed at `COMM-G2-R0`. Do not rerun, repair, overwrite, or infer
+missing counters from development runs. The failure path retained no exact RSS,
+byte, update, prediction, target-delivery, or score receipt, so those fields are
+explicitly unavailable. No real/private operation or scientific claim occurred;
+`DREYER-C5R-1-HL` remains the sole active all-false Tier C packet. Preserve the
+unrelated tracker inspection NDJSON.

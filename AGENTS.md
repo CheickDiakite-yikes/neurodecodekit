@@ -134,26 +134,31 @@ did not explicitly exercise symlink-escape or resource-cap-breach families.
 Do not rerun, repair, overwrite, or reinterpret COMM-G1 as accepted. It has no
 scientific value. Every real operation remains Tier C.
 
-The prospective successor is `COMM-G2`. Read
+The generated-only successor is `COMM-G2`. Read
 `docs/COMM_G2_GENERATED_PROOF_QUALIFICATION_PREREGISTRATION.md` and
 `registries/comm_g2_generated_proof_qualification_contract.v0.json`. It freezes
 the exact COMM-G1 scientific module and adds only proof architecture: two full
 isolated child-process replays, complete row/array digests, scorer-held target
 isolation, non-replacing filesystem publication, and explicit execution of all
-35 named refusal families. This registration must be committed, pushed, and
-remotely green before implementation. Current implementation and qualification
-authority are false; every real operation remains Tier C.
+35 named refusal families. Every real operation remains Tier C.
 
 The registration is now green at
 `38f5e725f46ad7a8a18ff92dae665a1569e13d07`, CI `33052381349`. The separate
 implementation exists in `src/neurodecodekit/experiments/comm_g2_generated_proof.py`
 with `src/neurodecodekit/comm_g2_cli.py`; read
 `docs/COMM_G2_GENERATED_PROOF_IMPLEMENTATION.md` and its implementation
-registry. One disposable single-replay development probe passed 60 generated
-updates, 60 prediction sets, 1,440 rows, and all 35 refusals in
-10.540717291994952 seconds at 245,727,232-byte peak RSS. It was not the
-official two-replay qualification. Commit, push, and remotely green the exact
-implementation before the one official invocation.
+registry. Exact implementation `83658976fb334a6b125a441af5dbc8cccf416e1f`
+passed Base job `98465586781`, Optional Neuro Readers job `98465586951`, and CI
+`33056826167` before the one official invocation.
+
+That invocation is consumed at `COMM-G2-R0`. Read
+`docs/COMM_G2_GENERATED_PROOF_QUALIFICATION_CLOSEOUT.md` and its machine
+closeout. The first replay coordinator refused with `G2-CHILD-TIMEOUT` before
+returning a complete replay record. No official result was published and no
+invocation temporary directory remained. Exact failure-path RSS, generated
+bytes, update, prediction, target-delivery, and score counts are unavailable
+and must not be fabricated as zero. Do not rerun, repair, overwrite, or
+reinterpret COMM-G2 as accepted. It has no scientific value.
 
 `DREYER-C5R-1-HL` is the sole active Tier C packet. Read, in order:
 

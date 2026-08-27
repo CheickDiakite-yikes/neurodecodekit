@@ -152,14 +152,16 @@ class CommG2GeneratedProofQualificationContractTests(unittest.TestCase):
         ):
             self.assertIn(phrase, text)
 
-    def test_frontier_records_pending_successor_without_changing_active_gate(self) -> None:
+    def test_frontier_preserves_registered_successor_and_active_gate(self) -> None:
         frontier = json.loads(FRONTIER_PATH.read_text(encoding="utf-8"))
         source_gate = frontier["parallel_tier_A_communication_program"][
             "source_identity_preregistration"
         ]
         successor = source_gate["generated_proof_successor_preregistration"]
         self.assertEqual(successor["gate_id"], "COMM-G2_GENERATED_PROOF_QUALIFICATION")
-        self.assertIn("pending_exact_commit", successor["status"])
+        self.assertEqual(successor["status"], "consumed_parked_COMM_G2_R0_no_rerun")
+        self.assertEqual(successor["binding_closeout_route"], "COMM-G2-R0")
+        self.assertFalse(successor["rerun_allowed"])
         self.assertFalse(successor["generated_implementation_authorized_now"])
         self.assertFalse(successor["generated_qualification_authorized_now"])
         self.assertEqual(successor["real_or_private_operations"], 0)
