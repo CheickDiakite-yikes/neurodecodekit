@@ -3913,3 +3913,11 @@ scientific module and proposes only stronger proof isolation, complete digests,
 target separation, filesystem publication guards, and full named refusal
 coverage. Implementation and qualification remain false until their respective
 remote-green gates.
+
+The registration is green at `38f5e725f46ad7a8a18ff92dae665a1569e13d07`.
+The separate implementation is documented in
+`docs/COMM_G2_GENERATED_PROOF_IMPLEMENTATION.md` and
+`registries/comm_g2_generated_proof_implementation.v0.json`. Its one opt-in
+single-replay development probe passed, but the official two-replay
+qualification remains unexecuted. The exact implementation must become
+remotely green first.

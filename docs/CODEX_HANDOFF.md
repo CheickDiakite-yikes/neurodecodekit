@@ -8112,3 +8112,21 @@ registration. Only then may Tier B implement the separate wrapper. Do not
 modify the frozen COMM-G1 module, run a qualification, read real/private data,
 or alter `DREYER-C5R-1-HL` under this milestone. Preserve the unrelated tracker
 inspection NDJSON.
+
+## 2026-08-27 COMM-G2 Implementation Handoff
+
+Read `docs/COMM_G2_GENERATED_PROOF_IMPLEMENTATION.md`,
+`registries/comm_g2_generated_proof_implementation.v0.json`,
+`src/neurodecodekit/experiments/comm_g2_generated_proof.py`,
+`src/neurodecodekit/comm_g2_cli.py`, and
+`tests/test_comm_g2_generated_proof_implementation.py`.
+
+The generated-only wrapper is implemented separately from the frozen COMM-G1
+scientific core. A disposable single replay passed the exact per-replay
+60-update / 60-prediction-set / 1,440-row schedule and all 35 refusal families.
+The official two-replay qualification remains unexecuted.
+
+Immediate gate: verify, commit, push, and remotely green the exact
+implementation. Only then run the one official generated qualification. Do not
+modify COMM-G1, touch real/private data, alter `DREYER-C5R-1-HL`, or commit the
+unrelated tracker inspection NDJSON.

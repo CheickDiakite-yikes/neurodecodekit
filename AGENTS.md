@@ -144,6 +144,17 @@ isolation, non-replacing filesystem publication, and explicit execution of all
 remotely green before implementation. Current implementation and qualification
 authority are false; every real operation remains Tier C.
 
+The registration is now green at
+`38f5e725f46ad7a8a18ff92dae665a1569e13d07`, CI `33052381349`. The separate
+implementation exists in `src/neurodecodekit/experiments/comm_g2_generated_proof.py`
+with `src/neurodecodekit/comm_g2_cli.py`; read
+`docs/COMM_G2_GENERATED_PROOF_IMPLEMENTATION.md` and its implementation
+registry. One disposable single-replay development probe passed 60 generated
+updates, 60 prediction sets, 1,440 rows, and all 35 refusals in
+10.540717291994952 seconds at 245,727,232-byte peak RSS. It was not the
+official two-replay qualification. Commit, push, and remotely green the exact
+implementation before the one official invocation.
+
 `DREYER-C5R-1-HL` is the sole active Tier C packet. Read, in order:
 
 1. `registries/current_research_frontier.v0.json`;

@@ -156,6 +156,12 @@ non-replacing publication, and explicit coverage of every registered refusal
 family. It is not yet implemented or executed and cannot create a scientific
 claim.
 
+The COMM-G2 wrapper is now implemented separately from the frozen scientific
+core. A single opt-in development replay passed its 60-update schedule and all
+35 refusal families within the registered per-replay resource envelope. The
+official two-replay qualification remains unexecuted and cannot run until this
+exact implementation is remotely green.
+
 It specifies a six-participant synthetic leave-one-person-out matrix with ten
 fixed arms: priors, cue/time, EOG, oral EMG, all peripheral/context controls,
 selected EEG, posterior EEG, peripheral plus residual EEG, and a matched

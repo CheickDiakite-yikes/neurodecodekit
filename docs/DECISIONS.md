@@ -14050,3 +14050,18 @@ Authority decision: implementation and qualification remain false until their
 separate green barriers. No real/private data, network, provider, stream,
 device, release, or claim operation is authorized. `DREYER-C5R-1-HL` remains
 the sole all-false Tier C packet.
+
+## 0497 - Implement COMM-G2 as an Isolated Wrapper
+
+Implementation decision: preserve the frozen COMM-G1 module byte for byte and
+place every correction in a separate COMM-G2 wrapper. Use spawned replay
+coordinators, fold-scoped prediction workers with no held-out target field, and
+a separate post-freeze scorer. Bind every row field and signal byte, enforce
+exact prediction completeness, publish with no-follow non-replacing directory
+capabilities, and execute all 35 registered refusal families.
+
+Qualification decision: one opt-in single-replay development probe may test
+integration but cannot satisfy or consume the official two-replay gate. The
+official qualification remains at zero until this exact implementation is
+committed, pushed, and remotely green. No real/private or scientific authority
+changes.

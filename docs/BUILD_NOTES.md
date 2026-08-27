@@ -15985,3 +15985,22 @@ hash; the exact pinned local command `.venv/bin/ruff check .` then passed.
 
 Immediate gate: commit, push, and remotely green this exact registration before
 implementing the separate COMM-G2 proof wrapper.
+
+### COMM-G2 isolated proof wrapper implemented
+
+- Registration `38f5e725f46ad7a8a18ff92dae665a1569e13d07` passed Base
+  job `98450778567`, Optional Neuro Readers job `98450778321`, and CI
+  `33052381349` before implementation.
+- Added a separate wrapper and CLI without changing the frozen COMM-G1 module.
+  The wrapper uses complete canonical digests, spawned replay and fold workers,
+  scorer-held post-freeze targets, exact prediction inventory checks,
+  non-replacing no-follow publication, and 35 explicit adversarial families.
+- One opt-in single-replay development probe completed 60 generated updates,
+  60 prediction sets, and 1,440 rows in 10.540717291994952 seconds at
+  245,727,232-byte peak RSS. It used 16,515,072 generated input bytes, 244,033
+  private prediction bytes, and 7,876 temporary bytes.
+- The official two-replay qualification count remains zero. Every real/private,
+  network, provider, stream, device, release, and claim counter remains zero.
+
+Immediate gate: complete verification, commit and push the exact implementation,
+and require both remote jobs green before the one official qualification.
