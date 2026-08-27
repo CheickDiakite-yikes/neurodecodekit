@@ -23,8 +23,8 @@
   },
   "artifact_set": {
     "artifact_count": 12,
-    "artifact_bytes": 264806,
-    "canonical_sha256": "60afa5aa528e1f491a60e9fc0b7fae5a4d472fd3ea6908304c391f83088dccc2",
+    "artifact_bytes": 265866,
+    "canonical_sha256": "e799bf8802e1526ed0b634fb7044e2c39286ae11f332f2cb8e9863a65e528721",
     "artifacts": [
       {
         "path": "registries/communication_live_session_g0_contract.v0.json",
@@ -43,8 +43,8 @@
       },
       {
         "path": "docs/COMMUNICATION_LIVE_SESSION_G0_IMPLEMENTATION.md",
-        "bytes": 7599,
-        "sha256": "c7b9bd7c64468a87bee42c3f1b2e01916a4601a40d4fe8611dcac5a6911b72e4"
+        "bytes": 8306,
+        "sha256": "c3230f6fa2a97227ddb8c38f49ea9979514493b3f7720cc9c3428fb6f865a003"
       },
       {
         "path": "src/neurodecodekit/streaming/__init__.py",
@@ -83,8 +83,8 @@
       },
       {
         "path": "tests/test_communication_live_session_g0_implementation.py",
-        "bytes": 9634,
-        "sha256": "5126204eab59348892f636208387da003bdb9cbbaa32f85fa1b042f3bcce19f0"
+        "bytes": 9987,
+        "sha256": "fdb933dfa6134352d744bd7ee2d37bb077be6203c619dd393278a3979b183a24"
       }
     ]
   },
@@ -199,6 +199,18 @@
     "Linux_VmHWM_correction_validated_in_optional_complete_suite": true,
     "correction": "restore_two_E402_annotations_and_verify_with_repository_pinned_Ruff_0_15_20",
     "resource_caps_changed": false,
+    "official_qualification_operations": 0,
+    "official_invocation_consumed": false
+  },
+  "post_green_proof_transition_correction": {
+    "prior_green_commit": "6cedb3c1340eebb110649cab5f0e8ef452212920",
+    "prior_green_CI_run_id": 33122036111,
+    "prior_base_python_job_id": 98691010616,
+    "prior_optional_neuro_readers_job_id": 98691010881,
+    "both_required_jobs_green": true,
+    "issue_found_before_proof_commit": "implementation_test_assumed_repository_root_proof_absence",
+    "correction": "test_missing_proof_in_isolated_temporary_repository_independent_of_future_proof_presence",
+    "new_exact_commit_remote_green_required_before_proof": true,
     "official_qualification_operations": 0,
     "official_invocation_consumed": false
   },

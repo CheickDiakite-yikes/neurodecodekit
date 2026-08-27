@@ -177,19 +177,26 @@ class CommunicationLiveSessionG0ImplementationTests(unittest.TestCase):
         self.assertIsNone(experiment._parse_linux_vm_hwm_bytes("VmHWM: nope kB"))
         self.assertIsNone(experiment._parse_linux_vm_hwm_bytes("VmRSS: 123 kB"))
 
-    def test_official_qualification_fails_before_output_without_future_proof(self) -> None:
+    def test_official_qualification_fails_without_proof_in_isolated_root(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
-            output = Path(temporary) / "official.json"
+            root = Path(temporary)
+            for relative in (
+                experiment.CONTRACT_PATH,
+                experiment.AMENDMENT_PATH,
+                experiment.REPLAY_CONTRACT_PATH,
+            ):
+                destination = root / relative
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                destination.write_bytes((ROOT / relative).read_bytes())
+            output = root / experiment.REGISTERED_RESULT_PATH
             with self.assertRaises(experiment.CommLiveG0GeneratedRefusal) as caught:
-                comm_live_g0_cli.main(["qualify", "--output", str(output)])
+                experiment.qualify(output, root=root)
             self.assertEqual(
                 caught.exception.refusal_id,
                 "COMM-LIVE-G0-IMPLEMENTATION-PROOF-MISSING",
             )
             self.assertFalse(output.exists())
-            self.assertFalse(
-                (ROOT / experiment.OFFICIAL_MARKER_PATH).exists()
-            )
+            self.assertFalse((root / experiment.OFFICIAL_MARKER_PATH).exists())
 
     def test_official_output_path_is_canonical_and_not_caller_substitutable(self) -> None:
         expected = ROOT / experiment.REGISTERED_RESULT_PATH

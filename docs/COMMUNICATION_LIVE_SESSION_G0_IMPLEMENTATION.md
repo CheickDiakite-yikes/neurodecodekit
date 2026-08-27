@@ -126,6 +126,17 @@ repository-wide verification now uses the exact pinned `.venv/bin/ruff`.
 This CI result is still not a remotely green implementation proof because both
 jobs must pass for one exact commit.
 
+Exact implementation `6cedb3c1340eebb110649cab5f0e8ef452212920`
+subsequently passed both required jobs in CI `33122036111`. Drafting its proof
+record exposed one future-state test defect before the proof was committed: a
+test checked proof absence in the repository root, so adding the valid future
+proof changed the expected refusal. The test now creates an isolated temporary
+repository containing the three frozen registrations and deliberately omits
+the proof. This preserves the intended fail-closed assertion both before and
+after proof activation. The corrected test and rebound implementation artifact
+set require one new exact remotely green implementation commit before a proof
+may be finalized.
+
 ## Next Proof Barrier
 
 Commit and push the exact implementation, then require both GitHub CI jobs to
