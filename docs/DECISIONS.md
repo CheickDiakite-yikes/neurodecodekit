@@ -14269,3 +14269,9 @@ authority false. This activation has delayed effect until its own commit is
 green, a proof-only closeout binds that green evidence, and a final tracked
 activation-proof record is independently green. Do not execute the qualifier
 at any earlier point.
+
+Proof decision: activation `9b47f15e3adc83c32359d19428878226ab06c2d4`
+passed Base `98590992544`, Optional `98590992988`, and CI `33093134150`.
+Create a proof-only closeout that binds its three tracked artifacts and performs
+no fixture or scientific operation. Require that closeout to become remotely
+green before creating the final tracked activation-proof record.

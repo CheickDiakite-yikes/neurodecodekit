@@ -18,9 +18,11 @@
 > and binds causal, partial-route, dynamic-derangement, `n>20` sign-flip, and
 > Holm checks into qualification. It passed Base `98586671291`, Optional
 > `98586671285`, and CI `33091909015`; independent review found no remaining
-> activation blocker. A separate generated-only activation record is now
-> pending its own green CI and proof barriers. Do not run the official
-> qualification before those barriers.
+> activation blocker. Generated-only activation `9b47f15` passed Base
+> `98590992544`, Optional `98590992988`, and CI `33093134150`. A proof-only
+> closeout is now pending its own green CI, followed by one final tracked
+> activation-proof record. Do not run the official qualification before both
+> remaining barriers.
 
 > **Current gate, 2026-08-26:** `DREYER-C5R-1-HL` is the sole active Tier C
 > packet. The aggregate-only BNCI postmortem localized four design failures:

@@ -1,0 +1,73 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_independent_replication_generated_activation_proof_closeout",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-27",
+  "lane_id": "COMM-R0-G",
+  "status": "proof_closeout_pending_own_remote_green",
+  "green_activation_commit": {
+    "commit": "9b47f15e3adc83c32359d19428878226ab06c2d4",
+    "CI_run_id": 33093134150,
+    "base_python_job_id": 98590992544,
+    "optional_neuro_readers_job_id": 98590992988,
+    "both_required_jobs_green": true
+  },
+  "bound_activation_artifacts": [
+    {
+      "role": "activation_document",
+      "path": "docs/COMMUNICATION_EEG_INDEPENDENT_REPLICATION_GENERATED_ACTIVATION.md",
+      "bytes": 1775,
+      "sha256": "c96ce282ed2390dae872f99453bba1a8b6693f8dccd50ea2686608a4e230a211",
+      "Git_blob": "6395bfe2d8ffdfa0f0c0667edfbb9b9a8cfc585b"
+    },
+    {
+      "role": "activation_registry",
+      "path": "registries/communication_eeg_independent_replication_generated_activation.v0.json",
+      "bytes": 4270,
+      "sha256": "c739500a6ddb086334a56fa103d61e44f0e59c64e91faca9ca7492c9a70a8429",
+      "Git_blob": "8596de26ec3ff0a47dde8048a969fd1898ebcb57"
+    },
+    {
+      "role": "activation_test",
+      "path": "tests/test_comm_r0_generated_activation.py",
+      "bytes": 3531,
+      "sha256": "33865fe3a25ffc9b03cd01a3fd397d1644714269715d0408a52f317ac4ef8fc1",
+      "Git_blob": "94d4ece4f69f9ead09a36e2a48b3b327ba68f9e9"
+    }
+  ],
+  "bound_activation_artifact_count": 3,
+  "bound_activation_artifact_bytes": 9576,
+  "proof_operations": {
+    "tracked_artifact_reads": 3,
+    "Git_proof_reads": 3,
+    "generated_fixture_runs": 0,
+    "parameter_update_fits": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "real_or_private_path_reads": 0,
+    "network_bytes": 0,
+    "provider_calls": 0,
+    "stream_or_device_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "next_gate": {
+    "tracked_activation_proof_required": true,
+    "tracked_activation_proof_must_bind_this_closeout_green_commit": true,
+    "tracked_activation_proof_commit_push_and_both_jobs_green_required": true,
+    "official_generated_qualification_allowed_now": false,
+    "real_or_private_operation_allowed": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "proof-only binding of the green generated activation",
+    "scientific_value": "none",
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "causal_continuous_decoding_established": false,
+    "live_neural_decoding_established": false
+  }
+}
