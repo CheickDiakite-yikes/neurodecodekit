@@ -16170,3 +16170,11 @@ and require both remote jobs green before the one official qualification.
   The invocation is consumed with no retry or rerun. Exact runtime, RSS, and
   generated-byte measurements are unavailable because result assembly was not
   reached. Real/private/network/provider/scientific operations remained zero.
+- 2026-08-27: Added post-failure `COMM-R0-G` hardening without rerunning the
+  consumed qualification. The public entry point now checks the remotely
+  proven failure record before activation or replay and refuses with
+  `R0G-CONSUMED`. The lower-level generated refusal helper removes its expected
+  no-follow symlink fixture and regression-tests the final tree audit. Original
+  execution hashes remain in the failure record; an additive transition record
+  binds the corrected hashes. Real/private/network/scientific counters stay
+  zero.

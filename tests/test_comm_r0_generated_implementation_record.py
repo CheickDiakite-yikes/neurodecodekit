@@ -17,6 +17,11 @@ DOCUMENT = (
     / "docs"
     / "COMMUNICATION_EEG_INDEPENDENT_REPLICATION_GENERATED_IMPLEMENTATION.md"
 )
+HARDENING = (
+    ROOT
+    / "registries"
+    / "communication_eeg_independent_replication_generated_postfailure_hardening.v0.json"
+)
 
 
 class CommR0GeneratedImplementationRecordTests(unittest.TestCase):
@@ -34,15 +39,27 @@ class CommR0GeneratedImplementationRecordTests(unittest.TestCase):
         self.assertEqual(self.record["lane_id"], "COMM-R0-G")
         self.assertEqual(self.record["registration_id"], "COMM-R0-REPLICATION-v0")
         self.assertTrue(self.record["parent_proof"]["both_required_jobs_green"])
+        hardening = json.loads(HARDENING.read_text(encoding="utf-8"))
+        changed = {artifact["path"]: artifact for artifact in hardening["changed_artifacts"]}
         for group in ("implementation_artifacts", "bound_reused_generated_utilities"):
             for artifact in self.record[group]:
                 payload = (ROOT / artifact["path"]).read_bytes()
-                self.assertEqual(len(payload), artifact["bytes"], artifact["path"])
-                self.assertEqual(
-                    hashlib.sha256(payload).hexdigest(),
-                    artifact["sha256"],
-                    artifact["path"],
-                )
+                if artifact["path"] in changed:
+                    transition = changed[artifact["path"]]
+                    self.assertEqual(artifact["bytes"], transition["before_bytes"])
+                    self.assertEqual(artifact["sha256"], transition["before_sha256"])
+                    self.assertEqual(len(payload), transition["after_bytes"])
+                    self.assertEqual(
+                        hashlib.sha256(payload).hexdigest(),
+                        transition["after_sha256"],
+                    )
+                else:
+                    self.assertEqual(len(payload), artifact["bytes"], artifact["path"])
+                    self.assertEqual(
+                        hashlib.sha256(payload).hexdigest(),
+                        artifact["sha256"],
+                        artifact["path"],
+                    )
 
     def test_two_stage_freeze_and_schedule_are_exact(self) -> None:
         firewall = self.record["firewall"]

@@ -14297,3 +14297,10 @@ green; only then may the single generated qualification run.
   future-facing Tier A/B engineering and any execution of the corrected path
   requires a new prospective generated qualification gate. Preserve
   `DREYER-C5R-1-HL` as the sole all-false Tier C gate.
+- 2026-08-27: Harden the consumed `COMM-R0-G` surface additively, without
+  rewriting its execution record. The original `qualify` entry point must
+  refuse from the tracked failure record before registration, activation, or
+  replay. Correct the adversarial fixture cleanup only for generated helper
+  qualification and require a new prospective gate before any full replay.
+  Preserve the old execution hashes and bind before/after hashes in a separate
+  post-failure registry.

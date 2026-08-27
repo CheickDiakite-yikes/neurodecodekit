@@ -10,12 +10,21 @@ CLOSEOUT_PATH = (
     ROOT
     / "registries/communication_eeg_independent_replication_generated_activation_proof_closeout.v0.json"
 )
+HARDENING_PATH = (
+    ROOT
+    / "registries"
+    / "communication_eeg_independent_replication_generated_postfailure_hardening.v0.json"
+)
 
 
 class CommR0GeneratedActivationProofCloseoutTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.closeout = json.loads(CLOSEOUT_PATH.read_text(encoding="utf-8"))
+        hardening = json.loads(HARDENING_PATH.read_text(encoding="utf-8"))
+        cls.transitions = {
+            artifact["path"]: artifact for artifact in hardening["changed_artifacts"]
+        }
 
     def test_exact_green_activation_is_bound(self) -> None:
         green = self.closeout["green_activation_commit"]
@@ -34,12 +43,21 @@ class CommR0GeneratedActivationProofCloseoutTests(unittest.TestCase):
         for artifact in artifacts:
             path = ROOT / artifact["path"]
             payload = path.read_bytes()
-            self.assertEqual(len(payload), artifact["bytes"])
-            self.assertEqual(hashlib.sha256(payload).hexdigest(), artifact["sha256"])
-            observed_blob = subprocess.check_output(
-                ["git", "hash-object", artifact["path"]], cwd=ROOT, text=True
-            ).strip()
-            self.assertEqual(observed_blob, artifact["Git_blob"])
+            transition = self.transitions.get(artifact["path"])
+            if transition is None:
+                self.assertEqual(len(payload), artifact["bytes"])
+                self.assertEqual(hashlib.sha256(payload).hexdigest(), artifact["sha256"])
+                observed_blob = subprocess.check_output(
+                    ["git", "hash-object", artifact["path"]], cwd=ROOT, text=True
+                ).strip()
+                self.assertEqual(observed_blob, artifact["Git_blob"])
+            else:
+                self.assertEqual(artifact["bytes"], transition["before_bytes"])
+                self.assertEqual(artifact["sha256"], transition["before_sha256"])
+                self.assertEqual(len(payload), transition["after_bytes"])
+                self.assertEqual(
+                    hashlib.sha256(payload).hexdigest(), transition["after_sha256"]
+                )
 
     def test_closeout_runs_no_generated_or_scientific_operation(self) -> None:
         operations = self.closeout["proof_operations"]

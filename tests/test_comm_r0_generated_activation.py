@@ -19,12 +19,21 @@ ACTIVATION_PROOF_PATH = (
     ROOT
     / "registries/communication_eeg_independent_replication_generated_activation_proof.v0.json"
 )
+HARDENING_PATH = (
+    ROOT
+    / "registries"
+    / "communication_eeg_independent_replication_generated_postfailure_hardening.v0.json"
+)
 
 
 class CommR0GeneratedActivationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.activation = json.loads(ACTIVATION_PATH.read_text(encoding="utf-8"))
+        hardening = json.loads(HARDENING_PATH.read_text(encoding="utf-8"))
+        cls.transitions = {
+            artifact["path"]: artifact for artifact in hardening["changed_artifacts"]
+        }
 
     def test_exact_green_implementation_is_bound(self) -> None:
         green = self.activation["green_implementation_commit"]
@@ -42,12 +51,21 @@ class CommR0GeneratedActivationTests(unittest.TestCase):
         for artifact in artifacts:
             path = ROOT / artifact["path"]
             payload = path.read_bytes()
-            self.assertEqual(len(payload), artifact["bytes"])
-            self.assertEqual(hashlib.sha256(payload).hexdigest(), artifact["sha256"])
-            observed_blob = subprocess.check_output(
-                ["git", "hash-object", artifact["path"]], cwd=ROOT, text=True
-            ).strip()
-            self.assertEqual(observed_blob, artifact["Git_blob"])
+            transition = self.transitions.get(artifact["path"])
+            if transition is None:
+                self.assertEqual(len(payload), artifact["bytes"])
+                self.assertEqual(hashlib.sha256(payload).hexdigest(), artifact["sha256"])
+                observed_blob = subprocess.check_output(
+                    ["git", "hash-object", artifact["path"]], cwd=ROOT, text=True
+                ).strip()
+                self.assertEqual(observed_blob, artifact["Git_blob"])
+            else:
+                self.assertEqual(artifact["bytes"], transition["before_bytes"])
+                self.assertEqual(artifact["sha256"], transition["before_sha256"])
+                self.assertEqual(len(payload), transition["after_bytes"])
+                self.assertEqual(
+                    hashlib.sha256(payload).hexdigest(), transition["after_sha256"]
+                )
 
     def test_activation_loads_and_later_surfaces_remain_strict(self) -> None:
         self.assertEqual(experiment.load_activation(ROOT)["lane_id"], "COMM-R0-G")

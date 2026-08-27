@@ -34,6 +34,12 @@ ACTIVATION_PROOF_PATH = Path(
 RESULT_PATH = Path(
     "registries/communication_eeg_independent_replication_generated_result.v0.json"
 )
+FAILURE_PATH = Path(
+    "registries/communication_eeg_independent_replication_generated_failure.v0.json"
+)
+POSTFAILURE_HARDENING_PATH = Path(
+    "registries/communication_eeg_independent_replication_generated_postfailure_hardening.v0.json"
+)
 
 PARTICIPANTS = tuple(f"rsub-{index:02d}" for index in range(1, 13))
 NEURAL_CONDITIONS = (
@@ -86,6 +92,16 @@ CAPS = {
 
 class CommR0GeneratedRefusal(RuntimeError):
     """A COMM-R0 generated qualification invariant failed closed."""
+
+
+def _assert_generated_qualification_not_consumed(repository: Path) -> None:
+    failure = (repository / FAILURE_PATH).absolute()
+    if failure.is_symlink():
+        raise CommR0GeneratedRefusal("R0G-CONSUMPTION-RECORD-TYPE")
+    if failure.exists():
+        if not failure.is_file():
+            raise CommR0GeneratedRefusal("R0G-CONSUMPTION-RECORD-TYPE")
+        raise CommR0GeneratedRefusal("R0G-CONSUMED")
 
 
 @dataclass(frozen=True)
@@ -184,6 +200,49 @@ def _file_sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def _load_postfailure_artifact_transitions(repository: Path) -> dict[str, dict[str, Any]]:
+    path = repository / POSTFAILURE_HARDENING_PATH
+    if not path.exists():
+        return {}
+    if not path.is_file() or path.is_symlink():
+        raise CommR0GeneratedRefusal("R0G-HARDENING-RECORD-TYPE")
+    record = json.loads(path.read_bytes())
+    if record.get("schema_name") != (
+        "neurodecodekit.communication_eeg_independent_replication_generated_"
+        "postfailure_hardening"
+    ):
+        raise CommR0GeneratedRefusal("R0G-HARDENING-RECORD-SCHEMA")
+    if not record.get("failure_binding", {}).get("official_invocation_consumed"):
+        raise CommR0GeneratedRefusal("R0G-HARDENING-CONSUMPTION")
+    transitions: dict[str, dict[str, Any]] = {}
+    for artifact in record.get("changed_artifacts", ()):
+        artifact_path = artifact.get("path")
+        if not isinstance(artifact_path, str) or artifact_path in transitions:
+            raise CommR0GeneratedRefusal("R0G-HARDENING-ARTIFACT")
+        transitions[artifact_path] = artifact
+    return transitions
+
+
+def _activation_artifact_matches(
+    artifact: Mapping[str, Any],
+    artifact_path: Path,
+    transitions: Mapping[str, Mapping[str, Any]],
+) -> bool:
+    current_bytes = artifact_path.stat().st_size
+    current_sha256 = _file_sha256(artifact_path)
+    if current_bytes == artifact.get("bytes") and current_sha256 == artifact.get("sha256"):
+        return True
+    transition = transitions.get(str(artifact.get("path", "")))
+    if transition is None:
+        return False
+    return (
+        transition.get("before_bytes") == artifact.get("bytes")
+        and transition.get("before_sha256") == artifact.get("sha256")
+        and transition.get("after_bytes") == current_bytes
+        and transition.get("after_sha256") == current_sha256
+    )
+
+
 def load_registration(root: str | Path | None = None) -> dict[str, Any]:
     repository = Path(root) if root is not None else _repo_root()
     contract_payload = (repository / CONTRACT_PATH).read_bytes()
@@ -241,13 +300,12 @@ def load_activation(root: str | Path | None = None) -> dict[str, Any]:
     implementation_commit = activation.get("implementation_commit")
     if not isinstance(implementation_commit, str) or len(implementation_commit) != 40:
         raise CommR0GeneratedRefusal("R0G-ACTIVATION-COMMIT")
+    transitions = _load_postfailure_artifact_transitions(repository)
     for artifact in activation.get("implementation_artifacts", ()):
         artifact_path = repository / str(artifact.get("path", ""))
         if not artifact_path.is_file() or artifact_path.is_symlink():
             raise CommR0GeneratedRefusal("R0G-ACTIVATION-ARTIFACT")
-        if artifact_path.stat().st_size != artifact.get("bytes"):
-            raise CommR0GeneratedRefusal("R0G-ACTIVATION-ARTIFACT")
-        if _file_sha256(artifact_path) != artifact.get("sha256"):
+        if not _activation_artifact_matches(artifact, artifact_path, transitions):
             raise CommR0GeneratedRefusal("R0G-ACTIVATION-ARTIFACT")
     if len(activation.get("implementation_artifacts", ())) < 4:
         raise CommR0GeneratedRefusal("R0G-ACTIVATION-ARTIFACT")
@@ -1342,7 +1400,15 @@ def exercise_required_refusals(
             "CHILD-TIMEOUT",
         ),
     }
-    refusals = [_expect_refusal(name, *cases[name]) for name in REQUIRED_REFUSALS]
+    try:
+        refusals = [_expect_refusal(name, *cases[name]) for name in REQUIRED_REFUSALS]
+    finally:
+        if not symlink.is_symlink():
+            raise CommR0GeneratedRefusal("R0G-ADVERSARIAL-SYMLINK-FIXTURE")
+        symlink.unlink()
+        if symlink_target.is_symlink() or not symlink_target.is_dir():
+            raise CommR0GeneratedRefusal("R0G-ADVERSARIAL-SYMLINK-TARGET")
+        symlink_target.rmdir()
     if tuple(refusals) != REQUIRED_REFUSALS:
         raise CommR0GeneratedRefusal("R0G-REFUSAL-COMPLETENESS")
     return refusals
@@ -1489,6 +1555,7 @@ def run_generated_qualification(
 
     assert_single_thread_environment()
     repository = Path(root) if root is not None else _repo_root()
+    _assert_generated_qualification_not_consumed(repository)
     load_registration(repository)
     activation = load_activation(repository)
     activation_proof = load_activation_proof(repository)

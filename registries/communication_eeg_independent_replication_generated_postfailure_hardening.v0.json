@@ -1,0 +1,106 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_independent_replication_generated_postfailure_hardening",
+  "schema_version": "0.1.0",
+  "lane_id": "COMM-R0-G",
+  "recorded_at_local": "2026-08-27",
+  "status": "postfailure_source_hardened_generated_tests_only_no_rerun",
+  "failure_binding": {
+    "record": "registries/communication_eeg_independent_replication_generated_failure.v0.json",
+    "failure_record_commit": "9876cf92e7c15503064a38c976fef454915687cd",
+    "failure_record_CI_run_id": 33097495998,
+    "failure_proof_binding_commit": "efef655907cda403ccc13da5399e824f2a5d2ff4",
+    "failure_proof_binding_CI_run_id": 33098479762,
+    "failure_proof_binding_base_python_job_id": 98609537965,
+    "failure_proof_binding_optional_neuro_readers_job_id": 98609537723,
+    "both_required_failure_proof_jobs_green": true,
+    "refusal_id": "G2-TEMPORARY-SYMLINK",
+    "official_invocation_consumed": true,
+    "rerun_allowed": false
+  },
+  "changed_artifacts": [
+    {
+      "path": "src/neurodecodekit/experiments/comm_r0_generated.py",
+      "before_bytes": 68442,
+      "before_sha256": "032dc10eccb35eebf02126cec0b7e2a539a294e737e448b83d5beca775e32aa8",
+      "after_bytes": 71283,
+      "after_sha256": "45f3e1bc42f3e752fc9420a8ec9e560338417f8bba315bf79131b116724560ec"
+    },
+    {
+      "path": "tests/test_comm_r0_generated_implementation.py",
+      "before_bytes": 21457,
+      "before_sha256": "6ad07a474487d776a137fc317f7fabe29d7f2e5f01baeb94257c214a48702eeb",
+      "after_bytes": 22139,
+      "after_sha256": "649d60aa154642b647e0bc7cbeb36d12991891950596358edcb187345ace3f27"
+    },
+    {
+      "path": "tests/test_comm_r0_generated_implementation_record.py",
+      "before_bytes": 6150,
+      "before_sha256": "9034fe8856afa936796506cd3af136484f3463c1be74d6c02f2427ab9789ebd3",
+      "after_bytes": 7022,
+      "after_sha256": "98fc6c136da5b4460d2a80c3ec19438afde70f8a0be62aa7399ea110edce8c05"
+    },
+    {
+      "path": "tests/test_comm_r0_generated_activation.py",
+      "before_bytes": 3923,
+      "before_sha256": "6dc02e716e4f85b68d3ff09f3fdf59d601034ae2b8672caf667f9224ed5b4cb1",
+      "after_bytes": 4774,
+      "after_sha256": "0f269573f8b028684f3cdd1e12c6f73848d37a24de37c8f312d20c7134237d00"
+    },
+    {
+      "path": "tests/test_comm_r0_generated_activation_proof_closeout.py",
+      "before_bytes": 3006,
+      "before_sha256": "ccd73c16fa513dab0d20f7193e35da74663b54bc52cb655f9214f1b58d0da7ac",
+      "after_bytes": 3857,
+      "after_sha256": "017172b4d9935c82abbbd476e5c5608149edcd852ccf1bc8a5a5a0a625502ca9"
+    }
+  ],
+  "hardening": {
+    "consumed_record_checked_before_registration_activation_or_replay": true,
+    "consumed_refusal_id": "R0G-CONSUMED",
+    "consumption_record_symlink_refused": true,
+    "adversarial_symlink_fixture_removed_no_follow": true,
+    "adversarial_target_must_be_real_empty_directory": true,
+    "post_refusal_tree_measurement_regression_test": true,
+    "official_qualification_executed": false,
+    "development_full_replay_executed": false,
+    "synthetic_target_delivery_or_score": false
+  },
+  "operation_counters": {
+    "real_or_private_path_opens": 0,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "real_signal_reads": 0,
+    "real_target_or_label_reads": 0,
+    "real_model_runs": 0,
+    "real_training_runs": 0,
+    "real_prediction_sets": 0,
+    "real_target_deliveries": 0,
+    "real_scores": 0,
+    "analysis_network_bytes": 0,
+    "provider_calls": 0,
+    "streams_or_devices": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "active_gate": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "changed": false,
+    "all_authority_flags_false": true
+  },
+  "proof": {
+    "hardening_commit": null,
+    "hardening_CI_run_id": null,
+    "hardening_base_python_job_id": null,
+    "hardening_optional_neuro_readers_job_id": null,
+    "both_required_jobs_green": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "consumed_entrypoint_refusal_and_post_adversarial_fixture_cleanup",
+    "official_generated_qualification_accepted": false,
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "communication_or_language_decoding_established": false,
+    "unseen_participant_generalization_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "live_or_hardware_result_established": false
+  }
+}

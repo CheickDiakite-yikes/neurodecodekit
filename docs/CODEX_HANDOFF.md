@@ -11,7 +11,10 @@
 > passed Base `98606113010`, Optional `98606113427`, and CI `33097495998`.
 > Exact runtime/RSS/byte
 > measurements are unavailable rather than recorded as zero. A future source
-> correction requires a new prospective generated gate. No real EEG, network,
+> correction requires a new prospective generated gate. Post-failure
+> hardening now makes the consumed entry point refuse with `R0G-CONSUMED` and
+> regression-tests no-follow cleanup of the expected adversarial fixture; it
+> does not execute either replay. No real EEG, network,
 > provider, private artifact, or scientific claim occurred, and sole active
 > Tier C gate `DREYER-C5R-1-HL` remains unchanged and all-false.
 

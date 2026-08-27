@@ -222,6 +222,19 @@
           "failure_record_base_python_job_id": 98606113010,
           "failure_record_optional_neuro_readers_job_id": 98606113427,
           "failure_record_both_required_jobs_green": true,
+          "postfailure_hardening": {
+            "document": "docs/COMMUNICATION_EEG_INDEPENDENT_REPLICATION_GENERATED_POSTFAILURE_HARDENING.md",
+            "registry": "registries/communication_eeg_independent_replication_generated_postfailure_hardening.v0.json",
+            "status": "generated_tests_only_consumed_entrypoint_closed_pending_remote_proof",
+            "consumed_refusal_id": "R0G-CONSUMED",
+            "expected_adversarial_fixture_cleanup_corrected": true,
+            "official_qualification_rerun": false,
+            "development_full_replay": false,
+            "real_or_private_operations": 0,
+            "hardening_commit": null,
+            "hardening_CI_run_id": null,
+            "both_required_jobs_green": false
+          },
           "real_or_private_operations": 0,
           "analysis_network_bytes": 0,
           "scientific_value": "none_generated_engineering_only"

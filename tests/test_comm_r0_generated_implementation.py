@@ -346,6 +346,7 @@ class CommR0GeneratedImplementationTests(unittest.TestCase):
         neural_freeze = experiment.build_neural_prediction_freeze(neural_predictions)
         freeze = experiment.build_prediction_freeze(predictions, neural_freeze)
         with tempfile.TemporaryDirectory(dir=ROOT) as directory:
+            workdir = Path(directory)
             refusals = experiment.exercise_required_refusals(
                 rows,
                 targets,
@@ -353,8 +354,12 @@ class CommR0GeneratedImplementationTests(unittest.TestCase):
                 predictions,
                 neural_freeze,
                 freeze,
-                Path(directory),
+                workdir,
             )
+            self.assertFalse((workdir / "link").exists())
+            self.assertFalse((workdir / "link").is_symlink())
+            self.assertFalse((workdir / "target").exists())
+            self.assertEqual(experiment.g2._measure_tree_bytes(workdir), 4)
         self.assertEqual(tuple(refusals), experiment.REQUIRED_REFUSALS)
 
     def test_cli_exposes_no_real_execution_surface(self) -> None:
@@ -370,6 +375,10 @@ class CommR0GeneratedImplementationTests(unittest.TestCase):
 
     def test_qualifier_checks_registration_activation_and_green_proof_before_replay(self) -> None:
         source = inspect.getsource(experiment.run_generated_qualification)
+        self.assertLess(
+            source.index("_assert_generated_qualification_not_consumed"),
+            source.index("load_registration"),
+        )
         self.assertLess(source.index("load_registration"), source.index("load_activation"))
         self.assertLess(source.index("load_activation"), source.index("load_activation_proof"))
         self.assertLess(
@@ -382,6 +391,10 @@ class CommR0GeneratedImplementationTests(unittest.TestCase):
         helper_source = inspect.getsource(experiment._run_deterministic_replay_pair)
         self.assertIn("_run_isolated", helper_source)
         self.assertIn("timeout_seconds=120.0", helper_source)
+
+    def test_consumed_qualification_refuses_before_any_replay(self) -> None:
+        with self.assertRaisesRegex(experiment.CommR0GeneratedRefusal, "R0G-CONSUMED"):
+            experiment._assert_generated_qualification_not_consumed(ROOT)
 
     @unittest.skipUnless(
         os.environ.get("NDK_COMM_R0_DEV_REPLAY") == "1",
