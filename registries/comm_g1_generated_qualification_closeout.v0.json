@@ -1,0 +1,94 @@
+{
+  "schema_name": "neurodecodekit.comm_g1_generated_qualification_closeout",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-27",
+  "lane_id": "COMM-G1",
+  "status": "consumed_parked_R0_generated_proof_completeness_failure_no_rerun",
+  "implementation_green_proof": {
+    "commit": "5621fb8e378def319f6529e3d3173ffc88dbe9af",
+    "CI_run_id": 33048855198,
+    "base_python_job_id": 98439231456,
+    "optional_neuro_readers_job_id": 98439231761,
+    "both_required_jobs_green": true
+  },
+  "immutable_executor_result": {
+    "path": "registries/comm_g1_generated_qualification_result.v0.json",
+    "bytes": 6271,
+    "sha256": "696fe4236a5ff45b1b9a61761e6381f456a5e722aa5fa03fffa4008a3e29ce4e",
+    "executor_status": "passed_generated_only_no_scientific_value",
+    "executor_positive_fixture_route": "COMM-G1-R1",
+    "accepted_at_closeout": false
+  },
+  "measured_execution": {
+    "runtime_seconds": 29.46742837491911,
+    "peak_process_tree_RSS_bytes": 223526912,
+    "generated_input_bytes": 33030144,
+    "private_generated_prediction_bytes_maximum": 244033,
+    "public_output_bytes": 6271,
+    "total_parameter_update_fits": 60,
+    "model_inference_runs": 60,
+    "prediction_sets": 60,
+    "prediction_rows": 1440,
+    "synthetic_target_deliveries": 1,
+    "synthetic_scores": 1,
+    "post_target_updates": 0,
+    "reported_adversarial_refusals": 35,
+    "producer_causal": true,
+    "end_to_end_latency_measured": false
+  },
+  "acceptance_failures": [
+    {
+      "id": "COMM-G1-CF01-incomplete-replay-fingerprint",
+      "detail": "fixture_digest_omits_cue_timing_sample_and_time_bounds_rate_length_mask_channel_names_roles_and_geometry",
+      "immutable_result_signal": "cue_only_timing_only_and_no_signal_share_the_same_fixture_sha256"
+    },
+    {
+      "id": "COMM-G1-CF02-replays-not-isolated",
+      "detail": "two_generated_replays_occurred_in_one_process_not_two_separate_clean_workdirs"
+    },
+    {
+      "id": "COMM-G1-CF03-adversarial-family-incomplete",
+      "detail": "official_refusal_ledger_does_not_explicitly_exercise_symlink_escape_and_resource_cap_breach"
+    }
+  ],
+  "binding_router": {
+    "route": "COMM-G1-R0",
+    "reason": "structural_proof_completeness_failure_no_accepted_synthetic_score",
+    "executor_internal_route_preserved_but_not_accepted": "COMM-G1-R1"
+  },
+  "consumption": {
+    "official_invocations": 1,
+    "consumed": true,
+    "rerun_allowed": false,
+    "repair_in_place_allowed": false,
+    "overwrite_allowed": false,
+    "future_work_requires_new_lane_and_prospective_contract": true
+  },
+  "access_counters": {
+    "real_or_private_path_reads": 0,
+    "network_payload_bytes": 0,
+    "real_signal_samples": 0,
+    "real_event_target_or_label_rows": 0,
+    "real_training_runs": 0,
+    "real_model_inference_runs": 0,
+    "provider_calls": 0,
+    "stream_or_device_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "active_gate_preserved": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "sole_active_Tier_C_packet": true,
+    "all_authority_flags_false": true,
+    "changed_by_this_closeout": false
+  },
+  "claim_boundary": {
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "live_neural_decoding_established": false
+  }
+}

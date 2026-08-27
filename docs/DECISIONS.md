@@ -14016,3 +14016,18 @@ held-out target sealing, aggregate prediction freezing, no-clobber output, and
 35 distinct refusals. The official generated qualification remains unconsumed
 until this exact implementation is remotely green. Development COMM-G1-R1 is
 fictional plumbing evidence, not a neural or communication result.
+
+## 0495 - Reject COMM-G1 R1 at Strict Closeout
+
+Evidence decision: preserve the sole official generated result exactly, but do
+not accept its executor-internal `COMM-G1-R1` route. Artifact-only review found
+that the replay digest omits registered timing, mask, channel, and geometry
+fields; the two replays occurred in one process instead of isolated clean
+workdirs; and the refusal ledger does not explicitly exercise the registered
+symlink-escape and resource-cap-breach families.
+
+Binding decision: route the consumed invocation to `COMM-G1-R0`, permit no
+rerun or in-place repair, and require any successor to use a new prospective
+lane. This is generated proof-completeness failure localization, not a neural,
+communication, unseen-person, live, hardware, or clinical result. Preserve
+`DREYER-C5R-1-HL` as the sole all-false Tier C packet.

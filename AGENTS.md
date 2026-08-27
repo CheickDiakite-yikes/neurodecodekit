@@ -114,16 +114,25 @@ invalid class-preserving EEG derangement with a source-only, no-fixed-point
 cyclic class rotation. The amendment is green at
 `bed591718c9ebd2b349b33b580b750519d446c04`, CI `33043841818`.
 
-The generated implementation now exists in
+The generated implementation exists in
 `src/neurodecodekit/experiments/comm_g1_generated.py` with sidecar
 `src/neurodecodekit/comm_g1_cli.py`. Read
 `docs/COMM_G1_GENERATED_IMPLEMENTATION.md` and
 `registries/comm_g1_generated_implementation.v0.json`. A disposable development
 measurement completed the exact 60-update / 60-prediction-set schedule and 35
 refusals in 20.24995545798447 seconds at 178,176,000-byte peak RSS. This is not
-the official qualification and has no scientific value. Commit, push, and make
-the exact implementation remotely green before the sole official generated
-qualification. Every real operation remains Tier C.
+the official qualification and has no scientific value. Exact implementation
+`5621fb8e378def319f6529e3d3173ffc88dbe9af` passed Base job `98439231456`,
+Optional Neuro Readers job `98439231761`, and CI `33048855198`.
+
+The sole official generated qualification then executed once and is consumed.
+Read `docs/COMM_G1_GENERATED_QUALIFICATION_CLOSEOUT.md`, the immutable result,
+and its machine closeout. Although the executor emitted `COMM-G1-R1`, closeout
+binds `COMM-G1-R0`: the replay digest omitted registered fields, both replays
+ran in one process rather than isolated clean workdirs, and the refusal ledger
+did not explicitly exercise symlink-escape or resource-cap-breach families.
+Do not rerun, repair, overwrite, or reinterpret COMM-G1 as accepted. It has no
+scientific value. Every real operation remains Tier C.
 
 `DREYER-C5R-1-HL` is the sole active Tier C packet. Read, in order:
 

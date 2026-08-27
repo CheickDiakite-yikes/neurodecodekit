@@ -138,6 +138,16 @@ injected fictional residual-EEG effect while the shortcut fixtures stayed
 structural checks. That demonstrates analysis plumbing only. It is not evidence
 that real EEG decodes communication or adds information beyond eyes and mouth.
 
+The exact implementation became remotely green and its one official generated
+qualification ran once. The strict
+[`COMM-G1 closeout`](docs/COMM_G1_GENERATED_QUALIFICATION_CLOSEOUT.md) parks it
+at `COMM-G1-R0`, not the executor's provisional R1: its replay digest omitted
+registered metadata, its deterministic replays were not isolated in separate
+clean workdirs, and two named adversarial families were not explicitly
+exercised. The run is consumed and will not be rerun or repaired in place.
+This is useful control-plane failure localization, not EEG or communication
+decoding evidence.
+
 It specifies a six-participant synthetic leave-one-person-out matrix with ten
 fixed arms: priors, cue/time, EOG, oral EMG, all peripheral/context controls,
 selected EEG, posterior EEG, peripheral plus residual EEG, and a matched

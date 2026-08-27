@@ -3895,5 +3895,13 @@ The generated implementation is now recorded in
 `docs/COMM_G1_GENERATED_IMPLEMENTATION.md` and
 `registries/comm_g1_generated_implementation.v0.json`. Its disposable local
 measurement stayed under every cap and exercised 35 refusals, but it is not the
-official generated qualification and has no scientific value. The exact
-implementation must become remotely green before the one allowed qualification.
+official generated qualification and has no scientific value. Exact
+implementation `5621fb8e378def319f6529e3d3173ffc88dbe9af` is remotely green.
+
+The sole official qualification subsequently executed and is consumed. Read
+`docs/COMM_G1_GENERATED_QUALIFICATION_CLOSEOUT.md` and
+`registries/comm_g1_generated_qualification_closeout.v0.json`. The binding
+route is `COMM-G1-R0` because the replay digest was incomplete, the two replays
+were not isolated in clean workdirs, and two named refusal families were not
+explicitly exercised. Do not rerun or repair COMM-G1. Its score is not accepted
+and it has no scientific value.

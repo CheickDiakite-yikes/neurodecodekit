@@ -8074,3 +8074,22 @@ then implement generated-only COMM-G1 and bind both frozen records. Do not run
 the sole official qualification until the exact implementation is separately
 green. Keep `DREYER-C5R-1-HL` sole and all-false and preserve the unrelated
 tracker inspection NDJSON.
+
+## 2026-08-27 COMM-G1 Qualification Closeout Handoff
+
+Read `docs/COMM_G1_GENERATED_QUALIFICATION_CLOSEOUT.md`,
+`registries/comm_g1_generated_qualification_result.v0.json`,
+`registries/comm_g1_generated_qualification_closeout.v0.json`, and
+`tests/test_comm_g1_generated_qualification_closeout.py`.
+
+Exact implementation `5621fb8e378def319f6529e3d3173ffc88dbe9af` was green
+before the one official generated qualification. The invocation completed the
+registered 60-update / 60-prediction-set schedule within every resource cap,
+but strict artifact review found an incomplete replay digest, non-isolated
+replays, and two unexercised named refusal families. Preserve the immutable raw
+result, reject its internal R1, and bind `COMM-G1-R0`.
+
+COMM-G1 is consumed. Do not rerun, repair, overwrite, or reinterpret it as an
+accepted qualification. A successor requires a new lane and prospective
+contract. No real/private operation or scientific claim occurred, and
+`DREYER-C5R-1-HL` remains the sole active all-false Tier C packet.

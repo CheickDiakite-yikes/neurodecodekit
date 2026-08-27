@@ -15944,3 +15944,22 @@ Python at Ruff because two deliberate post-`sys.path` test imports lacked the
 pinned toolchain's `E402` annotations. No official qualification ran. The
 minimal follow-up restores only those annotations and rebinds the test artifact
 hash; the exact pinned local command `.venv/bin/ruff check .` then passed.
+
+### COMM-G1 official qualification consumed and parked at R0
+
+- Exact implementation `5621fb8e378def319f6529e3d3173ffc88dbe9af`
+  passed Base Python job `98439231456`, Optional Neuro Readers job
+  `98439231761`, and CI `33048855198` before the sole invocation.
+- The official generated-only run completed in 29.46742837491911 seconds at
+  223,526,912-byte peak process-tree RSS. It processed 33,030,144 generated
+  input bytes, emitted at most 244,033 private prediction bytes and 6,271
+  public bytes, and completed exactly 60 updates, 60 inference/prediction sets,
+  1,440 rows, one synthetic target delivery, one synthetic score, and zero
+  post-target updates.
+- Immediate artifact-only review found three acceptance failures: an incomplete
+  replay fingerprint, same-process rather than clean-workdir replay isolation,
+  and omission of explicit symlink-escape and resource-cap-breach refusals.
+- The executor's raw `COMM-G1-R1` is preserved but not accepted. Binding route
+  `COMM-G1-R0` consumes the run with no rerun or in-place repair. Every real,
+  private, network, provider, stream, device, release, and claim counter stayed
+  zero; the run has no scientific value.
