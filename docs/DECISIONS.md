@@ -14343,3 +14343,12 @@ green; only then may the single generated qualification run.
   qualification evidence. Correct only the test-process isolation that caused
   the development qualifier to inherit prior suite RSS; do not raise the 256
   MiB cap, rerun an official qualification, or claim a live/scientific result.
+- 2026-08-27: Treat CI `33117482620` as another failed implementation proof.
+  Give the clean qualification child only an explicit minimal environment and
+  preserve stderr for diagnosis. Keep all caps, official invocation counters,
+  and scientific authority unchanged.
+- 2026-08-27: Assign the three `COMM-LIVE-G0` transport schedules explicitly
+  across four fictional sessions instead of crossing every schedule with every
+  session. Preserve one complete four-partition invariance proof, dedicated gap
+  and abstention sessions, one combined integration session, two identical
+  replays, all 33 refusal families, and the original resource caps.

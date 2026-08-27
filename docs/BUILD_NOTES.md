@@ -16211,7 +16211,7 @@ and require both remote jobs green before the one official qualification.
   reset, abstention, stable commit/rearm, bounded snapshots, and target leakage
   refusal. The repeatable development qualification passed four fictional
   sessions, two deterministic replays, four chunk partitions, two controls,
-  and all 33 exact refusal bindings in 10.684960457962006 seconds at 25,821,184
+  and all 33 exact refusal bindings in 9.748861624975689 seconds at 31,047,680
   bytes peak RSS; all real/private, model, network, provider, device, release,
   and claim counters remained zero. The official one-shot qualification has not
   run. Immediate gate: commit, push, and remotely green the exact implementation
@@ -16223,3 +16223,18 @@ and require both remote jobs green before the one official qualification.
   and isolate the exact development qualification in a clean child process.
   No official qualification ran, no invocation was consumed, and all protected
   operation counters remained zero.
+- 2026-08-27: Corrective commit `1b4208b` again passed Base Python but its clean
+  child exited in Optional Neuro Readers before returning a qualification
+  record. The optional numerical suite leaves a process-specific native
+  environment registration that must not cross an exec
+  boundary. Construct a minimal explicit child environment and expose child
+  stderr on future failure. Do not change the resource cap or count either
+  failed CI attempt as an official qualification.
+- 2026-08-27: Removed redundant schedule crossing from the repeatable
+  `COMM-LIVE-G0` development replay without removing a registered schedule or
+  session. Session 0 proves all four contiguous partitions, sessions 1 and 2
+  isolate gap/reconnect and abstention, and session 3 combines all three
+  schedules; both deterministic replays use the same assignment. The exact
+  replay now completes in 9.748861624975689 seconds at 31,047,680-byte peak RSS
+  with all 33 refusals and four positive-control commits. The 30-second and 256
+  MiB caps remain unchanged.

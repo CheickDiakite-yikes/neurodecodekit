@@ -20,10 +20,31 @@ from neurodecodekit import comm_live_g0_cli  # noqa: E402
 from neurodecodekit.experiments import comm_live_g0_generated as experiment  # noqa: E402
 
 
+CHILD_ENVIRONMENT_KEYS = (
+    "PATH",
+    "HOME",
+    "TMPDIR",
+    "TMP",
+    "TEMP",
+    "LANG",
+    "LC_ALL",
+    "LD_LIBRARY_PATH",
+    "DYLD_LIBRARY_PATH",
+    "PYTHONHASHSEED",
+    "OMP_NUM_THREADS",
+    "OPENBLAS_NUM_THREADS",
+    "MKL_NUM_THREADS",
+    "NUMEXPR_NUM_THREADS",
+    "VECLIB_MAXIMUM_THREADS",
+)
+
+
 class CommunicationLiveSessionG0ImplementationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        environment = os.environ.copy()
+        environment = {
+            key: os.environ[key] for key in CHILD_ENVIRONMENT_KEYS if key in os.environ
+        }
         environment["PYTHONPATH"] = str(SRC)
         completed = subprocess.run(
             [
@@ -38,12 +59,17 @@ class CommunicationLiveSessionG0ImplementationTests(unittest.TestCase):
                 ),
                 str(ROOT),
             ],
-            check=True,
+            check=False,
             capture_output=True,
             text=True,
             timeout=40,
             env=environment,
         )
+        if completed.returncode != 0:
+            raise AssertionError(
+                "isolated development qualification failed: "
+                f"returncode={completed.returncode}; stderr={completed.stderr!r}"
+            )
         cls.development = json.loads(completed.stdout)
 
     def test_plan_binds_exact_generated_inventory(self) -> None:
@@ -57,6 +83,10 @@ class CommunicationLiveSessionG0ImplementationTests(unittest.TestCase):
         )
         self.assertEqual(
             plan["control_schedules"], ["gap_reconnect", "quality_confidence"]
+        )
+        self.assertEqual(
+            plan["session_schedule_assignments"],
+            [list(value) for value in experiment.SESSION_SCHEDULE_ASSIGNMENTS],
         )
         self.assertEqual(plan["required_adversarial_family_count"], 33)
         self.assertFalse(plan["official_qualification_available_now"])
@@ -73,6 +103,10 @@ class CommunicationLiveSessionG0ImplementationTests(unittest.TestCase):
         self.assertEqual(replay["fictional_sessions"], 4)
         self.assertEqual(len(replay["partition_schedules"]), 4)
         self.assertEqual(len(replay["control_schedules"]), 2)
+        self.assertEqual(
+            replay["session_schedule_assignments"],
+            [list(value) for value in experiment.SESSION_SCHEDULE_ASSIGNMENTS],
+        )
         self.assertGreater(result["aggregate_proof"]["positive_control_commit_count"], 0)
 
     def test_all_33_exact_refusal_family_ids_are_bound_once(self) -> None:

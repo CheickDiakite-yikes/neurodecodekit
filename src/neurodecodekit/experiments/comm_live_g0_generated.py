@@ -66,6 +66,16 @@ PARTITION_SCHEDULES: Mapping[str, tuple[int, ...]] = {
     "whole_stream": (80,),
 }
 CONTROL_SCHEDULES = ("gap_reconnect", "quality_confidence")
+SESSION_SCHEDULE_ASSIGNMENTS = (
+    ("contiguous_jittered_chunks",),
+    ("contiguous_jittered_chunks", "explicit_gap_disconnect_reconnect"),
+    ("contiguous_jittered_chunks", "quality_and_confidence_abstention"),
+    (
+        "contiguous_jittered_chunks",
+        "explicit_gap_disconnect_reconnect",
+        "quality_and_confidence_abstention",
+    ),
+)
 REQUIRED_REFUSAL_FAMILIES = (
     "source_identity_mismatch",
     "modality_or_device_drift",
@@ -968,23 +978,51 @@ def _run_replay(replay_index: int) -> dict[str, Any]:
     sessions: list[dict[str, Any]] = []
     for session_index in range(CAPS["fictional_sessions"]):
         seed = f"comm-live-g0:session-{session_index}"
+        assignment = SESSION_SCHEDULE_ASSIGNMENTS[session_index]
+        partition_schedules = (
+            PARTITION_SCHEDULES
+            if session_index == 0
+            else {"whole_stream": PARTITION_SCHEDULES["whole_stream"]}
+        )
         partitions = {
             name: _run_partition(seed, widths)
-            for name, widths in PARTITION_SCHEDULES.items()
+            for name, widths in partition_schedules.items()
         }
-        canonical = canonical_json_bytes(next(iter(partitions.values())))
-        if any(canonical_json_bytes(value) != canonical for value in partitions.values()):
+        canonical = canonical_json_bytes(partitions["whole_stream"])
+        if session_index == 0 and any(
+            canonical_json_bytes(value) != canonical for value in partitions.values()
+        ):
             raise CommLiveG0GeneratedRefusal(
                 "COMM-LIVE-G0-PARTITION-NONDETERMINISM", seed
             )
-        sessions.append(
-            {
-                "fictional_session_index": session_index,
-                "partition_schedules": partitions,
-                "gap_reconnect": _run_gap_reconnect(f"{seed}:gap"),
-                "quality_confidence": _run_quality_confidence(f"{seed}:quality"),
-            }
-        )
+        session = {
+            "fictional_session_index": session_index,
+            "assigned_transport_schedules": list(assignment),
+            "partition_schedules": partitions,
+            "gap_reconnect": None,
+            "quality_confidence": None,
+        }
+        if "explicit_gap_disconnect_reconnect" in assignment:
+            session["gap_reconnect"] = _run_gap_reconnect(f"{seed}:gap")
+        if "quality_and_confidence_abstention" in assignment:
+            session["quality_confidence"] = _run_quality_confidence(f"{seed}:quality")
+        sessions.append(session)
+    schedule_coverage = sorted(
+        {
+            schedule
+            for session in sessions
+            for schedule in session["assigned_transport_schedules"]
+        }
+    )
+    expected_coverage = sorted(
+        {
+            "contiguous_jittered_chunks",
+            "explicit_gap_disconnect_reconnect",
+            "quality_and_confidence_abstention",
+        }
+    )
+    if schedule_coverage != expected_coverage:
+        raise CommLiveG0GeneratedRefusal("COMM-LIVE-G0-SCHEDULE-COVERAGE")
     commit_count = sum(
         len(value["whole_stream"]["committed_output"])
         for value in (row["partition_schedules"] for row in sessions)
@@ -992,6 +1030,7 @@ def _run_replay(replay_index: int) -> dict[str, Any]:
     _require_positive_control(commit_count, deadline_expired=False)
     deterministic = {
         "fictional_sessions": sessions,
+        "schedule_coverage": schedule_coverage,
         "positive_control_commit_count": commit_count,
     }
     return {
@@ -1024,6 +1063,9 @@ def plan(root: str | Path | None = None) -> dict[str, Any]:
         "deterministic_replays": 2,
         "partition_schedules": list(PARTITION_SCHEDULES),
         "control_schedules": list(CONTROL_SCHEDULES),
+        "session_schedule_assignments": [
+            list(value) for value in SESSION_SCHEDULE_ASSIGNMENTS
+        ],
         "required_adversarial_family_count": len(REQUIRED_REFUSAL_FAMILIES),
         "required_adversarial_family_ids": list(REQUIRED_REFUSAL_FAMILIES),
         "official_qualification_available_now": False,
@@ -1073,6 +1115,9 @@ def run_development_qualification(root: str | Path | None = None) -> dict[str, A
             "fictional_sessions": CAPS["fictional_sessions"],
             "partition_schedules": list(PARTITION_SCHEDULES),
             "control_schedules": list(CONTROL_SCHEDULES),
+            "session_schedule_assignments": [
+                list(value) for value in SESSION_SCHEDULE_ASSIGNMENTS
+            ],
         },
         "aggregate_proof": {
             "session_payload_sha256": _sha256(

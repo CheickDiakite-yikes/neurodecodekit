@@ -8336,7 +8336,7 @@ gap/reconnect reset, quality/confidence abstention, three-update stable commit,
 blank/inactive rearm, bounded self-hashed snapshots, target leakage refusal,
 and transactional rollback. A development replay passed four fictional
 sessions, two deterministic replays, four partitions, two controls, and all 33
-exact adversarial refusal bindings in 10.684960457962006 seconds at 25,821,184
+exact adversarial refusal bindings in 9.748861624975689 seconds at 31,047,680
 bytes peak RSS. Every real/private, model, network, provider, device, release,
 and claim counter was zero.
 

@@ -23,8 +23,8 @@
   },
   "artifact_set": {
     "artifact_count": 12,
-    "artifact_bytes": 255856,
-    "canonical_sha256": "30fa80d4a21b103263fb0f4f644094523109cd84213b8d00e0b5a9e72d2ab7a2",
+    "artifact_bytes": 259509,
+    "canonical_sha256": "7fd8c8dda80c5c72d09250dfeb4188aa52e48c2dd12530dd59dadfda5bf49ad9",
     "artifacts": [
       {
         "path": "registries/communication_live_session_g0_contract.v0.json",
@@ -43,8 +43,8 @@
       },
       {
         "path": "docs/COMMUNICATION_LIVE_SESSION_G0_IMPLEMENTATION.md",
-        "bytes": 4923,
-        "sha256": "31f324cc3c4a65523ec53fb31f952e4ab771949c500db0ed874dbdc8c070e85f"
+        "bytes": 5903,
+        "sha256": "b78b2ffd2550b0071eb2446e92eaac26d7faaf958c098b542633dc2044540556"
       },
       {
         "path": "src/neurodecodekit/streaming/__init__.py",
@@ -63,8 +63,8 @@
       },
       {
         "path": "src/neurodecodekit/experiments/comm_live_g0_generated.py",
-        "bytes": 46756,
-        "sha256": "2ed6deb0fdb40a0c8092b2cbd6470ed3b39502b67318b58eee2fc6152708cbb1"
+        "bytes": 48463,
+        "sha256": "64b56bfb7297301c09438fd6082a5cf569e26bf18b20561ef646fb6d85521290"
       },
       {
         "path": "src/neurodecodekit/comm_live_g0_cli.py",
@@ -83,8 +83,8 @@
       },
       {
         "path": "tests/test_communication_live_session_g0_implementation.py",
-        "bytes": 6973,
-        "sha256": "5e0f02a79fba8d1e09bef83fd8bed80cee85579de6ccee3c42e6c23ce732bafc"
+        "bytes": 7939,
+        "sha256": "ef435395c6d3eedf4153c93269c102e04e4b9bd93d2011ad8185976c66245449"
       }
     ]
   },
@@ -104,17 +104,35 @@
     "real_model_or_provider_adapter": false
   },
   "development_verification": {
-    "focused_tests_passed": 50,
+    "focused_tests_passed": 54,
     "fictional_sessions": 4,
     "deterministic_replays": 2,
     "partition_schedules": 4,
     "control_schedules": 2,
     "registered_adversarial_refusals": 33,
     "positive_control_stable_commits": 4,
-    "deterministic_sha256": "c3e7eab1d2dc147b5987c3cbb83f8365119885f0162dd7f3109d45cf455a03d2",
-    "runtime_seconds": 10.684960457962006,
-    "peak_process_RSS_bytes": 25821184,
-    "inspectable_result_bytes": 7822,
+    "session_schedule_assignments": [
+      [
+        "contiguous_jittered_chunks"
+      ],
+      [
+        "contiguous_jittered_chunks",
+        "explicit_gap_disconnect_reconnect"
+      ],
+      [
+        "contiguous_jittered_chunks",
+        "quality_and_confidence_abstention"
+      ],
+      [
+        "contiguous_jittered_chunks",
+        "explicit_gap_disconnect_reconnect",
+        "quality_and_confidence_abstention"
+      ]
+    ],
+    "deterministic_sha256": "c06e1d5869a7d1786a867b1ec74e56a9f67ed829300b67a3f83d17a36f47dafc",
+    "runtime_seconds": 9.748861624975689,
+    "peak_process_RSS_bytes": 31047680,
+    "inspectable_result_bytes": 8122,
     "temporary_generated_bytes": 0,
     "Ruff_passed": true,
     "compile_passed": true,
@@ -140,6 +158,19 @@
     "failure": "development_test_inherited_prior_process_peak_RSS_after_6580_tests",
     "observed_prior_process_peak_RSS_bytes": 665694208,
     "correction": "run_exact_development_qualification_in_clean_bounded_child_process_without_changing_caps",
+    "official_qualification_operations": 0,
+    "official_invocation_consumed": false
+  },
+  "second_remote_attempt": {
+    "commit": "1b4208bab17e115ececbae541c1b08e3e56e9ce4",
+    "CI_run_id": 33117482620,
+    "base_python_job_id": 98675745756,
+    "base_python_conclusion": "success",
+    "optional_neuro_readers_job_id": 98675745942,
+    "optional_neuro_readers_conclusion": "failure",
+    "failure": "isolated_child_inherited_native_numerical_runtime_environment_without_exposing_child_stderr",
+    "correction": "construct_minimal_explicit_child_environment_and_surface_child_stderr",
+    "resource_caps_changed": false,
     "official_qualification_operations": 0,
     "official_invocation_consumed": false
   },
