@@ -16140,3 +16140,11 @@ and require both remote jobs green before the one official qualification.
   child. The exact two-child orchestration is now shared by the opt-in test and
   official path, so process isolation and replay equivalence execute before
   the one-shot qualification.
+- Corrective implementation `e0c587c36739af597e069bb68d84430d68b6e93b`
+  passed Base job `98586671291`, Optional Neuro Readers job `98586671285`, and
+  CI `33091909015`. The clean local base suite passed 6,445 tests with 258
+  expected skips; independent review reported no activation blocker.
+- Added an activation-only record for at most one generated qualification.
+  It performs zero qualification or real/private operation and requires its
+  own green CI, a proof-only closeout, and a separately green activation-proof
+  record before execution.

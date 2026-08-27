@@ -1,0 +1,112 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_independent_replication_generated_activation",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-27",
+  "lane_id": "COMM-R0-G",
+  "registration_id": "COMM-R0-REPLICATION-v0",
+  "status": "activation_record_pending_own_remote_green_proof",
+  "implementation_commit": "e0c587c36739af597e069bb68d84430d68b6e93b",
+  "green_implementation_commit": {
+    "commit": "e0c587c36739af597e069bb68d84430d68b6e93b",
+    "CI_run_id": 33091909015,
+    "base_python_job_id": 98586671291,
+    "optional_neuro_readers_job_id": 98586671285,
+    "both_required_jobs_green": true
+  },
+  "implementation_artifacts": [
+    {
+      "path": "src/neurodecodekit/experiments/comm_r0_generated.py",
+      "bytes": 68442,
+      "sha256": "032dc10eccb35eebf02126cec0b7e2a539a294e737e448b83d5beca775e32aa8",
+      "Git_blob": "5922f3e0ca98b7bc98c9e25e1f38b128ea488b9b"
+    },
+    {
+      "path": "src/neurodecodekit/comm_r0_cli.py",
+      "bytes": 1246,
+      "sha256": "07f73f5a0dff9d442b8ec9da655d955a6c4a9dbcdc1e85c34b46d8568ed38e42",
+      "Git_blob": "89989d389120967ffbbec74790bb7f72d83e636c"
+    },
+    {
+      "path": "tests/test_comm_r0_generated_implementation.py",
+      "bytes": 21457,
+      "sha256": "6ad07a474487d776a137fc317f7fabe29d7f2e5f01baeb94257c214a48702eeb",
+      "Git_blob": "95804a9d5fbc570dd7a075497ee6b34335fc3073"
+    },
+    {
+      "path": "tests/test_comm_r0_generated_implementation_record.py",
+      "bytes": 6150,
+      "sha256": "9034fe8856afa936796506cd3af136484f3463c1be74d6c02f2427ab9789ebd3",
+      "Git_blob": "133c40fad2a86733c20ee27d41b0c786e5460691"
+    },
+    {
+      "path": "docs/COMMUNICATION_EEG_INDEPENDENT_REPLICATION_GENERATED_IMPLEMENTATION.md",
+      "bytes": 6162,
+      "sha256": "3750f8a30da99a09202e4f795fe3b5c317e62b3e0c34982f14430948a24fbf2b",
+      "Git_blob": "ba55642b458b66e5774e37238885b41a73261e20"
+    },
+    {
+      "path": "registries/communication_eeg_independent_replication_generated_implementation.v0.json",
+      "bytes": 8192,
+      "sha256": "40778cbe9ad72f286c150a820ea18d290f37a180f43c496c5bca0d6f4d381e57",
+      "Git_blob": "aeb4e087d0e9c0843081caf4d6ea5324be6790a9"
+    }
+  ],
+  "result_path": "registries/communication_eeg_independent_replication_generated_result.v0.json",
+  "authority": {
+    "generated_qualification": true,
+    "generated_qualification_invocations_maximum": 1,
+    "real_or_private_data": false,
+    "network": false,
+    "real_training_or_inference": false,
+    "real_target_delivery_or_score": false,
+    "provider": false,
+    "stream_or_device": false,
+    "release": false,
+    "scientific_claim_upgrade": false
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "wall_time_seconds": 300,
+    "peak_process_tree_RSS_bytes": 805306368,
+    "generated_input_bytes": 33554432,
+    "private_output_bytes": 67108864,
+    "temporary_disk_bytes": 134217728,
+    "public_output_bytes": 1048576,
+    "analysis_network_bytes": 0
+  },
+  "operation_counters": {
+    "official_generated_qualification_invocations": 0,
+    "real_or_private_path_reads": 0,
+    "network_bytes": 0,
+    "real_signal_samples": 0,
+    "real_targets_or_labels": 0,
+    "real_training_runs": 0,
+    "real_model_inference_runs": 0,
+    "real_prediction_sets": 0,
+    "real_target_deliveries": 0,
+    "real_scores": 0,
+    "provider_calls": 0,
+    "stream_or_device_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "delayed_effect": {
+    "activation_commit_must_be_remotely_green": true,
+    "separate_activation_proof_closeout_must_be_remotely_green": true,
+    "separate_tracked_activation_proof_must_be_remotely_green": true,
+    "qualification_allowed_before_all_barriers": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "activation record for one generated replication qualification",
+    "scientific_value": "none",
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "causal_continuous_decoding_established": false,
+    "live_neural_decoding_established": false
+  }
+}

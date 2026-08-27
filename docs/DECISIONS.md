@@ -14254,3 +14254,18 @@ ceilings plus generalized `K=3/4/5` derangement, `n>20` SHA sign-flip, and Holm
 checks during qualification. Keep source-specific dynamic and partial
 numerical adapters pending the exact source lock rather than pretending the
 four-class fixture proves them.
+
+## 0503 - Activate One COMM-R0 Generated Qualification Through Three Barriers
+
+Evidence decision: treat corrective commit
+`e0c587c36739af597e069bb68d84430d68b6e93b` as the exact implementation after
+Base `98586671291`, Optional `98586671285`, and CI `33091909015` passed. Bind
+its immutable module, CLI, focused tests, implementation record, and closeout
+bytes before any official qualification.
+
+Activation decision: permit at most one generated-only qualification, with
+all real/private, network, provider, stream/device, release, and scientific
+authority false. This activation has delayed effect until its own commit is
+green, a proof-only closeout binds that green evidence, and a final tracked
+activation-proof record is independently green. Do not execute the qualifier
+at any earlier point.
