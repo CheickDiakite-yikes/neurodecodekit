@@ -16094,3 +16094,9 @@ and require both remote jobs green before the one official qualification.
   peripheral-adjusted claim.
 - Performed zero real/private, network, model, target, score, provider, stream,
   device, release, cleanup, or claim operation. The active gate is unchanged.
+- Exact preregistration `dc80adb76fe5fc45add07cc515e02521a5110ae9`
+  passed Base job `98530039527`, Optional Neuro Readers job `98530039228`, and
+  CI `33075946525`.
+- Added a proof-only closeout binding the three exact registration artifacts /
+  47,205 bytes by byte count, SHA-256, and Git blob. It changes no authority and
+  performs no irreversible or scientific operation.

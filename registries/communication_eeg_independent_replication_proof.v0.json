@@ -1,0 +1,93 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_independent_replication_proof",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-27",
+  "registration_id": "COMM-R0-REPLICATION-v0",
+  "status": "proof_only_closeout_pending_exact_commit_remote_green",
+  "green_registration_commit": {
+    "commit": "dc80adb76fe5fc45add07cc515e02521a5110ae9",
+    "CI_run_id": 33075946525,
+    "base_python_job_id": 98530039527,
+    "optional_neuro_readers_job_id": 98530039228,
+    "both_required_jobs_green": true
+  },
+  "bound_registration_artifacts": [
+    {
+      "path": "docs/COMMUNICATION_EEG_INDEPENDENT_REPLICATION_PREREGISTRATION.md",
+      "bytes": 14965,
+      "sha256": "89b89cfd1e433ad1ebfc17ec8c365a9bc36861474c2c2cea207ba77c2dbd28cf",
+      "git_blob": "d44e1f2141a95fccdd12dbfc1a58cb25921c7637"
+    },
+    {
+      "path": "registries/communication_eeg_independent_replication_contract.v0.json",
+      "bytes": 17290,
+      "sha256": "2f04ff2d6ea427c490807460a79baaa1d4f5a30f27d88ce90519806eed53d579",
+      "git_blob": "17bcc9d51d3bf709427cf4c3e3569ed23422463c"
+    },
+    {
+      "path": "tests/test_communication_eeg_independent_replication_contract.py",
+      "bytes": 14950,
+      "sha256": "ee35da31feab4a9f1340996486e61146f7b12003c7d6bd9c244ababde952fdd9",
+      "git_blob": "483506b010d2a13ae56b84eab0f9b271a87070b4"
+    }
+  ],
+  "bound_registration_artifact_summary": {
+    "count": 3,
+    "bytes": 47205,
+    "canonical_artifact_set_sha256": "ef426e15178707c639deb366694c75a63bb7f08fe3e1360af77937ab7506e8d6"
+  },
+  "scope_preservation": {
+    "registration_artifacts_unchanged": true,
+    "source_router_and_claim_ceilings_unchanged": true,
+    "analysis_controls_and_statistical_gates_unchanged": true,
+    "resource_and_one_score_boundaries_unchanged": true,
+    "active_DREYER_C5R_1_HL_gate_preserved": true,
+    "COMM_L0_META_remains_queued_all_false": true,
+    "authority_expanded": false,
+    "claim_boundary_changed": false
+  },
+  "operation_counters": {
+    "tracked_artifact_reads": 3,
+    "Git_proof_reads": 3,
+    "source_discovery_requests": 0,
+    "implementation_operations": 0,
+    "generated_qualification_invocations": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "real_or_private_path_reads": 0,
+    "real_payload_reads": 0,
+    "target_or_label_reads": 0,
+    "cache_split_feature_or_derivative_creations": 0,
+    "parameter_update_fits": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scoring_events": 0,
+    "provider_stream_or_device_operations": 0,
+    "cleanup_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "transition": {
+    "effective_before_this_closeout_commit_remote_green": false,
+    "registration_remotely_proven_after_closeout_green": true,
+    "DREYER_C5R_1_HL_remains_sole_active_Tier_C_packet": true,
+    "COMM_L0_META_active_after_remote_green": false,
+    "generated_implementation_authorized_by_closeout": false,
+    "network_or_real_operation_authorized_by_closeout": false,
+    "target_delivery_or_scoring_authorized_by_closeout": false,
+    "live_operation_or_release_authorized_by_closeout": false,
+    "applicable_separately_green_gate_required_for_irreversible_operation": true
+  },
+  "claim_boundary": {
+    "engineering_proof_added": "The independent communication-EEG replication analysis is remotely proven and independently bound by content and Git identity before discovery targets exist.",
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_participant_generalization_established": false,
+    "independent_replication_established": false,
+    "causal_continuous_decoding_established": false,
+    "live_neural_decoding_established": false
+  }
+}

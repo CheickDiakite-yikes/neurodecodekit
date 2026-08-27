@@ -8233,3 +8233,12 @@ cannot upgrade the full claim. No real/private operation or claim occurred.
 Immediate gate: verify, commit, push, and remotely green this preregistration.
 Do not activate COMM-L0-META, access data, alter `DREYER-C5R-1-HL`, or stage
 the unrelated tracker inspection NDJSON.
+
+Remote registration proof update: exact preregistration
+`dc80adb76fe5fc45add07cc515e02521a5110ae9` passed Base job `98530039527`,
+Optional Neuro Readers job `98530039228`, and CI `33075946525`. Read
+`docs/COMMUNICATION_EEG_INDEPENDENT_REPLICATION_PROOF_CLOSEOUT.md`, its machine
+proof, and matching test. This proof binds three exact registration artifacts /
+47,205 bytes and makes no real/private, network, model, target, score, cleanup,
+or claim operation. Commit, push, and remotely green the proof closeout without
+changing the sole active Tier C gate or staging the unrelated inspection file.

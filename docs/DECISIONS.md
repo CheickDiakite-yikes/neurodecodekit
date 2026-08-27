@@ -14201,3 +14201,9 @@ in this fixed-command experiment.
 Authority decision: this is additive Tier A preregistration. It makes zero
 real/private, model, target, score, provider, stream, device, release, cleanup,
 or claim operation and leaves `DREYER-C5R-1-HL` sole and all-false.
+
+Proof decision: exact preregistration
+`dc80adb76fe5fc45add07cc515e02521a5110ae9` passed Base job `98530039527`,
+Optional Neuro Readers job `98530039228`, and CI `33075946525`. Bind its three
+core artifacts in a proof-only closeout before implementation. The closeout
+adds no execution authority and leaves every scientific requirement unchanged.
