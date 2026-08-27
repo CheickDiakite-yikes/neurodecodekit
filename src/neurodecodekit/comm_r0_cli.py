@@ -16,8 +16,7 @@ def _parser() -> argparse.ArgumentParser:
     commands.add_parser("plan", help="show the bounded generated schedule")
     qualify = commands.add_parser("qualify", help="run the activated generated qualification")
     qualify.add_argument("--output", type=Path, required=True)
-    inspect = commands.add_parser("inspect", help="inspect an aggregate generated result")
-    inspect.add_argument("path", type=Path)
+    commands.add_parser("inspect", help="inspect the registered aggregate result")
     return parser
 
 
@@ -28,7 +27,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     elif args.command == "qualify":
         value = experiment.run_generated_qualification(args.output)
     else:
-        value = experiment.inspect_result(args.path)
+        value = experiment.inspect_result()
     print(json.dumps(value, indent=2, sort_keys=True))
     return 0
 

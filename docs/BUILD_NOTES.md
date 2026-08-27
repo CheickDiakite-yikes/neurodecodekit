@@ -16126,3 +16126,17 @@ and require both remote jobs green before the one official qualification.
   activation and proof-closeout records are committed, pushed, and remotely
   green. Every real/private, network, provider, stream, device, release, and
   claim counter remains zero.
+- Post-commit adversarial review found and corrected five weaknesses before
+  activation: arbitrary-path inspection, an unbound neural-to-final freeze,
+  repeatable direct scoring, same-process replays without a true timeout, and
+  causal/partial/dynamic-statistical helpers not bound into qualification.
+  `inspect` is now fixed to the registered aggregate path; the vault owns one
+  score; two replay children have separate inode-bound workdirs and parent-
+  enforced 120-second timeouts; causal timing enters the equivalence digest;
+  and the official route/mechanics ledger exercises partial availability,
+  `K=3/4/5` shifts, `n>20` SHA sign flips, and Holm adjustment. The numerical
+  partial/dynamic source adapter remains explicitly pending the exact lock.
+- Independent review found that the development test still exercised only one
+  child. The exact two-child orchestration is now shared by the opt-in test and
+  official path, so process isolation and replay equivalence execute before
+  the one-shot qualification.

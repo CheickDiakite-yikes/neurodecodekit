@@ -6,6 +6,7 @@ import hashlib
 import inspect
 import json
 import math
+import multiprocessing
 import os
 import time
 from collections import Counter, defaultdict
@@ -120,12 +121,13 @@ class SealedSyntheticTargetVault:
         self,
         predictions: Sequence[Mapping[str, Any]],
         freeze: Mapping[str, Any],
+        neural_freeze: Mapping[str, Any],
     ) -> CommittedPredictionFreeze:
         if self.__committed_freeze is not None:
             raise CommR0GeneratedRefusal("R0G-REPEATED-FREEZE-ARM")
         if {str(row["item_id"]) for row in predictions} != set(self.__targets):
             raise CommR0GeneratedRefusal("R0G-FREEZE-TARGET-INVENTORY")
-        committed = commit_prediction_freeze(predictions, freeze)
+        committed = _commit_prediction_freeze(predictions, freeze, neural_freeze)
         self.__committed_freeze = committed
         return committed
 
@@ -136,6 +138,16 @@ class SealedSyntheticTargetVault:
             raise CommR0GeneratedRefusal("R0G-REPEATED-TARGET-DELIVERY")
         self.deliveries = 1
         return dict(self.__targets)
+
+    def score_once(
+        self,
+        predictions: Sequence[Mapping[str, Any]],
+        freeze: Mapping[str, Any],
+        neural_freeze: Mapping[str, Any],
+    ) -> dict[str, Any]:
+        committed = self.arm(predictions, freeze, neural_freeze)
+        targets = self.deliver(committed)
+        return _score_predictions(predictions, targets, committed)
 
 
 @dataclass(frozen=True)
@@ -277,6 +289,62 @@ def assert_single_thread_environment() -> None:
         raise CommR0GeneratedRefusal(f"R0G-THREAD-ENV:{','.join(changed)}")
 
 
+def _run_isolated(
+    operation: Callable[..., Any],
+    *args: Any,
+    timeout_seconds: float,
+    child_tempdir: str | Path,
+) -> tuple[Any, dict[str, Any]]:
+    """Run one clean child with parent-enforced timeout and bounded join."""
+
+    context = multiprocessing.get_context("spawn")
+    receive, send = context.Pipe(duplex=False)
+    child_environment = g2._sanitized_child_environment()
+    temporary_directory = Path(child_tempdir).absolute()
+    descriptor = g2._assert_directory_capability(temporary_directory)
+    os.close(descriptor)
+    child_environment["TMPDIR"] = str(temporary_directory)
+    process = context.Process(
+        target=g2._child_entry,
+        args=(send, operation, args, child_environment, True),
+    )
+    original_environment = dict(os.environ)
+    try:
+        os.environ.clear()
+        os.environ.update(child_environment)
+        process.start()
+    finally:
+        os.environ.clear()
+        os.environ.update(original_environment)
+    send.close()
+    started = time.monotonic()
+    try:
+        while not receive.poll(0.1):
+            if time.monotonic() - started > timeout_seconds:
+                g2._terminate_child(process, process_group=True)
+                raise CommR0GeneratedRefusal("R0G-CHILD-TIMEOUT")
+            if not process.is_alive() and not receive.poll():
+                raise CommR0GeneratedRefusal("R0G-CHILD-EOF")
+        message = receive.recv()
+    except EOFError as exc:
+        raise CommR0GeneratedRefusal("R0G-CHILD-EOF") from exc
+    finally:
+        receive.close()
+    process.join(15)
+    if process.is_alive():
+        g2._terminate_child(process, process_group=True)
+        raise CommR0GeneratedRefusal("R0G-CHILD-JOIN")
+    if process.exitcode != 0 or not message.get("ok"):
+        raise CommR0GeneratedRefusal(
+            f"R0G-CHILD-FAILED:{message.get('error', process.exitcode)}"
+        )
+    return message["value"], {
+        "runtime_seconds": time.monotonic() - started,
+        "process_id": process.pid,
+        "timeout_seconds": timeout_seconds,
+    }
+
+
 def _rename_generated_participants(
     rows: Sequence[g1.GeneratedRow], targets: Mapping[str, int]
 ) -> tuple[list[g1.GeneratedRow], dict[str, int]]:
@@ -389,21 +457,66 @@ def route_condition_inventory(
             "route": "full_control",
             "conditions": list(NEURAL_CONDITIONS),
             "unavailable_conditions": [],
+            "available_nuisance_predictors": [
+                "EOG",
+                "bilateral_oral_EMG",
+                "posterior_EEG",
+                "cue",
+                "timing",
+            ],
             "full_peripheral_adjusted_claim_allowed": True,
         }
     unavailable = []
+    available = ["posterior_EEG", "cue", "timing"]
     if not has_eog:
-        unavailable.extend(("EOG_only", "peripheral_context_P"))
+        unavailable.append("EOG_only")
+    else:
+        available.append("EOG")
     if not has_oral_emg:
-        unavailable.extend(("oral_EMG_only", "peripheral_context_P"))
+        unavailable.append("oral_EMG_only")
+    else:
+        available.append("bilateral_oral_EMG")
     return {
         "route": "partial_control",
         "conditions": [
             condition for condition in NEURAL_CONDITIONS if condition not in set(unavailable)
         ],
         "unavailable_conditions": sorted(set(unavailable)),
+        "available_nuisance_predictors": available,
         "full_peripheral_adjusted_claim_allowed": False,
     }
+
+
+def qualify_route_contracts() -> list[dict[str, Any]]:
+    cases = (
+        ("full", True, True),
+        ("missing_EOG", False, True),
+        ("missing_oral_EMG", True, False),
+        ("missing_EOG_and_oral_EMG", False, False),
+    )
+    results = []
+    for case_id, has_eog, has_oral_emg in cases:
+        route = route_condition_inventory(has_eog=has_eog, has_oral_emg=has_oral_emg)
+        if route["route"] == "full_control":
+            if route["conditions"] != list(NEURAL_CONDITIONS):
+                raise CommR0GeneratedRefusal("R0G-FULL-ROUTE-INVENTORY")
+        else:
+            if route["full_peripheral_adjusted_claim_allowed"]:
+                raise CommR0GeneratedRefusal("R0G-PARTIAL-CLAIM-UPGRADE")
+            if any(
+                condition in route["conditions"]
+                for condition in route["unavailable_conditions"]
+            ):
+                raise CommR0GeneratedRefusal("R0G-PARTIAL-UNAVAILABLE-EMITTED")
+            for required in (
+                "peripheral_context_P",
+                "P_plus_residual_EEG",
+                "P_plus_class_destroyed_residual_EEG",
+            ):
+                if required not in route["conditions"]:
+                    raise CommR0GeneratedRefusal("R0G-PARTIAL-CANDIDATE-ABSENT")
+        results.append({"case_id": case_id, **route})
+    return results
 
 
 def canonical_fixture_digest(
@@ -797,8 +910,15 @@ def derive_language_predictions(
     return language_predictions
 
 
-def build_prediction_freeze(predictions: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
+def build_prediction_freeze(
+    predictions: Sequence[Mapping[str, Any]],
+    neural_freeze: Mapping[str, Any],
+) -> dict[str, Any]:
     validate_prediction_inventory(predictions)
+    neural_predictions = [
+        row for row in predictions if str(row["condition"]) in NEURAL_CONDITIONS
+    ]
+    verify_neural_prediction_freeze(neural_predictions, neural_freeze)
     return {
         "schema_name": "neurodecodekit.comm_r0_generated_prediction_freeze",
         "schema_version": "0.1.0",
@@ -808,22 +928,29 @@ def build_prediction_freeze(predictions: Sequence[Mapping[str, Any]]) -> dict[st
         "prediction_sets": len(PARTICIPANTS) * len(ALL_CONDITIONS),
         "prediction_rows": len(predictions),
         "private_prediction_payload_sha256": _sha256(_canonical_bytes(list(predictions))),
+        "neural_prediction_freeze_sha256": _sha256(
+            _canonical_bytes(dict(neural_freeze))
+        ),
         "neural_prediction_freeze_preceded_language_arms": True,
         "contains_individual_prediction_probability_target_participant_outcome_or_private_path": False,
     }
 
 
 def verify_prediction_freeze(
-    predictions: Sequence[Mapping[str, Any]], freeze: Mapping[str, Any]
+    predictions: Sequence[Mapping[str, Any]],
+    freeze: Mapping[str, Any],
+    neural_freeze: Mapping[str, Any],
 ) -> None:
-    if dict(freeze) != build_prediction_freeze(predictions):
+    if dict(freeze) != build_prediction_freeze(predictions, neural_freeze):
         raise CommR0GeneratedRefusal("R0G-PREDICTION-TAMPER")
 
 
-def commit_prediction_freeze(
-    predictions: Sequence[Mapping[str, Any]], freeze: Mapping[str, Any]
+def _commit_prediction_freeze(
+    predictions: Sequence[Mapping[str, Any]],
+    freeze: Mapping[str, Any],
+    neural_freeze: Mapping[str, Any],
 ) -> CommittedPredictionFreeze:
-    verify_prediction_freeze(predictions, freeze)
+    verify_prediction_freeze(predictions, freeze, neural_freeze)
     payload = dict(freeze)
     return CommittedPredictionFreeze(payload, _sha256(_canonical_bytes(payload)))
 
@@ -856,7 +983,97 @@ def exact_one_sided_sign_flip(values: Sequence[float]) -> float:
     return at_least / total
 
 
-def score_predictions(
+def one_sided_sign_flip(
+    values: Sequence[float],
+    *,
+    source_id: str = SOURCE_ID,
+    monte_carlo_draws: int = 1_000_000,
+) -> float:
+    """Execute the registered exact or deterministic SHA-256 sign schedule."""
+
+    if len(values) <= 20:
+        return exact_one_sided_sign_flip(values)
+    if monte_carlo_draws <= 0:
+        raise CommR0GeneratedRefusal("R0G-SIGN-FLIP-DRAWS")
+    observed = sum(values) / len(values)
+    at_least = 0
+    for draw in range(monte_carlo_draws):
+        signed = 0.0
+        for rank, value in enumerate(values):
+            digest = hashlib.sha256(
+                (
+                    f"{REGISTRATION_ID}|sign-flip|{source_id}|{draw}|{rank}"
+                ).encode("ascii")
+            ).digest()
+            signed += value if digest[-1] & 1 else -value
+        if signed / len(values) >= observed - 1e-15:
+            at_least += 1
+    return (1 + at_least) / (monte_carlo_draws + 1)
+
+
+def holm_two_adjusted_p_values(p_values: Mapping[str, float]) -> dict[str, float]:
+    if len(p_values) != 2 or any(not 0.0 <= value <= 1.0 for value in p_values.values()):
+        raise CommR0GeneratedRefusal("R0G-HOLM-INPUT")
+    ordered = sorted(p_values.items(), key=lambda item: (item[1], item[0].encode("utf-8")))
+    first_name, first_value = ordered[0]
+    second_name, second_value = ordered[1]
+    first_adjusted = min(1.0, 2.0 * first_value)
+    second_adjusted = min(1.0, max(first_adjusted, second_value))
+    return {first_name: first_adjusted, second_name: second_adjusted}
+
+
+def qualify_generalized_statistics_and_derangement(
+    template: g1.GeneratedRow,
+) -> dict[str, Any]:
+    np = g1._np()
+    derangement_hashes: dict[str, list[str]] = {}
+    for class_count in (3, 4, 5):
+        rows = tuple(
+            replace(
+                template,
+                item_id=f"mechanics-k{class_count}-c{target}",
+                trial_id=f"trial-0-{target}",
+            )
+            for target in range(class_count)
+        )
+        targets = {row.item_id: target for target, row in enumerate(rows)}
+        residuals = np.arange(class_count * 3, dtype="float64").reshape(class_count, 3)
+        hashes = [
+            _sha256(
+                cyclic_source_derangement(
+                    rows,
+                    targets,
+                    residuals,
+                    shift=shift,
+                    class_count=class_count,
+                ).astype("<f8", copy=False).tobytes(order="C")
+            )
+            for shift in range(1, class_count)
+        ]
+        if len(set(hashes)) != class_count - 1:
+            raise CommR0GeneratedRefusal("R0G-DYNAMIC-K-DERANGEMENT")
+        derangement_hashes[str(class_count)] = hashes
+    values = [0.1 if index % 2 else -0.02 for index in range(21)]
+    first_p = one_sided_sign_flip(values, monte_carlo_draws=256)
+    second_p = one_sided_sign_flip(values, monte_carlo_draws=256)
+    if first_p != second_p:
+        raise CommR0GeneratedRefusal("R0G-MONTE-CARLO-NONDETERMINISTIC")
+    return {
+        "derangement_mechanics_K": [3, 4, 5],
+        "derangement_hashes": derangement_hashes,
+        "n_above_20_test_participants": 21,
+        "n_above_20_qualification_draws": 256,
+        "n_above_20_default_registered_draws": 1_000_000,
+        "n_above_20_replay_p": first_p,
+        "Holm_two_route_adjusted_p": holm_two_adjusted_p_values(
+            {"partial-route-a": 0.01, "partial-route-b": 0.04}
+        ),
+        "full_numerical_model_fixture_K": 4,
+        "source_specific_dynamic_model_adapter_status": "pending_exact_source_lock",
+    }
+
+
+def _score_predictions(
     predictions: Sequence[Mapping[str, Any]],
     targets: Mapping[str, int],
     freeze: CommittedPredictionFreeze,
@@ -865,7 +1082,9 @@ def score_predictions(
         raise CommR0GeneratedRefusal("R0G-SCORER-UNCOMMITTED-FREEZE")
     if freeze.canonical_sha256 != _sha256(_canonical_bytes(dict(freeze.payload))):
         raise CommR0GeneratedRefusal("R0G-SCORER-FREEZE-TAMPER")
-    verify_prediction_freeze(predictions, freeze.payload)
+    neural_freeze_sha256 = freeze.payload.get("neural_prediction_freeze_sha256")
+    if not isinstance(neural_freeze_sha256, str) or len(neural_freeze_sha256) != 64:
+        raise CommR0GeneratedRefusal("R0G-SCORER-NEURAL-FREEZE")
     if set(targets) != {str(row["item_id"]) for row in predictions}:
         raise CommR0GeneratedRefusal("R0G-SCORER-INVENTORY")
     losses: dict[tuple[str, str], list[float]] = defaultdict(list)
@@ -929,7 +1148,7 @@ def score_predictions(
     }
     primary_mean = sum(primary_values) / len(primary_values)
     positive_fraction = component_positive / len(PARTICIPANTS)
-    p_value = exact_one_sided_sign_flip(primary_values)
+    p_value = one_sided_sign_flip(primary_values)
     comparator_ba = max(
         aggregate_ba[condition]
         for condition in (
@@ -1005,6 +1224,7 @@ def exercise_required_refusals(
     targets: Mapping[str, int],
     capabilities: Sequence[FoldCapability],
     predictions: Sequence[Mapping[str, Any]],
+    neural_freeze: Mapping[str, Any],
     freeze: Mapping[str, Any],
     workdir: Path,
 ) -> list[str]:
@@ -1032,7 +1252,7 @@ def exercise_required_refusals(
     symlink.symlink_to(symlink_target, target_is_directory=True)
     fresh_vault = SealedSyntheticTargetVault(targets)
     delivered_vault = SealedSyntheticTargetVault(targets)
-    committed = delivered_vault.arm(predictions, freeze)
+    committed = delivered_vault.arm(predictions, freeze, neural_freeze)
     delivered_vault.deliver(committed)
     base_measurements = {
         "runtime_seconds": 0,
@@ -1074,7 +1294,7 @@ def exercise_required_refusals(
             "DERANGEMENT-SCOPE",
         ),
         "prediction_tamper": (
-            lambda: verify_prediction_freeze(tampered, freeze),
+            lambda: verify_prediction_freeze(tampered, freeze, neural_freeze),
             "PREDICTION-TAMPER",
         ),
         "pre_freeze_target_delivery": (
@@ -1113,10 +1333,13 @@ def exercise_required_refusals(
             "PEAK_PROCESS_TREE_RSS_BYTES-CAP",
         ),
         "timeout": (
-            lambda: enforce_resource_caps(
-                {**base_measurements, "runtime_seconds": CAPS["wall_time_seconds"] + 1}
+            lambda: _run_isolated(
+                time.sleep,
+                0.1,
+                timeout_seconds=0.01,
+                child_tempdir=workdir,
             ),
-            "RUNTIME_SECONDS-CAP",
+            "CHILD-TIMEOUT",
         ),
     }
     refusals = [_expect_refusal(name, *cases[name]) for name in REQUIRED_REFUSALS]
@@ -1130,9 +1353,21 @@ def _assert_equal_digest(first: str, second: str) -> None:
         raise CommR0GeneratedRefusal("R0G-NONDETERMINISTIC-REPLAY")
 
 
-def _run_replay() -> dict[str, Any]:
+def _run_replay(
+    replay_id: str = "development-replay",
+    workdir_text: str | None = None,
+) -> dict[str, Any]:
+    workdir_identity: tuple[int, int] | None = None
+    if workdir_text is not None:
+        workdir = Path(workdir_text).absolute()
+        descriptor = g2._assert_directory_capability(workdir)
+        os.close(descriptor)
+        info = workdir.stat()
+        workdir_identity = (info.st_dev, info.st_ino)
     rows, targets, input_bytes = generate_fixture()
     fixture_digest = canonical_fixture_digest(rows, targets)
+    causal_records = [causal_timing_record(row) for row in rows]
+    causal_timing_sha256 = _sha256(_canonical_bytes(causal_records))
     capabilities, vault = prepare_fold_capabilities(rows, targets)
     neural_predictions, ledger = predict_capabilities(capabilities)
     neural_freeze = build_neural_prediction_freeze(neural_predictions)
@@ -1142,15 +1377,14 @@ def _run_replay() -> dict[str, Any]:
     predictions = [*neural_predictions, *language_predictions]
     ledger.prediction_sets += len(PARTICIPANTS) * len(LANGUAGE_CONDITIONS)
     ledger.prediction_rows = len(predictions)
-    freeze = build_prediction_freeze(predictions)
-    committed_freeze = vault.arm(predictions, freeze)
-    delivered = vault.deliver(committed_freeze)
+    freeze = build_prediction_freeze(predictions, neural_freeze)
+    score = vault.score_once(predictions, freeze, neural_freeze)
     ledger.synthetic_target_deliveries += 1
-    score = score_predictions(predictions, delivered, committed_freeze)
     ledger.synthetic_scores += 1
     public_score = {key: value for key, value in score.items() if key != "participant_metrics"}
     return {
         "fixture_digest": fixture_digest,
+        "causal_timing_sha256": causal_timing_sha256,
         "input_bytes": input_bytes,
         "private_prediction_bytes": len(_canonical_bytes(predictions)),
         "freeze": freeze,
@@ -1161,12 +1395,17 @@ def _run_replay() -> dict[str, Any]:
         "targets": targets,
         "capabilities": capabilities,
         "predictions": predictions,
+        "replay_id": replay_id,
+        "process_id": os.getpid(),
+        "workdir_identity": workdir_identity,
+        "peak_process_tree_RSS_bytes": g1.peak_process_tree_rss_bytes(),
     }
 
 
 def _replay_equivalence_surface(replay: Mapping[str, Any]) -> dict[str, Any]:
     return {
         "fixture_digest": replay["fixture_digest"],
+        "causal_timing_sha256": replay["causal_timing_sha256"],
         "neural_freeze": replay["neural_freeze"],
         "freeze": replay["freeze"],
         "score": replay["score"],
@@ -1205,6 +1444,41 @@ def plan() -> dict[str, Any]:
     }
 
 
+def _run_deterministic_replay_pair(
+    replay_directories: Sequence[Path],
+) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any], dict[str, Any], str]:
+    """Execute the exact isolated replay pair used by the qualification."""
+
+    if len(replay_directories) != 2:
+        raise CommR0GeneratedRefusal("R0G-REPLAY-DIRECTORY-COUNT")
+    first, first_monitor = _run_isolated(
+        _run_replay,
+        "replay-1",
+        str(replay_directories[0]),
+        timeout_seconds=120.0,
+        child_tempdir=replay_directories[0],
+    )
+    if first["peak_process_tree_RSS_bytes"] > CAPS["peak_process_tree_RSS_bytes"]:
+        raise CommR0GeneratedRefusal("R0G-PEAK_PROCESS_TREE_RSS_BYTES-CAP")
+    second, second_monitor = _run_isolated(
+        _run_replay,
+        "replay-2",
+        str(replay_directories[1]),
+        timeout_seconds=120.0,
+        child_tempdir=replay_directories[1],
+    )
+    if second["peak_process_tree_RSS_bytes"] > CAPS["peak_process_tree_RSS_bytes"]:
+        raise CommR0GeneratedRefusal("R0G-PEAK_PROCESS_TREE_RSS_BYTES-CAP")
+    if first["process_id"] == second["process_id"]:
+        raise CommR0GeneratedRefusal("R0G-REPLAY-PROCESS-ISOLATION")
+    if first["workdir_identity"] == second["workdir_identity"]:
+        raise CommR0GeneratedRefusal("R0G-REPLAY-WORKDIR-ISOLATION")
+    first_digest = _sha256(_canonical_bytes(_replay_equivalence_surface(first)))
+    second_digest = _sha256(_canonical_bytes(_replay_equivalence_surface(second)))
+    _assert_equal_digest(first_digest, second_digest)
+    return first, first_monitor, second, second_monitor, first_digest
+
+
 def run_generated_qualification(
     output_path: str | Path,
     *,
@@ -1229,49 +1503,60 @@ def run_generated_qualification(
     preflight_rss = peak_rss_reader()
     if not isinstance(preflight_rss, int) or preflight_rss < 0:
         raise CommR0GeneratedRefusal("R0G-RSS-MEASUREMENT")
-    first = _run_replay()
-    second = _run_replay()
-    _assert_equal_digest(
-        _sha256(_canonical_bytes(_replay_equivalence_surface(first))),
-        _sha256(_canonical_bytes(_replay_equivalence_surface(second))),
-    )
-    if first["score"]["route"] != "COMM-R0-G-R1":
-        raise CommR0GeneratedRefusal("R0G-POSITIVE-CONTROL")
-    shortcut_results = {}
-    generated_input_bytes = first["input_bytes"] + second["input_bytes"]
-    for case_family in g1.CASE_FAMILIES[1:]:
-        case_rows, case_targets, case_bytes = generate_fixture(
-            case_family, participants=("shortcut-a", "shortcut-b")
-        )
-        replay_rows, replay_targets, replay_bytes = generate_fixture(
-            case_family, participants=("shortcut-a", "shortcut-b")
-        )
-        first_digest = canonical_fixture_digest(case_rows, case_targets)
-        second_digest = canonical_fixture_digest(replay_rows, replay_targets)
-        _assert_equal_digest(first_digest, second_digest)
-        shortcut_results[case_family] = {
-            **g1.validate_shortcut_fixture(case_family, case_rows, case_targets),
-            "fixture_sha256": first_digest,
-        }
-        generated_input_bytes += case_bytes + replay_bytes
     workdir = output.parent / f".comm-r0-g-{os.getpid()}-{time.monotonic_ns()}"
     workdir.mkdir(mode=0o700)
     workdir_info = workdir.stat()
     workdir_identity = (workdir_info.st_dev, workdir_info.st_ino)
+    replay_directories = []
     try:
+        for name in ("replay-1", "replay-2", "adversarial"):
+            directory = workdir / name
+            directory.mkdir(mode=0o700)
+            replay_directories.append(directory)
+        first, first_monitor, second, second_monitor, equivalence_sha256 = (
+            _run_deterministic_replay_pair(replay_directories[:2])
+        )
+        if first["score"]["route"] != "COMM-R0-G-R1":
+            raise CommR0GeneratedRefusal("R0G-POSITIVE-CONTROL")
+        route_qualification = qualify_route_contracts()
+        generalized_mechanics = qualify_generalized_statistics_and_derangement(
+            first["rows"][0]
+        )
+        shortcut_results = {}
+        generated_input_bytes = first["input_bytes"] + second["input_bytes"]
+        for case_family in g1.CASE_FAMILIES[1:]:
+            case_rows, case_targets, case_bytes = generate_fixture(
+                case_family, participants=("shortcut-a", "shortcut-b")
+            )
+            replay_rows, replay_targets, replay_bytes = generate_fixture(
+                case_family, participants=("shortcut-a", "shortcut-b")
+            )
+            first_digest = canonical_fixture_digest(case_rows, case_targets)
+            second_digest = canonical_fixture_digest(replay_rows, replay_targets)
+            _assert_equal_digest(first_digest, second_digest)
+            shortcut_results[case_family] = {
+                **g1.validate_shortcut_fixture(case_family, case_rows, case_targets),
+                "fixture_sha256": first_digest,
+            }
+            generated_input_bytes += case_bytes + replay_bytes
         refusal_ids = exercise_required_refusals(
             first["rows"],
             first["targets"],
             first["capabilities"],
             first["predictions"],
+            first["neural_freeze"],
             first["freeze"],
-            workdir,
+            replay_directories[2],
         )
         temporary_disk_bytes = g2._measure_tree_bytes(workdir)
     finally:
         g2._secure_remove_tree(workdir, workdir_identity)
     runtime = time.monotonic() - started
-    peak_rss = peak_rss_reader()
+    peak_rss = max(
+        peak_rss_reader(),
+        first["peak_process_tree_RSS_bytes"],
+        second["peak_process_tree_RSS_bytes"],
+    )
     private_output_bytes = first["private_prediction_bytes"] + second["private_prediction_bytes"]
     result = {
         "schema_name": "neurodecodekit.communication_eeg_independent_replication_generated_result",
@@ -1287,11 +1572,14 @@ def run_generated_qualification(
         },
         "deterministic_replays": {
             "count": 2,
-            "equivalence_sha256": _sha256(
-                _canonical_bytes(_replay_equivalence_surface(first))
-            ),
+            "separate_child_processes": True,
+            "separate_inode_bound_workdirs": True,
+            "equivalence_sha256": equivalence_sha256,
+            "causal_timing_sha256": first["causal_timing_sha256"],
         },
         "positive_control": first["score"],
+        "route_qualification": route_qualification,
+        "generalized_mechanics": generalized_mechanics,
         "shortcut_controls": shortcut_results,
         "adversarial_qualification": {
             "required": list(REQUIRED_REFUSALS),
@@ -1314,6 +1602,14 @@ def run_generated_qualification(
         "measurements": {
             "runtime_seconds": runtime,
             "peak_process_tree_RSS_bytes": peak_rss,
+            "replay_runtime_seconds": [
+                first_monitor["runtime_seconds"],
+                second_monitor["runtime_seconds"],
+            ],
+            "replay_peak_process_tree_RSS_bytes": [
+                first["peak_process_tree_RSS_bytes"],
+                second["peak_process_tree_RSS_bytes"],
+            ],
             "generated_input_bytes": generated_input_bytes,
             "private_output_bytes": private_output_bytes,
             "temporary_disk_bytes": temporary_disk_bytes,
@@ -1364,8 +1660,11 @@ def run_generated_qualification(
     return result
 
 
-def inspect_result(path: str | Path) -> dict[str, Any]:
-    value = json.loads(g2._read_regular_no_follow(Path(path)))
+def inspect_result(*, root: str | Path | None = None) -> dict[str, Any]:
+    repository = Path(root) if root is not None else _repo_root()
+    path = (repository / RESULT_PATH).absolute()
+    g2._require_output_within_repository(path, repository)
+    value = json.loads(g2._read_regular_no_follow(path))
     if value.get("schema_name") != (
         "neurodecodekit.communication_eeg_independent_replication_generated_result"
     ):

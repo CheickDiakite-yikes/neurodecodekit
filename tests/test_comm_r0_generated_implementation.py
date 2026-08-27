@@ -112,8 +112,12 @@ class CommR0GeneratedImplementationTests(unittest.TestCase):
             for row in rows
             for condition in experiment.ALL_CONDITIONS
         ]
-        freeze = experiment.build_prediction_freeze(predictions)
-        committed = vault.arm(predictions, freeze)
+        neural_predictions = [
+            row for row in predictions if row["condition"] in experiment.NEURAL_CONDITIONS
+        ]
+        neural_freeze = experiment.build_neural_prediction_freeze(neural_predictions)
+        freeze = experiment.build_prediction_freeze(predictions, neural_freeze)
+        committed = vault.arm(predictions, freeze, neural_freeze)
         self.assertEqual(len(vault.deliver(committed)), 288)
         with self.assertRaisesRegex(experiment.CommR0GeneratedRefusal, "REPEATED"):
             vault.deliver(committed)
@@ -135,8 +139,9 @@ class CommR0GeneratedImplementationTests(unittest.TestCase):
         partial = experiment.route_condition_inventory(has_eog=True, has_oral_emg=False)
         self.assertEqual(partial["route"], "partial_control")
         self.assertIn("oral_EMG_only", partial["unavailable_conditions"])
-        self.assertIn("peripheral_context_P", partial["unavailable_conditions"])
         self.assertNotIn("oral_EMG_only", partial["conditions"])
+        self.assertIn("peripheral_context_P", partial["conditions"])
+        self.assertIn("posterior_EEG", partial["available_nuisance_predictors"])
         self.assertFalse(partial["full_peripheral_adjusted_claim_allowed"])
 
     def test_all_k_minus_one_derangements_are_distinct_complete_and_source_only(self) -> None:
@@ -161,6 +166,42 @@ class CommR0GeneratedImplementationTests(unittest.TestCase):
             self.assertFalse(np.array_equal(output, residuals))
         with self.assertRaisesRegex(experiment.CommR0GeneratedRefusal, "SHIFT"):
             experiment.cyclic_source_derangement(rows, targets, residuals, shift=0)
+
+    def test_derangement_mechanics_generalize_to_three_and_five_classes(self) -> None:
+        try:
+            rows, _targets, _ = experiment.generate_fixture(
+                participants=("dynamic-a", "dynamic-b")
+            )
+            np = experiment.g1._np()
+        except RuntimeError as exc:
+            self.skipTest(str(exc))
+        template = rows[0]
+        for class_count in (3, 5):
+            dynamic_rows = tuple(
+                replace(
+                    template,
+                    item_id=f"dynamic-{class_count}-{target}",
+                    trial_id=f"trial-0-{target}",
+                )
+                for target in range(class_count)
+            )
+            dynamic_targets = {
+                row.item_id: target for target, row in enumerate(dynamic_rows)
+            }
+            residuals = np.arange(class_count * 2, dtype="float64").reshape(
+                class_count, 2
+            )
+            outputs = [
+                experiment.cyclic_source_derangement(
+                    dynamic_rows,
+                    dynamic_targets,
+                    residuals,
+                    shift=shift,
+                    class_count=class_count,
+                )
+                for shift in range(1, class_count)
+            ]
+            self.assertEqual(len({output.tobytes() for output in outputs}), class_count - 1)
 
     def test_language_arms_are_target_blind_and_item_deranged(self) -> None:
         try:
@@ -218,22 +259,28 @@ class CommR0GeneratedImplementationTests(unittest.TestCase):
 
     def test_prediction_freeze_and_scorer_enforce_one_shot_surfaces(self) -> None:
         predictions, targets = self._synthetic_predictions()
-        freeze = experiment.build_prediction_freeze(predictions)
-        experiment.verify_prediction_freeze(predictions, freeze)
-        committed = experiment.commit_prediction_freeze(predictions, freeze)
+        neural_predictions = [
+            row for row in predictions if row["condition"] in experiment.NEURAL_CONDITIONS
+        ]
+        neural_freeze = experiment.build_neural_prediction_freeze(neural_predictions)
+        freeze = experiment.build_prediction_freeze(predictions, neural_freeze)
+        experiment.verify_prediction_freeze(predictions, freeze, neural_freeze)
         self.assertFalse(
             freeze[
                 "contains_individual_prediction_probability_target_participant_outcome_or_private_path"
             ]
         )
-        score = experiment.score_predictions(predictions, targets, committed)
+        vault = experiment.SealedSyntheticTargetVault(targets)
+        score = vault.score_once(predictions, freeze, neural_freeze)
         self.assertEqual(score["route"], "COMM-R0-G-R1")
         self.assertTrue(all(score["gates"].values()))
         self.assertFalse(score["language_arms_change_neural_router"])
         tampered = [dict(row) for row in predictions]
         tampered[0] = {**tampered[0], "probabilities": [0.7, 0.1, 0.1, 0.1]}
         with self.assertRaisesRegex(experiment.CommR0GeneratedRefusal, "TAMPER"):
-            experiment.verify_prediction_freeze(tampered, freeze)
+            experiment.verify_prediction_freeze(tampered, freeze, neural_freeze)
+        with self.assertRaisesRegex(experiment.CommR0GeneratedRefusal, "REPEATED"):
+            vault.score_once(predictions, freeze, neural_freeze)
 
     def test_exact_sign_flip_schedule_is_deterministic(self) -> None:
         values = [0.2] * 12
@@ -245,6 +292,12 @@ class CommR0GeneratedImplementationTests(unittest.TestCase):
                 abs_tol=0.0,
             )
         )
+        values = [0.1 if index % 2 else -0.02 for index in range(21)]
+        first = experiment.one_sided_sign_flip(values, monte_carlo_draws=128)
+        second = experiment.one_sided_sign_flip(values, monte_carlo_draws=128)
+        self.assertEqual(first, second)
+        adjusted = experiment.holm_two_adjusted_p_values({"route-a": 0.01, "route-b": 0.04})
+        self.assertEqual(adjusted, {"route-a": 0.02, "route-b": 0.04})
 
     def test_every_registered_resource_cap_refuses(self) -> None:
         base = {
@@ -287,13 +340,18 @@ class CommR0GeneratedImplementationTests(unittest.TestCase):
             for row in rows
             for condition in experiment.ALL_CONDITIONS
         ]
-        freeze = experiment.build_prediction_freeze(predictions)
+        neural_predictions = [
+            row for row in predictions if row["condition"] in experiment.NEURAL_CONDITIONS
+        ]
+        neural_freeze = experiment.build_neural_prediction_freeze(neural_predictions)
+        freeze = experiment.build_prediction_freeze(predictions, neural_freeze)
         with tempfile.TemporaryDirectory(dir=ROOT) as directory:
             refusals = experiment.exercise_required_refusals(
                 rows,
                 targets,
                 capabilities,
                 predictions,
+                neural_freeze,
                 freeze,
                 Path(directory),
             )
@@ -307,15 +365,23 @@ class CommR0GeneratedImplementationTests(unittest.TestCase):
         with redirect_stdout(output):
             self.assertEqual(comm_r0_cli.main(["plan"]), 0)
         self.assertEqual(json.loads(output.getvalue())["lane_id"], "COMM-R0-G")
+        with self.assertRaises(SystemExit):
+            comm_r0_cli._parser().parse_args(["inspect", "another.json"])
 
     def test_qualifier_checks_registration_activation_and_green_proof_before_replay(self) -> None:
         source = inspect.getsource(experiment.run_generated_qualification)
         self.assertLess(source.index("load_registration"), source.index("load_activation"))
         self.assertLess(source.index("load_activation"), source.index("load_activation_proof"))
-        self.assertLess(source.index("load_activation_proof"), source.index("_run_replay"))
+        self.assertLess(
+            source.index("load_activation_proof"),
+            source.index("_run_deterministic_replay_pair"),
+        )
         self.assertNotIn("requests", source)
         self.assertNotIn("urllib", source)
         self.assertNotIn("collect_remote", source)
+        helper_source = inspect.getsource(experiment._run_deterministic_replay_pair)
+        self.assertIn("_run_isolated", helper_source)
+        self.assertIn("timeout_seconds=120.0", helper_source)
 
     @unittest.skipUnless(
         os.environ.get("NDK_COMM_R0_DEV_REPLAY") == "1",
@@ -324,11 +390,27 @@ class CommR0GeneratedImplementationTests(unittest.TestCase):
     def test_opt_in_full_generated_replay(self) -> None:
         for name in experiment.g1.THREAD_ENVIRONMENT:
             self.assertEqual(os.environ.get(name), "1")
-        replay = experiment._run_replay()
-        self.assertEqual(replay["score"]["route"], "COMM-R0-G-R1")
-        self.assertEqual(replay["ledger"]["residualizer_fits"], 12)
-        self.assertEqual(replay["ledger"]["classifier_or_prior_fits"], 144)
-        self.assertEqual(replay["ledger"]["prediction_rows"], 4320)
+        with tempfile.TemporaryDirectory(dir=ROOT) as directory:
+            replay_directories = [Path(directory) / f"replay-{index}" for index in (1, 2)]
+            for replay_directory in replay_directories:
+                replay_directory.mkdir()
+            first, first_monitor, second, second_monitor, equivalence_sha256 = (
+                experiment._run_deterministic_replay_pair(replay_directories)
+            )
+        self.assertEqual(first["score"]["route"], "COMM-R0-G-R1")
+        self.assertEqual(first["ledger"]["residualizer_fits"], 12)
+        self.assertEqual(first["ledger"]["classifier_or_prior_fits"], 144)
+        self.assertEqual(first["ledger"]["prediction_rows"], 4320)
+        self.assertGreater(first_monitor["runtime_seconds"], 0.0)
+        self.assertGreater(second_monitor["runtime_seconds"], 0.0)
+        self.assertNotEqual(first["process_id"], second["process_id"])
+        self.assertNotEqual(first["workdir_identity"], second["workdir_identity"])
+        self.assertEqual(
+            equivalence_sha256,
+            experiment._sha256(
+                experiment._canonical_bytes(experiment._replay_equivalence_surface(first))
+            ),
+        )
 
     def test_output_publication_refuses_clobber_and_symlink_escape(self) -> None:
         with tempfile.TemporaryDirectory(dir=ROOT) as directory:
@@ -343,6 +425,29 @@ class CommR0GeneratedImplementationTests(unittest.TestCase):
             link.symlink_to(target, target_is_directory=True)
             with self.assertRaisesRegex(Exception, "DIRECTORY-CAPABILITY"):
                 experiment.g2._publish_no_replace(link / "escaped.json", b"x")
+
+    def test_inspection_is_fixed_to_registered_result_path(self) -> None:
+        with tempfile.TemporaryDirectory(dir=ROOT) as directory:
+            root = Path(directory)
+            result = root / experiment.RESULT_PATH
+            result.parent.mkdir(parents=True)
+            result.write_text(
+                json.dumps(
+                    {
+                        "schema_name": "neurodecodekit.communication_eeg_independent_replication_generated_result",
+                        "lane_id": "COMM-R0-G",
+                        "status": "passed_generated_only_no_scientific_value",
+                        "positive_control": {"route": "COMM-R0-G-R1"},
+                        "schedule": {},
+                        "measurements": {},
+                        "warnings": [],
+                        "claim_boundary": {},
+                    }
+                ),
+                encoding="utf-8",
+            )
+            inspected = experiment.inspect_result(root=root)
+            self.assertEqual(inspected["lane_id"], "COMM-R0-G")
 
 
 if __name__ == "__main__":

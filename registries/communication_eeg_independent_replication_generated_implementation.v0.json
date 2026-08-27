@@ -19,18 +19,18 @@
   "implementation_artifacts": [
     {
       "path": "src/neurodecodekit/experiments/comm_r0_generated.py",
-      "bytes": 56344,
-      "sha256": "bde85801a1e0a3f088bd1279de3daeacaa14d27acc905a6c5d17328c2c5556bd"
+      "bytes": 68442,
+      "sha256": "032dc10eccb35eebf02126cec0b7e2a539a294e737e448b83d5beca775e32aa8"
     },
     {
       "path": "src/neurodecodekit/comm_r0_cli.py",
-      "bytes": 1307,
-      "sha256": "961f0bbde57a6ecdf78e8411e0b5f377c0d2685f80e7565552409f3ba0ab028a"
+      "bytes": 1246,
+      "sha256": "07f73f5a0dff9d442b8ec9da655d955a6c4a9dbcdc1e85c34b46d8568ed38e42"
     },
     {
       "path": "tests/test_comm_r0_generated_implementation.py",
-      "bytes": 16392,
-      "sha256": "d9e889e94104372f3fdd4f34e4a1e77755e822dedefbf806ed5bcfcd6f25d15b"
+      "bytes": 21457,
+      "sha256": "6ad07a474487d776a137fc317f7fabe29d7f2e5f01baeb94257c214a48702eeb"
     }
   ],
   "bound_reused_generated_utilities": [
@@ -65,6 +65,8 @@
     "neural_prediction_freeze_before_language_arms": true,
     "complete_prediction_freeze_before_target_delivery": true,
     "vault_delivery_requires_identity_bound_committed_freeze_capability": true,
+    "final_freeze_binds_neural_freeze_sha256": true,
+    "scoring_entry_point_is_vault_owned_and_one_use": true,
     "public_freeze_aggregate_hash_only": true,
     "public_freeze_contains_individual_prediction_probability_target_participant_outcome_or_private_path": false,
     "post_target_updates": 0,
@@ -100,6 +102,8 @@
     "all_K_minus_1_cyclic_shifts": true,
     "generated_K": 4,
     "generated_shifts": [1, 2, 3],
+    "mechanics_qualified_K": [3, 4, 5],
+    "source_specific_dynamic_model_adapter_status": "pending_exact_source_lock",
     "probabilities_averaged_after_aligned_inference": true,
     "held_out_rows_or_targets_permuted": false
   },
@@ -109,6 +113,24 @@
     "participant_identity_in_item_derangement_digest": false,
     "held_out_target_or_text_in_item_derangement": false,
     "language_arms_can_change_neural_router": false
+  },
+  "process_and_filesystem": {
+    "full_replays_in_separate_spawned_children": true,
+    "exact_two_child_orchestration_development_tested": true,
+    "distinct_inode_bound_workdirs": true,
+    "parent_enforced_timeout_seconds_per_replay": 120,
+    "child_reported_peak_RSS_checked_before_next_replay": true,
+    "inspect_path_fixed_to_registered_result": true,
+    "caller_supplied_inspect_path_allowed": false,
+    "temporary_cleanup_inode_bound": true,
+    "publication_no_follow_non_replacing": true
+  },
+  "statistical_schedule_qualification": {
+    "exact_sign_flip_for_n_at_or_below_20": true,
+    "deterministic_SHA256_Monte_Carlo_for_n_above_20": true,
+    "registered_Monte_Carlo_draws": 1000000,
+    "two_route_Holm_adjustment": true,
+    "partial_route_numerical_model_execution_status": "pending_exact_source_lock"
   },
   "adversarial_qualification": {
     "all_named_families_implemented": true,

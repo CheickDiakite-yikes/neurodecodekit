@@ -11,6 +11,13 @@
 > private path, network, EEG, target, provider, stream, device, release, or
 > scientific operation occurred. This Tier B lane does not displace the sole
 > all-false Tier C gate `DREYER-C5R-1-HL` described below.
+> Post-commit review then blocked activation until five implementation gaps
+> were corrected. The current worktree fixes inspection to the registered
+> result, cryptographically links the neural and final freezes, routes the sole
+> score through the armed vault, isolates replays with real parent timeouts,
+> and binds causal, partial-route, dynamic-derangement, `n>20` sign-flip, and
+> Holm checks into qualification. Reprove this corrective commit before any
+> activation; do not treat the earlier green implementation alone as ready.
 
 > **Current gate, 2026-08-26:** `DREYER-C5R-1-HL` is the sole active Tier C
 > packet. The aggregate-only BNCI postmortem localized four design failures:

@@ -36,6 +36,9 @@ The predictor accepts only fold capabilities containing source targets and
 held-out signals. Held-out targets live in a separate vault and cannot be
 delivered until the complete prediction inventory has been validated and an
 identity-bound committed-freeze capability has armed that vault.
+The final freeze includes the exact neural-freeze digest. Scoring is owned by
+the vault and can be called once; there is no public repeatable scorer entry
+point.
 
 One replay performs:
 
@@ -53,7 +56,9 @@ The class-destroying comparator fits every `K - 1` cyclic source-label shift.
 For the four-class generated fixture this means shifts `+1`, `+2`, and `+3`,
 with aligned held-out probabilities averaged only after all three fits. The
 implementation also tests arbitrary shift mechanics separately from the fixed
-four-class numerical fixture.
+four-class numerical fixture. The generated qualification checks shift
+mechanics for `K = 3`, `4`, and `5`. A source-specific dynamic numerical model
+adapter still waits for the exact source lock and is not claimed here.
 
 ## Causality and controls
 
@@ -89,7 +94,17 @@ The qualifier uses only committed local proof records. It performs no GitHub
 or other network request during analysis. Temporary cleanup is inode-bound and
 limited to the invocation-created directory. Publication is no-follow,
 non-replacing, same-directory, and restricted to the exact registered result
-path.
+path. `inspect` accepts no caller path and can open only that registered
+aggregate result.
+
+Each full replay runs in a distinct spawned child and inode-bound work
+directory. The parent enforces a 120-second timeout, the child reports peak RSS
+before the next replay begins, and replay equivalence binds the causal-timing
+ledger. An opt-in development test executes this exact two-child helper before
+activation. The qualification also exercises the deterministic SHA-256 sign-flip
+branch for cohorts above 20 and the two-route Holm adjustment. Partial-route
+sensor and claim-ceiling behavior is structurally qualified; its numerical
+model execution still requires a frozen source-specific adapter.
 
 ## Current boundary
 

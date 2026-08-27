@@ -14243,3 +14243,14 @@ Authority decision: bounded development replay is Tier B. The official
 qualification remains inactive pending separate green barriers. No real or
 private data, source metadata, provider, stream, device, release, or scientific
 claim authority changes, and `DREYER-C5R-1-HL` remains sole Tier C.
+
+Review correction: do not activate the first green implementation unchanged.
+Restrict inspection to the registered result, bind the neural-freeze digest in
+the complete freeze, let only the armed vault invoke the one-use scorer, and
+run the two official replays in distinct child processes with separate
+inode-bound workdirs and parent-enforced timeouts. Bind causal timing into
+replay equivalence. Execute structural partial-route availability and claim
+ceilings plus generalized `K=3/4/5` derangement, `n>20` SHA sign-flip, and Holm
+checks during qualification. Keep source-specific dynamic and partial
+numerical adapters pending the exact source lock rather than pretending the
+four-class fixture proves them.
