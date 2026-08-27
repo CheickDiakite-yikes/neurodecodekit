@@ -14352,3 +14352,10 @@ green; only then may the single generated qualification run.
   session. Preserve one complete four-partition invariance proof, dedicated gap
   and abstention sessions, one combined integration session, two identical
   replays, all 33 refusal families, and the original resource caps.
+- 2026-08-27: Treat CI `33119621336` as a third failed implementation proof.
+  On Linux, measure the isolated no-descendant qualifier with its own
+  `/proc/self/status` `VmHWM` and publish the measurement source instead of
+  accepting a suite-era `getrusage` high-water value. Keep the 256 MiB cap.
+  Bind the official result and consumed marker to canonical paths so output
+  filename substitution cannot bypass one-shot semantics. Do not count this
+  correction or any prior failed CI attempt as the official qualification.

@@ -16238,3 +16238,12 @@ and require both remote jobs green before the one official qualification.
   replay now completes in 9.748861624975689 seconds at 31,047,680-byte peak RSS
   with all 33 refusals and four positive-control commits. The 30-second and 256
   MiB caps remain unchanged.
+- 2026-08-27: Runtime-bounded correction `507fe90` passed Base Python but
+  Optional Neuro Readers showed that Linux `getrusage` still retained an
+  unsuitable suite-era peak across the clean exec. The qualifier now measures
+  the executed Linux process from `/proc/self/status` `VmHWM`, records the
+  measurement source, and retains the unchanged 256 MiB cap. A corrected local
+  replay passed in 23.37553187494632 seconds at 26,230,784-byte peak RSS with
+  an 8,258-byte output. The official result and ignored consumption marker are
+  now fixed paths, preventing filename substitution from creating another
+  invocation. No official qualification or protected operation occurred.

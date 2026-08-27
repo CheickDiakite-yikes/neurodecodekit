@@ -11,11 +11,12 @@ import copy
 import hashlib
 import json
 import os
-from pathlib import Path
 import resource
 import stat
 import time
-from typing import Any, Callable, Mapping, Sequence
+from collections.abc import Callable, Mapping, Sequence
+from pathlib import Path
+from typing import Any
 
 from neurodecodekit.streaming.live_session import (
     LiveSession,
@@ -35,7 +36,6 @@ from neurodecodekit.streaming.source_chunk import (
     compute_valid_payload_sha256,
 )
 
-
 LANE_ID = "COMM-LIVE-G0"
 RESULT_SCHEMA = "neurodecodekit.communication_live_session_g0_generated_result"
 RESULT_VERSION = "0.1.0"
@@ -47,6 +47,12 @@ REPLAY_CONTRACT_PATH = "registries/replay_equivalence_contract.v0.json"
 REPLAY_CONTRACT_SHA256 = "6e4ef54049d9a6f77f64e7b6cfd6b911bd97b5693386f16b62f9d466f66b0469"
 IMPLEMENTATION_PROOF_PATH = (
     "registries/communication_live_session_g0_implementation_proof.v0.json"
+)
+REGISTERED_RESULT_PATH = (
+    "registries/communication_live_session_g0_generated_result.v0.json"
+)
+OFFICIAL_MARKER_PATH = (
+    ".codex_work/communication_live_session_g0_official_consumed.v0.json"
 )
 REQUIRED_IMPLEMENTATION_ARTIFACTS = (
     "src/neurodecodekit/streaming/__init__.py",
@@ -564,7 +570,7 @@ def _mutated_next_case(
 def _adversarial_refusals(seed: str) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
 
-    factory, start, session = _base_active(f"{seed}:identity")
+    _factory_unused, _start_unused, session = _base_active(f"{seed}:identity")
     other = _factory(f"{seed}:other").stream_start()
     rows.append(_expect_refusal("source_identity_mismatch", lambda: session.push(other)))
 
@@ -810,7 +816,9 @@ def _adversarial_refusals(seed: str) -> list[dict[str, Any]]:
         )
     )
 
-    snapshot_factory, snapshot_start, snapshot_session = _base_active(f"{seed}:snapshot")
+    _snapshot_factory, snapshot_start, snapshot_session = _base_active(
+        f"{seed}:snapshot"
+    )
     snapshot = snapshot_session.snapshot()
     tampered = copy.deepcopy(snapshot)
     tampered["state"]["committed_output"] = "X"
@@ -1040,9 +1048,35 @@ def _run_replay(replay_index: int) -> dict[str, Any]:
     }
 
 
-def _peak_rss_bytes() -> int:
+def _parse_linux_vm_hwm_bytes(status_text: str) -> int | None:
+    for line in status_text.splitlines():
+        if not line.startswith("VmHWM:"):
+            continue
+        fields = line.split()
+        if len(fields) != 3 or fields[0] != "VmHWM:" or fields[2] != "kB":
+            return None
+        try:
+            kibibytes = int(fields[1])
+        except ValueError:
+            return None
+        return kibibytes * 1024 if kibibytes > 0 else None
+    return None
+
+
+def _peak_rss_measurement() -> tuple[int, str]:
+    if os.uname().sysname == "Linux":
+        try:
+            value = _parse_linux_vm_hwm_bytes(
+                Path("/proc/self/status").read_text(encoding="ascii")
+            )
+        except OSError:
+            value = None
+        if value is not None:
+            return value, "linux_proc_self_status_VmHWM"
     value = int(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
-    return value if os.uname().sysname == "Darwin" else value * 1024
+    if os.uname().sysname == "Darwin":
+        return value, "darwin_getrusage_RUSAGE_SELF_ru_maxrss_bytes"
+    return value * 1024, "getrusage_RUSAGE_SELF_ru_maxrss_kib_fallback"
 
 
 def _enforce_caps(measurements: Mapping[str, int | float]) -> None:
@@ -1070,6 +1104,8 @@ def plan(root: str | Path | None = None) -> dict[str, Any]:
         "required_adversarial_family_ids": list(REQUIRED_REFUSAL_FAMILIES),
         "official_qualification_available_now": False,
         "official_requirement": "exact_future_green_implementation_proof",
+        "registered_result_path": REGISTERED_RESULT_PATH,
+        "official_marker_path": OFFICIAL_MARKER_PATH,
         "caps": dict(CAPS),
         "real_network_provider_device_model_operations": 0,
         "scientific_value": "none_generated_engineering_only",
@@ -1088,9 +1124,10 @@ def run_development_qualification(root: str | Path | None = None) -> dict[str, A
     refusals = _adversarial_refusals("comm-live-g0:adversarial")
     runtime = time.monotonic() - started
     deterministic = first["deterministic"]
+    peak_rss_bytes, peak_rss_source = _peak_rss_measurement()
     measurements: dict[str, int | float] = {
         "runtime_seconds": runtime,
-        "peak_RSS_bytes": _peak_rss_bytes(),
+        "peak_RSS_bytes": peak_rss_bytes,
         "public_output_bytes": 0,
         "temporary_generated_bytes": 0,
         "cpu_threads": 1,
@@ -1136,6 +1173,10 @@ def run_development_qualification(root: str | Path | None = None) -> dict[str, A
             "every_named_family_executed": True,
         },
         "measurements": measurements,
+        "measurement_sources": {
+            "peak_RSS_bytes": peak_rss_source,
+            "runtime_seconds": "time_monotonic_same_process",
+        },
         "operation_counters": dict(ZERO_OPERATION_COUNTERS),
         "warnings": [
             "generated_fictional_streams_only",
@@ -1183,6 +1224,14 @@ def _write_no_replace(path: Path, payload: bytes) -> None:
         os.close(descriptor)
 
 
+def _validate_official_output_path(repository: Path, output_path: str | Path) -> Path:
+    output = Path(output_path).absolute()
+    registered_output = (repository / REGISTERED_RESULT_PATH).absolute()
+    if output != registered_output:
+        raise CommLiveG0GeneratedRefusal("COMM-LIVE-G0-OUTPUT-PATH")
+    return output
+
+
 def qualify(
     output_path: str | Path,
     *,
@@ -1193,8 +1242,8 @@ def qualify(
     repository = (Path(root) if root is not None else _repo_root()).absolute()
     load_frozen_registration(repository)
     proof = _validate_future_implementation_proof(repository)
-    output = Path(output_path).absolute()
-    marker = output.with_name(f".{output.name}.comm-live-g0-consumed.json")
+    output = _validate_official_output_path(repository, output_path)
+    marker = (repository / OFFICIAL_MARKER_PATH).absolute()
     if output.exists() or output.is_symlink() or marker.exists() or marker.is_symlink():
         raise CommLiveG0GeneratedRefusal("COMM-LIVE-G0-OFFICIAL-ALREADY-CONSUMED")
     marker_payload = canonical_json_bytes(
@@ -1266,14 +1315,15 @@ def inspect_result(path: str | Path) -> dict[str, Any]:
         "replay_equivalence": value["replay_equivalence"],
         "adversarial_qualification": value["adversarial_qualification"],
         "measurements": value["measurements"],
+        "measurement_sources": value["measurement_sources"],
         "operation_counters": value["operation_counters"],
         "claim_boundary": value["claim_boundary"],
     }
 
 
 __all__ = [
-    "CommLiveG0GeneratedRefusal",
     "REQUIRED_REFUSAL_FAMILIES",
+    "CommLiveG0GeneratedRefusal",
     "inspect_result",
     "load_frozen_registration",
     "plan",

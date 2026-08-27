@@ -1,24 +1,22 @@
 from __future__ import annotations
 
-from contextlib import redirect_stdout
 import io
 import json
 import os
-from pathlib import Path
 import subprocess
 import sys
 import tempfile
 import unittest
-
+from contextlib import redirect_stdout
+from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from neurodecodekit import comm_live_g0_cli  # noqa: E402
-from neurodecodekit.experiments import comm_live_g0_generated as experiment  # noqa: E402
-
+from neurodecodekit import comm_live_g0_cli
+from neurodecodekit.experiments import comm_live_g0_generated as experiment
 
 CHILD_ENVIRONMENT_KEYS = (
     "PATH",
@@ -90,6 +88,10 @@ class CommunicationLiveSessionG0ImplementationTests(unittest.TestCase):
         )
         self.assertEqual(plan["required_adversarial_family_count"], 33)
         self.assertFalse(plan["official_qualification_available_now"])
+        self.assertEqual(
+            plan["registered_result_path"], experiment.REGISTERED_RESULT_PATH
+        )
+        self.assertEqual(plan["official_marker_path"], experiment.OFFICIAL_MARKER_PATH)
         self.assertEqual(plan["real_network_provider_device_model_operations"], 0)
 
     def test_development_replay_is_complete_and_nonconsuming(self) -> None:
@@ -149,6 +151,14 @@ class CommunicationLiveSessionG0ImplementationTests(unittest.TestCase):
         self.assertEqual(measurements["temporary_generated_bytes"], 0)
         self.assertEqual(measurements["cpu_threads"], 1)
         self.assertEqual(measurements["workers"], 1)
+        self.assertIn(
+            self.development["measurement_sources"]["peak_RSS_bytes"],
+            {
+                "linux_proc_self_status_VmHWM",
+                "darwin_getrusage_RUSAGE_SELF_ru_maxrss_bytes",
+                "getrusage_RUSAGE_SELF_ru_maxrss_kib_fallback",
+            },
+        )
         self.assertTrue(
             all(value == 0 for value in self.development["operation_counters"].values())
         )
@@ -157,6 +167,15 @@ class CommunicationLiveSessionG0ImplementationTests(unittest.TestCase):
         self.assertTrue(
             all(value is False for key, value in claims.items() if key != "scientific_value")
         )
+
+    def test_linux_peak_rss_parser_is_strict_and_unit_explicit(self) -> None:
+        self.assertEqual(
+            experiment._parse_linux_vm_hwm_bytes("Name:\tpython\nVmHWM:\t123 kB\n"),
+            123 * 1024,
+        )
+        self.assertIsNone(experiment._parse_linux_vm_hwm_bytes("VmHWM: 123 MB"))
+        self.assertIsNone(experiment._parse_linux_vm_hwm_bytes("VmHWM: nope kB"))
+        self.assertIsNone(experiment._parse_linux_vm_hwm_bytes("VmRSS: 123 kB"))
 
     def test_official_qualification_fails_before_output_without_future_proof(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
@@ -169,8 +188,20 @@ class CommunicationLiveSessionG0ImplementationTests(unittest.TestCase):
             )
             self.assertFalse(output.exists())
             self.assertFalse(
-                output.with_name(f".{output.name}.comm-live-g0-consumed.json").exists()
+                (ROOT / experiment.OFFICIAL_MARKER_PATH).exists()
             )
+
+    def test_official_output_path_is_canonical_and_not_caller_substitutable(self) -> None:
+        expected = ROOT / experiment.REGISTERED_RESULT_PATH
+        self.assertEqual(
+            experiment._validate_official_output_path(ROOT, expected),
+            expected.absolute(),
+        )
+        with self.assertRaises(experiment.CommLiveG0GeneratedRefusal) as caught:
+            experiment._validate_official_output_path(
+                ROOT, ROOT / "registries/substitute-result.json"
+            )
+        self.assertEqual(caught.exception.refusal_id, "COMM-LIVE-G0-OUTPUT-PATH")
 
     def test_plan_and_inspect_cli_are_small_and_inspectable(self) -> None:
         stdout = io.StringIO()
@@ -191,6 +222,10 @@ class CommunicationLiveSessionG0ImplementationTests(unittest.TestCase):
             self.assertEqual(inspected["lane_id"], "COMM-LIVE-G0")
             self.assertFalse(inspected["official_invocation_consumed"])
             self.assertEqual(inspected["adversarial_qualification"]["refusal_count"], 33)
+            self.assertEqual(
+                inspected["measurement_sources"],
+                self.development["measurement_sources"],
+            )
 
 
 if __name__ == "__main__":

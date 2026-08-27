@@ -98,6 +98,25 @@ locale/temp, Python hash, and one-thread controls, and reports child stderr on
 any future failure. No scientific or official generated operation occurred in
 either failed CI run.
 
+The runtime-bounded corrective commit,
+`507fe90843bea597c09ba48636a22a1fca6d4f5a`, passed Base Python but still
+failed Optional Neuro Readers. Linux `getrusage(RUSAGE_SELF).ru_maxrss`
+retained an unsuitable high-water value across the suite-to-exec boundary on
+that runner. The generated qualifier now reads the executed Linux process's
+own `/proc/self/status` `VmHWM`, records that exact measurement source, and
+keeps the Darwin byte-valued `getrusage` measurement plus a unit-explicit
+fallback. The qualifier launches no descendants, so its executed process and
+process tree are identical. The cap remains 256 MiB, and the official
+qualification remains unexecuted and unconsumed.
+
+The corrected local development replay completed in 23.37553187494632 seconds
+at 26,230,784-byte peak RSS and emitted an 8,258-byte inspectable result. Its
+deterministic replay SHA-256 remained
+`c06e1d5869a7d1786a867b1ec74e56a9f67ed829300b67a3f83d17a36f47dafc`.
+The official result and consumption marker are now bound to one canonical
+result path and one Git-ignored marker path; changing an output filename cannot
+create another official invocation.
+
 ## Next Proof Barrier
 
 Commit and push the exact implementation, then require both GitHub CI jobs to

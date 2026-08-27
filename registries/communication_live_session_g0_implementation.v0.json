@@ -23,8 +23,8 @@
   },
   "artifact_set": {
     "artifact_count": 12,
-    "artifact_bytes": 259509,
-    "canonical_sha256": "7fd8c8dda80c5c72d09250dfeb4188aa52e48c2dd12530dd59dadfda5bf49ad9",
+    "artifact_bytes": 264219,
+    "canonical_sha256": "258d37da4cb5388ac82c30583c6d93ebcdf7ecafd8ef3ec7fd5c16d9cb7bd687",
     "artifacts": [
       {
         "path": "registries/communication_live_session_g0_contract.v0.json",
@@ -43,8 +43,8 @@
       },
       {
         "path": "docs/COMMUNICATION_LIVE_SESSION_G0_IMPLEMENTATION.md",
-        "bytes": 5903,
-        "sha256": "b78b2ffd2550b0071eb2446e92eaac26d7faaf958c098b542633dc2044540556"
+        "bytes": 7040,
+        "sha256": "b7c255fc03d9253e2355b1016c9268fe74a74f30fc08e9b6cdce26d25a9c8f69"
       },
       {
         "path": "src/neurodecodekit/streaming/__init__.py",
@@ -63,13 +63,13 @@
       },
       {
         "path": "src/neurodecodekit/experiments/comm_live_g0_generated.py",
-        "bytes": 48463,
-        "sha256": "64b56bfb7297301c09438fd6082a5cf569e26bf18b20561ef646fb6d85521290"
+        "bytes": 50369,
+        "sha256": "5f54dde406461b3053f76f1e24f0b83e90b808fdb054d7bd5f0bf9023969324d"
       },
       {
         "path": "src/neurodecodekit/comm_live_g0_cli.py",
         "bytes": 1313,
-        "sha256": "39af67ba710fd93a1d31b378ff95ca30086b1827767457bdcac5b5a680ae7d49"
+        "sha256": "f4ce605584f9add340db97951623b83c5248513a836176c1b15cc27dea76bab2"
       },
       {
         "path": "tests/test_communication_source_chunk_v0.py",
@@ -83,8 +83,8 @@
       },
       {
         "path": "tests/test_communication_live_session_g0_implementation.py",
-        "bytes": 7939,
-        "sha256": "ef435395c6d3eedf4153c93269c102e04e4b9bd93d2011ad8185976c66245449"
+        "bytes": 9606,
+        "sha256": "a6058ccfc8f7de1a3347be150adf72199b2cc9ea79d031c5d99bf22c6bbe5f6e"
       }
     ]
   },
@@ -104,7 +104,7 @@
     "real_model_or_provider_adapter": false
   },
   "development_verification": {
-    "focused_tests_passed": 54,
+    "focused_tests_passed": 56,
     "fictional_sessions": 4,
     "deterministic_replays": 2,
     "partition_schedules": 4,
@@ -130,9 +130,10 @@
       ]
     ],
     "deterministic_sha256": "c06e1d5869a7d1786a867b1ec74e56a9f67ed829300b67a3f83d17a36f47dafc",
-    "runtime_seconds": 9.748861624975689,
-    "peak_process_RSS_bytes": 31047680,
-    "inspectable_result_bytes": 8122,
+    "runtime_seconds": 23.37553187494632,
+    "peak_process_RSS_bytes": 26230784,
+    "peak_process_RSS_measurement_source": "darwin_getrusage_RUSAGE_SELF_ru_maxrss_bytes",
+    "inspectable_result_bytes": 8258,
     "temporary_generated_bytes": 0,
     "Ruff_passed": true,
     "compile_passed": true,
@@ -170,6 +171,19 @@
     "optional_neuro_readers_conclusion": "failure",
     "failure": "isolated_child_inherited_native_numerical_runtime_environment_without_exposing_child_stderr",
     "correction": "construct_minimal_explicit_child_environment_and_surface_child_stderr",
+    "resource_caps_changed": false,
+    "official_qualification_operations": 0,
+    "official_invocation_consumed": false
+  },
+  "third_remote_attempt": {
+    "commit": "507fe90843bea597c09ba48636a22a1fca6d4f5a",
+    "CI_run_id": 33119621336,
+    "base_python_job_id": 98682937048,
+    "base_python_conclusion": "success",
+    "optional_neuro_readers_job_id": 98682936717,
+    "optional_neuro_readers_conclusion": "failure",
+    "failure": "Linux_getrusage_peak_RSS_retained_unsuitable_parent_high_water_after_clean_exec",
+    "correction": "use_Linux_proc_self_status_VmHWM_and_record_measurement_source",
     "resource_caps_changed": false,
     "official_qualification_operations": 0,
     "official_invocation_consumed": false
