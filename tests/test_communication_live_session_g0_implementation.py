@@ -15,8 +15,8 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from neurodecodekit import comm_live_g0_cli
-from neurodecodekit.experiments import comm_live_g0_generated as experiment
+from neurodecodekit import comm_live_g0_cli  # noqa: E402
+from neurodecodekit.experiments import comm_live_g0_generated as experiment  # noqa: E402
 
 CHILD_ENVIRONMENT_KEYS = (
     "PATH",

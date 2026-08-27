@@ -117,6 +117,15 @@ The official result and consumption marker are now bound to one canonical
 result path and one Git-ignored marker path; changing an output filename cannot
 create another official invocation.
 
+Commit `400c1ca821278db4a7e8a64daa9c688108f7e738` then proved the Linux
+resource correction in Optional Neuro Readers: its complete neuro-enabled
+suite passed. Base Python stopped earlier at Ruff because local use of an
+unpinned `uvx ruff` had removed two `# noqa: E402` annotations that the
+repository-pinned Ruff `0.15.20` requires. The annotations are restored, and
+repository-wide verification now uses the exact pinned `.venv/bin/ruff`.
+This CI result is still not a remotely green implementation proof because both
+jobs must pass for one exact commit.
+
 ## Next Proof Barrier
 
 Commit and push the exact implementation, then require both GitHub CI jobs to

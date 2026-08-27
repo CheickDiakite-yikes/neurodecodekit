@@ -16247,3 +16247,9 @@ and require both remote jobs green before the one official qualification.
   an 8,258-byte output. The official result and ignored consumption marker are
   now fixed paths, preventing filename substitution from creating another
   invocation. No official qualification or protected operation occurred.
+- 2026-08-27: Commit `400c1ca` validated the Linux `VmHWM` correction through
+  the complete Optional Neuro Readers suite, which passed. Base Python failed
+  only at Ruff because an unpinned local `uvx ruff` had removed two E402
+  annotations required by repository-pinned Ruff 0.15.20. Restore those exact
+  annotations and use `.venv/bin/ruff check .` for parity. This is not a green
+  implementation proof, and no official qualification ran or was consumed.

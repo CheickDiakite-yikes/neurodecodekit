@@ -23,8 +23,8 @@
   },
   "artifact_set": {
     "artifact_count": 12,
-    "artifact_bytes": 264219,
-    "canonical_sha256": "258d37da4cb5388ac82c30583c6d93ebcdf7ecafd8ef3ec7fd5c16d9cb7bd687",
+    "artifact_bytes": 264806,
+    "canonical_sha256": "60afa5aa528e1f491a60e9fc0b7fae5a4d472fd3ea6908304c391f83088dccc2",
     "artifacts": [
       {
         "path": "registries/communication_live_session_g0_contract.v0.json",
@@ -43,8 +43,8 @@
       },
       {
         "path": "docs/COMMUNICATION_LIVE_SESSION_G0_IMPLEMENTATION.md",
-        "bytes": 7040,
-        "sha256": "b7c255fc03d9253e2355b1016c9268fe74a74f30fc08e9b6cdce26d25a9c8f69"
+        "bytes": 7599,
+        "sha256": "c7b9bd7c64468a87bee42c3f1b2e01916a4601a40d4fe8611dcac5a6911b72e4"
       },
       {
         "path": "src/neurodecodekit/streaming/__init__.py",
@@ -83,8 +83,8 @@
       },
       {
         "path": "tests/test_communication_live_session_g0_implementation.py",
-        "bytes": 9606,
-        "sha256": "a6058ccfc8f7de1a3347be150adf72199b2cc9ea79d031c5d99bf22c6bbe5f6e"
+        "bytes": 9634,
+        "sha256": "5126204eab59348892f636208387da003bdb9cbbaa32f85fa1b042f3bcce19f0"
       }
     ]
   },
@@ -184,6 +184,20 @@
     "optional_neuro_readers_conclusion": "failure",
     "failure": "Linux_getrusage_peak_RSS_retained_unsuitable_parent_high_water_after_clean_exec",
     "correction": "use_Linux_proc_self_status_VmHWM_and_record_measurement_source",
+    "resource_caps_changed": false,
+    "official_qualification_operations": 0,
+    "official_invocation_consumed": false
+  },
+  "fourth_remote_attempt": {
+    "commit": "400c1ca821278db4a7e8a64daa9c688108f7e738",
+    "CI_run_id": 33121202071,
+    "base_python_job_id": 98688199109,
+    "base_python_conclusion": "failure",
+    "optional_neuro_readers_job_id": 98688199412,
+    "optional_neuro_readers_conclusion": "success",
+    "failure": "base_Ruff_0_15_20_required_two_E402_annotations_removed_by_unpinned_local_uvx_Ruff",
+    "Linux_VmHWM_correction_validated_in_optional_complete_suite": true,
+    "correction": "restore_two_E402_annotations_and_verify_with_repository_pinned_Ruff_0_15_20",
     "resource_caps_changed": false,
     "official_qualification_operations": 0,
     "official_invocation_consumed": false

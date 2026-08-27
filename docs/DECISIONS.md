@@ -14359,3 +14359,8 @@ green; only then may the single generated qualification run.
   Bind the official result and consumed marker to canonical paths so output
   filename substitution cannot bypass one-shot semantics. Do not count this
   correction or any prior failed CI attempt as the official qualification.
+- 2026-08-27: Treat CI `33121202071` as a failed combined proof but accept its
+  Optional Neuro Readers success as validation that Linux `VmHWM` accounting
+  survives the full neuro-enabled suite. Restore only the two E402 annotations
+  rejected by pinned Ruff 0.15.20, rerun repository-wide pinned lint, and
+  require a new exact commit with both jobs green before proof or qualification.
