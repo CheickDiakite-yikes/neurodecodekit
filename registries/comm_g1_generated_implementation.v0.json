@@ -1,0 +1,125 @@
+{
+  "schema_name": "neurodecodekit.comm_g1_generated_implementation",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-27",
+  "lane_id": "COMM-G1",
+  "status": "implementation_ready_pending_commit_push_remote_green_before_official_generated_qualification",
+  "registration_green_proof": {
+    "commit": "286d42883a12a426c7ec9a2a13e4b859fa188e3b",
+    "CI_run_id": 33042629298,
+    "base_python_job_id": 98419437125,
+    "optional_neuro_readers_job_id": 98419437032,
+    "both_required_jobs_green": true
+  },
+  "amendment_green_proof": {
+    "commit": "bed591718c9ebd2b349b33b580b750519d446c04",
+    "CI_run_id": 33043841818,
+    "base_python_job_id": 98423204957,
+    "optional_neuro_readers_job_id": 98423204831,
+    "both_required_jobs_green": true
+  },
+  "artifacts": [
+    {
+      "path": "docs/COMM_G1_GENERATED_EXPERIMENT_PREREGISTRATION.md",
+      "bytes": 9645,
+      "sha256": "9e46739d4a3f8f78670a2f53fe4dc83a5da84d62e2d5b246e74518a9a25251c1"
+    },
+    {
+      "path": "registries/comm_g1_generated_experiment_contract.v0.json",
+      "bytes": 12417,
+      "sha256": "cfdd4f8eeb42543b2d5a6226e0665740304517fd9a8b738c2b1e00a5613e5469"
+    },
+    {
+      "path": "docs/COMM_G1_GENERATED_EXPERIMENT_AMENDMENT_1.md",
+      "bytes": 2756,
+      "sha256": "44b3992ec05b2b36bf2170d1044b79d9682fe23b698bb3f2f119b440482d3350"
+    },
+    {
+      "path": "registries/comm_g1_generated_experiment_amendment_1.v0.json",
+      "bytes": 3614,
+      "sha256": "a885b8317263bf0bdb5737be2e3bbfca227620d7ca50ef837685d2772d90ef3a"
+    },
+    {
+      "path": "src/neurodecodekit/experiments/comm_g1_generated.py",
+      "bytes": 46496,
+      "sha256": "99178d463558c27dcfe8c4346d6f47c207cb8dc60b6d45cd6ad3dab4b08fb3f4"
+    },
+    {
+      "path": "src/neurodecodekit/comm_g1_cli.py",
+      "bytes": 1282,
+      "sha256": "7de4111995f957e6622490678144626b28a2c24f84520584e1bb7196aea0bed3"
+    },
+    {
+      "path": "tests/test_comm_g1_generated_implementation.py",
+      "bytes": 11060,
+      "sha256": "3fcab0f9e608b3b49b01bb7d4dfcc4b9c7108a4ffbba40c0a03866a7d3d2e258"
+    }
+  ],
+  "capabilities": {
+    "strict_generated_row_validation": true,
+    "causal_spectral_features": true,
+    "source_only_nuisance_residualization": true,
+    "amendment_1_no_fixed_point_derangement": true,
+    "participant_held_out_capability_firewall": true,
+    "compact_fixed_logistic_family": true,
+    "sealed_target_vault": true,
+    "aggregate_hash_only_prediction_freeze": true,
+    "isolated_one_delivery_scorer": true,
+    "resource_and_no_clobber_gates": true,
+    "adversarial_refusal_cases": 35,
+    "real_path_URL_request_download_stream_device_provider_or_score_mode": false
+  },
+  "development_generated_measurement": {
+    "official_qualification": false,
+    "participants": 6,
+    "rows": 144,
+    "conditions": 10,
+    "runtime_seconds": 20.24995545798447,
+    "peak_process_tree_RSS_bytes": 178176000,
+    "generated_input_bytes": 33030144,
+    "private_generated_prediction_bytes_maximum": 244033,
+    "public_output_bytes": 6227,
+    "residualizer_fits": 6,
+    "classifier_or_prior_fits": 54,
+    "total_parameter_update_fits": 60,
+    "model_inference_runs": 60,
+    "prediction_sets": 60,
+    "prediction_rows": 1440,
+    "synthetic_target_deliveries": 1,
+    "synthetic_scores": 1,
+    "post_target_updates": 0,
+    "adversarial_refusals": 35,
+    "positive_generated_route": "COMM-G1-R1",
+    "producer_causal": true,
+    "end_to_end_latency_measured": false,
+    "scientific_value": "none_generated_engineering_only"
+  },
+  "access_counters": {
+    "real_or_private_path_reads": 0,
+    "network_bytes": 0,
+    "real_signal_samples": 0,
+    "real_event_target_or_label_rows": 0,
+    "real_training_runs": 0,
+    "real_model_inference_runs": 0,
+    "provider_calls": 0,
+    "stream_or_device_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "official_generated_qualification": {
+    "executed": false,
+    "invocations_remaining": 1,
+    "rerun_allowed": false,
+    "required_before_execution": "exact_implementation_commit_pushed_and_base_plus_optional_CI_green"
+  },
+  "active_gate_preserved": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "sole_active_Tier_C_packet": true,
+    "all_authority_flags_false": true,
+    "changed_by_this_implementation": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "generated_causal_peripheral_controls_participant_firewall_compact_model_prediction_freeze_and_isolated_scorer",
+    "scientific_claim_not_established": "real_EEG_communication_decoding_EEG_beyond_peripherals_unseen_person_replication_live_hardware_or_clinical_result"
+  }
+}

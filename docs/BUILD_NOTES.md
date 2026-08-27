@@ -15905,3 +15905,35 @@ provider, stream, device, or target access.
 
 Immediate gate: commit, push, and remotely green Amendment 1 before implementing
 the generated-only COMM-G1 control plane.
+
+### COMM-G1 generated control plane implemented
+
+- Added strict fictional EEG/EOG/oral-EMG rows with identity, 128 Hz timing,
+  true lengths, masks, channel roles, and available geometry.
+- Added causal four-band spectral features with no target/label input,
+  participant-held-out capabilities, source-only ridge residualization, the
+  corrected no-fixed-point class rotation, and ten fixed compact controls.
+- Added a sealed target vault, aggregate hash-only freeze, isolated scorer,
+  one-thread/resource/no-clobber gates, and 35 generated adversarial refusals.
+- Kept NumPy and scikit-learn optional and exposed only generated `plan`,
+  proof-gated `qualify`, and aggregate `inspect` commands.
+- A disposable development measurement completed in 20.24995545798447 seconds
+  at 178,176,000-byte peak RSS over 33,030,144 generated input bytes, 244,033
+  private prediction bytes, and 6,227 aggregate output bytes. It ran exactly 60
+  updates, 60 inference/prediction sets, 1,440 rows, one synthetic delivery and
+  score, zero later updates, and route `COMM-G1-R1` on the injected fixture.
+- Every real/private, network, provider, stream, device, release, and claim
+  counter stayed zero. This development result has no scientific value.
+
+Immediate gate: complete local verification, commit and push the exact
+implementation, and require Base Python plus Optional Neuro Readers green.
+Only then run the sole official generated qualification once.
+
+Verification note: the complete dependency-free suite ran 6,338 tests with 248
+optional skips in 2,291.920 seconds. Two historical
+`test_marc2_r1_inventory_distribution_discriminator` cases exceeded their
+generated timing cap only after the monolithic suite load. The exact two tests
+then passed 2/2 in isolation in 34.412 seconds. Focused COMM-G1 tests, JSON
+validation, CLI help/plan, Ruff, and `git diff --check` were clean. Treat the
+two monolithic timing failures as an environment-sensitive residual risk, not a
+hidden pass and not evidence that those immutable caps should be changed.

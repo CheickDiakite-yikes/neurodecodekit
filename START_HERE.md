@@ -3890,3 +3890,10 @@ read `docs/COMM_G1_GENERATED_EXPERIMENT_AMENDMENT_1.md`: the amendment replaces
 a class-preserving EEG derangement with a source-only cyclic class rotation
 that has no fixed points. This correction occurred before any COMM-G1
 implementation, qualification, prediction, target delivery, or score.
+
+The generated implementation is now recorded in
+`docs/COMM_G1_GENERATED_IMPLEMENTATION.md` and
+`registries/comm_g1_generated_implementation.v0.json`. Its disposable local
+measurement stayed under every cap and exercised 35 refusals, but it is not the
+official generated qualification and has no scientific value. The exact
+implementation must become remotely green before the one allowed qualification.

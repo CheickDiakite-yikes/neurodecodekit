@@ -130,14 +130,22 @@ rotated across source classes with no fixed points instead of shuffled within
 the same class. This avoids a control that accidentally preserves the exact
 information it is meant to destroy. No real data or scientific result is
 involved.
+The corrected generated implementation is now present with a strict
+participant firewall, causal spectral features, source-only residualization,
+ten fixed controls, aggregate prediction freezing, one-delivery scoring, and
+35 adversarial refusals. A disposable development run recovered the deliberately
+injected fictional residual-EEG effect while the shortcut fixtures stayed
+structural checks. That demonstrates analysis plumbing only. It is not evidence
+that real EEG decodes communication or adds information beyond eyes and mouth.
+
 It specifies a six-participant synthetic leave-one-person-out matrix with ten
 fixed arms: priors, cue/time, EOG, oral EMG, all peripheral/context controls,
 selected EEG, posterior EEG, peripheral plus residual EEG, and a matched
 deranged-EEG control. Its target firewall, 60-fit compact schedule, aggregate
 prediction freeze, isolated synthetic scorer, and shortcut-only negative
-fixtures must pass before any real analysis can be proposed. The contract is
-not yet implemented and has no scientific value; it authorizes no real data,
-model evidence, stream, device, or claim operation.
+fixtures must pass before any real analysis can be proposed. The official
+generated qualification is not yet executed and has no scientific value; this
+lane authorizes no real data, model evidence, stream, device, or claim operation.
 
 ## Five Scientific Targets
 

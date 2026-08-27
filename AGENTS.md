@@ -111,8 +111,19 @@ with CI `33042629298`. Before implementation, read the prospective control
 correction in `docs/COMM_G1_GENERATED_EXPERIMENT_AMENDMENT_1.md` and
 `registries/comm_g1_generated_experiment_amendment_1.v0.json`. It replaces the
 invalid class-preserving EEG derangement with a source-only, no-fixed-point
-cyclic class rotation. Implementation and qualification authority remain false
-until that amendment is remotely green. Every real operation remains Tier C.
+cyclic class rotation. The amendment is green at
+`bed591718c9ebd2b349b33b580b750519d446c04`, CI `33043841818`.
+
+The generated implementation now exists in
+`src/neurodecodekit/experiments/comm_g1_generated.py` with sidecar
+`src/neurodecodekit/comm_g1_cli.py`. Read
+`docs/COMM_G1_GENERATED_IMPLEMENTATION.md` and
+`registries/comm_g1_generated_implementation.v0.json`. A disposable development
+measurement completed the exact 60-update / 60-prediction-set schedule and 35
+refusals in 20.24995545798447 seconds at 178,176,000-byte peak RSS. This is not
+the official qualification and has no scientific value. Commit, push, and make
+the exact implementation remotely green before the sole official generated
+qualification. Every real operation remains Tier C.
 
 `DREYER-C5R-1-HL` is the sole active Tier C packet. Read, in order:
 

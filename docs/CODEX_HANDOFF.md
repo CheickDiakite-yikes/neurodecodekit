@@ -6686,6 +6686,30 @@ Commit, push, and green the registration before implementation. Do not inspect
 VR13P/VR14P ignored state, prepare a private packet yet, or touch the unrelated
 tracker inspection NDJSON.
 
+## 2026-08-27 COMM-G1 Generated Implementation Handoff
+
+Read:
+
+1. `docs/COMM_G1_GENERATED_EXPERIMENT_PREREGISTRATION.md`;
+2. `docs/COMM_G1_GENERATED_EXPERIMENT_AMENDMENT_1.md`;
+3. `docs/COMM_G1_GENERATED_IMPLEMENTATION.md`;
+4. `registries/comm_g1_generated_implementation.v0.json`;
+5. `src/neurodecodekit/experiments/comm_g1_generated.py`;
+6. `src/neurodecodekit/comm_g1_cli.py`; and
+7. `tests/test_comm_g1_generated_implementation.py`.
+
+The generated control plane is implemented. A disposable development run
+completed the exact 60-update / 60-prediction-set / 1,440-row schedule, one
+synthetic target delivery and score, 35 refusal cases, and an injected
+`COMM-G1-R1` route in 20.24995545798447 seconds at 178,176,000-byte peak RSS.
+It used 33,030,144 generated input bytes, 244,033 private prediction bytes, and
+6,227 public bytes. Every real and scientific counter was zero.
+
+Immediate gate: run local verification, commit, push, and obtain both green CI
+jobs. The official generated qualification remains unconsumed until then. Do
+not interpret the development route as real EEG evidence, query/download a
+communication cohort, touch private state, or alter `DREYER-C5R-1-HL`.
+
 ## 2026-08-17 MARC2-VR11P Request Proof Handoff
 
 The request-time packet, registry, and test byte sizes and SHA-256 values are

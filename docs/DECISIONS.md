@@ -14004,3 +14004,15 @@ rotation across all four source classes, with no fixed points and no held-out
 target access. No implementation or result existed when the defect was found.
 All schedules, resource caps, real-data boundaries, claim limits, and the sole
 active `DREYER-C5R-1-HL` Tier C gate remain unchanged.
+
+## 0494 - Implement COMM-G1 Without Expanding Its Registered Schedule
+
+Implementation decision: only the injected residual-EEG positive fixture runs
+the frozen 60-update model schedule. The seven shortcut fixtures receive
+deterministic signal-placement checks, preventing an unregistered expansion to
+480 fits. Preserve generated participant/session/trial identities, available
+geometry, causal timing, masks, the Amendment 1 source-only derangement,
+held-out target sealing, aggregate prediction freezing, no-clobber output, and
+35 distinct refusals. The official generated qualification remains unconsumed
+until this exact implementation is remotely green. Development COMM-G1-R1 is
+fictional plumbing evidence, not a neural or communication result.
