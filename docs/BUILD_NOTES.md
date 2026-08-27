@@ -15937,3 +15937,10 @@ then passed 2/2 in isolation in 34.412 seconds. Focused COMM-G1 tests, JSON
 validation, CLI help/plan, Ruff, and `git diff --check` were clean. Treat the
 two monolithic timing failures as an environment-sensitive residual risk, not a
 hidden pass and not evidence that those immutable caps should be changed.
+
+Initial implementation commit `398f1aa3a7522e963249ec439059659872a33870`
+was pushed but did not cross the proof barrier: CI `33048536860` failed Base
+Python at Ruff because two deliberate post-`sys.path` test imports lacked the
+pinned toolchain's `E402` annotations. No official qualification ran. The
+minimal follow-up restores only those annotations and rebinds the test artifact
+hash; the exact pinned local command `.venv/bin/ruff check .` then passed.

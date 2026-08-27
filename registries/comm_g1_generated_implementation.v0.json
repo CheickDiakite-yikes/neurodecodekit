@@ -51,8 +51,8 @@
     },
     {
       "path": "tests/test_comm_g1_generated_implementation.py",
-      "bytes": 11060,
-      "sha256": "3fcab0f9e608b3b49b01bb7d4dfcc4b9c7108a4ffbba40c0a03866a7d3d2e258"
+      "bytes": 11088,
+      "sha256": "4071e8966fff28039181ca429ac9097fff9d7c213d6e5586c36b1b216a2227cc"
     }
   ],
   "capabilities": {

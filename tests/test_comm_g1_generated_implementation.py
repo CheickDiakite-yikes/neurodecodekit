@@ -15,8 +15,8 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from neurodecodekit import comm_g1_cli
-from neurodecodekit.experiments import comm_g1_generated as experiment
+from neurodecodekit import comm_g1_cli  # noqa: E402
+from neurodecodekit.experiments import comm_g1_generated as experiment  # noqa: E402
 
 NUMERICAL_AVAILABLE = all(
     importlib.util.find_spec(name) is not None for name in ("numpy", "sklearn")
