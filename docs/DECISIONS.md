@@ -14339,3 +14339,7 @@ green; only then may the single generated qualification run.
   pushed, remotely green, and captured by an implementation-proof record.
   Preserve all real/private, target, model, provider, network, device, release,
   and scientific authority as false and leave `DREYER-C5R-1-HL` unchanged.
+- 2026-08-27: Treat CI `33116518088` as a failed implementation proof, not as
+  qualification evidence. Correct only the test-process isolation that caused
+  the development qualifier to inherit prior suite RSS; do not raise the 256
+  MiB cap, rerun an official qualification, or claim a live/scientific result.

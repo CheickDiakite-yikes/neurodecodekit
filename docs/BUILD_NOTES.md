@@ -16216,3 +16216,10 @@ and require both remote jobs green before the one official qualification.
   and claim counters remained zero. The official one-shot qualification has not
   run. Immediate gate: commit, push, and remotely green the exact implementation
   before creating its proof record or consuming the qualification.
+- 2026-08-27: Initial `COMM-LIVE-G0` implementation commit `885ed72` passed
+  Base Python but failed Optional Neuro Readers because the development test
+  inherited a 665,694,208-byte process peak after 6,580 earlier tests and
+  compared it to the standalone 256 MiB qualification cap. Preserve the cap
+  and isolate the exact development qualification in a clean child process.
+  No official qualification ran, no invocation was consumed, and all protected
+  operation counters remained zero.

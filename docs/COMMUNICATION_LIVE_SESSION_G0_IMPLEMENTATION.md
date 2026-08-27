@@ -74,6 +74,14 @@ exceeded its wall-time cap on this machine. This implementation therefore
 relies on the next exact GitHub Base Python and Optional Neuro Readers jobs as
 the repository-wide acceptance barrier and must not qualify before both pass.
 
+The first remote implementation attempt, `885ed7248804999ac39ee8e387a5dcea4a870113`,
+passed Base Python but failed Optional Neuro Readers after 6,580 tests. The
+development test had run inside the long-lived suite process and inherited its
+earlier 665,694,208-byte peak RSS, causing a false standalone-cap refusal. The
+test now launches the exact development qualification in a clean bounded child
+process. The 256 MiB cap is unchanged; no official qualification ran or was
+consumed.
+
 ## Next Proof Barrier
 
 Commit and push the exact implementation, then require both GitHub CI jobs to

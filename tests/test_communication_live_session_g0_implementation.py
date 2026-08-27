@@ -3,7 +3,9 @@ from __future__ import annotations
 from contextlib import redirect_stdout
 import io
 import json
+import os
 from pathlib import Path
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -21,7 +23,28 @@ from neurodecodekit.experiments import comm_live_g0_generated as experiment  # n
 class CommunicationLiveSessionG0ImplementationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.development = experiment.run_development_qualification(ROOT)
+        environment = os.environ.copy()
+        environment["PYTHONPATH"] = str(SRC)
+        completed = subprocess.run(
+            [
+                sys.executable,
+                "-c",
+                (
+                    "import json,sys; "
+                    "from neurodecodekit.experiments.comm_live_g0_generated "
+                    "import run_development_qualification; "
+                    "print(json.dumps(run_development_qualification(sys.argv[1]), "
+                    "sort_keys=True))"
+                ),
+                str(ROOT),
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=40,
+            env=environment,
+        )
+        cls.development = json.loads(completed.stdout)
 
     def test_plan_binds_exact_generated_inventory(self) -> None:
         plan = experiment.plan(ROOT)

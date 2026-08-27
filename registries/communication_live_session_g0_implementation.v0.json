@@ -23,8 +23,8 @@
   },
   "artifact_set": {
     "artifact_count": 12,
-    "artifact_bytes": 254648,
-    "canonical_sha256": "314a0ea9d79ef34d108987baa6c7453af41e8e5c569dd09497de2a65cdb30b23",
+    "artifact_bytes": 255856,
+    "canonical_sha256": "30fa80d4a21b103263fb0f4f644094523109cd84213b8d00e0b5a9e72d2ab7a2",
     "artifacts": [
       {
         "path": "registries/communication_live_session_g0_contract.v0.json",
@@ -43,8 +43,8 @@
       },
       {
         "path": "docs/COMMUNICATION_LIVE_SESSION_G0_IMPLEMENTATION.md",
-        "bytes": 4438,
-        "sha256": "efc0027a15b2cac108f1fdd4367962cdc8a09aea2ec8e1f56c362d7c72838cbd"
+        "bytes": 4923,
+        "sha256": "31f324cc3c4a65523ec53fb31f952e4ab771949c500db0ed874dbdc8c070e85f"
       },
       {
         "path": "src/neurodecodekit/streaming/__init__.py",
@@ -83,8 +83,8 @@
       },
       {
         "path": "tests/test_communication_live_session_g0_implementation.py",
-        "bytes": 6250,
-        "sha256": "0f9037f67b2109a31af3cf5bae3ceb64c380baeeb9c7f2b92136cb8ea19f5047"
+        "bytes": 6973,
+        "sha256": "5e0f02a79fba8d1e09bef83fd8bed80cee85579de6ccee3c42e6c23ce732bafc"
       }
     ]
   },
@@ -129,6 +129,19 @@
     "errors_cleared_by_isolated_rerun": 2,
     "remaining_unrelated_legacy_timing_error": 1,
     "repository_wide_acceptance_barrier": "exact_next_GitHub_Base_Python_and_Optional_Neuro_Readers_jobs"
+  },
+  "initial_remote_attempt": {
+    "commit": "885ed7248804999ac39ee8e387a5dcea4a870113",
+    "CI_run_id": 33116518088,
+    "base_python_job_id": 98672439207,
+    "base_python_conclusion": "success",
+    "optional_neuro_readers_job_id": 98672438844,
+    "optional_neuro_readers_conclusion": "failure",
+    "failure": "development_test_inherited_prior_process_peak_RSS_after_6580_tests",
+    "observed_prior_process_peak_RSS_bytes": 665694208,
+    "correction": "run_exact_development_qualification_in_clean_bounded_child_process_without_changing_caps",
+    "official_qualification_operations": 0,
+    "official_invocation_consumed": false
   },
   "official_generated_qualification": {
     "executed": false,
