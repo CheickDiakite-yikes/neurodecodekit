@@ -15892,3 +15892,16 @@ continuation.
 Immediate gate: commit, push, and remotely green this exact registration.
 After that, implement generated-only COMM-G1 under Tier B without real source,
 provider, stream, device, or target access.
+
+### COMM-G1 derangement control corrected prospectively
+
+- Found before implementation that the v0 within-class derangement preserved
+  the class information it was meant to destroy.
+- Added Amendment 1 without modifying the immutable green registration.
+- Froze a source-only participant/session/repeat four-class cyclic rotation
+  with no fixed points, no held-out permutation, and no held-out target read.
+- Kept the 60-fit / 60-prediction-set / 1,440-row schedule and every real,
+  network, private, provider, device, release, and claim authority unchanged.
+
+Immediate gate: commit, push, and remotely green Amendment 1 before implementing
+the generated-only COMM-G1 control plane.

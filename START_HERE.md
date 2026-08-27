@@ -3882,3 +3882,11 @@ VR20P be identified as the sole active Tier C gate. A fresh packet-bound
 maintainer decision and its own remote proof are still required before Stage
 1. Do not touch `.codex_work`, the private source, consumed VR18P state, or a
 real output root.
+
+## COMM-G1 Prospective Control Correction
+
+The COMM-G1 experiment registration is remotely green. Before implementing it,
+read `docs/COMM_G1_GENERATED_EXPERIMENT_AMENDMENT_1.md`: the amendment replaces
+a class-preserving EEG derangement with a source-only cyclic class rotation
+that has no fixed points. This correction occurred before any COMM-G1
+implementation, qualification, prediction, target delivery, or score.

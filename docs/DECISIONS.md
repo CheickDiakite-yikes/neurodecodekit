@@ -13993,3 +13993,14 @@ committed, pushed, and remotely green under Tier B. The one official generated
 qualification waits for the exact implementation to become remotely green.
 Every real operation remains Tier C, and `DREYER-C5R-1-HL` remains the sole
 active Tier C packet with all flags false.
+
+## 0493 - Correct COMM-G1 Derangement Before Implementation
+
+Control decision: the remotely green v0 contract accidentally froze a
+class-preserving EEG permutation. Because that transform retains EEG-to-class
+information, it cannot serve as the registered negative control. Amendment 1
+prospectively replaces it with a source-only participant/session/repeat cyclic
+rotation across all four source classes, with no fixed points and no held-out
+target access. No implementation or result existed when the defect was found.
+All schedules, resource caps, real-data boundaries, claim limits, and the sole
+active `DREYER-C5R-1-HL` Tier C gate remain unchanged.

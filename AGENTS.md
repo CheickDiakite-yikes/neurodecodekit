@@ -99,16 +99,20 @@ false. The next authorized communication engineering work is Tier A contract
 design for `COMM-G1`; any SourceChunk implementation requires its own narrowed
 authorization and remains secondary to the scientific discovery path.
 
-The COMM-G1 generated experiment is now prospectively frozen in
+The COMM-G1 generated experiment is prospectively frozen in
 `docs/COMM_G1_GENERATED_EXPERIMENT_PREREGISTRATION.md` and
 `registries/comm_g1_generated_experiment_contract.v0.json`. It defines six
 fictional participants, 144 generated rows, six participant-held-out folds,
 ten fixed control arms, 60 planned fits, 60 prediction sets, 1,440 prediction
 rows, one synthetic freeze/delivery/score, at least 30 refusal IDs, one thread,
 180 seconds, 512 MiB RSS, and 32 MiB generated input/output surfaces. Current
-implementation and qualification authority are false. Commit, push, and make
-this exact registration remotely green before implementing generated-only
-COMM-G1 under Tier B. Every real operation remains Tier C.
+registration is remotely green at `286d42883a12a426c7ec9a2a13e4b859fa188e3b`
+with CI `33042629298`. Before implementation, read the prospective control
+correction in `docs/COMM_G1_GENERATED_EXPERIMENT_AMENDMENT_1.md` and
+`registries/comm_g1_generated_experiment_amendment_1.v0.json`. It replaces the
+invalid class-preserving EEG derangement with a source-only, no-fixed-point
+cyclic class rotation. Implementation and qualification authority remain false
+until that amendment is remotely green. Every real operation remains Tier C.
 
 `DREYER-C5R-1-HL` is the sole active Tier C packet. Read, in order:
 

@@ -1,0 +1,104 @@
+{
+  "schema_name": "neurodecodekit.comm_g1_generated_experiment_amendment",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-27",
+  "amendment_id": "COMM-G1-generated-experiment-amendment-1-v0",
+  "status": "prospective_control_correction_before_implementation_or_qualification",
+  "parent_registration": {
+    "commit": "286d42883a12a426c7ec9a2a13e4b859fa188e3b",
+    "CI_run_id": 33042629298,
+    "base_python_job_id": 98419437125,
+    "optional_neuro_readers_job_id": 98419437032,
+    "both_required_jobs_green": true,
+    "contract_path": "registries/comm_g1_generated_experiment_contract.v0.json",
+    "contract_bytes": 12417,
+    "contract_sha256": "cfdd4f8eeb42543b2d5a6226e0665740304517fd9a8b738c2b1e00a5613e5469"
+  },
+  "defect": {
+    "original_scope": "within_source_participant_session_and_class",
+    "original_permutation": "deterministic_adjacent_pair_swap_no_wraparound",
+    "problem": "class_preserving_permutation_does_not_destroy_EEG_to_class_information",
+    "discovered_before_implementation": true,
+    "discovered_before_qualification": true,
+    "result_reinterpreted": false
+  },
+  "corrected_derangement": {
+    "data_scope": "source_rows_only",
+    "group_by": [
+      "participant_id",
+      "session_id",
+      "repeat_index"
+    ],
+    "required_classes_per_group": [0, 1, 2, 3],
+    "permutation": "sort_by_source_class_then_cyclically_rotate_residual_EEG_vector_by_plus_one_class",
+    "mapping": {
+      "class_0_receives": 1,
+      "class_1_receives": 2,
+      "class_2_receives": 3,
+      "class_3_receives": 0
+    },
+    "fixed_points": 0,
+    "held_out_rows_permuted": false,
+    "held_out_targets_read": false,
+    "source_targets_used_only_to_construct_registered_negative_control": true,
+    "preserves": [
+      "row_count",
+      "feature_dimension",
+      "participant_identity",
+      "session_identity",
+      "repeat_identity",
+      "marginal_feature_values"
+    ],
+    "hard_refusals": [
+      "incomplete_group",
+      "duplicate_class",
+      "missing_source_target",
+      "held_out_target_delivery",
+      "class_outside_frozen_inventory"
+    ]
+  },
+  "unchanged": {
+    "generated_participants": 6,
+    "generated_rows": 144,
+    "outer_folds": 6,
+    "conditions": 10,
+    "total_parameter_update_fits": 60,
+    "model_inference_runs": 60,
+    "prediction_sets": 60,
+    "prediction_rows": 1440,
+    "synthetic_target_deliveries": 1,
+    "synthetic_scores": 1,
+    "reruns": 0,
+    "scientific_value": "none_generated_engineering_only"
+  },
+  "authorization_state": {
+    "generated_implementation_now": false,
+    "generated_qualification_now": false,
+    "dataset_specific_metadata_request": false,
+    "payload_request_or_download": false,
+    "real_or_private_path_read": false,
+    "real_header_signal_event_target_or_label_read": false,
+    "real_training_or_model_inference": false,
+    "real_prediction_freeze": false,
+    "real_target_delivery_or_score": false,
+    "provider_call": false,
+    "stream_or_device_operation": false,
+    "release": false,
+    "scientific_claim_upgrade": false
+  },
+  "active_gate_preserved": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "sole_active_Tier_C_packet": true,
+    "all_authority_flags_false": true,
+    "changed_by_this_amendment": false
+  },
+  "claim_boundary": {
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_EOG_or_oral_EMG_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "live_neural_decoding_established": false
+  }
+}

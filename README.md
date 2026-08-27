@@ -123,6 +123,13 @@ private-data operation and created no acquisition authority.
 
 The next control-plane step is now frozen in the
 [`COMM-G1 generated experiment contract`](docs/COMM_G1_GENERATED_EXPERIMENT_PREREGISTRATION.md).
+The registration is remotely green. A prospective
+[`COMM-G1 Amendment 1`](docs/COMM_G1_GENERATED_EXPERIMENT_AMENDMENT_1.md)
+corrects its negative control before implementation: EEG residuals are now
+rotated across source classes with no fixed points instead of shuffled within
+the same class. This avoids a control that accidentally preserves the exact
+information it is meant to destroy. No real data or scientific result is
+involved.
 It specifies a six-participant synthetic leave-one-person-out matrix with ten
 fixed arms: priors, cue/time, EOG, oral EMG, all peripheral/context controls,
 selected EEG, posterior EEG, peripheral plus residual EEG, and a matched

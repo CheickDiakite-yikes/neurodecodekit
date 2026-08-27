@@ -8029,3 +8029,24 @@ Do not query or download OpenNeuro, read real/private state, implement RW3 or
 NDK_STREAM1, use a provider, stream a device, or claim a neural result under
 this registration. Keep `DREYER-C5R-1-HL` sole and all-false, preserve the 20
 GiB total / 10 GiB raw caps, and leave the unrelated tracker NDJSON untouched.
+
+## 2026-08-27 COMM-G1 Amendment 1 Handoff
+
+Read the original COMM-G1 preregistration, then
+`docs/COMM_G1_GENERATED_EXPERIMENT_AMENDMENT_1.md`,
+`registries/comm_g1_generated_experiment_amendment_1.v0.json`, and its matching
+test. The original registration is green at
+`286d42883a12a426c7ec9a2a13e4b859fa188e3b`, CI `33042629298`.
+
+Amendment 1 corrects a prospective control defect: within-class derangement
+preserved class information. The replacement rotates residual EEG across the
+four source classes inside each participant/session/repeat group, with no fixed
+points, while leaving held-out rows untouched. No COMM-G1 implementation,
+qualification, prediction, target delivery, score, real/private access, or
+claim operation occurred.
+
+Immediate gate: verify, commit, push, and remotely green this amendment. Only
+then implement generated-only COMM-G1 and bind both frozen records. Do not run
+the sole official qualification until the exact implementation is separately
+green. Keep `DREYER-C5R-1-HL` sole and all-false and preserve the unrelated
+tracker inspection NDJSON.
