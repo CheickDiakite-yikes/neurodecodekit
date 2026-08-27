@@ -1,0 +1,88 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_source_identity_metadata_request_proof",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-27",
+  "packet_id": "COMM-L0-META",
+  "status": "proof_only_closeout_pending_exact_commit_remote_green",
+  "green_request_commit": {
+    "commit": "12e4e9f6e669bd1645911804b8e1c265fb04be29",
+    "CI_run_id": 33062307015,
+    "base_python_job_id": 98483805541,
+    "optional_neuro_readers_job_id": 98483805735,
+    "both_required_jobs_green": true
+  },
+  "bound_request_artifacts": [
+    {
+      "path": "docs/COMMUNICATION_EEG_SOURCE_IDENTITY_METADATA_AUTHORIZATION_PACKET.md",
+      "bytes": 8877,
+      "sha256": "cb9f928d45697cc0a90e79ec89d913d9378ad9ff288afa283e080c33cdede411",
+      "git_blob": "572939c87873c04ddac050821b74795e1bff8802"
+    },
+    {
+      "path": "registries/communication_eeg_source_identity_metadata_authorization_request.v0.json",
+      "bytes": 14415,
+      "sha256": "307551873217567289375054e8a00c7c93c0ca7f789672710dae9f6e73990db8",
+      "git_blob": "16515573b5121d085aaddac97bbd09cea562dbef"
+    },
+    {
+      "path": "tests/test_communication_eeg_source_identity_metadata_authorization_request.py",
+      "bytes": 10704,
+      "sha256": "7440a21b33ae7d77b72f61527260bbea3e3d9eab52454ac5d4f7093c92592693",
+      "git_blob": "18d0f6e3e14482a7ebf3681c7f0909c4d4563d3c"
+    }
+  ],
+  "bound_request_artifact_summary": {
+    "count": 3,
+    "bytes": 33996,
+    "canonical_artifact_set_sha256": "79f993bed775ff1f516ce7a79fc18b84051d88955bcbb1a9b5b0c4328af3bd67"
+  },
+  "scope_preservation": {
+    "request_artifacts_unchanged": true,
+    "query_endpoint_body_snapshot_and_hashes_unchanged": true,
+    "response_payload_output_and_resource_caps_unchanged": true,
+    "decision_ordering_and_fail_closed_publication_unchanged": true,
+    "active_DREYER_C5R_1_HL_gate_preserved": true,
+    "authority_expanded": false,
+    "claim_boundary_changed": false
+  },
+  "operation_counters": {
+    "tracked_artifact_reads": 3,
+    "Git_proof_reads": 3,
+    "implementation_operations": 0,
+    "generated_qualification_invocations": 0,
+    "dataset_specific_GraphQL_requests": 0,
+    "metadata_response_bytes": 0,
+    "real_or_private_path_reads": 0,
+    "BDF_requests": 0,
+    "BDF_payload_bytes": 0,
+    "header_signal_event_target_or_label_reads": 0,
+    "cache_split_feature_or_derivative_creations": 0,
+    "parameter_update_fits": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "scoring_events": 0,
+    "provider_stream_or_device_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "transition": {
+    "effective_before_this_closeout_commit_remote_green": false,
+    "COMM_L0_META_active_after_remote_green": false,
+    "DREYER_C5R_1_HL_remains_sole_active_Tier_C_packet": true,
+    "implementation_authorized_by_closeout": false,
+    "network_or_real_operation_authorized_by_closeout": false,
+    "current_gate_must_be_closed_or_parked_before_packet_activation": true,
+    "fresh_packet_bound_decision_required_before_M1": true,
+    "same_decision_hash_required_through_M1_M2_and_M3": true
+  },
+  "claim_boundary": {
+    "engineering_proof_added": "The exact fail-closed metadata source-identity request is independently hash and Git bound for later review.",
+    "scientific_claim_established": false,
+    "real_EEG_or_metadata_response_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_participant_generalization_established": false,
+    "independent_replication_established": false,
+    "live_neural_decoding_established": false
+  }
+}
