@@ -1,5 +1,17 @@
 # Codex Handoff - NeuroDecodeKit
 
+> **Parallel COMM-LIVE-G0 registration, 2026-08-27:** a prospective
+> generated-only contract now composes the existing RW3 `SourceChunk` schema
+> and supplies the narrow Stage A review for its dependency-free validator and
+> generated fixtures after this registration is remotely green. It freezes
+> exact sequence/sample continuity, explicit gaps, generation-bounded
+> reconnects, zero-right-context processor state, quality/confidence abstention,
+> three-update stable commits, eight separately ordered clocks, two fictional
+> replays, three schedules, and 33 adversarial refusals under one thread and
+> zero network. No implementation or qualification has run yet.
+> `DREYER-C5R-1-HL` remains the sole all-false Tier C gate, and no real/private
+> EEG, stream, device, provider, release, or claim operation is authorized.
+
 > **COMM-R0-G closeout, 2026-08-27:** final activation proof `0071843`
 > passed Base `98600920033`, Optional `98600920329`, and CI `33095990523`.
 > The sole generated-only qualification then failed closed with

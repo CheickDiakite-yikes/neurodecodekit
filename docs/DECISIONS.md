@@ -14304,3 +14304,13 @@ green; only then may the single generated qualification run.
   qualification and require a new prospective gate before any full replay.
   Preserve the old execution hashes and bind before/after hashes in a separate
   post-failure registry.
+- 2026-08-27: Freeze `COMM-LIVE-G0` as a downstream session layer over the
+  existing RW3 `SourceChunk`, not as another transport schema. Treat exact
+  transport identity, gaps, reconnect generations, processor-state reset,
+  abstention, stable commit, and separate capture-to-presentation clocks as the
+  minimum engineering meaning of a future live run. This registration is the
+  narrow Stage A review for only the dependency-free existing-schema validator
+  and generated fixtures after its own remote-green barrier. Use only fictional
+  streams and deterministic fake processors in this Tier B lane. Do not let a
+  generated pass imply device latency, neural information, communication
+  decoding, unseen-person generalization, or EEG beyond recorded controls.

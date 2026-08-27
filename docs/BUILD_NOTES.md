@@ -16179,3 +16179,13 @@ and require both remote jobs green before the one official qualification.
   binds the corrected hashes. Real/private/network/scientific counters stay
   zero. Commit `51ce306` passed Base `98618341009`, Optional `98618340732`,
   and CI `33100996577`.
+- 2026-08-27: Added prospective Tier B `COMM-LIVE-G0` registration for the
+  communication program's missing live-session boundary. It composes the
+  existing RW3 `SourceChunk` schema and provides the narrow Stage A review for
+  only its dependency-free validator/factory and generated fixtures after this
+  registration is remotely green. The generated-only contract freezes exact
+  continuity, explicit gap/disconnect and reconnect semantics, causal-state
+  reset, source-only activation, quality/confidence abstention, stable commits,
+  eight clocks, two replays, three schedules, 33 adversarial refusals, and
+  strict resource caps. No implementation, generated qualification,
+  real/private operation, device, provider, release, or claim upgrade occurred.
