@@ -124,6 +124,15 @@ manifest, dataset license, loader, and exact external-channel roster. The
 other reviewed sources provide only partial controls. No source was promoted,
 downloaded, or authorized by that Tier A pass.
 
+Then read
+`docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md`.
+Its machine-tested ledger records one narrow prior item of real directional
+task evidence and keeps every target communication requirement false. It
+separates `ds003626` discovery, SilentSpeech-EEG full-control watchlist,
+TESSCCo/Kara One partial challenge, and Dreyer motor-method roles. This is
+routing evidence only: it does not promote a source, authorize acquisition, or
+change the sole active Tier C packet.
+
 COMM-G1 and its COMM-G2 proof successor were later implemented and each
 consumed at R0; read their closeouts near the end of this file. Do not rerun or
 repair either lane. Neither is real-data or scientific evidence, and neither

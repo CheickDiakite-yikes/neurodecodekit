@@ -129,12 +129,25 @@ A fresh
 found no second public cohort that is yet verified with the complete raw EEG,
 eye, oral-muscle, immutable-identity, license, and loader surface needed for a
 full attribution replication. SilentSpeech-EEG has the strongest reported
-scientific fit, but its repository currently lacks a verified stable dataset
+scientific fit. Its repository contains a loading module, but the imported
+dataset module and data-layout instructions remain missing; a stable dataset
 identity, complete manifest, dataset license, reproducible loader, and exact
-public external-channel roster. Kara One, Directional Word 2026, and ArEEG
-remain useful partial candidates whose missing controls must be stated rather
-than silently treated as equivalent evidence. This review made no payload or
-private-data operation and created no acquisition authority.
+public external-channel roster are still unverified. TESSCCo adds a valuable
+24-participant prompted-command challenge, while Kara One, Directional Word
+2026, and ArEEG remain partial candidates whose missing controls must be stated
+rather than silently treated as equivalent evidence. This review made no
+payload or private-data operation and created no acquisition authority.
+
+The new
+[objective evidence ledger](docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md)
+makes the gap to the end goal explicit. NeuroDecodeKit has real directional
+held-out task evidence and reusable causal/firewall engineering, but it has not
+yet established prompted communication decoding, EEG information beyond both
+eye and mouth activity, unseen-person communication, independent replication,
+or live neural decoding. The ledger assigns `ds003626` to discovery,
+SilentSpeech-EEG to the full-control watchlist, TESSCCo and Kara One to partial
+external challenges, and Dreyer to motor-control method validation. Those
+roles are machine-tested and cannot silently upgrade one another.
 
 The next control-plane step is now frozen in the
 [`COMM-G1 generated experiment contract`](docs/COMM_G1_GENERATED_EXPERIMENT_PREREGISTRATION.md).

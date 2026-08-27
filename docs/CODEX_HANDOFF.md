@@ -8178,3 +8178,28 @@ the sole active Tier C packet. Do not query OpenNeuro, create the wrapper, write
 a private manifest, touch another project, or commit the unrelated tracker
 inspection NDJSON. COMM-L0-META can advance only after Dreyer is separately
 closed or parked and a fresh packet-bound decision is remotely green before M1.
+
+## 2026-08-27 Communication Objective Evidence Handoff
+
+Read
+`docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md`,
+its machine registry, matching test, and the matching entry in
+`registries/current_research_frontier.v0.json`.
+
+The Tier A decision freezes eight objective requirements and source roles. The
+only positive item is narrow directional held-out task information from the
+closed BNCI lane; it is not a communication or EEG-specific claim. All
+prompted-communication, EEG-beyond-eye-and-mouth, unseen-person,
+independent-replication, causal-continuous, live-device, and external-
+reproduction requirements remain false.
+
+`ds003626` remains discovery. SilentSpeech-EEG remains an unqualified
+full-control watchlist source because the public loader is incomplete and the
+immutable dataset identity, license, manifest, hashes, and exact peripheral
+roles are unverified. TESSCCo and Kara One are explicitly partial challenges.
+Dreyer remains a motor-method precursor and cannot establish communication.
+
+Immediate gate: verify, commit, push, and remotely green this Tier A routing
+milestone. Do not activate COMM-L0-META, contact OpenNeuro, access real/private
+data, alter `DREYER-C5R-1-HL`, or commit the unrelated tracker inspection
+NDJSON.

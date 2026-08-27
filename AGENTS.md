@@ -114,6 +114,17 @@ manifest, loader, and exact external-channel roles are not verified. Kara One,
 Directional Word 2026, and ArEEG support only partial control sets. No source
 is promoted, no acquisition packet is created, and no payload is authorized.
 
+Read the objective evidence and replication decision after that refresh:
+`docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md`
+and its machine registry. It records one narrow directional real-task evidence
+item, while all prompted-communication, peripheral-adjusted, unseen-person,
+independent-replication, causal-continuous, and live-device requirements remain
+false. Preserve its role separation: `ds003626` is discovery,
+SilentSpeech-EEG is an unqualified full-control watchlist source, TESSCCo and
+Kara One are partial challenges, and Dreyer is a motor-method precursor rather
+than communication evidence. This record authorizes no metadata, payload,
+private path, model, score, stream, device, or claim operation.
+
 Do not implement `NDK_STREAM1` or RW3 Stage A under general continuation. The
 existing stream contracts still set implementation and generated execution to
 false. COMM-G1 and COMM-G2 are now separately consumed at R0; do not rerun or

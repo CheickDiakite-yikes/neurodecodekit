@@ -1,5 +1,19 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
+> **Communication objective ledger (2026-08-27):** the current end goal is now
+> decomposed into eight machine-tested evidence requirements. Only one narrow
+> prior item is positive: the closed BNCI lane showed directional held-out task
+> information, while its EEG-specific and consistency gates failed. Prompted
+> communication, EEG beyond eye and mouth activity, unseen-person
+> communication, independent replication, causal continuous decoding, live
+> actual-device decoding, and external reproduction remain unestablished.
+> `ds003626` is discovery; SilentSpeech-EEG is an operationally unqualified
+> full-control watchlist source; TESSCCo and Kara One are partial external
+> challenges; Dreyer is a motor-method precursor. No source was promoted and no
+> metadata, payload, private path, model, target, score, stream, device, release,
+> or claim operation occurred. The 20 GiB total and 10 GiB selected-raw limits
+> remain unchanged.
+
 > **DREYER-C5R-1 frontier (2026-08-26):** the six-step independent-replication
 > build is complete through the real-data gate. (1) The aggregate-only BNCI
 > postmortem localized posterior/visual, calibration, EOG-increment, and

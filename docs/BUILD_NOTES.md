@@ -16051,3 +16051,24 @@ and require both remote jobs green before the one official qualification.
   and CI `33063157757`. It bound three exact request artifacts / 33,996 bytes
   without a generated, network, payload, private-path, model, or score
   operation.
+
+### Communication objective evidence and replication routing frozen
+
+- Added one Tier A machine ledger covering eight cumulative evidence
+  requirements from real held-out task information through external live
+  reproduction. Only the closed BNCI lane's narrow directional task evidence
+  is recorded as established; every communication-specific requirement remains
+  false.
+- Reverified the public source surfaces. BrainStack exposes
+  `data/load_data.py`, but its imported `data/dataset.py` and data-layout
+  instructions remain absent, and the availability statement still says the
+  full dataset was not included. TESSCCo adds a 24-participant, five-command
+  partial external challenge but does not verify separate EOG and oral EMG.
+- Froze noninterchangeable roles: `ds003626` discovery, SilentSpeech-EEG
+  full-control watchlist, TESSCCo/Kara One partial challenges, Directional Word
+  confound-focused challenge, ArEEG engineering challenge, and Dreyer
+  motor-method precursor.
+- Kept `DREYER-C5R-1-HL` sole and all-false and COMM-L0-META queued. Real or
+  private reads, requests, payload bytes, model operations, targets,
+  predictions, scores, providers, streams, devices, releases, cleanup, and
+  claim upgrades were all zero.

@@ -14130,3 +14130,33 @@ passed both jobs in CI `33062307015`. Its proof-only closeout
 `33063157757` and binds three request artifacts totaling 33,996 bytes. Treat
 the packet as remotely reviewable but still queued and all-false. No active
 gate, authority, real-data operation, or scientific claim changed.
+
+## 0500 - Freeze The Communication Objective Evidence Ledger
+
+Evidence decision: distinguish the one narrow established item, real held-out
+BNCI task information, from every unproven target requirement. Prompted
+communication, EEG beyond recorded eye and mouth activity, unseen-person
+communication, independent replication, causal continuous decoding, live
+actual-device decoding, and external reproduction remain false.
+
+Source decision: preserve `ds003626` as discovery only. Keep SilentSpeech-EEG
+as the full-control watchlist until an immutable dataset release, license,
+complete manifest and hashes, reproducible loader, and exact EOG/oral-EMG roles
+are public. Record TESSCCo and Kara One as partial challenges and Dreyer as a
+motor-method precursor. A partial source may not silently inherit the controls
+or claim ceiling of another cohort.
+
+Sequencing decision: source identity precedes generated qualification,
+target-firewalled derivatives, and discovery prediction freeze. The independent
+replication source, hypothesis, controls, model family, thresholds, and
+exclusions must then freeze before discovery target delivery or scoring.
+Discovery scores precede replication execution, causal streaming, and one
+prospective actual-device run. Discovery outcomes may not select replication
+participants, preprocessing, thresholds, or model capacity. This additive
+decision narrows the earlier frozen program order without rewriting its
+proof-bound artifacts.
+
+Authority decision: this is Tier A routing only. Preserve
+`DREYER-C5R-1-HL` as sole and all-false and COMM-L0-META as queued. All real,
+private, metadata, payload, model, target, score, provider, stream, device,
+release, deletion, and scientific-claim operations remain zero.

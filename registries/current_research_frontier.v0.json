@@ -108,6 +108,20 @@
         "payload_or_private_operations": 0,
         "active_Tier_C_gate_changed": false
       },
+      "objective_evidence_and_replication_decision": {
+        "document": "docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md",
+        "registry": "registries/communication_eeg_objective_evidence_and_replication_decision.v0.json",
+        "status": "tier_A_evidence_and_source_routing_only_zero_real_or_private_operations",
+        "scientific_requirements_established": 0,
+        "narrow_prior_directional_evidence_items": 1,
+        "discovery_source": "OpenNeuro_ds003626_v2.1.2",
+        "full_control_replication_watchlist_source": "SilentSpeech_EEG_2026",
+        "partial_independent_command_source": "TESSCCo_2026",
+        "method_precursor": "Dreyer_Dataset_A",
+        "real_data_packet_created": false,
+        "payload_or_private_operations": 0,
+        "active_Tier_C_gate_changed": false
+      },
       "generated_experiment_preregistration": {
         "gate_id": "COMM-G1_GENERATED_QUALIFICATION",
         "document": "docs/COMM_G1_GENERATED_EXPERIMENT_PREREGISTRATION.md",
