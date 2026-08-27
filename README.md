@@ -148,6 +148,8 @@ or live neural decoding. The ledger assigns `ds003626` to discovery,
 SilentSpeech-EEG to the full-control watchlist, TESSCCo and Kara One to partial
 external challenges, and Dreyer to motor-control method validation. Those
 roles are machine-tested and cannot silently upgrade one another.
+Exact decision `9c3489c` passed Base job `98508922485`, Optional Neuro Readers
+job `98508922088`, and CI `33069830931`.
 
 The next control-plane step is now frozen in the
 [`COMM-G1 generated experiment contract`](docs/COMM_G1_GENERATED_EXPERIMENT_PREREGISTRATION.md).

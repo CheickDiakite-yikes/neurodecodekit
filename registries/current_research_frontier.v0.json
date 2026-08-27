@@ -118,6 +118,11 @@
         "full_control_replication_watchlist_source": "SilentSpeech_EEG_2026",
         "partial_independent_command_source": "TESSCCo_2026",
         "method_precursor": "Dreyer_Dataset_A",
+        "green_decision_commit": "9c3489c83dc2584a4fa454714ea2bc6166336234",
+        "green_decision_CI_run_id": 33069830931,
+        "green_decision_base_python_job_id": 98508922485,
+        "green_decision_optional_neuro_readers_job_id": 98508922088,
+        "both_required_jobs_green": true,
         "real_data_packet_created": false,
         "payload_or_private_operations": 0,
         "active_Tier_C_gate_changed": false

@@ -8203,3 +8203,9 @@ Immediate gate: verify, commit, push, and remotely green this Tier A routing
 milestone. Do not activate COMM-L0-META, contact OpenNeuro, access real/private
 data, alter `DREYER-C5R-1-HL`, or commit the unrelated tracker inspection
 NDJSON.
+
+Remote proof update: exact decision
+`9c3489c83dc2584a4fa454714ea2bc6166336234` passed Base job `98508922485`,
+Optional Neuro Readers job `98508922088`, and CI `33069830931`. The routing
+milestone is remotely green. Its green status does not activate a packet or
+authorize a real operation.

@@ -16072,3 +16072,6 @@ and require both remote jobs green before the one official qualification.
   private reads, requests, payload bytes, model operations, targets,
   predictions, scores, providers, streams, devices, releases, cleanup, and
   claim upgrades were all zero.
+- Exact decision `9c3489c83dc2584a4fa454714ea2bc6166336234` passed Base
+  job `98508922485`, Optional Neuro Readers job `98508922088`, and CI
+  `33069830931`.

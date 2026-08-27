@@ -14160,3 +14160,8 @@ Authority decision: this is Tier A routing only. Preserve
 `DREYER-C5R-1-HL` as sole and all-false and COMM-L0-META as queued. All real,
 private, metadata, payload, model, target, score, provider, stream, device,
 release, deletion, and scientific-claim operations remain zero.
+
+Proof decision: exact evidence-and-routing decision
+`9c3489c83dc2584a4fa454714ea2bc6166336234` passed Base job `98508922485`,
+Optional Neuro Readers job `98508922088`, and CI `33069830931`. Treat the
+ledger as remotely proven Tier A routing with no authority expansion.

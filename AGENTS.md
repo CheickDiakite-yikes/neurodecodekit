@@ -124,6 +124,8 @@ SilentSpeech-EEG is an unqualified full-control watchlist source, TESSCCo and
 Kara One are partial challenges, and Dreyer is a motor-method precursor rather
 than communication evidence. This record authorizes no metadata, payload,
 private path, model, score, stream, device, or claim operation.
+Exact decision `9c3489c83dc2584a4fa454714ea2bc6166336234` passed Base job
+`98508922485`, Optional Neuro Readers job `98508922088`, and CI `33069830931`.
 
 Do not implement `NDK_STREAM1` or RW3 Stage A under general continuation. The
 existing stream contracts still set implementation and generated execution to

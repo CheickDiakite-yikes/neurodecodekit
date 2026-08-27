@@ -57,6 +57,17 @@ class CommunicationEEGObjectiveEvidenceAndReplicationDecisionTests(unittest.Test
         routing = self.frontier["parallel_tier_A_communication_program"][
             "source_identity_preregistration"
         ]["objective_evidence_and_replication_decision"]
+        self.assertEqual(
+            routing["green_decision_commit"],
+            "9c3489c83dc2584a4fa454714ea2bc6166336234",
+        )
+        self.assertEqual(routing["green_decision_CI_run_id"], 33_069_830_931)
+        self.assertEqual(routing["green_decision_base_python_job_id"], 98_508_922_485)
+        self.assertEqual(
+            routing["green_decision_optional_neuro_readers_job_id"],
+            98_508_922_088,
+        )
+        self.assertTrue(routing["both_required_jobs_green"])
         self.assertFalse(routing["real_data_packet_created"])
         self.assertEqual(routing["payload_or_private_operations"], 0)
         self.assertFalse(routing["active_Tier_C_gate_changed"])
