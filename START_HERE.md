@@ -86,6 +86,13 @@ room for bounded derivatives and atomic temporary output, not permission to
 expand the cohort. Approximately 73 GiB was free when this contract was
 recorded.
 
+The additive generated canonicalizer is prepared in
+`src/neurodecodekit/datasets/communication_eeg_source_identity.py` and recorded
+in `docs/COMMUNICATION_EEG_SOURCE_IDENTITY_IMPLEMENTATION.md`. It has no
+network or real-data execution command. Its one official generated
+qualification remains unconsumed until the exact implementation is committed,
+pushed, and both CI jobs are green.
+
 ## Historical BNCI-C3C5-1 Closed Lane
 
 The generated G1 pipeline is complete, remotely proven, and consumed. Its

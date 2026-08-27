@@ -63,6 +63,15 @@ preserve EEG plus EOG/oral-EMG channels, and park above 10 GiB. It authorizes
 neither generated implementation nor the dataset-specific query. Do not query
 or download `ds003626` under this registration.
 
+The generated-only COMM-L0 implementation is prepared in
+`src/neurodecodekit/datasets/communication_eeg_source_identity.py`, with its
+exact record in
+`registries/communication_eeg_source_identity_implementation.v0.json`. It has
+only `plan`, `qualify`, and aggregate `inspect`; no official qualification has
+been consumed. Commit, push, and remotely green the exact implementation
+before its one generated qualification. Real metadata and payload access
+remain closed.
+
 `DREYER-C5R-1-HL` is the sole active Tier C packet. Read, in order:
 
 1. `registries/current_research_frontier.v0.json`;

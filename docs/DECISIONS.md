@@ -13851,3 +13851,33 @@ source identity and bounded target-free selection. It would not establish
 inner-speech decoding, EEG beyond eyes or mouth activity, unseen-person
 generalization, replication, live operation, hardware performance, or
 clinical value.
+
+## 0488 - Isolate The COMM-L0 Generated Canonicalizer Before Qualification
+
+Implementation decision: add a new standard-library COMM-L0 module instead of
+modifying the hash-bound, consumed IACKD source-identity implementation. Expose
+only `plan`, generated `qualify`, and aggregate `inspect`; include no public
+request, payload, execute, or real dataset path mode.
+
+Selection decision: canonicalize source rows independently of response order,
+discover current tree counts instead of fitting historical totals, and enforce
+the exact ten-participant/three-common-session rule. Select one BDF and every
+direct-child companion from the lexicographically first common raw session for
+all ten people. Refuse derivatives, processed arrays in raw directories,
+missing or multiple BDFs, missing companions, participant substitution, and
+the 10 GiB selected-byte cap.
+
+Privacy decision: public reports may include only aggregate hashes, counts,
+bytes, critical metadata, warnings, counters, and claim boundaries. Keep
+canonical paths, object IDs, S3 keys, and version IDs in memory only during
+generated qualification and prohibit them from inspect output.
+
+Evidence decision: unit tests may exercise generated canonicalization and
+refusal functions, but the one official generated qualification remains
+unconsumed. Commit, push, and remotely green the exact implementation before
+that invocation.
+
+Authority decision: OpenNeuro requests, metadata response bytes, payload
+requests, real/private path reads, BDF headers or samples, events, targets,
+models, predictions, scores, releases, and claims remain zero. The Dreyer
+packet remains the sole active Tier C gate.

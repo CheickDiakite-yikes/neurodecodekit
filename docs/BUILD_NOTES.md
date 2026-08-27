@@ -15761,3 +15761,33 @@ review. Then wait for a fresh packet-bound decision before H-L1 implementation.
 Immediate gate: verify, commit, push, and remotely green the COMM-L0
 registration. Do not implement the generated canonicalizer or query OpenNeuro
 in this milestone.
+
+### COMM-L0 generated canonicalizer implementation prepared
+
+- Added an isolated 37,672-byte standard-library module rather than modifying
+  the older hash-bound IACKD implementation.
+- Implemented strict generated-response JSON, snapshot, recursive-tree, path,
+  size, URL, and version-ID canonicalization with no current tree-count prefit.
+- Implemented exact all-ten participant, three-common-session validation and
+  one common raw-session selection with one BDF plus every direct-child
+  companion per person.
+- Added aggregate-only reports and no-clobber output. The CLI exposes only
+  `plan`, generated `qualify`, and aggregate `inspect`; there is no real
+  `execute`, network, payload, or local dataset mode.
+- Prepared two deterministic replays and 20 generated adversarial refusals but
+  did not invoke the official qualification. The registered invocation count
+  remains zero.
+- Focused tests passed 31 checks in 0.071 seconds. Ruff, compilation, JSON
+  parsing, and diff hygiene passed.
+- Final focused coverage passed 32 checks. The complete local suite reached
+  6,282 tests with 239 expected skips in 1,316.194 seconds but one unrelated
+  historical MARC2 qualification exceeded its frozen wall-time cap under the
+  slow run. That exact test passed alone in 15.322 seconds; no cap or
+  historical code was changed. Remote CI remains the clean full-suite gate.
+- Dataset-specific request/response bytes, payload requests, real/private
+  reads, BDF headers/samples, events, targets, models, predictions, scores, and
+  claims remained zero.
+
+Immediate gate: run the complete local suite, commit and push the exact
+implementation, and require both remote CI jobs green before consuming the one
+generated qualification.

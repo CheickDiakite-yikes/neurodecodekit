@@ -1,0 +1,149 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_source_identity_implementation",
+  "schema_version": "0.1.0",
+  "implementation_id": "COMM-L0-G1-generated-source-identity-v0",
+  "recorded_at_local": "2026-08-26",
+  "status": "generated_only_implementation_prepared_official_qualification_not_yet_consumed_real_access_unauthorized",
+  "objective": "Implement the exact COMM-L0 generated-response canonicalizer and all-participant bounded raw-session selector with no network or real dataset execution surface.",
+  "green_registration": {
+    "commit": "f4a30e4323834dbd53f5c3cc4abee52829ec016a",
+    "CI_run_id": 33035992877,
+    "base_python_job_id": 98398680307,
+    "optional_neuro_readers_job_id": 98398680155,
+    "both_required_jobs_green": true
+  },
+  "bindings": {
+    "registration_document": {
+      "path": "docs/COMMUNICATION_EEG_SOURCE_IDENTITY_PREREGISTRATION.md",
+      "sha256": "4cafabac5120f9d9f860817b8e8bed7e07d4f8a237b557181b91207a5bbbefc1"
+    },
+    "registration_contract": {
+      "path": "registries/communication_eeg_source_identity_contract.v0.json",
+      "sha256": "1c2dc0eaf9321fed7e115c5021002a1c93ba4a631a1e952b6f31b28249de88b3"
+    },
+    "registration_test": {
+      "path": "tests/test_communication_eeg_source_identity_contract.py",
+      "sha256": "a205996d9b1c02bf68883f4c57df49979c03c6b4e1ad1fd2f815846732a54ff0"
+    },
+    "implementation_document": {
+      "path": "docs/COMMUNICATION_EEG_SOURCE_IDENTITY_IMPLEMENTATION.md",
+      "sha256": "e398f57f5f015ac4b6a573cb9cd0332a6a9495c5ef43057be76b82a0c19f4395"
+    },
+    "implementation_module": {
+      "path": "src/neurodecodekit/datasets/communication_eeg_source_identity.py",
+      "sha256": "b03818b32e8e248a35a32271f3fcd10b3417351f46bab95402bb32951164fa2d"
+    },
+    "module_test": {
+      "path": "tests/test_communication_eeg_source_identity.py",
+      "sha256": "f64ee5d71ef476b6531c79ccf4260ca7350e6299292a5e65414379e11d92cce4"
+    },
+    "implementation_test": {
+      "path": "tests/test_communication_eeg_source_identity_implementation.py",
+      "sha256": "90a1325029630aefa97c7f8c85111b8a7dc94b3cdbbf63255a5b4a82791186fe"
+    }
+  },
+  "surface": {
+    "module": "neurodecodekit.datasets.communication_eeg_source_identity",
+    "commands": ["plan", "qualify", "inspect"],
+    "execute_command": false,
+    "network_constructor": false,
+    "HTTP_client_or_socket": false,
+    "real_endpoint_literal_in_execution_path": false,
+    "real_dataset_path_mode": false,
+    "payload_mode": false,
+    "heavy_dependency": false
+  },
+  "canonicalization_implementation": {
+    "strict_UTF8_JSON": true,
+    "duplicate_keys_nonfinite_BOM_NUL_and_controls_refused": true,
+    "exact_GraphQL_shapes": true,
+    "snapshot_ID_and_tag_exact": true,
+    "description_revision_bound": true,
+    "dataset_DOI_exact": true,
+    "safe_unique_NFC_POSIX_paths": true,
+    "canonical_integer_sizes": true,
+    "exact_versioned_S3_keys": true,
+    "source_order_independent": true,
+    "tree_count_or_bytes_prefit": false,
+    "public_row_path_URL_or_version_ID": false
+  },
+  "selection_implementation": {
+    "selection_inputs": "canonical_generated_metadata_only",
+    "participant_count": 10,
+    "participant_ids_exact": ["sub-01", "sub-02", "sub-03", "sub-04", "sub-05", "sub-06", "sub-07", "sub-08", "sub-09", "sub-10"],
+    "complete_sessions_per_participant": 3,
+    "common_session_set_required": true,
+    "session_rule": "lexicographically_first_common_complete_raw_session",
+    "selected_sessions_per_participant": 1,
+    "selected_raw_BDF_count": 10,
+    "selected_companions": "all_direct_child_non_BDF_files_in_selected_eeg_directories",
+    "processed_arrays_in_raw_directories_allowed": false,
+    "derivatives_allowed": false,
+    "participant_dropping": false,
+    "size_based_participant_or_session_selection": false,
+    "target_or_result_based_selection": false,
+    "maximum_selected_bytes": 10737418240
+  },
+  "generated_qualification_schedule": {
+    "official_invocations_completed": 0,
+    "official_invocations_allowed_after_green_implementation": 1,
+    "deterministic_success_replays": 2,
+    "adversarial_refusals": 20,
+    "success_fixture_rows": 121,
+    "copied_real_response_or_path_inventory": false,
+    "signal_event_target_label_prediction_or_outcome_content": false,
+    "consumed": false,
+    "rerun_allowed_after_consumption": false,
+    "scientific_claim_value": false
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "wall_time_seconds": 30,
+    "peak_RSS_bytes": 268435456,
+    "response_bytes": 2097152,
+    "output_bytes": 1048576,
+    "network_bytes": 0,
+    "real_payload_bytes": 0,
+    "total_incremental_research_storage_bytes": 21474836480,
+    "selected_raw_payload_bytes": 10737418240
+  },
+  "authorization_state": {
+    "official_generated_qualification_before_green_implementation": false,
+    "dataset_specific_GraphQL_request": false,
+    "metadata_response_read": false,
+    "payload_request_or_download": false,
+    "real_or_private_path_read": false,
+    "BDF_header_or_signal_read": false,
+    "event_target_or_label_read": false,
+    "training_or_inference": false,
+    "prediction_freeze_or_scoring": false,
+    "release": false,
+    "scientific_claim_upgrade": false
+  },
+  "operation_counters": {
+    "official_generated_qualifications": 0,
+    "dataset_specific_GraphQL_requests": 0,
+    "metadata_response_bytes": 0,
+    "payload_requests": 0,
+    "payload_network_bytes": 0,
+    "real_or_private_path_bytes": 0,
+    "BDF_header_reads": 0,
+    "signal_samples": 0,
+    "event_or_target_rows": 0,
+    "model_runs": 0,
+    "prediction_sets": 0,
+    "scores": 0,
+    "claim_upgrades": 0
+  },
+  "next_gate": {
+    "required": "commit_push_and_both_CI_jobs_green_before_one_official_generated_qualification",
+    "real_metadata_or_payload_access_after_generated_pass": false,
+    "DREYER_C5R_1_HL_remains_sole_active_Tier_C_packet": true
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "A generated-only canonicalizer enforces strict source identity, all-participant raw-session selection, storage, and privacy contracts without a real-data execution surface.",
+    "scientific_claim_not_established": "There is no real metadata EEG event target model prediction score communication unseen-person peripheral-adjusted replication or live result."
+  }
+}
