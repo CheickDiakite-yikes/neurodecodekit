@@ -16075,3 +16075,22 @@ and require both remote jobs green before the one official qualification.
 - Exact decision `9c3489c83dc2584a4fa454714ea2bc6166336234` passed Base
   job `98508922485`, Optional Neuro Readers job `98508922088`, and CI
   `33069830931`.
+
+### COMM-R0 independent replication preregistration
+
+- Added a source-independent analysis lock before any discovery target exists:
+  zero-calibration participant folds, offline event-locked sample-causal
+  four-band features, source-only nuisance residualization, one compact L2
+  logistic family, a vocabulary-general `K - 1` class-shift control ensemble,
+  explicit peripheral/posterior/timing/prior controls, and provider-free
+  language-only versus neural-plus-language arms.
+- Froze a conjunctive primary endpoint: at least `0.03` nats/item improvement
+  over both nuisance and nuisance-plus-deranged EEG, at least 70% participant
+  consistency, exact one-sided sign-flip `p <= 0.05`, and at least `0.05`
+  balanced-accuracy margin over the strongest frozen shortcut control.
+- Required the exact replication source and full or partial claim ceiling to
+  be remotely green before discovery target delivery. SilentSpeech-EEG remains
+  unqualified; TESSCCo and Kara One remain partial and cannot inherit a full
+  peripheral-adjusted claim.
+- Performed zero real/private, network, model, target, score, provider, stream,
+  device, release, cleanup, or claim operation. The active gate is unchanged.

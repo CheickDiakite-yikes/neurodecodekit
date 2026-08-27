@@ -14165,3 +14165,39 @@ Proof decision: exact evidence-and-routing decision
 `9c3489c83dc2584a4fa454714ea2bc6166336234` passed Base job `98508922485`,
 Optional Neuro Readers job `98508922088`, and CI `33069830931`. Treat the
 ledger as remotely proven Tier A routing with no authority expansion.
+
+## 0501 - Freeze Independent Replication Before Discovery Targets
+
+Scientific decision: use participant-macro log loss, not accuracy versus
+chance, as the primary incremental EEG endpoint. Require `P + residual EEG` to
+beat both recorded nuisance context `P` and `P + class-destroyed residual EEG`
+by a participant-macro minimum margin of at least `0.03` nats/item, with both
+component margins positive in at least 70% of complete participants and exact
+one-sided participant sign-flip `p <= 0.05`. Also require at least `0.05`
+balanced-accuracy advantage over the strongest frozen prior, cue, timing, or
+posterior control and better log loss than equal prior.
+
+Independence decision: freeze the causal features, source-only residualizer,
+compact L2 logistic family, controls, language arms, thresholds, exclusions,
+prediction freeze, and one-score firewall before discovery target delivery.
+The exact replication source identity and full or partial claim ceiling must be
+committed, pushed, and remotely green before `COMM-T`; absent that proof, target
+delivery refuses. Discovery outcomes may not select replication participants,
+preprocessing, model capacity, or thresholds.
+
+Source decision: keep SilentSpeech-EEG as an unqualified full-control watchlist
+until all nine public source gates pass. TESSCCo and Kara One may support
+noninterchangeable partial challenges only; neither may upgrade the full
+eye-and-mouth-adjusted claim. If no public source qualifies, wait for a
+separately governed prospective synchronized EEG/EOG/bilateral oral-EMG cohort.
+
+Control decision: use the exact source's `K` classes and average predictions
+from all `K - 1` class-shift control fits, so every class receives every other
+class once without selecting a convenient four-class subset or relying on one
+invertible rotation. Treat the one-second feature as sample-causal but offline
+event-locked with a trial-boundary oracle. Permit no external or generative LLM
+in this fixed-command experiment.
+
+Authority decision: this is additive Tier A preregistration. It makes zero
+real/private, model, target, score, provider, stream, device, release, cleanup,
+or claim operation and leaves `DREYER-C5R-1-HL` sole and all-false.

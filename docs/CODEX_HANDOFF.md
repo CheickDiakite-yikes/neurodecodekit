@@ -8209,3 +8209,27 @@ Remote proof update: exact decision
 Optional Neuro Readers job `98508922088`, and CI `33069830931`. The routing
 milestone is remotely green. Its green status does not activate a packet or
 authorize a real operation.
+
+## 2026-08-27 Communication Independent Replication Handoff
+
+Read `docs/COMMUNICATION_EEG_INDEPENDENT_REPLICATION_PREREGISTRATION.md`,
+`registries/communication_eeg_independent_replication_contract.v0.json`, its
+matching test, and the frontier entry.
+
+The Tier A registration freezes the independent analysis before discovery
+targets: zero-calibration participant folds, offline event-locked sample-causal
+four-band features, source-only nuisance residualization, one compact L2
+logistic family, a vocabulary-general `K - 1` class-shift control ensemble,
+eleven full-control conditions, four provider-free language-control arms, and a
+one-score firewall. The primary gate requires at least `0.03`
+nats/item over both nuisance comparators, 70% participant consistency, exact
+one-sided sign-flip `p <= 0.05`, and 0.05 balanced-accuracy specificity over
+the strongest prior/cue/timing/posterior control.
+
+The exact source identity and claim ceiling must be committed, pushed, and
+remotely green before discovery target delivery. SilentSpeech-EEG remains an
+unqualified full-control watchlist; TESSCCo and Kara One remain partial and
+cannot upgrade the full claim. No real/private operation or claim occurred.
+Immediate gate: verify, commit, push, and remotely green this preregistration.
+Do not activate COMM-L0-META, access data, alter `DREYER-C5R-1-HL`, or stage
+the unrelated tracker inspection NDJSON.

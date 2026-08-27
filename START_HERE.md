@@ -98,6 +98,24 @@ must not be rerun. Read
 Real metadata, payloads, signals, targets, models, scores, and claims remain
 closed.
 
+Before any future communication discovery target is delivered, read the
+independent replication lock:
+
+1. `docs/COMMUNICATION_EEG_INDEPENDENT_REPLICATION_PREREGISTRATION.md`;
+2. `registries/communication_eeg_independent_replication_contract.v0.json`;
+3. `tests/test_communication_eeg_independent_replication_contract.py`; and
+4. the matching entry in `registries/current_research_frontier.v0.json`.
+
+`COMM-R0-REPLICATION-v0` freezes the unseen-person split, offline event-locked
+sample-causal feature family, nuisance residualizer, compact classifier,
+`K - 1` class-shift EEG control ensemble, no-provider language-control arms,
+numerical gates, and one-score firewall before a
+discovery result exists. It also requires the exact independent source and its
+full or partial claim ceiling to become remotely green before discovery target
+delivery. SilentSpeech-EEG is not yet operationally qualified; TESSCCo and Kara
+One remain partial challenges. This is Tier A preregistration only and changes
+neither the active Dreyer gate nor any real-data authority.
+
 Exact generated result `f64d4f3` passed both required jobs in CI
 `33038718183`. Its proof-only closeout binds the three exact result artifacts
 without rerunning the qualification or reading ignored state. Exact closeout

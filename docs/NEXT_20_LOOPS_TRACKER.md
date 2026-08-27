@@ -14,6 +14,19 @@
 > or claim operation occurred. The 20 GiB total and 10 GiB selected-raw limits
 > remain unchanged.
 
+> **Independent replication lock (2026-08-27):**
+> `COMM-R0-REPLICATION-v0` now freezes the replication question, participant-
+> held-out zero-calibration split, offline event-locked sample-causal spectral
+> features, source-only nuisance residualization, compact L2 logistic family,
+> vocabulary-general `K - 1` EEG control ensemble, provider-free language-only
+> arms, and full-control thresholds
+> before any discovery target is delivered. The exact source identity and its
+> full or partial claim ceiling must be committed, pushed, and remotely green
+> before discovery scoring; otherwise the scorer refuses. SilentSpeech-EEG is
+> the full-control watchlist, while TESSCCo and Kara One remain explicitly
+> partial routes that cannot upgrade the full claim. This registration made
+> zero real/private operations and leaves `DREYER-C5R-1-HL` sole and all-false.
+
 > **DREYER-C5R-1 frontier (2026-08-26):** the six-step independent-replication
 > build is complete through the real-data gate. (1) The aggregate-only BNCI
 > postmortem localized posterior/visual, calibration, EOG-increment, and

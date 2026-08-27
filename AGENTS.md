@@ -264,6 +264,15 @@ fresh Dreyer EEG has been accessed, and no unseen-person, EEG-beyond-EOG,
 movement-intention, motor-cortex, language, live, hardware, or clinical claim
 is established.
 
+The parallel Tier A communication lane now includes
+`COMM-R0-REPLICATION-v0`. It freezes the independent replication analysis and
+requires an exact remotely green source identity and full or partial claim
+ceiling before any future discovery target delivery. It creates no Tier C
+packet, authorizes no source access, and does not displace
+`DREYER-C5R-1-HL`. Read
+`docs/COMMUNICATION_EEG_INDEPENDENT_REPLICATION_PREREGISTRATION.md` and its
+machine contract before changing communication replication routing.
+
 ### Historical BNCI-C3C5-1 Lane
 
 `BNCI-C3C5-1-A-R` Stage A has completed successfully, is permanently consumed,

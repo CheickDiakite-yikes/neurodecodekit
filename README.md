@@ -108,6 +108,34 @@ metadata only; it does not verify the real OpenNeuro tree or establish any
 neural result. See the
 [`COMM-L0 generated qualification result`](docs/COMMUNICATION_EEG_SOURCE_IDENTITY_GENERATED_QUALIFICATION_RESULT.md).
 
+The independent replication is now prospectively locked in
+[`COMM-R0-REPLICATION-v0`](docs/COMMUNICATION_EEG_INDEPENDENT_REPLICATION_PREREGISTRATION.md),
+before any discovery target has been delivered. The primary test is not EEG
+versus chance: it asks whether nuisance-adjusted central EEG improves
+participant-macro log loss over both recorded nuisance context and the same
+context plus a `K - 1` class-shift EEG control ensemble in a completely unseen
+participant. A full
+result requires at least `0.03` nats/item improvement, positive component
+margins in at least 70% of participants, exact one-sided sign-flip `p <= 0.05`,
+and at least 0.05 balanced-accuracy advantage over the strongest frozen prior,
+cue, timing, or posterior control. Discovery and independent replication must
+each pass separately.
+
+The registered feature window is sample-causal but offline event-locked and
+uses a trial-boundary oracle. It therefore cannot establish continuous,
+self-endpointed, real-time, or live decoding; those remain later `NDK_STREAM`
+and `NDK_LIVE` gates. The fixed-command experiment also permits no external or
+generative language model: its language-only control is the source class prior.
+
+SilentSpeech-EEG remains only a full-control watchlist source until its public
+identity, license, manifest, hashes, loader, and exact EOG/oral-EMG roles are
+verified. TESSCCo and Kara One are frozen as explicitly partial independent
+challenges; neither may be relabeled as a full eye-and-mouth-adjusted
+replication. If the exact replication source and claim ceiling are not
+committed, pushed, and remotely green, the future discovery scorer must refuse
+target delivery. This preregistration accessed no real data and adds no
+scientific claim.
+
 COMM-L0's proof-only closeout is now remotely green, so its generated
 engineering is closed. The queued
 [`COMM-L0-META` authorization packet](docs/COMMUNICATION_EEG_SOURCE_IDENTITY_METADATA_AUTHORIZATION_PACKET.md)
