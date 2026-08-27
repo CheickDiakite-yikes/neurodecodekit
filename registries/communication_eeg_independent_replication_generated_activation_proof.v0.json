@@ -1,0 +1,90 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_independent_replication_generated_activation_proof",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-27",
+  "lane_id": "COMM-R0-G",
+  "registration_id": "COMM-R0-REPLICATION-v0",
+  "status": "tracked_activation_proof_pending_own_remote_green",
+  "implementation_commit": "e0c587c36739af597e069bb68d84430d68b6e93b",
+  "activation_commit": "9b47f15e3adc83c32359d19428878226ab06c2d4",
+  "activation_sha256": "c739500a6ddb086334a56fa103d61e44f0e59c64e91faca9ca7492c9a70a8429",
+  "green_activation_commit": {
+    "commit": "9b47f15e3adc83c32359d19428878226ab06c2d4",
+    "CI_run_id": 33093134150,
+    "base_python_job_id": 98590992544,
+    "optional_neuro_readers_job_id": 98590992988,
+    "both_required_jobs_green": true
+  },
+  "proof_closeout_commit": "91e4522ab0cb766444f221321033b864b0be7362",
+  "green_proof_closeout_commit": {
+    "commit": "91e4522ab0cb766444f221321033b864b0be7362",
+    "CI_run_id": 33095028205,
+    "base_python_job_id": 98597573019,
+    "optional_neuro_readers_job_id": 98597572816,
+    "both_required_jobs_green": true
+  },
+  "bound_proof_closeout_artifacts": [
+    {
+      "role": "proof_closeout_document",
+      "path": "docs/COMMUNICATION_EEG_INDEPENDENT_REPLICATION_GENERATED_ACTIVATION_PROOF_CLOSEOUT.md",
+      "bytes": 1508,
+      "sha256": "2debaddd788c011dac19187a4e6df9f78a161ed037744f4d0720508581593c56",
+      "Git_blob": "c0e31401fe5adb9d35778558e26882098d907cc4"
+    },
+    {
+      "role": "proof_closeout_registry",
+      "path": "registries/communication_eeg_independent_replication_generated_activation_proof_closeout.v0.json",
+      "bytes": 3127,
+      "sha256": "6c50a1820dec001b92f2c72472428c9e28bb628b88589dc4fec82ce8c9d7e129",
+      "Git_blob": "d3343432fe869861de0d5833905bab7d768195a7"
+    },
+    {
+      "role": "proof_closeout_test",
+      "path": "tests/test_comm_r0_generated_activation_proof_closeout.py",
+      "bytes": 3006,
+      "sha256": "ccd73c16fa513dab0d20f7193e35da74663b54bc52cb655f9214f1b58d0da7ac",
+      "Git_blob": "4a0bbfc1e4f0a576ba92d63dc4868588afb1cf63"
+    }
+  ],
+  "bound_proof_closeout_artifact_count": 3,
+  "bound_proof_closeout_artifact_bytes": 7641,
+  "operation_counters": {
+    "official_generated_qualification_invocations": 0,
+    "generated_fixture_runs": 0,
+    "parameter_update_fits": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "real_or_private_path_reads": 0,
+    "network_bytes": 0,
+    "real_signal_samples": 0,
+    "real_targets_or_labels": 0,
+    "real_training_runs": 0,
+    "real_model_inference_runs": 0,
+    "real_prediction_sets": 0,
+    "real_target_deliveries": 0,
+    "real_scores": 0,
+    "provider_calls": 0,
+    "stream_or_device_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "delayed_effect": {
+    "this_proof_commit_push_and_both_jobs_green_required": true,
+    "official_generated_qualification_allowed_before_own_green": false,
+    "real_or_private_operation_allowed": false,
+    "rerun_allowed": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "tracked local proof for one generated replication qualification",
+    "scientific_value": "none",
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "causal_continuous_decoding_established": false,
+    "live_neural_decoding_established": false
+  }
+}

@@ -14282,3 +14282,10 @@ activation test treated proof/result absence as permanent. Replace only that
 transition assertion, rebind the corrected activation test, and require a new
 green closeout commit. Do not create the activation proof or run qualification
 from the superseded closeout.
+
+Final proof decision: corrected closeout
+`91e4522ab0cb766444f221321033b864b0be7362` passed Base `98597573019`,
+Optional `98597572816`, and CI `33095028205`. Create the tracked activation
+proof binding that exact green closeout and the earlier green activation. The
+proof has delayed effect until its own commit is pushed and both jobs are
+green; only then may the single generated qualification run.

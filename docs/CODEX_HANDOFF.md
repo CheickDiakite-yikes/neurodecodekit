@@ -22,8 +22,9 @@
 > `98590992544`, Optional `98590992988`, and CI `33093134150`. A proof-only
 > closeout passed CI `33094079488`, but review caught that its activation test
 > treated future proof/result absence as permanent. A narrow corrected closeout
-> is now pending green CI, followed by one final tracked activation-proof
-> record. Do not run the official qualification before both remaining barriers.
+> `91e4522` passed Base `98597573019`, Optional `98597572816`, and CI
+> `33095028205`. The final tracked activation-proof record is now pending its
+> own green CI. Do not run the official qualification before that last barrier.
 
 > **Current gate, 2026-08-26:** `DREYER-C5R-1-HL` is the sole active Tier C
 > packet. The aggregate-only BNCI postmortem localized four design failures:
