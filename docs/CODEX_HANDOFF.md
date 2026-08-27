@@ -8318,3 +8318,29 @@ proof, and matching test. This proof binds three exact registration artifacts /
 47,205 bytes and makes no real/private, network, model, target, score, cleanup,
 or claim operation. Commit, push, and remotely green the proof closeout without
 changing the sole active Tier C gate or staging the unrelated inspection file.
+
+## 2026-08-27 COMM-LIVE-G0 Implementation Handoff
+
+Read `docs/COMMUNICATION_LIVE_SESSION_G0_IMPLEMENTATION.md`,
+`registries/communication_live_session_g0_implementation.v0.json`, the new
+`streaming/live_session.py`, generated harness, sidecar CLI, and matching tests.
+
+Amendment 1 is remotely green at
+`2715d8a8344f5c58dd64f6865639822ec83888aa` / CI `33106893586`. SourceChunk v0
+is remotely green and on GitHub `main` at
+`788c34354aab3e73656ada6ea1ad62af6b7852bc` / CI `33109065198`.
+
+The generated LiveSession implementation enforces exact source bindings,
+continuity, fixed 16-sample causal frames, 32-sample generation warm-up,
+gap/reconnect reset, quality/confidence abstention, three-update stable commit,
+blank/inactive rearm, bounded self-hashed snapshots, target leakage refusal,
+and transactional rollback. A development replay passed four fictional
+sessions, two deterministic replays, four partitions, two controls, and all 33
+exact adversarial refusal bindings in 10.684960457962006 seconds at 25,821,184
+bytes peak RSS. Every real/private, model, network, provider, device, release,
+and claim counter was zero.
+
+Immediate gate: commit and push this exact implementation, require both CI jobs
+green, then create an exact implementation-proof record. Do not run the one
+official generated qualification before that proof. Keep `DREYER-C5R-1-HL`
+sole and all-false, and never stage the unrelated tracker inspection NDJSON.

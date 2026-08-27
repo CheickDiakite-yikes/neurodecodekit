@@ -1,0 +1,160 @@
+{
+  "schema_name": "neurodecodekit.communication_live_session_g0_implementation",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-27",
+  "lane_id": "COMM-LIVE-G0",
+  "status": "implementation_ready_pending_exact_commit_push_and_remote_green_before_official_qualification",
+  "prerequisite_green_proofs": {
+    "amendment_1": {
+      "commit": "2715d8a8344f5c58dd64f6865639822ec83888aa",
+      "CI_run_id": 33106893586,
+      "base_python_job_id": 98639010872,
+      "optional_neuro_readers_job_id": 98639011052,
+      "both_required_jobs_green": true
+    },
+    "source_chunk_v0": {
+      "commit": "788c34354aab3e73656ada6ea1ad62af6b7852bc",
+      "CI_run_id": 33109065198,
+      "base_python_job_id": 98646713063,
+      "optional_neuro_readers_job_id": 98646712838,
+      "both_required_jobs_green": true,
+      "present_on_GitHub_main": true
+    }
+  },
+  "artifact_set": {
+    "artifact_count": 12,
+    "artifact_bytes": 254648,
+    "canonical_sha256": "314a0ea9d79ef34d108987baa6c7453af41e8e5c569dd09497de2a65cdb30b23",
+    "artifacts": [
+      {
+        "path": "registries/communication_live_session_g0_contract.v0.json",
+        "bytes": 9985,
+        "sha256": "3601df30a0823d2116ade758745ba86de7de155593c4e95f2162b6a7f5eac245"
+      },
+      {
+        "path": "registries/communication_live_session_g0_amendment_1.v0.json",
+        "bytes": 7097,
+        "sha256": "3f00046332c89083d93db0e02249ddaf2f7dafe0e0fae1a8f21616a87c0eadd8"
+      },
+      {
+        "path": "registries/replay_equivalence_contract.v0.json",
+        "bytes": 25721,
+        "sha256": "6e4ef54049d9a6f77f64e7b6cfd6b911bd97b5693386f16b62f9d466f66b0469"
+      },
+      {
+        "path": "docs/COMMUNICATION_LIVE_SESSION_G0_IMPLEMENTATION.md",
+        "bytes": 4438,
+        "sha256": "efc0027a15b2cac108f1fdd4367962cdc8a09aea2ec8e1f56c362d7c72838cbd"
+      },
+      {
+        "path": "src/neurodecodekit/streaming/__init__.py",
+        "bytes": 74,
+        "sha256": "8a24f210f78517a095b0a7842957c741c4c67da20223778a8860a1899ae6d5e3"
+      },
+      {
+        "path": "src/neurodecodekit/streaming/source_chunk.py",
+        "bytes": 57627,
+        "sha256": "5b7d36a20b4ae3d92a4c6e21c350dafa64606713ed7c5fc9bef2290d1fa3a785"
+      },
+      {
+        "path": "src/neurodecodekit/streaming/live_session.py",
+        "bytes": 67018,
+        "sha256": "dc6713f5395e76e3f8c17f0719c1f72b506887d3e9588f7ae96f81b9c63d49e6"
+      },
+      {
+        "path": "src/neurodecodekit/experiments/comm_live_g0_generated.py",
+        "bytes": 46756,
+        "sha256": "2ed6deb0fdb40a0c8092b2cbd6470ed3b39502b67318b58eee2fc6152708cbb1"
+      },
+      {
+        "path": "src/neurodecodekit/comm_live_g0_cli.py",
+        "bytes": 1313,
+        "sha256": "39af67ba710fd93a1d31b378ff95ca30086b1827767457bdcac5b5a680ae7d49"
+      },
+      {
+        "path": "tests/test_communication_source_chunk_v0.py",
+        "bytes": 13116,
+        "sha256": "e47a5c37a80dfa6c85c9f49e20876dff5f00597c02e8f8a46cceb061ae73bd92"
+      },
+      {
+        "path": "tests/test_communication_live_session.py",
+        "bytes": 15253,
+        "sha256": "10f6503c1b03c458953ebc9312fb0556a0c0e588a4e90026ec2d020f4db3e569"
+      },
+      {
+        "path": "tests/test_communication_live_session_g0_implementation.py",
+        "bytes": 6250,
+        "sha256": "0f9037f67b2109a31af3cf5bae3ceb64c380baeeb9c7f2b92136cb8ea19f5047"
+      }
+    ]
+  },
+  "capabilities": {
+    "immutable_SourceChunk_input_required": true,
+    "transactional_causal_LiveSession": true,
+    "exact_generation_sequence_sample_and_timestamp_continuity": true,
+    "explicit_gap_and_reconnect_state_reset": true,
+    "fixed_frame_warmup_stability_and_rearm_policy": true,
+    "bounded_self_hashed_snapshot_and_restore": true,
+    "target_label_reference_text_and_scorer_firewall": true,
+    "exact_internal_refusal_binding": true,
+    "generated_replay_equivalence_harness": true,
+    "generated_sidecar_CLI": true,
+    "base_dependency_added": false,
+    "real_stream_or_device_adapter": false,
+    "real_model_or_provider_adapter": false
+  },
+  "development_verification": {
+    "focused_tests_passed": 50,
+    "fictional_sessions": 4,
+    "deterministic_replays": 2,
+    "partition_schedules": 4,
+    "control_schedules": 2,
+    "registered_adversarial_refusals": 33,
+    "positive_control_stable_commits": 4,
+    "deterministic_sha256": "c3e7eab1d2dc147b5987c3cbb83f8365119885f0162dd7f3109d45cf455a03d2",
+    "runtime_seconds": 10.684960457962006,
+    "peak_process_RSS_bytes": 25821184,
+    "inspectable_result_bytes": 7822,
+    "temporary_generated_bytes": 0,
+    "Ruff_passed": true,
+    "compile_passed": true,
+    "CLI_help_and_plan_passed": true,
+    "git_diff_check_passed": true
+  },
+  "complete_local_suite": {
+    "attempted": true,
+    "tests_run": 6583,
+    "optional_skips": 18,
+    "initial_environment_sensitive_errors": 3,
+    "errors_cleared_by_isolated_rerun": 2,
+    "remaining_unrelated_legacy_timing_error": 1,
+    "repository_wide_acceptance_barrier": "exact_next_GitHub_Base_Python_and_Optional_Neuro_Readers_jobs"
+  },
+  "official_generated_qualification": {
+    "executed": false,
+    "invocation_consumed": false,
+    "result_path": "registries/communication_live_session_g0_generated_result.v0.json",
+    "required_before_execution": "exact_implementation_commit_pushed_and_both_required_CI_jobs_green_then_exact_implementation_proof_present"
+  },
+  "operation_counters": {
+    "real_or_private_path_operations": 0,
+    "real_signal_reads": 0,
+    "real_target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "provider_calls": 0,
+    "network_bytes": 0,
+    "physical_stream_or_device_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "active_Tier_C_gate": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "changed": false,
+    "all_authority_flags_false": true
+  },
+  "claim_boundary": {
+    "engineering_capability": "bounded_causal_replay_equivalent_live_session_state_machine_over_immutable_generated_source_chunks",
+    "scientific_claim_not_established": "EEG_communication_information_EEG_beyond_peripherals_unseen_person_generalization_live_neural_decoding_device_performance_or_human_benefit"
+  }
+}

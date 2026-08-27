@@ -384,6 +384,7 @@
       "document": "docs/COMMUNICATION_LIVE_SESSION_G0_PREREGISTRATION.md",
       "contract": "registries/communication_live_session_g0_contract.v0.json",
       "status": "registration_remotely_green",
+      "current_status": "implementation_ready_pending_exact_commit_push_and_remote_green",
       "purpose": "compose_existing_RW3_SourceChunk_and_freeze_gap_reconnect_clock_abstention_and_stable_commit_semantics",
       "existing_SourceChunk_schema": "neurodecodekit.source_chunk.v0.1.0",
       "RW3_stage_A_review_scope": "dependency_free_existing_schema_validator_factory_and_generated_fixtures_only_after_registration_green",
@@ -402,16 +403,39 @@
       "both_required_jobs_green": true,
       "registration_proof": "registries/communication_live_session_g0_registration_proof.v0.json",
       "generated_implementation_authorized_now": false,
+      "current_generated_implementation_authority": true,
       "generated_qualification_authorized_now": false,
       "amendment_1": {
         "amendment_id": "COMM-LIVE-G0-A1",
         "document": "docs/COMMUNICATION_LIVE_SESSION_G0_AMENDMENT_1.md",
         "registry": "registries/communication_live_session_g0_amendment_1.v0.json",
         "status": "pending_own_remote_green",
+        "current_status": "remotely_green",
         "reason": "freeze_sample_based_partition_invariance_cross_domain_clock_availability_and_exact_hash_preimages",
+        "commit": "2715d8a8344f5c58dd64f6865639822ec83888aa",
+        "CI_run_id": 33106893586,
+        "base_job_id": 98639010872,
+        "optional_job_id": 98639011052,
         "implementation_paused": true,
+        "current_implementation_paused": false,
         "real_or_private_operations": 0,
         "scientific_value": "none_specification_only"
+      },
+      "source_chunk_v0": {
+        "status": "remotely_green_and_present_on_GitHub_main",
+        "commit": "788c34354aab3e73656ada6ea1ad62af6b7852bc",
+        "CI_run_id": 33109065198,
+        "base_job_id": 98646713063,
+        "optional_job_id": 98646712838
+      },
+      "live_session_implementation": {
+        "document": "docs/COMMUNICATION_LIVE_SESSION_G0_IMPLEMENTATION.md",
+        "registry": "registries/communication_live_session_g0_implementation.v0.json",
+        "status": "pending_exact_commit_push_and_remote_green",
+        "official_qualification_executed": false,
+        "official_invocation_consumed": false,
+        "real_or_private_operations": 0,
+        "scientific_value": "none_generated_engineering_only"
       },
       "scientific_value": "none_generated_engineering_only",
       "active_Tier_C_gate_changed": false

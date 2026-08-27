@@ -16204,3 +16204,15 @@ and require both remote jobs green before the one official qualification.
   transactional pushes. Implementation is paused pending the amendment's own
   remote-green proof. Runtime, data, network, model, device, and claim counters
   remain zero.
+- 2026-08-27: Implemented the generated-only `COMM-LIVE-G0` session layer after
+  Amendment 1 and SourceChunk v0 became remotely green. The implementation
+  composes immutable SourceChunk values into a transactional causal state
+  machine with fixed frames, per-generation warm-up, explicit gap/reconnect
+  reset, abstention, stable commit/rearm, bounded snapshots, and target leakage
+  refusal. The repeatable development qualification passed four fictional
+  sessions, two deterministic replays, four chunk partitions, two controls,
+  and all 33 exact refusal bindings in 10.684960457962006 seconds at 25,821,184
+  bytes peak RSS; all real/private, model, network, provider, device, release,
+  and claim counters remained zero. The official one-shot qualification has not
+  run. Immediate gate: commit, push, and remotely green the exact implementation
+  before creating its proof record or consuming the qualification.

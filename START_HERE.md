@@ -72,6 +72,14 @@ unseen-person device stream. This Tier A plan made zero data, model, target,
 score, provider, stream, or hardware operations and does not change the Dreyer
 gate.
 
+The generated-only live-session boundary is implemented in
+`src/neurodecodekit/streaming/live_session.py` and documented in
+`docs/COMMUNICATION_LIVE_SESSION_G0_IMPLEMENTATION.md`. It passed repeatable
+development checks over fictional SourceChunk streams, but its one official
+qualification remains closed until the exact implementation commit and both CI
+jobs are remotely green and recorded in an implementation proof. This is
+interface engineering only: it is not a live device run or neural result.
+
 The next communication milestone is now prospectively frozen in
 `docs/COMMUNICATION_EEG_SOURCE_IDENTITY_PREREGISTRATION.md`. Its exact
 OpenNeuro query and deterministic selector would retain one common complete

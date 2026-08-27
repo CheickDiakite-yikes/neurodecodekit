@@ -14330,3 +14330,12 @@ green; only then may the single generated qualification run.
   before code. Require transactional push so every refusal leaves the previous
   snapshot byte-identical. Resume generated implementation only after the
   amendment commit is pushed and both remote jobs are green.
+- 2026-08-27: Resume and implement `COMM-LIVE-G0` after exact Amendment 1
+  `2715d8a8344f5c58dd64f6865639822ec83888aa` and SourceChunk v0
+  `788c34354aab3e73656ada6ea1ad62af6b7852bc` passed both required CI jobs.
+  Bind every registered adversarial family to its exact expected internal
+  refusal so an unrelated exception cannot count as a pass. Keep the official
+  generated qualification closed until the exact implementation commit is
+  pushed, remotely green, and captured by an implementation-proof record.
+  Preserve all real/private, target, model, provider, network, device, release,
+  and scientific authority as false and leave `DREYER-C5R-1-HL` unchanged.
