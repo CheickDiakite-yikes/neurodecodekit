@@ -91,6 +91,15 @@ still no established EEG-beyond-peripheral advantage, unseen-person neural
 decoding, movement-intention or motor-cortex claim, language or thought
 decoding, live system, portable-hardware result, or clinical utility.
 
+The parallel communication program now has a prospective
+[`COMM-L0` source-identity contract](docs/COMMUNICATION_EEG_SOURCE_IDENTITY_PREREGISTRATION.md).
+It freezes one future OpenNeuro `ds003626-v2.1.2` metadata query and a
+target-free selection rule: keep all ten participants, choose the same earliest
+complete raw session for everyone, preserve EEG plus eye and oral-muscle
+channels, and park if the slice exceeds 10 GiB. No dataset-specific request or
+download has occurred, so this is a reproducibility and storage-control
+milestone rather than a decoding result.
+
 ## Five Scientific Targets
 
 NeuroDecodeKit is now organized around five claims that must be earned

@@ -72,6 +72,20 @@ unseen-person device stream. This Tier A plan made zero data, model, target,
 score, provider, stream, or hardware operations and does not change the Dreyer
 gate.
 
+The next communication milestone is now prospectively frozen in
+`docs/COMMUNICATION_EEG_SOURCE_IDENTITY_PREREGISTRATION.md`. Its exact
+OpenNeuro query and deterministic selector would retain one common complete
+raw session for all ten participants, including the BDFs that preserve EEG,
+eye, and mouth channels, while parking above 10 GiB. This is registration
+only: no dataset-specific response was requested, and neither the generated
+implementation nor public metadata access is authorized yet.
+
+The total incremental NeuroDecodeKit research-storage allowance is 20 GiB,
+but the communication raw-selection cap remains 10 GiB. The balance is safety
+room for bounded derivatives and atomic temporary output, not permission to
+expand the cohort. Approximately 73 GiB was free when this contract was
+recorded.
+
 ## Historical BNCI-C3C5-1 Closed Lane
 
 The generated G1 pipeline is complete, remotely proven, and consumed. Its

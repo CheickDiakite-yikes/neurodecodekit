@@ -54,6 +54,15 @@ communication cohort, but authorizes no metadata request, payload, signal,
 target, model, score, stream, provider, device, or claim operation. It does not
 replace or compete with the sole active Tier C gate below.
 
+The additive `COMM-L0` source-identity preregistration is frozen in
+`docs/COMMUNICATION_EEG_SOURCE_IDENTITY_PREREGISTRATION.md` and
+`registries/communication_eeg_source_identity_contract.v0.json`. It freezes
+one exact future OpenNeuro query and a target-free selector that must retain
+all ten participants, choose the same earliest complete raw session for each,
+preserve EEG plus EOG/oral-EMG channels, and park above 10 GiB. It authorizes
+neither generated implementation nor the dataset-specific query. Do not query
+or download `ds003626` under this registration.
+
 `DREYER-C5R-1-HL` is the sole active Tier C packet. Read, in order:
 
 1. `registries/current_research_frontier.v0.json`;

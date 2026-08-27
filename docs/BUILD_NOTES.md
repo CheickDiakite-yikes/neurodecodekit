@@ -15732,3 +15732,32 @@ review. Then wait for a fresh packet-bound decision before H-L1 implementation.
   hygiene passed. An initial suite command omitted `PYTHONPATH=src` and produced
   eight import-only failures; the corrected baseline command is the reported
   green result.
+
+### COMM-L0 source identity and bounded selection preregistered
+
+- Rechecked the primary source structure without requesting a dataset-specific
+  API response or payload. Raw session BDFs preserve 128 EEG plus eight EXG
+  channels and tagged events; processed EEG removes ICA sources correlated
+  with EXG, so processed-only input was ruled out for attribution.
+- Froze one exact future OpenNeuro `ds003626` snapshot `2.1.2` query, canonical
+  request hashes, strict transport/JSON/snapshot/tree rules, and aggregate-only
+  publication.
+- Froze a target-free selection algorithm requiring exactly all ten
+  participants, three complete raw sessions each, and the lexicographically
+  first common complete session for everyone. It cannot drop people, select by
+  size or outcomes, substitute processed EEG, or exceed 10,737,418,240 bytes.
+- Recorded the maintainer's 20 GiB total storage allowance as a separate hard
+  ceiling, preserving 10 GiB for the raw slice and the balance for bounded
+  derivatives and invocation-owned temporary output. Approximately 73 GiB was
+  free at registration; future payload work must reserve its full projected
+  footprint and preserve a separate system-safety margin before transfer.
+- Added eight ordered refusal routes and an 18-family generated qualification
+  matrix. Generated implementation remains closed until this registration is
+  remotely green; the one future metadata response remains Tier C.
+- Preserved `DREYER-C5R-1-HL` as the sole active Tier C packet. Dataset-specific
+  requests, responses, payload bytes, private reads, BDF headers/samples,
+  events, targets, models, predictions, scores, and claims were all zero.
+
+Immediate gate: verify, commit, push, and remotely green the COMM-L0
+registration. Do not implement the generated canonicalizer or query OpenNeuro
+in this milestone.

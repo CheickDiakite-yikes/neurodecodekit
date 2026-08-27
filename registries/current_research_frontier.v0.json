@@ -9,6 +9,18 @@
     "document": "docs/COMMUNICATION_EEG_SCIENTIFIC_CLAIM_PROGRAM.md",
     "registry": "registries/communication_eeg_scientific_claim_program.v0.json",
     "discovery_source": "OpenNeuro_ds003626_v2.1.2",
+    "source_identity_preregistration": {
+      "gate_id": "COMM-L0_SOURCE_IDENTITY",
+      "document": "docs/COMMUNICATION_EEG_SOURCE_IDENTITY_PREREGISTRATION.md",
+      "contract": "registries/communication_eeg_source_identity_contract.v0.json",
+      "status": "prospective_registration_zero_dataset_specific_response",
+      "selection_rule": "one_lexicographically_first_common_complete_raw_session_for_each_of_all_ten_participants",
+      "maximum_future_selected_payload_bytes": 10737418240,
+      "maximum_total_incremental_research_storage_bytes": 21474836480,
+      "dataset_specific_GraphQL_authorized_now": false,
+      "generated_implementation_authorized_now": false,
+      "real_or_private_operations": 0
+    },
     "full_independent_replication_source_verified": false,
     "active_Tier_C_gate_changed": false,
     "real_or_private_operations": 0

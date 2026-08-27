@@ -13811,3 +13811,43 @@ Authority decision: this Tier A record changes no active gate and performs zero
 dataset API or file-manifest request, payload, private read, signal, target,
 model, prediction, score, provider, stream, device, release, or claim
 operation. Public papers and public web records were read for this decision.
+
+## 0487 - Freeze A Target-Free Communication Source Selector Before Metadata Access
+
+Source-integrity decision: bind OpenNeuro `ds003626` snapshot `2.1.2` to one
+exact future GraphQL query, strict snapshot/tree canonicalization, versioned
+object URLs, and aggregate-only output. Do not guess or prefit the current file
+count, byte total, snapshot commit, tree hash, or description projection.
+
+Selection decision: require exactly `sub-01` through `sub-10`, three complete
+raw sessions per participant, and one common session-label set. Select the
+lexicographically first common complete raw session for every participant,
+including one raw BDF and required same-session sidecars. Never drop a person,
+choose by size, inspect targets, or substitute processed EEG. Park if the
+structure differs or the selected bytes exceed 10,737,418,240.
+
+Resource decision: accept the maintainer's 20 GiB total NeuroDecodeKit
+research-storage allowance without increasing the selected raw slice above
+10 GiB. Reserve the balance for bounded derivatives and invocation-owned
+temporary/atomic output. Observe approximately 73 GiB free at registration;
+require a fresh reservation and system-safety margin before any future
+payload transfer. Do not clean, move, or delete another project to make room.
+
+Attribution decision: preserve raw BDFs because the primary paper reports that
+they contain all EEG and external channels, while the distributed processed
+EEG removes ICA sources correlated with eye and mouth channels. Processed EEG
+alone cannot support the planned EEG-beyond-peripheral comparison.
+
+Authority decision: this is a Tier A prospective registration. Generated
+implementation waits for the exact registration to become remotely green.
+Dataset-specific GraphQL access remains a later Tier C operation, may not
+displace `DREYER-C5R-1-HL`, and requires its own green packet and fresh
+maintainer decision. Current dataset-specific responses, payload bytes,
+private reads, signals, events, targets, models, predictions, scores, and claim
+upgrades are all zero.
+
+Claim decision: a future `COMM-L0-R1` pass would establish only immutable
+source identity and bounded target-free selection. It would not establish
+inner-speech decoding, EEG beyond eyes or mouth activity, unseen-person
+generalization, replication, live operation, hardware performance, or
+clinical value.
