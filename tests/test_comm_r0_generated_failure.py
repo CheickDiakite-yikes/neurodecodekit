@@ -57,6 +57,19 @@ class CommR0GeneratedFailureTests(unittest.TestCase):
         self.assertFalse(post["invocation_temporary_directory_exists"])
         self.assertFalse(post["generated_prediction_or_target_artifacts_retained"])
 
+    def test_failure_closeout_is_remotely_green(self) -> None:
+        proof = self.failure["closeout_proof"]
+        self.assertEqual(
+            proof["failure_record_commit"],
+            "9876cf92e7c15503064a38c976fef454915687cd",
+        )
+        self.assertEqual(proof["failure_record_CI_run_id"], 33097495998)
+        self.assertEqual(proof["failure_record_base_python_job_id"], 98606113010)
+        self.assertEqual(
+            proof["failure_record_optional_neuro_readers_job_id"], 98606113427
+        )
+        self.assertTrue(proof["both_required_jobs_green"])
+
     def test_generated_schedule_is_not_mislabeled_as_science(self) -> None:
         completed = self.failure["completed_generated_work_before_failure"]
         self.assertEqual(completed["planned_parameter_update_fits_executed"], 312)

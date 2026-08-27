@@ -7,7 +7,9 @@
 > still present when the executor audited the temporary tree for zero
 > symlinks. Both fictional-data replays and the refusal sequence returned, but
 > no official result was published. Cleanup removed all invocation-created
-> state; the run is consumed and may not be rerun. Exact runtime/RSS/byte
+> state; the run is consumed and may not be rerun. Failure record `9876cf9`
+> passed Base `98606113010`, Optional `98606113427`, and CI `33097495998`.
+> Exact runtime/RSS/byte
 > measurements are unavailable rather than recorded as zero. A future source
 > correction requires a new prospective generated gate. No real EEG, network,
 > provider, private artifact, or scientific claim occurred, and sole active

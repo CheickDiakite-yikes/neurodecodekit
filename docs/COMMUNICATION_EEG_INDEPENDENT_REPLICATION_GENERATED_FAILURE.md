@@ -59,6 +59,11 @@ release, and scientific-claim counter remained zero. Producer causality is
 unavailable because no official result was accepted, and end-to-end latency
 was not measured.
 
+Failure record `9876cf9` passed Base Python job `98606113010`, Optional Neuro
+Readers job `98606113427`, and CI `33097495998`. This remote proof records the
+failed invocation; it does not turn the rejected synthetic work into an
+accepted result or authorize a rerun.
+
 ## Next Gate
 
 `COMM-R0-G` is permanently parked. A narrow source correction may remove the
