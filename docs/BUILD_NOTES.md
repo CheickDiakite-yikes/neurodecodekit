@@ -15791,3 +15791,30 @@ in this milestone.
 Immediate gate: run the complete local suite, commit and push the exact
 implementation, and require both remote CI jobs green before consuming the one
 generated qualification.
+
+### COMM-L0 generated source identity qualified once
+
+- Exact implementation `be6c44fcfd7363bf0c0899bc1b737e588070c760`
+  passed Base Python job `98405103426`, Optional Neuro Readers job
+  `98405103509`, and CI `33038044421` before execution.
+- The sole generated qualification passed two source-order replays and all 20
+  registered adversarial refusals. It is consumed and cannot be rerun.
+- The synthetic tree contained 121 rows / 3,089,072 bytes. The synthetic
+  selector retained all ten generated participants, ten BDF identities, and
+  30 companions totaling 1,029,510 bytes. These are fixture values, not real
+  dataset observations.
+- Runtime was 0.07287466689012945 seconds, peak RSS was 22,069,248 bytes,
+  generated input was 39,137 bytes, and aggregate output was 3,001 bytes.
+- Network, real/private reads, payloads, BDF headers, signal samples, events,
+  targets, labels, model runs, predictions, scores, and claim upgrades were
+  all zero.
+- The committed aggregate result is byte-identical to the ignored execution
+  result: SHA-256
+  `39b0833ac821246a7159fda7575f6cfa3c1f621fd3acb64af6f3fa07fe3fb48d`.
+- The 20 GiB total and 10 GiB selected-raw caps remain unchanged. No cleanup
+  or write outside NeuroDecodeKit occurred, and the unrelated tracker
+  inspection file remains untouched.
+
+Immediate gate: commit, push, and remotely green this result closeout. Real
+OpenNeuro metadata remains a separate Tier C operation and no payload request
+is authorized. `DREYER-C5R-1-HL` remains the sole active Tier C packet.

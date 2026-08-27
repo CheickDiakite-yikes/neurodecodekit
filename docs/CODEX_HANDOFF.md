@@ -7935,3 +7935,30 @@ source acquisition, not scientific evidence of neural information.
 Immediate gate: commit, push, and remotely green the aggregate result. Stop
 before Stage Q. Q may later perform only the frozen target-blind semantic
 validation after a separate bounded transition. P and T remain closed.
+
+## 2026-08-27 COMM-L0 Generated Qualification Handoff
+
+COMM-L0 generated source identity passed once and is consumed. Read:
+
+1. `docs/COMMUNICATION_EEG_SOURCE_IDENTITY_GENERATED_QUALIFICATION_RESULT.md`;
+2. `registries/communication_eeg_source_identity_generated_qualification_result.v0.json`;
+3. `tests/test_communication_eeg_source_identity_generated_qualification_result.py`.
+
+Exact implementation `be6c44fcfd7363bf0c0899bc1b737e588070c760`
+passed Base job `98405103426`, Optional Neuro Readers job `98405103509`, and
+CI `33038044421` before the sole generated invocation. Two deterministic
+replays and all 20 adversarial refusals passed in 0.07287466689012945 seconds
+at 22,069,248-byte peak RSS. Generated input was 39,137 bytes and aggregate
+output was 3,001 bytes.
+
+Network, real/private data, payload, BDF header, signal, event, target, label,
+model, prediction, score, stream, device, release, and claim operations were
+zero. Do not rerun the qualification. Do not query OpenNeuro or request a
+payload under this result.
+
+Immediate gate: verify, commit, push, and remotely green the aggregate result.
+After that, COMM-L0 may only prepare a separate all-false Tier C metadata
+packet. `DREYER-C5R-1-HL` remains the sole active Tier C gate, and the current
+result does not authorize or replace it. Keep the 20 GiB total / 10 GiB raw
+caps, preserve the unrelated tracker inspection file, and touch no other
+project.

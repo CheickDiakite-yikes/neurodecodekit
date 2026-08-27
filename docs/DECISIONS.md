@@ -13881,3 +13881,30 @@ Authority decision: OpenNeuro requests, metadata response bytes, payload
 requests, real/private path reads, BDF headers or samples, events, targets,
 models, predictions, scores, releases, and claims remain zero. The Dreyer
 packet remains the sole active Tier C gate.
+
+## 0489 - Consume COMM-L0 Generated Qualification Without Real Access
+
+Proof decision: require exact implementation
+`be6c44fcfd7363bf0c0899bc1b737e588070c760` to pass both jobs in CI
+`33038044421` before the sole generated qualification. Preserve the qualified
+module and its hash-bound implementation record byte-for-byte after execution.
+
+Result decision: accept route `COMM-L0-R1` after two deterministic replays and
+all 20 registered adversarial refusals pass. The run consumed 39,137 generated
+input bytes, emitted 3,001 aggregate bytes, completed in
+0.07287466689012945 seconds, and peaked at 22,069,248-byte RSS under one
+thread, worker, and numerical job.
+
+Consumption decision: the official generated qualification count is now one,
+the route is consumed, and rerun is forbidden. Commit the byte-identical
+aggregate result and add a test that an existing result path refuses before
+fixture construction.
+
+Safety decision: no network request, real/private path read, payload, BDF
+header, signal sample, event, target, label, model, prediction, score, release,
+or claim upgrade occurred. Keep the 20 GiB total and 10 GiB selected-raw caps,
+touch no other project, and preserve unrelated untracked work.
+
+Gate decision: a real `ds003626` metadata response remains a separate Tier C
+operation with its own request, proof, and exact maintainer decision.
+`DREYER-C5R-1-HL` remains the sole active Tier C packet.

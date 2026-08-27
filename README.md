@@ -100,6 +100,14 @@ channels, and park if the slice exceeds 10 GiB. No dataset-specific request or
 download has occurred, so this is a reproducibility and storage-control
 milestone rather than a decoding result.
 
+The generated COMM-L0 implementation has now passed once and is consumed: two
+deterministic replays and all 20 malformed-source refusals passed in 0.072875
+seconds at 22,069,248-byte peak RSS, with zero network or real/private data
+operations. This proves the selector's engineering behavior on synthetic
+metadata only; it does not verify the real OpenNeuro tree or establish any
+neural result. See the
+[`COMM-L0 generated qualification result`](docs/COMMUNICATION_EEG_SOURCE_IDENTITY_GENERATED_QUALIFICATION_RESULT.md).
+
 ## Five Scientific Targets
 
 NeuroDecodeKit is now organized around five claims that must be earned

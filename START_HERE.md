@@ -86,12 +86,17 @@ room for bounded derivatives and atomic temporary output, not permission to
 expand the cohort. Approximately 73 GiB was free when this contract was
 recorded.
 
-The additive generated canonicalizer is prepared in
+The additive generated canonicalizer is recorded in
 `src/neurodecodekit/datasets/communication_eeg_source_identity.py` and recorded
 in `docs/COMMUNICATION_EEG_SOURCE_IDENTITY_IMPLEMENTATION.md`. It has no
-network or real-data execution command. Its one official generated
-qualification remains unconsumed until the exact implementation is committed,
-pushed, and both CI jobs are green.
+network or real-data execution command. Exact implementation `be6c44f` passed
+both required jobs in CI `33038044421`; the one official generated
+qualification then passed two deterministic replays and all 20 adversarial
+refusals in 0.072875 seconds at 22,069,248-byte peak RSS. It is consumed and
+must not be rerun. Read
+`docs/COMMUNICATION_EEG_SOURCE_IDENTITY_GENERATED_QUALIFICATION_RESULT.md`.
+Real metadata, payloads, signals, targets, models, scores, and claims remain
+closed.
 
 ## Historical BNCI-C3C5-1 Closed Lane
 
