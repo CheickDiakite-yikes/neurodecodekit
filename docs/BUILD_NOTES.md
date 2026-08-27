@@ -15835,3 +15835,34 @@ is authorized. `DREYER-C5R-1-HL` remains the sole active Tier C packet.
 Immediate gate: commit, push, and remotely green this proof-only closeout.
 Then COMM-L0 generated engineering is closed. Real source metadata remains a
 separate Tier C operation; no payload operation is authorized.
+
+### Communication replication source surface refreshed
+
+- Confirmed proof-only closeout `4acd82b` passed Base job `98409242950`,
+  Optional Neuro Readers job `98409242802`, and CI `33039371687`; COMM-L0
+  generated engineering is closed without rerun or real access.
+- Re-checked the public primary surfaces for SilentSpeech-EEG, Kara One,
+  Directional Word 2026, and ArEEG. SilentSpeech-EEG has the strongest reported
+  full-control fit, but its repository README, availability statement, and
+  open loader issue do not yet establish one reproducible public dataset
+  surface with stable identity, license, manifest, loader, and exact EXG roles.
+- Added a machine-tested nine-part promotion gate requiring raw simultaneous
+  EEG, EOG, and oral EMG for every selected participant, immutable identities,
+  participant-held-out folds, unprocessed attribution inputs, a complete
+  target-free slice under 10 GiB, and all cue/time/peripheral controls.
+- Preserved `DREYER-C5R-1-HL` as the sole active Tier C packet. Payload,
+  private-path, signal, target, model, prediction, score, stream, device,
+  release, cleanup, and claim operations remained zero.
+- Focused source-refresh and existing frontier/program checks passed 33 tests;
+  the final refresh suite passed 9 tests. The monolithic local run completed
+  6,356 tests with 17 expected skips but reported five environment-sensitive
+  historical failures: two inherited-process RSS caps, two loaded-suite timing
+  gates, and one sandbox-blocked multiprocessing socket. The first four passed
+  47/47 in a clean isolated process; the exact forkserver test passed 1/1 in an
+  approved local process. No historical cap or test was changed. Remote CI is
+  the clean complete-suite gate.
+
+Immediate gate: keep the source watchlist public and target-free. Prepare only
+Tier A `COMM-G1` generated reader/control/firewall contract design; do not
+implement RW3/NDK_STREAM1 or create a real-data packet under general
+continuation.

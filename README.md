@@ -108,6 +108,19 @@ metadata only; it does not verify the real OpenNeuro tree or establish any
 neural result. See the
 [`COMM-L0 generated qualification result`](docs/COMMUNICATION_EEG_SOURCE_IDENTITY_GENERATED_QUALIFICATION_RESULT.md).
 
+COMM-L0's proof-only closeout is now remotely green, so its generated
+engineering is closed. A fresh
+[replication-source review](docs/COMMUNICATION_EEG_REPLICATION_SOURCE_REFRESH_2026_08_27.md)
+found no second public cohort that is yet verified with the complete raw EEG,
+eye, oral-muscle, immutable-identity, license, and loader surface needed for a
+full attribution replication. SilentSpeech-EEG has the strongest reported
+scientific fit, but its repository currently lacks a verified stable dataset
+identity, complete manifest, dataset license, reproducible loader, and exact
+public external-channel roster. Kara One, Directional Word 2026, and ArEEG
+remain useful partial candidates whose missing controls must be stated rather
+than silently treated as equivalent evidence. This review made no payload or
+private-data operation and created no acquisition authority.
+
 ## Five Scientific Targets
 
 NeuroDecodeKit is now organized around five claims that must be earned

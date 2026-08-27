@@ -83,6 +83,22 @@ CI `33038718183`. Read the proof-only closeout before preparing any later
 COMM-L0 transition. It binds three result artifacts / 10,500 bytes and repeats
 no qualification or real operation.
 
+Proof-only closeout `4acd82bcc460f3e7a7668ec3c1c6a49c8d964aca`
+passed Base job `98409242950`, Optional Neuro Readers job `98409242802`, and CI
+`33039371687`. COMM-L0 generated engineering is therefore closed. Read the
+new Tier A replication-source refresh and machine record before proposing a
+second communication cohort. SilentSpeech-EEG is the strongest full-control
+watchlist candidate found, but its public payload identity, dataset license,
+manifest, loader, and exact external-channel roles are not verified. Kara One,
+Directional Word 2026, and ArEEG support only partial control sets. No source
+is promoted, no acquisition packet is created, and no payload is authorized.
+
+Do not implement `NDK_STREAM1` or RW3 Stage A under general continuation. The
+existing stream contracts still set implementation and generated execution to
+false. The next authorized communication engineering work is Tier A contract
+design for `COMM-G1`; any SourceChunk implementation requires its own narrowed
+authorization and remains secondary to the scientific discovery path.
+
 `DREYER-C5R-1-HL` is the sole active Tier C packet. Read, in order:
 
 1. `registries/current_research_frontier.v0.json`;

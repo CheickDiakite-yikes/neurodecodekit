@@ -13927,3 +13927,35 @@ Authority decision: this proof-only closeout authorizes no OpenNeuro query,
 payload, BDF read, signal/event/target/label access, model, prediction, score,
 stream, hardware, release, or claim upgrade. Preserve the 20 GiB total / 10
 GiB raw caps and the existing sole Tier C packet.
+
+## 0491 - Require A Reproducible Full-Control Surface For Communication Replication
+
+Source decision: do not promote SilentSpeech-EEG from watchlist to acquisition.
+Its reported scale and external channels make it scientifically promising, but
+the current public repository does not yet verify one stable dataset identity,
+license, complete file manifest, reproducible loader, or exact public EOG,
+oral-EMG, reference, and trigger roster. A README release statement does not
+override the repository's availability statement or unresolved loader gap.
+
+Alternative decision: retain Kara One as partial eye/face-controlled evidence,
+Directional Word 2026 as partial oral-EMG evidence, and ArEEG as a low-density
+no-peripheral-control benchmark. None may silently upgrade a full
+EEG-beyond-eye-and-mouth claim.
+
+Promotion decision: require nine public, target-free checks before a future
+cohort can enter an acquisition packet: immutable official identity and
+license; exact file identities; raw EEG/EOG/oral-EMG for every participant;
+source channel and event semantics; zero-calibration participant folds; no
+processed-only attribution input; complete deterministic slice under 10 GiB;
+all cue/time/peripheral controls; and an independently reproducible loader or
+format description.
+
+Priority decision: the next authorized communication milestone is Tier A
+`COMM-G1` contract design. Generated SourceChunk engineering is useful but
+secondary, remains explicitly unauthorized by existing RW3/NDK_STREAM1
+records, and cannot be inferred from general continuation.
+
+Authority decision: no dataset-specific metadata request, payload, private
+path, header, sample, event, target, model, prediction, score, stream, device,
+release, cleanup, or claim operation is authorized or performed. Keep
+`DREYER-C5R-1-HL` sole and all-false.

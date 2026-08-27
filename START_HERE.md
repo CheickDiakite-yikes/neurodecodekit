@@ -100,9 +100,18 @@ closed.
 
 Exact generated result `f64d4f3` passed both required jobs in CI
 `33038718183`. Its proof-only closeout binds the three exact result artifacts
-without rerunning the qualification or reading ignored state. After that
-closeout is remotely green, COMM-L0 generated engineering is closed; real
-metadata remains a separate Tier C gate.
+without rerunning the qualification or reading ignored state. Exact closeout
+`4acd82b` passed both required jobs in CI `33039371687`, so COMM-L0 generated
+engineering is closed. Real metadata remains a separate Tier C gate.
+
+Before proposing an independent communication cohort, read
+`docs/COMMUNICATION_EEG_REPLICATION_SOURCE_REFRESH_2026_08_27.md` and its
+machine registry. The refresh found no public source yet qualified for the
+full EEG-beyond-eye-and-mouth replication claim. SilentSpeech-EEG is a strong
+watchlist source but lacks a verified stable public payload identity, complete
+manifest, dataset license, loader, and exact external-channel roster. The
+other reviewed sources provide only partial controls. No source was promoted,
+downloaded, or authorized by that Tier A pass.
 
 ## Historical BNCI-C3C5-1 Closed Lane
 

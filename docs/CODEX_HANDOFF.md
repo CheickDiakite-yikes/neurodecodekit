@@ -7967,5 +7967,39 @@ Result commit `f64d4f303edf51e3b3ea66962bdc7152ff7346fd` passed Base
 job `98407229142`, Optional Neuro Readers job `98407229028`, and CI
 `33038718183`. The proof-only closeout now binds the exact three result
 artifacts / 10,500 bytes without rerunning qualification or reading ignored
-state. Commit, push, and green the closeout before considering COMM-L0
-generated engineering closed.
+state. Closeout `4acd82bcc460f3e7a7668ec3c1c6a49c8d964aca` passed Base
+job `98409242950`, Optional Neuro Readers job `98409242802`, and CI
+`33039371687`; COMM-L0 generated engineering is closed.
+
+## 2026-08-27 Communication Replication Source Refresh Handoff
+
+Read:
+
+1. `docs/COMMUNICATION_EEG_REPLICATION_SOURCE_REFRESH_2026_08_27.md`;
+2. `registries/communication_eeg_replication_source_refresh.v0.json`; and
+3. `tests/test_communication_eeg_replication_source_refresh.py`.
+
+No full-control independent public cohort is operationally qualified. The
+SilentSpeech-EEG paper/repository reports the strongest scientific fit, but the
+current public surface does not verify one stable dataset DOI/revision,
+license, complete manifest and hashes, reproducible loader, or exact released
+EOG/oral-EMG/reference/trigger roles. Its own availability statement and open
+missing-loader issue prevent promotion based on the README alone.
+
+Kara One has eye and face controls but no verified oral EMG and a roughly 24 GB
+complete archive. Directional Word 2026 has oral EMG for only six of 22 people
+and no EOG. ArEEG has eight EEG channels but no reported EOG or EMG. Treat all
+three as partial candidates only.
+
+The next communication step is Tier A `COMM-G1` contract design for generated
+reader, causal preprocessing, EOG/oral-EMG controls, participant firewall,
+compact model, prediction freezer, and isolated scorer. Do not implement
+SourceChunk/RW3/NDK_STREAM1 from general continuation; its authority remains
+false and it is secondary infrastructure. Do not query or download any
+communication cohort under this refresh.
+
+`DREYER-C5R-1-HL` remains the sole active Tier C packet. No payload, ignored or
+private state, signal, target, model, prediction, score, stream, device,
+release, cleanup, or claim operation occurred. Preserve the 20 GiB total and
+10 GiB selected-raw caps and keep the unrelated tracker inspection NDJSON
+untouched.

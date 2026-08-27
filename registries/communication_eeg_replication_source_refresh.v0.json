@@ -1,0 +1,142 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_replication_source_refresh",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-27",
+  "program_id": "NDK-COMM-CLAIM-2026-08-26-v0",
+  "status": "tier_A_public_source_refresh_no_payload_no_claim_upgrade",
+  "decision": {
+    "full_peripheral_adjusted_independent_source_verified": false,
+    "real_data_packet_created": false,
+    "active_Tier_C_packet_changed": false,
+    "sole_active_Tier_C_packet": "DREYER-C5R-1-HL",
+    "all_Dreyer_authority_flags_remain_false": true
+  },
+  "discovery_source_preserved": {
+    "source_id": "OpenNeuro_ds003626_v2.1.2",
+    "role": "future_discovery_not_independent_replication",
+    "reported_participants": 10,
+    "reported_EEG_channels": 128,
+    "reported_EOG_channels": 4,
+    "reported_oral_EMG_channels": 2,
+    "payload_or_metadata_operation_authorized_by_this_record": false
+  },
+  "candidate_findings": [
+    {
+      "source_id": "SilentSpeech_EEG_2026",
+      "role": "full_control_watchlist_candidate",
+      "reported_participants_collected": 12,
+      "README_reported_public_participants": 10,
+      "reported_words": 24,
+      "reported_sessions_per_participant": 16,
+      "reported_trials_per_participant": 6000,
+      "README_reported_EEG_channels": 122,
+      "README_reported_extra_channels": 11,
+      "paper_reports_external_channels": true,
+      "exact_public_EOG_oral_EMG_reference_trigger_roles_verified": false,
+      "stable_public_dataset_DOI_or_revision_verified": false,
+      "complete_public_payload_manifest_and_hashes_verified": false,
+      "dataset_license_verified": false,
+      "reproducible_public_loader_verified": false,
+      "repository_availability_statement_says_dataset_not_in_submission": true,
+      "open_missing_loader_issue_observed": true,
+      "principal_reported_evaluation_is_within_person_session_wise": true,
+      "full_peripheral_adjusted_replication_ready": false,
+      "acquisition_authorized": false
+    },
+    {
+      "source_id": "Kara_One",
+      "role": "partial_eye_and_face_controlled_candidate",
+      "reported_participants": 14,
+      "reported_EEG_channels": 64,
+      "reported_EOG_channels": 4,
+      "reported_face_tracking": true,
+      "reported_oral_EMG": false,
+      "reported_archive_bytes_approximate": 24000000000,
+      "academic_nonprofit_terms": true,
+      "complete_archive_within_selected_raw_cap": false,
+      "full_peripheral_adjusted_replication_ready": false,
+      "acquisition_authorized": false
+    },
+    {
+      "source_id": "Directional_Word_2026",
+      "role": "partial_oral_EMG_candidate",
+      "reported_participants": 22,
+      "reported_EEG_channels": 38,
+      "reported_EMG_channels": 2,
+      "participants_with_EMG": 6,
+      "reported_EOG_channels": 0,
+      "fixed_word_blocks": true,
+      "right_hand_marker_press": true,
+      "full_peripheral_adjusted_replication_ready": false,
+      "acquisition_authorized": false
+    },
+    {
+      "source_id": "ArEEG_OpenNeuro_ds005262_v1.0.1",
+      "role": "partial_low_density_no_peripheral_control_candidate",
+      "reported_participants": 12,
+      "reported_sessions_per_participant": 15,
+      "reported_classes": 5,
+      "reported_EEG_channels": 8,
+      "reported_EOG_channels": 0,
+      "reported_EMG_channels": 0,
+      "reported_evaluation_participant_specific": true,
+      "reported_unseen_person_generalization_assessed": false,
+      "full_peripheral_adjusted_replication_ready": false,
+      "acquisition_authorized": false
+    }
+  ],
+  "promotion_gate": {
+    "stable_official_identity_revision_and_license": true,
+    "exact_participant_session_file_byte_and_checksum_manifest": true,
+    "raw_simultaneous_EEG_EOG_and_oral_EMG_for_every_selected_participant": true,
+    "source_channel_roles_sampling_geometry_and_event_grammar": true,
+    "zero_calibration_participant_held_out_folds_supported": true,
+    "processed_only_peripheral_removed_EEG_forbidden": true,
+    "deterministic_complete_target_free_slice_under_10_GiB": true,
+    "cue_time_posterior_EOG_oral_EMG_and_derangement_controls_supported": true,
+    "independently_reproducible_loader_or_format_description": true,
+    "failure_action": "park_or_explicitly_narrow_to_partial_replication_no_substitution"
+  },
+  "resource_policy": {
+    "maximum_total_incremental_research_storage_bytes": 21474836480,
+    "maximum_selected_raw_bytes": 10737418240,
+    "incremental_payload_bytes_this_record": 0,
+    "cleanup_or_deletion": false,
+    "write_outside_NeuroDecodeKit": false
+  },
+  "operation_counters": {
+    "real_or_private_path_reads": 0,
+    "payload_requests": 0,
+    "payload_bytes": 0,
+    "EEG_or_EXG_header_reads": 0,
+    "signal_samples": 0,
+    "event_target_or_label_rows": 0,
+    "training_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "stream_or_device_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "machine_tested_replication_source_acceptance_gate",
+    "real_EEG_tested": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_EOG_or_oral_EMG_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "live_neural_decoding_established": false
+  },
+  "primary_sources": {
+    "thinking_out_loud": "https://www.nature.com/articles/s41597-022-01147-2",
+    "brainstack_paper": "https://openaccess.thecvf.com/content/CVPR2026F/papers/Zhao_BrainStack_Neuro-MoE_with_Functionally_Guided_Expert_Routing_for_EEG-Based_Language_CVPRF_2026_paper.pdf",
+    "brainstack_repository": "https://github.com/Jacoo-Zhao/BrainStack",
+    "brainstack_availability": "https://github.com/Jacoo-Zhao/BrainStack/blob/main/Code_and_data_availability_statement.md",
+    "brainstack_missing_loader_issue": "https://github.com/Jacoo-Zhao/BrainStack/issues/1",
+    "kara_one": "https://www.cs.toronto.edu/~complingweb/data/karaOne/karaOne.html",
+    "directional_word": "https://www.nature.com/articles/s41597-026-07809-9",
+    "areeg": "https://www.nature.com/articles/s41597-025-05387-w"
+  }
+}
