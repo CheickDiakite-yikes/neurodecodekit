@@ -14371,3 +14371,10 @@ green; only then may the single generated qualification run.
   artifacts in a separate proof-only record. Require that proof's own commit
   to pass both jobs before the one generated qualification; keep every
   real/private and scientific surface closed.
+- 2026-08-27: Close COMM-LIVE-G0 at `COMM-LIVE-G0-R1` after remotely green
+  proof `d7c62b88785a4654313d29ab061cd314988d18c5` / CI `33123739110` and one
+  successful generated qualification. Treat the local marker and immutable
+  result as consumed; forbid rerun or output substitution. Preserve the
+  inherited inner-harness warning as a documented schema caveat. This closes
+  generated live-session engineering only and does not activate a real stream,
+  device, model, data, release, or scientific claim.

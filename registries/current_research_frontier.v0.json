@@ -384,7 +384,7 @@
       "document": "docs/COMMUNICATION_LIVE_SESSION_G0_PREREGISTRATION.md",
       "contract": "registries/communication_live_session_g0_contract.v0.json",
       "status": "registration_remotely_green",
-      "current_status": "implementation_remotely_green_proof_record_pending_own_remote_green",
+      "current_status": "official_generated_qualification_passed_consumed_COMM_LIVE_G0_R1",
       "purpose": "compose_existing_RW3_SourceChunk_and_freeze_gap_reconnect_clock_abstention_and_stable_commit_semantics",
       "existing_SourceChunk_schema": "neurodecodekit.source_chunk.v0.1.0",
       "RW3_stage_A_review_scope": "dependency_free_existing_schema_validator_factory_and_generated_fixtures_only_after_registration_green",
@@ -439,10 +439,20 @@
         "implementation_proof": {
           "document": "docs/COMMUNICATION_LIVE_SESSION_G0_IMPLEMENTATION_PROOF.md",
           "registry": "registries/communication_live_session_g0_implementation_proof.v0.json",
-          "status": "pending_own_commit_push_and_both_jobs_green"
+          "status": "remotely_green",
+          "commit": "d7c62b88785a4654313d29ab061cd314988d18c5",
+          "CI_run_id": 33123739110,
+          "base_job_id": 98696739364,
+          "optional_job_id": 98696739172
         },
-        "official_qualification_executed": false,
-        "official_invocation_consumed": false,
+        "official_qualification_executed": true,
+        "official_invocation_consumed": true,
+        "qualification_route": "COMM-LIVE-G0-R1",
+        "qualification_result": "registries/communication_live_session_g0_generated_result.v0.json",
+        "qualification_closeout": "registries/communication_live_session_g0_qualification_closeout.v0.json",
+        "qualification_runtime_seconds": 6.421282250084914,
+        "qualification_peak_RSS_bytes": 30949376,
+        "registered_refusals_passed": 33,
         "real_or_private_operations": 0,
         "scientific_value": "none_generated_engineering_only"
       },

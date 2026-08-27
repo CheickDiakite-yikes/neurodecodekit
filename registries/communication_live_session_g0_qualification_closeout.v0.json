@@ -1,0 +1,102 @@
+{
+  "schema_name": "neurodecodekit.communication_live_session_g0_qualification_closeout",
+  "schema_version": "0.1.0",
+  "closeout_id": "COMM-LIVE-G0-R1-closeout-v0",
+  "lane_id": "COMM-LIVE-G0",
+  "recorded_at_local": "2026-08-27",
+  "status": "official_generated_qualification_passed_and_consumed",
+  "route": "COMM-LIVE-G0-R1",
+  "implementation_remote_proof": {
+    "commit": "bc9bb109c9c82b56afe06d983d82b5b8ece669cf",
+    "CI_run_id": 33123115516,
+    "base_python_job_id": 98694674092,
+    "optional_neuro_readers_job_id": 98694674289,
+    "both_required_jobs_green": true
+  },
+  "proof_record_remote_proof": {
+    "commit": "d7c62b88785a4654313d29ab061cd314988d18c5",
+    "CI_run_id": 33123739110,
+    "base_python_job_id": 98696739364,
+    "optional_neuro_readers_job_id": 98696739172,
+    "both_required_jobs_green": true,
+    "present_on_GitHub_main_before_execution": true
+  },
+  "official_result": {
+    "path": "registries/communication_live_session_g0_generated_result.v0.json",
+    "bytes": 8364,
+    "sha256": "3d55a6f08d681e0b304bebdfad85f866cc3c25e061f6d92d45a351c0d8fd0d71",
+    "status": "official_generated_qualification_completed",
+    "official_invocation_consumed": true
+  },
+  "local_consumed_marker": {
+    "path": ".codex_work/communication_live_session_g0_official_consumed.v0.json",
+    "bytes": 151,
+    "sha256": "d7383b17145026b280b07dadae593ac8f1f8ccf7eeba7f0a12c8b4018f1721a0",
+    "Git_ignored": true,
+    "committed_or_published": false
+  },
+  "qualification": {
+    "fictional_sessions": 4,
+    "deterministic_replays": 2,
+    "byte_equivalent_replays": true,
+    "partition_schedules": 4,
+    "control_schedules": 2,
+    "positive_control_commit_count": 4,
+    "registered_refusal_count": 33,
+    "every_registered_refusal_executed_and_exactly_bound": true,
+    "deterministic_sha256": "c06e1d5869a7d1786a867b1ec74e56a9f67ed829300b67a3f83d17a36f47dafc",
+    "session_payload_sha256": "1496a516760d5009354a6388a17b4e00dcc7d273a96cb881090ec2b0cad919ed"
+  },
+  "measurements": {
+    "runtime_seconds": 6.421282250084914,
+    "peak_RSS_bytes": 30949376,
+    "peak_RSS_measurement_source": "darwin_getrusage_RUSAGE_SELF_ru_maxrss_bytes",
+    "public_output_bytes": 8364,
+    "temporary_generated_bytes": 0,
+    "cpu_threads": 1,
+    "workers": 1,
+    "free_disk_bytes_before_execution": 34642591744
+  },
+  "operation_counters": {
+    "official_generated_qualification_runs": 1,
+    "real_or_private_path_operations": 0,
+    "real_signal_reads": 0,
+    "real_target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "provider_calls": 0,
+    "network_bytes": 0,
+    "physical_stream_or_device_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "generated_fictional_streams_only",
+    "development_path_does_not_consume_official_invocation",
+    "no_real_or_device_latency_measured",
+    "no_scientific_or_decoding_value"
+  ],
+  "warning_interpretation": {
+    "development_path_wording_inherited_from_inner_repeatable_harness": true,
+    "official_status_and_consumed_marker_take_precedence_for_invocation_state": true,
+    "result_modified_or_rerun_to_change_warning": false
+  },
+  "next_gate": {
+    "COMM_LIVE_G0_closed_and_consumed": true,
+    "rerun_allowed": false,
+    "real_stream_or_device_activation_created": false,
+    "active_Tier_C_gate": "DREYER-C5R-1-HL",
+    "active_Tier_C_gate_changed": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "generated_causal_live_session_contract_qualified_end_to_end_with_exact_replay_and_refusal_controls",
+    "scientific_value": "none_generated_engineering_only",
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "live_neural_decoding_established": false,
+    "device_performance_established": false,
+    "human_benefit_established": false
+  }
+}

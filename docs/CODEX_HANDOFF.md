@@ -1,5 +1,15 @@
 # Codex Handoff - NeuroDecodeKit
 
+> **COMM-LIVE-G0 passed and consumed, 2026-08-27:** proof commit `d7c62b8`
+> passed Base `98696739364`, Optional Neuro Readers `98696739172`, and CI
+> `33123739110`, then reached GitHub `main`. The sole official fictional
+> qualification passed at `COMM-LIVE-G0-R1`: two byte-equivalent replays, four
+> positive commits, all 33 exact refusals, 6.421282250084914 seconds,
+> 30,949,376-byte peak RSS, and 8,364 public bytes. All real/private, target,
+> model, provider, network, stream, device, release, and claim counters were
+> zero. Do not rerun. `DREYER-C5R-1-HL` remains sole and all-false, and the
+> unrelated tracker inspection file remains untracked.
+
 > **COMM-LIVE-G0 implementation green, proof pending, 2026-08-27:** exact
 > implementation `bc9bb109c9c82b56afe06d983d82b5b8ece669cf` passed Base
 > `98694674092`, Optional Neuro Readers `98694674289`, and CI `33123115516`,
