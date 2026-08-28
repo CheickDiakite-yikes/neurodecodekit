@@ -1,5 +1,21 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
+> **COMM-P0-G FS3 prospective successor (2026-08-28):** exact Amendment 3
+> `b15d3cf` passed Base `98860211722`, Optional Neuro Readers `98860211949`,
+> and CI `33174711145`, then reached GitHub `main`. It preserves one complete
+> full-scale fictional producer but replaces FS2's redundant second numerical
+> replay with a distinct model-free verifier/scorer. The verifier must
+> independently authenticate all 91,392 streamed rows, the freeze HMAC,
+> inventory, file identity, delivery nonce, penalties, and the two cohort
+> scores while possessing zero fit, inference, threshold, calibration,
+> prediction-creation, or update capability. `COMM-P0-G-FS3-v0` keeps the
+> original model and protocol, two reduced deterministic qualification
+> replays, 140 pre-activation refusal observations, one thread, 180 seconds,
+> 512 MiB RSS, 513 MiB disk, zero network, and zero retained payload. Its
+> implementation and one-shot rehearsal remain false until separate green
+> barriers. This is a new prospective gate, not an FS2 rerun, and has no
+> scientific value.
+
 > **COMM-P0-G contract-correction successor (2026-08-28):** post-proof audit
 > found that the V1 nonofficial full-scale rehearsal reported one combined
 > target delivery and one score, but the frozen two-cohort contract requires two

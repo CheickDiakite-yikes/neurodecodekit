@@ -1,5 +1,19 @@
 # Codex Handoff - NeuroDecodeKit
 
+> **Immediate generated frontier, 2026-08-28:** read Amendment 3 and the FS3
+> preregistration/contract first. Exact Amendment 3 `b15d3cf` passed Base
+> `98860211722`, Optional Neuro Readers `98860211949`, and CI `33174711145`,
+> then reached GitHub `main`. `COMM-P0-G-FS3-v0` freezes one complete full
+> fictional producer plus a distinct independent model-free verifier/scorer,
+> under the unchanged one-thread, 180-second, 512 MiB RSS, 513 MiB disk,
+> zero-network, zero-retained-payload limits. Registration alone authorizes no
+> implementation or execution. After its own exact registration is remotely
+> green on `main`, implement only additive reduced/mock qualification first:
+> two isolated at-most-three-person-per-cohort model replays and 140 refusal
+> observations. Require another exact green implementation proof before one
+> full FS3 rehearsal. Preserve consumed FS2 and the unrelated tracker
+> inspection file. `DREYER-C5R-1-HL` remains the sole all-false Tier C gate.
+
 > **COMM-P0-G FS2 consumed runtime result, 2026-08-28:** read
 > `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_RESULT.md`
 > and its machine registry first. The sole generated-only FS2 run completed one

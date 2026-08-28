@@ -7,6 +7,19 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
+> COMM-P0-G FS3 registration frontier, 2026-08-28: Amendment 3 replaces only
+> the redundant second full fictional model replay with a separate zero-model
+> verifier/scorer. One exact full producer still executes the complete frozen
+> 42-participant schedule; the verifier independently checks its streamed
+> transcript, freeze HMAC, inventory, target-delivery nonce, penalties, and
+> aggregate score. Exact Amendment 3 `b15d3cf` passed Base `98860211722`,
+> Optional Neuro Readers `98860211949`, and CI `33174711145`, then reached
+> GitHub `main`. The separately prospective `COMM-P0-G-FS3-v0` contract keeps
+> one thread, 180 seconds, 512 MiB RSS, 513 MiB disk, zero network, and zero
+> retained payload. Its implementation and execution are false until their
+> own green barriers. This is generated engineering only; no scientific claim
+> or Tier C authority changed.
+
 > COMM-P0-G coordinator correction, 2026-08-28: post-proof audit found that
 > the V1 full-scale rehearsal used one combined target envelope and one score,
 > while the frozen contract requires separate discovery and independent-

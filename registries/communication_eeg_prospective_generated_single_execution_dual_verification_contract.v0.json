@@ -1,0 +1,245 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_prospective_generated_single_execution_dual_verification_contract",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-28",
+  "gate_id": "COMM-P0-G-FS3-v0",
+  "run_id": "COMM-P0-G-FS3-R0",
+  "status": "frozen_generated_only_Tier_B_rehearsal_implementation_and_execution_false",
+  "question": "Can one exact full-scale fictional producer be independently verified and rescored by a separate zero-model child within the unchanged 180-second resource envelope?",
+  "bound_parents": [
+    {
+      "path": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_QUALIFICATION_PREREGISTRATION.md",
+      "bytes": 10395,
+      "sha256": "3eb36e9f0a18bdb972290355b06e89b8a2a921a6a9e509a8337973664ae3b33c"
+    },
+    {
+      "path": "registries/communication_eeg_prospective_generated_qualification_contract.v0.json",
+      "bytes": 21365,
+      "sha256": "a3f7ddbe763186e0618cf7e4d1f9b34ec87204fb91ac7c25db160a9d716f2910"
+    },
+    {
+      "path": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_QUALIFICATION_AMENDMENT_2.md",
+      "bytes": 3339,
+      "sha256": "bd7e0d17d6e232f1efeaddf91a0e5ad1c45cd6d2bf53b3c326fe574988a99970"
+    },
+    {
+      "path": "registries/communication_eeg_prospective_generated_qualification_amendment_2.v0.json",
+      "bytes": 4103,
+      "sha256": "dabcfa2119c16d8bb6df97b9b016682aa4d3526ae696d3be400dc10be3ebb7b3"
+    },
+    {
+      "path": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_QUALIFICATION_AMENDMENT_3.md",
+      "bytes": 6067,
+      "sha256": "b947adad7c042287fb5257d71b51fed4e1bc9faffbe2c9508fc85451146d2f82"
+    },
+    {
+      "path": "registries/communication_eeg_prospective_generated_qualification_amendment_3.v0.json",
+      "bytes": 6270,
+      "sha256": "a8b444758a99e8c2b162d4b2bc150ce2ecfff3124d840d679e865d0f1fe853a9"
+    },
+    {
+      "path": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_OFFICIAL_COORDINATOR_PROOF_CLOSEOUT.md",
+      "bytes": 3091,
+      "sha256": "c7650831c3d45092084c962e1780e48b7c2dbe5ee6a54cb6a947a968b030f661"
+    },
+    {
+      "path": "registries/communication_eeg_prospective_generated_official_coordinator_proof_closeout.v0.json",
+      "bytes": 3940,
+      "sha256": "ac90183d44948c2f0bee0766d649920aa040c7b35543c9a30469c7c7114f58c3"
+    },
+    {
+      "path": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_RESULT.md",
+      "bytes": 4368,
+      "sha256": "b0bcadf87f461b04953e642e6c50f0492e49d6c857f57a10ebd0b05625ee1659"
+    },
+    {
+      "path": "registries/communication_eeg_prospective_generated_two_child_rehearsal_result.v0.json",
+      "bytes": 4226,
+      "sha256": "1e4c10e43c4486370c2838c3890a15f1fe16c6eed5e80a67741663a1cd929b1a"
+    }
+  ],
+  "bound_parent_summary": {
+    "count": 10,
+    "bytes": 67164,
+    "amendment_3_green_commit": "b15d3cf86fc4d6234d64c3a19cca394e72f43fc6",
+    "amendment_3_green_CI_run_id": 33174711145,
+    "amendment_3_green_base_python_job_id": 98860211722,
+    "amendment_3_green_optional_neuro_readers_job_id": 98860211949,
+    "amendment_3_on_GitHub_main": true,
+    "FS2_closeout_commit": "a654541621f2824906d288313d457636844074da",
+    "FS2_closeout_CI_run_id": 33171818869,
+    "FS2_status": "consumed_FS2_PARK_no_rerun"
+  },
+  "ordered_barriers": [
+    "registration_commit_push_both_CI_jobs_green_and_on_GitHub_main",
+    "additive_wrapper_generated_reduced_or_mock_qualification_only",
+    "two_reduced_isolated_model_replays_and_140_refusal_observations",
+    "exact_implementation_proof_commit_push_both_CI_jobs_green_and_on_GitHub_main",
+    "one_durable_no_replace_FS3_receipt_before_full_producer",
+    "one_consumed_full_producer_plus_independent_verifier_rehearsal",
+    "only_consumed_FS3_PASS_may_support_later_separate_official_activation"
+  ],
+  "implementation_scope": {
+    "additive_wrapper_and_CLI_only": true,
+    "frozen_coordinator_model_feature_split_threshold_scorer_or_penalty_modified": false,
+    "compile_time_official_activation_lock_changed": false,
+    "official_marker_schema_reused": false,
+    "implementation_qualification_replays": 2,
+    "implementation_qualification_participants_per_cohort_maximum": 3,
+    "implementation_qualification_refusal_observations": 140,
+    "implementation_qualification_full_scale_runs": 0,
+    "real_or_private_implementation_fixtures": false
+  },
+  "execution_authority": {
+    "registration_authorizes_execution_now": false,
+    "implementation_may_begin_after_registration_exactly_green": true,
+    "one_Tier_B_rehearsal_may_run_after_exact_implementation_proof_green": true,
+    "separate_Tier_C_decision_required": false,
+    "registered_executions_maximum": 1,
+    "failure_timeout_refusal_or_cap_breach_consumes_attempt": true,
+    "retry_rerun_resume_repair_or_substitution_allowed": false,
+    "official_qualification_activation_from_FS3": false
+  },
+  "full_producer_schedule": {
+    "full_scale_producer_children": 1,
+    "fictional_participants_per_cohort": 21,
+    "complete_fictional_participants": 42,
+    "cohorts": 2,
+    "held_out_participant_folds": 42,
+    "conditions": 17,
+    "endpoints": 2,
+    "prior_fits": 42,
+    "residualizer_fits": 84,
+    "classifier_fits": 630,
+    "temperature_calibration_fits": 630,
+    "model_inference_runs": 714,
+    "prediction_sets": 1428,
+    "prediction_rows": 91392,
+    "numerical_shortcut_fixture_executions": 7,
+    "refusal_observations": 70,
+    "cohort_target_deliveries": 2,
+    "cohort_scores": 2,
+    "post_target_updates": 0,
+    "maximum_prediction_rows_buffered": 256,
+    "complete_prediction_records_materialized": false,
+    "freeze_durable_and_verified_before_target_delivery": true
+  },
+  "independent_verifier_scorer_schedule": {
+    "children": 1,
+    "distinct_PID_and_isolated_workdir": true,
+    "runs_after_producer": true,
+    "model_fits": 0,
+    "transform_fits": 0,
+    "model_inference_runs": 0,
+    "threshold_or_calibration_selection_operations": 0,
+    "prediction_sets_created": 0,
+    "prediction_rows_created": 0,
+    "parameter_updates": 0,
+    "language_model_operations": 0,
+    "prediction_stream_validation_passes": 1,
+    "freeze_HMAC_inventory_and_file_identity_verifications": 1,
+    "independent_generated_cohort_target_deliveries": 2,
+    "independent_cohort_scores": 2,
+    "aggregate_scores_must_exactly_match_producer": true,
+    "individual_predictions_probabilities_targets_or_participant_outcomes_public": false
+  },
+  "verifier_required_checks": {
+    "contract_amendment_implementation_transcript_and_scorer_identities": true,
+    "stream_order_cardinality_uniqueness_and_file_identity": true,
+    "freeze_HMAC_inventory_digest_and_delivery_nonce": true,
+    "finite_normalized_probabilities": true,
+    "missing_duplicate_and_invalid_prediction_penalties": true,
+    "complete_participants": 42,
+    "conditions": 17,
+    "prediction_sets": 1428,
+    "prediction_rows": 91392,
+    "separate_discovery_and_replication_target_envelopes": true,
+    "target_delivery_only_after_freeze": true
+  },
+  "verifier_refusal_families": [
+    "scorer_identity_or_capability_drift",
+    "freeze_HMAC_or_inventory_drift",
+    "prediction_file_identity_or_descriptor_drift",
+    "stream_order_cardinality_duplicate_or_missing_row",
+    "invalid_probability_or_penalty_bypass",
+    "delivery_nonce_or_target_before_freeze",
+    "model_fit_inference_threshold_calibration_or_update_capability",
+    "path_symlink_no_follow_or_workdir_escape",
+    "aggregate_score_mismatch",
+    "publication_collision_partial_write_or_cleanup_escape"
+  ],
+  "process_isolation": {
+    "strictly_sequential": true,
+    "concurrent_children_maximum": 1,
+    "distinct_child_PIDs_required": true,
+    "isolated_workdirs_required": 2,
+    "sanitized_child_environments_required": true,
+    "continuous_parent_plus_child_process_tree_monitoring": true,
+    "zero_monitor_samples_refuse": true
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "wall_time_seconds": 180,
+    "peak_process_tree_RSS_bytes": 536870912,
+    "temporary_disk_peak_bytes": 268435456,
+    "aggregate_incremental_disk_bytes": 537919488,
+    "public_target_free_result_bytes": 1048576,
+    "retained_generated_payload_bytes": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "free_bytes_required_before_reservation": 22012755968,
+    "free_bytes_required_after_reservation": 21474836480
+  },
+  "FS3_receipt": {
+    "new_schema_separate_from_FS2_and_official_markers": true,
+    "durable_no_replace_before_full_producer": true,
+    "official_activation_loader_must_refuse_it": true,
+    "contains_targets_predictions_probabilities_participant_outcomes_private_paths_keys_nonces_or_payloads": false,
+    "official_marker_read_create_replace_rename_or_delete_operations": 0
+  },
+  "outcome_router": {
+    "FS3_PASS": "exact_full_producer_schedule_independent_verifier_score_match_all_refusals_caps_and_runtime_at_or_below_180_seconds",
+    "FS3_PARK": "any_post_receipt_timeout_crash_mismatch_drift_forbidden_operation_or_cap_breach",
+    "either_outcome_consumes_run_id": true,
+    "claim_upgrade_from_either_outcome": false
+  },
+  "operation_counters_before_implementation_or_execution": {
+    "FS3_attempts": 0,
+    "full_scale_generated_producer_runs": 0,
+    "independent_verifier_runs": 0,
+    "official_qualification_invocations": 0,
+    "official_activation_reads": 0,
+    "official_marker_operations": 0,
+    "real_or_private_path_operations": 0,
+    "real_signal_reads": 0,
+    "real_target_or_label_reads": 0,
+    "real_data_training_or_inference_runs": 0,
+    "human_operations": 0,
+    "device_stream_microphone_operations": 0,
+    "provider_or_network_operations": 0,
+    "release_operations": 0,
+    "end_to_end_device_latency_measurements": 0,
+    "retained_generated_payload_bytes": 0,
+    "post_target_updates": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "active_gate": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "changed": false,
+    "all_authority_flags_false": true
+  },
+  "claim_boundary": {
+    "full_fictional_producer_independently_verified_within_resource_envelope_established": false,
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_performance_established": false,
+    "clinical_value_established": false
+  }
+}

@@ -30,8 +30,28 @@ irreversible Tier C events.
 
 ## Current Research Frontier
 
-The latest generated-only `COMM-P0-G` engineering gate has now produced a
-measured negative result. The sole `COMM-P0-G-FS2-R0` attempt completed one of
+The generated `COMM-P0-G` proof architecture now has a prospective,
+resource-aware successor. Amendment 3 replaces the second redundant full
+fictional model replay with a separate verifier/scorer process that has no
+model, fit, inference, threshold, calibration, prediction-creation, or update
+capability. One complete 42-participant producer schedule remains mandatory,
+including 630 classifiers, 630 source-only temperature fits, 1,428 prediction
+sets, 91,392 streamed prediction rows, two cohort target deliveries, two
+scores, seven shortcut controls, and all 70 refusal families. The verifier
+must independently authenticate the frozen transcript, inventory, HMAC,
+delivery nonce, probability rules, penalties, and aggregate scores.
+
+Exact Amendment 3 commit `b15d3cf` passed Base Python job `98860211722`,
+Optional Neuro Readers job `98860211949`, and CI `33174711145`, then reached
+GitHub `main`. The separately prospective
+[`COMM-P0-G-FS3-v0`](docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_PREREGISTRATION.md)
+contract preserves the original model and protocol plus the same one-thread,
+180-second, 512 MiB RSS, 513 MiB incremental-disk, zero-network, and zero-
+retained-payload limits. Its implementation and one-shot rehearsal remain
+closed until their own ordered green barriers.
+
+This design is grounded in a measured negative engineering result. The sole
+`COMM-P0-G-FS2-R0` attempt completed one of
 two required full fictional replay children, then parked at
 `180.05074683297426` seconds against its frozen 180-second total cap. Memory
 was not the blocker: peak process-tree RSS was 305,119,232 bytes against a
@@ -46,8 +66,8 @@ repaired. Exact closeout `a654541` passed Base job `98850558071`, Optional Neuro
 Readers job `98850558325`, and CI `33171818869`, then reached GitHub `main`.
 This is useful engineering evidence: the exact two-by-21 coordinator does not
 fit the current 180-second envelope on this machine. It is not neural evidence.
-The official generated qualification remains inactive, and any successor must
-be separately prospective and justified by this measured runtime result. See
+The official generated qualification remains inactive. FS3 is a new
+prospective gate, not an FS2 retry or repair. See
 the [FS2 closeout](docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_RESULT.md).
 
 The first preregistered BNCI held-out experiment produced a useful negative

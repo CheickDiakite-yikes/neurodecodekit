@@ -45,7 +45,35 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-The immediate reversible frontier is now the post-FS2 runtime decision. Read
+The immediate reversible frontier is now `COMM-P0-G-FS3-v0`. Read, in order:
+
+1. `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_RESULT.md`;
+2. `registries/communication_eeg_prospective_generated_two_child_rehearsal_result.v0.json`;
+3. `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_QUALIFICATION_AMENDMENT_3.md`;
+4. `registries/communication_eeg_prospective_generated_qualification_amendment_3.v0.json`;
+5. `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_PREREGISTRATION.md`; and
+6. `registries/communication_eeg_prospective_generated_single_execution_dual_verification_contract.v0.json`.
+
+Amendment 3 exact commit `b15d3cf86fc4d6234d64c3a19cca394e72f43fc6`
+passed Base Python `98860211722`, Optional Neuro Readers `98860211949`, and CI
+`33174711145`, then reached GitHub `main`. It replaces only the second redundant
+full numerical replay with an independent model-free transcript/freeze/scorer
+verifier. It preserves one complete full producer schedule, the frozen model
+and scientific protocol, all controls and penalties, one thread, the 180-second
+cap, 512 MiB RSS, 513 MiB incremental disk, zero network, and zero retained
+payload.
+
+`COMM-P0-G-FS3-v0` is a separately named generated-only Tier B rehearsal. Its
+registration authorizes no implementation or execution now. Only after its
+exact registration is committed, pushed, passes both jobs, and reaches GitHub
+`main` may an additive implementation begin with reduced or mocked fictional
+fixtures. That implementation must prove two isolated at-most-three-person-per-
+cohort model replays and 140 refusal observations before a separate green
+implementation barrier. A later sole FS3 attempt may run one exact full
+producer followed by one independent zero-model verifier under the unchanged
+resource envelope. It may not access the official activation or marker.
+
+The prior FS2 measurement remains binding. Read
 `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_RESULT.md`
 and
 `registries/communication_eeg_prospective_generated_two_child_rehearsal_result.v0.json`.
@@ -61,11 +89,10 @@ Optional Neuro Readers job `98850558325`, and CI `33171818869`, then reached
 GitHub `main`.
 
 Do not retry, rerun, resume, repair, substitute, or reinterpret FS2-R0. The
-official generated qualification remains inactive. The next Tier A/B work may
-only design a separately named prospective runtime successor justified by the
-measured park, with no larger model, real/private access, official activation,
-or claim upgrade. `DREYER-C5R-1-HL` remains the sole active Tier C gate and all
-of its authority flags remain false.
+official generated qualification remains inactive. Do not implement or execute
+FS3 before its ordered barriers. No larger model, real/private access, official
+activation, or claim upgrade is authorized. `DREYER-C5R-1-HL` remains the sole
+active Tier C gate and all of its authority flags remain false.
 
 The parallel Tier A route from controlled communication evidence through
 independent replication and causal live operation is frozen in

@@ -16403,3 +16403,19 @@ and require both remote jobs green before the one official qualification.
   `98850558325`, and CI `33171818869`, then reached GitHub `main`. The official
   qualification, network, real/private, human/device, release, and scientific
   counters remained zero; FS2 may not be rerun.
+- 2026-08-28: Exact Amendment 3 `b15d3cf` passed Base Python `98860211722`,
+  Optional Neuro Readers `98860211949`, and CI `33174711145`, then reached
+  GitHub `main`. It uses the consumed FS2 measurement to remove one redundant
+  full fictional model replay while retaining one complete 42-participant
+  producer and adding an independent zero-model transcript/freeze/scorer
+  verifier. The 180-second, 512 MiB RSS, 537,919,488-byte disk, one-thread,
+  zero-network, and zero-retained-payload limits remain unchanged.
+- 2026-08-28: Added the prospective `COMM-P0-G-FS3-v0` preregistration,
+  machine contract, and strict tests. FS3 binds ten exact parent artifacts /
+  67,164 bytes, including green Amendment 3 and consumed FS2. It freezes one
+  full 630-classifier / 91,392-row producer plus a separate verifier with no
+  model capability, two reduced deterministic pre-activation replays, 140
+  qualification refusal observations, durable no-replace consumption, and no
+  rerun. Registration creates no executor, generated run, official activation,
+  real/private access, network operation, device operation, release, or
+  scientific claim.

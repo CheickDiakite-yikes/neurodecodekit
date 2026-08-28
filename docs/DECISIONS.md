@@ -14538,3 +14538,20 @@ green; only then may the single generated qualification run.
   Optional Neuro Readers `98850558325`, and CI `33171818869`, then reached
   GitHub `main`. Route future reversible work to a separately prospective
   runtime-successor design.
+- 2026-08-28: Accept `b15d3cf86fc4d6234d64c3a19cca394e72f43fc6`
+  as the exact remotely green `COMM-P0-G-A3` proof-architecture correction
+  after Base Python `98860211722`, Optional Neuro Readers `98860211949`, and CI
+  `33174711145` passed and GitHub `main` resolved to that SHA. Replace only the
+  redundant second full fictional numerical replay with an independent
+  model-free transcript/freeze/scorer verifier; preserve one complete producer,
+  the frozen scientific protocol and model, every control and penalty, and the
+  unchanged 180-second, 512 MiB RSS, 513 MiB disk, one-thread envelope.
+- 2026-08-28: Freeze `COMM-P0-G-FS3-v0` as a separate generated-only Tier B
+  single-execution dual-verification rehearsal. Require its own exact green
+  registration before implementation, two reduced isolated model replays and
+  140 refusal observations before an exact green implementation proof, then at
+  most one consumed full producer-plus-verifier attempt. The verifier must have
+  zero fit, inference, prediction-creation, threshold, calibration, language-
+  model, or update capability. Keep FS2 consumed, official activation closed,
+  and every real/private, network, human/device, release, Tier C, and scientific
+  authority false.
