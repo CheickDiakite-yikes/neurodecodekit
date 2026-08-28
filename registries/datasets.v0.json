@@ -1,7 +1,7 @@
 {
   "schema_name": "neurodecodekit.dataset_compatibility_registry",
   "schema_version": "0.1.0",
-  "reviewed_at": "2026-07-10",
+  "reviewed_at": "2026-08-27",
   "proof_posture": "primary_source_metadata_review_only",
   "claim_boundary": "A registry entry is not a download authorization, benchmark result, or evidence that one task transfers to another.",
   "cohort_definitions": {
@@ -590,6 +590,64 @@
         "suitability": "qualification_alternative",
         "rationale": "Compact and well structured, but it does not exercise language or typing contracts."
       }
+    },
+    {
+      "id": "openneuro_ds007591_covert_speech",
+      "dataset": "Delineating neural contributions to EEG-based speech decoding",
+      "cohort": "inner_or_imagined_speech",
+      "source_urls": [
+        {"role": "canonical_snapshot", "url": "https://doi.org/10.18112/openneuro.ds007591.v1.0.1"},
+        {"role": "official_nemar_mirror", "url": "https://nemar.org/dataset/on007591"},
+        {"role": "public_analysis_repository", "url": "https://github.com/arayabrain/uhd-gmail-public"}
+      ],
+      "revision": "OpenNeuro ds007591 v1.0.1 / NEMAR on007591 v1.0.0",
+      "license": "CC0",
+      "modality": ["EEG", "EOG", "EMG", "audio"],
+      "task": "Five color words under covert, minimally overt, and overt speech, including calibration and historical online sessions.",
+      "language": "Japanese",
+      "subjects": 3,
+      "sessions": {"count": 6, "detail": "The official mirror reports six sessions; the public analysis surface reports 21 recordings."},
+      "splits": "Mechanistic bridge only; all participants and sessions must be reported and cannot satisfy the minimum-ten inferential replication route.",
+      "acquisition": {
+        "channels": {"EEG": 128, "total_reported_by_public_loader": 139},
+        "sampling_rate_hz": 256,
+        "geometry": "Left-hemisphere high-density layout; exact BIDS coordinates require a separately authorized source lock.",
+        "reference_scheme": null,
+        "reference_unavailable_reason": "Not frozen by this public-source refresh."
+      },
+      "formats": {"raw": ["EDF", "BIDS directory"], "events": ["BIDS events.tsv", "trigger channel"], "labels": "Five color words and speech condition."},
+      "storage": {"total_bytes": 1620000000, "total_bytes_status": "approximate_official_NEMAR_surface", "smallest_meaningful_slice": {"description": "All three participants in the covert primary condition with recorded nuisance channels.", "exact_bytes": null, "status": "metadata_source_lock_required"}},
+      "capabilities": {"inspection": true, "signal_quality": true, "classification": true, "sequence_decoding": false, "cer_wer": false},
+      "leakage_risks": ["EOG, oral EMG, microphone, display, and timing can carry class information.", "Thousands of trials do not increase the population sample beyond three participants.", "Historical online sessions do not establish a new live NeuroDecodeKit result."],
+      "known_limitations": ["The minimum attainable one-sided exact participant sign-flip p-value is 0.125.", "The cohort cannot satisfy the registered minimum-ten full-control replication route."],
+      "proof_posture": "Nonrouting full-sensor mechanistic bridge; no payload authorization or scientific result.",
+      "first_fresh_benchmark": {"suitability": "future_mechanistic_bridge_after_exact_source_lock", "rationale": "It preserves peripheral controls but is too small for inferential replication."}
+    },
+    {
+      "id": "openneuro_ds007808_japaneeg",
+      "dataset": "EEG-Speech Brain Decoding Dataset / JapanEEG",
+      "cohort": "inner_or_imagined_speech",
+      "source_urls": [
+        {"role": "canonical_snapshot", "url": "https://doi.org/10.18112/openneuro.ds007808.v1.0.0"},
+        {"role": "official_nemar_mirror", "url": "https://nemar.org/dataset/on007808"},
+        {"role": "official_project", "url": "https://japaneeg.araya.org/data/"}
+      ],
+      "revision": "OpenNeuro ds007808 v1.0.0 / NEMAR on007808 v1.0.0",
+      "license": "CC0",
+      "modality": ["EEG", "EOG", "EMG", "audio"],
+      "task": "Longitudinal overt speech, listening, and covert speech across multiple EEG systems.",
+      "language": "Japanese",
+      "subjects": 3,
+      "sessions": {"count": 312, "detail": "Longitudinal recordings from three participants across multiple devices."},
+      "splits": "Not eligible for the current participant-held-out replication route.",
+      "acquisition": {"channels": {"EEG_maximum": 128}, "sampling_rate_hz": null, "geometry": "Multiple source devices and layouts; exact per-file geometry requires metadata qualification.", "reference_scheme": null, "reference_unavailable_reason": "Device-specific and not frozen by this refresh."},
+      "formats": {"raw": ["EDF", "BIDS directory"], "events": ["BIDS events.tsv"], "labels": "Speech, listening, covert events, and text or audio context, subject to exact source lock."},
+      "storage": {"total_bytes": 1575000000000, "total_bytes_status": "approximate_official_NEMAR_surface", "smallest_meaningful_slice": {"description": "No selected slice is registered.", "exact_bytes": null, "status": "outside_current_10_GiB_selected_raw_and_participant_gates"}},
+      "capabilities": {"inspection": true, "signal_quality": true, "classification": true, "sequence_decoding": true, "cer_wer": false},
+      "leakage_risks": ["Only three participants prevent population-level unseen-person inference.", "Audio, EMG, cue, device, session, and longitudinal identity can dominate apparent decoding.", "A chronological slice can leak neighboring recording context."],
+      "known_limitations": ["Approximately 1.575 TB exceeds current local storage and selected-raw limits.", "Open-vocabulary scale does not compensate for a three-person population sample."],
+      "proof_posture": "Public large-scale representation source outside the current replication and storage gates.",
+      "first_fresh_benchmark": {"suitability": "not_currently_eligible", "rationale": "Scientifically rich but far above the cap and unable to satisfy the participant minimum."}
     },
     {
       "id": "physionet_eegmmidb_1_0_0",

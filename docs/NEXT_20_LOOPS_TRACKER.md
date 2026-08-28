@@ -1,5 +1,16 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
+> **Triangulated communication replication refresh (2026-08-27):** newly
+> public OpenNeuro `ds007591-v1.0.1` adds a valuable 1.62 GB full-sensor
+> mechanistic bridge with EEG, EOG, oral EMG, microphone, and triggers, but its
+> three participants make inferential replication impossible under the frozen
+> participant gate: the smallest exact one-sided sign-flip p-value is 0.125.
+> The scientific router is therefore two-key: `ds003626` must pass full-control
+> discovery attribution and TESSCCo must independently pass the partial
+> held-out-person command endpoint. `ds007591` is nonrouting descriptive
+> concordance; public `ds007808` remains ineligible at about 1.575 TB and three
+> participants. No payload, authority, or claim changed.
+
 > **Communication objective ledger (2026-08-27):** the current end goal is now
 > decomposed into eight machine-tested evidence requirements. Only one narrow
 > prior item is positive: the closed BNCI lane showed directional held-out task

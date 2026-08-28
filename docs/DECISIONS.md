@@ -14378,3 +14378,11 @@ green; only then may the single generated qualification run.
   inherited inner-harness warning as a documented schema caveat. This closes
   generated live-session engineering only and does not activate a real stream,
   device, model, data, release, or scientific claim.
+- 2026-08-27: Add `COMM-R0-SOURCE-TRIANGULATION-v0` without modifying the
+  immutable prior refresh or COMM-R0 contract. Require two mandatory keys:
+  full-control attribution in `ds003626` and independent partial command
+  transportability in TESSCCo. Treat newly public `ds007591-v1.0.1` as a
+  nonrouting full-sensor bridge: three participants imply a minimum exact
+  one-sided sign-flip p-value of 0.125, so it cannot meet the frozen 0.05 gate.
+  Keep 1.575 TB, three-participant `ds007808-v1.0.0` outside current storage
+  and replication gates. No payload, authority, active gate, or claim changes.

@@ -108,6 +108,22 @@
         "payload_or_private_operations": 0,
         "active_Tier_C_gate_changed": false
       },
+      "triangulated_replication_refresh": {
+        "refresh_id": "COMM-R0-SOURCE-TRIANGULATION-v0",
+        "document": "docs/COMMUNICATION_EEG_TRIANGULATED_REPLICATION_REFRESH_2026_08_27.md",
+        "registry": "registries/communication_eeg_triangulated_replication_refresh.v0.json",
+        "status": "pending_exact_commit_and_remote_green",
+        "mandatory_attribution_discovery": "OpenNeuro_ds003626_v2.1.2",
+        "mechanistic_bridge": "OpenNeuro_ds007591_v1.0.1",
+        "mechanistic_bridge_nonrouting": true,
+        "mechanistic_bridge_minimum_attainable_exact_one_sided_p": 0.125,
+        "independent_partial_replication": "TESSCCo_2026",
+        "full_control_watchlist_source": "SilentSpeech_EEG_2026",
+        "public_large_scale_noneligible_source": "OpenNeuro_ds007808_v1.0.0",
+        "real_data_packet_created": false,
+        "payload_or_private_operations": 0,
+        "active_Tier_C_gate_changed": false
+      },
       "objective_evidence_and_replication_decision": {
         "document": "docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md",
         "registry": "registries/communication_eeg_objective_evidence_and_replication_decision.v0.json",

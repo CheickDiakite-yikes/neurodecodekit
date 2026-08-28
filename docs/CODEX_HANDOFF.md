@@ -8364,3 +8364,26 @@ Immediate gate: commit and push this exact implementation, require both CI jobs
 green, then create an exact implementation-proof record. Do not run the one
 official generated qualification before that proof. Keep `DREYER-C5R-1-HL`
 sole and all-false, and never stage the unrelated tracker inspection NDJSON.
+
+## 2026-08-27 Communication Triangulated Source Refresh Handoff
+
+Read
+`docs/COMMUNICATION_EEG_TRIANGULATED_REPLICATION_REFRESH_2026_08_27.md`,
+`registries/communication_eeg_triangulated_replication_refresh.v0.json`, and
+the matching test. These are additive; do not edit the immutable original
+source refresh, objective decision, COMM-R0 preregistration, or any consumed
+COMM-G1/G2/R0-G artifact.
+
+Newly public OpenNeuro `ds007591-v1.0.1` is a stable CC0, approximately 1.62 GB
+full-sensor cohort with three participants. It is a nonrouting mechanistic
+bridge, not inferential replication: the smallest possible one-sided exact
+participant sign-flip p-value is 0.125 and the frozen full-control minimum is
+ten participants. The mandatory router remains two-key: `ds003626` full-control
+discovery attribution plus TESSCCo independent partial transportability.
+JapanEEG `ds007808-v1.0.0` remains outside the current route at approximately
+1.575 TB and three participants.
+
+Immediate gate: verify, commit, push, and remotely green this exact Tier A
+refresh, then add a proof-only closeout that binds its exact artifacts. Do not
+activate Dreyer, COMM-L0-META, or any real/private operation; do not stage the
+unrelated tracker inspection NDJSON.

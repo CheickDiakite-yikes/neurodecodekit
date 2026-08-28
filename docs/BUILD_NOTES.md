@@ -16269,3 +16269,13 @@ and require both remote jobs green before the one official qualification.
   8,364-byte result. Every protected operation counter remained zero. Preserve
   the inherited development-warning wording, do not edit the result, and do
   not rerun.
+- 2026-08-27: Re-ran primary-source communication EEG research and found a
+  material new public surface. OpenNeuro `ds007591-v1.0.1` / NEMAR
+  `on007591-v1.0.0` is CC0, approximately 1.62 GB, and reports three
+  participants with 128 EEG plus EOG, oral EMG, microphone, display, and
+  trigger channels across covert, minimally overt, and overt speech. Its exact
+  small-N ceiling is `2^3` sign assignments and minimum one-sided `p=0.125`.
+  Added it as a nonrouting mechanistic bridge, kept TESSCCo as the adequately
+  sized partial independent key, and kept `ds003626` as full-control discovery.
+  Public `ds007808-v1.0.0` is approximately 1.575 TB and three participants,
+  outside current storage and replication gates. No payload was accessed.

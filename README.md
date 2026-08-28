@@ -181,6 +181,22 @@ public external-channel roster are still unverified. TESSCCo adds a valuable
 rather than silently treated as equivalent evidence. This review made no
 payload or private-data operation and created no acquisition authority.
 
+A newer
+[triangulated replication refresh](docs/COMMUNICATION_EEG_TRIANGULATED_REPLICATION_REFRESH_2026_08_27.md)
+adds a newly public full-sensor source without overstating it. OpenNeuro
+`ds007591-v1.0.1` is a stable CC0, approximately 1.62 GB cohort with 128 EEG,
+EOG, oral EMG, microphone, and trigger channels across covert, minimally overt,
+and overt five-word speech. It has only three participants: the smallest
+possible one-sided exact sign-flip p-value is `1/8 = 0.125`, so it is a
+nonrouting mechanistic bridge, not inferential replication. The stronger
+two-key design requires `ds003626` to pass full peripheral attribution and
+TESSCCo to pass an independently frozen 24-person partial transportability
+test. Even if both pass, the result would establish prompted-command EEG-
+channel information with peripheral attribution only in discovery, not
+independently replicated neural attribution. Public JapanEEG `ds007808` is
+approximately 1.575 TB and only three participants, so it remains outside the
+current participant and storage gates. No payload was accessed or authorized.
+
 The new
 [objective evidence ledger](docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md)
 makes the gap to the end goal explicit. NeuroDecodeKit has real directional

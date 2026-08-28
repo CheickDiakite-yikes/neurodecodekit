@@ -114,6 +114,17 @@ manifest, loader, and exact external-channel roles are not verified. Kara One,
 Directional Word 2026, and ArEEG support only partial control sets. No source
 is promoted, no acquisition packet is created, and no payload is authorized.
 
+After that immutable refresh, read the additive triangulated source refresh:
+`docs/COMMUNICATION_EEG_TRIANGULATED_REPLICATION_REFRESH_2026_08_27.md` and
+`registries/communication_eeg_triangulated_replication_refresh.v0.json`.
+OpenNeuro `ds007591-v1.0.1` is a three-person, full-sensor, nonrouting
+mechanistic bridge; its minimum attainable one-sided exact sign-flip p-value is
+0.125, so it cannot satisfy inferential replication or replace the frozen
+minimum-ten full-control source. TESSCCo remains the mandatory independent
+partial-transportability key, and `ds003626` remains discovery attribution.
+Large public `ds007808-v1.0.0` is outside the current storage and participant
+gates. Preserve all original source-refresh and COMM-R0 artifacts byte-for-byte.
+
 Read the objective evidence and replication decision after that refresh:
 `docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md`
 and its machine registry. It records one narrow directional real-task evidence

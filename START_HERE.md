@@ -170,6 +170,19 @@ other reviewed sources provide only partial controls. No source was promoted,
 downloaded, or authorized by that Tier A pass.
 
 Then read
+`docs/COMMUNICATION_EEG_TRIANGULATED_REPLICATION_REFRESH_2026_08_27.md`.
+The additive refresh records newly public OpenNeuro `ds007591-v1.0.1` as a
+three-person full-sensor mechanistic bridge. It cannot enter the full-control
+replication router because `n=3 < 10`, and an exact one-sided participant
+sign-flip test cannot attain better than `p=0.125`. The actual router therefore
+has two mandatory keys: full-control `ds003626` discovery attribution and an
+independently frozen TESSCCo partial transportability result. The bridge is
+nonrouting and cannot rescue either failure. `ds007808-v1.0.0` remains outside
+the route because its approximately 1.575 TB, three-participant surface exceeds
+the participant and selected-raw gates. This refresh authorizes no metadata,
+payload, model, target, score, stream, or device operation.
+
+Then read
 `docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md`.
 Its machine-tested ledger records one narrow prior item of real directional
 task evidence and keeps every target communication requirement false. It
