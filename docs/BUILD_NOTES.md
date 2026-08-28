@@ -16430,3 +16430,11 @@ and require both remote jobs green before the one official qualification.
   zero retained payload. Focused implementation/contract tests pass 15/15 and
   Ruff is clean. Full FS3, official, real/private, device, release, and claim
   operations remain zero pending exact remote implementation proof.
+- 2026-08-28: Exact FS3 implementation `a3b561b` passed Base Python
+  `98875866699`, Optional Neuro Readers `98875866417`, and CI `33179247000`,
+  then reached GitHub `main`. Added a proof-only closeout binding six immutable
+  implementation artifacts / 43,587 bytes under canonical artifact-set SHA-256
+  `90515e3be142e99fc92a3b2bf57d28aaee0141f8f956ee06c381048ae7079cbc`.
+  The closeout rereads and hashes only committed public files and repeats no
+  reduced qualification, full FS3 run, official operation, real/private access,
+  network request, device action, release, or scientific claim.

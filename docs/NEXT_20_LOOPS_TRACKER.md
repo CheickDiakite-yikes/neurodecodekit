@@ -12,8 +12,9 @@
 > original model and protocol, two reduced deterministic qualification
 > replays, 140 pre-activation refusal observations, one thread, 180 seconds,
 > 512 MiB RSS, 513 MiB disk, zero network, and zero retained payload. Its
-> implementation and one-shot rehearsal remain false until separate green
-> barriers. This is a new prospective gate, not an FS2 rerun, and has no
+> implementation is exact-green on GitHub `main`; the one-shot rehearsal
+> remains false until its remaining green barriers. This is a new prospective
+> gate, not an FS2 rerun, and has no
 > scientific value.
 
 > **COMM-P0-G FS3 implementation qualification (2026-08-28):** the new
@@ -24,8 +25,11 @@
 > children matched canonical producer surfaces and aggregate score hashes over
 > 13,056 rows / 204 sets per replay and 140 refusal observations. Runtime was
 > 72.67009999998845 seconds, peak RSS 239,075,328 bytes, and monitor samples
-> 770; network and retained payload were zero. This milestone remains pending
-> exact commit, full CI, and proof closeout. Full FS3 runs remain zero.
+> 770; network and retained payload were zero. Exact implementation `a3b561b`
+> passed Base `98875866699`, Optional Neuro Readers `98875866417`, and CI
+> `33179247000`, then reached GitHub `main`. The pending proof closeout binds
+> six exact artifacts / 43,587 bytes and repeats no execution. Full FS3 runs
+> remain zero.
 
 > **COMM-P0-G contract-correction successor (2026-08-28):** post-proof audit
 > found that the V1 nonofficial full-scale rehearsal reported one combined

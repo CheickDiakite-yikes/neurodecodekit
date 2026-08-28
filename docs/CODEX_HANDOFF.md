@@ -7,21 +7,23 @@
 > fictional producer plus a distinct independent model-free verifier/scorer,
 > under the unchanged one-thread, 180-second, 512 MiB RSS, 513 MiB disk,
 > zero-network, zero-retained-payload limits. Registration alone authorizes no
-> implementation or execution. After its own exact registration is remotely
-> green on `main`, implement only additive reduced/mock qualification first:
-> two isolated at-most-three-person-per-cohort model replays and 140 refusal
-> observations. Require another exact green implementation proof before one
+> execution. Registration and exact implementation `a3b561b` are remotely
+> green on `main`; the reduced qualification completed two isolated at-most-
+> three-person-per-cohort model replays and 140 refusal observations. Require
+> the pending proof closeout to become exact-green before one
 > full FS3 rehearsal. Preserve consumed FS2 and the unrelated tracker
 > inspection file. `DREYER-C5R-1-HL` remains the sole all-false Tier C gate.
 
-> **FS3 implementation pending remote proof, 2026-08-28:** read the new FS3
+> **FS3 implementation exact-green; closeout pending, 2026-08-28:** read the new FS3
 > implementation document and machine registry. Two isolated reduced producers
 > and two independent zero-model verifiers passed with matching canonical
 > surfaces and aggregate hashes, 13,056 rows / 204 sets per replay, 140 refusal
 > observations, 72.67009999998845 seconds, 239,075,328-byte peak RSS, 770
-> monitor samples, zero network, and zero retained payload. Commit and push the
-> exact implementation, require both CI jobs green on GitHub `main`, then add a
-> proof-only closeout. Do not execute full FS3 before that separate barrier.
+> monitor samples, zero network, and zero retained payload. Exact implementation
+> `a3b561b` passed Base `98875866699`, Optional `98875866417`, and CI
+> `33179247000`, then reached GitHub `main`. The pending proof-only closeout
+> binds six exact artifacts / 43,587 bytes and repeats no execution. Do not
+> execute full FS3 before that separate barrier is remotely green.
 
 > **COMM-P0-G FS2 consumed runtime result, 2026-08-28:** read
 > `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_RESULT.md`

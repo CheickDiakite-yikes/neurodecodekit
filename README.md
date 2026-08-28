@@ -47,8 +47,8 @@ GitHub `main`. The separately prospective
 [`COMM-P0-G-FS3-v0`](docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_PREREGISTRATION.md)
 contract preserves the original model and protocol plus the same one-thread,
 180-second, 512 MiB RSS, 513 MiB incremental-disk, zero-network, and zero-
-retained-payload limits. Its implementation and one-shot rehearsal remain
-closed until their own ordered green barriers.
+retained-payload limits. Its one-shot rehearsal remains closed until the
+remaining ordered green barriers.
 
 The generated implementation has now passed its reduced local qualification:
 two isolated three-person-per-cohort producers and two separate zero-model
@@ -56,8 +56,11 @@ verifiers processed 13,056 prediction rows / 204 sets per replay, exercised
 140 refusal observations, and produced matching canonical producer and
 verifier aggregates in 72.6701 seconds at 239,075,328-byte peak RSS. It
 collected 770 process-monitor samples, made zero network requests, and retained
-zero generated payload bytes. This implementation milestone remains pending
-its exact commit, full CI, and proof-only closeout; no full FS3 rehearsal ran.
+zero generated payload bytes. Exact implementation `a3b561b` passed Base
+Python `98875866699`, Optional Neuro Readers `98875866417`, and CI
+`33179247000`, then reached GitHub `main`. Its pending proof-only closeout binds
+six exact implementation artifacts / 43,587 bytes and repeats no execution;
+no full FS3 rehearsal ran.
 
 This design is grounded in a measured negative engineering result. The sole
 `COMM-P0-G-FS2-R0` attempt completed one of

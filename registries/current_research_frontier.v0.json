@@ -518,7 +518,11 @@
             "run_id": "COMM-P0-G-FS3-R0",
             "document": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_PREREGISTRATION.md",
             "registry": "registries/communication_eeg_prospective_generated_single_execution_dual_verification_contract.v0.json",
-            "status": "registration_pending_exact_commit_push_remote_green_on_GitHub_main",
+            "status": "registration_remotely_green_on_GitHub_main_implementation_green_proof_closeout_pending_own_remote_CI",
+            "green_registration_commit": "d42650897317b0dc353d3607a25e71f2e0d4e7c9",
+            "green_registration_CI_run_id": 33176097877,
+            "green_registration_base_python_job_id": 98864980999,
+            "green_registration_optional_neuro_readers_job_id": 98864981336,
             "full_scale_producer_children": 1,
             "independent_model_free_verifier_children": 1,
             "reduced_qualification_replays": 2,
@@ -531,7 +535,11 @@
             "implementation": {
               "document": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_IMPLEMENTATION.md",
               "registry": "registries/communication_eeg_prospective_generated_single_execution_dual_verification_implementation.v0.json",
-              "status": "generated_implementation_and_reduced_qualification_pending_exact_commit_push_remote_green",
+              "status": "generated_implementation_and_reduced_qualification_remotely_green_on_GitHub_main_proof_closeout_pending_own_remote_CI",
+              "green_commit": "a3b561b118d606ee009c413d2f2419e976d4bc3d",
+              "green_CI_run_id": 33179247000,
+              "green_base_python_job_id": 98875866699,
+              "green_optional_neuro_readers_job_id": 98875866417,
               "isolated_model_replays": 2,
               "isolated_verifier_replays": 2,
               "participants_per_cohort": 3,
@@ -546,7 +554,16 @@
               "full_scale_FS3_runs": 0,
               "official_qualification_invocations": 0,
               "real_or_private_operations": 0,
-              "scientific_value": "none_generated_implementation_qualification_only"
+              "scientific_value": "none_generated_implementation_qualification_only",
+              "proof_closeout": {
+                "document": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_PROOF_CLOSEOUT.md",
+                "registry": "registries/communication_eeg_prospective_generated_single_execution_dual_verification_proof_closeout.v0.json",
+                "status": "proof_only_closeout_pending_own_commit_push_remote_green",
+                "bound_artifacts": 6,
+                "bound_bytes": 43587,
+                "full_scale_FS3_runs": 0,
+                "FS3_execution_authorized_now": false
+              }
             }
           }
         },

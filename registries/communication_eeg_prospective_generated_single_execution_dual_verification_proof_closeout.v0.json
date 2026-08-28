@@ -1,0 +1,96 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_prospective_generated_single_execution_dual_verification_proof_closeout",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-28",
+  "gate_id": "COMM-P0-G-FS3-v0",
+  "run_id": "COMM-P0-G-FS3-R0",
+  "status": "proof_only_closeout_pending_own_commit_push_remote_green",
+  "green_implementation": {
+    "commit": "a3b561b118d606ee009c413d2f2419e976d4bc3d",
+    "CI_run_id": 33179247000,
+    "base_python_job_id": 98875866699,
+    "optional_neuro_readers_job_id": 98875866417,
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true,
+    "working_branch_matches_main": true
+  },
+  "bound_implementation_artifacts": [
+    {
+      "path": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_IMPLEMENTATION.md",
+      "bytes": 4116,
+      "sha256": "f8d95d068eba7a7e49f809c00b2b3f2e54d1ae0c9104faf0e1f6a8c07384473a"
+    },
+    {
+      "path": "registries/communication_eeg_prospective_generated_single_execution_dual_verification_implementation.v0.json",
+      "bytes": 5809,
+      "sha256": "6f949222760b4c4fccc5b9bbcad3f956c09bef14953069d512daa6e7414fa2c7"
+    },
+    {
+      "path": "src/neurodecodekit/experiments/comm_p0_generated_dual_verification.py",
+      "bytes": 16330,
+      "sha256": "befac64116adac1e2af9b3e203ade5c2ae87be6e2153db0a51f90fd9c6b1ba5c"
+    },
+    {
+      "path": "src/neurodecodekit/experiments/comm_p0_generated_verifier_worker.py",
+      "bytes": 7255,
+      "sha256": "5b08692b79e0e1387f6045d93db407e4f96842335cddc4937bd2db9609c988ac"
+    },
+    {
+      "path": "src/neurodecodekit/comm_p0_FS3_cli.py",
+      "bytes": 1376,
+      "sha256": "daf42531750f640552b4dbf112aee6f6c3ced97e07c7a653de0e9853b58f0bcf"
+    },
+    {
+      "path": "tests/test_comm_p0_generated_dual_verification.py",
+      "bytes": 8701,
+      "sha256": "bbe26d1e198d387f64cc95477f44489fc7c2eaebe529448d3e195b80e4c25272"
+    }
+  ],
+  "artifact_summary": {
+    "count": 6,
+    "bytes": 43587,
+    "canonical_artifact_set_sha256": "90515e3be142e99fc92a3b2bf57d28aaee0141f8f956ee06c381048ae7079cbc"
+  },
+  "proof_operations": {
+    "committed_public_artifact_reads": 6,
+    "committed_public_artifact_hashes": 6,
+    "reduced_qualification_reruns": 0,
+    "full_scale_FS3_runs": 0,
+    "FS3_receipts_created": 0,
+    "official_qualification_invocations": 0,
+    "official_activation_reads": 0,
+    "official_marker_operations": 0,
+    "real_or_private_path_operations": 0,
+    "real_signal_reads": 0,
+    "real_target_or_label_reads": 0,
+    "human_or_device_operations": 0,
+    "provider_or_network_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "delayed_effect": {
+    "closeout_commit_remotely_green_now": false,
+    "one_FS3_rehearsal_may_begin_after_closeout_exactly_green": true,
+    "registered_FS3_attempts_maximum": 1,
+    "durable_no_replace_receipt_before_full_producer_required": true,
+    "post_receipt_failure_consumes_attempt": true,
+    "retry_rerun_resume_repair_or_substitution_allowed": false,
+    "official_qualification_activated_by_closeout": false
+  },
+  "active_Tier_C_gate": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "changed": false,
+    "all_authority_flags_false": true
+  },
+  "claim_boundary": {
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_performance_established": false,
+    "clinical_value_established": false
+  }
+}

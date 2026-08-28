@@ -14565,3 +14565,13 @@ green; only then may the single generated qualification run.
   verifier pairs, 140 refusals, 72.67009999998845 seconds, 239,075,328-byte
   peak RSS, and zero retained payload as engineering evidence only. Require an
   exact green implementation and separate proof closeout before full FS3.
+- 2026-08-28: Accept `a3b561b118d606ee009c413d2f2419e976d4bc3d`
+  as the exact remotely green FS3 generated implementation after Base Python
+  `98875866699`, Optional Neuro Readers `98875866417`, and CI `33179247000`
+  passed and GitHub `main` resolved to that SHA. Bind its six exact public
+  implementation artifacts / 43,587 bytes in a proof-only closeout that repeats
+  no qualification or execution. Require that closeout to pass both remote jobs
+  and reach `main` before considering the sole generated FS3 rehearsal. Keep
+  the full FS3 run, official qualification, real/private access, network,
+  human/device operation, release, Tier C authority, and every scientific claim
+  false.

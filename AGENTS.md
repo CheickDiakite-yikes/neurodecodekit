@@ -51,8 +51,12 @@ The immediate reversible frontier is now `COMM-P0-G-FS3-v0`. Read, in order:
 2. `registries/communication_eeg_prospective_generated_two_child_rehearsal_result.v0.json`;
 3. `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_QUALIFICATION_AMENDMENT_3.md`;
 4. `registries/communication_eeg_prospective_generated_qualification_amendment_3.v0.json`;
-5. `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_PREREGISTRATION.md`; and
-6. `registries/communication_eeg_prospective_generated_single_execution_dual_verification_contract.v0.json`.
+5. `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_PREREGISTRATION.md`;
+6. `registries/communication_eeg_prospective_generated_single_execution_dual_verification_contract.v0.json`;
+7. `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_IMPLEMENTATION.md`;
+8. `registries/communication_eeg_prospective_generated_single_execution_dual_verification_implementation.v0.json`;
+9. `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_PROOF_CLOSEOUT.md`; and
+10. `registries/communication_eeg_prospective_generated_single_execution_dual_verification_proof_closeout.v0.json`.
 
 Amendment 3 exact commit `b15d3cf86fc4d6234d64c3a19cca394e72f43fc6`
 passed Base Python `98860211722`, Optional Neuro Readers `98860211949`, and CI
@@ -66,16 +70,20 @@ payload.
 `COMM-P0-G-FS3-v0` is a separately named generated-only Tier B rehearsal. Its
 registration is exact-green at `d42650897317b0dc353d3607a25e71f2e0d4e7c9`,
 CI `33176097877`, Base `98864980999`, and Optional Neuro Readers `98864981336`,
-and is on GitHub `main`. The generated implementation now completed two
+and is on GitHub `main`. Exact implementation
+`a3b561b118d606ee009c413d2f2419e976d4bc3d` passed Base Python
+`98875866699`, Optional Neuro Readers `98875866417`, and CI `33179247000`,
+then reached GitHub `main`. Its reduced qualification completed two
 isolated three-person-per-cohort producer replays and two independent zero-model
 verifiers: 13,056 prediction rows / 204 sets per replay, 140 refusal
 observations, 72.67009999998845 seconds, 239,075,328-byte peak RSS, 770 monitor
 samples, zero network, and zero retained payload. Both producer surfaces and
 verifier aggregates matched. Read the implementation document and registry.
 
-The implementation commit and proof are not yet remotely green. Do not execute
-the full FS3 rehearsal until that exact implementation and a separate proof-
-only closeout pass both jobs and reach GitHub `main`. A later sole FS3 attempt
+The proof-only closeout binds six exact implementation artifacts / 43,587 bytes
+and repeats no qualification or execution. It is pending its own commit, push,
+and both remote CI jobs. Do not execute the full FS3 rehearsal until that
+separate closeout reaches GitHub `main`. A later sole FS3 attempt
 may run one exact full producer followed by one independent zero-model verifier
 under the unchanged resource envelope. It may not access the official
 activation or marker.

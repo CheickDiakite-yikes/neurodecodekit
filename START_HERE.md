@@ -16,8 +16,9 @@
 > Optional Neuro Readers `98860211949`, and CI `33174711145`, then reached
 > GitHub `main`. The separately prospective `COMM-P0-G-FS3-v0` contract keeps
 > one thread, 180 seconds, 512 MiB RSS, 513 MiB disk, zero network, and zero
-> retained payload. Its implementation and execution are false until their
-> own green barriers. This is generated engineering only; no scientific claim
+> retained payload. Registration and implementation are exact-green on GitHub
+> `main`; execution remains false until its remaining green barriers. This is
+> generated engineering only; no scientific claim
 > or Tier C authority changed.
 
 > COMM-P0-G FS3 implementation update, 2026-08-28: the additive descriptor-
@@ -26,8 +27,10 @@
 > 204 sets; both canonical producer surfaces and verifier aggregate hashes
 > matched. The run exercised 140 refusals in 72.67009999998845 seconds at
 > 239,075,328-byte peak RSS with 770 monitor samples, zero network, and zero
-> retained payload. The implementation is pending its exact commit, full CI,
-> and proof-only closeout. No full FS3 or official run is authorized yet.
+> retained payload. Exact implementation `a3b561b` passed Base `98875866699`,
+> Optional Neuro Readers `98875866417`, and CI `33179247000`, then reached
+> GitHub `main`. The pending proof-only closeout binds six exact artifacts /
+> 43,587 bytes and repeats no execution. No full FS3 or official run has run.
 
 > COMM-P0-G coordinator correction, 2026-08-28: post-proof audit found that
 > the V1 full-scale rehearsal used one combined target envelope and one score,
