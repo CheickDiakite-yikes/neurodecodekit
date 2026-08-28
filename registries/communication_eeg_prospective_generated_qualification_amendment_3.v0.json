@@ -1,0 +1,156 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_prospective_generated_qualification_amendment",
+  "schema_version": "0.1.0",
+  "amendment_id": "COMM-P0-G-A3",
+  "parent_registration_id": "COMM-P0-G-v0",
+  "recorded_at_local": "2026-08-28",
+  "status": "prospective_nonredundant_full_scale_proof_architecture_no_operation_authorized",
+  "bound_parent_artifacts": [
+    {
+      "path": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_QUALIFICATION_PREREGISTRATION.md",
+      "bytes": 10395,
+      "sha256": "3eb36e9f0a18bdb972290355b06e89b8a2a921a6a9e509a8337973664ae3b33c"
+    },
+    {
+      "path": "registries/communication_eeg_prospective_generated_qualification_contract.v0.json",
+      "bytes": 21365,
+      "sha256": "a3f7ddbe763186e0618cf7e4d1f9b34ec87204fb91ac7c25db160a9d716f2910"
+    },
+    {
+      "path": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_QUALIFICATION_AMENDMENT_2.md",
+      "bytes": 3339,
+      "sha256": "bd7e0d17d6e232f1efeaddf91a0e5ad1c45cd6d2bf53b3c326fe574988a99970"
+    },
+    {
+      "path": "registries/communication_eeg_prospective_generated_qualification_amendment_2.v0.json",
+      "bytes": 4103,
+      "sha256": "dabcfa2119c16d8bb6df97b9b016682aa4d3526ae696d3be400dc10be3ebb7b3"
+    },
+    {
+      "path": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_OFFICIAL_COORDINATOR_PROOF_CLOSEOUT.md",
+      "bytes": 3091,
+      "sha256": "c7650831c3d45092084c962e1780e48b7c2dbe5ee6a54cb6a947a968b030f661"
+    },
+    {
+      "path": "registries/communication_eeg_prospective_generated_official_coordinator_proof_closeout.v0.json",
+      "bytes": 3940,
+      "sha256": "ac90183d44948c2f0bee0766d649920aa040c7b35543c9a30469c7c7114f58c3"
+    },
+    {
+      "path": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_RESULT.md",
+      "bytes": 4368,
+      "sha256": "b0bcadf87f461b04953e642e6c50f0492e49d6c857f57a10ebd0b05625ee1659"
+    },
+    {
+      "path": "registries/communication_eeg_prospective_generated_two_child_rehearsal_result.v0.json",
+      "bytes": 4226,
+      "sha256": "1e4c10e43c4486370c2838c3890a15f1fe16c6eed5e80a67741663a1cd929b1a"
+    }
+  ],
+  "measured_basis": {
+    "FS2_run_id": "COMM-P0-G-FS2-R0",
+    "FS2_route": "FS2_PARK",
+    "completed_full_replay_children": 1,
+    "expected_full_replay_children": 2,
+    "runtime_seconds": 180.05074683297426,
+    "runtime_cap_seconds": 180,
+    "peak_process_tree_RSS_bytes": 305119232,
+    "peak_process_tree_RSS_cap_bytes": 536870912,
+    "reservation_delta_bytes": 537919488,
+    "retained_generated_payload_bytes": 0,
+    "real_or_private_operations": 0,
+    "scientific_value": "none_generated_resource_measurement_only"
+  },
+  "replacement_proof_architecture": {
+    "full_scale_producer_children": 1,
+    "independent_model_free_verifier_scorer_children": 1,
+    "full_scale_model_schedules": 1,
+    "reduced_isolated_model_replays_before_activation": 2,
+    "reduced_participants_per_cohort_maximum": 3,
+    "full_run_refusal_observations": 70,
+    "reduced_qualification_refusal_observations": 140,
+    "producer_freeze_before_target_delivery": true,
+    "verifier_independent_freeze_HMAC_inventory_and_score_check": true,
+    "verifier_model_fit_transform_threshold_or_update_capability": false,
+    "producer_and_verifier_aggregate_scores_must_match": true,
+    "public_individual_predictions_targets_or_participant_outcomes": false
+  },
+  "full_scale_producer_schedule": {
+    "complete_participants": 42,
+    "cohorts": 2,
+    "held_out_participant_folds": 42,
+    "conditions": 17,
+    "endpoints": 2,
+    "prior_fits": 42,
+    "residualizer_fits": 84,
+    "classifier_fits": 630,
+    "temperature_calibration_fits": 630,
+    "model_inference_runs": 714,
+    "prediction_sets": 1428,
+    "prediction_rows": 91392,
+    "shortcut_fixture_executions": 7,
+    "cohort_target_deliveries": 2,
+    "cohort_scores": 2,
+    "post_target_updates": 0,
+    "maximum_prediction_rows_buffered": 256
+  },
+  "independent_verifier_schedule": {
+    "model_fits": 0,
+    "model_inference_runs": 0,
+    "prediction_sets_created": 0,
+    "prediction_rows_created": 0,
+    "prediction_stream_validation_passes": 1,
+    "freeze_HMAC_verifications": 1,
+    "independent_generated_cohort_target_deliveries": 2,
+    "independent_cohort_scores": 2,
+    "post_target_updates": 0
+  },
+  "unchanged_fields": {
+    "participants_cohorts_trials_sensor_roles_endpoints_conditions_and_shortcuts": true,
+    "fixed_model_family_and_source_only_calibration": true,
+    "target_precommitment_and_held_out_participant_firewall": true,
+    "participant_first_statistics_and_missing_prediction_penalties": true,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "wall_time_seconds": 180,
+    "peak_process_tree_RSS_bytes": 536870912,
+    "aggregate_incremental_disk_bytes": 537919488,
+    "network_bytes": 0,
+    "retained_generated_payload_bytes": 0
+  },
+  "ordered_barriers": [
+    "amendment_commit_push_both_CI_jobs_green_and_on_GitHub_main",
+    "separately_named_FS3_generated_rehearsal_contract_green_on_main",
+    "FS3_implementation_reduced_or_mock_fixtures_only_until_exact_proof_green",
+    "one_nonofficial_FS3_full_producer_plus_verifier_rehearsal",
+    "only_consumed_FS3_pass_may_support_later_separate_official_activation"
+  ],
+  "authority": {
+    "implementation_authorized_now": false,
+    "FS3_execution_authorized_now": false,
+    "official_qualification_authorized_now": false,
+    "real_or_private_data_authorized": false,
+    "human_or_device_operation_authorized": false,
+    "network_operation_authorized": false,
+    "release_authorized": false,
+    "scientific_claim_upgrade_authorized": false
+  },
+  "active_Tier_C_gate": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "changed": false,
+    "all_authority_flags_false": true
+  },
+  "claim_boundary": {
+    "generated_proof_architecture_corrected": true,
+    "generated_qualification_established": false,
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_or_clinical_value_established": false
+  }
+}
