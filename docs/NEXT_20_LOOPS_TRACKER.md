@@ -30,6 +30,12 @@
 > both required jobs in CI `33136788477` and reached GitHub `main`. Its
 > proof-only closeout binds three exact artifacts / 47,562 bytes; after that
 > proof is remotely green, generated-only implementation is the next task.
+> Exact proof `eafe1df` passed both required jobs in CI `33137998642` and
+> reached GitHub `main`. Core milestone 1 now implements the complete
+> structural plan, target precommitments, synchronized 73-role bundle,
+> prediction inventory, participant-first exact statistic, live accounting,
+> and 70 refusal wrappers. Next is the compact model schedule plus isolated
+> two-replay coordinator; official qualification remains inactive.
 
 > **Triangulated communication replication refresh (2026-08-27):** newly
 > public OpenNeuro `ds007591-v1.0.1` adds a valuable 1.62 GB full-sensor

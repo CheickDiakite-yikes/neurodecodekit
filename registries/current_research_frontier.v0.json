@@ -392,9 +392,25 @@
             "document": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_QUALIFICATION_PROOF_CLOSEOUT.md",
             "registry": "registries/communication_eeg_prospective_generated_qualification_proof.v0.json",
             "status": "proof_only_closeout_pending_own_remote_CI",
+            "green_commit": "eafe1dfbcc300643c7638d0f01131f3bad2a1885",
+            "green_CI_run_id": 33137998642,
+            "green_base_python_job_id": 98742273166,
+            "green_optional_neuro_readers_job_id": 98742273226,
             "bound_artifacts": 3,
             "bound_bytes": 47562,
             "generated_implementation_may_begin_after_closeout_green": true,
+            "official_qualification_execution_authorized_now": false,
+            "human_device_or_real_operations": 0
+          },
+          "core_implementation": {
+            "document": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_CORE_IMPLEMENTATION.md",
+            "registry": "registries/communication_eeg_prospective_generated_core_implementation.v0.json",
+            "status": "core_implementation_pending_exact_commit_push_remote_green",
+            "structural_rows_represented": 10752,
+            "synchronized_biosignal_roles": 73,
+            "refusal_wrappers": 70,
+            "full_compact_model_schedule_implemented": false,
+            "two_isolated_registered_replays_implemented": false,
             "official_qualification_execution_authorized_now": false,
             "human_device_or_real_operations": 0
           }

@@ -34,9 +34,13 @@
 > CI `33135742217` and reached GitHub `main`. The next gate is the all-false
 > generated-only `COMM-P0-G-v0` registration. Exact registration `002128b`
 > passed both required jobs in CI `33136788477` and reached GitHub `main`.
-> Its proof-only closeout binds three immutable artifacts / 47,562 bytes and
-> must become remotely green before generated implementation. The official
-> qualification execution remains separately gated.
+> Its proof-only closeout binds three immutable artifacts / 47,562 bytes.
+> Exact proof `eafe1df` passed both required jobs in CI `33137998642` and
+> reached GitHub `main`. The generated-only protocol core now represents the
+> complete fictional cohort/trial plan, synchronized 73-role sensor bundle,
+> target precommitments, participant-first statistic, live accounting, and all
+> 70 refusal wrappers. The compact model/two-replay coordinator is the next
+> implementation milestone; official qualification remains separately gated.
 
 ## Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight
 

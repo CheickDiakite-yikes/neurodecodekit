@@ -198,10 +198,17 @@ scoring, live accounting, 70 refusal families, and bounded resources. The
 exact registration `002128bd9cbacddd8ceea1820b3b91622c40867f` passed Base
 Python `98738427136`, Optional Neuro Readers `98738427224`, and CI
 `33136788477`, then reached GitHub `main`. Read its proof-only closeout next;
-it binds three registration artifacts / 47,562 bytes. Generated implementation
-may begin only after that closeout is remotely green. The official generated
-execution remains false until an exact implementation and separate activation
-cross their own ordered proof barriers.
+it binds three registration artifacts / 47,562 bytes. Exact proof
+`eafe1dfbcc300643c7638d0f01131f3bad2a1885` passed Base Python
+`98742273166`, Optional Neuro Readers `98742273226`, and CI `33137998642`,
+then reached GitHub `main`. The generated-only core implementation now exists
+in `src/neurodecodekit/experiments/comm_p0_generated.py`; read its implementation
+document and machine record. It covers deterministic cohort/trial planning,
+target precommitments, synchronized sensor-bundle validation, participant-first
+statistics, live accounting, and all 70 wrappers. The compact numerical
+schedule and two-replay coordinator remain pending. The official generated
+execution remains false until the complete exact implementation and a separate
+activation cross their own ordered proof barriers.
 
 Read the objective evidence and replication decision after that refresh:
 `docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md`

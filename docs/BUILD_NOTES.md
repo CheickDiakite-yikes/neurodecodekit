@@ -16355,3 +16355,12 @@ and require both remote jobs green before the one official qualification.
   SHA-256 `6d73c138a0da1839951522234c2fadf334c31acfce077bed887f643ed68e5f76`.
   No generated fixture, human/device, real/private, model, target, prediction,
   score, provider, release, or claim operation occurred.
+- 2026-08-27: Registration proof compatibility commit `eafe1df` passed Base
+  Python `98742273166`, Optional Neuro Readers `98742273226`, and CI
+  `33137998642`, then reached GitHub `main`. Added generated core milestone 1:
+  deterministic 44-enrollee / 42-completer planning, the complete 10,752-row
+  protocol, fixed target precommitments, synchronized 32+32+9 SourceChunk
+  bindings, participant-first exact sign flips, live accounting, all 70 exact
+  wrappers, and an activation-locked sidecar CLI. The compact model schedule
+  and two-replay coordinator remain pending; no official qualification or
+  scientific operation occurred.

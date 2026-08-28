@@ -1,0 +1,109 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_prospective_generated_core_implementation",
+  "schema_version": "0.1.0",
+  "milestone_id": "COMM-P0-G-CORE-v0",
+  "registration_id": "COMM-P0-G-v0",
+  "recorded_at_local": "2026-08-27",
+  "status": "core_implementation_pending_exact_commit_push_remote_green",
+  "green_registration_proof": {
+    "commit": "eafe1dfbcc300643c7638d0f01131f3bad2a1885",
+    "CI_run_id": 33137998642,
+    "base_python_job_id": 98742273166,
+    "optional_neuro_readers_job_id": 98742273226,
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true
+  },
+  "artifacts": [
+    {
+      "path": "src/neurodecodekit/experiments/comm_p0_generated.py",
+      "bytes": 36992,
+      "sha256": "d12e5a4aeb1253b5d8ed5dd08f6c1d5224599a70badb9f6f2de44af9d826deef"
+    },
+    {
+      "path": "src/neurodecodekit/comm_p0_cli.py",
+      "bytes": 1354,
+      "sha256": "6074a19ba6ef0eea85e5d5d3cbf88d4ed82c24dc4b65ca0fd5927015fe4359ce"
+    },
+    {
+      "path": "tests/test_comm_p0_generated_core.py",
+      "bytes": 9999,
+      "sha256": "d83097b03e5774a0d2dfb668c09ee7f6ccaf2eae0e3cd7522618fab8c68f0700"
+    }
+  ],
+  "implemented_capabilities": {
+    "strict_registration_hash_binding": true,
+    "fictional_enrollees": 44,
+    "fictional_complete_participants": 42,
+    "target_free_hardware_exclusions": 2,
+    "deterministic_structural_rows": 10752,
+    "free_choice_target_precommitments": 4032,
+    "synchronized_biosignal_roles": 73,
+    "source_chunk_shards": 3,
+    "separate_microphone_and_trigger_surfaces": true,
+    "active_intention_segment_containment": true,
+    "streamed_prediction_inventory_validation": true,
+    "participant_first_scoring": true,
+    "exact_sign_flip_assignments_per_cohort": 2097152,
+    "live_metric_accounting": true,
+    "exact_refusal_families": 70,
+    "activation_locked_official_qualify": true
+  },
+  "pending_full_implementation": {
+    "compact_classifier_and_temperature_schedule": true,
+    "two_isolated_registered_replays": true,
+    "scorer_child_and_target_delivery": true,
+    "resource_monitor_and_no_replace_publication": true,
+    "canonical_15_digest_replay_equivalence": true
+  },
+  "development_evidence": {
+    "scope": "local_disposable_generated_core_tests_not_official_qualification",
+    "focused_tests": 12,
+    "focused_runtime_seconds_approximate": 1.12,
+    "combined_registration_proof_and_core_tests": 28,
+    "combined_runtime_seconds_approximate": 1.18,
+    "full_structural_plan_replays": 2,
+    "exact_sign_flip_assignments_evaluated": 2097152,
+    "refusal_wrappers_exercised": 70,
+    "retained_generated_payload_bytes": 0,
+    "scientific_value": "none_generated_engineering_only"
+  },
+  "official_qualification": {
+    "executed": false,
+    "invocations": 0,
+    "authorized_now": false,
+    "requires_complete_exact_implementation_remotely_green": true,
+    "requires_separate_activation_remotely_green": true
+  },
+  "operation_counters": {
+    "human_recruitment_or_recordings": 0,
+    "physical_stream_or_device_operations": 0,
+    "voice_captures": 0,
+    "real_or_private_path_operations": 0,
+    "real_signal_reads": 0,
+    "official_model_fits": 0,
+    "official_prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "active_gate": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "sole_active_Tier_C_packet": true,
+    "all_authority_flags_false": true,
+    "changed_by_this_milestone": false
+  },
+  "claim_boundary": {
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_performance_established": false,
+    "clinical_value_established": false
+  }
+}
