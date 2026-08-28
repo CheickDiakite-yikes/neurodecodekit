@@ -69,13 +69,16 @@ called two deliberate stream traversals “one pass,” did not require the exac
 guard, logical cohort-envelope, and runtime boundaries underspecified.
 Exact `COMM-P0-G-FS3-A1` commit `28b440e` passed Base Python `98889419386`,
 Optional Neuro Readers `98889419758`, and CI `33183200744`, then reached
-GitHub `main` with zero numerical operations. The additive full wrapper now
-implements exact descriptor-only identity checks, no-follow dirfd producer
-opens, an isolated socket-guarded verifier, exact 91,392-row / 1,428-set and
-two-traversal enforcement, parent RSS checkpoints, and staged fsync/no-replace
-publication. It remains fail-closed until this exact wrapper and a separate
-proof both pass their remote green barriers and a final activation commit binds
-that proof's exact digest; no full FS3 rehearsal has run.
+GitHub `main` with zero numerical operations. Exact wrapper commit `91743f5`
+then passed Base Python `98909173217`, Optional Neuro Readers `98909172856`,
+and CI `33188950787`, and reached GitHub `main`. It implements descriptor-only
+identity checks, no-follow dirfd producer opens, an isolated socket-guarded
+verifier, observed 64-row enforcement inside every one of 1,428 sets across
+two traversals, parent RSS checkpoints, and staged fsync/no-replace publication.
+A separate proof now binds its six exact artifacts / 111,486 bytes and remains
+pending its own remote-green barrier. Execution stays closed until that proof
+is green and a final activation commit binds its digest; no full FS3 rehearsal
+has run.
 
 This design is grounded in a measured negative engineering result. The sole
 `COMM-P0-G-FS2-R0` attempt completed one of

@@ -1,0 +1,55 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_prospective_generated_single_execution_dual_verification_full_rehearsal_implementation_proof",
+  "schema_version": "0.1.0",
+  "gate_id": "COMM-P0-G-FS3-v0",
+  "run_id": "COMM-P0-G-FS3-R0",
+  "contract_sha256": "99022366ce5aa59266d855ef9d4fd84c9cc7a1bf4f960c9398022b8e582a3771",
+  "registration_commit": "d42650897317b0dc353d3607a25e71f2e0d4e7c9",
+  "prior_implementation_commit": "a3b561b118d606ee009c413d2f2419e976d4bc3d",
+  "prior_proof_closeout_commit": "ccabfafb411e219292b103ce2327568112056286",
+  "full_wrapper_implementation_commit": "91743f584e5325ef946619869c7aaa477f83fe5a",
+  "full_wrapper_CI_run_id": 33188950787,
+  "full_wrapper_base_python_job_id": 98909173217,
+  "full_wrapper_optional_neuro_readers_job_id": 98909172856,
+  "all_ordered_parents_remotely_green_on_GitHub_main": true,
+  "both_required_full_wrapper_jobs_green": true,
+  "one_FS3_rehearsal_authorized_under_Tier_B": true,
+  "official_qualification_activated": false,
+  "official_marker_operations_authorized": false,
+  "real_private_network_device_or_release_authorized": false,
+  "full_scale_FS3_attempts_before_proof": 0,
+  "implementation_artifacts": [
+    {
+      "path": "src/neurodecodekit/experiments/comm_p0_generated_dual_verification_rehearsal.py",
+      "bytes": 53069,
+      "sha256": "322da80e5719cbbb168e2fb8d1d0337543c1231fa169acc09be2ec8f5ff5824b"
+    },
+    {
+      "path": "src/neurodecodekit/experiments/comm_p0_generated_strict_verifier_worker.py",
+      "bytes": 14243,
+      "sha256": "18250b08130459ed5e0c9117f288d193a117b81ecff50a5289f53bd3a1207d33"
+    },
+    {
+      "path": "src/neurodecodekit/comm_p0_FS3_rehearsal_cli.py",
+      "bytes": 2208,
+      "sha256": "c756740fa1fda74baa389a618c34e689e62a2f083175771b2d660f0de2420dd2"
+    },
+    {
+      "path": "tests/test_comm_p0_generated_dual_verification_rehearsal.py",
+      "bytes": 33097,
+      "sha256": "dfccb471d793463f31ae6c00149a7e0a4e17469c7c8d41084b1bdf63901da9a4"
+    },
+    {
+      "path": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_FULL_REHEARSAL_IMPLEMENTATION.md",
+      "bytes": 4263,
+      "sha256": "49e8bc0c1ad9c36cafbdf0873945898a76e9db8fe6a53f776dfcb4a634dcd0bf"
+    },
+    {
+      "path": "registries/communication_eeg_prospective_generated_single_execution_dual_verification_full_rehearsal_implementation.v0.json",
+      "bytes": 4606,
+      "sha256": "1554ac9dbeff08f6b5bfff7e7cf5ff8ddd5d70ba99f1973d1263e964d7abde9b"
+    }
+  ],
+  "implementation_artifact_set_sha256": "a7267da4ab6e561085ba5cd226a193fc417c9567eb7e3fd2cddce511ade9dd32",
+  "proof_sha256": "128b669964c32deefddcf2e81a4163108fac8ba0323b35ee733f142bd3e5df9b"
+}
