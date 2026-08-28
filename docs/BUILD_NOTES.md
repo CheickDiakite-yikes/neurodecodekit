@@ -16330,3 +16330,12 @@ and require both remote jobs green before the one official qualification.
   2,323,200,000, totaling 10,463,692,800 bytes or 9.7451 GiB. Human, device,
   real/private, model, target, score, provider, release, and claim counters are
   all zero. Next reversible work is generated qualification only.
+- 2026-08-27: Exact `COMM-P0-SYNC-v0` registration `df3266e` passed Base
+  Python `98732241444`, Optional Neuro Readers `98732241603`, and CI
+  `33134791405`, then reached GitHub `main`. Added a proof-only closeout binding
+  the preregistration, contract, and test / 38,364 bytes under canonical set
+  SHA-256 `793311e450bedeeac0d5a2d6b7a118d4fc21268ddba77b6c9f186715d5d84966`.
+  Review found a 60% human versus 70% machine stable-commit coverage mismatch;
+  prospective Amendment 1 selects the stricter 70% and pauses generated work
+  until both additions are remotely green. No generated, human/device,
+  payload, model, score, or claim operation occurred.

@@ -8473,3 +8473,12 @@ generated-only qualification contract and implementation for the study grammar,
 channel roles, participant firewall, free-choice report seal, causal stream,
 prediction freezer, scorer, and storage monitor. Do not touch the unrelated
 tracker inspection NDJSON.
+
+Exact registration `df3266ed09132017cc8a9dcc10e8a7d61ea92f61` passed Base
+Python `98732241444`, Optional Neuro Readers `98732241603`, and CI
+`33134791405`, then reached GitHub `main`. The new proof-only closeout binds
+three registration artifacts / 38,364 bytes. Amendment 1 resolves the frozen
+human 60% versus machine 70% stable-commit coverage mismatch by selecting 70%.
+Both additions must become remotely green before generated qualification design
+begins. Do not run a generated qualification, recruit, record, operate hardware,
+access real/private data, train, score, release, or upgrade a claim.

@@ -25,7 +25,12 @@
 > shadow/live stages, and a 10,463,692,800-byte worst-case raw budget. Read
 > `docs/COMMUNICATION_EEG_PROSPECTIVE_SYNCHRONIZED_COHORT_PREREGISTRATION.md`.
 > It authorizes no recruitment, recording, hardware, data, model, target,
-> score, release, or claim operation.
+> score, release, or claim operation. Exact registration `df3266e` passed both
+> required jobs in CI `33134791405` and reached GitHub `main`. Read its
+> proof-only closeout and Amendment 1: review found a frozen 60% human versus
+> 70% machine stable-commit coverage mismatch, so the stricter 70% is
+> authoritative. Generated design remains paused until both additions are
+> remotely green.
 
 ## Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight
 

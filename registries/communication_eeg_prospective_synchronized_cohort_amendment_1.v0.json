@@ -1,0 +1,69 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_prospective_synchronized_cohort_amendment",
+  "schema_version": "0.1.0",
+  "amendment_id": "COMM-P0-SYNC-A1",
+  "parent_registration_id": "COMM-P0-SYNC-v0",
+  "recorded_at_local": "2026-08-27",
+  "status": "prospective_correction_pending_own_remote_CI_no_operation_authorized",
+  "defect": {
+    "human_document_field": "stable_commit_coverage_fraction_minimum",
+    "human_document_value": 0.60,
+    "machine_contract_value": 0.70,
+    "contract_test_value": 0.70,
+    "ambiguity_must_be_resolved_before_generated_implementation": true
+  },
+  "correction": {
+    "authoritative_stable_commit_coverage_fraction_minimum": 0.70,
+    "stricter_existing_machine_value_selected": true,
+    "parent_human_60_percent_sentence_superseded_for_this_field_only": true,
+    "all_other_parent_fields_unchanged": true,
+    "post_result_threshold_selection_allowed": false
+  },
+  "effect": {
+    "generated_qualification_design_paused_until_amendment_and_proof_closeout_green": true,
+    "generated_implementation_authorized_now": false,
+    "generated_execution_authorized_now": false,
+    "human_or_device_operation_authorized": false,
+    "real_or_private_data_authorized": false,
+    "training_inference_or_scoring_authorized": false,
+    "release_authorized": false,
+    "scientific_claim_upgrade_authorized": false
+  },
+  "operation_counters": {
+    "generated_qualification_runs": 0,
+    "human_recruitment_or_recordings": 0,
+    "physical_stream_or_device_operations": 0,
+    "voice_captures": 0,
+    "real_or_private_path_operations": 0,
+    "real_signal_reads": 0,
+    "target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "provider_calls": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "active_gate": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "changed": false,
+    "all_authority_flags_false": true
+  },
+  "claim_boundary": {
+    "engineering_threshold_ambiguity_resolved_prospectively": true,
+    "generated_qualification_established": false,
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_performance_established": false,
+    "clinical_value_established": false
+  }
+}

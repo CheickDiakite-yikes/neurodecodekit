@@ -14436,3 +14436,11 @@ green; only then may the single generated qualification run.
   20 GiB. This is a Tier A design freeze only; human, device, real-data,
   target, training, scoring, release, and claim authority remain false, and
   `DREYER-C5R-1-HL` remains sole.
+- 2026-08-27: Accept `df3266ed09132017cc8a9dcc10e8a7d61ea92f61`, CI
+  `33134791405`, as the exact remotely green `COMM-P0-SYNC-v0` registration on
+  GitHub `main`. Bind only its three registration artifacts in a proof-only
+  closeout. Resolve the discovered 60% human versus 70% machine stable-commit
+  coverage mismatch prospectively by selecting the stricter 70% in Amendment
+  1. Do not begin generated design until both additions are remotely green, or
+  treat either as execution, recruitment, recording, device, real-data, model,
+  score, release, or claim authority.

@@ -256,6 +256,13 @@ cap; the remaining 20 GiB envelope
 is reserved for bounded derivatives, temporary output, aggregates, and
 headroom. This is a study design, not a recording: no participant, device,
 real EEG, target, model, score, or claim operation is authorized or performed.
+Exact registration `df3266e` passed both required jobs in CI `33134791405` and
+reached GitHub `main`. Its
+[proof closeout](docs/COMMUNICATION_EEG_PROSPECTIVE_SYNCHRONIZED_COHORT_PROOF_CLOSEOUT.md)
+binds the three immutable registration artifacts. Review also found one
+human/machine mismatch: the prose said 60% stable-commit coverage while the
+contract and test said 70%. [Amendment 1](docs/COMMUNICATION_EEG_PROSPECTIVE_SYNCHRONIZED_COHORT_AMENDMENT_1.md)
+makes the stricter 70% value authoritative before generated implementation.
 Even a complete internal pass would not establish external reproduction,
 arbitrary thought reading, sentence decoding, or clinical use.
 

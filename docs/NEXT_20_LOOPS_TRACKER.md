@@ -14,8 +14,12 @@
 > the 10 GiB raw and 20 GiB total
 > caps. This is Tier A design only: recruitment, recording, hardware, real EEG,
 > targets, models, scoring, release, and claim authority are all false. The
-> next reversible task is generated qualification of the entire study grammar,
-> firewall, stream, freezer, scorer, and resource monitor.
+> exact registration `df3266e` passed both required jobs in CI `33134791405`
+> and reached GitHub `main`. Proof review found a 60% human versus 70% machine
+> stable-commit coverage mismatch; Amendment 1 selects 70%. The next reversible
+> task, after the proof closeout and amendment are remotely green, is generated
+> qualification of the entire study grammar, firewall, stream, freezer,
+> scorer, and resource monitor.
 
 > **Triangulated communication replication refresh (2026-08-27):** newly
 > public OpenNeuro `ds007591-v1.0.1` adds a valuable 1.62 GB full-sensor

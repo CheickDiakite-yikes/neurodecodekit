@@ -178,6 +178,16 @@ recruitment, consent collection, device, real/private data, target, model,
 score, provider, release, or scientific claim operation. `DREYER-C5R-1-HL`
 remains the sole active Tier C packet with all authority false.
 
+Exact registration `df3266ed09132017cc8a9dcc10e8a7d61ea92f61` passed
+Base Python job `98732241444`, Optional Neuro Readers job `98732241603`, and
+CI `33134791405`, then reached GitHub `main`. Read the additive proof-only
+closeout and Amendment 1. The proof binds the three registration artifacts /
+38,364 bytes. Amendment 1 resolves only the parent human document's 60% versus
+machine contract's 70% stable-commit coverage mismatch by making 70%
+authoritative. Generated design remains paused until both additions are
+remotely green; every generated execution, human/device, real/private, model,
+score, release, and claim authority remains false.
+
 Read the objective evidence and replication decision after that refresh:
 `docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md`
 and its machine registry. It records one narrow directional real-task evidence
