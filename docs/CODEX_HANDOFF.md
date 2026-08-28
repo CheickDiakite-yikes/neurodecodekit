@@ -8446,3 +8446,30 @@ binds three exact artifacts / 17,634 bytes under canonical set SHA-256
 `930b799bc54d933b94d55df1bdb1266d9025748a7a669aafbee95d9bfa068d74`.
 Immediate gate: verify, commit, push, and remotely green that proof closeout
 without repeating a source request or touching the unrelated inspection file.
+
+## 2026-08-27 Prospective Synchronized Cohort Handoff
+
+Read `docs/COMMUNICATION_EEG_PROSPECTIVE_SYNCHRONIZED_COHORT_PREREGISTRATION.md`,
+its machine contract, matching test, and the current frontier. `COMM-P0-SYNC-v0`
+is the Tier A response to an exhausted public replication router. It freezes
+separate 21-completer discovery and replication cohorts, a 22-person enrollment
+cap per cohort,
+participants each, 64 EEG + 4 EOG + 4 oral-EMG channels, microphone, trigger,
+geometry and clocks, plus prompted and generic-cue free-choice four-command
+tasks. The free-choice report appears only after prediction or abstention, so
+the primary user-intention target cannot enter the neural decision window.
+
+Discovery and replication must independently pass the registered nuisance and
+class-destroyed EEG comparisons, participant consistency, exact inference, and
+accuracy margin. Replication enters hidden-output shadow mode before the same
+unchanged model enters live display. The raw worst-case budget is
+10,463,692,800 bytes (`9.7451 GiB`) inside the 10 GiB raw and 20 GiB total
+caps. External reproduction remains a separate later gate.
+
+This contract authorizes no recruitment, consent collection, device, real EEG,
+target, model, score, stream, release, or claim operation. `DREYER-C5R-1-HL`
+remains the sole active all-false Tier C packet. Next reversible task: create a
+generated-only qualification contract and implementation for the study grammar,
+channel roles, participant firewall, free-choice report seal, causal stream,
+prediction freezer, scorer, and storage monitor. Do not touch the unrelated
+tracker inspection NDJSON.

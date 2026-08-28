@@ -16319,3 +16319,14 @@ and require both remote jobs green before the one official qualification.
   `930b799bc54d933b94d55df1bdb1266d9025748a7a669aafbee95d9bfa068d74`.
   The proof repeats no dataset-page, paper, archive, metadata, or payload
   request.
+- 2026-08-27: Added `COMM-P0-SYNC-v0`, the zero-operation prospective study
+  contract reached by the exhausted public replication router. It freezes two
+  independent cohorts of 21 completers, a 22-person enrollment cap per cohort,
+  73 synchronized biosignal channels including photodiode, microphone and trigger, 256 maximum
+  trials per person split across prompted, generic-cue free-choice, null, and
+  peripheral-calibration blocks, participant-level exact inference, target
+  sealing, causal shadow/live operation, and the existing compact model/control
+  family. Computed worst-case raw biosignal bytes at 8,140,492,800 and audio at
+  2,323,200,000, totaling 10,463,692,800 bytes or 9.7451 GiB. Human, device,
+  real/private, model, target, score, provider, release, and claim counters are
+  all zero. Next reversible work is generated qualification only.

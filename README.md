@@ -237,6 +237,28 @@ in CI `33131980667` and reached GitHub `main`. Its
 [proof closeout](docs/COMMUNICATION_EEG_KARA_ONE_SOURCE_READINESS_PROOF_CLOSEOUT.md)
 binds the exact result triplet without repeating either public-source request.
 
+With the public router now exhausted, the
+[`COMM-P0-SYNC-v0` prospective cohort](docs/COMMUNICATION_EEG_PROSPECTIVE_SYNCHRONIZED_COHORT_PREREGISTRATION.md)
+freezes the smallest direct route to the missing evidence. It specifies two
+independent 21-completer cohorts, 64 EEG plus four EOG and four bilateral oral-EMG
+channels, microphone and hardware timing, four-command prompted and free-choice
+tasks, participant-held-out zero-calibration scoring, a source-only causal
+endpointer, and an unchanged shadow-to-live transition. The primary endpoint
+is not EEG versus chance: nuisance-adjusted EEG must improve log loss by at
+least `0.03` nats/item over both all recorded peripheral information and a
+class-destroyed EEG control, pass participant consistency and exact inference,
+and beat the strongest prior/cue/timing/posterior/peripheral control by at
+least `0.05` balanced accuracy in discovery and replication separately.
+
+The complete worst-case raw recording is byte-accounted at 10,463,692,800
+bytes (`9.7451 GiB`) for the 44-person enrollment cap, within the 10 GiB raw
+cap; the remaining 20 GiB envelope
+is reserved for bounded derivatives, temporary output, aggregates, and
+headroom. This is a study design, not a recording: no participant, device,
+real EEG, target, model, score, or claim operation is authorized or performed.
+Even a complete internal pass would not establish external reproduction,
+arbitrary thought reading, sentence decoding, or clinical use.
+
 The new
 [objective evidence ledger](docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md)
 makes the gap to the end goal explicit. NeuroDecodeKit has real directional

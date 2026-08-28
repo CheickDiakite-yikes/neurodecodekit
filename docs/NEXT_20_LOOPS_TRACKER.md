@@ -1,5 +1,22 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
+> **Prospective synchronized communication cohort (2026-08-27):** with every
+> registered public replication route currently unqualified, `COMM-P0-SYNC-v0`
+> freezes the direct fallback before any human operation. It plans separate
+> 21-completer discovery and replication cohorts, requires all 21 complete
+> people in each, records 64 EEG + 4 EOG + 4 bilateral oral-EMG channels plus
+> microphone and hardware timing, and separates prompted commands from a
+> generic-cue free-choice endpoint whose report appears only after prediction
+> freeze. Discovery and replication must independently beat all peripheral,
+> cue, timing, posterior, deranged-EEG, and language-only controls before an
+> unchanged causal shadow-to-live stage. Worst-case raw storage is
+> 10,463,692,800 bytes (`9.7451 GiB`) for the 44-person enrollment cap, inside
+> the 10 GiB raw and 20 GiB total
+> caps. This is Tier A design only: recruitment, recording, hardware, real EEG,
+> targets, models, scoring, release, and claim authority are all false. The
+> next reversible task is generated qualification of the entire study grammar,
+> firewall, stream, freezer, scorer, and resource monitor.
+
 > **Triangulated communication replication refresh (2026-08-27):** newly
 > public OpenNeuro `ds007591-v1.0.1` adds a valuable 1.62 GB full-sensor
 > mechanistic bridge with EEG, EOG, oral EMG, microphone, and triggers, but its
@@ -41,7 +58,7 @@
 > Exact readiness result `a9a9b23` passed both required jobs in CI
 > `33131980667` and reached GitHub `main`. Its proof-only closeout binds three
 > exact artifacts / 17,634 bytes without repeating either source retrieval and
-> is pending its own remote CI.
+> reached GitHub `main` at exact closeout `560f7b1`.
 
 > **Communication objective ledger (2026-08-27):** the current end goal is now
 > decomposed into eight machine-tested evidence requirements. Only one narrow

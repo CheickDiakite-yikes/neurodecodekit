@@ -16,6 +16,17 @@
 > seconds, and 30,949,376-byte peak RSS. No real EEG, target, model, provider,
 > stream, device, or scientific operation occurred; no rerun is allowed.
 
+> Prospective communication cohort, 2026-08-27: after the registered public
+> replication routes failed source qualification, `COMM-P0-SYNC-v0` froze a
+> zero-operation two-cohort study with 42 planned completers and a 44-person
+> enrollment cap, synchronized
+> 64 EEG + 4 EOG + 4 oral-EMG channels, microphone and triggers, prompted and
+> free-choice four-command endpoints, participant-held-out inference, causal
+> shadow/live stages, and a 10,463,692,800-byte worst-case raw budget. Read
+> `docs/COMMUNICATION_EEG_PROSPECTIVE_SYNCHRONIZED_COHORT_PREREGISTRATION.md`.
+> It authorizes no recruitment, recording, hardware, data, model, target,
+> score, release, or claim operation.
+
 ## Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight
 
 Start with `registries/current_research_frontier.v0.json`, the machine-readable

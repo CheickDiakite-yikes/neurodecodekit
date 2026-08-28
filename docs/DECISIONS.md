@@ -14422,3 +14422,17 @@ green; only then may the single generated qualification run.
   in a proof-only closeout totaling 17,634 bytes. Do not repeat either public-
   source retrieval, inspect an archive, alter the fixed router, or convert a
   source-lock park into neural evidence, acquisition authority, or a claim.
+- 2026-08-27: Freeze `COMM-P0-SYNC-v0` as the prospective fallback after the
+  registered public full and partial replication routes failed operational
+  qualification. Use separate 21-completer discovery and replication cohorts,
+  cap enrollment at 22 per cohort, and preserve 64 EEG,
+  four EOG, four bilateral oral-EMG channels, microphone, trigger, geometry,
+  and clocks. Make generic-cue free choice the primary user-intention endpoint;
+  require prediction or abstention before the randomized report map. Keep the
+  compact participant-held-out model and every peripheral, posterior, cue,
+  timing, derangement, endpoint, and language-only control. Discovery and
+  replication must pass separately before an unchanged shadow-to-live stage.
+  Bind worst-case raw storage at 10,463,692,800 bytes and the total envelope at
+  20 GiB. This is a Tier A design freeze only; human, device, real-data,
+  target, training, scoring, release, and claim authority remain false, and
+  `DREYER-C5R-1-HL` remains sole.

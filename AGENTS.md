@@ -160,8 +160,23 @@ governed prospective synchronized EEG/EOG/bilateral oral-EMG fallback. Exact
 readiness result `a9a9b2380dd8599cc08d6eb82ce1dc8f8e462c51` passed Base job
 `98723346590`, Optional Neuro Readers job `98723346326`, and CI `33131980667`,
 then reached GitHub `main`. Read its proof-only closeout; it binds three exact
-artifacts / 17,634 bytes and is pending its own remote CI. Neither artifact
-creates acquisition authority or a scientific claim.
+artifacts / 17,634 bytes. Exact proof closeout
+`560f7b1a896d9aac397c158b063ae805b3b0e626` reached GitHub `main`. Neither
+artifact creates acquisition authority or a scientific claim.
+
+The prospective fallback is now frozen in
+`docs/COMMUNICATION_EEG_PROSPECTIVE_SYNCHRONIZED_COHORT_PREREGISTRATION.md` and
+`registries/communication_eeg_prospective_synchronized_cohort_contract.v0.json`.
+`COMM-P0-SYNC-v0` specifies separate 21-completer discovery and replication
+cohorts, a 22-person enrollment cap per cohort, 64 EEG + 4 EOG + 4 bilateral
+oral-EMG channels, microphone and trigger, prompted and free-choice four-command
+endpoints, zero-calibration participant holds, causal shadow/live stages, and
+a 10,463,692,800-byte worst-case raw surface inside the 20 GiB total envelope.
+Its next reversible gate is generated-only qualification of the reader, task
+grammar, target firewall, stream, freezer, scorer, and caps. It authorizes no
+recruitment, consent collection, device, real/private data, target, model,
+score, provider, release, or scientific claim operation. `DREYER-C5R-1-HL`
+remains the sole active Tier C packet with all authority false.
 
 Read the objective evidence and replication decision after that refresh:
 `docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md`
