@@ -1,0 +1,133 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_kara_one_source_readiness",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-27",
+  "program_id": "NDK-COMM-CLAIM-2026-08-26-v0",
+  "source_id": "Kara_One",
+  "status": "tier_A_public_source_readiness_route_parked_zero_payload",
+  "active_gate_preserved": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "sole_active_Tier_C_packet": true,
+    "all_authority_flags_remain_false": true,
+    "authority_changed": false
+  },
+  "verified_public_surface": {
+    "canonical_dataset_page": "https://www.cs.toronto.edu/~complingweb/data/karaOne/karaOne.html",
+    "associated_paper": "https://www.cs.toronto.edu/~complingweb/data/karaOne/ZhaoRudzicz15.pdf",
+    "release_revision": "unversioned_public_release",
+    "listed_participant_archives": 14,
+    "archive_container": "one_tar_bz2_per_participant",
+    "reported_total_bytes_decimal": 24000000000,
+    "reported_total_size_text": "24GB",
+    "license_terms": "free_for_academic_non_profit_purposes_with_citation_required",
+    "reported_EEG_cap_channels": 64,
+    "reported_ocular_electrodes": 4,
+    "reported_sampling_rate_hz": 1000,
+    "reported_face_tracking": "Microsoft_Kinect_v1.8_six_animation_units",
+    "reported_audio": true,
+    "reported_prompt_units": 11,
+    "reported_paper_recruited_participants": 12,
+    "reported_paper_discarded_participants": 4,
+    "reported_paper_analyzed_participants": 8,
+    "release_and_paper_participant_counts_agree": false,
+    "separate_oral_EMG_verified": false,
+    "CNT_channel_named_EMG_is_oral_EMG": false,
+    "CNT_channel_named_EMG_reported_role": "colour_sensors"
+  },
+  "frozen_route_requirements": {
+    "minimum_complete_participants": 12,
+    "participant_rule": "all_target_free_eligible_participants",
+    "participant_dropping_allowed": false,
+    "selected_raw_cap_bytes": 10737418240,
+    "session_run_rule": "lexicographically_first_common_complete_inventory_preserving_required_sensors_and_classes_under_10_GiB",
+    "over_cap_or_unsplittable_action": "park_without_participant_dropping",
+    "claim_ceiling": "independent_imagined_speech_challenge_adjusted_for_recorded_ocular_and_face_information_but_not_oral_EMG"
+  },
+  "operational_source_lock": {
+    "reachable_dataset_page": true,
+    "immutable_dataset_revision_verified": false,
+    "complete_archive_name_list_verified": true,
+    "per_archive_bytes_verified": false,
+    "per_archive_hashes_verified": false,
+    "member_level_remote_manifest_verified": false,
+    "member_level_selective_transfer_verified": false,
+    "exact_target_free_eligible_participant_set_verified": false,
+    "common_complete_sensor_and_class_inventory_verified": false,
+    "all_public_participant_archives_within_cap": false,
+    "deterministic_complete_slice_within_cap_verified": false,
+    "raw_EEG_verified": true,
+    "recorded_EOG_verified": true,
+    "recorded_face_tracking_verified": true,
+    "separate_oral_EMG_verified": false,
+    "acquisition_ready": false
+  },
+  "router_decision": {
+    "role": "partial_eye_face_controlled_imagined_speech_challenge",
+    "operationally_qualified_now": false,
+    "parked_under_frozen_contract": true,
+    "park_reasons": [
+      "reported_24GB_release_exceeds_10_GiB_selected_raw_cap",
+      "participant_archives_are_not_remotely_member_selectable",
+      "participant_dropping_is_forbidden",
+      "immutable_revision_sizes_hashes_and_common_inventory_are_unverified",
+      "release_and_paper_participant_counts_conflict"
+    ],
+    "full_peripheral_attribution_allowed": false,
+    "may_be_rescued_by_participant_subsetting": false,
+    "may_be_substituted_after_discovery_result": false,
+    "prospective_contract_change_required_for_reconsideration": true
+  },
+  "public_replication_router_outcome": {
+    "SilentSpeech_EEG_full_control_qualified": false,
+    "TESSCCo_partial_route_qualified": false,
+    "Kara_One_partial_route_qualified": false,
+    "qualified_public_partial_routes": [],
+    "public_replication_parked": true,
+    "prospective_synchronized_EEG_EOG_bilateral_oral_EMG_fallback_preserved": true,
+    "mechanistic_bridge_may_rescue_replication": false
+  },
+  "measured_public_research": {
+    "dataset_page_retrievals": 1,
+    "associated_paper_retrievals": 1,
+    "participant_archive_requests": 0,
+    "per_member_metadata_requests": 0,
+    "dataset_payload_requests": 0,
+    "dataset_payload_bytes": 0,
+    "transport_response_bytes": null,
+    "crawler_internal_request_count": null,
+    "temporary_local_public_source_bytes": 0,
+    "writes_outside_repository": 0,
+    "cleanup_or_deletion": false
+  },
+  "operation_counters": {
+    "real_or_private_path_reads": 0,
+    "dataset_payload_requests": 0,
+    "dataset_payload_bytes": 0,
+    "EEG_or_EXG_header_reads": 0,
+    "signal_samples": 0,
+    "event_target_or_label_rows": 0,
+    "training_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "provider_calls": 0,
+    "stream_or_device_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "deterministic_public_replication_parking_when_the_last_partial_route_exceeds_frozen_storage_and_completeness_gates",
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_participant_generalization_established": false,
+    "independent_replication_established": false,
+    "causal_live_neural_decoding_established": false
+  },
+  "primary_sources": {
+    "dataset_page": "https://www.cs.toronto.edu/~complingweb/data/karaOne/karaOne.html",
+    "associated_paper": "https://www.cs.toronto.edu/~complingweb/data/karaOne/ZhaoRudzicz15.pdf"
+  }
+}

@@ -142,7 +142,23 @@ acquisition packet or impute the article license to the dataset.
 Exact readiness result `3ed55ba274b0aef0bb7434867c9c0ef6430f8f37`
 passed Base job `98717252636`, Optional Neuro Readers job `98717252621`, and
 CI `33130065908`, then reached GitHub `main`. Read its proof-only closeout; it
-binds three exact artifacts / 15,460 bytes and is pending its own remote CI.
+binds three exact artifacts / 15,460 bytes. Exact closeout
+`752f99c469cd645af183ab76d16ed6b00bd8420f` passed Base job `98719186856`,
+Optional Neuro Readers job `98719187054`, and CI `33130671683`, then reached
+GitHub `main`.
+
+Read the additive Kara One source-readiness result next. The official page
+lists 14 participant `.tar.bz2` archives totaling approximately 24 GB, while
+the associated paper reports 12 recruited and eight analyzed participants.
+The page exposes no immutable revision, archive sizes or hashes, member-level
+remote manifest, or verified complete common EEG plus eye/face slice within the
+frozen 10 GiB cap. Under the exact all-eligible-participant, no-dropping,
+over-cap-or-unsplittable-parks router, Kara One is therefore parked under the
+currently exposed source surface. No archive or payload was requested. No
+public partial replication route currently qualifies; preserve the separately
+governed prospective synchronized EEG/EOG/bilateral oral-EMG fallback. The
+readiness result is pending its own remote CI and creates no acquisition
+authority or scientific claim.
 
 Read the objective evidence and replication decision after that refresh:
 `docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md`

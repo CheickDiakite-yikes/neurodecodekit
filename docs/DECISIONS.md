@@ -14405,3 +14405,14 @@ green; only then may the single generated qualification run.
   Bind only its human result, machine result, and test in a proof-only
   closeout. Do not repeat the public-source request or convert operational
   unavailability into acquisition authority or a scientific claim.
+- 2026-08-27: Accept `752f99c469cd645af183ab76d16ed6b00bd8420f`,
+  CI `33130671683`, as the remotely green TESSCCo readiness proof closeout.
+  Evaluate Kara One next under the unchanged fixed-order router. Its official
+  public surface lists 14 participant archives totaling approximately 24 GB,
+  while the paper reports 12 recruited and eight analyzed participants. Park
+  Kara One under the current source surface because no immutable member-level
+  manifest proves a complete all-eligible-participant EEG plus eye/face slice
+  within 10 GiB and participant dropping is forbidden. Treat this as a source-
+  lock decision, not a permanent impossibility or scientific result. Preserve
+  the prospective synchronized EEG/EOG/bilateral oral-EMG fallback; request no
+  archive and change no Tier C authority.

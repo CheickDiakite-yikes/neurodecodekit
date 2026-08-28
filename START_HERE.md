@@ -193,7 +193,21 @@ independent key but is not acquisition-ready, and no metadata API or EEG file
 was requested.
 Exact readiness result `3ed55ba` passed both required jobs in CI `33130065908`
 and reached GitHub `main`. Read its proof-only closeout next; it binds three
-exact artifacts / 15,460 bytes and repeats no source or payload request.
+exact artifacts / 15,460 bytes and repeats no source or payload request. Exact
+closeout `752f99c` passed both required jobs in CI `33130671683` and reached
+GitHub `main`.
+
+Then read `docs/COMMUNICATION_EEG_KARA_ONE_SOURCE_READINESS_2026_08_27.md`.
+The official page exposes 14 participant archives totaling approximately
+24 GB but no member-level remote manifest proving a complete all-eligible-
+participant EEG plus eye/face inventory within the frozen 10 GiB cap. Its
+associated paper reports 12 recruited and eight analyzed participants, so the
+exact target-free eligibility set is also unresolved. The registered router
+forbids participant dropping and parks an over-cap or unsplittable route. Kara
+One is therefore parked under the currently exposed source surface, no archive
+was requested, and no public partial replication route currently qualifies.
+Preserve the prospective synchronized EEG/EOG/bilateral oral-EMG fallback and
+do not create an acquisition packet from this Tier A result.
 
 Then read
 `docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md`.

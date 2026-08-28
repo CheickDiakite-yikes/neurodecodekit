@@ -326,9 +326,18 @@
         "total_bytes": 24000000000,
         "total_bytes_status": "approximate_total_reported_by_canonical_dataset_page",
         "smallest_meaningful_slice": {
-          "description": "One complete participant archive.",
+          "description": "One participant archive is the smallest exposed distribution unit, not a valid registered replication slice.",
           "exact_bytes": null,
           "status": "canonical_page_lists_archives_without_sizes"
+        },
+        "registered_route": {
+          "selected_raw_cap_bytes": 10737418240,
+          "all_target_free_eligible_participants_required": true,
+          "participant_dropping_allowed": false,
+          "member_level_remote_manifest_verified": false,
+          "complete_common_inventory_within_cap_verified": false,
+          "parked_under_10_GiB_cap": true,
+          "acquisition_ready": false
         }
       },
       "capabilities": {
@@ -345,12 +354,14 @@
       ],
       "known_limitations": [
         "Eleven prompted units do not support sentence or open-vocabulary claims.",
-        "License is narrower than a standard open-data license."
+        "License is narrower than a standard open-data license.",
+        "The public page lists 14 participant archives, while the associated paper reports 12 recruited and eight analyzed participants.",
+        "Recorded ocular and face information is available, but separate oral EMG is not verified."
       ],
-      "proof_posture": "Imagined-phonology classification and multimodal leakage cohort only.",
+      "proof_posture": "public_partial_route_parked_by_frozen_source_lock",
       "first_fresh_benchmark": {
         "suitability": "not_first",
-        "rationale": "Large archives, restrictive terms, CNT intake, and strong peripheral leakage make it a later qualification target."
+        "rationale": "The exposed 24 GB participant-archive release has no verified complete all-participant slice under the frozen 10 GiB cap; restrictive terms, CNT intake, and missing oral EMG further limit the route."
       }
     },
     {

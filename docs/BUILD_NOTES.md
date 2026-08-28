@@ -16302,3 +16302,13 @@ and require both remote jobs green before the one official qualification.
   immutable artifacts / 15,460 bytes under canonical set SHA-256
   `6ee0e1250d22e7c001605356f51b1814a7c67f32ab55795301235021e286fabb`.
   The proof repeats no article, DOI, metadata, or payload request.
+- 2026-08-27: Exact TESSCCo proof closeout `752f99c` passed Base Python
+  `98719186856`, Optional Neuro Readers `98719187054`, and CI `33130671683`,
+  then reached GitHub `main`. Checked the official Kara One dataset page and
+  associated paper as the fixed-order second partial route. The page lists 14
+  participant archives / approximately 24 GB and exposes no member-level
+  remote manifest, exact archive sizes or hashes, or immutable revision; the
+  paper reports 12 recruited and eight analyzed participants. Under the frozen
+  all-eligible-participant, no-dropping, 10 GiB rule, the route is parked under
+  the currently exposed source surface. No archive, metadata API, neural
+  payload, model, target, score, stream, device, or claim operation occurred.

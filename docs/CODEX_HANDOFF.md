@@ -8415,3 +8415,27 @@ binds three exact artifacts / 15,460 bytes under canonical set SHA-256
 `6ee0e1250d22e7c001605356f51b1814a7c67f32ab55795301235021e286fabb`.
 Immediate gate: commit, push, and remotely green that proof closeout without
 repeating the source request or touching the unrelated inspection file.
+
+## 2026-08-27 Kara One Source Readiness Handoff
+
+Read `docs/COMMUNICATION_EEG_KARA_ONE_SOURCE_READINESS_2026_08_27.md`, its
+machine registry, the updated Kara One dataset-registry row, and matching test.
+The official University of Toronto page exposes 14 participant `.tar.bz2`
+archives totaling approximately 24 GB. It verifies 64-channel EEG, four ocular
+electrodes, 1 kHz sampling, Kinect facial units, and audio, but not separate
+oral EMG. The associated paper reports 12 recruited and eight analyzed
+participants, so the exact target-free eligibility surface is unresolved.
+
+The frozen router requires all target-free eligible participants, forbids
+participant dropping, limits selected raw input to 10 GiB, and parks an over-
+cap or unsplittable source. No official member-level remote manifest currently
+proves a complete EEG plus eye/face slice within that cap. Kara One is therefore
+parked under the currently exposed source surface; this is not a permanent
+impossibility or a negative EEG result. No archive or payload was requested.
+
+With SilentSpeech-EEG operationally unqualified and TESSCCo blocked at source
+identity, no public replication route currently qualifies. Preserve the
+prospective synchronized EEG/EOG/bilateral oral-EMG fallback. Do not create an
+acquisition packet, activate `DREYER-C5R-1-HL` or COMM-L0-META, or stage the
+unrelated tracker inspection NDJSON. Immediate gate: verify, commit, push, and
+remotely green this Tier A readiness result.

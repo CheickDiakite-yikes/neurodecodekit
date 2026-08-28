@@ -212,7 +212,26 @@ dataset license, and peripheral-channel roles still need an exact source lock.
 Exact readiness result `3ed55ba` passed both required suites in CI
 `33130065908` and is on GitHub `main`; its
 [proof closeout](docs/COMMUNICATION_EEG_TESSCCO_SOURCE_READINESS_PROOF_CLOSEOUT.md)
-binds the immutable decision without repeating the source request.
+binds the immutable decision without repeating the source request. Exact
+closeout `752f99c` passed both required suites in CI `33130671683` and is on
+GitHub `main`.
+
+The next
+[Kara One source-readiness check](docs/COMMUNICATION_EEG_KARA_ONE_SOURCE_READINESS_2026_08_27.md)
+closes the other registered public partial route under the current source
+surface. Its official page exposes 14 participant archives totaling about
+24 GB, above the frozen 10 GiB selected-raw cap, without a member-level remote
+manifest that proves a complete all-eligible-participant EEG plus eye/face
+slice below that cap. The page and paper also disagree on the participant
+surface: 14 archives are published, while the paper reports 12 recruited and
+eight analyzed participants. The contract forbids dropping participants, so
+Kara One is parked rather than conveniently subset. This is a reproducibility decision,
+not a negative EEG result: no archive was requested, and a future official
+manifest could still establish an eligible complete slice before discovery
+targets. With SilentSpeech-EEG unqualified and TESSCCo blocked, no public
+replication route currently qualifies; the honest fallback is a separately
+approved prospective cohort with synchronized EEG, EOG, and bilateral oral
+EMG.
 
 The new
 [objective evidence ledger](docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md)

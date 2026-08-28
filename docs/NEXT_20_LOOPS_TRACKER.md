@@ -23,8 +23,21 @@
 > metadata API, EEG payload, authority, or claim operation occurred.
 > Exact readiness result `3ed55ba` passed both required jobs in CI
 > `33130065908` and reached GitHub `main`. Its proof closeout binds three exact
-> artifacts / 15,460 bytes without repeating the source check and is pending
-> its own remote CI.
+> artifacts / 15,460 bytes without repeating the source check. Exact closeout
+> `752f99c` passed both required jobs in CI `33130671683` and reached GitHub
+> `main`.
+
+> **Kara One source readiness (2026-08-27):** the final registered public
+> partial route is parked under the current source surface. The official page
+> exposes 14 participant archives totaling approximately 24 GB, no member-level
+> remote manifest proving a complete common EEG plus eye/face slice under the
+> frozen 10 GiB cap, and a participant-count discrepancy with the associated
+> paper (12 recruited, eight analyzed). The router requires all target-free
+> eligible participants and forbids participant dropping. No archive was
+> requested. With SilentSpeech-EEG unqualified and TESSCCo blocked, no public
+> replication route currently qualifies; preserve the prospective synchronized
+> EEG/EOG/bilateral oral-EMG fallback. This is a source-lock result, not neural
+> evidence or a claim upgrade.
 
 > **Communication objective ledger (2026-08-27):** the current end goal is now
 > decomposed into eight machine-tested evidence requirements. Only one narrow
