@@ -59,7 +59,7 @@ It completed:
 
 The two 15-digest replay surfaces were equivalent. The coordinator and score
 worker focused suite passed 25 tests. The repository-wide post-milestone
-dependency-light suite passed 6,725 tests with 270 optional skips in 259.826
+dependency-light suite passed 6,725 tests with 271 optional skips in 258.819
 seconds.
 
 ## Remaining Activation Blockers

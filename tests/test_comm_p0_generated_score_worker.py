@@ -192,6 +192,7 @@ def _identity(path: Path) -> dict[str, object]:
 
 class CommP0GeneratedScoreWorkerTests(unittest.TestCase):
     def setUp(self) -> None:
+        worker._CONSUMED_TARGET_IDENTITIES.clear()
         self.temporary = tempfile.TemporaryDirectory()
         self.root = Path(self.temporary.name)
         self.contract, self.trials, self.predictions, self.observations, self.targets = _fixture()

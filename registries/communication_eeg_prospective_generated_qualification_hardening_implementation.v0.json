@@ -19,7 +19,7 @@
     },
     {
       "path": "tests/test_comm_p0_generated_score_worker.py",
-      "sha256": "5a14e7fd951a6b6bb8bc8b94f5e3647849376771e05f4910020075fb15ed92b0"
+      "sha256": "e7284a131f705f5d13bc4a20ad3bf1065d5e39946eb75df6ab71d0ef351bb836"
     }
   ],
   "capabilities": {
@@ -67,8 +67,8 @@
   "local_verification": {
     "coordinator_and_score_worker_tests": 25,
     "complete_dependency_light_tests": 6725,
-    "complete_dependency_light_skips": 270,
-    "complete_dependency_light_runtime_seconds": 259.826,
+    "complete_dependency_light_skips": 271,
+    "complete_dependency_light_runtime_seconds": 258.819,
     "ruff_passed": true,
     "git_diff_check_passed": true
   },
