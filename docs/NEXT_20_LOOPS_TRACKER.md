@@ -12,9 +12,12 @@
 > every fold still has isolated source labels, a fresh child, and unique
 > predictions. A reduced two-child measurement passed in 44.6720 seconds at
 > 236,437,504-byte peak RSS with zero network, real-data, device, or retained
-> payload. The lock remains false. Next gates are exact remote proof,
-> bounded evidence that two replays fit 180 seconds, separate activation, then
-> one official generated run. No real EEG or scientific claim changed.
+> payload. Exact head `669c858` passed Base job `98815336723`, Optional Neuro
+> Readers job `98815336577`, and CI `33161053075`, then reached GitHub `main`.
+> The lock remains false. Next gates are a separately registered bounded
+> full-scale two-child rehearsal proving both replays fit 180 seconds, separate
+> activation, then one official generated run. No real EEG or scientific claim
+> changed.
 
 > **COMM-P0-G implementation update (2026-08-28):** exact numerical/scorer
 > `b7e4d83`, endpoint-separated live scorer `c46064d`, and standalone bounded
@@ -72,9 +75,11 @@
 > Exact core `9378421` passed both required jobs in CI `33139382019` and
 > reached GitHub `main`. Numerical/scorer milestone 2 now covers the exact
 > 42-fold, 630-classifier, 630-temperature, 1,428-set schedule and separate
-> aggregate discovery/replication scoring. The remaining reversible work is
-> process isolation, real adversarial mutations, resource proof, and
-> activation-ready publication.
+> aggregate discovery/replication scoring. Exact coordinator head `669c858`
+> then completed process isolation, adversarial mutations, durable freeze
+> verification, resource ledgers, and activation-ready atomic publication.
+> The remaining reversible work is a separately registered full-scale
+> two-child runtime proof under 180 seconds, followed by separate activation.
 
 > **Triangulated communication replication refresh (2026-08-27):** newly
 > public OpenNeuro `ds007591-v1.0.1` adds a valuable 1.62 GB full-sensor

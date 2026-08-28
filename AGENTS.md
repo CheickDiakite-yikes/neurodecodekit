@@ -57,8 +57,13 @@ deliveries and two scores per replay, uses distinct sanitized replay children,
 verifies the score freeze before target delivery, binds exact schedule/resource
 ledgers, and publishes atomically behind an unchanged false compile-time lock.
 A reduced two-child measurement passed in 44.6720 seconds at 236,437,504-byte
-peak RSS. It must become exactly green and demonstrate a credible two-by-21
-path under the frozen 180-second total cap before a separate activation. Do not
+peak RSS. Exact head `669c858d9c35f33bb39d5a71aa886d645a832497`
+passed Base job `98815336723`, Optional Neuro Readers job `98815336577`, and CI
+`33161053075`, then reached GitHub `main`. Read
+`docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_OFFICIAL_COORDINATOR_PROOF_CLOSEOUT.md`.
+The next reversible gate is a separately registered, nonofficial full-scale
+two-child rehearsal proving both 21-person-per-cohort replays fit the frozen
+180-second total cap. Do not run the rehearsal casually, activate the route,
 run the official qualification, create a consumed marker outside tests, or
 reinterpret generated work as science.
 

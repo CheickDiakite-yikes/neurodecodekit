@@ -39,10 +39,12 @@ shortcut, process, memory, input, output, and disk ledgers are acceptance
 gates; and final publication is atomic and non-replacing. A reduced two-child
 replay passed in 44.6720 seconds at 236,437,504-byte peak RSS with zero network,
 real-data, device, or retained-payload operations. The compile-time lock
-remains closed. The prior single full-scale rehearsal took 101.5826 seconds,
-so the two-by-21 route still needs bounded proof that it fits the frozen
-180-second total cap before activation. See the
-[official coordinator implementation](docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_OFFICIAL_COORDINATOR_IMPLEMENTATION.md).
+remains closed. Exact head `669c858` passed Base job `98815336723`, Optional
+Neuro Readers job `98815336577`, and CI `33161053075`, then reached GitHub
+`main`. The prior single full-scale rehearsal took 101.5826 seconds, so the
+two-by-21 route still needs bounded proof that it fits the frozen 180-second
+total cap before activation. See the
+[official coordinator proof closeout](docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_OFFICIAL_COORDINATOR_PROOF_CLOSEOUT.md).
 
 The first preregistered BNCI held-out experiment produced a useful negative
 result. Selected EEG reached 38.35% participant-macro balanced accuracy versus
@@ -324,8 +326,9 @@ used one combined target envelope and one score while the frozen contract
 requires one delivery and score per cohort. The successor preserves the
 historical measurement, enforces two cohort envelopes and two scores per
 replay, and implements the previously stubbed two-replay official coordinator.
-It is still generated engineering only. Exact remote proof, two-replay runtime
-evidence, and a separate activation remain required; no communication-decoding
+Exact head `669c858` passed both required jobs in CI `33161053075` and reached
+GitHub `main`. It is still generated engineering only. Full two-replay runtime
+evidence and a separate activation remain required; no communication-decoding
 or EEG-specific scientific claim follows from any fictional rehearsal.
 
 The new

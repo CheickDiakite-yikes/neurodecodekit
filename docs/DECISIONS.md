@@ -14502,3 +14502,13 @@ green; only then may the single generated qualification run.
   network, real/private, device, or retained-payload operations. This does not
   prove the two-by-21 180-second gate, activate the one-shot, or change any
   scientific or Tier C authority.
+- 2026-08-28: Accept `669c858d9c35f33bb39d5a71aa886d645a832497`
+  as the exact remotely green generated-only COMM-P0-G coordinator head after
+  Base Python `98815336723`, Optional Neuro Readers `98815336577`, and CI
+  `33161053075` passed and GitHub `main` resolved to that SHA. Bind the exact
+  implementation and measured reduced replay in a proof-only closeout without
+  repeating any execution. Require a separately preregistered nonofficial
+  full-scale two-child rehearsal before activation because the frozen
+  two-by-21 180-second total cap remains unproven. Keep the compile lock,
+  official invocation, real/private, human/device, Tier C, release, and every
+  scientific-claim flag false.

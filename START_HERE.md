@@ -18,9 +18,11 @@
 > publication is atomic and non-replacing. One reduced two-child measurement
 > passed in 44.6720 seconds at 236,437,504-byte peak RSS with zero network,
 > real-data, device, or retained-payload operations. The compile-time lock is
-> still false. This exact successor needs remote green proof, and the optimized
-> route still needs evidence that two full 21-person-per-cohort replays fit the
-> 180-second cap before separate activation. No official run or claim occurred.
+> still false. Exact head `669c858` passed Base job `98815336723`, Optional
+> Neuro Readers job `98815336577`, and CI `33161053075`, then reached GitHub
+> `main`. Read the proof-only closeout. The optimized route still needs evidence
+> that two full 21-person-per-cohort replays fit the 180-second cap before
+> separate activation. No official run or claim occurred.
 
 > COMM-LIVE-G0 closeout, 2026-08-27: exact implementation
 > `bc9bb109c9c82b56afe06d983d82b5b8ece669cf` passed Base `98694674092`,
@@ -58,8 +60,11 @@
 > implementation milestone; official qualification remains separately gated.
 > Exact core `9378421` passed both required jobs in CI `33139382019` and
 > reached GitHub `main`. The compact 42-fold numerical schedule and
-> aggregate-only scorer are now implemented additively; the isolated replay
-> coordinator, real malformed-refusal matrix, and activation remain next.
+> aggregate-only scorer are now implemented additively. Exact coordinator head
+> `669c858` is remotely green and on GitHub `main`; it adds distinct sanitized
+> replay children, the complete malformed-refusal matrix, durable freeze
+> verification, and bounded atomic publication. Full-scale two-child runtime
+> proof and activation remain next.
 > Exact numerical/scorer `b7e4d83` passed both required jobs in CI
 > `33140872221` and reached GitHub `main`. Exact endpoint-separated live scorer
 > `c46064d` passed both required jobs in CI `33141715948` and also reached
