@@ -266,8 +266,12 @@ real/private, device, or retained-payload operation.
 Branch commit `0097cb85835498494ef65b08f7ad9850eb0e6f5e` is not on
 `main`: Base job `98780682764` in CI `33150365280` rejected only its stale V0
 artifact hash after the worker evolved. It performed no qualification or real
-operation and must never be promoted. The fresh V1 successor is pending exact
-artifact binding and both required remote jobs. The official generated
+operation and must never be promoted. Exact V1 successor
+`55e627d6504f32d51ea4d6e93e04901f7233411c` passed Base Python job
+`98789718192`, Optional Neuro Readers job `98789718367`, and CI `33153174019`,
+then reached GitHub `main`. Read the proof-only closeout, which binds the exact
+V1 implementation registry, implementation document, and rehearsal record /
+13,830 bytes without repeating any execution. The official generated
 qualification remains inactive; separate exact-green activation is the only
 remaining gate, and no communication-decoding, EEG-beyond-peripheral,
 unseen-person, replication, live-device, or clinical claim is established.

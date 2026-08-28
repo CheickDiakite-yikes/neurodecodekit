@@ -10,10 +10,11 @@
 > budget. One nonofficial 42-person fictional rehearsal completed 91,392
 > prediction rows / 1,428 sets in 101.5826 seconds at 283,394,048-byte peak RSS
 > and 34,259,372 private temporary bytes, with zero network, real-data, device,
-> or retained-payload operations. The successor is pending exact commit, push,
-> and remote CI. Only a separate exact-green activation remains before the one
-> official generated qualification; no scientific claim or Tier C authority
-> changed.
+> or retained-payload operations. Exact V1 `55e627d` passed Base Python and
+> Optional Neuro Readers in CI `33153174019`, reached GitHub `main`, and now has
+> a proof-only closeout binding its exact 13,830-byte evidence triplet. Only a
+> separate exact-green activation remains before the one official generated
+> qualification; no scientific claim or Tier C authority changed.
 
 > **Prospective synchronized communication cohort (2026-08-27):** with every
 > registered public replication route currently unqualified, `COMM-P0-SYNC-v0`

@@ -58,9 +58,12 @@
 > work, and completed one nonofficial 42-person fictional rehearsal: 91,392
 > prediction rows / 1,428 sets in 101.5826 seconds at 283,394,048-byte peak RSS
 > and 34,259,372 private temporary bytes, with zero network, real-data, device,
-> or retained-payload operations. This successor is pending its own exact
-> commit, push, and remote CI. The official two-replay qualification remains
-> separately activation-locked and scientifically inert.
+> or retained-payload operations. Exact V1 `55e627d` passed Base job
+> `98789718192`, Optional Neuro Readers job `98789718367`, and CI
+> `33153174019`, then reached GitHub `main`. Read its proof-only closeout, which
+> binds the exact implementation and rehearsal evidence without repeating any
+> execution. The official two-replay qualification remains separately
+> activation-locked and scientifically inert.
 
 ## Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight
 

@@ -302,7 +302,11 @@ One nonofficial full-scale rehearsal exercised the complete 42-person fictional
 structure: 91,392 prediction rows, 1,428 prediction sets, seven shortcut routes,
 101.5826 seconds, 283,394,048-byte peak process-tree RSS, 34,259,372 private
 temporary bytes, zero network or real-data operations, and zero retained
-payload. This is generated engineering evidence only. The official two-replay
+payload. Exact V1 implementation `55e627d` passed Base Python and Optional
+Neuro Readers in CI `33153174019` and reached GitHub `main`; its
+[proof closeout](docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_QUALIFICATION_HARDENING_PROOF_CLOSEOUT.md)
+binds the exact 13,830-byte evidence triplet. This is generated engineering
+evidence only. The official two-replay
 qualification remains inactive pending a separate exact-green activation, and
 no communication-decoding or EEG-specific scientific claim follows from the
 fictional rehearsal.
