@@ -242,6 +242,15 @@ still needs a cryptographic freeze attestation and no-model capability, and no
 durable consumed marker or activation exists. Do not activate or reinterpret
 the scaffold under general continuation.
 
+Exact runner scaffold `a961849761b4b734347ca1e83191008c69a7e897`
+passed Base Python `98762447110`, Optional Neuro Readers `98762446873`, and CI
+`33144492190`, then reached GitHub `main`. Read its proof-only closeout next.
+That proof freezes the accepted scaffold but performs no qualification replay,
+target delivery, score, network, real/private read, or claim upgrade. The next
+Tier B task is an additive official-grade coordinator implementation resolving
+the six unimplemented activation controls; the complete 42-person execution
+remains separately inactive.
+
 Read the objective evidence and replication decision after that refresh:
 `docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md`
 and its machine registry. It records one narrow directional real-task evidence

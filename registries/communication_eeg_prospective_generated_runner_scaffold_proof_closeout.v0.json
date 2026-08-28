@@ -1,0 +1,63 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_prospective_generated_runner_scaffold_proof_closeout",
+  "schema_version": "0.1.0",
+  "milestone_id": "COMM-P0-G-RUNNER-SCAFFOLD-PROOF-v0",
+  "registration_id": "COMM-P0-G-v0",
+  "recorded_at_local": "2026-08-28",
+  "status": "exact_scaffold_implementation_remotely_green_on_GitHub_main",
+  "green_implementation": {
+    "commit": "a961849761b4b734347ca1e83191008c69a7e897",
+    "CI_run_id": 33144492190,
+    "base_python_job_id": 98762447110,
+    "optional_neuro_readers_job_id": 98762446873,
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true
+  },
+  "bound_artifacts": [
+    {
+      "path": "registries/communication_eeg_prospective_generated_runner_scaffold_implementation.v0.json",
+      "bytes": 4373,
+      "sha256": "90405f35cbf1c9b8d73c1a8ca5a15a843c204aa2e0348feb91e6db087f3cd217"
+    },
+    {
+      "path": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_RUNNER_SCAFFOLD_IMPLEMENTATION.md",
+      "bytes": 4443,
+      "sha256": "2dd4b85a84755bc65d09d4f80b8d8725472e2593d6e767a544f56e4c0f67844f"
+    },
+    {
+      "path": "src/neurodecodekit/experiments/comm_p0_generated_runner.py",
+      "bytes": 31944,
+      "sha256": "0eeb4312ac5629a9f9c51a864672f780ed1bc603b4c7bb726f349b31b9f4460d"
+    },
+    {
+      "path": "tests/test_comm_p0_generated_runner.py",
+      "bytes": 6676,
+      "sha256": "b94b453a98b2535d3b7522f71a2d0acdde18f4055d30c50ac333dac0059c0610"
+    }
+  ],
+  "operation_counters": {
+    "generated_qualification_invocations": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "network_bytes": 0,
+    "real_or_private_reads": 0,
+    "human_or_device_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "official_qualification": {
+    "activated": false,
+    "executed": false,
+    "consumed": false
+  },
+  "claim_boundary": {
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_performance_established": false,
+    "clinical_value_established": false
+  }
+}
