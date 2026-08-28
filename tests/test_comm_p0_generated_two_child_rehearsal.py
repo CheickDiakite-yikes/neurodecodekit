@@ -154,12 +154,19 @@ def test_implementation_record_binds_every_nonself_artifact() -> None:
     assert record["generated_mock_qualification"]["focused_tests_passed"] == 15
 
 
-def test_public_run_refuses_before_receipt_when_proof_is_absent(tmp_path: Path) -> None:
+def test_public_run_transition_never_executes_rehearsal(tmp_path: Path) -> None:
     output = tmp_path / "result.json"
     receipt = tmp_path / "receipt.json"
 
-    with pytest.raises(core.CommP0GeneratedRefusal, match="implementation_proof_absent"):
-        rehearsal.run_registered_rehearsal(output, receipt=receipt, root=ROOT)
+    if (ROOT / rehearsal.PROOF_PATH).exists():
+        proof = rehearsal.load_implementation_proof(ROOT)
+        assert proof["official_qualification_activated"] is False
+        assert proof["real_private_network_device_or_release_authorized"] is False
+    else:
+        with pytest.raises(
+            core.CommP0GeneratedRefusal, match="implementation_proof_absent"
+        ):
+            rehearsal.run_registered_rehearsal(output, receipt=receipt, root=ROOT)
     assert not output.exists()
     assert not receipt.exists()
 

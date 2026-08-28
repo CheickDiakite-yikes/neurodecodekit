@@ -56,7 +56,8 @@ executors, one socket-blocking subprocess, a tiny mock reservation, and
 temporary directories. They verify:
 
 - exact parent and future-proof bindings;
-- proof absence before any receipt or output;
+- proof absence refusal before any receipt or output, plus proof-presence
+  validation without invoking the rehearsal;
 - two distinct mock children and aggregate pass routing;
 - canonical mismatch and resource-cap park routing;
 - consumed receipt and no-rerun behavior;

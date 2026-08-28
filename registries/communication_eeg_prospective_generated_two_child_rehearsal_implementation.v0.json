@@ -26,18 +26,18 @@
     },
     {
       "path": "tests/test_comm_p0_generated_two_child_rehearsal.py",
-      "bytes": 17518,
-      "sha256": "ad4889b2758ff50114fe14c52f9a7cb042405c0d26b2d008a5ca10b8efc4780a"
+      "bytes": 17804,
+      "sha256": "710012fb9b431c5f1974fd5077028d13bd290c73e83c828dbb4d9ea6133bd487"
     },
     {
       "path": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_IMPLEMENTATION.md",
-      "bytes": 4861,
-      "sha256": "a399eff18bb8bc0468736ef87186684e6c4ed19dc9316294b1c896bee314856e"
+      "bytes": 4934,
+      "sha256": "b4aeced46c694f20f24a5dcec5a468543b7af6887040280b0c13600d0fc8dce0"
     }
   ],
   "artifact_summary": {
     "count": 4,
-    "bytes": 66376
+    "bytes": 66735
   },
   "capabilities": {
     "green_coordinator_modified": false,
