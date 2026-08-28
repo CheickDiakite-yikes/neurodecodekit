@@ -1,0 +1,124 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_prospective_generated_two_child_rehearsal_implementation",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-28",
+  "gate_id": "COMM-P0-G-FS2-v0",
+  "run_id": "COMM-P0-G-FS2-R0",
+  "status": "additive_generated_mock_qualified_pending_exact_commit_push_remote_CI_main_and_proof",
+  "green_registration": {
+    "commit": "e93058d5a9d4907c494dda5ae40881b47b76aa24",
+    "CI_run_id": 33163346250,
+    "base_python_job_id": 98822812867,
+    "optional_neuro_readers_job_id": 98822813051,
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true
+  },
+  "artifacts": [
+    {
+      "path": "src/neurodecodekit/experiments/comm_p0_generated_two_child_rehearsal.py",
+      "bytes": 42066,
+      "sha256": "8a34f3ace8e7ccec761d6967ca99d2205c7750c6818da27d5edc18971650af13"
+    },
+    {
+      "path": "src/neurodecodekit/comm_p0_rehearsal_cli.py",
+      "bytes": 1931,
+      "sha256": "f2546ac8cb327a16dd3473b289e9c43c1dad1602761df41806e5ab1175a38b83"
+    },
+    {
+      "path": "tests/test_comm_p0_generated_two_child_rehearsal.py",
+      "bytes": 17518,
+      "sha256": "ad4889b2758ff50114fe14c52f9a7cb042405c0d26b2d008a5ca10b8efc4780a"
+    },
+    {
+      "path": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_IMPLEMENTATION.md",
+      "bytes": 4861,
+      "sha256": "a399eff18bb8bc0468736ef87186684e6c4ed19dc9316294b1c896bee314856e"
+    }
+  ],
+  "artifact_summary": {
+    "count": 4,
+    "bytes": 66376
+  },
+  "capabilities": {
+    "green_coordinator_modified": false,
+    "additive_wrapper_and_CLI": true,
+    "fixed_parent_hash_validation": true,
+    "future_exact_implementation_proof_required": true,
+    "separate_no_replace_rehearsal_receipt_before_child_1": true,
+    "official_activation_loader_rejects_rehearsal_receipt": true,
+    "free_space_preflight_and_bounded_disk_reservation": true,
+    "two_sequential_isolated_replay_children": true,
+    "shared_absolute_deadline": true,
+    "descendant_process_tree_capture_termination_and_survivor_refusal": true,
+    "socket_guard_propagated_to_replay_model_and_scorer_children": true,
+    "descriptor_relative_cleanup_refuses_symlinks_hardlinks_and_unknown_inodes": true,
+    "exact_schedule_and_resource_validation": true,
+    "canonical_replay_equivalence": true,
+    "exact_key_target_free_public_result": true,
+    "atomic_no_replace_aggregate_publication": true,
+    "official_marker_capability_exposed": false
+  },
+  "generated_mock_qualification": {
+    "focused_tests_passed": 15,
+    "full_scale_generated_rehearsal_runs": 0,
+    "maximum_real_participants_per_cohort": 0,
+    "mock_replay_children_maximum": 2,
+    "mock_reservation_bytes": 8,
+    "mock_target_deliveries": 0,
+    "mock_scores": 0,
+    "model_fits": 0,
+    "model_inference_runs": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "real_or_private_reads": 0,
+    "human_or_device_operations": 0,
+    "official_qualification_invocations": 0,
+    "official_marker_operations": 0,
+    "retained_generated_payload_bytes": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "resource_envelope_implemented": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "wall_time_seconds": 180,
+    "peak_process_tree_RSS_bytes": 536870912,
+    "disk_reservation_bytes": 537919488,
+    "disk_reservation_staged_release": true,
+    "aggregate_incremental_disk_bytes": 537919488,
+    "public_output_bytes": 1048576,
+    "free_bytes_required_before_reservation": 22012755968,
+    "free_bytes_required_after_reservation": 21474836480
+  },
+  "remaining_barriers": [
+    "exact_implementation_commit_push_both_CI_jobs_green_and_on_GitHub_main",
+    "separate_fixed_implementation_proof_commit_push_both_CI_jobs_green_and_on_GitHub_main",
+    "single_consumed_COMM_P0_G_FS2_R0_attempt"
+  ],
+  "execution_state": {
+    "implementation_proof_exists": false,
+    "rehearsal_execution_exposed": false,
+    "rehearsal_attempted": false,
+    "rehearsal_consumed": false,
+    "official_qualification_activated": false,
+    "official_qualification_executed": false
+  },
+  "active_gate": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "changed": false,
+    "all_authority_flags_false": true
+  },
+  "claim_boundary": {
+    "generated_rehearsal_wrapper_implemented": true,
+    "two_full_fictional_replays_within_resource_envelope_established": false,
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_performance_established": false,
+    "clinical_value_established": false
+  }
+}
