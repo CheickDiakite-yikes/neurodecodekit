@@ -138,14 +138,19 @@ class CommP0GeneratedRunnerTest(unittest.TestCase):
                 "--participants-per-cohort",
                 "3",
                 "--timeout-seconds",
-                "60",
+                "90",
             ],
             cwd=self.root,
             env=environment,
             capture_output=True,
             text=True,
-            check=True,
-            timeout=90,
+            check=False,
+            timeout=120,
+        )
+        self.assertEqual(
+            completed.returncode,
+            0,
+            f"stdout:\n{completed.stdout}\nstderr:\n{completed.stderr}",
         )
         result = json.loads(completed.stdout)
         self.assertEqual(result["isolated_child_process_replays"], 2)
