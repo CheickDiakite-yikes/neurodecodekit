@@ -43,9 +43,32 @@ immutable scope hash, and become remotely green before implementation or
 access. Never fabricate the packet's long sentence as a user utterance, infer
 scope expansion, or use short form when multiple packets or ambiguity exist.
 
-## Immediate next task
+## Scientific Constitution
 
-The immediate reversible frontier is now `COMM-P0-G-FS3-v0`. Read, in order:
+The canonical research objective is now defined by
+`docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md`. Read it with
+`docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md` and
+`registries/scientific_knowledge_ledger.v0.json` before choosing work. Optimize
+for belief-changing evidence, keep discovery separate from confirmation and
+translation, and report scientific attribution separately from functional
+utility. Historical documents remain evidence and safety records, but they do
+not outrank this strategy where priorities conflict.
+
+The flagship is the frozen 60-person `DREYER-C5R-1` nuisance-controlled
+unseen-person experiment. Its first empirical checkpoint is one exact
+`sub-01` R1 EDF fixed-header observation under the separately governed
+`DREYER-C5R-1-HL` gate. That packet remains all-false until an exact decision
+becomes remotely green. `COMM-P0-G-FS3` is paused as an adjacent engineering
+diagnostic; do not activate it under general continuation. This strategic
+reset authorizes no data, target, model, score, device, release, or claim
+operation.
+
+## Historical Gate Detail: COMM-P0-G-FS3
+
+The following exact history is retained because its consumed-run and safety
+boundaries remain binding. It is not the immediate scientific priority.
+
+The historical reversible frontier was `COMM-P0-G-FS3-v0`. Read, in order:
 
 1. `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_RESULT.md`;
 2. `registries/communication_eeg_prospective_generated_two_child_rehearsal_result.v0.json`;

@@ -28,10 +28,30 @@ routine code, tests, synthetic work, bounded development experiments, commits,
 pushes, and CI proceed autonomously while reserving exact approval for those
 irreversible Tier C events.
 
+## Scientific Operating Model
+
+The [Scientific Discovery and Invention Constitution](docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md)
+now governs research priorities. Its companion
+[convergence plan](docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md) and
+[machine knowledge ledger](registries/scientific_knowledge_ledger.v0.json)
+separate what is supported, refuted, inconclusive, and still blocked; keep
+discovery distinct from confirmation and translation; and score scientific
+attribution separately from functional utility.
+
+The flagship is the frozen 60-person Dreyer nuisance-controlled unseen-person
+experiment. The next empirical checkpoint is intentionally small: verify one
+exact EDF fixed header before considering the 1.78 GB cohort. The generated
+COMM-P0 FS3 work is paused as an adjacent engineering diagnostic because it
+cannot change a scientific belief today. This reset changes priorities, not
+authority: no fresh Dreyer payload, target, model run, score, or claim has been
+authorized or produced.
+
 ## Current Research Frontier
 
-The generated `COMM-P0-G` proof architecture now has a prospective,
-resource-aware successor. Amendment 3 replaces the second redundant full
+The active scientific frontier is the Dreyer checkpoint described above. The
+following COMM-P0-G material is retained as exact adjacent-engineering history
+and is paused. Its proof architecture has a prospective, resource-aware
+successor: Amendment 3 replaces the second redundant full
 fictional model replay with a separate verifier/scorer process that has no
 model, fit, inference, threshold, calibration, prediction-creation, or update
 capability. One complete 42-participant producer schedule remains mandatory,

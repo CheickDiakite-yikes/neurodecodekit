@@ -1,0 +1,485 @@
+{
+  "schema_name": "neurodecodekit.scientific_knowledge_ledger",
+  "schema_version": "0.1.0",
+  "recorded_at": "2026-08-28",
+  "constitution": "docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md",
+  "plan": "docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md",
+  "flagship": {
+    "experiment_id": "EXP-DREYER-C5R-1",
+    "claim_id": "CLAIM-DREYER-NUISANCE-CONTROLLED-EEG",
+    "first_empirical_checkpoint": "Verify one exact Dreyer sub-01 R1 EDF fixed header for 27 EEG, 3 EOG, 2 wrist-EMG channels, 512 Hz, and valid EDF geometry."
+  },
+  "claims": [
+    {
+      "id": "CLAIM-BNCI-PROTOCOL-INFORMATION",
+      "question": "Did selected BNCI EEG recover held-out protocol-condition information?",
+      "state": "SUPPORTED",
+      "lane": "confirmation",
+      "strongest_statement": "Across nine held-out participants, selected EEG reached 0.38349 macro balanced accuracy versus 0.25000 no-signal and 0.29668 timing-only.",
+      "coordinates": {
+        "generalization": "unseen participant within BNCI 2014-001",
+        "attribution": "protocol association, not EEG-specific causation",
+        "temporal_regime": "offline event-locked",
+        "output_regime": "four-class protocol condition",
+        "calibration_regime": "zero held-out-person calibration",
+        "setting": "curated laboratory dataset"
+      },
+      "evidence_ids": [
+        "EVID-BNCI-R2"
+      ],
+      "blockers": [],
+      "next_discriminator": "Compare the signal against spatial, peripheral, timing, and matched derangement controls.",
+      "unsupported": "This does not establish cortical origin, movement intention, communication decoding, or practical utility."
+    },
+    {
+      "id": "CLAIM-BNCI-CENTRAL-EEG-SPECIFICITY",
+      "question": "Was the BNCI information spatially specific to the selected central EEG representation?",
+      "state": "REFUTED",
+      "lane": "confirmation",
+      "strongest_statement": "The frozen selected central EEG representation was not spatially specific because posterior EEG reached 0.39236 balanced accuracy versus 0.38349.",
+      "coordinates": {
+        "generalization": "unseen participant within BNCI 2014-001",
+        "attribution": "central-versus-posterior EEG specificity",
+        "temporal_regime": "offline event-locked",
+        "output_regime": "four-class protocol condition",
+        "calibration_regime": "zero held-out-person calibration",
+        "setting": "curated laboratory dataset"
+      },
+      "evidence_ids": [
+        "EVID-BNCI-R2"
+      ],
+      "blockers": [],
+      "next_discriminator": "Use a fresh cohort with stronger posterior, cue, EOG, and EMG controls.",
+      "unsupported": "The result does not prove that EEG contains no motor information; it rejects this spatial-specificity claim on this surface."
+    },
+    {
+      "id": "CLAIM-BNCI-INCREMENT-BEYOND-EOG",
+      "question": "Did selected EEG add reliable information beyond recorded EOG?",
+      "state": "INCONCLUSIVE",
+      "lane": "confirmation",
+      "strongest_statement": "The EOG-plus-EEG log-loss gains were directionally positive at 0.02552 versus EOG and 0.01843 versus EOG plus deranged EEG, but missed frozen effect, consistency, and significance gates.",
+      "coordinates": {
+        "generalization": "unseen participant within BNCI 2014-001",
+        "attribution": "increment beyond recorded EOG and matched derangement",
+        "temporal_regime": "offline event-locked",
+        "output_regime": "four-class protocol condition",
+        "calibration_regime": "source-only calibration",
+        "setting": "curated laboratory dataset"
+      },
+      "evidence_ids": [
+        "EVID-BNCI-R2"
+      ],
+      "blockers": [
+        "small participant count",
+        "missing wrist EMG comparator",
+        "posterior and cue confounding",
+        "probability miscalibration"
+      ],
+      "next_discriminator": "Run the frozen 60-person Dreyer nuisance-controlled confirmation after source sensors are verified.",
+      "unsupported": "No EEG-beyond-peripheral or cortical-source claim passed."
+    },
+    {
+      "id": "CLAIM-S21-IN-SESSION-LANGUAGE-ADVANTAGE",
+      "question": "Did the S21 session-1 tiny CTC model show a language-decoding advantage?",
+      "state": "INCONCLUSIVE",
+      "lane": "discovery",
+      "strongest_statement": "On five frozen rows, tiny CTC improved corpus CER by 0.005814 over the prior, with uncertainty crossing zero and poor train fit.",
+      "coordinates": {
+        "generalization": "same person and session, held-out trials",
+        "attribution": "MEG contribution versus train-only text prior",
+        "temporal_regime": "offline noncausal sentence windows",
+        "output_regime": "closed typed-sentence character sequence",
+        "calibration_regime": "train-only scaling",
+        "setting": "curated laboratory typing task"
+      },
+      "evidence_ids": [
+        "EVID-S21-L14"
+      ],
+      "blockers": [
+        "five-row test surface",
+        "poor model fit",
+        "interval crosses zero"
+      ],
+      "next_discriminator": "Use a larger untouched evaluation only under a newly frozen, adequately powered protocol.",
+      "unsupported": "No language, thought, cross-person, cross-session, or real-time decoding advantage was established."
+    },
+    {
+      "id": "CLAIM-S21-CROSS-SESSION-LANGUAGE-ADVANTAGE",
+      "question": "Did the frozen S21 CTC model generalize across sessions better than no signal?",
+      "state": "REFUTED",
+      "lane": "confirmation",
+      "strongest_statement": "Across 63 session-2 rows, tiny CTC CER was 0.917949 versus 0.775458 for the no-signal prior, a 0.142491 regression.",
+      "coordinates": {
+        "generalization": "same person, unseen session",
+        "attribution": "MEG contribution versus train-only text prior",
+        "temporal_regime": "offline noncausal sentence windows",
+        "output_regime": "closed typed-sentence character sequence",
+        "calibration_regime": "source-session-only scaling",
+        "setting": "curated laboratory typing task"
+      },
+      "evidence_ids": [
+        "EVID-S21-L15"
+      ],
+      "blockers": [],
+      "next_discriminator": "Do not retune on consumed session 2; test a new mechanism on a separate development surface first.",
+      "unsupported": "This rejects the tested model and transfer surface, not MEG language decoding in general."
+    },
+    {
+      "id": "CLAIM-S7-EEG-ADVANTAGE",
+      "question": "Did the S7 nearest-centroid EEG bridge beat its train-only prior?",
+      "state": "REFUTED",
+      "lane": "discovery",
+      "strongest_statement": "The tested nearest-centroid classifier was worse than its no-signal prior by 0.113636 exact-label accuracy.",
+      "coordinates": {
+        "generalization": "same participant held-out events",
+        "attribution": "EEG contribution versus train-only prior",
+        "temporal_regime": "offline event-locked",
+        "output_regime": "closed event-label classification",
+        "calibration_regime": "none",
+        "setting": "curated laboratory EEG"
+      },
+      "evidence_ids": [
+        "EVID-S7-L19"
+      ],
+      "blockers": [],
+      "next_discriminator": "Use an identified task with participant-held-out controls instead of expanding this baseline.",
+      "unsupported": "The bridge validates data plumbing only and does not establish a neural advantage."
+    },
+    {
+      "id": "CLAIM-DREYER-NUISANCE-CONTROLLED-EEG",
+      "question": "Does nuisance-residualized central EEG add held-out information beyond EOG, wrist EMG, posterior EEG, timing, and matched derangement in unseen people?",
+      "state": "BLOCKED_BY_DATA",
+      "lane": "confirmation",
+      "strongest_statement": "A 60-person target-firewalled confirmation is frozen, but no real Dreyer EDF header, signal, target, prediction, or score has been accessed.",
+      "coordinates": {
+        "generalization": "unseen participant within Dreyer Dataset A",
+        "attribution": "increment beyond EOG, wrist EMG, posterior EEG, timing, and derangement",
+        "temporal_regime": "sample-causal event-locked offline decision at eight seconds",
+        "output_regime": "binary instructed motor-imagery condition",
+        "calibration_regime": "zero held-out-person calibration",
+        "setting": "curated laboratory dataset"
+      },
+      "evidence_ids": [
+        "EVID-DREYER-DESIGN"
+      ],
+      "blockers": [
+        "one exact Tier C decision",
+        "unverified source EDF sensor roster"
+      ],
+      "next_discriminator": "Verify one exact sub-01 R1 EDF fixed header before any bulk acquisition.",
+      "unsupported": "No fresh unseen-person, EEG-beyond-peripheral, motor-cortex, or decoding-performance claim exists."
+    },
+    {
+      "id": "CLAIM-COMMUNICATION-BEYOND-PERIPHERAL",
+      "question": "Does communication-related EEG add information beyond synchronized eye and oral-muscle activity?",
+      "state": "BLOCKED_BY_DATA",
+      "lane": "discovery",
+      "strongest_statement": "The project has a frozen measurement strategy and generated firewalls but no qualifying real full-control communication cohort result.",
+      "coordinates": {
+        "generalization": "unseen participant and independent cohort required",
+        "attribution": "increment beyond EOG and bilateral oral EMG",
+        "temporal_regime": "causal continuous endpoint required",
+        "output_regime": "prompted and free-choice communication commands",
+        "calibration_regime": "zero-calibration primary endpoint",
+        "setting": "laboratory first, device translation later"
+      },
+      "evidence_ids": [
+        "EVID-COMM-DECISION"
+      ],
+      "blockers": [
+        "no operationally qualified public full-control cohort",
+        "no consented prospective cohort",
+        "no real synchronized EEG EOG oral-EMG execution"
+      ],
+      "next_discriminator": "Qualify a real independent cohort or design a consented orthogonalized measurement study.",
+      "unsupported": "No thought, language, communication, or EEG-beyond-peripheral decoding claim is established."
+    },
+    {
+      "id": "CLAIM-LIVE-CAUSAL-DECODING",
+      "question": "Can NeuroDecodeKit decode a useful neural output causally and live?",
+      "state": "BLOCKED_BY_MEASUREMENT",
+      "lane": "translation",
+      "strongest_statement": "Causal accounting and generated stream contracts exist, but end-to-end neural latency and live-device performance have not been measured.",
+      "coordinates": {
+        "generalization": "unseen participant remains required",
+        "attribution": "neural increment beyond peripheral and timing controls required",
+        "temporal_regime": "causal continuous stream",
+        "output_regime": "self-endpointed functional command",
+        "calibration_regime": "zero or explicitly measured few-shot calibration",
+        "setting": "live device"
+      },
+      "evidence_ids": [
+        "EVID-COMM-DECISION"
+      ],
+      "blockers": [
+        "no validated scientific signal to translate",
+        "no real synchronized stream execution",
+        "no device or end-to-end latency measurement"
+      ],
+      "next_discriminator": "Establish a nuisance-controlled offline effect before a causal shadow and live-device test.",
+      "unsupported": "Generated stream accounting is not live neural decoding."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EVID-BNCI-R2",
+      "lane": "confirmation",
+      "kind": "consumed aggregate held-out score and artifact-only postmortem",
+      "summary": "Nine-person BNCI scoring recovered protocol information but failed spatial specificity, calibration, participant consistency, and the registered EEG-beyond-EOG gates.",
+      "limitations": "Small cohort, visually cued protocol, no wrist EMG, and no claim beyond the frozen aggregate result.",
+      "supports": [
+        "CLAIM-BNCI-PROTOCOL-INFORMATION",
+        "CLAIM-BNCI-INCREMENT-BEYOND-EOG"
+      ],
+      "contradicts": [
+        "CLAIM-BNCI-CENTRAL-EEG-SPECIFICITY"
+      ],
+      "paths": [
+        "registries/bnci_2014_001_stage_t_result.v0.json",
+        "docs/BNCI_2014_001_ARTIFACT_POSTMORTEM_RESULT.md",
+        "registries/bnci_2014_001_artifact_postmortem_result.v0.json"
+      ]
+    },
+    {
+      "id": "EVID-S21-L14",
+      "lane": "discovery",
+      "kind": "frozen same-session five-row comparison",
+      "summary": "Tiny CTC improved corpus CER by one edit-equivalent over the no-signal prior, with a paired interval crossing zero.",
+      "limitations": "Five rows, poor fit, same person and session, noncausal typed-sentence task.",
+      "supports": [
+        "CLAIM-S21-IN-SESSION-LANGUAGE-ADVANTAGE"
+      ],
+      "contradicts": [],
+      "paths": [
+        "docs/LOOP_14_SPLIT_PROTOCOL_V1.md"
+      ]
+    },
+    {
+      "id": "EVID-S21-L15",
+      "lane": "confirmation",
+      "kind": "consumed cross-session score",
+      "summary": "The frozen tiny CTC model performed materially worse than the train-only no-signal prior on 63 session-2 rows.",
+      "limitations": "One participant and one compact model; session 2 is consumed and cannot be tuned on.",
+      "supports": [],
+      "contradicts": [
+        "CLAIM-S21-CROSS-SESSION-LANGUAGE-ADVANTAGE"
+      ],
+      "paths": [
+        "docs/LOOP_15_SAME_SUBJECT_CROSS_SESSION.md"
+      ]
+    },
+    {
+      "id": "EVID-S7-L19",
+      "lane": "discovery",
+      "kind": "real EEG bridge classifier comparison",
+      "summary": "The nearest-centroid EEG classifier was worse than its train-only prior by 0.113636 exact-label accuracy.",
+      "limitations": "One participant, compact baseline, and no cross-person or causal evaluation.",
+      "supports": [],
+      "contradicts": [
+        "CLAIM-S7-EEG-ADVANTAGE"
+      ],
+      "paths": [
+        "docs/LOOP_19_EEG_BRAINVISION_BRIDGE.md"
+      ]
+    },
+    {
+      "id": "EVID-DREYER-DESIGN",
+      "lane": "confirmation",
+      "kind": "preregistered fresh-cohort design and all-false gate",
+      "summary": "The 60-participant R1/R2 confirmation freezes nuisance residualization, spatial and temporal controls, zero-calibration participant holds, and one score.",
+      "limitations": "Generated qualification has no scientific value and no fresh Dreyer payload has been accessed.",
+      "supports": [
+        "CLAIM-DREYER-NUISANCE-CONTROLLED-EEG"
+      ],
+      "contradicts": [],
+      "paths": [
+        "docs/DREYER_C5R_1_PREREGISTRATION.md",
+        "docs/DREYER_C5R_1_STAGE_H_LIVE_PREFLIGHT_AUTHORIZATION_PACKET.md",
+        "registries/current_research_frontier.v0.json"
+      ]
+    },
+    {
+      "id": "EVID-COMM-DECISION",
+      "lane": "discovery",
+      "kind": "objective evidence and replication decision",
+      "summary": "Only one narrow directional real-task item exists; peripheral-adjusted communication, independent replication, causal continuity, and live-device evidence remain absent.",
+      "limitations": "The communication program is strategic and generated-only; it authorizes no metadata, payload, signal, model, score, or device operation.",
+      "supports": [
+        "CLAIM-COMMUNICATION-BEYOND-PERIPHERAL",
+        "CLAIM-LIVE-CAUSAL-DECODING"
+      ],
+      "contradicts": [],
+      "paths": [
+        "docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md",
+        "registries/communication_eeg_objective_evidence_and_replication_decision.v0.json"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "subject": "EVID-BNCI-R2",
+      "relation": "motivates",
+      "object": "EXP-DREYER-C5R-1",
+      "rationale": "Dreyer was selected to test the exact peripheral, posterior, calibration, and consistency failures observed in BNCI."
+    },
+    {
+      "subject": "CLAIM-BNCI-INCREMENT-BEYOND-EOG",
+      "relation": "narrows",
+      "object": "CLAIM-DREYER-NUISANCE-CONTROLLED-EEG",
+      "rationale": "The fresh claim asks for a larger and more fully controlled version of the unresolved increment."
+    },
+    {
+      "subject": "EXP-DREYER-ALIGNMENT-DISCOVERY",
+      "relation": "depends_on",
+      "object": "EXP-DREYER-C5R-1",
+      "rationale": "Alignment work is promoted only if the frozen result localizes cross-person representation as the failure mode."
+    },
+    {
+      "subject": "EXP-COMM-ORTHOGONAL-TASK",
+      "relation": "motivates",
+      "object": "CLAIM-COMMUNICATION-BEYOND-PERIPHERAL",
+      "rationale": "Orthogonalized cues and synchronized peripheral sensors are designed to make the attribution question identifiable."
+    }
+  ],
+  "experiments": [
+    {
+      "id": "EXP-DREYER-C5R-1",
+      "lane": "confirmation",
+      "status": "awaiting_human_Tier_C_decision_before_one_file_header_preflight",
+      "scientific_question": "Does nuisance-residualized central EEG add held-out information beyond EOG, wrist EMG, posterior EEG, timing, and matched derangement in unseen people?",
+      "evidence_target": "A calibrated and participant-consistent incremental central-EEG effect under the frozen R1/R2 protocol.",
+      "earliest_checkpoint": "One exact sub-01 R1 EDF fixed-header sensor and sampling-rate observation.",
+      "stop_rule": "Park immediately if the required 27 EEG, 3 EOG, 2 wrist-EMG, 512 Hz, and EDF geometry surface is absent or ambiguous.",
+      "deserves_resources_because": "It directly discriminates the neural-increment hypothesis from the strongest peripheral, visual, timing, and derangement explanations in 60 fresh people.",
+      "authority": "DREYER-C5R-1-HL is exact-green and all-false; a fresh packet-bound maintainer decision is still required.",
+      "expected_information_gain": "High: H0 parks a 1.78 GB acquisition before spend; H1 opens the shortest credible route to a fresh controlled score.",
+      "claim_ids": [
+        "CLAIM-DREYER-NUISANCE-CONTROLLED-EEG"
+      ],
+      "evidence_ids": [
+        "EVID-BNCI-R2",
+        "EVID-DREYER-DESIGN"
+      ]
+    },
+    {
+      "id": "EXP-DREYER-ALIGNMENT-DISCOVERY",
+      "lane": "discovery",
+      "status": "design_only_parked_until_failure_localization",
+      "scientific_question": "Does source-only geometry normalization recover a nuisance-specific cross-person residual EEG increment?",
+      "evidence_target": "An aligned arm improves held-out source development performance without lifting posterior, timing, or deranged controls.",
+      "earliest_checkpoint": "One authorized development-only grouped comparison against fixed homologous-pair residual features.",
+      "stop_rule": "Stop if alignment lifts controls equally or only improves posterior EEG.",
+      "deserves_resources_because": "It tests a concrete cross-person sensor-misalignment mechanism rather than increasing model capacity.",
+      "authority": "Tier A design only; no data or model execution is authorized by this ledger.",
+      "expected_information_gain": "Medium and conditional on a Dreyer source or LOSO failure.",
+      "claim_ids": [
+        "CLAIM-DREYER-NUISANCE-CONTROLLED-EEG"
+      ],
+      "evidence_ids": [
+        "EVID-BNCI-R2"
+      ]
+    },
+    {
+      "id": "EXP-COMM-P0-FS3",
+      "lane": "engineering",
+      "status": "paused_adjacent_diagnostic_after_green_wrapper_and_proof",
+      "scientific_question": "Can the future prospective communication protocol be executed and independently verified inside its frozen resource envelope?",
+      "evidence_target": "One complete generated producer transcript and an independently matching zero-model verification.",
+      "earliest_checkpoint": "Reconsider only when a real communication cohort is imminent and FS3 is the last concrete blocker.",
+      "stop_rule": "Do not spend another cycle while it remains detached from a real empirical decision.",
+      "deserves_resources_because": "It protects a future communication score, but currently has lower scientific information gain than Dreyer.",
+      "authority": "No activation or execution authority is created; prior FS2 is consumed and cannot be retried.",
+      "expected_information_gain": "Low for current scientific beliefs; useful only near a real prospective execution.",
+      "claim_ids": [
+        "CLAIM-COMMUNICATION-BEYOND-PERIPHERAL",
+        "CLAIM-LIVE-CAUSAL-DECODING"
+      ],
+      "evidence_ids": [
+        "EVID-COMM-DECISION"
+      ]
+    },
+    {
+      "id": "EXP-COMM-ORTHOGONAL-TASK",
+      "lane": "discovery",
+      "status": "moonshot_design_only",
+      "scientific_question": "Can an orthogonalized task separate intended communication from lateralized cues, eye movement, and oral-muscle activity?",
+      "evidence_target": "A measurement design whose target remains identifiable after matched cue, gaze, EOG, and bilateral oral-EMG controls.",
+      "earliest_checkpoint": "Generated identifiability simulation plus power, storage, consent, and device estimates.",
+      "stop_rule": "Expire or redesign if intended output cannot be separated from cue and peripheral physiology before recruitment.",
+      "deserves_resources_because": "Changing the measurement may create more scientific leverage than another model on confounded legacy tasks.",
+      "authority": "Design only; no recruitment, device, private data, or human operation is authorized.",
+      "expected_information_gain": "Potentially high but long-horizon and gated by measurement feasibility.",
+      "claim_ids": [
+        "CLAIM-COMMUNICATION-BEYOND-PERIPHERAL",
+        "CLAIM-LIVE-CAUSAL-DECODING"
+      ],
+      "evidence_ids": [
+        "EVID-COMM-DECISION"
+      ]
+    }
+  ],
+  "scoreboards": {
+    "scientific_attribution": [
+      {
+        "measure": "BNCI selected EEG versus no-signal and timing",
+        "status": "observed_protocol_information",
+        "value": "BA 0.38349 versus 0.25000 and 0.29668"
+      },
+      {
+        "measure": "BNCI central-versus-posterior specificity",
+        "status": "failed",
+        "value": "central 0.38349 versus posterior 0.39236"
+      },
+      {
+        "measure": "BNCI incremental EEG beyond EOG and derangement",
+        "status": "inconclusive",
+        "value": "log-loss gains 0.02552 and 0.01843; 6 of 9 positive"
+      },
+      {
+        "measure": "Fresh Dreyer nuisance-controlled unseen-person effect",
+        "status": "not_observed",
+        "value": "no real Dreyer payload or header read"
+      }
+    ],
+    "functional_utility": [
+      {
+        "measure": "S21 same-session typed-sentence CER advantage",
+        "status": "near_null_inconclusive",
+        "value": "CER gain 0.005814 on five rows"
+      },
+      {
+        "measure": "S21 cross-session typed-sentence CER advantage",
+        "status": "failed",
+        "value": "tiny CTC worse than prior by 0.142491 CER"
+      },
+      {
+        "measure": "S7 EEG event-label advantage",
+        "status": "failed",
+        "value": "nearest centroid worse than prior by 0.113636 accuracy"
+      },
+      {
+        "measure": "Live causal end-to-end decoding",
+        "status": "not_measured",
+        "value": "no real stream, device, or end-to-end latency result"
+      }
+    ]
+  },
+  "portfolio": {
+    "flagship": "EXP-DREYER-C5R-1",
+    "adjacent_diagnostic": "EXP-DREYER-ALIGNMENT-DISCOVERY",
+    "moonshot": "EXP-COMM-ORTHOGONAL-TASK"
+  },
+  "operation_boundary": {
+    "active_tier_c_packet": "DREYER-C5R-1-HL",
+    "all_authority_flags_false": true,
+    "real_dreyer_payload_reads": 0,
+    "real_dreyer_header_reads": 0,
+    "new_data_downloads": 0,
+    "real_model_runs": 0,
+    "target_deliveries": 0,
+    "scientific_scores": 0,
+    "generated_FS3_runs": 0,
+    "release_operations": 0,
+    "claim_upgrades": 0
+  }
+}

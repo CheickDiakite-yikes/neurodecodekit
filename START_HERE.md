@@ -7,6 +7,16 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
+> Scientific strategy, 2026-08-28: read
+> `docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md`, then
+> `docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md`, then
+> `registries/scientific_knowledge_ledger.v0.json`. The flagship is the frozen
+> 60-person Dreyer nuisance-controlled unseen-person experiment, and its first
+> empirical checkpoint is one exact `sub-01` R1 EDF fixed-header observation.
+> COMM-P0-G FS3 is paused as an adjacent engineering diagnostic. This strategy
+> changes priority only; `DREYER-C5R-1-HL` remains all-false and no data,
+> target, model, score, device, release, or claim authority changed.
+
 > COMM-P0-G FS3 registration frontier, 2026-08-28: Amendment 3 replaces only
 > the redundant second full fictional model replay with a separate zero-model
 > verifier/scorer. One exact full producer still executes the complete frozen

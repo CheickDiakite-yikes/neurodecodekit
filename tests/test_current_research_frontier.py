@@ -23,6 +23,27 @@ class CurrentResearchFrontierTests(unittest.TestCase):
             "all_false_request_and_proof_remotely_green_awaiting_exact_Tier_C_decision",
         )
 
+    def test_scientific_strategy_converges_on_one_empirical_checkpoint(self):
+        strategy = self.frontier["scientific_strategy"]
+        self.assertEqual(strategy["flagship_experiment"], "EXP-DREYER-C5R-1")
+        self.assertEqual(
+            strategy["first_empirical_checkpoint"],
+            "one_exact_sub_01_R1_EDF_fixed_header_sensor_and_sampling_observation",
+        )
+        self.assertEqual(
+            strategy["portfolio_allocation_percent"],
+            {"flagship": 70, "adjacent_diagnostic": 20, "moonshot": 10},
+        )
+        self.assertEqual(
+            strategy["COMM_P0_G_FS3_status"],
+            "paused_adjacent_engineering_diagnostic",
+        )
+        self.assertFalse(strategy["authority_changed"])
+        self.assertEqual(strategy["new_real_or_private_operations"], 0)
+        self.assertEqual(strategy["new_model_or_score_operations"], 0)
+        for path_key in ("constitution", "convergence_plan", "knowledge_ledger"):
+            self.assertTrue((ROOT / strategy[path_key]).is_file(), path_key)
+
     def test_proof_chain_records_green_recovery_activation(self):
         proof = self.frontier["completed_proof"]
         self.assertEqual(

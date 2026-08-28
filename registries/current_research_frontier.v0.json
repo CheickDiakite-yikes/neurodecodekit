@@ -4,6 +4,23 @@
   "recorded_at_local": "2026-08-28",
   "active_lane_id": "DREYER-C5R-1-HL",
   "status": "all_false_request_and_proof_remotely_green_awaiting_exact_Tier_C_decision",
+  "scientific_strategy": {
+    "constitution": "docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md",
+    "convergence_plan": "docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md",
+    "knowledge_ledger": "registries/scientific_knowledge_ledger.v0.json",
+    "optimization_target": "scientific_belief_change_per_unit_time_compute_data_attention_and_irreversible_evidence",
+    "flagship_experiment": "EXP-DREYER-C5R-1",
+    "first_empirical_checkpoint": "one_exact_sub_01_R1_EDF_fixed_header_sensor_and_sampling_observation",
+    "portfolio_allocation_percent": {
+      "flagship": 70,
+      "adjacent_diagnostic": 20,
+      "moonshot": 10
+    },
+    "COMM_P0_G_FS3_status": "paused_adjacent_engineering_diagnostic",
+    "authority_changed": false,
+    "new_real_or_private_operations": 0,
+    "new_model_or_score_operations": 0
+  },
   "parallel_tier_A_communication_program": {
     "program_id": "NDK-COMM-CLAIM-2026-08-26-v0",
     "document": "docs/COMMUNICATION_EEG_SCIENTIFIC_CLAIM_PROGRAM.md",
