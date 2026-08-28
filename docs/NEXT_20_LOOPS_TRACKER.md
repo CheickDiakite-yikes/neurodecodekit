@@ -19,6 +19,15 @@
 > activation, then one official generated run. No real EEG or scientific claim
 > changed.
 
+> **COMM-P0-G full-scale rehearsal registration (2026-08-28):**
+> `COMM-P0-G-FS2-v0` freezes one future generated-only attempt with two
+> sequential 21-person-per-cohort replay children, the exact 182,784-row / 2,856
+> set total, all 140 refusal observations, one thread, 180 seconds, 512 MiB RSS,
+> 513 MiB incremental disk, and a 20 GiB post-reservation free-space floor. A
+> separately green additive wrapper is required first. The registration itself
+> runs nothing and changes no official, Tier C, real/private, human/device,
+> release, or scientific authority.
+
 > **COMM-P0-G implementation update (2026-08-28):** exact numerical/scorer
 > `b7e4d83`, endpoint-separated live scorer `c46064d`, and standalone bounded
 > streaming scorer `7d625a9` are remotely green and on GitHub `main`. The V1

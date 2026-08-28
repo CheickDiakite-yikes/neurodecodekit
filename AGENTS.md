@@ -63,8 +63,13 @@ passed Base job `98815336723`, Optional Neuro Readers job `98815336577`, and CI
 `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_OFFICIAL_COORDINATOR_PROOF_CLOSEOUT.md`.
 The next reversible gate is a separately registered, nonofficial full-scale
 two-child rehearsal proving both 21-person-per-cohort replays fit the frozen
-180-second total cap. Do not run the rehearsal casually, activate the route,
-run the official qualification, create a consumed marker outside tests, or
+180-second total cap. That registration is now frozen in
+`docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_FULL_SCALE_REHEARSAL_PREREGISTRATION.md`
+and its machine contract. Do not execute it until the registration and a
+separate additive wrapper are each remotely green on GitHub `main`. The one
+future attempt is generated-only, one-threaded, capped at 513 MiB incremental
+disk, and must leave 20 GiB free after reservation. Do not run it casually,
+activate the official route, create or touch an official consumed marker, or
 reinterpret generated work as science.
 
 The parallel Tier A route from controlled communication evidence through

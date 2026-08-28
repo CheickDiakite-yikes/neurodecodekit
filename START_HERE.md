@@ -24,6 +24,14 @@
 > that two full 21-person-per-cohort replays fit the 180-second cap before
 > separate activation. No official run or claim occurred.
 
+> COMM-P0-G full-scale rehearsal registration, 2026-08-28: `COMM-P0-G-FS2-v0`
+> freezes one future generated-only two-child resource measurement. It requires
+> a separately green additive wrapper, one thread, one worker, 180 seconds,
+> 512 MiB RSS, at most 513 MiB incremental disk, and 20 GiB free after
+> reservation. Failure consumes the rehearsal; rerun is forbidden. Registration
+> performs no replay and opens no official, real/private, network, device,
+> release, or scientific surface.
+
 > COMM-LIVE-G0 closeout, 2026-08-27: exact implementation
 > `bc9bb109c9c82b56afe06d983d82b5b8ece669cf` passed Base `98694674092`,
 > Optional Neuro Readers `98694674289`, and CI `33123115516`, and is present on

@@ -14512,3 +14512,12 @@ green; only then may the single generated qualification run.
   two-by-21 180-second total cap remains unproven. Keep the compile lock,
   official invocation, real/private, human/device, Tier C, release, and every
   scientific-claim flag false.
+- 2026-08-28: Freeze `COMM-P0-G-FS2-v0` as one generated-only Tier B resource
+  rehearsal after coordinator proof closeout `f9a8e8f` passed both jobs in CI
+  `33162186523` and reached GitHub `main`. Require a separately green additive
+  wrapper, then one consumed attempt containing two sequential 21-person-per-
+  cohort fictional replay children under one 180-second deadline, 512 MiB RSS,
+  513 MiB incremental disk, one CPU thread, and a 20 GiB post-reservation
+  free-space floor. Use a distinct rehearsal receipt that the official loader
+  must reject. Permit no official marker or invocation, real/private access,
+  network, human/device, release, rerun, or scientific-claim operation.

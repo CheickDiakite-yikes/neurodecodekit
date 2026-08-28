@@ -46,6 +46,15 @@ two-by-21 route still needs bounded proof that it fits the frozen 180-second
 total cap before activation. See the
 [official coordinator proof closeout](docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_OFFICIAL_COORDINATOR_PROOF_CLOSEOUT.md).
 
+The next engineering measurement is now frozen prospectively as
+[`COMM-P0-G-FS2-v0`](docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_FULL_SCALE_REHEARSAL_PREREGISTRATION.md).
+It permits no execution yet. After an additive wrapper is independently green,
+one generated-only attempt may test both full fictional replay children under
+one 180-second deadline, 512 MiB RSS, 513 MiB incremental disk, and a 20 GiB
+post-reservation free-space floor. Its receipt is deliberately incompatible
+with the official consumed marker. Pass or park, the rehearsal cannot establish
+a neural or communication-decoding result.
+
 The first preregistered BNCI held-out experiment produced a useful negative
 result. Selected EEG reached 38.35% participant-macro balanced accuracy versus
 25% no-signal and 29.67% timing, so the pipeline recovered task-related
