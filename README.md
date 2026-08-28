@@ -269,8 +269,12 @@ and reached GitHub `main`. The next bounded gate is
 a generated-only qualification contract for the full study grammar, 73-channel
 synchronized sharding, target side channels, causal context, participant-first
 statistics, prediction/scorer isolation, live accounting, and 70 adversarial
-refusal families. It authorizes neither an execution nor human or real-data
-work.
+refusal families. Exact registration `002128b` passed both required jobs in CI
+`33136788477` and reached GitHub `main`. Its
+[proof closeout](docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_QUALIFICATION_PROOF_CLOSEOUT.md)
+binds three immutable registration artifacts / 47,492 bytes before generated
+implementation. It authorizes neither the official qualification execution nor
+human, device, or real-data work.
 Even a complete internal pass would not establish external reproduction,
 arbitrary thought reading, sentence decoding, or clinical use.
 

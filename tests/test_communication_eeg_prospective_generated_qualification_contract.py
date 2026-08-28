@@ -317,7 +317,10 @@ class CommunicationEEGProspectiveGeneratedQualificationContractTests(
         ]["prospective_synchronized_cohort_preregistration"]
         generated = registration["generated_qualification_registration"]
         self.assertEqual(generated["gate_id"], "COMM-P0-G-v0")
-        self.assertEqual(generated["status"], "registration_pending_own_remote_CI")
+        self.assertEqual(
+            generated["status"],
+            "registration_remotely_green_proof_only_closeout_pending_own_remote_CI",
+        )
         self.assertFalse(generated["implementation_authorized_now"])
         self.assertFalse(generated["execution_authorized_now"])
 

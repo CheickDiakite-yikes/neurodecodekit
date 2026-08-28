@@ -26,7 +26,10 @@
 > participant identities, 73 synchronized sensor roles, 1,428 prediction sets,
 > 91,392 prediction rows, participant-first scoring, exact live accounting, and
 > 70 refusal families per replay. Implementation and execution remain false
-> until their own ordered green barriers.
+> until their own ordered green barriers. Exact registration `002128b` passed
+> both required jobs in CI `33136788477` and reached GitHub `main`. Its
+> proof-only closeout binds three exact artifacts / 47,492 bytes; after that
+> proof is remotely green, generated-only implementation is the next task.
 
 > **Triangulated communication replication refresh (2026-08-27):** newly
 > public OpenNeuro `ds007591-v1.0.1` adds a valuable 1.62 GB full-sensor

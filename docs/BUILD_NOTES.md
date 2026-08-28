@@ -16348,3 +16348,10 @@ and require both remote jobs green before the one official qualification.
   prediction sets / 91,392 rows per replay, live false-commit/coverage/latency
   accounting, 70 refusal families, and one-thread resource caps. No generated
   execution or scientific operation occurred.
+- 2026-08-27: Exact `COMM-P0-G-v0` registration `002128b` passed Base Python
+  `98738427136`, Optional Neuro Readers `98738427224`, and CI `33136788477`,
+  then reached GitHub `main`. Added a proof-only closeout binding the exact
+  preregistration, contract, and test / 47,492 bytes under canonical set
+  SHA-256 `51876eae109215b4270b2418067e30c6f70c9fdf764b858f563e756f7bf1981b`.
+  No generated fixture, human/device, real/private, model, target, prediction,
+  score, provider, release, or claim operation occurred.

@@ -32,8 +32,11 @@
 > authoritative. Generated design remains paused until both additions are
 > remotely green. Exact proof/amendment `478d31e` passed both required jobs in
 > CI `33135742217` and reached GitHub `main`. The next gate is the all-false
-> generated-only `COMM-P0-G-v0` registration; it does not authorize its own
-> implementation or execution.
+> generated-only `COMM-P0-G-v0` registration. Exact registration `002128b`
+> passed both required jobs in CI `33136788477` and reached GitHub `main`.
+> Its proof-only closeout binds three immutable artifacts / 47,492 bytes and
+> must become remotely green before generated implementation. The official
+> qualification execution remains separately gated.
 
 ## Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight
 

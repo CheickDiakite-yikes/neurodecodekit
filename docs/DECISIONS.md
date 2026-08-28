@@ -14452,3 +14452,11 @@ green; only then may the single generated qualification run.
   scoring, non-selective live coverage, exact false-commit and latency
   accounting, two child replays, and 70 refusal families. Keep implementation,
   execution, human/device, real/private, release, and claim authority false.
+- 2026-08-27: Accept `002128bd9cbacddd8ceea1820b3b91622c40867f`,
+  CI `33136788477`, as the exact remotely green `COMM-P0-G-v0` registration on
+  GitHub `main`. Bind only its preregistration, machine contract, and matching
+  test in a proof-only closeout totaling 47,492 bytes. Permit generated-only
+  implementation after that proof is remotely green, while keeping the one
+  official qualification execution behind an exact green implementation and
+  separate activation. Preserve every human/device, real/private, release,
+  scientific-claim, and `DREYER-C5R-1-HL` authority flag as false.

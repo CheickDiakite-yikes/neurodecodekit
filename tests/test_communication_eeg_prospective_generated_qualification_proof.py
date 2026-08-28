@@ -11,56 +11,65 @@ ROOT = Path(__file__).resolve().parents[1]
 PROOF = (
     ROOT
     / "registries"
-    / "communication_eeg_prospective_synchronized_cohort_proof.v0.json"
+    / "communication_eeg_prospective_generated_qualification_proof.v0.json"
 )
 DOCUMENT = (
     ROOT
     / "docs"
-    / "COMMUNICATION_EEG_PROSPECTIVE_SYNCHRONIZED_COHORT_PROOF_CLOSEOUT.md"
+    / "COMMUNICATION_EEG_PROSPECTIVE_GENERATED_QUALIFICATION_PROOF_CLOSEOUT.md"
 )
 FRONTIER = ROOT / "registries" / "current_research_frontier.v0.json"
 
 
-class CommunicationEEGProspectiveSynchronizedCohortProofTests(unittest.TestCase):
+class CommunicationEEGProspectiveGeneratedQualificationProofTests(
+    unittest.TestCase
+):
     @classmethod
     def setUpClass(cls) -> None:
         cls.proof = json.loads(PROOF.read_text(encoding="utf-8"))
 
-    def test_exact_registration_commit_is_remotely_green_and_on_main(self) -> None:
+    def test_exact_registration_commit_is_green_and_on_main(self) -> None:
         green = self.proof["green_registration_commit"]
         self.assertEqual(
-            green["commit"], "df3266ed09132017cc8a9dcc10e8a7d61ea92f61"
+            green["commit"], "002128bd9cbacddd8ceea1820b3b91622c40867f"
         )
-        self.assertEqual(green["CI_run_id"], 33_134_791_405)
-        self.assertEqual(green["base_python_job_id"], 98_732_241_444)
-        self.assertEqual(green["optional_neuro_readers_job_id"], 98_732_241_603)
+        self.assertEqual(green["CI_run_id"], 33_136_788_477)
+        self.assertEqual(green["base_python_job_id"], 98_738_427_136)
+        self.assertEqual(green["optional_neuro_readers_job_id"], 98_738_427_224)
         self.assertTrue(green["both_required_jobs_green"])
         self.assertTrue(green["working_branch_matches_exact_commit"])
         self.assertTrue(green["GitHub_main_matches_exact_commit"])
 
     def test_registration_artifacts_are_hash_size_and_git_bound(self) -> None:
         rows = self.proof["bound_registration_artifacts"]
+        source_commit = self.proof["bound_registration_artifact_summary"][
+            "artifact_source_commit"
+        ]
         for row in rows:
-            payload = (ROOT / row["path"]).read_bytes()
+            payload = subprocess.check_output(
+                ["git", "show", f"{source_commit}:{row['path']}"], cwd=ROOT
+            )
             self.assertEqual(len(payload), row["bytes"], row["path"])
             self.assertEqual(
                 hashlib.sha256(payload).hexdigest(), row["sha256"], row["path"]
             )
             blob = subprocess.check_output(
-                ["git", "hash-object", row["path"]], cwd=ROOT, text=True
+                ["git", "rev-parse", f"{source_commit}:{row['path']}"],
+                cwd=ROOT,
+                text=True,
             ).strip()
             self.assertEqual(blob, row["git_blob"], row["path"])
 
         canonical = json.dumps(rows, sort_keys=True, separators=(",", ":")).encode()
         summary = self.proof["bound_registration_artifact_summary"]
         self.assertEqual(summary["count"], 3)
-        self.assertEqual(summary["bytes"], 38_364)
+        self.assertEqual(summary["bytes"], 47_492)
         self.assertEqual(
             hashlib.sha256(canonical).hexdigest(),
             summary["canonical_artifact_set_sha256"],
         )
 
-    def test_closeout_preserves_scope_and_delays_generated_execution(self) -> None:
+    def test_closeout_preserves_scope_and_delays_execution(self) -> None:
         scope = self.proof["scope_preservation"]
         self.assertTrue(scope["registration_artifacts_unchanged"])
         self.assertTrue(scope["target_firewall_and_control_matrix_unchanged"])
@@ -71,19 +80,17 @@ class CommunicationEEGProspectiveSynchronizedCohortProofTests(unittest.TestCase)
         transition = self.proof["transition"]
         self.assertTrue(
             transition[
-                "generated_qualification_design_may_begin_after_closeout_and_amendment_remote_green"
+                "generated_implementation_may_begin_after_this_closeout_is_remotely_green"
             ]
+        )
+        self.assertFalse(
+            transition["official_generated_qualification_execution_authorized_now"]
         )
         self.assertTrue(
             transition[
-                "amendment_1_required_to_resolve_stable_commit_coverage_mismatch"
+                "official_execution_requires_exact_implementation_remotely_green_and_separate_activation"
             ]
         )
-        self.assertFalse(transition["generated_implementation_authorized_now"])
-        self.assertFalse(
-            transition["generated_qualification_execution_authorized_now"]
-        )
-        self.assertTrue(transition["fresh_ordered_proof_barriers_required"])
         self.assertTrue(
             transition["DREYER_C5R_1_HL_remains_sole_active_Tier_C_packet"]
         )
@@ -93,7 +100,7 @@ class CommunicationEEGProspectiveSynchronizedCohortProofTests(unittest.TestCase)
             "tracked_artifact_reads": 3,
             "Git_proof_reads": 3,
             "GitHub_CI_metadata_reads": 1,
-            "GitHub_ref_reads": 1,
+            "GitHub_ref_reads": 2,
         }
         for key, value in self.proof["operation_counters"].items():
             self.assertEqual(value, allowed.get(key, 0), key)
@@ -102,33 +109,39 @@ class CommunicationEEGProspectiveSynchronizedCohortProofTests(unittest.TestCase)
         storage = self.proof["storage_boundary"]
         self.assertEqual(storage["raw_ceiling_bytes"], 10 * 1024**3)
         self.assertEqual(storage["total_research_storage_ceiling_bytes"], 20 * 1024**3)
-        self.assertEqual(storage["new_payload_bytes"], 0)
+        self.assertEqual(storage["new_generated_payload_bytes"], 0)
+        self.assertEqual(storage["new_real_payload_bytes"], 0)
         self.assertEqual(storage["cleanup_operations"], 0)
 
         claims = self.proof["claim_boundary"]
         self.assertTrue(claims["engineering_registration_remotely_green"])
+        self.assertTrue(claims["registration_proof_closeout_created"])
         for key, value in claims.items():
-            if key != "engineering_registration_remotely_green":
+            if key not in {
+                "engineering_registration_remotely_green",
+                "registration_proof_closeout_created",
+            }:
                 self.assertFalse(value, key)
 
     def test_frontier_and_document_state_the_exact_boundary(self) -> None:
         frontier = json.loads(FRONTIER.read_text(encoding="utf-8"))
         registration = frontier["parallel_tier_A_communication_program"][
             "source_identity_preregistration"
-        ]["prospective_synchronized_cohort_preregistration"]
-        proof = registration["proof_only_closeout"]
+        ]["prospective_synchronized_cohort_preregistration"][
+            "generated_qualification_registration"
+        ]
         self.assertEqual(
             registration["green_registration_commit"],
             self.proof["green_registration_commit"]["commit"],
         )
         self.assertEqual(
             registration["status"],
-            "registration_proof_and_amendment_remotely_green_generated_registration_proof_pending_own_remote_CI",
+            "registration_remotely_green_proof_only_closeout_pending_own_remote_CI",
         )
-        self.assertEqual(registration["amendment_1"]["authoritative_value"], 0.70)
-        self.assertFalse(registration["amendment_1"]["generated_implementation_paused"])
-        self.assertEqual(proof["status"], "proof_only_closeout_remotely_green")
-        self.assertFalse(proof["generated_execution_authorized_now"])
+        closeout = registration["proof_only_closeout"]
+        self.assertEqual(closeout["bound_artifacts"], 3)
+        self.assertEqual(closeout["bound_bytes"], 47_492)
+        self.assertFalse(closeout["official_qualification_execution_authorized_now"])
 
         document = DOCUMENT.read_text(encoding="utf-8")
         self.assertIn("Engineering capability added:", document)
