@@ -1,0 +1,70 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_prospective_generated_live_scorer_implementation",
+  "schema_version": "0.1.0",
+  "milestone_id": "COMM-P0-G-LIVE-SCORER-v0",
+  "registration_id": "COMM-P0-G-v0",
+  "recorded_at_local": "2026-08-28",
+  "status": "implementation_remotely_green_on_GitHub_main",
+  "green_implementation": {
+    "commit": "c46064d19bd0ec74bc960d155ad9752989d9c54c",
+    "CI_run_id": 33141715948,
+    "base_python_job_id": 98754821063,
+    "optional_neuro_readers_job_id": 98754821135,
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true
+  },
+  "artifacts": [
+    {
+      "path": "src/neurodecodekit/experiments/comm_p0_generated_live.py",
+      "bytes": 23309,
+      "sha256": "55c3cc77b1c9394b481506324a1411e6738625596eb9a9584fcf9147cdda931f"
+    },
+    {
+      "path": "tests/test_comm_p0_generated_live.py",
+      "bytes": 9557,
+      "sha256": "a6724e45ff4a650fc982273db621f37b97824ebf28bb77e477a39f821b9ebf2f"
+    }
+  ],
+  "implemented_capabilities": {
+    "independent_replication_live_only": true,
+    "complete_prediction_inventory_rebuilt_against_freeze": true,
+    "one_shot_scorer_authorization": true,
+    "free_choice_and_prompted_scored_separately": true,
+    "inactive_null_intervals_counted_once": true,
+    "free_choice_is_primary_live_gate": true,
+    "prompted_may_rescue_free_choice": false,
+    "aggregate_only_target_free_output": true,
+    "end_to_end_latency_measured": false
+  },
+  "focused_verification": {
+    "new_live_scorer_tests": 5,
+    "core_numerical_live_compatibility_tests": 23,
+    "prompted_success_cannot_rescue_failed_free_choice_tested": true,
+    "ruff_passed": true,
+    "git_diff_check_passed": true
+  },
+  "official_qualification": {
+    "executed": false,
+    "invocations": 0,
+    "authorized_now": false,
+    "real_or_private_operations": 0,
+    "scientific_value": "none_generated_engineering_only"
+  },
+  "active_gate": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "sole_active_Tier_C_packet": true,
+    "all_authority_flags_false": true,
+    "changed_by_this_milestone": false
+  },
+  "claim_boundary": {
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_performance_established": false,
+    "clinical_value_established": false
+  }
+}

@@ -14460,3 +14460,20 @@ green; only then may the single generated qualification run.
   official qualification execution behind an exact green implementation and
   separate activation. Preserve every human/device, real/private, release,
   scientific-claim, and `DREYER-C5R-1-HL` authority flag as false.
+- 2026-08-28: Accept `b7e4d8376e7ebc907d530df54d261667fa25c807`, CI
+  `33140872221`, as the exact remotely green compact numerical/scorer milestone
+  on GitHub `main`. Accept `c46064d19bd0ec74bc960d155ad9752989d9c54c`,
+  CI `33141715948`, as the exact remotely green endpoint-separated generated
+  live scorer on GitHub `main`. Make free-choice live performance the sole
+  primary live gate; prompted live performance may never rescue it; generated
+  timing may never be reported as end-to-end device latency.
+- 2026-08-28: Implement the next `COMM-P0-G` runner increment only as an
+  activation-locked scaffold. Permit reduced generated two-replay development,
+  bounded process accounting, 15-digest equivalence, strict no-replace
+  publication, and registry-backed structural mutation checks. Do not call the
+  official qualification complete until every refusal family uses a
+  domain-specific validator, full predictions use bounded transport, scorer
+  authority is cryptographically bound and model-free, the official process
+  group is continuously monitored, and a durable consumed marker exists. This
+  decision changes no Tier C, real/private, human/device, release, or claim
+  authority.

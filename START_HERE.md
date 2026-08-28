@@ -45,6 +45,15 @@
 > reached GitHub `main`. The compact 42-fold numerical schedule and
 > aggregate-only scorer are now implemented additively; the isolated replay
 > coordinator, real malformed-refusal matrix, and activation remain next.
+> Exact numerical/scorer `b7e4d83` passed both required jobs in CI
+> `33140872221` and reached GitHub `main`. Exact endpoint-separated live scorer
+> `c46064d` passed both required jobs in CI `33141715948` and also reached
+> `main`; free-choice live performance is now primary and prompted performance
+> cannot rescue it. The additive runner scaffold has completed a reduced
+> two-replay development pass at 187,645,952-byte peak RSS with zero retained
+> payload, but it remains nonofficial and activation-locked until its explicit
+> validator, transport, scorer-capability, and durable-consumption blockers are
+> resolved.
 
 ## Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight
 

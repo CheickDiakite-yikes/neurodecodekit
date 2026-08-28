@@ -1,5 +1,16 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
+> **COMM-P0-G implementation update (2026-08-28):** exact numerical/scorer
+> `b7e4d83` and endpoint-separated live scorer `c46064d` are remotely green and
+> on GitHub `main`. The latter closes the prompted/free-choice pooling defect:
+> free choice is primary and prompted success is non-rescuing. The next runner
+> increment has a bounded two-replay development scaffold with 15-digest
+> equivalence, process/resource accounting, activation locking, and no-replace
+> publication. It remains incomplete and nonofficial until all 70 refusal
+> families reach domain-specific validators, full predictions use bounded
+> transport, scorer authority is cryptographically bound and model-free, and
+> durable consumption exists. No scientific claim or Tier C authority changed.
+
 > **Prospective synchronized communication cohort (2026-08-27):** with every
 > registered public replication route currently unqualified, `COMM-P0-SYNC-v0`
 > freezes the direct fallback before any human operation. It plans separate
