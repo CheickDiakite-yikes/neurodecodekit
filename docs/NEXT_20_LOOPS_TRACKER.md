@@ -14,19 +14,21 @@
 > 236,437,504-byte peak RSS with zero network, real-data, device, or retained
 > payload. Exact head `669c858` passed Base job `98815336723`, Optional Neuro
 > Readers job `98815336577`, and CI `33161053075`, then reached GitHub `main`.
-> The lock remains false. Next gates are a separately registered bounded
-> full-scale two-child rehearsal proving both replays fit 180 seconds, separate
-> activation, then one official generated run. No real EEG or scientific claim
-> changed.
+> The lock remains false. The later bounded FS2 rehearsal completed one full
+> child and parked on the shared 180-second deadline; activation remains closed.
+> No real EEG or scientific claim changed.
 
-> **COMM-P0-G full-scale rehearsal registration (2026-08-28):**
-> `COMM-P0-G-FS2-v0` freezes one future generated-only attempt with two
-> sequential 21-person-per-cohort replay children, the exact 182,784-row / 2,856
-> set total, all 140 refusal observations, one thread, 180 seconds, 512 MiB RSS,
-> 513 MiB incremental disk, and a 20 GiB post-reservation free-space floor. A
-> separately green additive wrapper is required first. The registration itself
-> runs nothing and changes no official, Tier C, real/private, human/device,
-> release, or scientific authority.
+> **COMM-P0-G full-scale rehearsal result (2026-08-28):** the sole
+> `COMM-P0-G-FS2-R0` attempt is consumed at `FS2_PARK`. One of two sequential
+> 21-person-per-cohort fictional replay children completed, but total runtime
+> reached 180.05074683297426 seconds against the frozen 180-second cap. Peak
+> process-tree RSS was 305,119,232 bytes, 1,510 monitor samples were collected,
+> and the exact 537,919,488-byte reservation left 37,325,271,040 bytes free.
+> Cleanup retained zero payload bytes; network, official, real/private,
+> human/device, release, and scientific operations were zero. Closeout
+> `a654541` passed both jobs in CI `33171818869` and reached GitHub `main`.
+> Rerun and repair are forbidden. The next reversible task is a separately
+> prospective runtime-successor design, not activation or a larger model.
 
 > **COMM-P0-G implementation update (2026-08-28):** exact numerical/scorer
 > `b7e4d83`, endpoint-separated live scorer `c46064d`, and standalone bounded
@@ -87,8 +89,10 @@
 > aggregate discovery/replication scoring. Exact coordinator head `669c858`
 > then completed process isolation, adversarial mutations, durable freeze
 > verification, resource ledgers, and activation-ready atomic publication.
-> The remaining reversible work is a separately registered full-scale
-> two-child runtime proof under 180 seconds, followed by separate activation.
+> The separately registered two-child runtime proof is now consumed at
+> `FS2_PARK`; it completed one child and exceeded the shared cap by 0.0507468
+> seconds. A new prospective runtime decision must precede any further
+> generated execution, and official activation remains closed.
 
 > **Triangulated communication replication refresh (2026-08-27):** newly
 > public OpenNeuro `ds007591-v1.0.1` adds a valuable 1.62 GB full-sensor

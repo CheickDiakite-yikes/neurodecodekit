@@ -16389,3 +16389,17 @@ and require both remote jobs green before the one official qualification.
   validators, bounded full-prediction transport, cryptographic freeze
   attestation, scorer no-model capability, continuous official process-group
   monitoring, and durable consumption remain explicit blockers.
+- 2026-08-28: Completed the FS2 generated-only resource rehearsal sequence.
+  Exact implementation proof `c9fb2a6` passed both jobs in CI `33169226797`
+  and reached GitHub `main`. A missing output parent caused one pre-receipt
+  launch refusal; additive boundary decision `70d39ea` recorded that event,
+  passed both jobs in CI `33170541219`, and reached `main` before the corrected
+  launch. The receipt-consuming `COMM-P0-G-FS2-R0` run then completed one of
+  two full fictional children and parked at 180.05074683297426 seconds against
+  the 180-second cap. Peak process-tree RSS was 305,119,232 bytes, 1,510
+  monitor samples were collected, the 537,919,488-byte reservation left
+  37,325,271,040 bytes free, and cleanup retained zero generated payload bytes.
+  Exact closeout `a654541` passed Base `98850558071`, Optional Neuro Readers
+  `98850558325`, and CI `33171818869`, then reached GitHub `main`. The official
+  qualification, network, real/private, human/device, release, and scientific
+  counters remained zero; FS2 may not be rerun.

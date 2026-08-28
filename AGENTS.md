@@ -45,32 +45,27 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
-The immediate reversible frontier is the generated-only `COMM-P0-G` official
-coordinator successor. Read
-`docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_OFFICIAL_COORDINATOR_IMPLEMENTATION.md`
+The immediate reversible frontier is now the post-FS2 runtime decision. Read
+`docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_RESULT.md`
 and
-`registries/communication_eeg_prospective_generated_official_coordinator_implementation.v0.json`.
-Post-proof audit found that V1's nonofficial rehearsal used one combined target
-envelope and one score, while the frozen contract requires separate discovery
-and independent-replication delivery and scoring. The successor enforces two
-deliveries and two scores per replay, uses distinct sanitized replay children,
-verifies the score freeze before target delivery, binds exact schedule/resource
-ledgers, and publishes atomically behind an unchanged false compile-time lock.
-A reduced two-child measurement passed in 44.6720 seconds at 236,437,504-byte
-peak RSS. Exact head `669c858d9c35f33bb39d5a71aa886d645a832497`
-passed Base job `98815336723`, Optional Neuro Readers job `98815336577`, and CI
-`33161053075`, then reached GitHub `main`. Read
-`docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_OFFICIAL_COORDINATOR_PROOF_CLOSEOUT.md`.
-The next reversible gate is a separately registered, nonofficial full-scale
-two-child rehearsal proving both 21-person-per-cohort replays fit the frozen
-180-second total cap. That registration is now frozen in
-`docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_FULL_SCALE_REHEARSAL_PREREGISTRATION.md`
-and its machine contract. Do not execute it until the registration and a
-separate additive wrapper are each remotely green on GitHub `main`. The one
-future attempt is generated-only, one-threaded, capped at 513 MiB incremental
-disk, and must leave 20 GiB free after reservation. Do not run it casually,
-activate the official route, create or touch an official consumed marker, or
-reinterpret generated work as science.
+`registries/communication_eeg_prospective_generated_two_child_rehearsal_result.v0.json`.
+The sole generated-only `COMM-P0-G-FS2-R0` attempt is consumed at `FS2_PARK`:
+one of two full fictional replay children completed, but the shared runtime was
+`180.05074683297426` seconds against a frozen 180-second cap. Peak process-tree
+RSS was 305,119,232 bytes, 1,510 monitor samples were collected, the exact
+537,919,488-byte disk reservation left 37,325,271,040 bytes free, and cleanup
+retained zero generated payload bytes. Network, official, real/private,
+human/device, release, and scientific operations were zero. Exact closeout
+`a654541621f2824906d288313d457636844074da` passed Base job `98850558071`,
+Optional Neuro Readers job `98850558325`, and CI `33171818869`, then reached
+GitHub `main`.
+
+Do not retry, rerun, resume, repair, substitute, or reinterpret FS2-R0. The
+official generated qualification remains inactive. The next Tier A/B work may
+only design a separately named prospective runtime successor justified by the
+measured park, with no larger model, real/private access, official activation,
+or claim upgrade. `DREYER-C5R-1-HL` remains the sole active Tier C gate and all
+of its authority flags remain false.
 
 The parallel Tier A route from controlled communication evidence through
 independent replication and causal live operation is frozen in

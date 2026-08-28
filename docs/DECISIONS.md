@@ -14521,3 +14521,20 @@ green; only then may the single generated qualification run.
   free-space floor. Use a distinct rehearsal receipt that the official loader
   must reject. Permit no official marker or invocation, real/private access,
   network, human/device, release, rerun, or scientific-claim operation.
+- 2026-08-28: Record the first FS2 CLI entry as a non-consuming launch-preflight
+  refusal because the shared destination directory did not exist. This ruling
+  follows the already-green executable ordering and tests: destination and
+  free-space validation precede measured start and durable receipt, while any
+  failure after receipt consumes. Boundary decision `70d39ea` passed Base
+  Python `98846327698`, Optional Neuro Readers `98846327517`, and CI
+  `33170541219`, then reached GitHub `main`. Permit one corrected launch only;
+  a second pre-receipt refusal or any post-receipt outcome closes the run.
+- 2026-08-28: Consume `COMM-P0-G-FS2-R0` at `FS2_PARK`. One of two full
+  fictional replay children completed, but runtime reached
+  180.05074683297426 seconds against the frozen 180-second cap. RSS, storage,
+  monitoring, cleanup, output, and zero-operation gates passed. No rerun,
+  repair, resume, substitution, official activation, or claim upgrade is
+  permitted. Exact closeout `a654541` passed Base Python `98850558071`,
+  Optional Neuro Readers `98850558325`, and CI `33171818869`, then reached
+  GitHub `main`. Route future reversible work to a separately prospective
+  runtime-successor design.

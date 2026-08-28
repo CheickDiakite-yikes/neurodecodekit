@@ -20,17 +20,21 @@
 > real-data, device, or retained-payload operations. The compile-time lock is
 > still false. Exact head `669c858` passed Base job `98815336723`, Optional
 > Neuro Readers job `98815336577`, and CI `33161053075`, then reached GitHub
-> `main`. Read the proof-only closeout. The optimized route still needs evidence
-> that two full 21-person-per-cohort replays fit the 180-second cap before
-> separate activation. No official run or claim occurred.
+> `main`. Read the proof-only closeout. The later FS2 run showed that two full
+> 21-person-per-cohort replays do not fit the exact 180-second cap on this
+> machine: it completed one child and parked at 180.05074683297426 seconds.
+> No official run or claim occurred.
 
-> COMM-P0-G full-scale rehearsal registration, 2026-08-28: `COMM-P0-G-FS2-v0`
-> freezes one future generated-only two-child resource measurement. It requires
-> a separately green additive wrapper, one thread, one worker, 180 seconds,
-> 512 MiB RSS, at most 513 MiB incremental disk, and 20 GiB free after
-> reservation. Failure consumes the rehearsal; rerun is forbidden. Registration
-> performs no replay and opens no official, real/private, network, device,
-> release, or scientific surface.
+> COMM-P0-G full-scale rehearsal result, 2026-08-28: the sole generated-only
+> `COMM-P0-G-FS2-R0` attempt is consumed at `FS2_PARK`. One of two full
+> fictional replay children completed; total runtime reached
+> 180.05074683297426 seconds against the frozen 180-second cap. Peak RSS was
+> 305,119,232 bytes, the exact 537,919,488-byte reservation left
+> 37,325,271,040 bytes free, 1,510 monitor samples were collected, and cleanup
+> retained zero payload bytes. Network, official, real/private, human/device,
+> release, and scientific operations were zero. Exact closeout `a654541`
+> passed both required jobs in CI `33171818869` and reached GitHub `main`.
+> No retry or repair is allowed; official qualification remains inactive.
 
 > COMM-LIVE-G0 closeout, 2026-08-27: exact implementation
 > `bc9bb109c9c82b56afe06d983d82b5b8ece669cf` passed Base `98694674092`,
@@ -64,15 +68,15 @@
 > reached GitHub `main`. The generated-only protocol core now represents the
 > complete fictional cohort/trial plan, synchronized 73-role sensor bundle,
 > target precommitments, participant-first statistic, live accounting, and all
-> 70 refusal wrappers. The compact model/two-replay coordinator is the next
-> implementation milestone; official qualification remains separately gated.
+> 70 refusal wrappers. The compact model/two-replay coordinator is now
+> implemented; official qualification remains separately gated.
 > Exact core `9378421` passed both required jobs in CI `33139382019` and
 > reached GitHub `main`. The compact 42-fold numerical schedule and
 > aggregate-only scorer are now implemented additively. Exact coordinator head
 > `669c858` is remotely green and on GitHub `main`; it adds distinct sanitized
 > replay children, the complete malformed-refusal matrix, durable freeze
-> verification, and bounded atomic publication. Full-scale two-child runtime
-> proof and activation remain next.
+> verification, and bounded atomic publication. Its full-scale FS2 runtime
+> proof is now consumed and parked; activation remains closed.
 > Exact numerical/scorer `b7e4d83` passed both required jobs in CI
 > `33140872221` and reached GitHub `main`. Exact endpoint-separated live scorer
 > `c46064d` passed both required jobs in CI `33141715948` and also reached
@@ -91,7 +95,10 @@
 > `33153174019`, then reached GitHub `main`. Read its proof-only closeout, which
 > binds the exact implementation and rehearsal evidence without repeating any
 > execution. The official two-replay qualification remains separately
-> activation-locked and scientifically inert.
+> activation-locked and scientifically inert. The later two-child FS2 attempt
+> is also consumed: one child completed before the shared 180-second deadline,
+> so runtime architecture, not more model capacity, is the next reversible
+> engineering question.
 
 ## Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight
 

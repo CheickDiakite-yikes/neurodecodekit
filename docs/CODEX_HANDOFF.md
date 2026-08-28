@@ -1,6 +1,17 @@
 # Codex Handoff - NeuroDecodeKit
 
-> **Immediate COMM-P0-G successor, 2026-08-28:** read
+> **COMM-P0-G FS2 consumed runtime result, 2026-08-28:** read
+> `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_RESULT.md`
+> and its machine registry first. The sole generated-only FS2 run completed one
+> of two full fictional replay children and parked at 180.05074683297426 seconds
+> against a 180-second cap. RSS, disk, monitoring, cleanup, output, and all
+> zero-operation gates passed; no scientific or real-data operation occurred.
+> Closeout `a654541` passed both jobs in CI `33171818869` and is on GitHub
+> `main`. FS2-R0 is consumed with no rerun or repair. The next reversible work
+> is a separately prospective runtime-successor design; official qualification
+> remains inactive and `DREYER-C5R-1-HL` remains the sole Tier C gate.
+
+> **Historical COMM-P0-G coordinator correction, 2026-08-28:** read
 > `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_OFFICIAL_COORDINATOR_IMPLEMENTATION.md`
 > and its machine registry first. Audit found that V1's accepted nonofficial
 > full-scale rehearsal used one combined target envelope and one score, while
@@ -11,10 +22,9 @@
 > and resource ledgers, and publishes atomically without replacement. A reduced
 > two-child measurement passed in 44.6720 seconds at 236,437,504-byte peak RSS
 > with byte-equivalent replay surfaces and zero network, real-data, device, or
-> retained payload. Focused checks are green.
-> Do not activate yet: this exact successor needs both remote CI jobs green and
-> the optimized two-replay route still needs bounded evidence that it fits the
-> frozen 180-second cap. Preserve the unrelated tracker inspection file.
+> retained payload. The exact successor and proof are remotely green. The later
+> FS2 run supplied the bounded evidence and parked on runtime after one child;
+> do not activate or rerun it. Preserve the unrelated tracker inspection file.
 
 > **COMM-P0-G generated implementation frontier, 2026-08-28:** exact compact
 > numerical/scorer `b7e4d83` passed both jobs in CI `33140872221` and exact

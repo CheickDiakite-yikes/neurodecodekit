@@ -30,30 +30,25 @@ irreversible Tier C events.
 
 ## Current Research Frontier
 
-The latest generated-only `COMM-P0-G` successor closes a post-proof contract
-gap before activation. The official coordinator now runs two distinct
-sanitized replay children and requires separate discovery and replication
-target envelopes, for two deliveries and two scores per replay. The durable
-score freeze is verified before the target supplier runs; exact model,
-shortcut, process, memory, input, output, and disk ledgers are acceptance
-gates; and final publication is atomic and non-replacing. A reduced two-child
-replay passed in 44.6720 seconds at 236,437,504-byte peak RSS with zero network,
-real-data, device, or retained-payload operations. The compile-time lock
-remains closed. Exact head `669c858` passed Base job `98815336723`, Optional
-Neuro Readers job `98815336577`, and CI `33161053075`, then reached GitHub
-`main`. The prior single full-scale rehearsal took 101.5826 seconds, so the
-two-by-21 route still needs bounded proof that it fits the frozen 180-second
-total cap before activation. See the
-[official coordinator proof closeout](docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_OFFICIAL_COORDINATOR_PROOF_CLOSEOUT.md).
+The latest generated-only `COMM-P0-G` engineering gate has now produced a
+measured negative result. The sole `COMM-P0-G-FS2-R0` attempt completed one of
+two required full fictional replay children, then parked at
+`180.05074683297426` seconds against its frozen 180-second total cap. Memory
+was not the blocker: peak process-tree RSS was 305,119,232 bytes against a
+536,870,912-byte cap. Storage was also healthy: the exact 537,919,488-byte
+reservation left 37,325,271,040 bytes free, cleanup retained zero generated
+payload bytes, and the public result was only 2,286 bytes. The run collected
+1,510 process-monitor samples and made zero network, official, real-data,
+device, release, or scientific operations.
 
-The next engineering measurement is now frozen prospectively as
-[`COMM-P0-G-FS2-v0`](docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_FULL_SCALE_REHEARSAL_PREREGISTRATION.md).
-It permits no execution yet. After an additive wrapper is independently green,
-one generated-only attempt may test both full fictional replay children under
-one 180-second deadline, 512 MiB RSS, 513 MiB incremental disk, and a 20 GiB
-post-reservation free-space floor. Its receipt is deliberately incompatible
-with the official consumed marker. Pass or park, the rehearsal cannot establish
-a neural or communication-decoding result.
+The durable receipt makes FS2 permanently consumed, so it cannot be retried or
+repaired. Exact closeout `a654541` passed Base job `98850558071`, Optional Neuro
+Readers job `98850558325`, and CI `33171818869`, then reached GitHub `main`.
+This is useful engineering evidence: the exact two-by-21 coordinator does not
+fit the current 180-second envelope on this machine. It is not neural evidence.
+The official generated qualification remains inactive, and any successor must
+be separately prospective and justified by this measured runtime result. See
+the [FS2 closeout](docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_RESULT.md).
 
 The first preregistered BNCI held-out experiment produced a useful negative
 result. Selected EEG reached 38.35% participant-macro balanced accuracy versus

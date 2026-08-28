@@ -7,6 +7,7 @@ REGISTRY = (
     ROOT
     / "registries/communication_eeg_prospective_generated_two_child_rehearsal_result.v0.json"
 )
+FRONTIER = ROOT / "registries/current_research_frontier.v0.json"
 
 
 def _record() -> dict:
@@ -89,3 +90,24 @@ def test_fs2_result_preserves_zero_operations_and_claim_boundary() -> None:
         "all_authority_flags_false": True,
     }
     assert not any(record["claim_boundary"].values())
+
+
+def test_current_frontier_routes_to_consumed_fs2_runtime_result() -> None:
+    frontier = json.loads(FRONTIER.read_text(encoding="utf-8"))
+    communication = frontier["parallel_tier_A_communication_program"][
+        "source_identity_preregistration"
+    ]["prospective_synchronized_cohort_preregistration"]
+    result = communication["generated_qualification_registration"][
+        "full_scale_two_child_rehearsal"
+    ]
+
+    assert result["status"] == "consumed_FS2_PARK_resource_or_monitor_failure_no_rerun"
+    assert result["route"] == "FS2_PARK"
+    assert result["completed_replay_children"] == 1
+    assert result["expected_replay_children"] == 2
+    assert result["closeout_commit"] == "a654541621f2824906d288313d457636844074da"
+    assert result["closeout_CI_run_id"] == 33171818869
+    assert result["closeout_on_GitHub_main"] is True
+    assert result["retry_rerun_resume_repair_or_substitution_allowed"] is False
+    assert communication["generated_qualification_next"] is False
+    assert communication["generated_runtime_successor_design_next"] is True
