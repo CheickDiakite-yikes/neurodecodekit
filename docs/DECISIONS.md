@@ -14585,3 +14585,13 @@ green; only then may the single generated qualification run.
   and scores, descriptor-only identity hashes, and zero model capability. Run
   no numerical work and authorize no wrapper proof or FS3 execution until this
   amendment passes both jobs and reaches GitHub `main`.
+- 2026-08-28: Accept `28b440eee0ea895f41d7eebf59a0c1338fbbc416`
+  as the exact remotely green FS3 Amendment 1 after Base Python `98889419386`,
+  Optional Neuro Readers `98889419758`, and CI `33183200744` passed and GitHub
+  `main` resolved to that SHA. Implement the full wrapper additively with
+  generated/mock fixtures and strict descriptor, identity, socket, exact-
+  inventory, resource, and publication controls. Require the exact wrapper
+  commit and both jobs green on `main`, then a separate exact-green proof and a
+  final activation commit binding that proof's exact digest, before the sole
+  full FS3 attempt. Keep official, real/private, human/device, network,
+  release, Tier C, and scientific authority false.

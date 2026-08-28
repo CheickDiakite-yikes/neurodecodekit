@@ -67,9 +67,15 @@ An independent post-proof audit then found that the frozen verifier contract
 called two deliberate stream traversals “one pass,” did not require the exact
 91,392-row / 1,428-set full inventory, and left identity, no-follow, socket-
 guard, logical cohort-envelope, and runtime boundaries underspecified.
-Prospective `COMM-P0-G-FS3-A1` freezes those corrections with zero numerical
-operations. It must become green before the fail-closed full wrapper can be
-proved or executed.
+Exact `COMM-P0-G-FS3-A1` commit `28b440e` passed Base Python `98889419386`,
+Optional Neuro Readers `98889419758`, and CI `33183200744`, then reached
+GitHub `main` with zero numerical operations. The additive full wrapper now
+implements exact descriptor-only identity checks, no-follow dirfd producer
+opens, an isolated socket-guarded verifier, exact 91,392-row / 1,428-set and
+two-traversal enforcement, parent RSS checkpoints, and staged fsync/no-replace
+publication. It remains fail-closed until this exact wrapper and a separate
+proof both pass their remote green barriers and a final activation commit binds
+that proof's exact digest; no full FS3 rehearsal has run.
 
 This design is grounded in a measured negative engineering result. The sole
 `COMM-P0-G-FS2-R0` attempt completed one of

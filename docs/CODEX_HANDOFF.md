@@ -24,15 +24,22 @@
 > `33179247000`, then reached GitHub `main`. Exact closeout `ccabfaf` passed
 > Base `98881035296`, Optional `98881035573`, and CI `33180751900`, then reached
 > `main`; it binds six exact artifacts / 43,587 bytes and repeats no execution.
-> Do not execute full FS3 before the new Amendment 1 barrier is remotely green.
+> Amendment 1 is remotely green at `28b440e` with Base `98889419386`, Optional
+> `98889419758`, and CI `33183200744`. The generated/mock-only fail-closed full
+> wrapper is the immediate reversible milestone. Require its exact commit and
+> both jobs green on GitHub `main`, then create a separate exact-green wrapper
+> proof and a final activation commit binding that proof's exact digest before
+> considering the sole full FS3 attempt.
 
-> **FS3 Amendment 1 pending, 2026-08-28:** independent review found that one
+> **FS3 Amendment 1 green, wrapper pending, 2026-08-28:** independent review found that one
 > verifier invocation deliberately performs two stream traversals and that the
 > full contract needed exact 91,392-row / 1,428-set cardinality, logical two-
 > cohort envelope semantics, descriptor-only code identity, no-follow dirfd
 > input opening, an active socket guard, and a precise stored-runtime endpoint.
-> The prospective amendment ran no numerical work and authorizes no execution.
-> Make it remotely green before proving or executing any full wrapper.
+> Exact Amendment 1 `28b440e` is remotely green and ran no numerical work. The
+> additive wrapper now implements these corrections with mock fixtures, but no
+> full run may begin until the wrapper and its separate proof are both remotely
+> green and a final activation commit binds the proof's exact digest.
 
 > **COMM-P0-G FS2 consumed runtime result, 2026-08-28:** read
 > `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_RESULT.md`

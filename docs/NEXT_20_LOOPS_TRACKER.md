@@ -39,7 +39,12 @@
 > `COMM-P0-G-FS3-A1` freezes exactly one verifier invocation, two sequential
 > traversals, 91,392 rows / 1,428 sets, two logical cohort deliveries/scores,
 > descriptor-only identity verification, and zero numerical operations. It
-> must become remotely green before wrapper proof or execution.
+> exact Amendment 1 commit `28b440e` passed Base `98889419386`, Optional
+> Neuro Readers `98889419758`, and CI `33183200744`, then reached GitHub
+> `main`. The additive full wrapper implements these constraints with mock-only
+> tests and remains fail-closed pending its own green commit, a separate green
+> proof, and a final activation commit binding the proof's exact digest. Full
+> FS3, official, real/private, device, and scientific runs remain zero.
 
 > **COMM-P0-G contract-correction successor (2026-08-28):** post-proof audit
 > found that the V1 nonofficial full-scale rehearsal reported one combined

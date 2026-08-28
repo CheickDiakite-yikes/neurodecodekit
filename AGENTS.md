@@ -57,8 +57,10 @@ The immediate reversible frontier is now `COMM-P0-G-FS3-v0`. Read, in order:
 8. `registries/communication_eeg_prospective_generated_single_execution_dual_verification_implementation.v0.json`;
 9. `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_PROOF_CLOSEOUT.md`;
 10. `registries/communication_eeg_prospective_generated_single_execution_dual_verification_proof_closeout.v0.json`;
-11. `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_AMENDMENT_1.md`; and
-12. `registries/communication_eeg_prospective_generated_single_execution_dual_verification_amendment_1.v0.json`.
+11. `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_AMENDMENT_1.md`;
+12. `registries/communication_eeg_prospective_generated_single_execution_dual_verification_amendment_1.v0.json`;
+13. `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_FULL_REHEARSAL_IMPLEMENTATION.md`; and
+14. `registries/communication_eeg_prospective_generated_single_execution_dual_verification_full_rehearsal_implementation.v0.json`.
 
 Amendment 3 exact commit `b15d3cf86fc4d6234d64c3a19cca394e72f43fc6`
 passed Base Python `98860211722`, Optional Neuro Readers `98860211949`, and CI
@@ -94,10 +96,16 @@ activation or marker.
 Independent post-proof review found pre-execution ambiguity in verifier stream
 passes, full cardinality, logical cohort target envelopes, code identity,
 no-follow input opening, network blocking, and the stored runtime endpoint.
-Prospective `COMM-P0-G-FS3-A1` corrects those fields but is pending its own
-exact commit, push, both CI jobs, and GitHub `main`. It ran no numerical work
-and authorizes no FS3 execution. Do not prove or execute the full wrapper before
-that amendment is remotely green.
+Exact `COMM-P0-G-FS3-A1` commit
+`28b440eee0ea895f41d7eebf59a0c1338fbbc416` passed Base Python
+`98889419386`, Optional Neuro Readers `98889419758`, and CI `33183200744`,
+then reached GitHub `main`. It ran no numerical work and authorizes no FS3
+execution. The additive fail-closed full wrapper now implements its exact
+descriptor, identity, socket, cardinality, resource, and publication semantics
+with generated/mock fixtures only. Require this wrapper's exact commit and both
+CI jobs green on GitHub `main`, followed by a separate exact-green wrapper
+proof and a final activation commit binding that proof's exact digest, before
+considering the sole full FS3 attempt.
 
 The prior FS2 measurement remains binding. Read
 `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_RESULT.md`

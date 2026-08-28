@@ -16446,3 +16446,14 @@ and require both remote jobs green before the one official qualification.
   no-follow dirfd input opening, an active socket guard, and explicit runtime
   semantics. Numerical, receipt, official, real/private, device, network,
   release, and scientific counters remain zero.
+- 2026-08-28: Exact FS3 Amendment 1 `28b440e` passed Base Python
+  `98889419386`, Optional Neuro Readers `98889419758`, and CI `33183200744`,
+  then reached GitHub `main`. Revised the additive full-rehearsal wrapper with
+  one strict descriptor-only verifier worker, nine exact identity checks,
+  dirfd-relative no-follow producer opens, symlink/hardlink/inode-drift
+  refusals, an isolated socket-guarded child, exact two-traversal / 91,392-row /
+  1,428-set enforcement, parent RSS checkpoints, and staged fsync/no-replace
+  publication. Qualification uses generated/mock fixtures only; full-scale
+  FS3, receipt, official, real/private, device, network, release, and claim
+  counters remain zero pending exact wrapper CI, a separate proof, and a final
+  activation commit binding that proof's exact digest.

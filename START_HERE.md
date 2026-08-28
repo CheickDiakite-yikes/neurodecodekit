@@ -39,8 +39,14 @@
 > contract called this one pass, and that exact full cardinality, identity,
 > no-follow, socket-guard, logical cohort-envelope, and runtime semantics needed
 > to be explicit. Prospective `COMM-P0-G-FS3-A1` fixes those fields with zero
-> numerical operations. It is pending its own green barrier and authorizes no
-> full FS3 run.
+> numerical operations. Exact Amendment 1 `28b440e` passed Base
+> `98889419386`, Optional Neuro Readers `98889419758`, and CI `33183200744`,
+> then reached GitHub `main`. The additive full wrapper now implements the
+> corrected descriptor, identity, socket, cardinality, resource, and staged-
+> publication semantics using generated/mock fixtures only. It remains fail-
+> closed pending its own exact remote-green commit, a separate exact-green
+> proof, and a final activation commit binding that proof's exact digest; no
+> full FS3 run is authorized or completed.
 
 > COMM-P0-G coordinator correction, 2026-08-28: post-proof audit found that
 > the V1 full-scale rehearsal used one combined target envelope and one score,
