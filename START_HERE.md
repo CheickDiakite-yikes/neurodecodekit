@@ -41,6 +41,10 @@
 > target precommitments, participant-first statistic, live accounting, and all
 > 70 refusal wrappers. The compact model/two-replay coordinator is the next
 > implementation milestone; official qualification remains separately gated.
+> Exact core `9378421` passed both required jobs in CI `33139382019` and
+> reached GitHub `main`. The compact 42-fold numerical schedule and
+> aggregate-only scorer are now implemented additively; the isolated replay
+> coordinator, real malformed-refusal matrix, and activation remain next.
 
 ## Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight
 

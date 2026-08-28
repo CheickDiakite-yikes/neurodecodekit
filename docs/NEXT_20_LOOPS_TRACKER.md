@@ -36,6 +36,12 @@
 > prediction inventory, participant-first exact statistic, live accounting,
 > and 70 refusal wrappers. Next is the compact model schedule plus isolated
 > two-replay coordinator; official qualification remains inactive.
+> Exact core `9378421` passed both required jobs in CI `33139382019` and
+> reached GitHub `main`. Numerical/scorer milestone 2 now covers the exact
+> 42-fold, 630-classifier, 630-temperature, 1,428-set schedule and separate
+> aggregate discovery/replication scoring. The remaining reversible work is
+> process isolation, real adversarial mutations, resource proof, and
+> activation-ready publication.
 
 > **Triangulated communication replication refresh (2026-08-27):** newly
 > public OpenNeuro `ds007591-v1.0.1` adds a valuable 1.62 GB full-sensor

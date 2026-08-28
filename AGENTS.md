@@ -210,6 +210,16 @@ schedule and two-replay coordinator remain pending. The official generated
 execution remains false until the complete exact implementation and a separate
 activation cross their own ordered proof barriers.
 
+Core implementation `9378421afb0656df188fc63ca28b6009535200bd` passed Base
+Python `98746563630`, Optional Neuro Readers `98746563472`, and CI
+`33139382019`, then reached GitHub `main`. The additive numerical/scorer
+milestone now implements the frozen 42-fold / 630-classifier / 630-temperature
+schedule, target-blind 91,392-row prediction contract, participant-first
+aggregate scorer, prompted cue ceiling, and separated discovery/replication
+shadow/live accounting. Read its document and machine record. The isolated
+two-replay coordinator, real malformed-refusal matrix, resource monitor,
+activation, and official execution remain pending and unauthorized.
+
 Read the objective evidence and replication decision after that refresh:
 `docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md`
 and its machine registry. It records one narrow directional real-task evidence

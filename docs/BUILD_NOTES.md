@@ -16364,3 +16364,12 @@ and require both remote jobs green before the one official qualification.
   wrappers, and an activation-locked sidecar CLI. The compact model schedule
   and two-replay coordinator remain pending; no official qualification or
   scientific operation occurred.
+- 2026-08-28: Exact generated core `9378421` passed Base Python
+  `98746563630`, Optional Neuro Readers `98746563472`, and CI `33139382019`,
+  then reached GitHub `main`. Added the exact compact numerical schedule and
+  aggregate-only scorer additively: 42 participant folds, 84 endpoint-specific
+  residualizers, 630 L2 classifiers, 630 scalar-temperature fits, 1,428 sets,
+  91,392 target-blind rows, source-only derangement, separate discovery and
+  replication scoring, prompted cue ceiling, and generated live accounting.
+  Reduced eight-participant development tests pass; no official full replay,
+  real data, target delivery, score, device, network, or claim operation ran.

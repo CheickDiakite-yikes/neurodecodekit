@@ -413,6 +413,19 @@
             "two_isolated_registered_replays_implemented": false,
             "official_qualification_execution_authorized_now": false,
             "human_device_or_real_operations": 0
+          },
+          "numerical_scorer_implementation": {
+            "document": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_NUMERICAL_SCORER_IMPLEMENTATION.md",
+            "registry": "registries/communication_eeg_prospective_generated_numerical_scorer_implementation.v0.json",
+            "status": "numerical_and_scorer_implementation_pending_exact_commit_push_remote_green",
+            "participant_held_out_folds": 42,
+            "classifier_fits_per_replay": 630,
+            "temperature_fits_per_replay": 630,
+            "prediction_sets_per_replay": 1428,
+            "prediction_rows_per_replay": 91392,
+            "two_isolated_registered_replays_implemented": false,
+            "official_qualification_execution_authorized_now": false,
+            "human_device_or_real_operations": 0
           }
         },
         "generated_qualification_next": true,
