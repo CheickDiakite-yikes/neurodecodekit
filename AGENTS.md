@@ -251,6 +251,27 @@ Tier B task is an additive official-grade coordinator implementation resolving
 the six unimplemented activation controls; the complete 42-person execution
 remains separately inactive.
 
+Exact green `7d625a95b2c822620d06696a65e195df1e82e29a` is now on
+GitHub `main` and adds the standalone bounded streaming score engine. Read the
+V1 hardening implementation and its full-scale rehearsal result next. The V1
+successor appends canonical fold predictions without retaining the complete
+collection, holds at most one raw prediction row, executes all seven numerical
+shortcut routes, limits exact sign flipping to the two confirmatory free-choice
+tests, and wires the durable future consumed marker before official work. One
+nonofficial full-scale fictional rehearsal completed 91,392 prediction rows /
+1,428 sets in 101.58260462502949 seconds at 283,394,048-byte peak
+process-tree RSS and 34,259,372 private temporary bytes, with zero network,
+real/private, device, or retained-payload operation.
+
+Branch commit `0097cb85835498494ef65b08f7ad9850eb0e6f5e` is not on
+`main`: Base job `98780682764` in CI `33150365280` rejected only its stale V0
+artifact hash after the worker evolved. It performed no qualification or real
+operation and must never be promoted. The fresh V1 successor is pending exact
+artifact binding and both required remote jobs. The official generated
+qualification remains inactive; separate exact-green activation is the only
+remaining gate, and no communication-decoding, EEG-beyond-peripheral,
+unseen-person, replication, live-device, or clinical claim is established.
+
 Read the objective evidence and replication decision after that refresh:
 `docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md`
 and its machine registry. It records one narrow directional real-task evidence

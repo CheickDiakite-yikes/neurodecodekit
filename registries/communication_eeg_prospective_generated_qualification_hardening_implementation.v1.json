@@ -1,0 +1,180 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_prospective_generated_qualification_hardening_implementation",
+  "schema_version": "0.2.0",
+  "recorded_at_local": "2026-08-28",
+  "gate_id": "COMM-P0-G-v0",
+  "status": "generated_only_hardening_successor_pending_exact_commit_push_remote_CI",
+  "supersedes": "registries/communication_eeg_prospective_generated_qualification_hardening_implementation.v0.json",
+  "artifacts": [
+    {
+      "path": "src/neurodecodekit/experiments/comm_p0_generated_qualification.py",
+      "sha256": "e4c36e252ebead6f3d10fcfeabd866b2f9b3daa396a86e179e17916001d68579"
+    },
+    {
+      "path": "src/neurodecodekit/experiments/comm_p0_generated_score_only.py",
+      "sha256": "56bf42ca6650a4bf383aee7fe95ec37a4460c44dc1e74c0796fe747c4d3e320a"
+    },
+    {
+      "path": "src/neurodecodekit/experiments/comm_p0_generated_score_worker.py",
+      "sha256": "284de965440ee31f44f14ac7d5401c0fc6d834e39a13612380e2042a75cfe024"
+    },
+    {
+      "path": "src/neurodecodekit/experiments/comm_p0_generated_streaming_score.py",
+      "sha256": "d4f18cc7d26e300d633e0125e8882e81899b0525de628c6e9e55ba1041cda7c3"
+    },
+    {
+      "path": "src/neurodecodekit/experiments/comm_p0_generated_shortcut_fixtures.py",
+      "sha256": "b0729839e72347fbc2751eaae1a4c8572104456d40fc3dd32cc9fede14cbc559"
+    },
+    {
+      "path": "tests/test_comm_p0_generated_qualification.py",
+      "sha256": "a4a0ed7b4330e4aa784f30d4e9629591c85c0234aff2e5b0a4f8565fa6746026"
+    },
+    {
+      "path": "tests/test_comm_p0_generated_score_worker.py",
+      "sha256": "327782e4094df5f391ed7548b662a9e20290f41e71bb6e625ab806ebf6e3df14"
+    },
+    {
+      "path": "tests/test_comm_p0_generated_streaming_score.py",
+      "sha256": "fdc93a91b11b8375d2f90821baa5474e373d5c6037bdce71652122a8f37a3fd9"
+    },
+    {
+      "path": "tests/test_comm_p0_generated_shortcut_fixtures.py",
+      "sha256": "4077cd15e47ec7727bb3990324d83fcc93068ddaa9f5ae00c72c4a1cac94d900"
+    },
+    {
+      "path": "tests/test_communication_eeg_prospective_generated_qualification_hardening_implementation.py",
+      "sha256": "6f70c875e32965bfba7d1269c44e3efed1b50d739a41957a778f6c191681ecf6"
+    },
+    {
+      "path": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_QUALIFICATION_HARDENING_IMPLEMENTATION_V1.md",
+      "sha256": "4dfbda1d357aacde97779a4cc0a81f40bf23f7a0872b2d47d10b0a9c136b2445"
+    },
+    {
+      "path": "registries/communication_eeg_prospective_generated_full_scale_rehearsal_result.v0.json",
+      "sha256": "f3ee9b845b7d541f24678cb5f09952424d25d7c43e359b7d00f0c3f8fa4b0565"
+    }
+  ],
+  "capabilities": {
+    "canonical_fold_prediction_stream": true,
+    "maximum_raw_prediction_rows_buffered": 1,
+    "complete_prediction_collection_materialized": false,
+    "target_freeze_verified_before_delivery": true,
+    "same_inode_scored_after_delivery": true,
+    "descriptor_only_score_child_without_fit_or_model_imports": true,
+    "compact_duplicate_bitset_and_participant_accumulators": true,
+    "seven_numerical_shortcut_routes_executed": true,
+    "shortcut_results_separate_from_main_score": true,
+    "durable_consumed_marker_before_future_official_work": true,
+    "exact_sign_flip_limited_to_confirmatory_free_choice": true,
+    "official_entry_activation_locked": true
+  },
+  "development_measurement": {
+    "fictional_participants_per_cohort": 3,
+    "isolated_replays": 2,
+    "canonical_replay_sha256": "10edccfec16e1c84923bbf02bfa775127d01c14e9d4b96b60cb588acd9eb3049",
+    "replay_equivalent": true,
+    "prediction_rows_per_replay": 13056,
+    "prediction_sets_per_replay": 204,
+    "maximum_prediction_rows_buffered": 1,
+    "complete_prediction_records_materialized": false,
+    "numerical_shortcut_fixture_executions_per_replay": 7,
+    "shortcut_prediction_rows_per_replay": 91392,
+    "main_target_deliveries": 2,
+    "main_scores": 2,
+    "shortcut_target_deliveries_per_replay": 14,
+    "shortcut_scores_per_replay": 14,
+    "refusal_observations": 140,
+    "post_target_updates": 0,
+    "runtime_seconds": 42.69443762500305,
+    "peak_process_tree_RSS_bytes": 211288064,
+    "private_generated_output_bytes_maximum_replay": 4896930,
+    "mandatory_process_monitor_samples": 157,
+    "retained_generated_payload_bytes": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "real_or_private_reads": 0,
+    "device_operations": 0,
+    "end_to_end_latency_measured": false
+  },
+  "full_scale_nonofficial_rehearsal": {
+    "result_path": "registries/communication_eeg_prospective_generated_full_scale_rehearsal_result.v0.json",
+    "fictional_participants": 42,
+    "prediction_rows": 91392,
+    "prediction_sets": 1428,
+    "maximum_prediction_rows_buffered": 1,
+    "numerical_shortcut_fixture_executions": 7,
+    "runtime_seconds": 101.58260462502949,
+    "peak_process_tree_RSS_bytes": 283394048,
+    "private_generated_output_bytes": 34259372,
+    "network_bytes": 0,
+    "real_or_private_reads": 0,
+    "retained_generated_payload_bytes": 0,
+    "official_qualification": false
+  },
+  "local_verification": {
+    "status": "base_and_focused_optional_green_clean_remote_optional_required_before_main",
+    "focused_optional_tests": 92,
+    "focused_tests_passed": true,
+    "complete_dependency_light_tests": 6740,
+    "complete_dependency_light_skips": 278,
+    "complete_dependency_light_runtime_seconds": 214.832,
+    "complete_dependency_light_tests_passed": true,
+    "complete_local_optional_tests": 6795,
+    "complete_local_optional_failures": 2,
+    "complete_local_optional_errors": 14,
+    "complete_local_optional_skips": 19,
+    "complete_local_optional_runtime_seconds": 390.68,
+    "complete_optional_neuro_tests_passed": false,
+    "complete_local_optional_failure_boundary": "unrelated cumulative_RSS_OpenMP_environment_and_sandbox_forkserver_failures; focused_COMM_P0_optional_green",
+    "pre_change_clean_CI_optional_tests": 6793,
+    "pre_change_clean_CI_optional_failures": 1,
+    "pre_change_clean_CI_optional_failure_boundary": "historical_V0_artifact_hash_only",
+    "ruff_version": "0.15.20",
+    "ruff_passed": true,
+    "registry_JSON_files_validated": 560,
+    "json_validation_passed": true,
+    "comm_p0_cli_help_passed": true,
+    "comm_p0_runner_cli_help_passed": true,
+    "git_diff_check_passed": true
+  },
+  "remaining_activation_blockers": [
+    "separate_exact_green_activation_before_one_official_generated_qualification"
+  ],
+  "historical_stale_hash_failure": {
+    "commit": "0097cb85835498494ef65b08f7ad9850eb0e6f5e",
+    "CI_run": 33150365280,
+    "Base_Python_job": 98780682764,
+    "cause": "historical_V0_registry_bound_previous_score_worker_hash",
+    "reached_main": false,
+    "qualification_or_real_operation_occurred": false
+  },
+  "operation_counters": {
+    "official_generated_qualification_runs": 0,
+    "real_or_private_path_operations": 0,
+    "real_signal_reads": 0,
+    "real_target_or_label_reads": 0,
+    "human_or_device_operations": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "active_gate": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "changed": false,
+    "all_authority_flags_false": true
+  },
+  "claim_boundary": {
+    "generated_hardening_capability_established": true,
+    "official_generated_qualification_established": false,
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_performance_established": false,
+    "clinical_value_established": false
+  }
+}

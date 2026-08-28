@@ -43,7 +43,22 @@ class CommP0GeneratedStreamingScoreTests(unittest.TestCase):
             authorization=self.authorization,
             delivered_targets=self.targets,
         )
-        self.assertEqual(self._stream_score(self.predictions), expected)
+        observed = self._stream_score(self.predictions)
+        self.assertEqual(observed, expected)
+        self.assertEqual(
+            sum(
+                cohort["free_choice_shadow"]["sign_flip_assignments_evaluated"]
+                for cohort in observed["cohorts"]
+            ),
+            8,
+        )
+        self.assertTrue(
+            all(
+                cohort["prompted_shadow_directional"]["sign_flip_assignments_evaluated"] == 0
+                and not cohort["prompted_shadow_directional"]["exact_sign_flip_performed"]
+                for cohort in observed["cohorts"]
+            )
+        )
 
     def test_missing_and_invalid_rows_preserve_existing_penalties(self) -> None:
         changed = copy.deepcopy(self.predictions)

@@ -249,7 +249,8 @@ def _verify_attestation(
 def build_freeze_attestation(
     *,
     contract: Mapping[str, Any],
-    predictions: Sequence[Mapping[str, Any]],
+    predictions: Sequence[Mapping[str, Any]] | None = None,
+    prediction_freeze: Mapping[str, Any] | None = None,
     identities: Mapping[str, Mapping[str, Any]],
     authorization: Mapping[str, Any],
     hmac_key: bytes,
@@ -258,6 +259,13 @@ def build_freeze_attestation(
 
     if set(identities) != set(_BOUND_SURFACES):
         _refuse("descriptor_identity_mismatch")
+    if (predictions is None) == (prediction_freeze is None):
+        _refuse("prediction_freeze_attestation_mismatch")
+    exact_freeze = (
+        dict(prediction_freeze)
+        if prediction_freeze is not None
+        else streaming_score.build_prediction_freeze_attestation(iter(predictions or ()), contract)
+    )
     body = {
         "schema_name": ATTESTATION_SCHEMA,
         "schema_version": SCHEMA_VERSION,
@@ -266,9 +274,7 @@ def build_freeze_attestation(
         "target_delivery_count_at_freeze": 0,
         "score_count_at_freeze": 0,
         "bound_inputs": {key: dict(identities[key]) for key in _BOUND_SURFACES},
-        "score_only_prediction_freeze": streaming_score.build_prediction_freeze_attestation(
-            iter(predictions), contract
-        ),
+        "score_only_prediction_freeze": exact_freeze,
         "authorization": dict(authorization),
     }
     body["attestation_hmac_sha256"] = _hmac_sha256(hmac_key, body)

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import copy
+import importlib.util
 import json
 import os
 import sys
@@ -13,8 +14,11 @@ from unittest import mock
 from neurodecodekit.experiments import comm_p0_generated as core
 from neurodecodekit.experiments import comm_p0_generated_qualification as qualification
 
-
 ROOT = Path(__file__).resolve().parents[1]
+HAS_CLASSICAL = (
+    importlib.util.find_spec("numpy") is not None
+    and importlib.util.find_spec("sklearn") is not None
+)
 
 
 def _activation(root: Path, artifact_path: str) -> dict[str, object]:
@@ -137,6 +141,31 @@ class CommP0GeneratedQualificationTests(unittest.TestCase):
             self.assertFalse(marker.exists())
             self.assertFalse(qualification.OFFICIAL_IMPLEMENTATION_ACTIVATED)
 
+    def test_future_activated_entry_consumes_marker_before_any_work(self) -> None:
+        activation = {"activation": "generated-test-only"}
+        with tempfile.TemporaryDirectory() as temporary:
+            marker = Path(temporary) / "consumed.json"
+            with (
+                mock.patch.object(qualification, "OFFICIAL_IMPLEMENTATION_ACTIVATED", True),
+                mock.patch.object(
+                    qualification,
+                    "load_and_validate_activation",
+                    return_value=activation,
+                ),
+                self.assertRaisesRegex(
+                    core.CommP0GeneratedRefusal,
+                    "protocol_model_threshold_vocabulary_prior_or_code_hash_drift",
+                ),
+            ):
+                qualification.run_official_qualification(
+                    Path(temporary) / "result.json",
+                    consumed_marker=marker,
+                    root=ROOT,
+                )
+            self.assertTrue(marker.is_file())
+            record = json.loads(marker.read_bytes())
+            self.assertEqual(record["activation_sha256"], core.sha256_json(activation))
+
     def test_activation_binding_is_offline_exact_and_hash_bound(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
@@ -255,6 +284,81 @@ class CommP0GeneratedQualificationTests(unittest.TestCase):
                     maximum_rows_buffered=257,
                 )
 
+    def test_fold_assembler_never_materializes_complete_prediction_payload(self) -> None:
+        participant = "P-stream-01"
+        item_ids = ("opaque-a", "opaque-b")
+        records: list[dict[str, object]] = [
+            {
+                "record_type": "fold_header",
+                "cohort_id": "discovery",
+                "held_out_participant": participant,
+                "held_out_labels_received": 0,
+                "trial_plan_objects_received": 0,
+                "target_vault_capabilities_received": 0,
+            }
+        ]
+        for condition in self.contract["conditions"]:
+            for index, item_id in enumerate(item_ids):
+                records.append(
+                    {
+                        "record_type": "prediction",
+                        "item_id": item_id,
+                        "cohort_id": "discovery",
+                        "participant_id": participant,
+                        "endpoint": core.ENDPOINTS[index],
+                        "phase": "shadow",
+                        "condition": condition,
+                        "probabilities": [0.25, 0.25, 0.25, 0.25],
+                    }
+                )
+        prediction_rows = len(records) - 1
+        records.append(
+            {
+                "record_type": "fold_ledger",
+                "held_out_participant": participant,
+                "prior_fits": 1,
+                "residualizer_fits": 2,
+                "classifier_fits": 15,
+                "temperature_calibration_fits": 15,
+                "model_inference_runs": 17,
+                "prediction_sets": 34,
+                "prediction_rows": prediction_rows,
+                "target_deliveries": 0,
+                "scores": 0,
+                "post_target_updates": 0,
+            }
+        )
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fold_path = root / "fold.ndjson"
+            fold_path.write_bytes(b"".join(core.canonical_json_bytes(record) for record in records))
+            output_path = root / "predictions.ndjson"
+            assembler = qualification.PredictionStreamAssembler(
+                output_path,
+                byte_cap=1_000_000,
+                maximum_rows_buffered=256,
+            )
+            ledger = assembler.append_fold(
+                fold_path,
+                expected_cohort="discovery",
+                expected_participant=participant,
+                expected_items=item_ids,
+                contract=self.contract,
+            )
+            with mock.patch.object(
+                qualification,
+                "read_no_follow",
+                side_effect=AssertionError("whole-payload reader used"),
+            ):
+                identity, inventory = assembler.finalize()
+            self.assertEqual(ledger["prediction_rows"], prediction_rows)
+            self.assertEqual(inventory.rows, prediction_rows)
+            self.assertEqual(
+                identity, qualification._hash_no_follow(output_path, byte_cap=1_000_000)
+            )
+            self.assertEqual(assembler.maximum_rows_observed, 1)
+            self.assertLessEqual(assembler.maximum_rows_observed, 256)
+
     def test_hmac_tamper_refuses_before_target_descriptor_open(self) -> None:
         prediction = {
             "record_type": "prediction",
@@ -357,6 +461,7 @@ class CommP0GeneratedQualificationTests(unittest.TestCase):
         self.assertTrue(all(not row["neural_evidence_gate_pass"] for row in shortcuts[1:]))
         self.assertTrue(all(not row["scientific_value"] for row in shortcuts))
 
+    @unittest.skipUnless(HAS_CLASSICAL, "requires optional classical stack")
     def test_reduced_two_replay_path_is_deterministic_and_target_firewalled(self) -> None:
         result = qualification.run_development_replay_pair(
             root=ROOT,
@@ -369,6 +474,10 @@ class CommP0GeneratedQualificationTests(unittest.TestCase):
         self.assertEqual(result["isolated_child_process_replays"], 2)
         self.assertTrue(result["replay_equivalent"])
         self.assertEqual(result["shortcut_fixture_accounting_records_per_replay"], 7)
+        self.assertEqual(result["numerical_shortcut_fixture_executions_per_replay"], 7)
+        self.assertEqual(result["shortcut_prediction_rows_per_replay"], 91_392)
+        self.assertEqual(result["shortcut_target_deliveries_per_replay"], 14)
+        self.assertEqual(result["shortcut_scores_per_replay"], 14)
         self.assertEqual(result["refusal_observations"], 140)
         self.assertEqual(result["target_deliveries"], 2)
         self.assertEqual(result["scores"], 2)
@@ -378,9 +487,15 @@ class CommP0GeneratedQualificationTests(unittest.TestCase):
         self.assertEqual(result["device_operations"], 0)
         self.assertEqual(result["retained_generated_payload_bytes_after_proof"], 0)
         self.assertFalse(result["end_to_end_latency_measured"])
-        self.assertEqual(result["prediction_transport_write_batch_rows_maximum"], 256)
-        self.assertTrue(result["complete_prediction_records_materialized_for_development_scoring"])
-        self.assertEqual(len(result["remaining_activation_blockers"]), 4)
+        self.assertEqual(result["prediction_transport_write_batch_rows_maximum"], 1)
+        self.assertFalse(result["complete_prediction_records_materialized_for_development_scoring"])
+        self.assertEqual(
+            result["remaining_activation_blockers"],
+            [
+                "separate exact-green activation before one official generated "
+                "qualification"
+            ],
+        )
         self.assertGreater(result["mandatory_process_monitor_samples"], 0)
         core.assert_target_free(result)
 

@@ -1,15 +1,19 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
 > **COMM-P0-G implementation update (2026-08-28):** exact numerical/scorer
-> `b7e4d83` and endpoint-separated live scorer `c46064d` are remotely green and
-> on GitHub `main`. The latter closes the prompted/free-choice pooling defect:
-> free choice is primary and prompted success is non-rescuing. The next runner
-> increment has a bounded two-replay development scaffold with 15-digest
-> equivalence, process/resource accounting, activation locking, and no-replace
-> publication. It remains incomplete and nonofficial until all 70 refusal
-> families reach domain-specific validators, full predictions use bounded
-> transport, scorer authority is cryptographically bound and model-free, and
-> durable consumption exists. No scientific claim or Tier C authority changed.
+> `b7e4d83`, endpoint-separated live scorer `c46064d`, and standalone bounded
+> streaming scorer `7d625a9` are remotely green and on GitHub `main`. The V1
+> hardening successor now validates and appends canonical fold predictions with
+> a one-row raw high-water mark, executes all seven registered numerical
+> shortcut routes, keeps scorer authority model-free, wires durable future
+> consumption before official work, and matches the frozen exact-sign-flip
+> budget. One nonofficial 42-person fictional rehearsal completed 91,392
+> prediction rows / 1,428 sets in 101.5826 seconds at 283,394,048-byte peak RSS
+> and 34,259,372 private temporary bytes, with zero network, real-data, device,
+> or retained-payload operations. The successor is pending exact commit, push,
+> and remote CI. Only a separate exact-green activation remains before the one
+> official generated qualification; no scientific claim or Tier C authority
+> changed.
 
 > **Prospective synchronized communication cohort (2026-08-27):** with every
 > registered public replication route currently unqualified, `COMM-P0-SYNC-v0`

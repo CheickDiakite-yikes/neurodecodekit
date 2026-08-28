@@ -282,7 +282,10 @@ def _shadow_summary(
     decimals = int(scoring.get("participant_metric_decimal_places", 12))
     margins = [round(row["margin"], decimals) for row in metrics]
     accuracy_margins = [row["accuracy_margin"] for row in metrics]
-    p_value, assignments = score_only._exact_sign_flip(margins)
+    if endpoint == "free_choice_intend":
+        p_value, assignments = score_only._exact_sign_flip(margins)
+    else:
+        p_value, assignments = None, 0
     result: dict[str, Any] = {
         "participant_count": len(metrics),
         "assigned_active_episodes": sum(
@@ -324,6 +327,7 @@ def _shadow_summary(
                 ),
                 "cue_only_reported_as_leakage_ceiling": True,
                 "may_rescue_free_choice_failure": False,
+                "exact_sign_flip_performed": False,
             }
         )
     return result

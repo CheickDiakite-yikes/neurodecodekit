@@ -32,7 +32,7 @@ from neurodecodekit.experiments import comm_p0_generated_model_worker as model_w
 from neurodecodekit.experiments import comm_p0_generated_numerical as numerical
 from neurodecodekit.experiments import comm_p0_generated_score_only as score_only
 from neurodecodekit.experiments import comm_p0_generated_score_worker as score_worker
-
+from neurodecodekit.experiments import comm_p0_generated_shortcut_fixtures as shortcut_fixtures
 
 SCHEMA_VERSION = "0.1.0"
 RESULT_SCHEMA = "neurodecodekit.comm_p0_generated_qualification_hardening_development"
@@ -105,6 +105,271 @@ class PredictionInventory:
     participants: tuple[str, ...]
     conditions: tuple[str, ...]
     endpoints: tuple[str, ...]
+
+
+class PredictionStreamAssembler:
+    """Validate fold outputs and immediately append canonical prediction rows."""
+
+    def __init__(self, path: Path, *, byte_cap: int, maximum_rows_buffered: int) -> None:
+        if maximum_rows_buffered < 1 or maximum_rows_buffered > 256:
+            _refuse("private_derivative_cap_breach")
+        self.path = path
+        self.byte_cap = byte_cap
+        self.maximum_rows_buffered = maximum_rows_buffered
+        self.maximum_rows_observed = 0
+        self._directory_fd = _open_directory_no_follow(path.parent)
+        try:
+            self._descriptor = os.open(
+                path.name,
+                os.O_WRONLY | os.O_CREAT | os.O_EXCL | getattr(os, "O_NOFOLLOW", 0),
+                0o600,
+                dir_fd=self._directory_fd,
+            )
+        except FileExistsError as exc:
+            os.close(self._directory_fd)
+            raise core.CommP0GeneratedRefusal(
+                "post_score_mutation_repeat_or_output_replacement"
+            ) from exc
+        self._digest = hashlib.sha256()
+        self._size = 0
+        self._rows = 0
+        self._participants: set[str] = set()
+        self._conditions: set[str] = set()
+        self._endpoints: set[str] = set()
+        self._seen: set[tuple[str, str]] = set()
+        self._active_live_observations: list[dict[str, Any]] = []
+        self._closed = False
+
+    @staticmethod
+    def _read_record(file_object: Any, *, index: int) -> dict[str, Any]:
+        line = file_object.readline(64 * 1024 + 1)
+        if not line or len(line) > 64 * 1024 or not line.endswith(b"\n"):
+            _refuse("protocol_model_threshold_vocabulary_prior_or_code_hash_drift")
+        try:
+            record = json.loads(line)
+        except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+            raise core.CommP0GeneratedRefusal(
+                "protocol_model_threshold_vocabulary_prior_or_code_hash_drift",
+                str(index),
+            ) from exc
+        if not isinstance(record, Mapping) or core.canonical_json_bytes(record) != line:
+            _refuse("protocol_model_threshold_vocabulary_prior_or_code_hash_drift")
+        return dict(record)
+
+    def append_fold(
+        self,
+        path: Path,
+        *,
+        expected_cohort: str,
+        expected_participant: str,
+        expected_items: Sequence[str],
+        contract: Mapping[str, Any],
+    ) -> dict[str, int]:
+        if self._closed:
+            _refuse("post_score_mutation_repeat_or_output_replacement")
+        directory_fd = _open_directory_no_follow(path.parent)
+        descriptor = -1
+        try:
+            descriptor = os.open(
+                path.name,
+                os.O_RDONLY | getattr(os, "O_NOFOLLOW", 0),
+                dir_fd=directory_fd,
+            )
+            before = os.fstat(descriptor)
+            if (
+                not stat.S_ISREG(before.st_mode)
+                or before.st_nlink != 1
+                or before.st_size <= 0
+                or before.st_size > self.byte_cap
+            ):
+                _refuse("filesystem_capability_publication_or_cleanup_escape")
+            file_object = os.fdopen(descriptor, "rb", closefd=False)
+            header = self._read_record(file_object, index=0)
+            if (
+                header.get("record_type") != "fold_header"
+                or header.get("cohort_id") != expected_cohort
+                or header.get("held_out_participant") != expected_participant
+                or header.get("held_out_labels_received") != 0
+                or header.get("trial_plan_objects_received") != 0
+                or header.get("target_vault_capabilities_received") != 0
+            ):
+                _refuse("target_exposed_to_decoder_operator_freezer_or_language_context")
+            expected_index = 0
+            for condition in tuple(str(value) for value in contract["conditions"]):
+                for item_id in expected_items:
+                    record = self._read_record(file_object, index=expected_index + 1)
+                    if (
+                        set(record) != PREDICTION_KEYS
+                        or record.get("record_type") != "prediction"
+                        or record.get("condition") != condition
+                        or record.get("item_id") != item_id
+                        or record.get("cohort_id") != expected_cohort
+                        or record.get("participant_id") != expected_participant
+                        or record.get("endpoint") not in core.ENDPOINTS
+                        or record.get("phase") not in {"shadow", "live"}
+                    ):
+                        _refuse("prediction_inventory_missing_or_duplicate")
+                    core.assert_target_free(record)
+                    core.validate_probability_vector(record["probabilities"])
+                    key = (str(record["item_id"]), condition)
+                    if key in self._seen:
+                        _refuse("prediction_inventory_missing_or_duplicate")
+                    self._seen.add(key)
+                    payload = core.canonical_json_bytes(record)
+                    self._size += len(payload)
+                    if self._size > self.byte_cap:
+                        _refuse("private_derivative_cap_breach")
+                    _write_all(self._descriptor, payload)
+                    self._digest.update(payload)
+                    self._rows += 1
+                    self.maximum_rows_observed = max(self.maximum_rows_observed, 1)
+                    self._participants.add(expected_participant)
+                    self._conditions.add(condition)
+                    self._endpoints.add(str(record["endpoint"]))
+                    if (
+                        record["cohort_id"] == "independent_replication"
+                        and record["phase"] == "live"
+                        and condition == "P_plus_residual_central_EEG"
+                    ):
+                        probabilities = tuple(float(value) for value in record["probabilities"])
+                        command = max(range(len(probabilities)), key=probabilities.__getitem__)
+                        confidence = max(probabilities)
+                        stable = confidence >= 0.40
+                        self._active_live_observations.append(
+                            {
+                                "interval_id": record["item_id"],
+                                "cohort_id": record["cohort_id"],
+                                "participant_id": record["participant_id"],
+                                "endpoint": record["endpoint"],
+                                "phase": record["phase"],
+                                "active_intent": True,
+                                "inactive_surface": None,
+                                "duration_seconds": 3.0,
+                                "stable_commit": stable,
+                                "predicted_command_index": command if stable else None,
+                                "commit_count": int(stable),
+                                "invalid_chunk_count": 0,
+                                "total_chunk_count": 4,
+                                "processed_frame_count": 4,
+                                "total_frame_count": 4,
+                                "first_output_latency_seconds": 0.5 if stable else None,
+                                "stable_commit_latency_seconds": 1.5 if stable else None,
+                                "capture_to_presentation_overhead_seconds": 0.1 if stable else None,
+                                "clock_map_verified": True,
+                            }
+                        )
+                    expected_index += 1
+            trailer = self._read_record(file_object, index=expected_index + 1)
+            if (
+                trailer.get("record_type") != "fold_ledger"
+                or trailer.get("held_out_participant") != expected_participant
+                or file_object.read(1)
+            ):
+                _refuse("prediction_inventory_missing_or_duplicate")
+            after = os.fstat(descriptor)
+            if (
+                after.st_dev != before.st_dev
+                or after.st_ino != before.st_ino
+                or after.st_size != before.st_size
+                or after.st_nlink != 1
+            ):
+                _refuse("prediction_row_or_probability_tamper_after_freeze")
+            ledger = {
+                key: int(trailer[key])
+                for key in (
+                    "prior_fits",
+                    "residualizer_fits",
+                    "classifier_fits",
+                    "temperature_calibration_fits",
+                    "model_inference_runs",
+                    "prediction_sets",
+                    "prediction_rows",
+                    "target_deliveries",
+                    "scores",
+                    "post_target_updates",
+                )
+            }
+            if ledger["prediction_rows"] != expected_index:
+                _refuse("prediction_inventory_missing_or_duplicate")
+            return ledger
+        finally:
+            if descriptor >= 0:
+                os.close(descriptor)
+            os.close(directory_fd)
+
+    def finalize(self) -> tuple[FileIdentity, PredictionInventory]:
+        if self._closed or self._rows == 0:
+            _refuse("prediction_inventory_missing_or_duplicate")
+        os.fsync(self._descriptor)
+        written = os.fstat(self._descriptor)
+        if written.st_nlink != 1 or written.st_size != self._size:
+            _refuse("prediction_row_or_probability_tamper_after_freeze")
+        identity = FileIdentity(
+            device=int(written.st_dev),
+            inode=int(written.st_ino),
+            size_bytes=int(written.st_size),
+            sha256=self._digest.hexdigest(),
+        )
+        os.close(self._descriptor)
+        self._descriptor = -1
+        os.fsync(self._directory_fd)
+        os.close(self._directory_fd)
+        self._directory_fd = -1
+        self._closed = True
+        observed = _hash_no_follow(self.path, byte_cap=self.byte_cap)
+        if observed != identity:
+            _refuse("prediction_row_or_probability_tamper_after_freeze")
+        inventory = PredictionInventory(
+            rows=self._rows,
+            sets=len(self._participants) * len(self._conditions) * len(self._endpoints),
+            participants=tuple(sorted(self._participants)),
+            conditions=tuple(sorted(self._conditions)),
+            endpoints=tuple(sorted(self._endpoints)),
+        )
+        return identity, inventory
+
+    def live_observations(self) -> tuple[dict[str, Any], ...]:
+        if not self._closed:
+            _refuse("prediction_freeze_attestation_mismatch")
+        records = list(self._active_live_observations)
+        participants = sorted(
+            {str(record["participant_id"]) for record in self._active_live_observations}
+        )
+        for participant in participants:
+            for surface in sorted(score_only.INACTIVE_SURFACES):
+                records.append(
+                    {
+                        "interval_id": f"{participant}-inactive-{surface}",
+                        "cohort_id": "independent_replication",
+                        "participant_id": participant,
+                        "endpoint": None,
+                        "phase": "live",
+                        "active_intent": False,
+                        "inactive_surface": surface,
+                        "duration_seconds": 60.0,
+                        "stable_commit": False,
+                        "predicted_command_index": None,
+                        "commit_count": 0,
+                        "invalid_chunk_count": 0,
+                        "total_chunk_count": 4,
+                        "processed_frame_count": 4,
+                        "total_frame_count": 4,
+                        "first_output_latency_seconds": None,
+                        "stable_commit_latency_seconds": None,
+                        "capture_to_presentation_overhead_seconds": None,
+                        "clock_map_verified": True,
+                    }
+                )
+        return tuple(records)
+
+    def close(self) -> None:
+        if self._closed:
+            return
+        if self._descriptor >= 0:
+            os.close(self._descriptor)
+        if self._directory_fd >= 0:
+            os.close(self._directory_fd)
+        self._closed = True
 
 
 def _refuse(family: str, detail: str = "") -> None:
@@ -251,6 +516,82 @@ def read_no_follow(path: str | Path, *, byte_cap: int) -> tuple[FileIdentity, by
         ),
         value,
     )
+
+
+def _hash_no_follow(path: str | Path, *, byte_cap: int) -> FileIdentity:
+    """Hash one bounded single-link file without retaining its payload."""
+
+    source = Path(path)
+    directory_fd = _open_directory_no_follow(source.parent)
+    descriptor = -1
+    try:
+        descriptor = os.open(
+            source.name,
+            os.O_RDONLY | getattr(os, "O_NOFOLLOW", 0),
+            dir_fd=directory_fd,
+        )
+        before = os.fstat(descriptor)
+        if (
+            not stat.S_ISREG(before.st_mode)
+            or before.st_nlink != 1
+            or before.st_size <= 0
+            or before.st_size > byte_cap
+        ):
+            _refuse("temporary_output_cap_breach")
+        digest = hashlib.sha256()
+        remaining = before.st_size
+        while remaining:
+            block = os.read(descriptor, min(1_048_576, remaining))
+            if not block:
+                _refuse("prediction_row_or_probability_tamper_after_freeze")
+            digest.update(block)
+            remaining -= len(block)
+        if os.read(descriptor, 1):
+            _refuse("prediction_row_or_probability_tamper_after_freeze")
+        after = os.fstat(descriptor)
+        if (
+            before.st_dev,
+            before.st_ino,
+            before.st_size,
+            before.st_nlink,
+        ) != (after.st_dev, after.st_ino, after.st_size, after.st_nlink):
+            _refuse("prediction_row_or_probability_tamper_after_freeze")
+        return FileIdentity(
+            device=int(before.st_dev),
+            inode=int(before.st_ino),
+            size_bytes=int(before.st_size),
+            sha256=digest.hexdigest(),
+        )
+    finally:
+        if descriptor >= 0:
+            os.close(descriptor)
+        os.close(directory_fd)
+
+
+def _unlink_invocation_file(path: Path, *, invocation_root: Path) -> None:
+    """Remove only a single-link regular file created inside this invocation root."""
+
+    if path.parent != invocation_root:
+        _refuse("filesystem_capability_publication_or_cleanup_escape")
+    directory_fd = _open_directory_no_follow(invocation_root)
+    descriptor = -1
+    try:
+        descriptor = os.open(
+            path.name,
+            os.O_RDONLY | getattr(os, "O_NOFOLLOW", 0),
+            dir_fd=directory_fd,
+        )
+        info = os.fstat(descriptor)
+        if not stat.S_ISREG(info.st_mode) or info.st_nlink != 1:
+            _refuse("filesystem_capability_publication_or_cleanup_escape")
+        os.close(descriptor)
+        descriptor = -1
+        os.unlink(path.name, dir_fd=directory_fd)
+        os.fsync(directory_fd)
+    finally:
+        if descriptor >= 0:
+            os.close(descriptor)
+        os.close(directory_fd)
 
 
 def create_consumed_marker(
@@ -482,7 +823,7 @@ def run_monitored_command(
             except core.CommP0GeneratedRefusal:
                 _terminate_process_group(process)
                 raise
-            except Exception as exc:  # noqa: BLE001 - monitor failure must park.
+            except Exception as exc:
                 _terminate_process_group(process)
                 raise core.CommP0GeneratedRefusal(
                     "total_permission_or_free_space_floor_breach", "process_monitor_failed"
@@ -1043,7 +1384,8 @@ def _score_child_transaction(
     temporary_root: Path,
     contract: Mapping[str, Any],
     trial_records: Sequence[Mapping[str, Any]],
-    prediction_records: Sequence[Mapping[str, Any]],
+    prediction_freeze: Mapping[str, Any],
+    live_records: Sequence[Mapping[str, Any]],
     prediction_path: Path,
     prediction_identity: FileIdentity,
     delivered_targets: Mapping[str, int],
@@ -1070,7 +1412,6 @@ def _score_child_transaction(
         scoring["positive_participants_minimum"] = max(1, participant_count - 1)
         scoring["exact_one_sided_sign_flip_p_maximum"] = 1.0
 
-    live_records = _live_observations(trial_records, prediction_records)
     contract_path = temporary_root / "score-contract.json"
     trial_path = temporary_root / "score-trials.ndjson"
     live_path = temporary_root / "score-live.ndjson"
@@ -1108,7 +1449,7 @@ def _score_child_transaction(
     }
     attestation = score_worker.build_freeze_attestation(
         contract=scorer_contract,
-        predictions=prediction_records,
+        prediction_freeze=prediction_freeze,
         identities=identities,
         authorization=authorization,
         hmac_key=freeze_key,
@@ -1167,7 +1508,7 @@ def _score_child_transaction(
             "--output-byte-cap",
             str(output_byte_cap),
             "--record-cap",
-            str(max(100_000, len(prediction_records))),
+            str(max(100_000, int(prediction_freeze["prediction_rows"]))),
         )
         measurement = run_monitored_command(
             command,
@@ -1256,7 +1597,14 @@ def _run_replay(
     participant_by_item = {
         item_id: row.participant_id for item_id, row in original_by_opaque.items()
     }
-    all_predictions: list[dict[str, Any]] = []
+    prediction_path = temporary_root / "predictions.ndjson"
+    assembler = PredictionStreamAssembler(
+        prediction_path,
+        byte_cap=int(caps["private_generated_output_bytes"]),
+        maximum_rows_buffered=int(
+            contract["numerical_schedule_per_replay"]["maximum_prediction_rows_buffered"]
+        ),
+    )
     ledger = {
         key: 0
         for key in (
@@ -1274,75 +1622,74 @@ def _run_replay(
     }
     peak_rss = 0
     monitor_samples = 0
-    for cohort in core.COHORTS:
-        cohort_rows = by_cohort[cohort]
-        cohort_features = feature_by_cohort[cohort]
-        participants = sorted({row.participant_id for row in cohort_rows})
-        free_choice_ids = [
-            row.item_id for row in cohort_rows if row.endpoint == "free_choice_intend"
-        ]
-        all_source = vault.source_targets(cohort, free_choice_ids)
-        all_source.update(
-            {
-                row.item_id: int(row.cue_code)
-                for row in cohort_rows
-                if row.endpoint == "prompted_intend" and row.cue_code in range(len(core.COMMANDS))
-            }
-        )
-        for held_out in participants:
-            source_labels = {
-                _opaque_item_id(opaque_key, item_id): value
-                for item_id, value in all_source.items()
-                if next(row for row in cohort_rows if row.item_id == item_id).participant_id
-                != held_out
-            }
-            paths = _write_fold_inputs(
-                temporary_root,
-                cohort=cohort,
-                held_out=held_out,
-                features=cohort_features,
-                source_labels=source_labels,
-                participant_by_item=participant_by_item,
-                contract=contract,
-                byte_cap=int(caps["generated_input_bytes"]),
-            )
-            measurement = execute_fold(
-                repository=repository,
-                temporary_root=temporary_root,
-                feature_path=paths[0],
-                label_path=paths[1],
-                contract_path=paths[2],
-                output_path=paths[3],
-                held_out=held_out,
-                byte_cap=int(caps["private_generated_output_bytes"]),
-                deadline_monotonic=absolute_deadline,
-                rss_cap_bytes=int(caps["peak_process_tree_RSS_bytes"]),
-            )
-            peak_rss = max(peak_rss, measurement.peak_process_tree_RSS_bytes)
-            monitor_samples += measurement.monitor_samples
-            held_items = [
-                str(row["item_id"]) for row in cohort_features if row["participant_id"] == held_out
+    try:
+        for cohort in core.COHORTS:
+            cohort_rows = by_cohort[cohort]
+            cohort_features = feature_by_cohort[cohort]
+            participants = sorted({row.participant_id for row in cohort_rows})
+            free_choice_ids = [
+                row.item_id for row in cohort_rows if row.endpoint == "free_choice_intend"
             ]
-            predictions, fold_ledger, _ = _validate_fold_output(
-                paths[3],
-                expected_cohort=cohort,
-                expected_participant=held_out,
-                expected_items=held_items,
-                contract=contract,
-                byte_cap=int(caps["private_generated_output_bytes"]),
+            all_source = vault.source_targets(cohort, free_choice_ids)
+            all_source.update(
+                {
+                    row.item_id: int(row.cue_code)
+                    for row in cohort_rows
+                    if row.endpoint == "prompted_intend"
+                    and row.cue_code in range(len(core.COMMANDS))
+                }
             )
-            all_predictions.extend(predictions)
-            for key in ledger:
-                ledger[key] += fold_ledger[key]
-    prediction_path = temporary_root / "predictions.ndjson"
-    prediction_identity, inventory = write_prediction_stream(
-        prediction_path,
-        all_predictions,
-        byte_cap=int(caps["private_generated_output_bytes"]),
-        maximum_rows_buffered=int(
-            contract["numerical_schedule_per_replay"]["maximum_prediction_rows_buffered"]
-        ),
-    )
+            for held_out in participants:
+                source_labels = {
+                    _opaque_item_id(opaque_key, item_id): value
+                    for item_id, value in all_source.items()
+                    if next(row for row in cohort_rows if row.item_id == item_id).participant_id
+                    != held_out
+                }
+                paths = _write_fold_inputs(
+                    temporary_root,
+                    cohort=cohort,
+                    held_out=held_out,
+                    features=cohort_features,
+                    source_labels=source_labels,
+                    participant_by_item=participant_by_item,
+                    contract=contract,
+                    byte_cap=int(caps["generated_input_bytes"]),
+                )
+                measurement = execute_fold(
+                    repository=repository,
+                    temporary_root=temporary_root,
+                    feature_path=paths[0],
+                    label_path=paths[1],
+                    contract_path=paths[2],
+                    output_path=paths[3],
+                    held_out=held_out,
+                    byte_cap=int(caps["private_generated_output_bytes"]),
+                    deadline_monotonic=absolute_deadline,
+                    rss_cap_bytes=int(caps["peak_process_tree_RSS_bytes"]),
+                )
+                peak_rss = max(peak_rss, measurement.peak_process_tree_RSS_bytes)
+                monitor_samples += measurement.monitor_samples
+                held_items = [
+                    str(row["item_id"])
+                    for row in cohort_features
+                    if row["participant_id"] == held_out
+                ]
+                fold_ledger = assembler.append_fold(
+                    paths[3],
+                    expected_cohort=cohort,
+                    expected_participant=held_out,
+                    expected_items=held_items,
+                    contract=contract,
+                )
+                for key in ledger:
+                    ledger[key] += fold_ledger[key]
+                for path in paths:
+                    _unlink_invocation_file(path, invocation_root=temporary_root)
+        prediction_identity, inventory = assembler.finalize()
+    except BaseException:
+        assembler.close()
+        raise
     expected_rows = participants_per_cohort * len(core.COHORTS) * 128 * len(contract["conditions"])
     expected_sets = (
         participants_per_cohort
@@ -1352,6 +1699,8 @@ def _run_replay(
     )
     if inventory.rows != expected_rows or inventory.sets != expected_sets:
         _refuse("prediction_inventory_missing_or_duplicate")
+    if assembler.maximum_rows_observed > 256:
+        _refuse("private_derivative_cap_breach")
     split_sha256 = core.sha256_json(
         {
             cohort: sorted({row.participant_id for row in rows if row.cohort_id == cohort})
@@ -1403,13 +1752,24 @@ def _run_replay(
         "descriptor_device_and_inode_cryptographically_bound": True,
     }
     score_trials = _score_trial_records(rows, opaque_key)
+    live_records = assembler.live_observations()
+    prediction_freeze = {
+        "schema_name": "neurodecodekit.comm_p0_generated_prediction_freeze",
+        "schema_version": str(contract.get("schema_version", SCHEMA_VERSION)),
+        "gate_id": str(contract["gate_id"]),
+        "prediction_rows": inventory.rows,
+        "prediction_sets": inventory.sets,
+        "private_prediction_stream_sha256": prediction_identity.sha256,
+        "contains_individual_prediction_probability_target_or_participant_outcome": False,
+    }
     targets = _targets_for_active_rows(rows, vault, opaque_key)
     score, score_measurement = _score_child_transaction(
         repository=repository,
         temporary_root=temporary_root,
         contract=contract,
         trial_records=score_trials,
-        prediction_records=all_predictions,
+        prediction_freeze=prediction_freeze,
+        live_records=live_records,
         prediction_path=prediction_path,
         prediction_identity=prediction_identity,
         delivered_targets=targets,
@@ -1427,15 +1787,21 @@ def _run_replay(
     monitor_samples += score_measurement.monitor_samples
     refusals = domain_refusals.exercise_domain_refusals(contract)
     domain_refusals.validate_observations(refusals, contract)
-    shortcuts = shortcut_fixture_accounting()
+    shortcut_matrix = shortcut_fixtures.run_shortcut_fixture_matrix(contract)
+    shortcuts = tuple(route.public_record() for route in shortcut_matrix.routes)
     if len(shortcuts) != 7 or any(
         row["neural_evidence_gate_pass"] != row["expected_neural_evidence_gate_pass"]
         for row in shortcuts
     ):
         _refuse("required_control_condition_missing_duplicated_or_substituted")
+    peak_rss = max(peak_rss, shortcut_matrix.peak_process_rss_bytes)
     surface = {
         "fixture_sha256": core.sha256_json(
-            {"participants_per_cohort": participants_per_cohort, "rows": len(rows)}
+            {
+                "participants_per_cohort": participants_per_cohort,
+                "rows": len(rows),
+                "shortcut_fixture_sha256": shortcut_matrix.deterministic_payload_sha256,
+            }
         ),
         "trial_grammar_sha256": core.sha256_json(score_trials),
         "split_sha256": split_sha256,
@@ -1447,7 +1813,7 @@ def _run_replay(
         "prediction_freeze_sha256": core.sha256_json(freeze_equivalence),
         "target_vault_sha256": core.sha256_json(vault.public_summary()),
         "score_sha256": core.sha256_json(score),
-        "live_record_sha256": core.sha256_json(_live_observations(score_trials, all_predictions)),
+        "live_record_sha256": core.sha256_json(live_records),
         "refusal_ledger_sha256": core.sha256_json(refusals),
         "resource_plan_sha256": core.sha256_json(contract["resource_caps"]),
         "claim_boundary_sha256": core.sha256_json(contract["claim_boundary"]),
@@ -1459,8 +1825,12 @@ def _run_replay(
         "canonical_replay_sha256": replay_sha256,
         "ledger": ledger,
         "prediction_inventory": asdict(inventory),
+        "maximum_prediction_rows_buffered": assembler.maximum_rows_observed,
+        "complete_prediction_records_materialized": False,
         "score": score,
         "shortcut_fixtures": list(shortcuts),
+        "shortcut_fixture_executions": len(shortcuts),
+        "shortcut_counters": dict(shortcut_matrix.counters),
         "refusal_observations": len(refusals),
         "target_deliveries": 1,
         "scores": 1,
@@ -1529,9 +1899,16 @@ def run_development_replay_pair(
         "replay_equivalent": True,
         "prediction_rows_per_replay": first["prediction_inventory"]["rows"],
         "prediction_sets_per_replay": first["prediction_inventory"]["sets"],
-        "prediction_transport_write_batch_rows_maximum": 256,
-        "complete_prediction_records_materialized_for_development_scoring": True,
+        "prediction_transport_write_batch_rows_maximum": max(
+            first["maximum_prediction_rows_buffered"],
+            second["maximum_prediction_rows_buffered"],
+        ),
+        "complete_prediction_records_materialized_for_development_scoring": False,
         "shortcut_fixture_accounting_records_per_replay": 7,
+        "numerical_shortcut_fixture_executions_per_replay": first["shortcut_fixture_executions"],
+        "shortcut_prediction_rows_per_replay": first["shortcut_counters"]["prediction_rows"],
+        "shortcut_target_deliveries_per_replay": first["shortcut_counters"]["target_deliveries"],
+        "shortcut_scores_per_replay": first["shortcut_counters"]["scores"],
         "refusal_observations": first["refusal_observations"] + second["refusal_observations"],
         "target_deliveries": first["target_deliveries"] + second["target_deliveries"],
         "scores": first["scores"] + second["scores"],
@@ -1555,17 +1932,85 @@ def run_development_replay_pair(
         "warnings": [
             "fictional generated records only",
             "reduced development cohort; the official 42-person qualification was not run",
-            "development scoring still materializes the complete prediction collection",
-            "seven shortcut routes are accounting records, not numerical executions",
-            "the durable marker is not wired into the locked official entry",
             "generated timing is not end-to-end device latency",
             "not scientific evidence",
         ],
         "remaining_activation_blockers": [
-            "streaming score state with no complete prediction collection",
-            "seven executed numerical shortcut fixtures",
-            "durable consumed marker wired before official fixture or model work",
-            "complete full-scale rehearsal and separate exact-green activation",
+            "separate exact-green activation before one official generated qualification",
+        ],
+    }
+    core.assert_target_free(result)
+    if len(core.canonical_json_bytes(result)) > int(
+        contract["resource_caps"]["public_aggregate_output_bytes"]
+    ):
+        _refuse("public_output_cap_breach")
+    if runtime > min(timeout_seconds, float(contract["resource_caps"]["wall_time_seconds"])):
+        _refuse("temporary_output_cap_breach", "absolute_deadline")
+    return result
+
+
+def run_full_scale_development_rehearsal(
+    *,
+    root: str | Path | None = None,
+    timeout_seconds: float = 180.0,
+) -> dict[str, Any]:
+    """Run one nonofficial 42-participant rehearsal under the frozen caps."""
+
+    repository = _repo_root(root)
+    contract = core.load_contract(repository)
+    started = time.monotonic()
+    absolute_deadline = started + min(
+        timeout_seconds, float(contract["resource_caps"]["wall_time_seconds"])
+    )
+    with tempfile.TemporaryDirectory(prefix="comm-p0-g-full-rehearsal-") as temporary:
+        replay = _run_replay(
+            repository,
+            Path(temporary),
+            participants_per_cohort=21,
+            absolute_deadline=absolute_deadline,
+            vault_key=secrets.token_bytes(32),
+            opaque_key=secrets.token_bytes(32),
+            freeze_key=secrets.token_bytes(32),
+            invocation_nonce=secrets.token_hex(32),
+        )
+    runtime = time.monotonic() - started
+    result = {
+        "schema_name": "neurodecodekit.comm_p0_generated_full_scale_development_rehearsal",
+        "schema_version": SCHEMA_VERSION,
+        "gate_id": core.GATE_ID,
+        "mode": "full_scale_nonofficial_generated_only",
+        "official_qualification": False,
+        "participants_per_cohort": 21,
+        "cohorts": 2,
+        "prediction_rows": replay["prediction_inventory"]["rows"],
+        "prediction_sets": replay["prediction_inventory"]["sets"],
+        "maximum_prediction_rows_buffered": replay["maximum_prediction_rows_buffered"],
+        "complete_prediction_records_materialized": replay[
+            "complete_prediction_records_materialized"
+        ],
+        "numerical_shortcut_fixture_executions": replay["shortcut_fixture_executions"],
+        "main_target_deliveries": replay["target_deliveries"],
+        "main_scores": replay["scores"],
+        "shortcut_target_deliveries": replay["shortcut_counters"]["target_deliveries"],
+        "shortcut_scores": replay["shortcut_counters"]["scores"],
+        "post_target_updates": replay["post_target_updates"],
+        "runtime_seconds": runtime,
+        "peak_process_tree_RSS_bytes": replay["peak_process_tree_RSS_bytes"],
+        "private_generated_output_bytes": replay["private_generated_output_bytes"],
+        "mandatory_process_monitor_samples": replay["monitor_samples"],
+        "canonical_replay_sha256": replay["canonical_replay_sha256"],
+        "network_requests": 0,
+        "network_bytes": 0,
+        "real_or_private_reads": 0,
+        "device_operations": 0,
+        "retained_generated_payload_bytes": 0,
+        "end_to_end_latency_measured": False,
+        "scientific_claim_established": False,
+        "warnings": [
+            "fictional generated records only",
+            "single nonofficial full-scale rehearsal; not the two-replay official qualification",
+            "generated timing is not end-to-end device latency",
+            "not scientific evidence",
         ],
     }
     core.assert_target_free(result)
@@ -1586,14 +2031,19 @@ def run_official_qualification(
 ) -> dict[str, Any]:
     """Remain locked until a future exact implementation and activation are green."""
 
-    del output, consumed_marker
-    load_and_validate_activation(root)
+    del output
+    activation = load_and_validate_activation(root)
     if not OFFICIAL_IMPLEMENTATION_ACTIVATED:
         _refuse(
             "score_before_exact_green_freeze",
             "official generated qualification remains inactive",
         )
+    create_consumed_marker(
+        consumed_marker,
+        invocation_nonce=secrets.token_hex(32),
+        activation_sha256=core.sha256_json(activation),
+    )
     _refuse(
         "protocol_model_threshold_vocabulary_prior_or_code_hash_drift",
-        "future activation must replace this compile-time lock before marker creation",
+        "future activation must bind the full-scale official executor after marker creation",
     )

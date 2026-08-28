@@ -51,9 +51,16 @@
 > `main`; free-choice live performance is now primary and prompted performance
 > cannot rescue it. The additive runner scaffold has completed a reduced
 > two-replay development pass at 187,645,952-byte peak RSS with zero retained
-> payload, but it remains nonofficial and activation-locked until its explicit
-> validator, transport, scorer-capability, and durable-consumption blockers are
-> resolved.
+> payload. Exact green `7d625a9` on GitHub `main` adds the standalone bounded
+> streaming scorer. The V1 hardening successor now streams canonical fold
+> predictions with a one-row raw high-water mark, executes all seven numerical
+> shortcut routes, wires the durable future consumed marker before official
+> work, and completed one nonofficial 42-person fictional rehearsal: 91,392
+> prediction rows / 1,428 sets in 101.5826 seconds at 283,394,048-byte peak RSS
+> and 34,259,372 private temporary bytes, with zero network, real-data, device,
+> or retained-payload operations. This successor is pending its own exact
+> commit, push, and remote CI. The official two-replay qualification remains
+> separately activation-locked and scientifically inert.
 
 ## Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight
 
