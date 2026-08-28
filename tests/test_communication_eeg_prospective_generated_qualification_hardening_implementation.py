@@ -23,6 +23,25 @@ REHEARSAL_REGISTRY = (
     / "communication_eeg_prospective_generated_full_scale_rehearsal_result.v0.json"
 )
 IMPLEMENTATION_COMMIT = "55e627d6504f32d51ea4d6e93e04901f7233411c"
+ARTIFACT_TABLE_SHA256 = "6eef1c64e37465e6598daaf507e6bd8071c3e12529f91a14808c65dd9221c6d8"
+
+
+def _canonical_sha256(value: object) -> str:
+    payload = json.dumps(value, ensure_ascii=True, separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(payload).hexdigest()
+
+
+def _historical_commit_is_available() -> bool:
+    return (
+        subprocess.run(
+            ["git", "cat-file", "-e", f"{IMPLEMENTATION_COMMIT}^{{commit}}"],
+            cwd=ROOT,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            check=False,
+        ).returncode
+        == 0
+    )
 
 
 class CommunicationEEGProspectiveGeneratedQualificationHardeningTests(unittest.TestCase):
@@ -32,6 +51,9 @@ class CommunicationEEGProspectiveGeneratedQualificationHardeningTests(unittest.T
         cls.rehearsal = json.loads(REHEARSAL_REGISTRY.read_text(encoding="utf-8"))
 
     def test_artifact_hashes_are_exact(self) -> None:
+        self.assertEqual(_canonical_sha256(self.record["artifacts"]), ARTIFACT_TABLE_SHA256)
+        if not _historical_commit_is_available():
+            return
         for artifact in self.record["artifacts"]:
             payload = subprocess.check_output(
                 ["git", "show", f"{IMPLEMENTATION_COMMIT}:{artifact['path']}"],

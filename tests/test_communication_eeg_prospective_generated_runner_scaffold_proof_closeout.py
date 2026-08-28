@@ -17,6 +17,25 @@ DOCUMENT = (
     / "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_RUNNER_SCAFFOLD_PROOF_CLOSEOUT.md"
 )
 IMPLEMENTATION_COMMIT = "a961849761b4b734347ca1e83191008c69a7e897"
+ARTIFACT_TABLE_SHA256 = "6eb0bf48cc6aebe041ac3045fe4b0e0a6c7cb8d9c2000616e9e075708486e653"
+
+
+def _canonical_sha256(value: object) -> str:
+    payload = json.dumps(value, ensure_ascii=True, separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(payload).hexdigest()
+
+
+def _historical_commit_is_available() -> bool:
+    return (
+        subprocess.run(
+            ["git", "cat-file", "-e", f"{IMPLEMENTATION_COMMIT}^{{commit}}"],
+            cwd=ROOT,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            check=False,
+        ).returncode
+        == 0
+    )
 
 
 class CommunicationEEGProspectiveGeneratedRunnerScaffoldProofCloseoutTest(
@@ -38,6 +57,11 @@ class CommunicationEEGProspectiveGeneratedRunnerScaffoldProofCloseoutTest(
         self.assertTrue(green["on_GitHub_main"])
 
     def test_bound_artifacts_are_exact(self) -> None:
+        self.assertEqual(
+            _canonical_sha256(self.record["bound_artifacts"]), ARTIFACT_TABLE_SHA256
+        )
+        if not _historical_commit_is_available():
+            return
         for artifact in self.record["bound_artifacts"]:
             payload = subprocess.check_output(
                 ["git", "show", f"{IMPLEMENTATION_COMMIT}:{artifact['path']}"],
