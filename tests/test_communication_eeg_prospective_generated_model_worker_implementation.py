@@ -39,8 +39,10 @@ class CommunicationEEGProspectiveGeneratedModelWorkerImplementationTests(
             if key not in {
                 "preopened_descriptors",
                 "opaque_item_identifiers_required_from_coordinator",
+                "sanitized_runtime_paths_only",
             }:
                 self.assertEqual(value, 0, key)
+        self.assertTrue(capability["sanitized_runtime_paths_only"])
 
     def test_fixed_fold_schedule_has_no_delivery_score_or_update(self) -> None:
         schedule = self.record["per_fold_schedule"]

@@ -28,7 +28,8 @@
     "target_vault_capabilities_received": 0,
     "activation_or_freeze_authority_received": 0,
     "scorer_or_post_target_update_capability_received": 0,
-    "filesystem_paths_received": 0
+    "source_payload_or_target_paths_received": 0,
+    "sanitized_runtime_paths_only": true
   },
   "per_fold_schedule": {
     "source_only_prior_fits": 1,
