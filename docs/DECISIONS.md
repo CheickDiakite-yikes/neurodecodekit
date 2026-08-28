@@ -14386,3 +14386,10 @@ green; only then may the single generated qualification run.
   one-sided sign-flip p-value of 0.125, so it cannot meet the frozen 0.05 gate.
   Keep 1.575 TB, three-participant `ds007808-v1.0.0` outside current storage
   and replication gates. No payload, authority, active gate, or claim changes.
+- 2026-08-27: Accept `85400fe13a87d82916a8338709239764b621c5c1`
+  as the exact remotely green triangulated source refresh after Base
+  `98712772971`, Optional Neuro Readers `98712773150`, and CI `33128665324`
+  passed and both the branch and GitHub `main` resolved to that SHA. Bind only
+  its three additive refresh artifacts in a separate proof closeout. This
+  records reproducible source routing, not data access or scientific evidence;
+  keep `DREYER-C5R-1-HL` sole and all-false.

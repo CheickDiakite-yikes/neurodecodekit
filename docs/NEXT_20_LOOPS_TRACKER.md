@@ -10,6 +10,10 @@
 > held-out-person command endpoint. `ds007591` is nonrouting descriptive
 > concordance; public `ds007808` remains ineligible at about 1.575 TB and three
 > participants. No payload, authority, or claim changed.
+> Exact refresh `85400fe` passed both required jobs in CI `33128665324` and
+> reached GitHub `main`. Its additive proof closeout binds three exact artifacts
+> / 23,934 bytes while leaving all data, model, score, device, and claim gates
+> closed; that closeout is pending its own remote CI.
 
 > **Communication objective ledger (2026-08-27):** the current end goal is now
 > decomposed into eight machine-tested evidence requirements. Only one narrow

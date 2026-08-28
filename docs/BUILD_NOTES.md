@@ -16279,3 +16279,11 @@ and require both remote jobs green before the one official qualification.
   sized partial independent key, and kept `ds003626` as full-control discovery.
   Public `ds007808-v1.0.0` is approximately 1.575 TB and three participants,
   outside current storage and replication gates. No payload was accessed.
+- 2026-08-27: Exact triangulated refresh `85400fe` passed Base Python
+  `98712772971`, Optional Neuro Readers `98712773150`, and CI `33128665324`,
+  then fast-forwarded to GitHub `main`. Added a proof-only closeout binding the
+  exact human refresh, machine refresh, and test as three artifacts / 23,934
+  bytes under canonical set SHA-256
+  `b286e505976d391391692652af55fc4e3d1c322ef0c9d657100f226557da38f6`.
+  No dataset, payload, private path, model, target, score, device, release, or
+  claim operation occurred; the closeout requires its own green CI.

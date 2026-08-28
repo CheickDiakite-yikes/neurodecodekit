@@ -8383,7 +8383,12 @@ discovery attribution plus TESSCCo independent partial transportability.
 JapanEEG `ds007808-v1.0.0` remains outside the current route at approximately
 1.575 TB and three participants.
 
-Immediate gate: verify, commit, push, and remotely green this exact Tier A
-refresh, then add a proof-only closeout that binds its exact artifacts. Do not
-activate Dreyer, COMM-L0-META, or any real/private operation; do not stage the
-unrelated tracker inspection NDJSON.
+Exact refresh `85400fe13a87d82916a8338709239764b621c5c1` passed Base
+`98712772971`, Optional Neuro Readers `98712773150`, and CI `33128665324`,
+then reached GitHub `main`. The additive proof-only closeout binds its three
+exact artifacts / 23,934 bytes under canonical set SHA-256
+`b286e505976d391391692652af55fc4e3d1c322ef0c9d657100f226557da38f6`.
+
+Immediate gate: commit, push, and remotely green the proof-only closeout. Do
+not activate Dreyer, COMM-L0-META, or any real/private operation; do not stage
+the unrelated tracker inspection NDJSON.

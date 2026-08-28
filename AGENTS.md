@@ -124,6 +124,12 @@ minimum-ten full-control source. TESSCCo remains the mandatory independent
 partial-transportability key, and `ds003626` remains discovery attribution.
 Large public `ds007808-v1.0.0` is outside the current storage and participant
 gates. Preserve all original source-refresh and COMM-R0 artifacts byte-for-byte.
+Exact refresh `85400fe13a87d82916a8338709239764b621c5c1` passed Base job
+`98712772971`, Optional Neuro Readers job `98712773150`, and CI
+`33128665324`, then reached GitHub `main`. Read the additive proof-only
+closeout and machine proof. They bind the exact human refresh, machine refresh,
+and test as three artifacts / 23,934 bytes without activating data access or a
+claim. The closeout itself is pending its own remote CI.
 
 Read the objective evidence and replication decision after that refresh:
 `docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md`

@@ -196,6 +196,10 @@ channel information with peripheral attribution only in discovery, not
 independently replicated neural attribution. Public JapanEEG `ds007808` is
 approximately 1.575 TB and only three participants, so it remains outside the
 current participant and storage gates. No payload was accessed or authorized.
+The exact refresh is reproducibly bound at commit `85400fe`, CI
+`33128665324`, and GitHub `main`; its
+[proof closeout](docs/COMMUNICATION_EEG_TRIANGULATED_REPLICATION_REFRESH_PROOF_CLOSEOUT.md)
+records the exact files and unchanged no-data/no-claim boundary.
 
 The new
 [objective evidence ledger](docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md)
