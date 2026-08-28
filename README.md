@@ -263,6 +263,14 @@ binds the three immutable registration artifacts. Review also found one
 human/machine mismatch: the prose said 60% stable-commit coverage while the
 contract and test said 70%. [Amendment 1](docs/COMMUNICATION_EEG_PROSPECTIVE_SYNCHRONIZED_COHORT_AMENDMENT_1.md)
 makes the stricter 70% value authoritative before generated implementation.
+Exact proof/amendment `478d31e` passed both required jobs in CI `33135742217`
+and reached GitHub `main`. The next bounded gate is
+[`COMM-P0-G-v0`](docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_QUALIFICATION_PREREGISTRATION.md),
+a generated-only qualification contract for the full study grammar, 73-channel
+synchronized sharding, target side channels, causal context, participant-first
+statistics, prediction/scorer isolation, live accounting, and 70 adversarial
+refusal families. It authorizes neither an execution nor human or real-data
+work.
 Even a complete internal pass would not establish external reproduction,
 arbitrary thought reading, sentence decoding, or clinical use.
 

@@ -188,6 +188,16 @@ authoritative. Generated design remains paused until both additions are
 remotely green; every generated execution, human/device, real/private, model,
 score, release, and claim authority remains false.
 
+Exact proof and Amendment 1 `478d31ed8908e29439db215f3aed01a3bcbc16fc`
+passed Base Python `98735177685`, Optional Neuro Readers `98735177837`, and CI
+`33135742217`, then reached GitHub `main`. Read the new generated-only
+`COMM-P0-G-v0` preregistration and contract. They freeze two isolated fictional
+replays over the complete 42-person study structure, 73 synchronized sensor
+roles, target side-channel and finite-context firewalls, participant-first
+scoring, live accounting, 70 refusal families, and bounded resources. The
+registration is pending its own remote CI; implementation and execution remain
+false until their ordered proof barriers.
+
 Read the objective evidence and replication decision after that refresh:
 `docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md`
 and its machine registry. It records one narrow directional real-task evidence

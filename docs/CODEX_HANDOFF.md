@@ -8482,3 +8482,13 @@ human 60% versus machine 70% stable-commit coverage mismatch by selecting 70%.
 Both additions must become remotely green before generated qualification design
 begins. Do not run a generated qualification, recruit, record, operate hardware,
 access real/private data, train, score, release, or upgrade a claim.
+
+Exact proof/amendment `478d31ed8908e29439db215f3aed01a3bcbc16fc`
+passed Base `98735177685`, Optional Neuro Readers `98735177837`, and CI
+`33135742217`, then reached GitHub `main`. Read `COMM-P0-G-v0` next. It freezes
+two generated child replays over 42 complete fictional participants, 10,752
+structural rows, 73 synchronized sensor roles, 1,428 prediction sets, 91,392
+prediction rows, 70 refusal families, target/scorer isolation, causal context,
+participant-first statistics, and live accounting. Its registration is
+all-false and pending remote CI; do not implement or execute it before the
+ordered proof barriers.

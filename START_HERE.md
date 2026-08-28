@@ -30,7 +30,10 @@
 > proof-only closeout and Amendment 1: review found a frozen 60% human versus
 > 70% machine stable-commit coverage mismatch, so the stricter 70% is
 > authoritative. Generated design remains paused until both additions are
-> remotely green.
+> remotely green. Exact proof/amendment `478d31e` passed both required jobs in
+> CI `33135742217` and reached GitHub `main`. The next gate is the all-false
+> generated-only `COMM-P0-G-v0` registration; it does not authorize its own
+> implementation or execution.
 
 ## Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight
 

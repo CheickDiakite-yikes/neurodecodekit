@@ -20,6 +20,13 @@
 > task, after the proof closeout and amendment are remotely green, is generated
 > qualification of the entire study grammar, firewall, stream, freezer,
 > scorer, and resource monitor.
+> Exact proof/amendment `478d31e` passed both required jobs in CI `33135742217`
+> and reached GitHub `main`. `COMM-P0-G-v0` now freezes that generated-only
+> qualification prospectively: two isolated fictional replays, all 42 complete
+> participant identities, 73 synchronized sensor roles, 1,428 prediction sets,
+> 91,392 prediction rows, participant-first scoring, exact live accounting, and
+> 70 refusal families per replay. Implementation and execution remain false
+> until their own ordered green barriers.
 
 > **Triangulated communication replication refresh (2026-08-27):** newly
 > public OpenNeuro `ds007591-v1.0.1` adds a valuable 1.62 GB full-sensor

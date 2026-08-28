@@ -14444,3 +14444,11 @@ green; only then may the single generated qualification run.
   1. Do not begin generated design until both additions are remotely green, or
   treat either as execution, recruitment, recording, device, real-data, model,
   score, release, or claim authority.
+- 2026-08-27: Accept `478d31ed8908e29439db215f3aed01a3bcbc16fc`,
+  CI `33135742217`, as the remotely green `COMM-P0-SYNC-v0` proof and 70%
+  coverage amendment on GitHub `main`. Freeze `COMM-P0-G-v0` next as a
+  generated-only qualification contract. Require finite post-washout context,
+  fixed-size target records, all 73 synchronized roles, participant-first
+  scoring, non-selective live coverage, exact false-commit and latency
+  accounting, two child replays, and 70 refusal families. Keep implementation,
+  execution, human/device, real/private, release, and claim authority false.

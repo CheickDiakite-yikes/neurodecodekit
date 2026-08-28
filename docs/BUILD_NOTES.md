@@ -16339,3 +16339,12 @@ and require both remote jobs green before the one official qualification.
   prospective Amendment 1 selects the stricter 70% and pauses generated work
   until both additions are remotely green. No generated, human/device,
   payload, model, score, or claim operation occurred.
+- 2026-08-27: Exact prospective proof/amendment `478d31e` passed Base Python
+  `98735177685`, Optional Neuro Readers `98735177837`, and CI `33135742217`,
+  then reached GitHub `main`. Added `COMM-P0-G-v0`, a no-operation generated
+  qualification registration covering the exact fictional cohort/trial
+  structure, 73-channel synchronized sharding, four-second post-washout
+  context, fixed-size target records, participant-first scoring, 1,428
+  prediction sets / 91,392 rows per replay, live false-commit/coverage/latency
+  accounting, 70 refusal families, and one-thread resource caps. No generated
+  execution or scientific operation occurred.

@@ -123,11 +123,11 @@ class CommunicationEEGProspectiveSynchronizedCohortProofTests(unittest.TestCase)
         )
         self.assertEqual(
             registration["status"],
-            "registration_remotely_green_proof_and_amendment_pending_own_remote_CI",
+            "registration_proof_and_amendment_remotely_green_generated_contract_pending_own_remote_CI",
         )
         self.assertEqual(registration["amendment_1"]["authoritative_value"], 0.70)
-        self.assertTrue(registration["amendment_1"]["generated_implementation_paused"])
-        self.assertEqual(proof["status"], "pending_own_remote_CI")
+        self.assertFalse(registration["amendment_1"]["generated_implementation_paused"])
+        self.assertEqual(proof["status"], "proof_only_closeout_remotely_green")
         self.assertFalse(proof["generated_execution_authorized_now"])
 
         document = DOCUMENT.read_text(encoding="utf-8")
