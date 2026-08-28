@@ -42,28 +42,21 @@ class CommunicationEEGProspectiveGeneratedQualificationProofTests(
 
     def test_registration_artifacts_are_hash_size_and_git_bound(self) -> None:
         rows = self.proof["bound_registration_artifacts"]
-        source_commit = self.proof["bound_registration_artifact_summary"][
-            "artifact_source_commit"
-        ]
         for row in rows:
-            payload = subprocess.check_output(
-                ["git", "show", f"{source_commit}:{row['path']}"], cwd=ROOT
-            )
+            payload = (ROOT / row["path"]).read_bytes()
             self.assertEqual(len(payload), row["bytes"], row["path"])
             self.assertEqual(
                 hashlib.sha256(payload).hexdigest(), row["sha256"], row["path"]
             )
             blob = subprocess.check_output(
-                ["git", "rev-parse", f"{source_commit}:{row['path']}"],
-                cwd=ROOT,
-                text=True,
+                ["git", "hash-object", row["path"]], cwd=ROOT, text=True
             ).strip()
             self.assertEqual(blob, row["git_blob"], row["path"])
 
         canonical = json.dumps(rows, sort_keys=True, separators=(",", ":")).encode()
         summary = self.proof["bound_registration_artifact_summary"]
         self.assertEqual(summary["count"], 3)
-        self.assertEqual(summary["bytes"], 47_492)
+        self.assertEqual(summary["bytes"], 47_562)
         self.assertEqual(
             hashlib.sha256(canonical).hexdigest(),
             summary["canonical_artifact_set_sha256"],
@@ -140,7 +133,7 @@ class CommunicationEEGProspectiveGeneratedQualificationProofTests(
         )
         closeout = registration["proof_only_closeout"]
         self.assertEqual(closeout["bound_artifacts"], 3)
-        self.assertEqual(closeout["bound_bytes"], 47_492)
+        self.assertEqual(closeout["bound_bytes"], 47_562)
         self.assertFalse(closeout["official_qualification_execution_authorized_now"])
 
         document = DOCUMENT.read_text(encoding="utf-8")

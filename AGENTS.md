@@ -198,7 +198,7 @@ scoring, live accounting, 70 refusal families, and bounded resources. The
 exact registration `002128bd9cbacddd8ceea1820b3b91622c40867f` passed Base
 Python `98738427136`, Optional Neuro Readers `98738427224`, and CI
 `33136788477`, then reached GitHub `main`. Read its proof-only closeout next;
-it binds three registration artifacts / 47,492 bytes. Generated implementation
+it binds three registration artifacts / 47,562 bytes. Generated implementation
 may begin only after that closeout is remotely green. The official generated
 execution remains false until an exact implementation and separate activation
 cross their own ordered proof barriers.

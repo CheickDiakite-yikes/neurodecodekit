@@ -21,13 +21,13 @@ The generated-only registration commit
 - both the working branch and GitHub `main` resolved to the exact commit before
   this closeout was written.
 
-The proof binds exactly three immutable registration-commit artifacts totaling
-47,492 bytes under canonical artifact-set SHA-256
-`51876eae109215b4270b2418067e30c6f70c9fdf764b858f563e756f7bf1981b`.
+The proof binds the unchanged preregistration and machine contract plus the
+closeout-era matching test, totaling 47,562 bytes under canonical artifact-set
+SHA-256
+`6d73c138a0da1839951522234c2fadf334c31acfce077bed887f643ed68e5f76`.
 Their byte, SHA-256, and Git-blob identities are recorded in the machine proof.
-They are verified from the exact registration commit rather than from a later
-working copy, so living frontier assertions may advance without rewriting the
-historical registration evidence.
+All three are present in the proof commit, so a depth-1 CI checkout can verify
+the evidence without fetching historical Git objects.
 
 ## What Is Frozen
 

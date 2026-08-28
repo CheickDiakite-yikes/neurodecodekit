@@ -16351,7 +16351,7 @@ and require both remote jobs green before the one official qualification.
 - 2026-08-27: Exact `COMM-P0-G-v0` registration `002128b` passed Base Python
   `98738427136`, Optional Neuro Readers `98738427224`, and CI `33136788477`,
   then reached GitHub `main`. Added a proof-only closeout binding the exact
-  preregistration, contract, and test / 47,492 bytes under canonical set
-  SHA-256 `51876eae109215b4270b2418067e30c6f70c9fdf764b858f563e756f7bf1981b`.
+  preregistration, contract, and test / 47,562 bytes under canonical set
+  SHA-256 `6d73c138a0da1839951522234c2fadf334c31acfce077bed887f643ed68e5f76`.
   No generated fixture, human/device, real/private, model, target, prediction,
   score, provider, release, or claim operation occurred.

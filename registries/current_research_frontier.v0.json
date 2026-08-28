@@ -393,7 +393,7 @@
             "registry": "registries/communication_eeg_prospective_generated_qualification_proof.v0.json",
             "status": "proof_only_closeout_pending_own_remote_CI",
             "bound_artifacts": 3,
-            "bound_bytes": 47492,
+            "bound_bytes": 47562,
             "generated_implementation_may_begin_after_closeout_green": true,
             "official_qualification_execution_authorized_now": false,
             "human_device_or_real_operations": 0

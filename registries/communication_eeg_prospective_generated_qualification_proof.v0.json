@@ -32,16 +32,16 @@
     },
     {
       "path": "tests/test_communication_eeg_prospective_generated_qualification_contract.py",
-      "bytes": 15732,
-      "sha256": "49aa874b3728cd8b72a3fa811bbe99f5d21927637b6e8f8576770c31c5c10927",
-      "git_blob": "318f1cab0330ea75a390087f84711179bf30ebff"
+      "bytes": 15802,
+      "sha256": "5dd92b184c9a84ea007d53b4c2177c4491a92841df5ab5b82a6c579b33be07d8",
+      "git_blob": "f79b73351f8cae06e8f15165f05b541e2fb5441f"
     }
   ],
   "bound_registration_artifact_summary": {
-    "artifact_source_commit": "002128bd9cbacddd8ceea1820b3b91622c40867f",
+    "binding_scope": "files_present_in_proof_commit_shallow_checkout_safe",
     "count": 3,
-    "bytes": 47492,
-    "canonical_artifact_set_sha256": "51876eae109215b4270b2418067e30c6f70c9fdf764b858f563e756f7bf1981b"
+    "bytes": 47562,
+    "canonical_artifact_set_sha256": "6d73c138a0da1839951522234c2fadf334c31acfce077bed887f643ed68e5f76"
   },
   "scope_preservation": {
     "registration_artifacts_unchanged": true,

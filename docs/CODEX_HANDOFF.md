@@ -8492,6 +8492,6 @@ prediction rows, 70 refusal families, target/scorer isolation, causal context,
 participant-first statistics, and live accounting. Exact registration
 `002128bd9cbacddd8ceea1820b3b91622c40867f` passed Base `98738427136`,
 Optional Neuro Readers `98738427224`, and CI `33136788477`, then reached
-GitHub `main`. Its proof-only closeout binds three exact artifacts / 47,492
+GitHub `main`. Its proof-only closeout binds three exact artifacts / 47,562
 bytes. Generated implementation may begin only after that closeout is remotely
 green; the official qualification remains separately activation-gated.

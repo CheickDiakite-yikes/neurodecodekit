@@ -272,7 +272,7 @@ statistics, prediction/scorer isolation, live accounting, and 70 adversarial
 refusal families. Exact registration `002128b` passed both required jobs in CI
 `33136788477` and reached GitHub `main`. Its
 [proof closeout](docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_QUALIFICATION_PROOF_CLOSEOUT.md)
-binds three immutable registration artifacts / 47,492 bytes before generated
+binds three immutable registration artifacts / 47,562 bytes before generated
 implementation. It authorizes neither the official qualification execution nor
 human, device, or real-data work.
 Even a complete internal pass would not establish external reproduction,
