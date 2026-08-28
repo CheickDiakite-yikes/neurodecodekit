@@ -58,9 +58,18 @@ verifier aggregates in 72.6701 seconds at 239,075,328-byte peak RSS. It
 collected 770 process-monitor samples, made zero network requests, and retained
 zero generated payload bytes. Exact implementation `a3b561b` passed Base
 Python `98875866699`, Optional Neuro Readers `98875866417`, and CI
-`33179247000`, then reached GitHub `main`. Its pending proof-only closeout binds
-six exact implementation artifacts / 43,587 bytes and repeats no execution;
-no full FS3 rehearsal ran.
+`33179247000`, then reached GitHub `main`. Exact proof-only closeout `ccabfaf`
+passed Base `98881035296`, Optional Neuro Readers `98881035573`, and CI
+`33180751900`, then reached `main`; it binds six exact implementation artifacts
+/ 43,587 bytes and repeats no execution. No full FS3 rehearsal ran.
+
+An independent post-proof audit then found that the frozen verifier contract
+called two deliberate stream traversals “one pass,” did not require the exact
+91,392-row / 1,428-set full inventory, and left identity, no-follow, socket-
+guard, logical cohort-envelope, and runtime boundaries underspecified.
+Prospective `COMM-P0-G-FS3-A1` freezes those corrections with zero numerical
+operations. It must become green before the fail-closed full wrapper can be
+proved or executed.
 
 This design is grounded in a measured negative engineering result. The sole
 `COMM-P0-G-FS2-R0` attempt completed one of

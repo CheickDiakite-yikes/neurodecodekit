@@ -27,9 +27,19 @@
 > 72.67009999998845 seconds, peak RSS 239,075,328 bytes, and monitor samples
 > 770; network and retained payload were zero. Exact implementation `a3b561b`
 > passed Base `98875866699`, Optional Neuro Readers `98875866417`, and CI
-> `33179247000`, then reached GitHub `main`. The pending proof closeout binds
-> six exact artifacts / 43,587 bytes and repeats no execution. Full FS3 runs
-> remain zero.
+> `33179247000`, then reached GitHub `main`. Exact proof closeout `ccabfaf`
+> passed Base `98881035296`, Optional Neuro Readers `98881035573`, and CI
+> `33180751900`, then reached `main`; it binds six exact artifacts / 43,587
+> bytes and repeats no execution. Full FS3 runs remain zero.
+
+> **COMM-P0-G FS3 strict-verifier correction (2026-08-28):** independent
+> post-proof review found a one-invocation/two-stream-traversal mismatch plus
+> incomplete exact-cardinality, identity, no-follow, socket-guard, logical
+> cohort-envelope, and stored-runtime semantics. Prospective
+> `COMM-P0-G-FS3-A1` freezes exactly one verifier invocation, two sequential
+> traversals, 91,392 rows / 1,428 sets, two logical cohort deliveries/scores,
+> descriptor-only identity verification, and zero numerical operations. It
+> must become remotely green before wrapper proof or execution.
 
 > **COMM-P0-G contract-correction successor (2026-08-28):** post-proof audit
 > found that the V1 nonofficial full-scale rehearsal reported one combined

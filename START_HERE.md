@@ -29,8 +29,18 @@
 > 239,075,328-byte peak RSS with 770 monitor samples, zero network, and zero
 > retained payload. Exact implementation `a3b561b` passed Base `98875866699`,
 > Optional Neuro Readers `98875866417`, and CI `33179247000`, then reached
-> GitHub `main`. The pending proof-only closeout binds six exact artifacts /
-> 43,587 bytes and repeats no execution. No full FS3 or official run has run.
+> GitHub `main`. Exact proof-only closeout `ccabfaf` passed Base `98881035296`,
+> Optional Neuro Readers `98881035573`, and CI `33180751900`, then reached
+> `main`; it binds six exact artifacts / 43,587 bytes and repeats no execution.
+> No full FS3 or official run has run.
+
+> COMM-P0-G FS3 verifier correction, 2026-08-28: independent review found that
+> the frozen score worker makes two sequential stream traversals, while the
+> contract called this one pass, and that exact full cardinality, identity,
+> no-follow, socket-guard, logical cohort-envelope, and runtime semantics needed
+> to be explicit. Prospective `COMM-P0-G-FS3-A1` fixes those fields with zero
+> numerical operations. It is pending its own green barrier and authorizes no
+> full FS3 run.
 
 > COMM-P0-G coordinator correction, 2026-08-28: post-proof audit found that
 > the V1 full-scale rehearsal used one combined target envelope and one score,

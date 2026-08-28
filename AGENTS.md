@@ -55,8 +55,10 @@ The immediate reversible frontier is now `COMM-P0-G-FS3-v0`. Read, in order:
 6. `registries/communication_eeg_prospective_generated_single_execution_dual_verification_contract.v0.json`;
 7. `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_IMPLEMENTATION.md`;
 8. `registries/communication_eeg_prospective_generated_single_execution_dual_verification_implementation.v0.json`;
-9. `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_PROOF_CLOSEOUT.md`; and
-10. `registries/communication_eeg_prospective_generated_single_execution_dual_verification_proof_closeout.v0.json`.
+9. `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_PROOF_CLOSEOUT.md`;
+10. `registries/communication_eeg_prospective_generated_single_execution_dual_verification_proof_closeout.v0.json`;
+11. `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_AMENDMENT_1.md`; and
+12. `registries/communication_eeg_prospective_generated_single_execution_dual_verification_amendment_1.v0.json`.
 
 Amendment 3 exact commit `b15d3cf86fc4d6234d64c3a19cca394e72f43fc6`
 passed Base Python `98860211722`, Optional Neuro Readers `98860211949`, and CI
@@ -81,12 +83,21 @@ samples, zero network, and zero retained payload. Both producer surfaces and
 verifier aggregates matched. Read the implementation document and registry.
 
 The proof-only closeout binds six exact implementation artifacts / 43,587 bytes
-and repeats no qualification or execution. It is pending its own commit, push,
-and both remote CI jobs. Do not execute the full FS3 rehearsal until that
-separate closeout reaches GitHub `main`. A later sole FS3 attempt
+and repeats no qualification or execution. Exact closeout
+`ccabfafb411e219292b103ce2327568112056286` passed Base Python `98881035296`,
+Optional Neuro Readers `98881035573`, and CI `33180751900`, then reached GitHub
+`main`. A later sole FS3 attempt
 may run one exact full producer followed by one independent zero-model verifier
 under the unchanged resource envelope. It may not access the official
 activation or marker.
+
+Independent post-proof review found pre-execution ambiguity in verifier stream
+passes, full cardinality, logical cohort target envelopes, code identity,
+no-follow input opening, network blocking, and the stored runtime endpoint.
+Prospective `COMM-P0-G-FS3-A1` corrects those fields but is pending its own
+exact commit, push, both CI jobs, and GitHub `main`. It ran no numerical work
+and authorizes no FS3 execution. Do not prove or execute the full wrapper before
+that amendment is remotely green.
 
 The prior FS2 measurement remains binding. Read
 `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_RESULT.md`

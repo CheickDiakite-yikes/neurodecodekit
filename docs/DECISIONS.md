@@ -14575,3 +14575,13 @@ green; only then may the single generated qualification run.
   the full FS3 run, official qualification, real/private access, network,
   human/device operation, release, Tier C authority, and every scientific claim
   false.
+- 2026-08-28: Freeze prospective `COMM-P0-G-FS3-A1` after independent
+  post-proof review found that the inherited scorer makes two sequential
+  prediction-stream traversals while the contract called this one pass, and
+  that exact full cardinality, identity binding, no-follow input opening,
+  verifier socket blocking, logical cohort-envelope transport, and the stored
+  runtime endpoint were underspecified. Require one verifier invocation, two
+  traversals, exactly 91,392 rows / 1,428 sets, two logical cohort deliveries
+  and scores, descriptor-only identity hashes, and zero model capability. Run
+  no numerical work and authorize no wrapper proof or FS3 execution until this
+  amendment passes both jobs and reaches GitHub `main`.

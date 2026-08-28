@@ -14,16 +14,25 @@
 > full FS3 rehearsal. Preserve consumed FS2 and the unrelated tracker
 > inspection file. `DREYER-C5R-1-HL` remains the sole all-false Tier C gate.
 
-> **FS3 implementation exact-green; closeout pending, 2026-08-28:** read the new FS3
+> **FS3 implementation and closeout exact-green, 2026-08-28:** read the new FS3
 > implementation document and machine registry. Two isolated reduced producers
 > and two independent zero-model verifiers passed with matching canonical
 > surfaces and aggregate hashes, 13,056 rows / 204 sets per replay, 140 refusal
 > observations, 72.67009999998845 seconds, 239,075,328-byte peak RSS, 770
 > monitor samples, zero network, and zero retained payload. Exact implementation
 > `a3b561b` passed Base `98875866699`, Optional `98875866417`, and CI
-> `33179247000`, then reached GitHub `main`. The pending proof-only closeout
-> binds six exact artifacts / 43,587 bytes and repeats no execution. Do not
-> execute full FS3 before that separate barrier is remotely green.
+> `33179247000`, then reached GitHub `main`. Exact closeout `ccabfaf` passed
+> Base `98881035296`, Optional `98881035573`, and CI `33180751900`, then reached
+> `main`; it binds six exact artifacts / 43,587 bytes and repeats no execution.
+> Do not execute full FS3 before the new Amendment 1 barrier is remotely green.
+
+> **FS3 Amendment 1 pending, 2026-08-28:** independent review found that one
+> verifier invocation deliberately performs two stream traversals and that the
+> full contract needed exact 91,392-row / 1,428-set cardinality, logical two-
+> cohort envelope semantics, descriptor-only code identity, no-follow dirfd
+> input opening, an active socket guard, and a precise stored-runtime endpoint.
+> The prospective amendment ran no numerical work and authorizes no execution.
+> Make it remotely green before proving or executing any full wrapper.
 
 > **COMM-P0-G FS2 consumed runtime result, 2026-08-28:** read
 > `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_RESULT.md`

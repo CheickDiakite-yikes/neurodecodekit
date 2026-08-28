@@ -16438,3 +16438,11 @@ and require both remote jobs green before the one official qualification.
   The closeout rereads and hashes only committed public files and repeats no
   reduced qualification, full FS3 run, official operation, real/private access,
   network request, device action, release, or scientific claim.
+- 2026-08-28: Added prospective `COMM-P0-G-FS3-A1`, binding nine exact green
+  parent/code artifacts / 136,817 bytes. It resolves one verifier invocation
+  versus two sequential prediction-stream traversals; requires the exact
+  91,392-row / 1,428-set full inventory; freezes one canonical transport with
+  two disjoint logical cohort envelopes; and adds descriptor-only code hashes,
+  no-follow dirfd input opening, an active socket guard, and explicit runtime
+  semantics. Numerical, receipt, official, real/private, device, network,
+  release, and scientific counters remain zero.

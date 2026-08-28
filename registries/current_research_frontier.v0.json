@@ -558,10 +558,27 @@
               "proof_closeout": {
                 "document": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_PROOF_CLOSEOUT.md",
                 "registry": "registries/communication_eeg_prospective_generated_single_execution_dual_verification_proof_closeout.v0.json",
-                "status": "proof_only_closeout_pending_own_commit_push_remote_green",
+                "status": "proof_only_closeout_remotely_green_on_GitHub_main",
+                "green_commit": "ccabfafb411e219292b103ce2327568112056286",
+                "green_CI_run_id": 33180751900,
+                "green_base_python_job_id": 98881035296,
+                "green_optional_neuro_readers_job_id": 98881035573,
                 "bound_artifacts": 6,
                 "bound_bytes": 43587,
                 "full_scale_FS3_runs": 0,
+                "FS3_execution_authorized_now": false
+              },
+              "strict_verifier_amendment_1": {
+                "amendment_id": "COMM-P0-G-FS3-A1",
+                "document": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_AMENDMENT_1.md",
+                "registry": "registries/communication_eeg_prospective_generated_single_execution_dual_verification_amendment_1.v0.json",
+                "status": "prospective_contract_correction_pending_exact_commit_push_remote_green",
+                "verifier_invocations": 1,
+                "prediction_stream_traversals": 2,
+                "exact_prediction_rows": 91392,
+                "exact_prediction_sets": 1428,
+                "logical_cohort_target_deliveries": 2,
+                "numerical_runs": 0,
                 "FS3_execution_authorized_now": false
               }
             }
