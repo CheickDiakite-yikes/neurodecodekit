@@ -14393,3 +14393,10 @@ green; only then may the single generated qualification run.
   its three additive refresh artifacts in a separate proof closeout. This
   records reproducible source routing, not data access or scientific evidence;
   keep `DREYER-C5R-1-HL` sole and all-false.
+- 2026-08-27: Accept proof closeout
+  `171d615f78f21931f78ac9ada5edb3c161a1a8e5`, CI `33129343388`, as the
+  remotely green binding for the triangulated source refresh. Record TESSCCo
+  DOI `10.34740/KAGGLE/DS/9993149` separately as source-readiness research:
+  the DOI target returned HTTP 404, so keep TESSCCo planned but operationally
+  unqualified. Do not create an acquisition packet, infer the dataset license,
+  substitute after discovery, or change the active Tier C gate.

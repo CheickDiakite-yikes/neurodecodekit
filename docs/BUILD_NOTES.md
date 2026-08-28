@@ -16286,4 +16286,13 @@ and require both remote jobs green before the one official qualification.
   bytes under canonical set SHA-256
   `b286e505976d391391692652af55fc4e3d1c322ef0c9d657100f226557da38f6`.
   No dataset, payload, private path, model, target, score, device, release, or
-  claim operation occurred; the closeout requires its own green CI.
+  claim operation occurred. Exact closeout `171d615` then passed Base
+  `98714946768`, Optional Neuro Readers `98714946923`, and CI `33129343388`,
+  and reached GitHub `main`.
+- 2026-08-27: Verified the TESSCCo paper-cited dataset DOI
+  `10.34740/KAGGLE/DS/9993149` with one headers-only resolution. The DOI
+  redirected to Kaggle dataset ID `9993149`, whose landing returned HTTP 404.
+  Recorded the source as planned partial replication but not acquisition-ready;
+  version, manifest, bytes, dataset license, sensor roles, and event grammar
+  remain unavailable. One public article-page GET returned 228,070 HTML bytes;
+  no Kaggle metadata API or EEG payload request occurred.

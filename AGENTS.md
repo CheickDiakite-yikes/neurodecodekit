@@ -129,7 +129,16 @@ Exact refresh `85400fe13a87d82916a8338709239764b621c5c1` passed Base job
 `33128665324`, then reached GitHub `main`. Read the additive proof-only
 closeout and machine proof. They bind the exact human refresh, machine refresh,
 and test as three artifacts / 23,934 bytes without activating data access or a
-claim. The closeout itself is pending its own remote CI.
+claim. Exact proof closeout `171d615f78f21931f78ac9ada5edb3c161a1a8e5`
+passed Base job `98714946768`, Optional Neuro Readers job `98714946923`, and
+CI `33129343388`, then reached GitHub `main`.
+
+Read the additive TESSCCo source-readiness research next. The paper cites
+dataset DOI `10.34740/KAGGLE/DS/9993149`, which resolved to Kaggle dataset ID
+`9993149`, but its landing returned HTTP 404 on 2026-08-27. No metadata API or
+payload request was made. TESSCCo remains the planned partial independent key
+but is not operationally qualified or acquisition-ready; do not create an
+acquisition packet or impute the article license to the dataset.
 
 Read the objective evidence and replication decision after that refresh:
 `docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md`

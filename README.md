@@ -200,6 +200,15 @@ The exact refresh is reproducibly bound at commit `85400fe`, CI
 `33128665324`, and GitHub `main`; its
 [proof closeout](docs/COMMUNICATION_EEG_TRIANGULATED_REPLICATION_REFRESH_PROOF_CLOSEOUT.md)
 records the exact files and unchanged no-data/no-claim boundary.
+That proof passed both required suites at `171d615` / CI `33129343388` and is
+on GitHub `main`.
+
+The follow-up
+[TESSCCo source-readiness check](docs/COMMUNICATION_EEG_TESSCCO_SOURCE_READINESS_2026_08_27.md)
+verified the paper-cited dataset DOI, but its Kaggle landing currently returns
+404. TESSCCo is therefore a scientifically useful planned 24-person partial
+replication, not an acquisition-ready source; version, manifest, byte size,
+dataset license, and peripheral-channel roles still need an exact source lock.
 
 The new
 [objective evidence ledger](docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md)

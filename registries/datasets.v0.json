@@ -650,6 +650,32 @@
       "first_fresh_benchmark": {"suitability": "not_currently_eligible", "rationale": "Scientifically rich but far above the cap and unable to satisfy the participant minimum."}
     },
     {
+      "id": "tesscco_2026",
+      "dataset": "TESSCCo bilingual TV-command silent-speech EEG corpus",
+      "cohort": "inner_or_imagined_speech",
+      "source_urls": [
+        {"role": "primary_descriptor", "url": "https://doi.org/10.1038/s41597-026-07745-8"},
+        {"role": "paper_cited_dataset_DOI", "url": "https://doi.org/10.34740/KAGGLE/DS/9993149"},
+        {"role": "observed_DOI_target_currently_404", "url": "https://www.kaggle.com/ds/9993149"}
+      ],
+      "revision": null,
+      "license": null,
+      "modality": ["EEG", "audio"],
+      "task": "Five covert and overt TV commands in English and Spanish.",
+      "language": "English and Spanish",
+      "subjects": 24,
+      "sessions": {"count": null, "detail": "The primary descriptor reports 21 native and three non-native Spanish speakers; exact session completeness is not source-locked."},
+      "splits": "Planned independent participant-held-out partial transportability key; exact split waits for a reachable immutable source manifest.",
+      "acquisition": {"channels": {"EEG": 32}, "sampling_rate_hz": 256, "geometry": null, "reference_scheme": null, "reference_unavailable_reason": "The dataset landing returned HTTP 404 and no metadata API request was authorized."},
+      "formats": {"raw": null, "events": null, "labels": "Five command identities across covert/overt and English/Spanish conditions; exact grammar not source-locked."},
+      "storage": {"total_bytes": null, "total_bytes_status": "unavailable_source_landing_404", "smallest_meaningful_slice": {"description": "All participants in one complete covert-speech language condition with every available nuisance channel.", "exact_bytes": null, "status": "source_identity_not_qualified", "acquisition_ready": false}},
+      "capabilities": {"inspection": false, "signal_quality": false, "classification": true, "sequence_decoding": false, "cer_wer": false},
+      "leakage_risks": ["Audio, cue, timing, language, condition, session, and participant identity can carry command information.", "Separate EOG and oral EMG are not verified.", "A paper-level participant count cannot substitute for an exact complete public manifest."],
+      "known_limitations": ["The paper-cited Kaggle DOI target returned HTTP 404 on 2026-08-27.", "Dataset license, version, manifest, bytes, sensor roles, and event grammar remain unverified.", "The source cannot establish full EEG-beyond-eye-and-mouth attribution without separately recorded peripheral controls."],
+      "proof_posture": "planned_partial_replication_source_blocked_at_source_identity",
+      "first_fresh_benchmark": {"suitability": "not_acquisition_ready", "rationale": "Adequately sized independent command cohort, but its exact reproducible public source is currently unavailable."}
+    },
+    {
       "id": "physionet_eegmmidb_1_0_0",
       "dataset": "PhysioNet EEG Motor Movement/Imagery Dataset",
       "cohort": "motor_imagery",

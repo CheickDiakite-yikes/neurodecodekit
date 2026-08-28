@@ -181,9 +181,16 @@ nonrouting and cannot rescue either failure. `ds007808-v1.0.0` remains outside
 the route because its approximately 1.575 TB, three-participant surface exceeds
 the participant and selected-raw gates. This refresh authorizes no metadata,
 payload, model, target, score, stream, or device operation.
-Exact refresh `85400fe` passed both required jobs in CI `33128665324` and is
-on GitHub `main`. Read its separate proof-only closeout next; it binds three
-exact artifacts / 23,934 bytes and performs no neural-data or claim operation.
+Exact refresh `85400fe` passed both required jobs in CI `33128665324` and its
+proof closeout passed at `171d615` / CI `33129343388`; both are on GitHub
+`main`. The proof binds three exact artifacts / 23,934 bytes and performs no
+neural-data or claim operation.
+
+Then read `docs/COMMUNICATION_EEG_TESSCCO_SOURCE_READINESS_2026_08_27.md`.
+The paper-cited Kaggle dataset DOI resolves to dataset ID `9993149`, but the
+landing returned HTTP 404 on 2026-08-27. TESSCCo remains the planned partial
+independent key but is not acquisition-ready, and no metadata API or EEG file
+was requested.
 
 Then read
 `docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md`.

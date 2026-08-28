@@ -8389,6 +8389,21 @@ then reached GitHub `main`. The additive proof-only closeout binds its three
 exact artifacts / 23,934 bytes under canonical set SHA-256
 `b286e505976d391391692652af55fc4e3d1c322ef0c9d657100f226557da38f6`.
 
-Immediate gate: commit, push, and remotely green the proof-only closeout. Do
-not activate Dreyer, COMM-L0-META, or any real/private operation; do not stage
-the unrelated tracker inspection NDJSON.
+Proof closeout `171d615f78f21931f78ac9ada5edb3c161a1a8e5` passed Base
+`98714946768`, Optional Neuro Readers `98714946923`, and CI `33129343388`,
+then reached GitHub `main`. The Tier A triangulated refresh is closed.
+
+## 2026-08-27 TESSCCo Source Readiness Handoff
+
+Read `docs/COMMUNICATION_EEG_TESSCCO_SOURCE_READINESS_2026_08_27.md`, its
+machine registry, dataset-registry row, and matching test. The primary paper
+cites dataset DOI `10.34740/KAGGLE/DS/9993149`; one headers-only resolution
+reached `https://www.kaggle.com/ds/9993149`, which returned HTTP 404. No Kaggle
+metadata API or dataset-file request was made.
+
+TESSCCo remains the planned mandatory independent partial-transportability
+key, but it is not acquisition-ready. Do not prepare acquisition until a
+reachable immutable version, manifest, bytes, dataset license, and exact
+sensor/event roles are frozen. Do not substitute a source after discovery
+targets, activate Dreyer or COMM-L0-META, or stage the unrelated tracker
+inspection NDJSON.

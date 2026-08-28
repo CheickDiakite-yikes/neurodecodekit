@@ -10,10 +10,17 @@
 > held-out-person command endpoint. `ds007591` is nonrouting descriptive
 > concordance; public `ds007808` remains ineligible at about 1.575 TB and three
 > participants. No payload, authority, or claim changed.
-> Exact refresh `85400fe` passed both required jobs in CI `33128665324` and
-> reached GitHub `main`. Its additive proof closeout binds three exact artifacts
-> / 23,934 bytes while leaving all data, model, score, device, and claim gates
-> closed; that closeout is pending its own remote CI.
+> Exact refresh `85400fe` passed both required jobs in CI `33128665324`; its
+> proof closeout passed at `171d615` / CI `33129343388`, and both reached GitHub
+> `main`. The proof binds three exact artifacts / 23,934 bytes while leaving all
+> data, model, score, device, and claim gates closed.
+
+> **TESSCCo source readiness (2026-08-27):** the 24-person partial replication
+> now has a paper-cited dataset DOI, `10.34740/KAGGLE/DS/9993149`, but its
+> Kaggle landing returned HTTP 404. Keep it as the planned independent partial
+> key, but block acquisition until an immutable version, manifest, byte bound,
+> dataset license, and exact channel/event roles are reachable and frozen. No
+> metadata API, EEG payload, authority, or claim operation occurred.
 
 > **Communication objective ledger (2026-08-27):** the current end goal is now
 > decomposed into eight machine-tested evidence requirements. Only one narrow
