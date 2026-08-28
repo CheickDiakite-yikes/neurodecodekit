@@ -8,6 +8,7 @@ import os
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 from neurodecodekit.experiments import comm_p0_generated_score_only as score_only
 from neurodecodekit.experiments import comm_p0_generated_score_worker as worker
@@ -305,6 +306,14 @@ class CommP0GeneratedScoreWorkerTests(unittest.TestCase):
         self.assertEqual(result["target_delivery_count"], 1)
         self.assertEqual(result["score_count"], 1)
         self.assertFalse(result["scientific_claim_established"])
+        self.assertEqual(
+            result["prediction_streaming"],
+            {
+                "passes": 2,
+                "maximum_prediction_rows_buffered": 1,
+                "complete_prediction_records_materialized": False,
+            },
+        )
         encoded = payload.decode("ascii")
         for forbidden in (
             '"item_id"',
@@ -314,6 +323,17 @@ class CommP0GeneratedScoreWorkerTests(unittest.TestCase):
             '"targets"',
         ):
             self.assertNotIn(forbidden, encoded)
+
+    def test_prediction_stream_never_uses_whole_payload_decoder(self) -> None:
+        original = worker._decode_ndjson
+
+        def guarded(payload: bytes, *, surface: str, record_cap: int):
+            self.assertNotEqual(surface, "prediction_stream")
+            return original(payload, surface=surface, record_cap=record_cap)
+
+        with mock.patch.object(worker, "_decode_ndjson", side_effect=guarded):
+            result = self._run(self._open_descriptors())
+        self.assertFalse(result["prediction_streaming"]["complete_prediction_records_materialized"])
 
     def test_wrong_fd_mode_and_nonregular_fd_are_refused(self) -> None:
         descriptors = self._open_descriptors(modes={"contract": os.O_RDWR})

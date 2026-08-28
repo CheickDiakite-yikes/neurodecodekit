@@ -14,10 +14,11 @@ import hmac
 import json
 import os
 import stat
-from collections.abc import Mapping, Sequence
+from collections.abc import Iterable, Mapping, Sequence
 from typing import Any
 
 from neurodecodekit.experiments import comm_p0_generated_score_only as score_only
+from neurodecodekit.experiments import comm_p0_generated_streaming_score as streaming_score
 
 SCHEMA_VERSION = "0.1.0"
 ATTESTATION_SCHEMA = "neurodecodekit.comm_p0_generated_score_worker_freeze"
@@ -155,6 +156,57 @@ def _decode_ndjson(
     return tuple(records)
 
 
+def _iter_ndjson_descriptor(
+    fd: int,
+    *,
+    surface: str,
+    byte_cap: int,
+    record_cap: int,
+) -> Iterable[dict[str, Any]]:
+    """Yield canonical records while retaining at most one decoded row."""
+
+    descriptor_stat = _descriptor_stat(fd, access=os.O_RDONLY, surface=surface)
+    if byte_cap <= 0 or descriptor_stat.st_size <= 0 or descriptor_stat.st_size > byte_cap:
+        _refuse("bounded_input_violation", surface)
+    buffer = bytearray()
+    total = 0
+    records = 0
+    while total < descriptor_stat.st_size:
+        chunk = os.read(fd, min(64 * 1024, descriptor_stat.st_size - total))
+        if not chunk:
+            _refuse("descriptor_identity_mismatch", surface)
+        total += len(chunk)
+        buffer.extend(chunk)
+        while True:
+            newline = buffer.find(b"\n")
+            if newline < 0:
+                if len(buffer) > MAX_LINE_BYTES:
+                    _refuse("bounded_input_violation", f"{surface}[{records}]")
+                break
+            line = bytes(buffer[: newline + 1])
+            del buffer[: newline + 1]
+            if len(line) > MAX_LINE_BYTES:
+                _refuse("bounded_input_violation", f"{surface}[{records}]")
+            if records >= record_cap:
+                _refuse("bounded_input_violation", surface)
+            value = _decode_json(line, surface=f"{surface}[{records}]")
+            if not isinstance(value, Mapping):
+                _refuse("noncanonical_input", f"{surface}[{records}]")
+            records += 1
+            yield dict(value)
+    if buffer or records == 0 or os.read(fd, 1):
+        _refuse("noncanonical_input", surface)
+    after = os.fstat(fd)
+    if (
+        after.st_dev != descriptor_stat.st_dev
+        or after.st_ino != descriptor_stat.st_ino
+        or after.st_size != descriptor_stat.st_size
+        or after.st_nlink != 1
+        or not stat.S_ISREG(after.st_mode)
+    ):
+        _refuse("descriptor_identity_mismatch", surface)
+
+
 def _hmac_sha256(key: bytes, body: Mapping[str, Any]) -> str:
     return hmac.new(key, score_only.canonical_json_bytes(body), hashlib.sha256).hexdigest()
 
@@ -165,7 +217,7 @@ def _verify_attestation(
     hmac_key: bytes,
     identities: Mapping[str, Mapping[str, Any]],
     contract: Mapping[str, Any],
-    predictions: Sequence[Mapping[str, Any]],
+    expected_freeze: Mapping[str, Any],
 ) -> Mapping[str, Any]:
     if not isinstance(hmac_key, bytes) or len(hmac_key) < 32:
         _refuse("freeze_hmac_key_invalid")
@@ -186,7 +238,6 @@ def _verify_attestation(
         _refuse("prediction_freeze_attestation_mismatch")
     if body.get("bound_inputs") != identities:
         _refuse("descriptor_identity_mismatch")
-    expected_freeze = score_only.build_prediction_freeze_attestation(predictions, contract)
     if body.get("score_only_prediction_freeze") != expected_freeze:
         _refuse("prediction_freeze_attestation_mismatch")
     authorization = body.get("authorization")
@@ -215,8 +266,8 @@ def build_freeze_attestation(
         "target_delivery_count_at_freeze": 0,
         "score_count_at_freeze": 0,
         "bound_inputs": {key: dict(identities[key]) for key in _BOUND_SURFACES},
-        "score_only_prediction_freeze": score_only.build_prediction_freeze_attestation(
-            predictions, contract
+        "score_only_prediction_freeze": streaming_score.build_prediction_freeze_attestation(
+            iter(predictions), contract
         ),
         "authorization": dict(authorization),
     }
@@ -269,9 +320,6 @@ def descriptor_main(
     identities["trial_manifest"], trial_payload = _read_bounded(
         trial_manifest_fd, surface="trial_manifest", byte_cap=input_byte_cap
     )
-    identities["prediction_stream"], prediction_payload = _read_bounded(
-        prediction_stream_fd, surface="prediction_stream", byte_cap=input_byte_cap
-    )
     identities["live_observations"], live_payload = _read_bounded(
         live_observations_fd, surface="live_observations", byte_cap=input_byte_cap
     )
@@ -284,16 +332,37 @@ def descriptor_main(
     if not isinstance(contract, Mapping) or not isinstance(attestation, Mapping):
         _refuse("noncanonical_input")
     trials = _decode_ndjson(trial_payload, surface="trial_manifest", record_cap=record_cap)
-    predictions = _decode_ndjson(
-        prediction_payload, surface="prediction_stream", record_cap=record_cap
+    prediction_stat = _descriptor_stat(
+        prediction_stream_fd, access=os.O_RDONLY, surface="prediction_stream"
     )
+    if (
+        input_byte_cap <= 0
+        or prediction_stat.st_size <= 0
+        or prediction_stat.st_size > input_byte_cap
+    ):
+        _refuse("bounded_input_violation", "prediction_stream")
+    prediction_freeze = streaming_score.build_prediction_freeze_attestation(
+        _iter_ndjson_descriptor(
+            prediction_stream_fd,
+            surface="prediction_stream",
+            byte_cap=input_byte_cap,
+            record_cap=record_cap,
+        ),
+        contract,
+    )
+    identities["prediction_stream"] = {
+        "device": int(prediction_stat.st_dev),
+        "inode": int(prediction_stat.st_ino),
+        "size_bytes": int(prediction_stat.st_size),
+        "sha256": prediction_freeze["private_prediction_stream_sha256"],
+    }
     observations = _decode_ndjson(live_payload, surface="live_observations", record_cap=record_cap)
     authorization = _verify_attestation(
         attestation,
         hmac_key=hmac_key,
         identities=identities,
         contract=contract,
-        predictions=predictions,
+        expected_freeze=prediction_freeze,
     )
 
     # This is the first target-descriptor operation. Identity registration occurs
@@ -312,12 +381,18 @@ def descriptor_main(
     if not isinstance(targets, Mapping):
         _refuse("target_delivery_mismatch")
 
-    result = score_only.score_records(
+    os.lseek(prediction_stream_fd, 0, os.SEEK_SET)
+    result = streaming_score.score_records_after_verified_freeze(
         contract=contract,
         trial_records=trials,
-        prediction_records=predictions,
+        prediction_records=_iter_ndjson_descriptor(
+            prediction_stream_fd,
+            surface="prediction_stream",
+            byte_cap=input_byte_cap,
+            record_cap=record_cap,
+        ),
         live_observation_records=observations,
-        freeze_attestation=attestation["score_only_prediction_freeze"],
+        verified_freeze=prediction_freeze,
         authorization=authorization,
         delivered_targets=targets,
     )
@@ -333,6 +408,11 @@ def descriptor_main(
         "contains_row_level_output": False,
         "generated_only": True,
         "scientific_claim_established": False,
+        "prediction_streaming": {
+            "passes": 2,
+            "maximum_prediction_rows_buffered": streaming_score.MAXIMUM_PREDICTION_ROWS_BUFFERED,
+            "complete_prediction_records_materialized": False,
+        },
     }
     score_only._assert_aggregate_private(aggregate)
     _write_canonical(aggregate_output_fd, aggregate, byte_cap=output_byte_cap)

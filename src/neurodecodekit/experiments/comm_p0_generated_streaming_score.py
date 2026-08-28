@@ -421,23 +421,23 @@ def _live_summary(
     }
 
 
-def score_records(
+def score_records_after_verified_freeze(
     *,
     contract: Mapping[str, Any],
     trial_records: Sequence[Mapping[str, Any]],
-    prediction_pass_factory: Callable[[], Iterable[Mapping[str, Any]]],
+    prediction_records: Iterable[Mapping[str, Any]],
     live_observation_records: Sequence[Mapping[str, Any]],
-    freeze_attestation: Mapping[str, Any],
+    verified_freeze: Mapping[str, Any],
     authorization: Mapping[str, Any],
     delivered_targets: Mapping[str, Any],
 ) -> dict[str, Any]:
-    """Score a replay with two bounded prediction passes and compact state."""
+    """Score one bounded pass after a separate target-free freeze verification."""
 
     score_only._validate_authorization(authorization)
     conditions = score_only._validate_contract(contract)
-    first_freeze = _prediction_freeze_from_stream(prediction_pass_factory(), contract)
-    if not isinstance(freeze_attestation, Mapping) or dict(freeze_attestation) != first_freeze:
+    if not isinstance(verified_freeze, Mapping):
         raise score_only.ScoreOnlyRefusal("prediction_freeze_attestation_mismatch")
+    first_freeze = dict(verified_freeze)
     freeze_sha256 = score_only.sha256_json(first_freeze)
     manifest, active_item_ids = score_only._trial_inventory(trial_records, contract)
     commands = tuple(
@@ -448,7 +448,7 @@ def score_records(
         raise score_only.ScoreOnlyRefusal("contract_mismatch", "four_command_inventory")
     targets = score_only._targets_for_active(delivered_targets, active_item_ids, len(commands))
     groups, quality, second_freeze = _consume_predictions(
-        prediction_pass_factory(),
+        prediction_records,
         contract=contract,
         manifest=manifest,
         active_item_ids=active_item_ids,
@@ -507,6 +507,32 @@ def score_records(
     score_only._assert_aggregate_private(result)
     score_only.canonical_json_bytes(result)
     return result
+
+
+def score_records(
+    *,
+    contract: Mapping[str, Any],
+    trial_records: Sequence[Mapping[str, Any]],
+    prediction_pass_factory: Callable[[], Iterable[Mapping[str, Any]]],
+    live_observation_records: Sequence[Mapping[str, Any]],
+    freeze_attestation: Mapping[str, Any],
+    authorization: Mapping[str, Any],
+    delivered_targets: Mapping[str, Any],
+) -> dict[str, Any]:
+    """Score a replay with two bounded prediction passes and compact state."""
+
+    first_freeze = _prediction_freeze_from_stream(prediction_pass_factory(), contract)
+    if not isinstance(freeze_attestation, Mapping) or dict(freeze_attestation) != first_freeze:
+        raise score_only.ScoreOnlyRefusal("prediction_freeze_attestation_mismatch")
+    return score_records_after_verified_freeze(
+        contract=contract,
+        trial_records=trial_records,
+        prediction_records=prediction_pass_factory(),
+        live_observation_records=live_observation_records,
+        verified_freeze=first_freeze,
+        authorization=authorization,
+        delivered_targets=delivered_targets,
+    )
 
 
 def capability_audit() -> dict[str, Any]:
