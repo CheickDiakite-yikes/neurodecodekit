@@ -38,6 +38,10 @@
 > replication route currently qualifies; preserve the prospective synchronized
 > EEG/EOG/bilateral oral-EMG fallback. This is a source-lock result, not neural
 > evidence or a claim upgrade.
+> Exact readiness result `a9a9b23` passed both required jobs in CI
+> `33131980667` and reached GitHub `main`. Its proof-only closeout binds three
+> exact artifacts / 17,634 bytes without repeating either source retrieval and
+> is pending its own remote CI.
 
 > **Communication objective ledger (2026-08-27):** the current end goal is now
 > decomposed into eight machine-tested evidence requirements. Only one narrow

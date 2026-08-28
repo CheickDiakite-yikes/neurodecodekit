@@ -14416,3 +14416,9 @@ green; only then may the single generated qualification run.
   lock decision, not a permanent impossibility or scientific result. Preserve
   the prospective synchronized EEG/EOG/bilateral oral-EMG fallback; request no
   archive and change no Tier C authority.
+- 2026-08-27: Accept `a9a9b2380dd8599cc08d6eb82ce1dc8f8e462c51`,
+  CI `33131980667`, as the exact remotely green Kara One source-readiness
+  result on GitHub `main`. Bind only its human result, machine result, and test
+  in a proof-only closeout totaling 17,634 bytes. Do not repeat either public-
+  source retrieval, inspect an archive, alter the fixed router, or convert a
+  source-lock park into neural evidence, acquisition authority, or a claim.

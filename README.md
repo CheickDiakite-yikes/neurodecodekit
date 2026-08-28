@@ -232,6 +232,10 @@ targets. With SilentSpeech-EEG unqualified and TESSCCo blocked, no public
 replication route currently qualifies; the honest fallback is a separately
 approved prospective cohort with synchronized EEG, EOG, and bilateral oral
 EMG.
+Exact readiness result `a9a9b23` passed Base Python and Optional Neuro Readers
+in CI `33131980667` and reached GitHub `main`. Its
+[proof closeout](docs/COMMUNICATION_EEG_KARA_ONE_SOURCE_READINESS_PROOF_CLOSEOUT.md)
+binds the exact result triplet without repeating either public-source request.
 
 The new
 [objective evidence ledger](docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md)

@@ -208,6 +208,9 @@ One is therefore parked under the currently exposed source surface, no archive
 was requested, and no public partial replication route currently qualifies.
 Preserve the prospective synchronized EEG/EOG/bilateral oral-EMG fallback and
 do not create an acquisition packet from this Tier A result.
+Exact readiness result `a9a9b23` passed both required jobs in CI `33131980667`
+and reached GitHub `main`. Read its proof-only closeout next; it binds three
+exact artifacts / 17,634 bytes and repeats no source or payload request.
 
 Then read
 `docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md`.

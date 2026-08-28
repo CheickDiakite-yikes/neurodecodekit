@@ -156,9 +156,12 @@ frozen 10 GiB cap. Under the exact all-eligible-participant, no-dropping,
 over-cap-or-unsplittable-parks router, Kara One is therefore parked under the
 currently exposed source surface. No archive or payload was requested. No
 public partial replication route currently qualifies; preserve the separately
-governed prospective synchronized EEG/EOG/bilateral oral-EMG fallback. The
-readiness result is pending its own remote CI and creates no acquisition
-authority or scientific claim.
+governed prospective synchronized EEG/EOG/bilateral oral-EMG fallback. Exact
+readiness result `a9a9b2380dd8599cc08d6eb82ce1dc8f8e462c51` passed Base job
+`98723346590`, Optional Neuro Readers job `98723346326`, and CI `33131980667`,
+then reached GitHub `main`. Read its proof-only closeout; it binds three exact
+artifacts / 17,634 bytes and is pending its own remote CI. Neither artifact
+creates acquisition authority or a scientific claim.
 
 Read the objective evidence and replication decision after that refresh:
 `docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md`

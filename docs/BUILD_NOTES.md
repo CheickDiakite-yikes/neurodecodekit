@@ -16312,3 +16312,10 @@ and require both remote jobs green before the one official qualification.
   all-eligible-participant, no-dropping, 10 GiB rule, the route is parked under
   the currently exposed source surface. No archive, metadata API, neural
   payload, model, target, score, stream, device, or claim operation occurred.
+- 2026-08-27: Exact Kara One readiness result `a9a9b23` passed Base Python
+  `98723346590`, Optional Neuro Readers `98723346326`, and CI `33131980667`,
+  then reached GitHub `main`. Added a proof-only closeout binding its three
+  immutable artifacts / 17,634 bytes under canonical set SHA-256
+  `930b799bc54d933b94d55df1bdb1266d9025748a7a669aafbee95d9bfa068d74`.
+  The proof repeats no dataset-page, paper, archive, metadata, or payload
+  request.
