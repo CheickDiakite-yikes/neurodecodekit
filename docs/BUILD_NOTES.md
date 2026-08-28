@@ -16296,3 +16296,9 @@ and require both remote jobs green before the one official qualification.
   version, manifest, bytes, dataset license, sensor roles, and event grammar
   remain unavailable. One public article-page GET returned 228,070 HTML bytes;
   no Kaggle metadata API or EEG payload request occurred.
+- 2026-08-27: Exact TESSCCo readiness result `3ed55ba` passed Base Python
+  `98717252636`, Optional Neuro Readers `98717252621`, and CI `33130065908`,
+  then reached GitHub `main`. Added a proof-only closeout binding its three
+  immutable artifacts / 15,460 bytes under canonical set SHA-256
+  `6ee0e1250d22e7c001605356f51b1814a7c67f32ab55795301235021e286fabb`.
+  The proof repeats no article, DOI, metadata, or payload request.

@@ -191,6 +191,9 @@ The paper-cited Kaggle dataset DOI resolves to dataset ID `9993149`, but the
 landing returned HTTP 404 on 2026-08-27. TESSCCo remains the planned partial
 independent key but is not acquisition-ready, and no metadata API or EEG file
 was requested.
+Exact readiness result `3ed55ba` passed both required jobs in CI `33130065908`
+and reached GitHub `main`. Read its proof-only closeout next; it binds three
+exact artifacts / 15,460 bytes and repeats no source or payload request.
 
 Then read
 `docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md`.

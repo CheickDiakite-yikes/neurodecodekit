@@ -21,6 +21,10 @@
 > key, but block acquisition until an immutable version, manifest, byte bound,
 > dataset license, and exact channel/event roles are reachable and frozen. No
 > metadata API, EEG payload, authority, or claim operation occurred.
+> Exact readiness result `3ed55ba` passed both required jobs in CI
+> `33130065908` and reached GitHub `main`. Its proof closeout binds three exact
+> artifacts / 15,460 bytes without repeating the source check and is pending
+> its own remote CI.
 
 > **Communication objective ledger (2026-08-27):** the current end goal is now
 > decomposed into eight machine-tested evidence requirements. Only one narrow

@@ -14400,3 +14400,8 @@ green; only then may the single generated qualification run.
   the DOI target returned HTTP 404, so keep TESSCCo planned but operationally
   unqualified. Do not create an acquisition packet, infer the dataset license,
   substitute after discovery, or change the active Tier C gate.
+- 2026-08-27: Accept `3ed55ba274b0aef0bb7434867c9c0ef6430f8f37`,
+  CI `33130065908`, as the remotely green TESSCCo source-readiness result.
+  Bind only its human result, machine result, and test in a proof-only
+  closeout. Do not repeat the public-source request or convert operational
+  unavailability into acquisition authority or a scientific claim.

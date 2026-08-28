@@ -209,6 +209,10 @@ verified the paper-cited dataset DOI, but its Kaggle landing currently returns
 404. TESSCCo is therefore a scientifically useful planned 24-person partial
 replication, not an acquisition-ready source; version, manifest, byte size,
 dataset license, and peripheral-channel roles still need an exact source lock.
+Exact readiness result `3ed55ba` passed both required suites in CI
+`33130065908` and is on GitHub `main`; its
+[proof closeout](docs/COMMUNICATION_EEG_TESSCCO_SOURCE_READINESS_PROOF_CLOSEOUT.md)
+binds the immutable decision without repeating the source request.
 
 The new
 [objective evidence ledger](docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md)

@@ -139,6 +139,10 @@ dataset DOI `10.34740/KAGGLE/DS/9993149`, which resolved to Kaggle dataset ID
 payload request was made. TESSCCo remains the planned partial independent key
 but is not operationally qualified or acquisition-ready; do not create an
 acquisition packet or impute the article license to the dataset.
+Exact readiness result `3ed55ba274b0aef0bb7434867c9c0ef6430f8f37`
+passed Base job `98717252636`, Optional Neuro Readers job `98717252621`, and
+CI `33130065908`, then reached GitHub `main`. Read its proof-only closeout; it
+binds three exact artifacts / 15,460 bytes and is pending its own remote CI.
 
 Read the objective evidence and replication decision after that refresh:
 `docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md`
