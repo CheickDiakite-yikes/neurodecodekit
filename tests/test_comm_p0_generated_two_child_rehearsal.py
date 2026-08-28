@@ -502,28 +502,34 @@ def test_cli_help_plan_and_fail_closed_run(tmp_path: Path) -> None:
         text=True,
         check=False,
     )
-    closed_run = subprocess.run(
-        [
-            sys.executable,
-            "-m",
-            "neurodecodekit.comm_p0_rehearsal_cli",
-            "run",
-            "--output",
-            str(tmp_path / "result.json"),
-            "--receipt",
-            str(tmp_path / "receipt.json"),
-        ],
-        cwd=ROOT,
-        env=environment,
-        capture_output=True,
-        text=True,
-        check=False,
-    )
+    proof_present = (ROOT / rehearsal.PROOF_PATH).exists()
+    closed_run = None
+    if not proof_present:
+        closed_run = subprocess.run(
+            [
+                sys.executable,
+                "-m",
+                "neurodecodekit.comm_p0_rehearsal_cli",
+                "run",
+                "--output",
+                str(tmp_path / "result.json"),
+                "--receipt",
+                str(tmp_path / "receipt.json"),
+            ],
+            cwd=ROOT,
+            env=environment,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
 
     assert help_run.returncode == 0
     assert "generated-only" in help_run.stdout
     assert plan_run.returncode == 0
-    assert json.loads(plan_run.stdout)["registered_attempts_maximum"] == 1
-    assert closed_run.returncode == 2
-    assert "implementation_proof_absent" in closed_run.stdout
+    plan_value = json.loads(plan_run.stdout)
+    assert plan_value["registered_attempts_maximum"] == 1
+    assert plan_value["implementation_proof_present"] is proof_present
+    if closed_run is not None:
+        assert closed_run.returncode == 2
+        assert "implementation_proof_absent" in closed_run.stdout
     assert list(tmp_path.iterdir()) == []

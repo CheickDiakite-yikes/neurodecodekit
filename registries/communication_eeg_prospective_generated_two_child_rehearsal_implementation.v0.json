@@ -26,8 +26,8 @@
     },
     {
       "path": "tests/test_comm_p0_generated_two_child_rehearsal.py",
-      "bytes": 17804,
-      "sha256": "710012fb9b431c5f1974fd5077028d13bd290c73e83c828dbb4d9ea6133bd487"
+      "bytes": 18117,
+      "sha256": "8bfb4038d1049952303db1206d687b8bd6b5085f9f3935e83def54e47c7422df"
     },
     {
       "path": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_IMPLEMENTATION.md",
@@ -37,7 +37,7 @@
   ],
   "artifact_summary": {
     "count": 4,
-    "bytes": 66735
+    "bytes": 67048
   },
   "capabilities": {
     "green_coordinator_modified": false,
