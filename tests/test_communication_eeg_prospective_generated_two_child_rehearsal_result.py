@@ -112,7 +112,8 @@ def test_current_frontier_routes_to_consumed_fs2_runtime_result() -> None:
     assert communication["generated_qualification_next"] is False
     assert communication["generated_runtime_successor_design_next"] is False
     assert communication["generated_runtime_successor_registration_proof_next"] is False
-    assert communication["FS3_full_wrapper_green_then_separate_proof_next"] is True
+    assert communication["FS3_full_wrapper_green_then_separate_proof_next"] is False
+    assert communication["FS3_proof_green_then_digest_activation_next"] is True
     successor = communication["generated_qualification_registration"][
         "single_execution_dual_verification_rehearsal"
     ]

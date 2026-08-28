@@ -75,10 +75,10 @@ and CI `33188950787`, and reached GitHub `main`. It implements descriptor-only
 identity checks, no-follow dirfd producer opens, an isolated socket-guarded
 verifier, observed 64-row enforcement inside every one of 1,428 sets across
 two traversals, parent RSS checkpoints, and staged fsync/no-replace publication.
-A separate proof now binds its six exact artifacts / 111,486 bytes and remains
-pending its own remote-green barrier. Execution stays closed until that proof
-is green and a final activation commit binds its digest; no full FS3 rehearsal
-has run.
+Exact proof commit `66ab07d` binds its six artifacts / 111,486 bytes and passed
+Base Python `98913572325`, Optional Neuro Readers `98913572569`, and CI
+`33190237036`, then reached GitHub `main`. Execution stays closed until a final
+activation commit binds proof digest `128b6699`; no full FS3 rehearsal has run.
 
 This design is grounded in a measured negative engineering result. The sole
 `COMM-P0-G-FS2-R0` attempt completed one of

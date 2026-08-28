@@ -100,12 +100,12 @@ Exact `COMM-P0-G-FS3-A1` commit
 `28b440eee0ea895f41d7eebf59a0c1338fbbc416` passed Base Python
 `98889419386`, Optional Neuro Readers `98889419758`, and CI `33183200744`,
 then reached GitHub `main`. It ran no numerical work and authorizes no FS3
-execution. The additive fail-closed full wrapper now implements its exact
-descriptor, identity, socket, cardinality, resource, and publication semantics
-with generated/mock fixtures only. Require this wrapper's exact commit and both
-CI jobs green on GitHub `main`, followed by a separate exact-green wrapper
-proof and a final activation commit binding that proof's exact digest, before
-considering the sole full FS3 attempt.
+execution. Exact wrapper `91743f5` passed Base `98909173217`, Optional
+`98909172856`, and CI `33188950787`; exact proof `66ab07d` then passed Base
+`98913572325`, Optional `98913572569`, and CI `33190237036`. Both reached
+GitHub `main`. The fail-closed wrapper and proof are complete; require only a
+separate remotely green activation record binding proof digest `128b6699`
+before considering the sole full FS3 attempt.
 
 The prior FS2 measurement remains binding. Read
 `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_RESULT.md`

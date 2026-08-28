@@ -16455,5 +16455,10 @@ and require both remote jobs green before the one official qualification.
   1,428-set enforcement, parent RSS checkpoints, and staged fsync/no-replace
   publication. Qualification uses generated/mock fixtures only; full-scale
   FS3, receipt, official, real/private, device, network, release, and claim
-  counters remain zero pending exact wrapper CI, a separate proof, and a final
-  activation commit binding that proof's exact digest.
+  counters remain zero.
+- 2026-08-28: Exact FS3 wrapper `91743f5` passed Base `98909173217`, Optional
+  `98909172856`, and CI `33188950787`. Exact proof `66ab07d` then bound six
+  artifacts / 111,486 bytes and passed Base `98913572325`, Optional
+  `98913572569`, and CI `33190237036`. Both reached GitHub `main`. Full FS3,
+  receipt, official, real/private, device, network, release, and claim counters
+  remain zero; only the separate proof-digest activation remains pending.

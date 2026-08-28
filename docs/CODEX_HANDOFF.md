@@ -31,15 +31,15 @@
 > proof and a final activation commit binding that proof's exact digest before
 > considering the sole full FS3 attempt.
 
-> **FS3 Amendment 1 green, wrapper pending, 2026-08-28:** independent review found that one
+> **FS3 wrapper and proof green; activation pending, 2026-08-28:** independent review found that one
 > verifier invocation deliberately performs two stream traversals and that the
 > full contract needed exact 91,392-row / 1,428-set cardinality, logical two-
 > cohort envelope semantics, descriptor-only code identity, no-follow dirfd
 > input opening, an active socket guard, and a precise stored-runtime endpoint.
-> Exact Amendment 1 `28b440e` is remotely green and ran no numerical work. The
-> additive wrapper now implements these corrections with mock fixtures, but no
-> full run may begin until the wrapper and its separate proof are both remotely
-> green and a final activation commit binds the proof's exact digest.
+> Exact Amendment 1 `28b440e`, wrapper `91743f5`, and proof `66ab07d` are
+> remotely green on `main`. The wrapper implements these corrections with mock
+> fixtures. No full run may begin until a separate activation commit binds
+> proof digest `128b6699` and becomes remotely green.
 
 > **COMM-P0-G FS2 consumed runtime result, 2026-08-28:** read
 > `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_RESULT.md`
