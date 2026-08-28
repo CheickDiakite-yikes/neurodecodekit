@@ -1,0 +1,96 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_prospective_generated_qualification_amendment",
+  "schema_version": "0.1.0",
+  "amendment_id": "COMM-P0-G-A2",
+  "parent_registration_id": "COMM-P0-G-v0",
+  "recorded_at_local": "2026-08-28",
+  "status": "prospective_proof_order_correction_pending_own_remote_CI_no_operation_authorized",
+  "bound_parent_artifacts": [
+    {
+      "path": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_QUALIFICATION_PREREGISTRATION.md",
+      "sha256": "3eb36e9f0a18bdb972290355b06e89b8a2a921a6a9e509a8337973664ae3b33c"
+    },
+    {
+      "path": "registries/communication_eeg_prospective_generated_qualification_contract.v0.json",
+      "sha256": "a3f7ddbe763186e0618cf7e4d1f9b34ec87204fb91ac7c25db160a9d716f2910"
+    },
+    {
+      "path": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_QUALIFICATION_PROOF_CLOSEOUT.md",
+      "sha256": "a52746912595fdfde2253cea8ec1efd16aed65e465f9e45a94c1ad8861cb695f"
+    },
+    {
+      "path": "registries/communication_eeg_prospective_generated_qualification_proof.v0.json",
+      "sha256": "28523300739c5269e4ea7bf6de5e0e50369457a95a38b4c6c88aef840aa1e37f"
+    }
+  ],
+  "defect": {
+    "generated_invocation_network_bytes_maximum": 0,
+    "generated_invocation_wall_seconds_maximum": 180,
+    "parent_requires_replication_prediction_freeze_remotely_green_before_target_delivery": true,
+    "same_invocation_remote_green_transition_possible": false,
+    "ambiguity_must_be_resolved_before_official_generated_implementation": true
+  },
+  "correction": {
+    "implementation_remotely_green_before_activation": true,
+    "activation_binds_exact_implementation_artifacts_commit_CI_and_both_jobs": true,
+    "activation_remotely_green_before_invocation": true,
+    "generated_prediction_freeze_cryptographically_attested_before_target_descriptor_open": true,
+    "score_only_child_verifies_freeze_inventory_file_identity_and_delivery_nonce": true,
+    "network_or_git_operation_inside_generated_invocation_allowed": false,
+    "complete_two_replay_qualification_is_post_activation_result_evidence": true,
+    "future_real_prediction_freeze_remotely_green_before_target_delivery": true,
+    "all_other_parent_fields_unchanged": true
+  },
+  "shortcut_fixtures": {
+    "executions_required": 7,
+    "positive": ["residual_central_EEG"],
+    "negative": ["EOG", "oral_EMG", "microphone", "cue", "timing", "language"],
+    "negative_routes_must_fail_neural_evidence_gate": true,
+    "scientific_value": false
+  },
+  "effect": {
+    "generated_implementation_may_continue_after_this_amendment_is_remotely_green": true,
+    "generated_qualification_execution_authorized_now": false,
+    "human_or_device_operation_authorized": false,
+    "real_or_private_data_authorized": false,
+    "training_inference_or_scoring_authorized": false,
+    "network_operation_authorized": false,
+    "release_authorized": false,
+    "scientific_claim_upgrade_authorized": false
+  },
+  "operation_counters": {
+    "generated_qualification_runs": 0,
+    "human_recruitment_or_recordings": 0,
+    "physical_stream_or_device_operations": 0,
+    "real_or_private_path_operations": 0,
+    "real_signal_reads": 0,
+    "target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "active_gate": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "changed": false,
+    "all_authority_flags_false": true
+  },
+  "claim_boundary": {
+    "generated_proof_order_ambiguity_resolved_prospectively": true,
+    "generated_qualification_established": false,
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_performance_established": false,
+    "clinical_value_established": false
+  }
+}
