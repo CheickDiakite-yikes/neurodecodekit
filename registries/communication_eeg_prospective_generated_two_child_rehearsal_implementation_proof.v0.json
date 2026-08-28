@@ -1,0 +1,49 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_prospective_generated_two_child_rehearsal_implementation_proof",
+  "schema_version": "0.1.0",
+  "gate_id": "COMM-P0-G-FS2-v0",
+  "run_id": "COMM-P0-G-FS2-R0",
+  "contract_sha256": "ce533db97ace7b1d8c1423f48227119699f66e454252b78b9acd80b65a8f0a7a",
+  "registration_commit": "e93058d5a9d4907c494dda5ae40881b47b76aa24",
+  "implementation_commit": "e98330fbb72a4f89b81c154420a01b2ee42918c2",
+  "implementation_CI_run_id": 33168320870,
+  "implementation_base_python_job_id": 98838987492,
+  "implementation_optional_neuro_readers_job_id": 98838987264,
+  "registration_remotely_green_on_GitHub_main": true,
+  "implementation_remotely_green_on_GitHub_main": true,
+  "both_required_implementation_jobs_green": true,
+  "rehearsal_execution_authorized_under_Tier_B": true,
+  "official_qualification_activated": false,
+  "official_marker_operations_authorized": false,
+  "real_private_network_device_or_release_authorized": false,
+  "full_scale_rehearsal_attempts_before_proof": 0,
+  "implementation_artifacts": [
+    {
+      "path": "src/neurodecodekit/experiments/comm_p0_generated_two_child_rehearsal.py",
+      "bytes": 42066,
+      "sha256": "8a34f3ace8e7ccec761d6967ca99d2205c7750c6818da27d5edc18971650af13"
+    },
+    {
+      "path": "src/neurodecodekit/comm_p0_rehearsal_cli.py",
+      "bytes": 1931,
+      "sha256": "f2546ac8cb327a16dd3473b289e9c43c1dad1602761df41806e5ab1175a38b83"
+    },
+    {
+      "path": "tests/test_comm_p0_generated_two_child_rehearsal.py",
+      "bytes": 18117,
+      "sha256": "8bfb4038d1049952303db1206d687b8bd6b5085f9f3935e83def54e47c7422df"
+    },
+    {
+      "path": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_IMPLEMENTATION.md",
+      "bytes": 4934,
+      "sha256": "b4aeced46c694f20f24a5dcec5a468543b7af6887040280b0c13600d0fc8dce0"
+    },
+    {
+      "path": "registries/communication_eeg_prospective_generated_two_child_rehearsal_implementation.v0.json",
+      "bytes": 4774,
+      "sha256": "41eaa38bbf36def1a106adc4ba6e1d96eb09401f2acd5f639cb377d21d50c3cf"
+    }
+  ],
+  "implementation_artifact_set_sha256": "13b1fa9586970992614f0ff0ef4e329b38c9a30e9f8b8856ef956446189642f9",
+  "proof_sha256": "3ca7ad91893716b751abc60a2e828132d2c8682a4f5491e4bca2e46172ef8919"
+}
