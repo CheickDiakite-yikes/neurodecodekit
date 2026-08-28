@@ -14,6 +14,15 @@
 > full FS3 rehearsal. Preserve consumed FS2 and the unrelated tracker
 > inspection file. `DREYER-C5R-1-HL` remains the sole all-false Tier C gate.
 
+> **FS3 implementation pending remote proof, 2026-08-28:** read the new FS3
+> implementation document and machine registry. Two isolated reduced producers
+> and two independent zero-model verifiers passed with matching canonical
+> surfaces and aggregate hashes, 13,056 rows / 204 sets per replay, 140 refusal
+> observations, 72.67009999998845 seconds, 239,075,328-byte peak RSS, 770
+> monitor samples, zero network, and zero retained payload. Commit and push the
+> exact implementation, require both CI jobs green on GitHub `main`, then add a
+> proof-only closeout. Do not execute full FS3 before that separate barrier.
+
 > **COMM-P0-G FS2 consumed runtime result, 2026-08-28:** read
 > `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_RESULT.md`
 > and its machine registry first. The sole generated-only FS2 run completed one

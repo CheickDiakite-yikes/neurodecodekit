@@ -16,6 +16,17 @@
 > barriers. This is a new prospective gate, not an FS2 rerun, and has no
 > scientific value.
 
+> **COMM-P0-G FS3 implementation qualification (2026-08-28):** the new
+> descriptor-only verifier accepts only preopened immutable surfaces and has
+> zero model, fit, transform, inference, threshold, calibration, prediction-
+> creation, parameter-update, language-model, network, or row-level-output
+> capability. Two isolated three-person-per-cohort producers and two verifier
+> children matched canonical producer surfaces and aggregate score hashes over
+> 13,056 rows / 204 sets per replay and 140 refusal observations. Runtime was
+> 72.67009999998845 seconds, peak RSS 239,075,328 bytes, and monitor samples
+> 770; network and retained payload were zero. This milestone remains pending
+> exact commit, full CI, and proof closeout. Full FS3 runs remain zero.
+
 > **COMM-P0-G contract-correction successor (2026-08-28):** post-proof audit
 > found that the V1 nonofficial full-scale rehearsal reported one combined
 > target delivery and one score, but the frozen two-cohort contract requires two

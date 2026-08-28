@@ -1,0 +1,147 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_prospective_generated_single_execution_dual_verification_implementation",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-28",
+  "gate_id": "COMM-P0-G-FS3-v0",
+  "run_id": "COMM-P0-G-FS3-R0",
+  "status": "generated_only_implementation_and_reduced_qualification_complete_pending_exact_commit_push_remote_green",
+  "bound_registration": {
+    "commit": "d42650897317b0dc353d3607a25e71f2e0d4e7c9",
+    "CI_run_id": 33176097877,
+    "base_python_job_id": 98864980999,
+    "optional_neuro_readers_job_id": 98864981336,
+    "on_GitHub_main": true,
+    "contract_path": "registries/communication_eeg_prospective_generated_single_execution_dual_verification_contract.v0.json",
+    "contract_bytes": 10504,
+    "contract_sha256": "99022366ce5aa59266d855ef9d4fd84c9cc7a1bf4f960c9398022b8e582a3771"
+  },
+  "implementation_artifacts": [
+    {
+      "path": "src/neurodecodekit/experiments/comm_p0_generated_dual_verification.py",
+      "bytes": 16330,
+      "sha256": "befac64116adac1e2af9b3e203ade5c2ae87be6e2153db0a51f90fd9c6b1ba5c"
+    },
+    {
+      "path": "src/neurodecodekit/experiments/comm_p0_generated_verifier_worker.py",
+      "bytes": 7255,
+      "sha256": "5b08692b79e0e1387f6045d93db407e4f96842335cddc4937bd2db9609c988ac"
+    },
+    {
+      "path": "src/neurodecodekit/comm_p0_FS3_cli.py",
+      "bytes": 1376,
+      "sha256": "daf42531750f640552b4dbf112aee6f6c3ced97e07c7a653de0e9853b58f0bcf"
+    },
+    {
+      "path": "tests/test_comm_p0_generated_dual_verification.py",
+      "bytes": 8701,
+      "sha256": "bbe26d1e198d387f64cc95477f44489fc7c2eaebe529448d3e195b80e4c25272"
+    },
+    {
+      "path": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_IMPLEMENTATION.md",
+      "bytes": 4116,
+      "sha256": "f8d95d068eba7a7e49f809c00b2b3f2e54d1ae0c9104faf0e1f6a8c07384473a"
+    }
+  ],
+  "artifact_summary": {
+    "count": 5,
+    "bytes": 37778
+  },
+  "implementation_capabilities": {
+    "strict_contract_loader_and_target_free_plan": true,
+    "two_reduced_isolated_producer_replays": true,
+    "two_reduced_isolated_model_free_verifier_replays": true,
+    "preopened_descriptor_only_verifier": true,
+    "streamed_prediction_freeze_reconstruction": true,
+    "HMAC_inventory_file_identity_and_delivery_nonce_verification": true,
+    "independent_generated_target_delivery_and_scoring": true,
+    "byte_exact_producer_verifier_aggregate_match": true,
+    "sidecar_plan_and_reduced_qualification_CLI": true,
+    "full_scale_FS3_runner_activated": false,
+    "official_qualification_activated": false
+  },
+  "verifier_capability_zeros": {
+    "model_fits": 0,
+    "transform_fits": 0,
+    "model_inference_runs": 0,
+    "threshold_or_calibration_selection_operations": 0,
+    "prediction_sets_created": 0,
+    "prediction_rows_created": 0,
+    "parameter_updates": 0,
+    "language_model_operations": 0,
+    "network_operations": 0,
+    "subprocess_operations": 0,
+    "row_level_public_outputs": 0
+  },
+  "reduced_generated_qualification": {
+    "participants_per_cohort": 3,
+    "isolated_model_replays": 2,
+    "isolated_verifier_replays": 2,
+    "distinct_producer_and_verifier_PIDs": true,
+    "canonical_producer_surfaces_equivalent": true,
+    "verifier_aggregate_scores_equivalent": true,
+    "canonical_replay_sha256": "30605898b78215c41e04da1ad395415e7ad8f63f723fe4926a7c3730e3b37fdf",
+    "verifier_aggregate_sha256": "1ce0278a9c2a21fa66c0f14f0fc35e345c6022b98e2f0a17f4162dc5aa637be4",
+    "prediction_rows_per_replay": 13056,
+    "prediction_sets_per_replay": 204,
+    "refusal_observations": 140,
+    "producer_target_deliveries": 4,
+    "verifier_target_deliveries": 4,
+    "producer_scores": 4,
+    "verifier_scores": 4,
+    "post_target_updates": 0,
+    "runtime_seconds": 72.67009999998845,
+    "peak_process_tree_RSS_bytes": 239075328,
+    "mandatory_process_monitor_samples": 770,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "real_or_private_reads": 0,
+    "human_or_device_operations": 0,
+    "official_qualification_invocations": 0,
+    "retained_generated_payload_bytes": 0,
+    "end_to_end_device_latency_measured": false,
+    "scientific_claim_established": false
+  },
+  "non_consuming_development_refusal": {
+    "occurred_before_successful_qualification": true,
+    "family": "sandbox_denied_mandatory_ps_process_monitor",
+    "durable_FS3_receipt_created": false,
+    "full_scale_run_identity_consumed": false,
+    "numerical_work_completed_before_refusal": false,
+    "scientific_value": "none"
+  },
+  "verification": {
+    "focused_tests_passed": 15,
+    "focused_tests_failed": 0,
+    "ruff_passed": true,
+    "JSON_validation_passed": true,
+    "git_diff_check_passed": true,
+    "complete_unit_suite_pending_remote_CI": true
+  },
+  "authority": {
+    "implementation_commit_remotely_green_now": false,
+    "implementation_proof_closeout_green_now": false,
+    "full_scale_FS3_execution_authorized_now": false,
+    "official_qualification_authorized_now": false,
+    "real_or_private_data_authorized": false,
+    "human_or_device_operation_authorized": false,
+    "network_operation_authorized": false,
+    "release_authorized": false,
+    "scientific_claim_upgrade_authorized": false
+  },
+  "active_Tier_C_gate": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "changed": false,
+    "all_authority_flags_false": true
+  },
+  "claim_boundary": {
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_performance_established": false,
+    "clinical_value_established": false
+  }
+}

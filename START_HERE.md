@@ -20,6 +20,15 @@
 > own green barriers. This is generated engineering only; no scientific claim
 > or Tier C authority changed.
 
+> COMM-P0-G FS3 implementation update, 2026-08-28: the additive descriptor-
+> only verifier and reduced coordinator passed two isolated three-person-per-
+> cohort producer/verifier pairs. Each producer emitted 13,056 streamed rows /
+> 204 sets; both canonical producer surfaces and verifier aggregate hashes
+> matched. The run exercised 140 refusals in 72.67009999998845 seconds at
+> 239,075,328-byte peak RSS with 770 monitor samples, zero network, and zero
+> retained payload. The implementation is pending its exact commit, full CI,
+> and proof-only closeout. No full FS3 or official run is authorized yet.
+
 > COMM-P0-G coordinator correction, 2026-08-28: post-proof audit found that
 > the V1 full-scale rehearsal used one combined target envelope and one score,
 > while the frozen contract requires separate discovery and independent-

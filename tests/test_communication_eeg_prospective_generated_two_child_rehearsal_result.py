@@ -110,4 +110,10 @@ def test_current_frontier_routes_to_consumed_fs2_runtime_result() -> None:
     assert result["closeout_on_GitHub_main"] is True
     assert result["retry_rerun_resume_repair_or_substitution_allowed"] is False
     assert communication["generated_qualification_next"] is False
-    assert communication["generated_runtime_successor_design_next"] is True
+    assert communication["generated_runtime_successor_design_next"] is False
+    assert communication["generated_runtime_successor_registration_proof_next"] is True
+    successor = communication["generated_qualification_registration"][
+        "single_execution_dual_verification_rehearsal"
+    ]
+    assert successor["gate_id"] == "COMM-P0-G-FS3-v0"
+    assert successor["implementation"]["full_scale_FS3_runs"] == 0

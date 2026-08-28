@@ -64,14 +64,21 @@ cap, 512 MiB RSS, 513 MiB incremental disk, zero network, and zero retained
 payload.
 
 `COMM-P0-G-FS3-v0` is a separately named generated-only Tier B rehearsal. Its
-registration authorizes no implementation or execution now. Only after its
-exact registration is committed, pushed, passes both jobs, and reaches GitHub
-`main` may an additive implementation begin with reduced or mocked fictional
-fixtures. That implementation must prove two isolated at-most-three-person-per-
-cohort model replays and 140 refusal observations before a separate green
-implementation barrier. A later sole FS3 attempt may run one exact full
-producer followed by one independent zero-model verifier under the unchanged
-resource envelope. It may not access the official activation or marker.
+registration is exact-green at `d42650897317b0dc353d3607a25e71f2e0d4e7c9`,
+CI `33176097877`, Base `98864980999`, and Optional Neuro Readers `98864981336`,
+and is on GitHub `main`. The generated implementation now completed two
+isolated three-person-per-cohort producer replays and two independent zero-model
+verifiers: 13,056 prediction rows / 204 sets per replay, 140 refusal
+observations, 72.67009999998845 seconds, 239,075,328-byte peak RSS, 770 monitor
+samples, zero network, and zero retained payload. Both producer surfaces and
+verifier aggregates matched. Read the implementation document and registry.
+
+The implementation commit and proof are not yet remotely green. Do not execute
+the full FS3 rehearsal until that exact implementation and a separate proof-
+only closeout pass both jobs and reach GitHub `main`. A later sole FS3 attempt
+may run one exact full producer followed by one independent zero-model verifier
+under the unchanged resource envelope. It may not access the official
+activation or marker.
 
 The prior FS2 measurement remains binding. Read
 `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_RESULT.md`

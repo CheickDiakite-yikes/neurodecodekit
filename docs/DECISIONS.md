@@ -14555,3 +14555,13 @@ green; only then may the single generated qualification run.
   model, or update capability. Keep FS2 consumed, official activation closed,
   and every real/private, network, human/device, release, Tier C, and scientific
   authority false.
+- 2026-08-28: Implement FS3 additively as a descriptor-only verifier/scorer and
+  reduced qualification coordinator. Reuse the frozen producer, bounded
+  prediction stream, HMAC freeze, score-only worker, no-follow descriptors,
+  and process-tree monitor. Give the verifier no model, fit, transform,
+  inference, threshold, calibration, prediction-creation, parameter-update,
+  language-model, network, subprocess, or row-level-output capability. Accept
+  the measured reduced qualification of two three-person-per-cohort producer/
+  verifier pairs, 140 refusals, 72.67009999998845 seconds, 239,075,328-byte
+  peak RSS, and zero retained payload as engineering evidence only. Require an
+  exact green implementation and separate proof closeout before full FS3.

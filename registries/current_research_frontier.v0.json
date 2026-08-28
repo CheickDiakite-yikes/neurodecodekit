@@ -527,7 +527,27 @@
             "execution_authorized_now": false,
             "official_qualification_execution_authorized_now": false,
             "real_or_private_operations": 0,
-            "scientific_value": "none_registration_only"
+            "scientific_value": "none_registration_only",
+            "implementation": {
+              "document": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_SINGLE_EXECUTION_DUAL_VERIFICATION_IMPLEMENTATION.md",
+              "registry": "registries/communication_eeg_prospective_generated_single_execution_dual_verification_implementation.v0.json",
+              "status": "generated_implementation_and_reduced_qualification_pending_exact_commit_push_remote_green",
+              "isolated_model_replays": 2,
+              "isolated_verifier_replays": 2,
+              "participants_per_cohort": 3,
+              "prediction_rows_per_replay": 13056,
+              "prediction_sets_per_replay": 204,
+              "refusal_observations": 140,
+              "runtime_seconds": 72.67009999998845,
+              "peak_process_tree_RSS_bytes": 239075328,
+              "mandatory_process_monitor_samples": 770,
+              "network_bytes": 0,
+              "retained_generated_payload_bytes": 0,
+              "full_scale_FS3_runs": 0,
+              "official_qualification_invocations": 0,
+              "real_or_private_operations": 0,
+              "scientific_value": "none_generated_implementation_qualification_only"
+            }
           }
         },
         "generated_qualification_next": false,

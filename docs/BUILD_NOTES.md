@@ -16419,3 +16419,14 @@ and require both remote jobs green before the one official qualification.
   rerun. Registration creates no executor, generated run, official activation,
   real/private access, network operation, device operation, release, or
   scientific claim.
+- 2026-08-28: Added the FS3 descriptor-only verifier worker, reduced producer/
+  verifier coordinator, and sidecar CLI. A sandboxed launch first refused
+  before numerical work because mandatory `ps` monitoring was unavailable; no
+  durable receipt or full run was created. The bounded generated qualification
+  then passed two isolated producer/verifier pairs at three participants per
+  cohort: 13,056 rows / 204 sets per replay, 140 refusal observations,
+  matching canonical producer surfaces and verifier aggregates, 72.6701
+  seconds, 239,075,328-byte peak RSS, 770 monitor samples, zero network, and
+  zero retained payload. Focused implementation/contract tests pass 15/15 and
+  Ruff is clean. Full FS3, official, real/private, device, release, and claim
+  operations remain zero pending exact remote implementation proof.

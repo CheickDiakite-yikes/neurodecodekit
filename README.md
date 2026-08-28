@@ -50,6 +50,15 @@ contract preserves the original model and protocol plus the same one-thread,
 retained-payload limits. Its implementation and one-shot rehearsal remain
 closed until their own ordered green barriers.
 
+The generated implementation has now passed its reduced local qualification:
+two isolated three-person-per-cohort producers and two separate zero-model
+verifiers processed 13,056 prediction rows / 204 sets per replay, exercised
+140 refusal observations, and produced matching canonical producer and
+verifier aggregates in 72.6701 seconds at 239,075,328-byte peak RSS. It
+collected 770 process-monitor samples, made zero network requests, and retained
+zero generated payload bytes. This implementation milestone remains pending
+its exact commit, full CI, and proof-only closeout; no full FS3 rehearsal ran.
+
 This design is grounded in a measured negative engineering result. The sole
 `COMM-P0-G-FS2-R0` attempt completed one of
 two required full fictional replay children, then parked at
