@@ -1,0 +1,104 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_prospective_generated_two_child_rehearsal_preflight_boundary_decision",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-28",
+  "gate_id": "COMM-P0-G-FS2-v0",
+  "run_id": "COMM-P0-G-FS2-R0",
+  "status": "preflight_refusal_recorded_attempt_unconsumed_corrected_launch_pending_green_decision",
+  "bound_green_head": "c9fb2a657e890debb39351f805d435ffaf00a3e6",
+  "bound_green_CI": {
+    "run_id": 33169226797,
+    "base_job_id": 98841994134,
+    "optional_neuro_readers_job_id": 98841994387,
+    "conclusion": "success",
+    "present_on_GitHub_main": true
+  },
+  "bound_artifacts": [
+    {
+      "path": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_FULL_SCALE_REHEARSAL_PREREGISTRATION.md",
+      "bytes": 6547,
+      "sha256": "dde604fedae2efab13bbf0b19fa2c7781b1d0aed61ae405bfa1d5656ec2996aa"
+    },
+    {
+      "path": "registries/communication_eeg_prospective_generated_two_child_full_scale_rehearsal_contract.v0.json",
+      "bytes": 7934,
+      "sha256": "ce533db97ace7b1d8c1423f48227119699f66e454252b78b9acd80b65a8f0a7a"
+    },
+    {
+      "path": "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_TWO_CHILD_REHEARSAL_IMPLEMENTATION.md",
+      "bytes": 4934,
+      "sha256": "b4aeced46c694f20f24a5dcec5a468543b7af6887040280b0c13600d0fc8dce0"
+    },
+    {
+      "path": "registries/communication_eeg_prospective_generated_two_child_rehearsal_implementation_proof.v0.json",
+      "bytes": 2271,
+      "sha256": "fff838564cba65bd4aa256f8d4ba48720c08cb1eea06ddbbd0ccfb241005f5cd"
+    },
+    {
+      "path": "tests/test_comm_p0_generated_two_child_rehearsal.py",
+      "bytes": 18117,
+      "sha256": "8bfb4038d1049952303db1206d687b8bd6b5085f9f3935e83def54e47c7422df"
+    }
+  ],
+  "observed_preflight_event": {
+    "command_entered_registered_executor": true,
+    "result_path": "outputs/comm-p0-fs2/result.json",
+    "receipt_path": "outputs/comm-p0-fs2/receipt.json",
+    "shared_parent_directory_existed": false,
+    "refusal_id": "COMM-P0-G:FS2-publication_collision_partial_write_or_cleanup_escape",
+    "refusal_phase": "before_measured_start_and_durable_receipt",
+    "CLI_launch_preflight_invocations": 1,
+    "launch_preflight_refusals": 1
+  },
+  "observed_zero_surfaces": {
+    "durable_rehearsal_receipts": 0,
+    "public_FS2_results": 0,
+    "temporary_roots": 0,
+    "disk_reservations": 0,
+    "child_processes": 0,
+    "full_scale_generated_replays": 0,
+    "model_fits": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "prediction_rows": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "network_operations": 0,
+    "real_or_private_operations": 0,
+    "official_marker_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "boundary_ruling": {
+    "durable_receipt_is_consumption_boundary": true,
+    "observed_preflight_refusal_consumed_registered_attempt": false,
+    "observed_preflight_refusal_is_FS2_PASS_or_FS2_PARK": false,
+    "corrected_launch_preflight_invocations_remaining_after_green": 1,
+    "failure_timeout_refusal_or_park_after_receipt_consumes": true,
+    "rerun_after_receipt_allowed": false,
+    "second_corrected_pre_receipt_launch_allowed": false,
+    "implementation_change_authorized": false
+  },
+  "corrected_launch_preconditions": {
+    "this_decision_commit_push_both_CI_jobs_green_and_on_main": true,
+    "create_only_empty_Git_ignored_destination_directory": true,
+    "exact_result_and_receipt_paths_absent": true,
+    "implementation_proof_schedule_caps_and_output_names_unchanged": true,
+    "network_real_private_official_device_release_and_claim_authority": false
+  },
+  "active_Tier_C_gate": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "changed": false,
+    "all_authority_flags_false": true
+  },
+  "claim_boundary": {
+    "generated_full_scale_rehearsal_established": false,
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_or_clinical_value_established": false
+  }
+}
