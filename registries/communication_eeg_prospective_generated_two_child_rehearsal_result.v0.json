@@ -1,0 +1,109 @@
+{
+  "schema_name": "neurodecodekit.communication_eeg_prospective_generated_two_child_rehearsal_closeout",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-28",
+  "gate_id": "COMM-P0-G-FS2-v0",
+  "run_id": "COMM-P0-G-FS2-R0",
+  "status": "consumed_FS2_PARK_resource_or_monitor_failure_no_rerun",
+  "route": "FS2_PARK",
+  "failure_family": "FS2-resource_or_monitor_failure",
+  "attempt_consumed": true,
+  "corrected_launch_boundary": {
+    "decision_head": "70d39eae70574bdf7aa5948a466c7da90e83abc2",
+    "CI_run_id": 33170541219,
+    "base_job_id": 98846327698,
+    "optional_neuro_readers_job_id": 98846327517,
+    "present_on_GitHub_main_before_consuming_run": true
+  },
+  "evidence_identities": {
+    "contract_sha256": "ce533db97ace7b1d8c1423f48227119699f66e454252b78b9acd80b65a8f0a7a",
+    "implementation_proof_sha256": "3ca7ad91893716b751abc60a2e828132d2c8682a4f5491e4bca2e46172ef8919",
+    "public_result_bytes": 2286,
+    "public_result_sha256": "17dcb54837eff1932bec474051ee1981f8e139146f35f4c5f6a0e0ef2f8de881",
+    "rehearsal_receipt_bytes": 531,
+    "rehearsal_receipt_sha256": "0e76a4ce898e93b85bdf2602876b6539909acc354c0ac5296d654751f823792e",
+    "result_bound_receipt_matches": true,
+    "started_at_unix_ns": 1787920282746778000
+  },
+  "completion": {
+    "expected_replay_children": 2,
+    "completed_replay_children": 1,
+    "canonical_replay_equivalent": null,
+    "canonical_replay_sha256": null,
+    "distinct_replay_worker_PIDs": null,
+    "observed_generated_counters": null
+  },
+  "resource_measurement": {
+    "runtime_seconds": 180.05074683297426,
+    "runtime_cap_seconds": 180,
+    "runtime_overage_seconds": 0.05074683297426,
+    "peak_process_tree_RSS_bytes": 305119232,
+    "peak_process_tree_RSS_cap_bytes": 536870912,
+    "mandatory_process_monitor_samples": 1510,
+    "observed_free_disk_bytes_before_reservation": 37863190528,
+    "observed_free_disk_bytes_after_reservation": 37325271040,
+    "reservation_delta_bytes": 537919488,
+    "free_bytes_required_before_reservation": 22012755968,
+    "free_bytes_required_after_reservation": 21474836480,
+    "retained_generated_payload_bytes": 0,
+    "public_result_byte_cap": 1048576
+  },
+  "gate_results": {
+    "runtime_at_or_below_cap": false,
+    "two_children_completed": false,
+    "canonical_equivalence_available": false,
+    "RSS_within_cap": true,
+    "monitor_samples_nonzero": true,
+    "free_space_preflight_passed": true,
+    "free_space_after_reservation_passed": true,
+    "reservation_delta_exact": true,
+    "temporary_cleanup_passed": true,
+    "public_output_within_cap": true
+  },
+  "measured_zero_counters": {
+    "network_bytes": 0,
+    "provider_or_network_operations": 0,
+    "official_qualification_invocations": 0,
+    "official_activation_reads": 0,
+    "official_marker_operations": 0,
+    "real_or_private_path_operations": 0,
+    "real_signal_reads": 0,
+    "real_target_or_label_reads": 0,
+    "real_data_training_or_inference_runs": 0,
+    "human_operations": 0,
+    "device_stream_microphone_operations": 0,
+    "release_operations": 0,
+    "post_target_updates": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "unavailable_or_unmeasured": [
+    "canonical_replay_equivalence",
+    "canonical_replay_sha256",
+    "distinct_replay_worker_PIDs",
+    "observed_generated_counters",
+    "end_to_end_device_latency"
+  ],
+  "warnings": [
+    "fictional generated records only",
+    "this was not the official generated qualification",
+    "generated runtime is not end-to-end device latency",
+    "not scientific evidence"
+  ],
+  "retry_rerun_resume_repair_or_substitution_allowed": false,
+  "active_Tier_C_gate": {
+    "gate_id": "DREYER-C5R-1-HL",
+    "changed": false,
+    "all_authority_flags_false": true
+  },
+  "claim_boundary": {
+    "two_full_fictional_replays_within_resource_envelope_established": false,
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "communication_decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_or_clinical_value_established": false
+  }
+}
