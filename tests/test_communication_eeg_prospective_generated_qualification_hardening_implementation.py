@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import subprocess
 import unittest
 from pathlib import Path
 
@@ -21,6 +22,7 @@ REHEARSAL_REGISTRY = (
     / "registries"
     / "communication_eeg_prospective_generated_full_scale_rehearsal_result.v0.json"
 )
+IMPLEMENTATION_COMMIT = "55e627d6504f32d51ea4d6e93e04901f7233411c"
 
 
 class CommunicationEEGProspectiveGeneratedQualificationHardeningTests(unittest.TestCase):
@@ -31,7 +33,10 @@ class CommunicationEEGProspectiveGeneratedQualificationHardeningTests(unittest.T
 
     def test_artifact_hashes_are_exact(self) -> None:
         for artifact in self.record["artifacts"]:
-            payload = (ROOT / artifact["path"]).read_bytes()
+            payload = subprocess.check_output(
+                ["git", "show", f"{IMPLEMENTATION_COMMIT}:{artifact['path']}"],
+                cwd=ROOT,
+            )
             self.assertEqual(hashlib.sha256(payload).hexdigest(), artifact["sha256"])
 
     def test_measurement_is_bounded_generated_and_replayed(self) -> None:

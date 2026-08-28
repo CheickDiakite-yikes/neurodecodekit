@@ -14477,3 +14477,28 @@ green; only then may the single generated qualification run.
   group is continuously monitored, and a durable consumed marker exists. This
   decision changes no Tier C, real/private, human/device, release, or claim
   authority.
+- 2026-08-28: Treat the V1 nonofficial full-scale rehearsal as immutable
+  historical engineering evidence, not as proof of the official cohort target
+  transaction. Post-proof audit found one combined target delivery and score
+  where the frozen contract requires separate discovery and independent-
+  replication delivery and scoring. Implement an additive generated-only
+  successor that requires two target envelopes, two deliveries, and two scores
+  per replay; completes the activation-locked two-replay coordinator; preserves
+  durable marker-before-work and no-replace publication; and removes only
+  target-free serialization and item-lookup overhead. Keep the compile-time
+  activation lock false. Require exact remote green proof and bounded evidence
+  that both replays fit the frozen 180-second total cap before any separate
+  activation or one-shot invocation. Change no real/private, human/device,
+  release, Tier C, or scientific authority.
+- 2026-08-28: Expand the successor after independent read-only review found
+  additional activation blockers. Require each complete replay to run in a
+  distinct sanitized child process; restrict activation to the exact ordered
+  public implementation allowlist and Amendment 2 hash; persist, read back, and
+  HMAC-verify the score freeze before calling the target supplier; validate
+  every model, shortcut, process, memory, input, output, and disk counter; route
+  the CLI to the current consumed-marker coordinator; and stage final output
+  before atomic no-replace publication. One reduced two-child generated
+  measurement passed in 44.6720 seconds at 236,437,504-byte peak RSS with zero
+  network, real/private, device, or retained-payload operations. This does not
+  prove the two-by-21 180-second gate, activate the one-shot, or change any
+  scientific or Tier C authority.

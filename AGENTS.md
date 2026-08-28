@@ -45,6 +45,23 @@ scope expansion, or use short form when multiple packets or ambiguity exist.
 
 ## Immediate next task
 
+The immediate reversible frontier is the generated-only `COMM-P0-G` official
+coordinator successor. Read
+`docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_OFFICIAL_COORDINATOR_IMPLEMENTATION.md`
+and
+`registries/communication_eeg_prospective_generated_official_coordinator_implementation.v0.json`.
+Post-proof audit found that V1's nonofficial rehearsal used one combined target
+envelope and one score, while the frozen contract requires separate discovery
+and independent-replication delivery and scoring. The successor enforces two
+deliveries and two scores per replay, uses distinct sanitized replay children,
+verifies the score freeze before target delivery, binds exact schedule/resource
+ledgers, and publishes atomically behind an unchanged false compile-time lock.
+A reduced two-child measurement passed in 44.6720 seconds at 236,437,504-byte
+peak RSS. It must become exactly green and demonstrate a credible two-by-21
+path under the frozen 180-second total cap before a separate activation. Do not
+run the official qualification, create a consumed marker outside tests, or
+reinterpret generated work as science.
+
 The parallel Tier A route from controlled communication evidence through
 independent replication and causal live operation is frozen in
 `docs/COMMUNICATION_EEG_SCIENTIFIC_CLAIM_PROGRAM.md` and

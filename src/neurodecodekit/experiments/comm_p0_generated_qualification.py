@@ -36,12 +36,55 @@ from neurodecodekit.experiments import comm_p0_generated_shortcut_fixtures as sh
 
 SCHEMA_VERSION = "0.1.0"
 RESULT_SCHEMA = "neurodecodekit.comm_p0_generated_qualification_hardening_development"
+OFFICIAL_RESULT_SCHEMA = "neurodecodekit.comm_p0_generated_qualification_result"
 FREEZE_SCHEMA = "neurodecodekit.comm_p0_generated_hmac_prediction_freeze"
 ACTIVATION_SCHEMA = (
     "neurodecodekit.communication_eeg_prospective_generated_qualification_activation"
 )
 AMENDMENT_PATH = Path(
     "registries/communication_eeg_prospective_generated_qualification_amendment_2.v0.json"
+)
+OFFICIAL_IMPLEMENTATION_PATHS = (
+    "src/neurodecodekit/experiments/comm_p0_generated.py",
+    "src/neurodecodekit/experiments/comm_p0_generated_domain_refusals.py",
+    "src/neurodecodekit/experiments/comm_p0_generated_model_worker.py",
+    "src/neurodecodekit/experiments/comm_p0_generated_numerical.py",
+    "src/neurodecodekit/experiments/comm_p0_generated_qualification.py",
+    "src/neurodecodekit/experiments/comm_p0_generated_replay_worker.py",
+    "src/neurodecodekit/experiments/comm_p0_generated_score_only.py",
+    "src/neurodecodekit/experiments/comm_p0_generated_score_worker.py",
+    "src/neurodecodekit/experiments/comm_p0_generated_shortcut_fixtures.py",
+    "src/neurodecodekit/experiments/comm_p0_generated_streaming_score.py",
+    "src/neurodecodekit/comm_p0_runner_cli.py",
+)
+ACTIVATION_KEYS = frozenset(
+    {
+        "schema_name",
+        "schema_version",
+        "gate_id",
+        "contract_sha256",
+        "amendment_2_sha256",
+        "generated_qualification_execution_authorized",
+        "implementation_commit_remotely_green",
+        "implementation_base_python_job_green",
+        "implementation_optional_neuro_readers_job_green",
+        "activation_commit_remotely_green",
+        "activation_base_python_job_green",
+        "activation_optional_neuro_readers_job_green",
+        "single_official_invocation",
+        "network_during_invocation_allowed_false",
+        "implementation_commit",
+        "activation_commit",
+        "implementation_CI_run_id",
+        "implementation_base_python_job_id",
+        "implementation_optional_neuro_readers_job_id",
+        "activation_CI_run_id",
+        "activation_base_python_job_id",
+        "activation_optional_neuro_readers_job_id",
+        "implementation_artifacts",
+        "implementation_artifact_set_sha256",
+        "activation_proof_sha256",
+    }
 )
 OFFICIAL_IMPLEMENTATION_ACTIVATED = False
 PREDICTION_KEYS = frozenset(
@@ -467,6 +510,103 @@ def create_no_replace_file(path: str | Path, payload: bytes, *, byte_cap: int) -
     return identity
 
 
+def publish_atomic_no_replace(
+    path: str | Path, payload: bytes, *, byte_cap: int
+) -> FileIdentity:
+    """Stage a complete file, then atomically link it into an absent final name."""
+
+    destination = Path(path)
+    if len(payload) > byte_cap:
+        _refuse("public_output_cap_breach")
+    try:
+        directory_fd = _open_directory_no_follow(destination.parent)
+    except OSError as exc:
+        raise core.CommP0GeneratedRefusal(
+            "filesystem_capability_publication_or_cleanup_escape"
+        ) from exc
+    temporary_name = f".{destination.name}.{secrets.token_hex(16)}.tmp"
+    descriptor = -1
+    temporary_exists = False
+    try:
+        descriptor = os.open(
+            temporary_name,
+            os.O_WRONLY | os.O_CREAT | os.O_EXCL | getattr(os, "O_NOFOLLOW", 0),
+            0o600,
+            dir_fd=directory_fd,
+        )
+        temporary_exists = True
+        _write_all(descriptor, payload)
+        os.fsync(descriptor)
+        info = os.fstat(descriptor)
+        if not stat.S_ISREG(info.st_mode) or info.st_nlink != 1 or info.st_size != len(payload):
+            raise OSError("invalid staged result")
+        os.close(descriptor)
+        descriptor = -1
+        os.link(
+            temporary_name,
+            destination.name,
+            src_dir_fd=directory_fd,
+            dst_dir_fd=directory_fd,
+            follow_symlinks=False,
+        )
+        os.unlink(temporary_name, dir_fd=directory_fd)
+        temporary_exists = False
+        os.fsync(directory_fd)
+    except FileExistsError as exc:
+        raise core.CommP0GeneratedRefusal(
+            "post_score_mutation_repeat_or_output_replacement"
+        ) from exc
+    except OSError as exc:
+        raise core.CommP0GeneratedRefusal(
+            "filesystem_capability_publication_or_cleanup_escape"
+        ) from exc
+    finally:
+        if descriptor >= 0:
+            os.close(descriptor)
+        if temporary_exists:
+            try:
+                os.unlink(temporary_name, dir_fd=directory_fd)
+                os.fsync(directory_fd)
+            except OSError:
+                pass
+        os.close(directory_fd)
+    identity, observed = read_no_follow(destination, byte_cap=byte_cap)
+    if observed != payload:
+        _refuse("prediction_row_or_probability_tamper_after_freeze")
+    return identity
+
+
+def _temporary_tree_bytes(root: Path) -> int:
+    """Measure one invocation tree without following links or accepting hard links."""
+
+    total = 0
+    pending = [root]
+    while pending:
+        directory = pending.pop()
+        try:
+            entries = list(os.scandir(directory))
+        except OSError as exc:
+            raise core.CommP0GeneratedRefusal(
+                "filesystem_capability_publication_or_cleanup_escape"
+            ) from exc
+        for entry in entries:
+            try:
+                info = entry.stat(follow_symlinks=False)
+            except OSError as exc:
+                raise core.CommP0GeneratedRefusal(
+                    "filesystem_capability_publication_or_cleanup_escape"
+                ) from exc
+            if stat.S_ISLNK(info.st_mode):
+                _refuse("filesystem_capability_publication_or_cleanup_escape")
+            if stat.S_ISDIR(info.st_mode):
+                pending.append(Path(entry.path))
+            elif stat.S_ISREG(info.st_mode) and info.st_nlink == 1:
+                total += int(info.st_size)
+            else:
+                _refuse("filesystem_capability_publication_or_cleanup_escape")
+    return total
+
+
 def read_no_follow(path: str | Path, *, byte_cap: int) -> tuple[FileIdentity, bytes]:
     """Read one regular, one-link file through a no-follow descriptor."""
 
@@ -639,7 +779,8 @@ def validate_activation_binding(
         "network_during_invocation_allowed_false",
     )
     if (
-        activation.get("schema_name") != ACTIVATION_SCHEMA
+        set(activation) != ACTIVATION_KEYS
+        or activation.get("schema_name") != ACTIVATION_SCHEMA
         or activation.get("schema_version") != SCHEMA_VERSION
         or activation.get("gate_id") != core.GATE_ID
         or activation.get("contract_sha256") != core.CONTRACT_SHA256
@@ -654,6 +795,8 @@ def validate_activation_binding(
             or any(character not in "0123456789abcdef" for character in value)
         ):
             _refuse("protocol_model_threshold_vocabulary_prior_or_code_hash_drift")
+    if activation["implementation_commit"] == activation["activation_commit"]:
+        _refuse("protocol_model_threshold_vocabulary_prior_or_code_hash_drift")
     for key in (
         "implementation_CI_run_id",
         "implementation_base_python_job_id",
@@ -666,17 +809,26 @@ def validate_activation_binding(
         if isinstance(value, bool) or not isinstance(value, int) or value <= 0:
             _refuse("protocol_model_threshold_vocabulary_prior_or_code_hash_drift")
 
+    amendment = _file_artifact(repository, str(AMENDMENT_PATH))
+    if activation.get("amendment_2_sha256") != amendment["sha256"]:
+        _refuse("protocol_model_threshold_vocabulary_prior_or_code_hash_drift")
+
     table = activation.get("implementation_artifacts")
-    if not isinstance(table, list) or not table:
+    if not isinstance(table, list) or len(table) != len(OFFICIAL_IMPLEMENTATION_PATHS):
         _refuse("protocol_model_threshold_vocabulary_prior_or_code_hash_drift")
     observed = []
     seen: set[str] = set()
-    for entry in table:
+    for expected_path, entry in zip(OFFICIAL_IMPLEMENTATION_PATHS, table, strict=True):
         if not isinstance(entry, Mapping) or set(entry) != {"path", "bytes", "sha256"}:
             _refuse("protocol_model_threshold_vocabulary_prior_or_code_hash_drift")
         relative = str(entry["path"])
         candidate = Path(relative)
-        if candidate.is_absolute() or ".." in candidate.parts or relative in seen:
+        if (
+            relative != expected_path
+            or candidate.is_absolute()
+            or ".." in candidate.parts
+            or relative in seen
+        ):
             _refuse("filesystem_capability_publication_or_cleanup_escape")
         seen.add(relative)
         current = _file_artifact(repository, relative)
@@ -792,6 +944,7 @@ def run_monitored_command(
     deadline_monotonic: float,
     rss_cap_bytes: int,
     monitor: Callable[[int], int] = _process_tree_rss_bytes,
+    monitor_root_pid: int | None = None,
 ) -> ProcessMeasurement:
     """Run one process group with mandatory 100 ms resource sampling."""
 
@@ -819,7 +972,7 @@ def run_monitored_command(
                 _terminate_process_group(process)
                 _refuse("temporary_output_cap_breach", "absolute_deadline")
             try:
-                peak = max(peak, int(monitor(process.pid)))
+                peak = max(peak, int(monitor(monitor_root_pid or process.pid)))
             except core.CommP0GeneratedRefusal:
                 _terminate_process_group(process)
                 raise
@@ -838,6 +991,8 @@ def run_monitored_command(
                 "post_score_mutation_repeat_or_output_replacement",
                 f"child_exit_{process.returncode}",
             )
+        if samples == 0:
+            _refuse("total_permission_or_free_space_floor_breach", "monitor_samples")
     finally:
         if process.poll() is None:
             _terminate_process_group(process)
@@ -902,21 +1057,36 @@ def _ndjson(records: Sequence[Mapping[str, Any]]) -> bytes:
     return b"".join(core.canonical_json_bytes(dict(record)) for record in records)
 
 
+def _write_cohort_inputs(
+    directory: Path,
+    *,
+    cohort: str,
+    features: Sequence[Mapping[str, Any]],
+    contract: Mapping[str, Any],
+    byte_cap: int,
+) -> tuple[Path, Path]:
+    feature_path = directory / f"{cohort}.features.ndjson"
+    contract_path = directory / f"{cohort}.contract.json"
+    create_no_replace_file(feature_path, _ndjson(features), byte_cap=byte_cap)
+    create_no_replace_file(
+        contract_path,
+        core.canonical_json_bytes(dict(contract)).rstrip(b"\n"),
+        byte_cap=byte_cap,
+    )
+    return feature_path, contract_path
+
+
 def _write_fold_inputs(
     directory: Path,
     *,
     cohort: str,
     held_out: str,
-    features: Sequence[Mapping[str, Any]],
     source_labels: Mapping[str, int],
     participant_by_item: Mapping[str, str],
-    contract: Mapping[str, Any],
     byte_cap: int,
-) -> tuple[Path, Path, Path, Path]:
+) -> tuple[Path, Path]:
     prefix = f"{cohort}-{held_out}"
-    feature_path = directory / f"{prefix}.features.ndjson"
     label_path = directory / f"{prefix}.labels.ndjson"
-    contract_path = directory / f"{prefix}.contract.json"
     output_path = directory / f"{prefix}.predictions.ndjson"
     labels = [
         {
@@ -926,14 +1096,8 @@ def _write_fold_inputs(
         }
         for item_id in sorted(source_labels)
     ]
-    create_no_replace_file(feature_path, _ndjson(features), byte_cap=byte_cap)
     create_no_replace_file(label_path, _ndjson(labels), byte_cap=byte_cap)
-    create_no_replace_file(
-        contract_path,
-        core.canonical_json_bytes(dict(contract)).rstrip(b"\n"),
-        byte_cap=byte_cap,
-    )
-    return feature_path, label_path, contract_path, output_path
+    return label_path, output_path
 
 
 def _execute_model_fold(
@@ -1388,7 +1552,8 @@ def _score_child_transaction(
     live_records: Sequence[Mapping[str, Any]],
     prediction_path: Path,
     prediction_identity: FileIdentity,
-    delivered_targets: Mapping[str, int],
+    delivered_targets: Mapping[str, Any] | None = None,
+    deliver_targets: Callable[[], Mapping[str, Any]] | None = None,
     freeze_key: bytes,
     absolute_deadline: float,
     rss_cap_bytes: int,
@@ -1398,7 +1563,11 @@ def _score_child_transaction(
 ) -> tuple[dict[str, Any], ProcessMeasurement]:
     """Run the one score in a process that has no model or fitting imports."""
 
+    if (delivered_targets is None) == (deliver_targets is None):
+        _refuse("pre_freeze_target_delivery")
+
     scorer_contract = json.loads(json.dumps(contract))
+    scorer_contract["cohort_target_envelopes_required"] = True
     participant_count = len(
         {
             str(row["participant_id"])
@@ -1444,8 +1613,11 @@ def _score_child_transaction(
         "prediction_freeze_green": True,
         "replication_artifact_freeze_green": True,
         "one_shot": True,
-        "target_delivery_count": 1,
+        "target_delivery_count": 2,
         "prior_score_count": 0,
+        "target_delivery_nonce_sha256": hashlib.sha256(
+            secrets.token_bytes(32)
+        ).hexdigest(),
     }
     attestation = score_worker.build_freeze_attestation(
         contract=scorer_contract,
@@ -1459,11 +1631,36 @@ def _score_child_transaction(
         score_only.canonical_json_bytes(attestation),
         byte_cap=input_byte_cap,
     )
+    _, frozen_payload = read_no_follow(attestation_path, byte_cap=input_byte_cap)
+    try:
+        frozen_attestation = json.loads(frozen_payload)
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        raise core.CommP0GeneratedRefusal(
+            "prediction_freeze_attestation_mismatch"
+        ) from exc
+    if frozen_attestation != attestation:
+        _refuse("prediction_freeze_attestation_mismatch")
+    score_worker._verify_attestation(
+        frozen_attestation,
+        hmac_key=freeze_key,
+        identities=identities,
+        contract=scorer_contract,
+        expected_freeze=prediction_freeze,
+    )
     # The sealed target surface does not exist until every target-free input and
-    # the exact score-child attestation have been frozen.
+    # the exact score-child attestation have been durably frozen and read back.
+    if deliver_targets is not None:
+        delivered_targets = deliver_targets()
+    if not isinstance(delivered_targets, Mapping):
+        _refuse("target_delivery_mismatch")
     create_no_replace_file(
         target_path,
-        score_only.canonical_json_bytes(dict(delivered_targets)),
+        score_only.canonical_json_bytes(
+            {
+                cohort: dict(delivered_targets[cohort])
+                for cohort in core.COHORTS
+            }
+        ),
         byte_cap=input_byte_cap,
     )
     create_no_replace_file(key_path, freeze_key, byte_cap=64)
@@ -1532,8 +1729,8 @@ def _score_child_transaction(
     if (
         not isinstance(aggregate, Mapping)
         or aggregate.get("schema_name") != score_worker.OUTPUT_SCHEMA
-        or aggregate.get("target_delivery_count") != 1
-        or aggregate.get("score_count") != 1
+        or aggregate.get("target_delivery_count") != 2
+        or aggregate.get("score_count") != 2
         or aggregate.get("post_target_updates") != 0
     ):
         _refuse("post_score_mutation_repeat_or_output_replacement")
@@ -1545,8 +1742,8 @@ def _targets_for_active_rows(
     rows: Sequence[core.TrialPlan],
     vault: core.GeneratedTargetVault,
     opaque_key: bytes,
-) -> dict[str, int]:
-    result: dict[str, int] = {}
+) -> dict[str, dict[str, int]]:
+    result: dict[str, dict[str, int]] = {cohort: {} for cohort in core.COHORTS}
     for cohort in core.COHORTS:
         delivered = vault.deliver_for_score(
             cohort,
@@ -1561,8 +1758,106 @@ def _targets_for_active_rows(
                     target = int(row.cue_code)
                 else:
                     _refuse("scorer_prediction_target_row_mismatch")
-                result[_opaque_item_id(opaque_key, row.item_id)] = target
+                result[cohort][_opaque_item_id(opaque_key, row.item_id)] = target
     return result
+
+
+def _expected_model_ledger(participants_per_cohort: int) -> dict[str, int]:
+    participant_folds = participants_per_cohort * len(core.COHORTS)
+    return {
+        "prior_fits": participant_folds,
+        "residualizer_fits": participant_folds * 2,
+        "classifier_fits": participant_folds * 15,
+        "temperature_calibration_fits": participant_folds * 15,
+        "model_inference_runs": participant_folds * 17,
+        "prediction_sets": participant_folds * len(core.ENDPOINTS) * 17,
+        "prediction_rows": participant_folds * 128 * 17,
+        "target_deliveries": 0,
+        "scores": 0,
+        "post_target_updates": 0,
+    }
+
+
+def _expected_shortcut_counters() -> dict[str, int]:
+    return {
+        "prior_fits": 42,
+        "residualizer_fits": 84,
+        "classifier_fits": 630,
+        "temperature_calibration_fits": 630,
+        "model_inference_runs": 714,
+        "prediction_sets": 1428,
+        "prediction_rows": 91392,
+        "target_deliveries": 14,
+        "scores": 14,
+        "post_target_updates": 0,
+    }
+
+
+def _execute_replay_child(
+    *,
+    repository: Path,
+    replay_root: Path,
+    participants_per_cohort: int,
+    absolute_deadline: float,
+    vault_key: bytes,
+    opaque_key: bytes,
+    freeze_key: bytes,
+    invocation_nonce: str,
+    rss_cap_bytes: int,
+    monitor: Callable[[int], int] = _process_tree_rss_bytes,
+) -> dict[str, Any]:
+    control_path = replay_root / "replay-control.json"
+    output_path = replay_root / "replay-result.json"
+    control = {
+        "repository": str(repository),
+        "temporary_root": str(replay_root),
+        "participants_per_cohort": participants_per_cohort,
+        "absolute_deadline": absolute_deadline,
+        "vault_key_hex": vault_key.hex(),
+        "opaque_key_hex": opaque_key.hex(),
+        "freeze_key_hex": freeze_key.hex(),
+        "invocation_nonce": invocation_nonce,
+    }
+    create_no_replace_file(control_path, core.canonical_json_bytes(control), byte_cap=16_384)
+    create_no_replace_file(output_path, b"", byte_cap=1)
+    control_fd = os.open(control_path, os.O_RDONLY | getattr(os, "O_NOFOLLOW", 0))
+    output_fd = os.open(output_path, os.O_WRONLY | getattr(os, "O_NOFOLLOW", 0))
+    try:
+        measurement = run_monitored_command(
+            (
+                sys.executable,
+                "-m",
+                "neurodecodekit.experiments.comm_p0_generated_replay_worker",
+                "--control-fd",
+                str(control_fd),
+                "--output-fd",
+                str(output_fd),
+            ),
+            pass_fds=(control_fd, output_fd),
+            environment=_sanitized_child_environment(replay_root, repository),
+            cwd=repository,
+            deadline_monotonic=absolute_deadline,
+            rss_cap_bytes=rss_cap_bytes,
+            monitor=monitor,
+            monitor_root_pid=os.getpid(),
+        )
+    finally:
+        os.close(control_fd)
+        os.close(output_fd)
+    _, payload = read_no_follow(output_path, byte_cap=1_048_576)
+    try:
+        result = json.loads(payload)
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        raise core.CommP0GeneratedRefusal(
+            "protocol_model_threshold_vocabulary_prior_or_code_hash_drift"
+        ) from exc
+    if not isinstance(result, Mapping):
+        _refuse("protocol_model_threshold_vocabulary_prior_or_code_hash_drift")
+    core.assert_target_free(result)
+    value = dict(result)
+    value["outer_process_tree_RSS_bytes"] = measurement.peak_process_tree_RSS_bytes
+    value["outer_monitor_samples"] = measurement.monitor_samples
+    return value
 
 
 def _run_replay(
@@ -1622,11 +1917,27 @@ def _run_replay(
     }
     peak_rss = 0
     monitor_samples = 0
+    generated_input_bytes_written = 0
+    private_output_bytes_written = 0
+    temporary_disk_peak_bytes = 0
+
+    def observe_temporary_tree() -> None:
+        nonlocal temporary_disk_peak_bytes
+        current = _temporary_tree_bytes(temporary_root)
+        temporary_disk_peak_bytes = max(temporary_disk_peak_bytes, current)
+        if current > int(caps["temporary_disk_bytes"]):
+            _refuse("temporary_output_cap_breach")
+
     try:
         for cohort in core.COHORTS:
             cohort_rows = by_cohort[cohort]
             cohort_features = feature_by_cohort[cohort]
             participants = sorted({row.participant_id for row in cohort_rows})
+            source_owner_by_item = {
+                row.item_id: row.participant_id
+                for row in cohort_rows
+                if row.endpoint in core.ENDPOINTS
+            }
             free_choice_ids = [
                 row.item_id for row in cohort_rows if row.endpoint == "free_choice_intend"
             ]
@@ -1639,35 +1950,48 @@ def _run_replay(
                     and row.cue_code in range(len(core.COMMANDS))
                 }
             )
+            feature_path, contract_path = _write_cohort_inputs(
+                temporary_root,
+                cohort=cohort,
+                features=cohort_features,
+                contract=contract,
+                byte_cap=int(caps["generated_input_bytes"]),
+            )
+            generated_input_bytes_written += feature_path.stat().st_size
+            generated_input_bytes_written += contract_path.stat().st_size
+            observe_temporary_tree()
             for held_out in participants:
                 source_labels = {
                     _opaque_item_id(opaque_key, item_id): value
                     for item_id, value in all_source.items()
-                    if next(row for row in cohort_rows if row.item_id == item_id).participant_id
-                    != held_out
+                    if source_owner_by_item[item_id] != held_out
                 }
-                paths = _write_fold_inputs(
+                label_path, output_path = _write_fold_inputs(
                     temporary_root,
                     cohort=cohort,
                     held_out=held_out,
-                    features=cohort_features,
                     source_labels=source_labels,
                     participant_by_item=participant_by_item,
-                    contract=contract,
                     byte_cap=int(caps["generated_input_bytes"]),
                 )
+                generated_input_bytes_written += label_path.stat().st_size
+                if generated_input_bytes_written > int(caps["generated_input_bytes"]):
+                    _refuse("private_derivative_cap_breach")
                 measurement = execute_fold(
                     repository=repository,
                     temporary_root=temporary_root,
-                    feature_path=paths[0],
-                    label_path=paths[1],
-                    contract_path=paths[2],
-                    output_path=paths[3],
+                    feature_path=feature_path,
+                    label_path=label_path,
+                    contract_path=contract_path,
+                    output_path=output_path,
                     held_out=held_out,
                     byte_cap=int(caps["private_generated_output_bytes"]),
                     deadline_monotonic=absolute_deadline,
                     rss_cap_bytes=int(caps["peak_process_tree_RSS_bytes"]),
                 )
+                private_output_bytes_written += output_path.stat().st_size
+                if private_output_bytes_written > int(caps["private_generated_output_bytes"]):
+                    _refuse("private_derivative_cap_breach")
                 peak_rss = max(peak_rss, measurement.peak_process_tree_RSS_bytes)
                 monitor_samples += measurement.monitor_samples
                 held_items = [
@@ -1676,7 +2000,7 @@ def _run_replay(
                     if row["participant_id"] == held_out
                 ]
                 fold_ledger = assembler.append_fold(
-                    paths[3],
+                    output_path,
                     expected_cohort=cohort,
                     expected_participant=held_out,
                     expected_items=held_items,
@@ -1684,12 +2008,21 @@ def _run_replay(
                 )
                 for key in ledger:
                     ledger[key] += fold_ledger[key]
-                for path in paths:
+                observe_temporary_tree()
+                for path in (label_path, output_path):
                     _unlink_invocation_file(path, invocation_root=temporary_root)
+            for path in (feature_path, contract_path):
+                _unlink_invocation_file(path, invocation_root=temporary_root)
         prediction_identity, inventory = assembler.finalize()
+        private_output_bytes_written += prediction_identity.size_bytes
+        if private_output_bytes_written > int(caps["private_generated_output_bytes"]):
+            _refuse("private_derivative_cap_breach")
+        observe_temporary_tree()
     except BaseException:
         assembler.close()
         raise
+    if ledger != _expected_model_ledger(participants_per_cohort):
+        _refuse("protocol_model_threshold_vocabulary_prior_or_code_hash_drift")
     expected_rows = participants_per_cohort * len(core.COHORTS) * 128 * len(contract["conditions"])
     expected_sets = (
         participants_per_cohort
@@ -1762,7 +2095,6 @@ def _run_replay(
         "private_prediction_stream_sha256": prediction_identity.sha256,
         "contains_individual_prediction_probability_target_or_participant_outcome": False,
     }
-    targets = _targets_for_active_rows(rows, vault, opaque_key)
     score, score_measurement = _score_child_transaction(
         repository=repository,
         temporary_root=temporary_root,
@@ -1772,7 +2104,7 @@ def _run_replay(
         live_records=live_records,
         prediction_path=prediction_path,
         prediction_identity=prediction_identity,
-        delivered_targets=targets,
+        deliver_targets=lambda: _targets_for_active_rows(rows, vault, opaque_key),
         freeze_key=freeze_key,
         absolute_deadline=absolute_deadline,
         rss_cap_bytes=int(caps["peak_process_tree_RSS_bytes"]),
@@ -1785,6 +2117,10 @@ def _run_replay(
     )
     peak_rss = max(peak_rss, score_measurement.peak_process_tree_RSS_bytes)
     monitor_samples += score_measurement.monitor_samples
+    private_output_bytes_written += len(core.canonical_json_bytes(score))
+    if private_output_bytes_written > int(caps["private_generated_output_bytes"]):
+        _refuse("private_derivative_cap_breach")
+    observe_temporary_tree()
     refusals = domain_refusals.exercise_domain_refusals(contract)
     domain_refusals.validate_observations(refusals, contract)
     shortcut_matrix = shortcut_fixtures.run_shortcut_fixture_matrix(contract)
@@ -1792,7 +2128,7 @@ def _run_replay(
     if len(shortcuts) != 7 or any(
         row["neural_evidence_gate_pass"] != row["expected_neural_evidence_gate_pass"]
         for row in shortcuts
-    ):
+    ) or dict(shortcut_matrix.counters) != _expected_shortcut_counters():
         _refuse("required_control_condition_missing_duplicated_or_substituted")
     peak_rss = max(peak_rss, shortcut_matrix.peak_process_rss_bytes)
     surface = {
@@ -1819,7 +2155,8 @@ def _run_replay(
         "claim_boundary_sha256": core.sha256_json(contract["claim_boundary"]),
     }
     replay_sha256 = core.canonical_replay_digest(surface, contract)
-    private_bytes = sum(path.stat().st_size for path in temporary_root.iterdir() if path.is_file())
+    private_bytes = _temporary_tree_bytes(temporary_root)
+    observe_temporary_tree()
     return {
         "canonical_surface": surface,
         "canonical_replay_sha256": replay_sha256,
@@ -1832,10 +2169,13 @@ def _run_replay(
         "shortcut_fixture_executions": len(shortcuts),
         "shortcut_counters": dict(shortcut_matrix.counters),
         "refusal_observations": len(refusals),
-        "target_deliveries": 1,
-        "scores": 1,
+        "target_deliveries": int(score["target_delivery_count"]),
+        "scores": int(score["score_count"]),
         "post_target_updates": 0,
         "private_generated_output_bytes": private_bytes,
+        "generated_input_bytes_written": generated_input_bytes_written,
+        "private_output_bytes_written": private_output_bytes_written,
+        "temporary_disk_peak_bytes": temporary_disk_peak_bytes,
         "peak_process_tree_RSS_bytes": peak_rss,
         "monitor_samples": monitor_samples,
     }
@@ -1864,13 +2204,28 @@ def run_development_replay_pair(
     freeze_key = secrets.token_bytes(32)
     invocation_nonce = secrets.token_hex(32)
     replays = []
+    isolated_children = (
+        execute_fold is _execute_model_fold and score_monitor is _process_tree_rss_bytes
+    )
     with tempfile.TemporaryDirectory(prefix="comm-p0-g-grade-dev-") as parent:
         parent_path = Path(parent)
         for index in range(2):
             replay_root = parent_path / f"replay-{index + 1}"
             replay_root.mkdir(mode=0o700)
-            replays.append(
-                _run_replay(
+            if isolated_children:
+                replay = _execute_replay_child(
+                    repository=repository,
+                    replay_root=replay_root,
+                    participants_per_cohort=participants_per_cohort,
+                    absolute_deadline=absolute_deadline,
+                    vault_key=vault_key,
+                    opaque_key=opaque_key,
+                    freeze_key=freeze_key,
+                    invocation_nonce=invocation_nonce,
+                    rss_cap_bytes=int(contract["resource_caps"]["peak_process_tree_RSS_bytes"]),
+                )
+            else:
+                replay = _run_replay(
                     repository,
                     replay_root,
                     participants_per_cohort=participants_per_cohort,
@@ -1882,10 +2237,14 @@ def run_development_replay_pair(
                     execute_fold=execute_fold,
                     score_monitor=score_monitor,
                 )
-            )
+            replays.append(replay)
     first, second = replays
     if first["canonical_surface"] != second["canonical_surface"]:
         _refuse("nondeterministic_fixture_prediction_or_freeze_replay")
+    if isolated_children and first["isolated_replay_worker_pid"] == second[
+        "isolated_replay_worker_pid"
+    ]:
+        _refuse("protocol_model_threshold_vocabulary_prior_or_code_hash_drift")
     runtime = time.monotonic() - started
     result = {
         "schema_name": RESULT_SCHEMA,
@@ -1894,7 +2253,9 @@ def run_development_replay_pair(
         "mode": "development_reduced_generated_only",
         "official_qualification": False,
         "participants_per_cohort": participants_per_cohort,
-        "isolated_child_process_replays": 2,
+        "isolated_child_process_replays": 2 if isolated_children else 0,
+        "distinct_replay_worker_pids": bool(isolated_children),
+        "isolated_replay_workdirs": 2,
         "canonical_replay_sha256": first["canonical_replay_sha256"],
         "replay_equivalent": True,
         "prediction_rows_per_replay": first["prediction_inventory"]["rows"],
@@ -1915,12 +2276,30 @@ def run_development_replay_pair(
         "post_target_updates": 0,
         "runtime_seconds": runtime,
         "peak_process_tree_RSS_bytes": max(
-            first["peak_process_tree_RSS_bytes"], second["peak_process_tree_RSS_bytes"]
+            first["peak_process_tree_RSS_bytes"],
+            second["peak_process_tree_RSS_bytes"],
+            first.get("outer_process_tree_RSS_bytes", 0),
+            second.get("outer_process_tree_RSS_bytes", 0),
         ),
-        "mandatory_process_monitor_samples": first["monitor_samples"] + second["monitor_samples"],
+        "mandatory_process_monitor_samples": first["monitor_samples"]
+        + second["monitor_samples"]
+        + first.get("outer_monitor_samples", 0)
+        + second.get("outer_monitor_samples", 0),
         "private_generated_output_bytes": max(
             first["private_generated_output_bytes"],
             second["private_generated_output_bytes"],
+        ),
+        "generated_input_bytes_written_maximum_replay": max(
+            first["generated_input_bytes_written"],
+            second["generated_input_bytes_written"],
+        ),
+        "private_output_bytes_written_maximum_replay": max(
+            first["private_output_bytes_written"],
+            second["private_output_bytes_written"],
+        ),
+        "temporary_disk_peak_bytes_maximum_replay": max(
+            first["temporary_disk_peak_bytes"],
+            second["temporary_disk_peak_bytes"],
         ),
         "retained_generated_payload_bytes_after_proof": 0,
         "network_requests": 0,
@@ -1936,6 +2315,8 @@ def run_development_replay_pair(
             "not scientific evidence",
         ],
         "remaining_activation_blockers": [
+            "exact implementation commit and both required CI jobs green",
+            "bounded two-by-21 replay evidence inside the frozen 180-second total cap",
             "separate exact-green activation before one official generated qualification",
         ],
     }
@@ -2028,22 +2409,200 @@ def run_official_qualification(
     *,
     consumed_marker: str | Path,
     root: str | Path | None = None,
+    execute_replay: Callable[..., dict[str, Any]] = _execute_replay_child,
 ) -> dict[str, Any]:
-    """Remain locked until a future exact implementation and activation are green."""
+    """Run the single consumed two-replay qualification after exact activation."""
 
-    del output
+    started = time.monotonic()
     activation = load_and_validate_activation(root)
     if not OFFICIAL_IMPLEMENTATION_ACTIVATED:
         _refuse(
             "score_before_exact_green_freeze",
             "official generated qualification remains inactive",
         )
+    repository = _repo_root(root)
+    contract = core.load_contract(repository)
+    caps = contract["resource_caps"]
+    absolute_deadline = started + float(caps["wall_time_seconds"])
+    invocation_nonce = secrets.token_hex(32)
     create_consumed_marker(
         consumed_marker,
-        invocation_nonce=secrets.token_hex(32),
+        invocation_nonce=invocation_nonce,
         activation_sha256=core.sha256_json(activation),
     )
-    _refuse(
-        "protocol_model_threshold_vocabulary_prior_or_code_hash_drift",
-        "future activation must bind the full-scale official executor after marker creation",
+    vault_key = secrets.token_bytes(32)
+    opaque_key = secrets.token_bytes(32)
+    freeze_key = secrets.token_bytes(32)
+    replays: list[dict[str, Any]] = []
+    aggregate_disk_peak_bytes = 0
+    with tempfile.TemporaryDirectory(prefix="comm-p0-g-official-") as temporary:
+        parent = Path(temporary)
+        for index in range(2):
+            replay_root = parent / f"replay-{index + 1}"
+            replay_root.mkdir(mode=0o700)
+            replays.append(
+                execute_replay(
+                    repository=repository,
+                    replay_root=replay_root,
+                    participants_per_cohort=21,
+                    absolute_deadline=absolute_deadline,
+                    vault_key=vault_key,
+                    opaque_key=opaque_key,
+                    freeze_key=freeze_key,
+                    invocation_nonce=invocation_nonce,
+                    rss_cap_bytes=int(caps["peak_process_tree_RSS_bytes"]),
+                )
+            )
+            current_bytes = _temporary_tree_bytes(parent)
+            aggregate_disk_peak_bytes = max(aggregate_disk_peak_bytes, current_bytes)
+            if (
+                current_bytes > int(caps["temporary_disk_bytes"])
+                or current_bytes > int(caps["aggregate_incremental_disk_bytes"])
+            ):
+                _refuse("temporary_output_cap_breach")
+    first, second = replays
+    if first["canonical_surface"] != second["canonical_surface"]:
+        _refuse("nondeterministic_fixture_prediction_or_freeze_replay")
+    if (
+        first.get("isolated_replay_worker_pid") == second.get("isolated_replay_worker_pid")
+        or any(
+            isinstance(replay.get("isolated_replay_worker_pid"), bool)
+            or not isinstance(replay.get("isolated_replay_worker_pid"), int)
+            or int(replay["isolated_replay_worker_pid"]) <= 0
+            for replay in replays
+        )
+    ):
+        _refuse("protocol_model_threshold_vocabulary_prior_or_code_hash_drift")
+    schedule = contract["numerical_schedule_per_replay"]
+    for replay in replays:
+        if (
+            replay.get("ledger") != _expected_model_ledger(21)
+            or replay["prediction_inventory"]["rows"] != int(schedule["prediction_rows"])
+            or replay["prediction_inventory"]["sets"] != int(schedule["prediction_sets"])
+            or replay["maximum_prediction_rows_buffered"] > int(
+                schedule["maximum_prediction_rows_buffered"]
+            )
+            or replay["complete_prediction_records_materialized"] is not False
+            or replay["shortcut_fixture_executions"] != int(
+                schedule["shortcut_fixture_executions"]
+            )
+            or replay.get("shortcut_counters") != _expected_shortcut_counters()
+            or replay["refusal_observations"] != 70
+            or replay["target_deliveries"] != 2
+            or replay["scores"] != 2
+            or replay["post_target_updates"] != 0
+            or replay["private_generated_output_bytes"]
+            > int(caps["private_generated_output_bytes"])
+            or replay.get("generated_input_bytes_written", 0)
+            > int(caps["generated_input_bytes"])
+            or replay.get("private_output_bytes_written", 0)
+            > int(caps["private_generated_output_bytes"])
+            or replay.get("temporary_disk_peak_bytes", 0)
+            > int(caps["temporary_disk_bytes"])
+            or replay["peak_process_tree_RSS_bytes"]
+            > int(caps["peak_process_tree_RSS_bytes"])
+            or replay.get("outer_process_tree_RSS_bytes", 0)
+            > int(caps["peak_process_tree_RSS_bytes"])
+            or replay.get("outer_monitor_samples", 0) <= 0
+        ):
+            _refuse("protocol_model_threshold_vocabulary_prior_or_code_hash_drift")
+    runtime = time.monotonic() - started
+    if runtime > float(caps["wall_time_seconds"]):
+        _refuse("temporary_output_cap_breach", "absolute_deadline")
+    result = {
+        "schema_name": OFFICIAL_RESULT_SCHEMA,
+        "schema_version": SCHEMA_VERSION,
+        "gate_id": core.GATE_ID,
+        "run_id": "COMM-P0-G-R1",
+        "status": "passed",
+        "official_qualification": True,
+        "consumed": True,
+        "fictional_generated_only": True,
+        "participants_per_cohort": 21,
+        "cohorts": 2,
+        "isolated_child_process_replays": 2,
+        "distinct_replay_worker_pids": True,
+        "canonical_replay_sha256": first["canonical_replay_sha256"],
+        "replay_equivalent": True,
+        "prediction_rows_per_replay": first["prediction_inventory"]["rows"],
+        "prediction_sets_per_replay": first["prediction_inventory"]["sets"],
+        "maximum_prediction_rows_buffered": max(
+            first["maximum_prediction_rows_buffered"],
+            second["maximum_prediction_rows_buffered"],
+        ),
+        "complete_prediction_records_materialized": False,
+        "numerical_shortcut_fixture_executions_per_replay": first[
+            "shortcut_fixture_executions"
+        ],
+        "refusal_observations": first["refusal_observations"]
+        + second["refusal_observations"],
+        "cohort_target_deliveries": first["target_deliveries"]
+        + second["target_deliveries"],
+        "cohort_scores": first["scores"] + second["scores"],
+        "shortcut_target_deliveries": first["shortcut_counters"]["target_deliveries"]
+        + second["shortcut_counters"]["target_deliveries"],
+        "shortcut_scores": first["shortcut_counters"]["scores"]
+        + second["shortcut_counters"]["scores"],
+        "total_target_deliveries": first["target_deliveries"]
+        + second["target_deliveries"]
+        + first["shortcut_counters"]["target_deliveries"]
+        + second["shortcut_counters"]["target_deliveries"],
+        "total_scores": first["scores"]
+        + second["scores"]
+        + first["shortcut_counters"]["scores"]
+        + second["shortcut_counters"]["scores"],
+        "post_target_updates": 0,
+        "runtime_seconds": runtime,
+        "peak_process_tree_RSS_bytes": max(
+            first["peak_process_tree_RSS_bytes"],
+            second["peak_process_tree_RSS_bytes"],
+            first["outer_process_tree_RSS_bytes"],
+            second["outer_process_tree_RSS_bytes"],
+        ),
+        "mandatory_process_monitor_samples": first["monitor_samples"]
+        + second["monitor_samples"]
+        + first["outer_monitor_samples"]
+        + second["outer_monitor_samples"],
+        "private_generated_output_bytes_maximum_replay": max(
+            first["private_generated_output_bytes"],
+            second["private_generated_output_bytes"],
+        ),
+        "generated_input_bytes_written_maximum_replay": max(
+            first["generated_input_bytes_written"],
+            second["generated_input_bytes_written"],
+        ),
+        "private_output_bytes_written_maximum_replay": max(
+            first["private_output_bytes_written"],
+            second["private_output_bytes_written"],
+        ),
+        "temporary_disk_peak_bytes_maximum_replay": max(
+            first["temporary_disk_peak_bytes"],
+            second["temporary_disk_peak_bytes"],
+        ),
+        "aggregate_disk_peak_bytes": aggregate_disk_peak_bytes,
+        "aggregate_score": first["score"],
+        "shortcut_routes": first["shortcut_fixtures"],
+        "retained_generated_payload_bytes_after_publication": 0,
+        "network_requests": 0,
+        "network_bytes": 0,
+        "real_or_private_reads": 0,
+        "human_or_device_operations": 0,
+        "end_to_end_latency_measured": False,
+        "scientific_claim_established": False,
+        "claim_boundary": contract["claim_boundary"],
+        "warnings": [
+            "fictional generated records only",
+            "generated timing is not end-to-end device latency",
+            "not real EEG or scientific evidence",
+        ],
+    }
+    core.assert_target_free(result)
+    payload = core.canonical_json_bytes(result)
+    if len(payload) > int(caps["public_aggregate_output_bytes"]):
+        _refuse("public_output_cap_breach")
+    publish_atomic_no_replace(
+        output,
+        payload,
+        byte_cap=int(caps["public_aggregate_output_bytes"]),
     )
+    return result

@@ -7,6 +7,21 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
+> COMM-P0-G coordinator correction, 2026-08-28: post-proof audit found that
+> the V1 full-scale rehearsal used one combined target envelope and one score,
+> while the frozen contract requires separate discovery and independent-
+> replication delivery and scoring. The generated-only successor now enforces
+> two target deliveries and two scores per replay and implements the complete
+> activation-locked coordinator through two distinct sanitized replay children.
+> Its score freeze is durable and verified before target delivery; every model,
+> shortcut, process, memory, input, output, and disk ledger is checked; and
+> publication is atomic and non-replacing. One reduced two-child measurement
+> passed in 44.6720 seconds at 236,437,504-byte peak RSS with zero network,
+> real-data, device, or retained-payload operations. The compile-time lock is
+> still false. This exact successor needs remote green proof, and the optimized
+> route still needs evidence that two full 21-person-per-cohort replays fit the
+> 180-second cap before separate activation. No official run or claim occurred.
+
 > COMM-LIVE-G0 closeout, 2026-08-27: exact implementation
 > `bc9bb109c9c82b56afe06d983d82b5b8ece669cf` passed Base `98694674092`,
 > Optional Neuro Readers `98694674289`, and CI `33123115516`, and is present on

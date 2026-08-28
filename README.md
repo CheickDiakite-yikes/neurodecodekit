@@ -30,6 +30,20 @@ irreversible Tier C events.
 
 ## Current Research Frontier
 
+The latest generated-only `COMM-P0-G` successor closes a post-proof contract
+gap before activation. The official coordinator now runs two distinct
+sanitized replay children and requires separate discovery and replication
+target envelopes, for two deliveries and two scores per replay. The durable
+score freeze is verified before the target supplier runs; exact model,
+shortcut, process, memory, input, output, and disk ledgers are acceptance
+gates; and final publication is atomic and non-replacing. A reduced two-child
+replay passed in 44.6720 seconds at 236,437,504-byte peak RSS with zero network,
+real-data, device, or retained-payload operations. The compile-time lock
+remains closed. The prior single full-scale rehearsal took 101.5826 seconds,
+so the two-by-21 route still needs bounded proof that it fits the frozen
+180-second total cap before activation. See the
+[official coordinator implementation](docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_OFFICIAL_COORDINATOR_IMPLEMENTATION.md).
+
 The first preregistered BNCI held-out experiment produced a useful negative
 result. Selected EEG reached 38.35% participant-macro balanced accuracy versus
 25% no-signal and 29.67% timing, so the pipeline recovered task-related
@@ -305,11 +319,14 @@ temporary bytes, zero network or real-data operations, and zero retained
 payload. Exact V1 implementation `55e627d` passed Base Python and Optional
 Neuro Readers in CI `33153174019` and reached GitHub `main`; its
 [proof closeout](docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_QUALIFICATION_HARDENING_PROOF_CLOSEOUT.md)
-binds the exact 13,830-byte evidence triplet. This is generated engineering
-evidence only. The official two-replay
-qualification remains inactive pending a separate exact-green activation, and
-no communication-decoding or EEG-specific scientific claim follows from the
-fictional rehearsal.
+binds the exact 13,830-byte evidence triplet. Audit then found that rehearsal
+used one combined target envelope and one score while the frozen contract
+requires one delivery and score per cohort. The successor preserves the
+historical measurement, enforces two cohort envelopes and two scores per
+replay, and implements the previously stubbed two-replay official coordinator.
+It is still generated engineering only. Exact remote proof, two-replay runtime
+evidence, and a separate activation remain required; no communication-decoding
+or EEG-specific scientific claim follows from any fictional rehearsal.
 
 The new
 [objective evidence ledger](docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md)

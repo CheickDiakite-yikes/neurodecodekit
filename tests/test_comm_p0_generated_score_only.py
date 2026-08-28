@@ -283,6 +283,51 @@ class CommP0GeneratedScoreOnlyTests(unittest.TestCase):
         self.assertEqual(result["score_count"], 1)
         self.assertEqual(result["post_target_updates"], 0)
 
+    def test_official_mode_requires_two_named_cohort_target_envelopes(self) -> None:
+        contract = copy.deepcopy(self.contract)
+        contract["cohort_target_envelopes_required"] = True
+        authorization = dict(self.authorization)
+        authorization["target_delivery_count"] = 2
+        targets = {
+            cohort: {
+                item_id: value
+                for item_id, value in self.targets.items()
+                if next(
+                    row for row in self.trials if row["item_id"] == item_id
+                )["cohort_id"]
+                == cohort
+            }
+            for cohort in score_only.COHORTS
+        }
+        result = score_only.ScoreOnlyWorker(contract).score(
+            trial_records=self.trials,
+            prediction_records=self.predictions,
+            live_observation_records=self.observations,
+            freeze_attestation=score_only.build_prediction_freeze_attestation(
+                self.predictions, contract
+            ),
+            authorization=authorization,
+            delivered_targets=targets,
+        )
+        self.assertEqual(result["target_delivery_count"], 2)
+        self.assertEqual(result["score_count"], 2)
+
+        malformed = dict(targets)
+        malformed.pop("independent_replication")
+        with self.assertRaisesRegex(
+            score_only.ScoreOnlyRefusal, "scorer_prediction_target_row_mismatch"
+        ):
+            score_only.ScoreOnlyWorker(contract).score(
+                trial_records=self.trials,
+                prediction_records=self.predictions,
+                live_observation_records=self.observations,
+                freeze_attestation=score_only.build_prediction_freeze_attestation(
+                    self.predictions, contract
+                ),
+                authorization=authorization,
+                delivered_targets=malformed,
+            )
+
     def test_prompted_endpoint_cannot_rescue_failed_free_choice_live(self) -> None:
         weakened = copy.deepcopy(self.observations)
         for row in weakened:

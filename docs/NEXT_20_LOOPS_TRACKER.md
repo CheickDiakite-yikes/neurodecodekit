@@ -1,5 +1,21 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
+> **COMM-P0-G contract-correction successor (2026-08-28):** post-proof audit
+> found that the V1 nonofficial full-scale rehearsal reported one combined
+> target delivery and one score, but the frozen two-cohort contract requires two
+> deliveries and two scores per replay. The activation-locked successor now
+> enforces exact discovery and independent-replication target envelopes,
+> coordinates two full replays in distinct sanitized child processes, verifies
+> a durable score freeze before target delivery, and refuses mismatch, child
+> failure, ledger drift, cap drift, or output replacement. It also reuses only
+> target-free cohort inputs and precomputes item ownership;
+> every fold still has isolated source labels, a fresh child, and unique
+> predictions. A reduced two-child measurement passed in 44.6720 seconds at
+> 236,437,504-byte peak RSS with zero network, real-data, device, or retained
+> payload. The lock remains false. Next gates are exact remote proof,
+> bounded evidence that two replays fit 180 seconds, separate activation, then
+> one official generated run. No real EEG or scientific claim changed.
+
 > **COMM-P0-G implementation update (2026-08-28):** exact numerical/scorer
 > `b7e4d83`, endpoint-separated live scorer `c46064d`, and standalone bounded
 > streaming scorer `7d625a9` are remotely green and on GitHub `main`. The V1
@@ -12,9 +28,10 @@
 > and 34,259,372 private temporary bytes, with zero network, real-data, device,
 > or retained-payload operations. Exact V1 `55e627d` passed Base Python and
 > Optional Neuro Readers in CI `33153174019`, reached GitHub `main`, and now has
-> a proof-only closeout binding its exact 13,830-byte evidence triplet. Only a
-> separate exact-green activation remains before the one official generated
-> qualification; no scientific claim or Tier C authority changed.
+> a proof-only closeout binding its exact 13,830-byte evidence triplet. Later
+> audit identified the cohort-delivery mismatch described above, so activation
+> is not the only remaining gate. No scientific claim or Tier C authority
+> changed.
 
 > **Prospective synchronized communication cohort (2026-08-27):** with every
 > registered public replication route currently unqualified, `COMM-P0-SYNC-v0`

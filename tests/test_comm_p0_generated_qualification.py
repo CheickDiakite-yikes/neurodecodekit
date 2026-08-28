@@ -21,13 +21,23 @@ HAS_CLASSICAL = (
 )
 
 
-def _activation(root: Path, artifact_path: str) -> dict[str, object]:
-    artifact = qualification._file_artifact(root, artifact_path)
+def _activation(root: Path) -> dict[str, object]:
+    for relative in (*qualification.OFFICIAL_IMPLEMENTATION_PATHS, str(qualification.AMENDMENT_PATH)):
+        path = root / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(f"fixture:{relative}\n", encoding="utf-8")
+    artifacts = [
+        qualification._file_artifact(root, relative)
+        for relative in qualification.OFFICIAL_IMPLEMENTATION_PATHS
+    ]
     value: dict[str, object] = {
         "schema_name": qualification.ACTIVATION_SCHEMA,
         "schema_version": qualification.SCHEMA_VERSION,
         "gate_id": core.GATE_ID,
         "contract_sha256": core.CONTRACT_SHA256,
+        "amendment_2_sha256": qualification._file_artifact(
+            root, str(qualification.AMENDMENT_PATH)
+        )["sha256"],
         "generated_qualification_execution_authorized": True,
         "implementation_commit_remotely_green": True,
         "implementation_base_python_job_green": True,
@@ -45,8 +55,8 @@ def _activation(root: Path, artifact_path: str) -> dict[str, object]:
         "activation_CI_run_id": 4,
         "activation_base_python_job_id": 5,
         "activation_optional_neuro_readers_job_id": 6,
-        "implementation_artifacts": [artifact],
-        "implementation_artifact_set_sha256": core.sha256_json([artifact]),
+        "implementation_artifacts": artifacts,
+        "implementation_artifact_set_sha256": core.sha256_json(artifacts),
     }
     value["activation_proof_sha256"] = core.sha256_json(value)
     return value
@@ -122,6 +132,40 @@ def _fake_fold_executor(**values: object) -> qualification.ProcessMeasurement:
     return qualification.ProcessMeasurement(0.01, 1024, 1)
 
 
+def _fake_official_replay(*, surface: str = "stable", worker_pid: int = 1001) -> dict[str, object]:
+    return {
+        "canonical_surface": {"surface": surface},
+        "canonical_replay_sha256": "a" * 64,
+        "prediction_inventory": {"rows": 91_392, "sets": 1_428},
+        "ledger": qualification._expected_model_ledger(21),
+        "maximum_prediction_rows_buffered": 1,
+        "complete_prediction_records_materialized": False,
+        "shortcut_fixture_executions": 7,
+        "shortcut_counters": qualification._expected_shortcut_counters(),
+        "refusal_observations": 70,
+        "target_deliveries": 2,
+        "scores": 2,
+        "post_target_updates": 0,
+        "private_generated_output_bytes": 1_024,
+        "generated_input_bytes_written": 1_024,
+        "private_output_bytes_written": 1_024,
+        "temporary_disk_peak_bytes": 1_024,
+        "peak_process_tree_RSS_bytes": 1_024,
+        "monitor_samples": 1,
+        "outer_process_tree_RSS_bytes": 1_024,
+        "outer_monitor_samples": 1,
+        "isolated_replay_worker_pid": worker_pid,
+        "score": {
+            "schema_name": "neurodecodekit.comm_p0_generated_score_worker_output",
+            "target_delivery_count": 2,
+            "score_count": 2,
+            "post_target_updates": 0,
+            "scientific_claim_established": False,
+        },
+        "shortcut_fixtures": list(qualification.shortcut_fixture_accounting()),
+    }
+
+
 class CommP0GeneratedQualificationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
@@ -141,10 +185,57 @@ class CommP0GeneratedQualificationTests(unittest.TestCase):
             self.assertFalse(marker.exists())
             self.assertFalse(qualification.OFFICIAL_IMPLEMENTATION_ACTIVATED)
 
-    def test_future_activated_entry_consumes_marker_before_any_work(self) -> None:
+    def test_future_activated_entry_runs_two_replays_after_marker_and_publishes_once(
+        self,
+    ) -> None:
         activation = {"activation": "generated-test-only"}
         with tempfile.TemporaryDirectory() as temporary:
+            output = Path(temporary) / "result.json"
             marker = Path(temporary) / "consumed.json"
+            replay_calls = []
+
+            def fake_replay(*args: object, **kwargs: object) -> dict[str, object]:
+                del args, kwargs
+                self.assertTrue(marker.is_file())
+                replay_calls.append(True)
+                return _fake_official_replay(worker_pid=1000 + len(replay_calls))
+
+            with (
+                mock.patch.object(qualification, "OFFICIAL_IMPLEMENTATION_ACTIVATED", True),
+                mock.patch.object(
+                    qualification,
+                    "load_and_validate_activation",
+                    return_value=activation,
+                ),
+            ):
+                result = qualification.run_official_qualification(
+                    output,
+                    consumed_marker=marker,
+                    root=ROOT,
+                    execute_replay=fake_replay,
+                )
+            self.assertEqual(len(replay_calls), 2)
+            self.assertTrue(marker.is_file())
+            record = json.loads(marker.read_bytes())
+            self.assertEqual(record["activation_sha256"], core.sha256_json(activation))
+            self.assertTrue(output.is_file())
+            self.assertEqual(result["isolated_child_process_replays"], 2)
+            self.assertEqual(result["cohort_target_deliveries"], 4)
+            self.assertEqual(result["cohort_scores"], 4)
+            self.assertTrue(result["replay_equivalent"])
+            core.assert_target_free(result)
+
+    def test_official_replay_mismatch_consumes_marker_without_publication(self) -> None:
+        activation = {"activation": "generated-test-only"}
+        with tempfile.TemporaryDirectory() as temporary:
+            output = Path(temporary) / "result.json"
+            marker = Path(temporary) / "consumed.json"
+            replays = iter(
+                [
+                    _fake_official_replay(surface="first", worker_pid=1001),
+                    _fake_official_replay(surface="second", worker_pid=1002),
+                ]
+            )
             with (
                 mock.patch.object(qualification, "OFFICIAL_IMPLEMENTATION_ACTIVATED", True),
                 mock.patch.object(
@@ -154,24 +245,162 @@ class CommP0GeneratedQualificationTests(unittest.TestCase):
                 ),
                 self.assertRaisesRegex(
                     core.CommP0GeneratedRefusal,
-                    "protocol_model_threshold_vocabulary_prior_or_code_hash_drift",
+                    "nondeterministic_fixture_prediction_or_freeze_replay",
                 ),
             ):
                 qualification.run_official_qualification(
-                    Path(temporary) / "result.json",
+                    output,
                     consumed_marker=marker,
                     root=ROOT,
+                    execute_replay=lambda *a, **k: next(replays),
                 )
             self.assertTrue(marker.is_file())
-            record = json.loads(marker.read_bytes())
-            self.assertEqual(record["activation_sha256"], core.sha256_json(activation))
+            self.assertFalse(output.exists())
+
+    def test_official_child_failure_consumes_marker_without_publication(self) -> None:
+        activation = {"activation": "generated-test-only"}
+        with tempfile.TemporaryDirectory() as temporary:
+            output = Path(temporary) / "result.json"
+            marker = Path(temporary) / "consumed.json"
+            with (
+                mock.patch.object(qualification, "OFFICIAL_IMPLEMENTATION_ACTIVATED", True),
+                mock.patch.object(
+                    qualification,
+                    "load_and_validate_activation",
+                    return_value=activation,
+                ),
+                self.assertRaisesRegex(RuntimeError, "child failed"),
+            ):
+                replays = iter(
+                    [_fake_official_replay(worker_pid=1001), RuntimeError("child failed")]
+                )
+
+                def execute_replay(*args: object, **kwargs: object) -> dict[str, object]:
+                    del args, kwargs
+                    value = next(replays)
+                    if isinstance(value, Exception):
+                        raise value
+                    return value
+
+                qualification.run_official_qualification(
+                    output,
+                    consumed_marker=marker,
+                    root=ROOT,
+                    execute_replay=execute_replay,
+                )
+            self.assertTrue(marker.is_file())
+            self.assertFalse(output.exists())
+
+    def test_official_cap_drift_and_existing_output_consume_without_overwrite(self) -> None:
+        activation = {"activation": "generated-test-only"}
+        for case in ("cap", "collision"):
+            with self.subTest(case=case), tempfile.TemporaryDirectory() as temporary:
+                output = Path(temporary) / "result.json"
+                marker = Path(temporary) / "consumed.json"
+                replays = [
+                    _fake_official_replay(worker_pid=1001),
+                    _fake_official_replay(worker_pid=1002),
+                ]
+                if case == "cap":
+                    replays[0]["private_generated_output_bytes"] = (
+                        self.contract["resource_caps"]["private_generated_output_bytes"] + 1
+                    )
+                else:
+                    output.write_text("protected", encoding="utf-8")
+                with (
+                    mock.patch.object(
+                        qualification, "OFFICIAL_IMPLEMENTATION_ACTIVATED", True
+                    ),
+                    mock.patch.object(
+                        qualification,
+                        "load_and_validate_activation",
+                        return_value=activation,
+                    ),
+                    self.assertRaises(core.CommP0GeneratedRefusal),
+                ):
+                    replay_iter = iter(replays)
+                    qualification.run_official_qualification(
+                        output,
+                        consumed_marker=marker,
+                        root=ROOT,
+                        execute_replay=lambda *a, **k: next(replay_iter),
+                    )
+                self.assertTrue(marker.is_file())
+                if case == "cap":
+                    self.assertFalse(output.exists())
+                else:
+                    self.assertEqual(output.read_text(encoding="utf-8"), "protected")
+
+    def test_official_exact_schedule_isolation_and_resource_drift_refuse(self) -> None:
+        activation = {"activation": "generated-test-only"}
+
+        def mutate(case: str, replays: list[dict[str, object]]) -> None:
+            if case == "model_ledger":
+                replays[0]["ledger"]["classifier_fits"] -= 1
+            elif case == "shortcut_ledger":
+                replays[0]["shortcut_counters"]["scores"] -= 1
+            elif case == "same_worker":
+                replays[1]["isolated_replay_worker_pid"] = replays[0][
+                    "isolated_replay_worker_pid"
+                ]
+            elif case == "zero_monitor":
+                replays[0]["outer_monitor_samples"] = 0
+            elif case == "generated_input":
+                replays[0]["generated_input_bytes_written"] = (
+                    self.contract["resource_caps"]["generated_input_bytes"] + 1
+                )
+            elif case == "private_output":
+                replays[0]["private_output_bytes_written"] = (
+                    self.contract["resource_caps"]["private_generated_output_bytes"] + 1
+                )
+            else:
+                replays[0]["temporary_disk_peak_bytes"] = (
+                    self.contract["resource_caps"]["temporary_disk_bytes"] + 1
+                )
+
+        cases = (
+            "model_ledger",
+            "shortcut_ledger",
+            "same_worker",
+            "zero_monitor",
+            "generated_input",
+            "private_output",
+            "temporary_disk",
+        )
+        for case in cases:
+            with self.subTest(case=case), tempfile.TemporaryDirectory() as temporary:
+                output = Path(temporary) / "result.json"
+                marker = Path(temporary) / "consumed.json"
+                replays = [
+                    _fake_official_replay(worker_pid=1001),
+                    _fake_official_replay(worker_pid=1002),
+                ]
+                mutate(case, replays)
+                replay_iter = iter(replays)
+                with (
+                    mock.patch.object(
+                        qualification, "OFFICIAL_IMPLEMENTATION_ACTIVATED", True
+                    ),
+                    mock.patch.object(
+                        qualification,
+                        "load_and_validate_activation",
+                        return_value=activation,
+                    ),
+                    self.assertRaises(core.CommP0GeneratedRefusal),
+                ):
+                    qualification.run_official_qualification(
+                        output,
+                        consumed_marker=marker,
+                        root=ROOT,
+                        execute_replay=lambda *a, **k: next(replay_iter),
+                    )
+                self.assertTrue(marker.is_file())
+                self.assertFalse(output.exists())
 
     def test_activation_binding_is_offline_exact_and_hash_bound(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            artifact_path = "implementation.py"
-            (root / artifact_path).write_text("value = 1\n", encoding="utf-8")
-            activation = _activation(root, artifact_path)
+            activation = _activation(root)
             self.assertEqual(
                 qualification.validate_activation_binding(activation, root=root),
                 activation,
@@ -186,6 +415,29 @@ class CommP0GeneratedQualificationTests(unittest.TestCase):
                 "protocol_model_threshold_vocabulary_prior_or_code_hash_drift",
             ):
                 qualification.validate_activation_binding(tampered, root=root)
+
+            for mutation in ("missing", "extra", "substituted"):
+                with self.subTest(mutation=mutation):
+                    changed = copy.deepcopy(activation)
+                    artifacts = changed["implementation_artifacts"]
+                    if mutation == "missing":
+                        artifacts.pop()
+                    elif mutation == "extra":
+                        artifacts.append(
+                            {"path": "ignored.bin", "bytes": 0, "sha256": "0" * 64}
+                        )
+                    else:
+                        artifacts[0]["path"] = "ignored.bin"
+                    changed["implementation_artifact_set_sha256"] = core.sha256_json(artifacts)
+                    changed["activation_proof_sha256"] = core.sha256_json(
+                        {
+                            key: value
+                            for key, value in changed.items()
+                            if key != "activation_proof_sha256"
+                        }
+                    )
+                    with self.assertRaises(core.CommP0GeneratedRefusal):
+                        qualification.validate_activation_binding(changed, root=root)
 
     def test_consumed_marker_is_durable_no_replace_and_symlink_safe(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
@@ -221,6 +473,147 @@ class CommP0GeneratedQualificationTests(unittest.TestCase):
                     activation_sha256="a" * 64,
                 )
             self.assertEqual(target.read_text(), "protected")
+
+    def test_atomic_publication_never_exposes_partial_or_replaces_existing(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            destination = root / "result.json"
+            payload = core.canonical_json_bytes({"status": "complete"})
+            original_write = qualification._write_all
+
+            def partial_then_fail(descriptor: int, value: bytes) -> None:
+                os.write(descriptor, value[:3])
+                raise OSError("injected short write")
+
+            with (
+                mock.patch.object(qualification, "_write_all", side_effect=partial_then_fail),
+                self.assertRaisesRegex(
+                    core.CommP0GeneratedRefusal,
+                    "filesystem_capability_publication_or_cleanup_escape",
+                ),
+            ):
+                qualification.publish_atomic_no_replace(
+                    destination, payload, byte_cap=4096
+                )
+            self.assertFalse(destination.exists())
+            self.assertEqual(list(root.iterdir()), [])
+
+            with mock.patch.object(qualification, "_write_all", side_effect=original_write):
+                qualification.publish_atomic_no_replace(destination, payload, byte_cap=4096)
+            self.assertEqual(destination.read_bytes(), payload)
+            with self.assertRaisesRegex(
+                core.CommP0GeneratedRefusal,
+                "post_score_mutation_repeat_or_output_replacement",
+            ):
+                qualification.publish_atomic_no_replace(
+                    destination,
+                    core.canonical_json_bytes({"status": "replacement"}),
+                    byte_cap=4096,
+                )
+            self.assertEqual(destination.read_bytes(), payload)
+
+    def test_score_freeze_is_durable_and_verified_before_target_supplier(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            prediction_path = root / "predictions.ndjson"
+            prediction_identity = qualification.create_no_replace_file(
+                prediction_path,
+                core.canonical_json_bytes(
+                    {
+                        "record_type": "prediction",
+                        "item_id": "opaque",
+                        "cohort_id": "discovery",
+                        "participant_id": "P-1",
+                        "endpoint": "free_choice_intend",
+                        "phase": "shadow",
+                        "condition": "equal_prior",
+                        "probabilities": [0.25, 0.25, 0.25, 0.25],
+                    }
+                ),
+                byte_cap=4096,
+            )
+            verified = []
+            original_verify = qualification.score_worker._verify_attestation
+
+            def tracked_verify(*args: object, **kwargs: object):
+                value = original_verify(*args, **kwargs)
+                verified.append(True)
+                return value
+
+            def target_supplier() -> dict[str, dict[str, int]]:
+                self.assertEqual(verified, [True])
+                self.assertTrue((root / "score-freeze.json").is_file())
+                raise RuntimeError("supplier reached after freeze")
+
+            with (
+                mock.patch.object(
+                    qualification.score_worker,
+                    "_verify_attestation",
+                    side_effect=tracked_verify,
+                ),
+                self.assertRaisesRegex(RuntimeError, "supplier reached after freeze"),
+            ):
+                qualification._score_child_transaction(
+                    repository=ROOT,
+                    temporary_root=root,
+                    contract=self.contract,
+                    trial_records=[],
+                    prediction_freeze={
+                        "schema_name": "fixture",
+                        "prediction_rows": 1,
+                    },
+                    live_records=[],
+                    prediction_path=prediction_path,
+                    prediction_identity=prediction_identity,
+                    deliver_targets=target_supplier,
+                    freeze_key=b"f" * 32,
+                    absolute_deadline=time.monotonic() + 10,
+                    rss_cap_bytes=1_000_000,
+                    input_byte_cap=1_000_000,
+                    output_byte_cap=1_000_000,
+                )
+            self.assertFalse((root / "sealed-targets.json").exists())
+
+            root2 = root / "verification-failure"
+            root2.mkdir()
+            prediction2 = root2 / "predictions.ndjson"
+            identity2 = qualification.create_no_replace_file(
+                prediction2,
+                prediction_path.read_bytes(),
+                byte_cap=4096,
+            )
+            supplier_called = []
+            with (
+                mock.patch.object(
+                    qualification.score_worker,
+                    "_verify_attestation",
+                    side_effect=core.CommP0GeneratedRefusal(
+                        "prediction_freeze_attestation_mismatch"
+                    ),
+                ),
+                self.assertRaisesRegex(
+                    core.CommP0GeneratedRefusal,
+                    "prediction_freeze_attestation_mismatch",
+                ),
+            ):
+                qualification._score_child_transaction(
+                    repository=ROOT,
+                    temporary_root=root2,
+                    contract=self.contract,
+                    trial_records=[],
+                    prediction_freeze={"schema_name": "fixture", "prediction_rows": 1},
+                    live_records=[],
+                    prediction_path=prediction2,
+                    prediction_identity=identity2,
+                    deliver_targets=lambda: supplier_called.append(True) or {},
+                    freeze_key=b"f" * 32,
+                    absolute_deadline=time.monotonic() + 10,
+                    rss_cap_bytes=1_000_000,
+                    input_byte_cap=1_000_000,
+                    output_byte_cap=1_000_000,
+                )
+            self.assertEqual(supplier_called, [])
+            self.assertFalse((root2 / "sealed-targets.json").exists())
 
     def test_read_refuses_symlinked_parent_and_child_home_is_isolated(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
@@ -471,7 +864,8 @@ class CommP0GeneratedQualificationTests(unittest.TestCase):
             score_monitor=lambda pid: 1024,
         )
         self.assertFalse(result["official_qualification"])
-        self.assertEqual(result["isolated_child_process_replays"], 2)
+        self.assertEqual(result["isolated_child_process_replays"], 0)
+        self.assertEqual(result["isolated_replay_workdirs"], 2)
         self.assertTrue(result["replay_equivalent"])
         self.assertEqual(result["shortcut_fixture_accounting_records_per_replay"], 7)
         self.assertEqual(result["numerical_shortcut_fixture_executions_per_replay"], 7)
@@ -479,8 +873,8 @@ class CommP0GeneratedQualificationTests(unittest.TestCase):
         self.assertEqual(result["shortcut_target_deliveries_per_replay"], 14)
         self.assertEqual(result["shortcut_scores_per_replay"], 14)
         self.assertEqual(result["refusal_observations"], 140)
-        self.assertEqual(result["target_deliveries"], 2)
-        self.assertEqual(result["scores"], 2)
+        self.assertEqual(result["target_deliveries"], 4)
+        self.assertEqual(result["scores"], 4)
         self.assertEqual(result["post_target_updates"], 0)
         self.assertEqual(result["network_bytes"], 0)
         self.assertEqual(result["real_or_private_reads"], 0)
@@ -492,6 +886,8 @@ class CommP0GeneratedQualificationTests(unittest.TestCase):
         self.assertEqual(
             result["remaining_activation_blockers"],
             [
+                "exact implementation commit and both required CI jobs green",
+                "bounded two-by-21 replay evidence inside the frozen 180-second total cap",
                 "separate exact-green activation before one official generated "
                 "qualification"
             ],

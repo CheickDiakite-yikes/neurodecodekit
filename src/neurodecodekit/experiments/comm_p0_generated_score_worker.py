@@ -403,13 +403,15 @@ def descriptor_main(
         delivered_targets=targets,
     )
     score_only._assert_aggregate_private(result)
+    target_delivery_count = int(result["target_delivery_count"])
+    score_count = int(result["score_count"])
     aggregate = {
         "schema_name": OUTPUT_SCHEMA,
         "schema_version": SCHEMA_VERSION,
         "gate_id": str(contract["gate_id"]),
         "score": result,
-        "target_delivery_count": 1,
-        "score_count": 1,
+        "target_delivery_count": target_delivery_count,
+        "score_count": score_count,
         "post_target_updates": 0,
         "contains_row_level_output": False,
         "generated_only": True,

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import subprocess
 import unittest
 from pathlib import Path
 
@@ -15,6 +16,7 @@ DOCUMENT = (
     ROOT
     / "docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_RUNNER_SCAFFOLD_PROOF_CLOSEOUT.md"
 )
+IMPLEMENTATION_COMMIT = "a961849761b4b734347ca1e83191008c69a7e897"
 
 
 class CommunicationEEGProspectiveGeneratedRunnerScaffoldProofCloseoutTest(
@@ -37,10 +39,13 @@ class CommunicationEEGProspectiveGeneratedRunnerScaffoldProofCloseoutTest(
 
     def test_bound_artifacts_are_exact(self) -> None:
         for artifact in self.record["bound_artifacts"]:
-            path = ROOT / artifact["path"]
-            self.assertEqual(path.stat().st_size, artifact["bytes"], artifact["path"])
+            payload = subprocess.check_output(
+                ["git", "show", f"{IMPLEMENTATION_COMMIT}:{artifact['path']}"],
+                cwd=ROOT,
+            )
+            self.assertEqual(len(payload), artifact["bytes"], artifact["path"])
             self.assertEqual(
-                hashlib.sha256(path.read_bytes()).hexdigest(),
+                hashlib.sha256(payload).hexdigest(),
                 artifact["sha256"],
                 artifact["path"],
             )

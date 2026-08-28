@@ -1,5 +1,21 @@
 # Codex Handoff - NeuroDecodeKit
 
+> **Immediate COMM-P0-G successor, 2026-08-28:** read
+> `docs/COMMUNICATION_EEG_PROSPECTIVE_GENERATED_OFFICIAL_COORDINATOR_IMPLEMENTATION.md`
+> and its machine registry first. Audit found that V1's accepted nonofficial
+> full-scale rehearsal used one combined target envelope and one score, while
+> the frozen contract requires separate discovery and replication target
+> deliveries and scores. The successor enforces two deliveries and two scores
+> per replay, runs each complete replay in a distinct sanitized child, verifies
+> the durable score freeze before target delivery, binds exact model/shortcut
+> and resource ledgers, and publishes atomically without replacement. A reduced
+> two-child measurement passed in 44.6720 seconds at 236,437,504-byte peak RSS
+> with byte-equivalent replay surfaces and zero network, real-data, device, or
+> retained payload. Focused checks are green.
+> Do not activate yet: this exact successor needs both remote CI jobs green and
+> the optimized two-replay route still needs bounded evidence that it fits the
+> frozen 180-second cap. Preserve the unrelated tracker inspection file.
+
 > **COMM-P0-G generated implementation frontier, 2026-08-28:** exact compact
 > numerical/scorer `b7e4d83` passed both jobs in CI `33140872221` and exact
 > endpoint-separated live scorer `c46064d` passed both jobs in CI `33141715948`;

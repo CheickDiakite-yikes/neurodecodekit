@@ -229,7 +229,9 @@ def _validate_freeze(
     return sha256_json(rebuilt)
 
 
-def _validate_authorization(authorization: Mapping[str, Any]) -> None:
+def _validate_authorization(
+    authorization: Mapping[str, Any], *, expected_target_deliveries: int = 1
+) -> None:
     if not isinstance(authorization, Mapping):
         raise ScoreOnlyRefusal("one_shot_authorization_invalid")
     if authorization.get("prediction_freeze_green") is not True:
@@ -238,7 +240,7 @@ def _validate_authorization(authorization: Mapping[str, Any]) -> None:
         raise ScoreOnlyRefusal("replication_prediction_freeze_not_green_before_delivery")
     if (
         authorization.get("one_shot") is not True
-        or authorization.get("target_delivery_count") != 1
+        or authorization.get("target_delivery_count") != expected_target_deliveries
         or authorization.get("prior_score_count") != 0
     ):
         raise ScoreOnlyRefusal("repeated_score_or_target_delivery")
@@ -358,6 +360,39 @@ def _targets_for_active(
             raise ScoreOnlyRefusal("scorer_prediction_target_row_mismatch")
         values[item_id] = integer
     return values
+
+
+def _targets_for_delivery(
+    delivered_targets: Mapping[str, Any],
+    active_item_ids: Sequence[str],
+    manifest: Mapping[str, Mapping[str, Any]],
+    command_count: int,
+    contract: Mapping[str, Any],
+) -> tuple[dict[str, int], int]:
+    """Validate either one legacy envelope or two required cohort envelopes."""
+
+    if contract.get("cohort_target_envelopes_required") is not True:
+        return _targets_for_active(delivered_targets, active_item_ids, command_count), 1
+    if not isinstance(delivered_targets, Mapping) or set(delivered_targets) != set(COHORTS):
+        raise ScoreOnlyRefusal("scorer_prediction_target_row_mismatch")
+    merged: dict[str, int] = {}
+    active = set(active_item_ids)
+    for cohort in COHORTS:
+        partition = delivered_targets[cohort]
+        expected = tuple(
+            item_id
+            for item_id in active_item_ids
+            if item_id in active and str(manifest[item_id].get("cohort_id")) == cohort
+        )
+        if not isinstance(partition, Mapping):
+            raise ScoreOnlyRefusal("scorer_prediction_target_row_mismatch")
+        cohort_targets = _targets_for_active(partition, expected, command_count)
+        if set(merged).intersection(cohort_targets):
+            raise ScoreOnlyRefusal("scorer_prediction_target_row_mismatch")
+        merged.update(cohort_targets)
+    if set(merged) != active:
+        raise ScoreOnlyRefusal("scorer_prediction_target_row_mismatch")
+    return merged, len(COHORTS)
 
 
 def _balanced_accuracy(
@@ -925,7 +960,10 @@ class ScoreOnlyWorker:
 
         if self._consumed:
             raise ScoreOnlyRefusal("repeated_score_or_target_delivery")
-        _validate_authorization(authorization)
+        expected_deliveries = 2 if self._contract.get("cohort_target_envelopes_required") else 1
+        _validate_authorization(
+            authorization, expected_target_deliveries=expected_deliveries
+        )
         conditions = _validate_contract(self._contract)
         predictions = _as_records(prediction_records, "predictions")
         freeze_sha256 = _validate_freeze(predictions, self._contract, freeze_attestation)
@@ -943,7 +981,13 @@ class ScoreOnlyWorker:
         )
         if len(commands) != 4:
             raise ScoreOnlyRefusal("contract_mismatch", "four_command_inventory")
-        target_values = _targets_for_active(delivered_targets, active_item_ids, len(commands))
+        target_values, target_deliveries = _targets_for_delivery(
+            delivered_targets,
+            active_item_ids,
+            manifest,
+            len(commands),
+            self._contract,
+        )
 
         cohorts = []
         for cohort in COHORTS:
@@ -992,8 +1036,8 @@ class ScoreOnlyWorker:
             "prediction_quality": quality,
             "cohorts": cohorts,
             "replication_live": live,
-            "target_delivery_count": 1,
-            "score_count": 1,
+            "target_delivery_count": target_deliveries,
+            "score_count": target_deliveries,
             "post_target_updates": 0,
             "contains_individual_prediction_probability_target_or_participant_outcome": False,
             "claim_boundary": {

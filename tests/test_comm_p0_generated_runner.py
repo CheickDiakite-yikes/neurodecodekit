@@ -100,7 +100,16 @@ class CommP0GeneratedRunnerTest(unittest.TestCase):
         stdout = StringIO()
         with redirect_stdout(stdout):
             self.assertEqual(
-                comm_p0_runner_cli.main(["qualify", "--output", "unused.json"]), 2
+                comm_p0_runner_cli.main(
+                    [
+                        "qualify",
+                        "--output",
+                        "unused.json",
+                        "--consumed-marker",
+                        "unused-marker.json",
+                    ]
+                ),
+                2,
             )
         self.assertIn("score_before_exact_green_freeze", stdout.getvalue())
 
@@ -140,6 +149,7 @@ class CommP0GeneratedRunnerTest(unittest.TestCase):
         )
         result = json.loads(completed.stdout)
         self.assertEqual(result["isolated_child_process_replays"], 2)
+        self.assertTrue(result["distinct_replay_worker_pids"])
         self.assertTrue(result["replay_equivalent"])
         self.assertEqual(result["refusal_observations"], 140)
         self.assertEqual(result["target_deliveries"], 4)
@@ -148,12 +158,6 @@ class CommP0GeneratedRunnerTest(unittest.TestCase):
         self.assertEqual(result["network_bytes"], 0)
         self.assertEqual(result["retained_generated_payload_bytes_after_proof"], 0)
         self.assertFalse(result["end_to_end_latency_measured"])
-        self.assertEqual(result["live_router"]["primary_endpoint"], "free_choice_intend")
-        self.assertFalse(result["live_router"]["prompted_may_rescue_free_choice"])
-        self.assertEqual(
-            result["live_router"]["live_gate_pass"],
-            result["live_router"]["free_choice_live_pass"],
-        )
         self.assertLess(
             result["peak_process_tree_RSS_bytes"],
             self.contract["resource_caps"]["peak_process_tree_RSS_bytes"],

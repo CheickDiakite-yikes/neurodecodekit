@@ -8,7 +8,7 @@ from collections.abc import Sequence
 from pathlib import Path
 
 from neurodecodekit.experiments import comm_p0_generated as core
-from neurodecodekit.experiments import comm_p0_generated_runner as runner
+from neurodecodekit.experiments import comm_p0_generated_qualification as qualification
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -32,6 +32,7 @@ def build_parser() -> argparse.ArgumentParser:
         "qualify", help="Run only after a future exact green activation exists."
     )
     qualify.add_argument("--output", type=Path, required=True)
+    qualify.add_argument("--consumed-marker", type=Path, required=True)
 
     inspect = subparsers.add_parser("inspect", help="Inspect a target-free public result.")
     inspect.add_argument("path", type=Path)
@@ -44,14 +45,21 @@ def main(argv: Sequence[str] | None = None) -> int:
         if arguments.command == "plan":
             value = core.plan()
         elif arguments.command == "develop":
-            value = runner.run_development_replay_pair(
+            value = qualification.run_development_replay_pair(
                 participants_per_cohort=arguments.participants_per_cohort,
                 timeout_seconds=arguments.timeout_seconds,
             )
             if arguments.output is not None:
-                runner.publish_no_replace(arguments.output, value)
+                qualification.create_no_replace_file(
+                    arguments.output,
+                    core.canonical_json_bytes(value),
+                    byte_cap=1_048_576,
+                )
         elif arguments.command == "qualify":
-            value = runner.run_official_qualification(arguments.output)
+            value = qualification.run_official_qualification(
+                arguments.output,
+                consumed_marker=arguments.consumed_marker,
+            )
         else:
             value = core.inspect_result(arguments.path)
     except core.CommP0GeneratedRefusal as exc:

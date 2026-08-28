@@ -437,7 +437,10 @@ def score_records_after_verified_freeze(
 ) -> dict[str, Any]:
     """Score one bounded pass after a separate target-free freeze verification."""
 
-    score_only._validate_authorization(authorization)
+    expected_deliveries = 2 if contract.get("cohort_target_envelopes_required") else 1
+    score_only._validate_authorization(
+        authorization, expected_target_deliveries=expected_deliveries
+    )
     conditions = score_only._validate_contract(contract)
     if not isinstance(verified_freeze, Mapping):
         raise score_only.ScoreOnlyRefusal("prediction_freeze_attestation_mismatch")
@@ -450,7 +453,13 @@ def score_records_after_verified_freeze(
     )
     if len(commands) != 4:
         raise score_only.ScoreOnlyRefusal("contract_mismatch", "four_command_inventory")
-    targets = score_only._targets_for_active(delivered_targets, active_item_ids, len(commands))
+    targets, target_deliveries = score_only._targets_for_delivery(
+        delivered_targets,
+        active_item_ids,
+        manifest,
+        len(commands),
+        contract,
+    )
     groups, quality, second_freeze = _consume_predictions(
         prediction_records,
         contract=contract,
@@ -490,8 +499,8 @@ def score_records_after_verified_freeze(
         "replication_live": _live_summary(
             manifest, groups, live_observation_records, targets, contract
         ),
-        "target_delivery_count": 1,
-        "score_count": 1,
+        "target_delivery_count": target_deliveries,
+        "score_count": target_deliveries,
         "post_target_updates": 0,
         "contains_individual_prediction_probability_target_or_participant_outcome": False,
         "claim_boundary": {
