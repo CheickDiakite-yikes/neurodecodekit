@@ -16507,3 +16507,7 @@ and require both remote jobs green before the one official qualification.
   manifest refresh and two range-only subject-1/run-1 header reads. The request
   performed zero network, GDF, header, signal, target, model, score, cleanup,
   release, or claim operations and requires its own remote proof.
+- 2026-08-29: Exact request `af9d024` passed Base Python `99155058261`,
+  Optional Neuro Readers `99155058168`, and CI `33273113793` on GitHub `main`.
+  Added a proof-only closeout over four exact request artifacts / 25,008 bytes;
+  it repeats no qualification and performs no protected or scientific work.

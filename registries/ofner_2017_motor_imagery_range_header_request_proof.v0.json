@@ -1,0 +1,98 @@
+{
+  "schema_name": "neurodecodekit.ofner_2017_motor_imagery_range_header_request_proof",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-29",
+  "packet_id": "OFNER-C6R-1-HL",
+  "status": "proof_only_closeout_pending_exact_commit_remote_green",
+  "green_request_commit": {
+    "commit": "af9d0247bb816c3432a9eb407fadcd286f84d87c",
+    "CI_run_id": 33273113793,
+    "base_python_job_id": 99155058261,
+    "optional_neuro_readers_job_id": 99155058168,
+    "both_required_jobs_green": true,
+    "commit_on_GitHub_main": true
+  },
+  "bound_request_artifacts": [
+    {
+      "path": "docs/OFNER_2017_MOTOR_IMAGERY_RANGE_HEADER_AUTHORIZATION_PACKET.md",
+      "bytes": 8164,
+      "sha256": "f556c9f8094c5f6e882648a976fd4efd8d970a529ab9a181a92484d8a91043dc",
+      "git_blob": "fe4394a08de7423172b1e171f77a36f741259dad"
+    },
+    {
+      "path": "registries/ofner_2017_motor_imagery_range_header_authorization_request.v0.json",
+      "bytes": 8703,
+      "sha256": "3ca9f7d873400be9f4ef833394a7373b8ec5fd0949c3a8cecbf8dc1bdca1547a",
+      "git_blob": "1aec6d6d2c955313e71683a13c921d4ea2ef9197"
+    },
+    {
+      "path": "tests/test_ofner_2017_motor_imagery_range_header_authorization_request.py",
+      "bytes": 5052,
+      "sha256": "7b9e3b95a064ba85d542e6100d7bace94c289af8dae8e5e2d08562cf0d04c561",
+      "git_blob": "8bd90ca11b318cc5da80926513a7ceaaffb9413c"
+    },
+    {
+      "path": "registries/current_research_frontier.v4.json",
+      "bytes": 3089,
+      "sha256": "093c79f034d5750090d4269dedf27870b0074e65a32012f28b9b9d672846260d",
+      "git_blob": "73794ffba5a54eadfb2b32ad5d9c83dddae4ba3e"
+    }
+  ],
+  "bound_request_artifact_summary": {
+    "count": 4,
+    "bytes": 25008,
+    "canonical_artifact_set_sha256": "d6628f441435118e7fc2782a3d4842d9bdd61a8c54b70803dfe59647a606e538"
+  },
+  "scope_preservation": {
+    "request_artifacts_unchanged": true,
+    "exact_member_dataset_revision_path_URL_size_and_SHA256_unchanged": true,
+    "one_manifest_and_two_range_request_contract_unchanged": true,
+    "header_representation_gate_and_terminal_router_unchanged": true,
+    "resource_caps_unchanged": true,
+    "authority_expanded": false,
+    "claim_boundary_changed": false
+  },
+  "operation_counters": {
+    "tracked_artifact_reads": 4,
+    "Git_proof_reads": 4,
+    "implementation_operations": 0,
+    "generated_qualification_invocations": 0,
+    "activation_records": 0,
+    "network_requests": 0,
+    "manifest_requests": 0,
+    "real_URL_or_local_path_reads": 0,
+    "real_GDF_body_bytes": 0,
+    "real_GDF_header_reads": 0,
+    "event_annotation_or_signal_sample_reads": 0,
+    "split_feature_cache_or_derivative_creations": 0,
+    "parameter_update_fits": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scoring_events": 0,
+    "cleanup_or_delete_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "transition": {
+    "effective_before_this_closeout_commit_remote_green": false,
+    "may_identify_as_sole_active_Tier_C_packet_after_remote_green": true,
+    "implementation_authorized_by_closeout": false,
+    "network_or_real_operation_authorized_by_closeout": false,
+    "fresh_packet_bound_maintainer_words_required": true,
+    "authorization_decision_must_be_remotely_green_before_stage_HL1": true,
+    "stage_HL1_implementation_must_be_remotely_green_before_activation": true,
+    "activation_must_be_remotely_green_before_stage_HL2": true
+  },
+  "claim_boundary": {
+    "engineering_proof_added": "The exact all-false one-header request is independently hash and Git bound for later review.",
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "EEG_beyond_EOG_or_kinematics_established": false,
+    "unseen_participant_generalization_established": false,
+    "movement_intention_or_motor_cortex_origin_established": false,
+    "language_or_thought_decoding_established": false,
+    "live_neural_decoding_established": false,
+    "portable_or_clinical_utility_established": false
+  }
+}

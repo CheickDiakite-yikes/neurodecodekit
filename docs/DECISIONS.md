@@ -14848,3 +14848,8 @@ green; only then may the single generated qualification run.
   65,536 bytes. Keep every authority flag false until the request and its
   separate proof are green and fresh packet-bound maintainer words are
   recorded. Never interpret a transport refusal as biological evidence.
+- 2026-08-29: Accept request commit `af9d024` as exact-green after Base Python
+  `99155058261`, Optional Neuro Readers `99155058168`, and CI `33273113793`
+  passed on GitHub `main`. Freeze a separate proof-only closeout binding four
+  request artifacts / 25,008 bytes. The proof grants no implementation,
+  network, GDF, real-data, model, score, cleanup, release, or claim authority.
