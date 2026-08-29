@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "recorded_at_local": "2026-08-28",
   "active_lane_id": "DREYER-C5R-1-HL",
-  "status": "HL1_R0_proof_green_HL1R1_request_pending_remote_green_HL2_blocked",
+  "status": "HL1_R0_proof_green_HL1R1_request_green_proof_pending_HL2_blocked",
   "scientific_strategy": {
     "constitution": "docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md",
     "convergence_plan": "docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md",
@@ -1037,14 +1037,28 @@
         "packet_id": "DREYER-C5R-1-HL1R1",
         "document": "docs/DREYER_C5R_1_STAGE_H_LIVE_RECOVERY_AUTHORIZATION_PACKET.md",
         "registry": "registries/dreyer_c5r_1_stage_h_live_recovery_authorization_request.v0.json",
-        "status": "request_only_pending_own_commit_push_remote_green",
+        "status": "request_remotely_green_proof_only_closeout_pending_own_remote_CI",
+        "request_commit": "0152fa5417f85c54d8c022634e73bee69bc8ef70",
+        "request_CI_run_id": 33233829570,
+        "request_base_python_job_id": 99051201520,
+        "request_optional_neuro_readers_job_id": 99051201612,
+        "request_both_required_jobs_green": true,
+        "request_on_GitHub_main": true,
         "all_authority_flags_false": true,
         "fresh_packet_bound_maintainer_decision_required": true,
         "predating_short_form_may_activate": false,
         "requested_generated_qualification_attempts_maximum": 1,
         "requested_successor_refusal_cases": 43,
         "real_or_private_operations": 0,
-        "scientific_value": "none_request_only"
+        "scientific_value": "none_request_only",
+        "proof_only_closeout": {
+          "proof_id": "DREYER-C5R-1-HL1R1-P0",
+          "document": "docs/DREYER_C5R_1_STAGE_H_LIVE_RECOVERY_REQUEST_PROOF_CLOSEOUT.md",
+          "registry": "registries/dreyer_c5r_1_stage_h_live_recovery_request_proof.v0.json",
+          "status": "pending_own_commit_push_remote_green",
+          "implementation_or_execution_operations": 0,
+          "authority_expanded": false
+        }
       },
       "current_HL2_authority": false,
       "real_requests": 0,
@@ -1319,7 +1333,7 @@
     "EEG_beyond_recorded_peripheral_controls": "not_established"
   },
   "nearest_decisive_goal": "qualify_a_corrected_one_file_wrapper_before_verifying_the_fresh_source_EDF_sensor_roster",
-  "immediate_next_gate": "green_and_prove_the_all_false_HL1R1_recovery_request_before_any_fresh_packet_bound_decision",
+  "immediate_next_gate": "green_the_HL1R1_request_proof_then_require_fresh_packet_bound_maintainer_words",
   "claim_boundary": {
     "engineering_capability_established": "fresh_60_participant_replication_contract_generated_target_firewall_compact_model_scorer_streaming_sensor_preflight_and_pre_network_live_wrapper_failure_localization",
     "fresh_replication_design_frozen": true,

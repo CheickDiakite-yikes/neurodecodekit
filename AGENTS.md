@@ -68,11 +68,13 @@ reached GitHub `main`. Proof-only closeout
 `a70fda0a808751c6057ed07117b7d22ee715a273` passed Base Python
 `99049010377`, Optional Neuro Readers `99049010221`, and CI `33233017769`.
 Read the queued all-false `DREYER-C5R-1-HL1R1` recovery packet next. It must
-receive its own green request proof and fresh packet-bound maintainer decision;
-no earlier short form activates it. `COMM-P0-G-FS3` is paused as an adjacent
-engineering diagnostic; do not activate it under general continuation. No new
-data, target, model, score, device, release, or claim operation is authorized
-by this state.
+receive its own green request proof and fresh packet-bound maintainer decision.
+Exact request `0152fa5417f85c54d8c022634e73bee69bc8ef70` passed Base Python
+`99051201520`, Optional Neuro Readers `99051201612`, and CI `33233829570`;
+its proof-only closeout remains pending its own remote CI. No earlier short form
+activates it. `COMM-P0-G-FS3` is paused as an adjacent engineering diagnostic;
+do not activate it under general continuation. No new data, target, model,
+score, device, release, or claim operation is authorized by this state.
 
 ## Historical Gate Detail: COMM-P0-G-FS3
 
