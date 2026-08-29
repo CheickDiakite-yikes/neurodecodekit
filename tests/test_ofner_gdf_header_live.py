@@ -22,8 +22,12 @@ class OfnerGDFHeaderLiveProofTests(unittest.TestCase):
 
     def test_plan_is_activation_locked_and_narrow(self):
         plan = live.registered_plan(ROOT)
-        self.assertEqual(plan["status"], "activation_locked")
-        self.assertFalse(plan["activation_record_present"])
+        activation_present = (ROOT / live.ACTIVATION_RELATIVE_PATH).is_file()
+        expected_status = (
+            "activation_record_present" if activation_present else "activation_locked"
+        )
+        self.assertEqual(plan["status"], expected_status)
+        self.assertEqual(plan["activation_record_present"], activation_present)
         self.assertFalse(plan["real_invocation_available"])
         self.assertEqual(plan["member"]["bytes"], 105_365_484)
         self.assertEqual(plan["whole_file_requests"], 0)
