@@ -14640,3 +14640,13 @@ green; only then may the single generated qualification run.
   network, EDF, model, score, release, or claim operation. Require that proof
   itself to become remotely green before fresh packet-bound maintainer words
   may authorize only the additive generated implementation.
+- 2026-08-29: Record the maintainer's exact fresh words `continue` as the
+  packet-bound decision for `DREYER-C5R-1-HL1R1`. Bind request `0152fa5`,
+  proof `8868a08`, CI `33234406143`, Base Python `99052724528`, Optional Neuro
+  Readers `99052724399`, and six exact packet/proof artifacts / 28,581 bytes.
+  Make the decision ineffective until its own commit is pushed and both jobs
+  are green. After that barrier authorize only an additive standard-library
+  generated successor and bounded unit-level generated failure checks. Keep
+  the registered one-shot qualification, H-L2, real/private paths, network,
+  EDF, targets, models, scores, devices, releases, other projects, and claims
+  closed behind later exact decisions.

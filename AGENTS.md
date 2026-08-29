@@ -71,10 +71,17 @@ Read the queued all-false `DREYER-C5R-1-HL1R1` recovery packet next. It must
 receive its own green request proof and fresh packet-bound maintainer decision.
 Exact request `0152fa5417f85c54d8c022634e73bee69bc8ef70` passed Base Python
 `99051201520`, Optional Neuro Readers `99051201612`, and CI `33233829570`;
-its proof-only closeout remains pending its own remote CI. No earlier short form
-activates it. `COMM-P0-G-FS3` is paused as an adjacent engineering diagnostic;
-do not activate it under general continuation. No new data, target, model,
-score, device, release, or claim operation is authorized by this state.
+proof-only closeout `8868a0866fd8f31bf7ba435e94b1b619314910ec`
+passed Base Python `99052724528`, Optional Neuro Readers `99052724399`, and CI
+`33234406143`, then reached GitHub `main`. The maintainer's fresh exact words
+`continue` are recorded in the H-L1R1 recovery decision, which is ineffective
+until its own commit is pushed and remotely green. After that barrier, only the
+additive generated implementation and bounded unit-level generated checks are
+authorized. The registered qualification still requires a separate all-false
+activation and fresh decision; H-L2 and real EDF authority remain false.
+`COMM-P0-G-FS3` is paused as an adjacent engineering diagnostic; do not activate
+it under general continuation. No new data, target, model, score, device,
+release, or claim operation is authorized by this state.
 
 ## Historical Gate Detail: COMM-P0-G-FS3
 
