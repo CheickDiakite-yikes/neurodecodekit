@@ -1,0 +1,222 @@
+{
+  "schema_name": "neurodecodekit.ofner_2017_motor_imagery_range_header_decision",
+  "schema_version": "0.1.0",
+  "decision_id": "OFNER-C6R-1-HL-decision-v0",
+  "recorded_at_local": "2026-08-29",
+  "packet_id": "OFNER-C6R-1-HL",
+  "status": "packet_bound_authorized_effective_only_after_decision_remote_green_zero_source_operations_at_recording",
+  "proof_posture": "actual_maintainer_word_quote_green_request_proof_and_frontier_hash_bound_scope_no_retroactive_or_inferred_expansion",
+  "effective_only_after_decision_commit_pushed_and_both_CI_jobs_green": true,
+  "maintainer_words": "continue",
+  "maintainer_words_utf8_bytes": 8,
+  "maintainer_words_sha256": "e256ee8e7aff6957a781d8328f0f68e26996564c81fa458da59fbca2305138ad",
+  "user_authorization": {
+    "communication_mode": "short_form_packet_reference",
+    "actual_message_preserved_verbatim": true,
+    "sole_active_Tier_C_packet": "OFNER-C6R-1-HL",
+    "packet_commits_CI_exact_member_ordered_barriers_and_exclusions_identified_before_message": true,
+    "maintainer_unambiguously_directed_continue": true,
+    "long_form_sentence_claimed_as_user_utterance": false,
+    "procedural_recital_waived": true,
+    "substantive_registered_scope_unchanged": true,
+    "scope_expansion_by_inference": false
+  },
+  "green_request": {
+    "commit": "af9d0247bb816c3432a9eb407fadcd286f84d87c",
+    "CI_run_id": 33273113793,
+    "base_python_job_id": 99155058261,
+    "optional_neuro_readers_job_id": 99155058168,
+    "both_required_jobs_green": true,
+    "commit_on_GitHub_main": true
+  },
+  "green_request_proof": {
+    "commit": "2c313d57ca3acebeea985fb788593be88877f68e",
+    "CI_run_id": 33273777182,
+    "base_python_job_id": 99156829521,
+    "optional_neuro_readers_job_id": 99156829296,
+    "both_required_jobs_green": true,
+    "commit_on_GitHub_main": true
+  },
+  "green_frontier_transition": {
+    "commit": "845b39ef88cd747b329be49e56efa5cdf999a40d",
+    "CI_run_id": 33274520086,
+    "CI_url": "https://github.com/CheickDiakite-yikes/neurodecodekit/actions/runs/33274520086",
+    "base_python_job_id": 99158792935,
+    "base_python_job_conclusion": "success",
+    "optional_neuro_readers_job_id": 99158792997,
+    "optional_neuro_readers_job_conclusion": "success",
+    "both_required_jobs_green": true,
+    "commit_on_GitHub_main": true,
+    "fresh_verification_calls": 1
+  },
+  "bound_artifacts": [
+    {
+      "path": "docs/OFNER_2017_MOTOR_IMAGERY_RANGE_HEADER_AUTHORIZATION_PACKET.md",
+      "bytes": 8164,
+      "sha256": "f556c9f8094c5f6e882648a976fd4efd8d970a529ab9a181a92484d8a91043dc",
+      "git_blob": "fe4394a08de7423172b1e171f77a36f741259dad"
+    },
+    {
+      "path": "registries/ofner_2017_motor_imagery_range_header_authorization_request.v0.json",
+      "bytes": 8703,
+      "sha256": "3ca9f7d873400be9f4ef833394a7373b8ec5fd0949c3a8cecbf8dc1bdca1547a",
+      "git_blob": "1aec6d6d2c955313e71683a13c921d4ea2ef9197"
+    },
+    {
+      "path": "tests/test_ofner_2017_motor_imagery_range_header_authorization_request.py",
+      "bytes": 5052,
+      "sha256": "7b9e3b95a064ba85d542e6100d7bace94c289af8dae8e5e2d08562cf0d04c561",
+      "git_blob": "8bd90ca11b318cc5da80926513a7ceaaffb9413c"
+    },
+    {
+      "path": "docs/OFNER_2017_MOTOR_IMAGERY_RANGE_HEADER_REQUEST_PROOF_CLOSEOUT.md",
+      "bytes": 2864,
+      "sha256": "d4969692943b2a8a0c992496a960a729556a144442bf38fb27080502a890e401",
+      "git_blob": "1e88c9aed7492d7c1b87eeff5067575527489e47"
+    },
+    {
+      "path": "registries/ofner_2017_motor_imagery_range_header_request_proof.v0.json",
+      "bytes": 4027,
+      "sha256": "dd28fb0a5da2495b5773717854d4f69cc6633a4e8d358fa362745752995f5605",
+      "git_blob": "0518c1e8aa9672591f4729b28e36627d12399283"
+    },
+    {
+      "path": "tests/test_ofner_2017_motor_imagery_range_header_request_proof.py",
+      "bytes": 3606,
+      "sha256": "279584f306235c067be379212539868715f8f2082db572810fd358f6b6886fa9",
+      "git_blob": "9f5a4dd457261ed91a23f84c08c39699bc391141"
+    },
+    {
+      "path": "registries/current_research_frontier.v5.json",
+      "bytes": 3689,
+      "sha256": "8e9bc4f3de81b435856cc72149563ea4aa799853b74a87f112babc3040872e4d",
+      "git_blob": "ec812cbe6a6cbd5bfe355bb4ad06528797466511"
+    }
+  ],
+  "bound_artifact_summary": {
+    "count": 7,
+    "bytes": 36105,
+    "canonical_artifact_set_sha256": "52306a246e397c41363ff0dce5d79f327adb070512cfbd49ea3d3b0711f1c6e9"
+  },
+  "exact_member": {
+    "dataset": "NEMAR_nm000173",
+    "revision": "v1.0.3",
+    "participant": 1,
+    "run": 1,
+    "path": "sourcedata/motorimagination_subject1_run1.gdf",
+    "stable_bytes_url": "https://data.nemar.org/nm000173/v1.0.3/sourcedata/motorimagination_subject1_run1.gdf",
+    "declared_payload_bytes": 105365484,
+    "manifest_declared_payload_sha256": "ec334466272a936986a50c120c52c57634801f028acb0fee30705f8a2dee3087",
+    "full_payload_hash_recomputed_by_checkpoint": false
+  },
+  "authorization_after_decision_green": {
+    "implement_HL1_additive_standard_library_wrapper": true,
+    "run_HL1_generated_mock_qualification_maximum": 1,
+    "create_HL2_activation_after_exact_HL1_remote_green": true,
+    "run_HL2_after_exact_decision_implementation_and_activation_remote_green": true,
+    "HL2_registered_invocations_maximum": 1,
+    "HL2_success_manifest_GET_requests_exact": 1,
+    "HL2_success_GDF_range_GET_requests_exact": 2,
+    "HL2_combined_GDF_body_bytes_maximum": 65536,
+    "HL2_fixed_header_semantic_parses_maximum": 1,
+    "HL2_public_aggregate_results_maximum": 1,
+    "whole_GDF_file_requests": 0,
+    "full_payload_SHA256_passes": 0,
+    "event_or_annotation_reads": 0,
+    "signal_sample_reads": 0,
+    "target_or_label_reads": 0,
+    "model_or_checkpoint_opens": 0,
+    "training_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "redirects": 0,
+    "retries": 0,
+    "reruns": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "required_execution_order": [
+    "test_commit_push_and_obtain_green_CI_for_this_decision",
+    "implement_and_generated_qualify_HL1_without_real_or_network_operations",
+    "commit_push_and_obtain_green_CI_for_exact_HL1_implementation",
+    "create_commit_push_and_obtain_green_CI_for_exact_HL2_activation",
+    "verify_decision_implementation_activation_artifacts_commits_and_both_jobs",
+    "verify_one_thread_caps_and_at_least_2_GiB_free_disk",
+    "durably_write_the_unique_consumed_marker",
+    "construct_the_proxy_free_verified_TLS_no_redirect_opener",
+    "issue_one_manifest_and_two_exact_range_GETs_parse_one_complete_header",
+    "publish_one_aggregate_H1_or_H0_result_and_stop"
+  ],
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 0,
+    "runtime_seconds_maximum": 120,
+    "peak_process_tree_RSS_bytes_maximum": 268435456,
+    "manifest_body_bytes_maximum": 2097152,
+    "GDF_range_body_bytes_maximum": 65536,
+    "total_response_body_bytes_maximum": 2162688,
+    "incremental_disk_bytes_maximum": 4194304,
+    "public_output_bytes_maximum": 1048576,
+    "free_disk_bytes_minimum": 2147483648,
+    "redirects": 0,
+    "retries": 0,
+    "reruns": 0,
+    "producer_is_causal": null,
+    "end_to_end_latency_measured": false
+  },
+  "forbidden_operations": [
+    "operation_before_this_decision_commit_is_pushed_and_both_CI_jobs_are_green",
+    "HL2_before_exact_HL1_implementation_and_activation_are_pushed_and_both_jobs_green",
+    "other_149_GDFs_sidecars_derivatives_participants_runs_datasets_hosts_redirects_fallbacks_or_substitutions",
+    "whole_file_request_full_payload_hash_resume_cache_split_epoch_window_feature_derivative_checkpoint_or_model_input",
+    "patient_recording_date_event_annotation_signal_trial_task_target_label_quality_reference_or_individual_outcome_access_or_publication",
+    "model_training_inference_calibration_selection_prediction_target_delivery_or_scoring",
+    "consumed_BNCI_Dreyer_S20_S21_S24_S25_SpanishBCBL_or_other_private_artifact_access",
+    "language_model_provider_RW3_stream_device_hardware_upload_release_or_publication",
+    "other_project_access_overwrite_cleanup_or_destructive_operation",
+    "scientific_neural_decoding_unseen_person_motor_intention_motor_cortex_eye_independent_language_live_portable_home_assistive_or_clinical_claim_upgrade"
+  ],
+  "decision_only_access_counters": {
+    "GitHub_CI_verification_calls": 1,
+    "implementation_operations": 0,
+    "generated_qualification_invocations": 0,
+    "activation_records": 0,
+    "source_HTTP_requests": 0,
+    "source_response_bytes": 0,
+    "real_GDF_body_bytes": 0,
+    "real_GDF_header_reads": 0,
+    "event_or_annotation_reads": 0,
+    "signal_sample_reads": 0,
+    "target_or_label_reads": 0,
+    "model_or_checkpoint_opens": 0,
+    "training_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "cleanup_or_delete_operations": 0,
+    "retries_or_reruns": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0,
+    "end_to_end_latency_measured": false
+  },
+  "next_gate": {
+    "decision_commit_required": true,
+    "decision_push_required": true,
+    "both_remote_CI_jobs_green_required": true,
+    "HL1_may_begin_before_decision_green": false,
+    "HL2_may_begin_before_HL1_implementation_and_activation_green": false,
+    "registered_HL2_execution_ordinal": 1,
+    "rerun_available": false
+  },
+  "claim_boundary": {
+    "engineering_capability_authorized_for_testing": "Build and generated-qualify one proof-bound range-only wrapper, then use it once to verify one exact public GDF fixed-header representation before full-cohort acquisition.",
+    "maximum_after_clean_HL2": "Technical confirmation of one exact GDF fixed-header representation.",
+    "scientific_claim_not_established": "This decision is not an EEG result and establishes no neural effect EEG beyond EOG or kinematics unseen-person generalization movement intention motor-cortex causation thought or language decoding live decoding hardware result or clinical utility."
+  }
+}

@@ -14858,3 +14858,10 @@ green; only then may the single generated qualification run.
   packet `OFNER-C6R-1-HL` as the sole active Tier C packet for a fresh
   packet-bound decision. This transition grants no operation authority and no
   earlier continuation is retroactive.
+- 2026-08-29: After Codex named the exact-green `OFNER-C6R-1-HL` packet,
+  commit and CI chain, subject-1/run-1 member, 65,536-byte GDF ceiling, ordered
+  barriers, and exclusions, the maintainer freshly said `continue`. Preserve
+  that actual word in a separately tested decision binding seven immutable
+  artifacts / 36,105 bytes. The decision remains ineffective until its exact
+  commit is pushed and both remote CI jobs are green; recording it performs no
+  implementation, source request, GDF read, model, score, or claim operation.
