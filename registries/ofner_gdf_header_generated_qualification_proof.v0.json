@@ -1,0 +1,105 @@
+{
+  "schema_name": "neurodecodekit.ofner_gdf_header_generated_qualification_proof",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-29",
+  "protocol_id": "OFNER-C6R-1-HG0",
+  "status": "proof_only_closeout_pending_exact_commit_remote_green",
+  "green_implementation_commit": {
+    "commit": "ca5d1db35a34762905d4df823766a6d353516c66",
+    "CI_run_id": 33271860805,
+    "base_python_job_id": 99151605412,
+    "base_python_duration": "6m54s",
+    "optional_neuro_readers_job_id": 99151605230,
+    "optional_neuro_readers_duration": "7m53s",
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true
+  },
+  "bound_implementation_and_result_artifacts": [
+    {
+      "path": "src/neurodecodekit/datasets/ofner_gdf_header.py",
+      "bytes": 29985,
+      "sha256": "a7d286a20c9a50c0a91003c19383eae4e2f9a846e5b44acb276bd724f69d5978",
+      "git_blob": "3ec9253f73e3a9032523b3eebaf34342dde3ef56"
+    },
+    {
+      "path": "src/neurodecodekit/ofner_gdf_header_cli.py",
+      "bytes": 1773,
+      "sha256": "f5e63c8b1b97fe6f825391636e866c1fb350643fc4d0e2a7352458eb8466d956",
+      "git_blob": "97eab25e33c53570883fc18e9ac40863c762e835"
+    },
+    {
+      "path": "tests/test_ofner_gdf_header.py",
+      "bytes": 7850,
+      "sha256": "c5acd6d2a035ee2ffe131b5bd1eb2e9b3caec81cc5c09412a3b6a5c312f135ff",
+      "git_blob": "2bb4b0a11b3d4a2f9a7eaf8eeca883382da5fbc0"
+    },
+    {
+      "path": "docs/OFNER_2017_MOTOR_IMAGERY_FIXED_HEADER_GENERATED_QUALIFICATION.md",
+      "bytes": 4302,
+      "sha256": "838b55e687be46b22149bb0a82e02ff3309301544b14bc1508f433ec5c555a0a",
+      "git_blob": "86d3296f48700416727126f956ee3820ec8463d3"
+    },
+    {
+      "path": "registries/ofner_gdf_header_generated_qualification.v0.json",
+      "bytes": 4044,
+      "sha256": "73d3b888b58f00dc537b78138d50869d8a3f2d531008f2f6e0cef58475cc528f",
+      "git_blob": "7a633ce57dced832830adec9e50e3a2bef9e0ed0"
+    }
+  ],
+  "bound_artifact_summary": {
+    "count": 5,
+    "bytes": 47954,
+    "canonical_artifact_set_sha256": "1e12f33e653ee66290a0f2b1d8372fa1f5965926f4b512341ee832d3d0c9d30a"
+  },
+  "scope_preservation": {
+    "qualified_module_unchanged": true,
+    "standalone_CLI_unchanged": true,
+    "focused_test_unchanged": true,
+    "result_artifacts_unchanged": true,
+    "qualification_rerun": false,
+    "resource_caps_unchanged": true,
+    "authority_expanded": false,
+    "claim_boundary_changed": false
+  },
+  "operation_counters": {
+    "tracked_artifact_reads": 5,
+    "Git_proof_reads": 5,
+    "generated_qualification_invocations": 0,
+    "real_manifest_requests": 0,
+    "network_bytes": 0,
+    "real_or_private_path_reads": 0,
+    "GDF_payload_requests": 0,
+    "GDF_payload_bytes": 0,
+    "GDF_header_reads": 0,
+    "signal_samples": 0,
+    "event_annotation_target_or_label_rows": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "scores": 0,
+    "stream_or_device_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "transition": {
+    "effective_before_this_closeout_commit_remote_green": false,
+    "generated_header_engineering_closed_after_remote_green": true,
+    "real_metadata_operation_authorized_by_closeout": false,
+    "real_payload_operation_authorized_by_closeout": false,
+    "real_header_operation_authorized_by_closeout": false,
+    "fresh_Tier_C_packet_and_decision_required": true,
+    "active_Tier_C_packet_after_closeout": null
+  },
+  "claim_boundary": {
+    "engineering_proof_added": "The exact generated GDF header parser and range firewall are independently hash size Git-blob and remote-CI bound.",
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "real_GDF_header_accessed": false,
+    "neural_advantage_established": false,
+    "EEG_beyond_EOG_or_kinematics_established": false,
+    "unseen_participant_generalization_established": false,
+    "movement_intention_established": false,
+    "thought_or_language_decoding_established": false,
+    "live_neural_decoding_established": false
+  }
+}
