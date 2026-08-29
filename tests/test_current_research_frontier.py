@@ -20,7 +20,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(self.frontier["active_lane_id"], "DREYER-C5R-1-HL")
         self.assertEqual(
             self.frontier["status"],
-            "HL1_R0_proof_green_HL1R1_qualification_decision_pending_remote_green_HL2_blocked",
+            "HL1R1_qualification_coordinator_complete_pending_remote_green_HL2_blocked",
         )
 
     def test_scientific_strategy_converges_on_one_empirical_checkpoint(self):
@@ -337,7 +337,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         )
         self.assertEqual(
             activation_request["status"],
-            "all_false_request_remotely_green_proof_pending_own_remote_CI",
+            "request_proof_and_decision_green_coordinator_pending_remote_green",
         )
         self.assertEqual(
             activation_request["bound_green_implementation_proof_commit"],
@@ -382,10 +382,15 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(qualification_decision["maintainer_words"], "continue")
         self.assertEqual(
             qualification_decision["status"],
-            "decision_pending_own_commit_push_remote_green",
+            "remotely_green_coordinator_and_one_post_green_qualification_authorized",
         )
-        self.assertFalse(qualification_decision["both_required_jobs_green"])
-        self.assertFalse(qualification_decision["decision_effective_now"])
+        self.assertEqual(
+            qualification_decision["commit"],
+            "749fd5695441350d8cc949af19b6ad4bb5863dba",
+        )
+        self.assertEqual(qualification_decision["CI_run_id"], 33_251_731_156)
+        self.assertTrue(qualification_decision["both_required_jobs_green"])
+        self.assertTrue(qualification_decision["decision_effective_now"])
         self.assertTrue(
             qualification_decision["coordinator_authority_after_remote_green"]
         )
@@ -396,6 +401,12 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         )
         self.assertFalse(qualification_decision["HL2_authority"])
         self.assertEqual(qualification_decision["real_or_private_operations"], 0)
+        coordinator = qualification_decision["generated_qualification_coordinator"]
+        self.assertEqual(coordinator["implementation_id"], "DREYER-C5R-1-HL1R1-QI0")
+        self.assertEqual(coordinator["development_matrix_cases_passed"], 65)
+        self.assertEqual(coordinator["registered_qualification_attempts"], 0)
+        self.assertEqual(coordinator["real_or_private_operations"], 0)
+        self.assertFalse(coordinator["HL2_authority"])
         for key in (
             "real_requests",
             "real_network_bytes",

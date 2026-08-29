@@ -90,15 +90,18 @@ then reached GitHub `main`. Read the queued all-false qualification request
 next. Exact all-false request
 `0213e7050dd845de16b5f1abac4573f30b534452` passed Base Python
 `99094941511`, Optional Neuro Readers `99094941619`, and CI `33250382778`,
-then reached GitHub `main`. Its proof-only closeout is pending its own remote
-CI. Exact proof `d1c003f303083d23685da858bca069397b1f9c58` passed Base
+then reached GitHub `main`. Exact proof
+`d1c003f303083d23685da858bca069397b1f9c58` passed Base
 Python `99096464718`, Optional Neuro Readers `99096464770`, and CI
 `33250971717`, then reached GitHub `main`. The maintainer's fresh exact words
 `continue` are recorded in qualification decision
-`DREYER-C5R-1-HL1R1-QA0-D0`, which is pending its own remote CI. Do not build
-or run the qualifier until that decision is green; then require the exact
-coordinator remotely green before the sole registered generated qualification.
-H-L2 and real EDF authority remain false.
+`DREYER-C5R-1-HL1R1-QA0-D0`. Exact decision
+`749fd5695441350d8cc949af19b6ad4bb5863dba` passed Base Python
+`99098454755`, Optional Neuro Readers `99098454800`, and CI `33251731156`,
+then reached GitHub `main`. The additive generated-only 65-case coordinator
+now exists; read its implementation document and registry. Do not consume the
+sole registered qualification until this exact coordinator commit is pushed
+and both jobs are green. H-L2 and real EDF authority remain false.
 `COMM-P0-G-FS3` is paused as an adjacent engineering diagnostic; do not activate
 it under general continuation. No new data, target, model, score, device,
 release, or claim operation is authorized by this state.
