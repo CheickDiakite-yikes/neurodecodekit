@@ -1,0 +1,214 @@
+{
+  "schema_name": "neurodecodekit.dreyer_c5r_1_stage_h_live_preflight_decision",
+  "schema_version": "0.1.0",
+  "decision_id": "DREYER-C5R-1-HL-decision-v0",
+  "recorded_at_local": "2026-08-28",
+  "packet_id": "DREYER-C5R-1-HL",
+  "status": "packet_bound_authorized_effective_only_after_decision_remote_green_zero_real_operations_at_recording",
+  "proof_posture": "actual_maintainer_words_quote_green_request_and_proof_hash_bound_scope_no_retroactive_or_inferred_expansion",
+  "effective_only_after_decision_commit_pushed_and_both_CI_jobs_green": true,
+  "maintainer_words": "continue, make a deep push",
+  "maintainer_words_sha256": "3dc3f7a809b411aef2b3b627111967604c6aff3a3802144c4df809bffb1816f3",
+  "user_authorization": {
+    "communication_mode": "short_form_packet_reference",
+    "actual_message_preserved_verbatim": true,
+    "sole_active_Tier_C_packet": "DREYER-C5R-1-HL",
+    "packet_commit_CI_scope_exact_member_ordered_barriers_and_exclusions_identified_before_message": true,
+    "maintainer_unambiguously_directed_continue": true,
+    "long_form_sentence_claimed_as_user_utterance": false,
+    "procedural_recital_waived": true,
+    "substantive_registered_scope_unchanged": true,
+    "scope_expansion_by_inference": false
+  },
+  "green_request": {
+    "commit": "5191e79e2ccfa50b5042a24357c0c22d68d8f088",
+    "CI_run_id": 32934958878,
+    "base_python_job_id": 98074322914,
+    "optional_neuro_readers_job_id": 98074322739,
+    "both_required_jobs_green": true
+  },
+  "green_request_proof": {
+    "commit": "821fad17e06914375c50a7d0dd7017458b2df838",
+    "CI_run_id": 32936247679,
+    "CI_url": "https://github.com/CheickDiakite-yikes/neurodecodekit/actions/runs/32936247679",
+    "base_python_job_id": 98077895278,
+    "base_python_job_conclusion": "success",
+    "optional_neuro_readers_job_id": 98077895460,
+    "optional_neuro_readers_job_conclusion": "success",
+    "both_required_jobs_green": true,
+    "fresh_verification_calls": 1
+  },
+  "bound_artifacts": {
+    "request_packet": {
+      "path": "docs/DREYER_C5R_1_STAGE_H_LIVE_PREFLIGHT_AUTHORIZATION_PACKET.md",
+      "bytes": 8231,
+      "sha256": "c5dbc973c8da2b1301d7e5553518d53735a1d01d9480a774db8e07b137ccefb5",
+      "git_blob_sha1": "dfae223537355c2b4fbfdf91ab9397af941e3d69"
+    },
+    "request_registry": {
+      "path": "registries/dreyer_c5r_1_stage_h_live_preflight_authorization_request.v0.json",
+      "bytes": 10812,
+      "sha256": "61e9d09cd3afe2bfff5fd8f31bc6543b250f8d09a806bc7a4c134f9ddeda2e5b",
+      "git_blob_sha1": "6679f31e42ff941c875ce4d2759acb8d695f81ec"
+    },
+    "request_test": {
+      "path": "tests/test_dreyer_c5r_1_stage_h_live_preflight_authorization_request.py",
+      "bytes": 4907,
+      "sha256": "b9132714e70210d6dd4c5e6a10a55a932ecd804c7e64122f0b9bec178e32aa5c",
+      "git_blob_sha1": "a8a55f2fe503d8095390e2c3984ba96fea555ab7"
+    },
+    "request_proof_document": {
+      "path": "docs/DREYER_C5R_1_STAGE_H_LIVE_PREFLIGHT_REQUEST_PROOF_CLOSEOUT.md",
+      "bytes": 2545,
+      "sha256": "00cffd78c0b0c8aa416ba9bfc9b1632c9e95b99179ec28a218da0abff8aba825"
+    },
+    "request_proof_registry": {
+      "path": "registries/dreyer_c5r_1_stage_h_live_preflight_request_proof.v0.json",
+      "bytes": 3553,
+      "sha256": "1e6830afdc523c180f18923dd68fd16795f2daed578f727ccd705141ef2b5016"
+    },
+    "safety_review_document": {
+      "path": "docs/DREYER_C5R_1_STAGE_H_LIVE_IMPLEMENTATION_SAFETY_REVIEW.md",
+      "bytes": 6901,
+      "sha256": "b5c4898163e25b943349290aec35f2b65af9e77948f81653f97bba4165aca58d",
+      "git_blob_sha1": "32e566741389287d0081955cd27ba3a5117bde2c"
+    },
+    "safety_review_registry": {
+      "path": "registries/dreyer_c5r_1_stage_h_live_implementation_safety_review.v0.json",
+      "bytes": 4417,
+      "sha256": "32a62b11ad5613a533d4dc20f1f86a209e67a13ca6ae86fa6a2b89154d5d4fff",
+      "git_blob_sha1": "40b0e8b7d82eb527f55380af06c087720dbbfa95"
+    }
+  },
+  "bound_request_artifact_summary": {
+    "count": 3,
+    "bytes": 23950,
+    "canonical_artifact_set_sha256": "e41870d4d1623861f02f52adc390c2e4b9f9e38247867e6a40acb9d4dcda07d4"
+  },
+  "exact_member": {
+    "dataset": "Dreyer_et_al_2023_Dataset_A",
+    "NEMAR_dataset": "nm000250",
+    "revision": "v1.0.4",
+    "path": "sourcedata/sub-01/eeg/sub-01_task-R1acquisition_eeg.edf",
+    "url": "https://data.nemar.org/nm000250/v1.0.4/sourcedata/sub-01/eeg/sub-01_task-R1acquisition_eeg.edf",
+    "bytes": 14805604,
+    "sha256": "a678fe6d37e0496eb381dcac6b877b047d02dfffc659ae4cfc38226f4850e185"
+  },
+  "authorization": {
+    "implement_HL1_additive_standard_library_wrapper_after_decision_green": true,
+    "run_HL1_registered_generated_mock_qualification_maximum": 1,
+    "create_HL2_activation_after_exact_HL1_implementation_remote_green": true,
+    "run_HL2_after_exact_decision_implementation_and_activation_remote_green": true,
+    "HL2_registered_invocations_maximum": 1,
+    "HL2_consumed_marker_writes": 1,
+    "HL2_real_HTTP_GET_requests_exact": 1,
+    "HL2_successful_payload_body_bytes_exact": 14805604,
+    "HL2_payload_SHA256_passes_maximum": 1,
+    "HL2_fixed_EDF_header_semantic_parses_maximum": 1,
+    "HL2_public_aggregate_results_maximum": 1,
+    "remaining_119_payload_requests": 0,
+    "annotation_record_reads": 0,
+    "signal_sample_semantic_reads": 0,
+    "target_or_label_reads": 0,
+    "model_or_checkpoint_opens": 0,
+    "training_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "retries": 0,
+    "reruns": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "required_wrapper_controls": [
+    "fresh_exact_remote_proof_before_live_capability",
+    "durable_exclusive_nofollow_consumed_marker_before_opener",
+    "capability_safe_non_symlink_path_chain",
+    "private_staging_and_atomic_no_replace_promotion",
+    "proxy_free_verified_TLS_direct_GET_no_redirect_or_retry",
+    "bounded_deterministically_closed_response",
+    "continuous_resource_and_operation_ledger_enforcement",
+    "aggregate_allowlisted_H1_or_H0_publication_only",
+    "fixed_header_record_geometry_matches_exact_payload_bytes"
+  ],
+  "required_execution_order": [
+    "test_commit_push_and_obtain_green_CI_for_this_decision",
+    "implement_and_generated_qualify_HL1_without_real_or_network_operations",
+    "commit_push_and_obtain_green_CI_for_exact_HL1_implementation",
+    "create_commit_push_and_obtain_green_CI_for_exact_HL2_activation",
+    "verify_decision_implementation_activation_artifacts_commits_and_both_jobs",
+    "verify_one_thread_caps_and_at_least_10_GiB_free_disk",
+    "durably_write_the_unique_consumed_marker",
+    "construct_the_proxy_free_verified_TLS_opener",
+    "issue_one_exact_direct_GET_stream_hash_and_fixed_header_parse",
+    "atomically_retain_only_on_H1_publish_one_aggregate_result_and_stop"
+  ],
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 0,
+    "runtime_seconds_maximum": 300,
+    "peak_process_tree_RSS_bytes_maximum": 268435456,
+    "payload_network_bytes_maximum": 16777216,
+    "incremental_disk_bytes_maximum": 33554432,
+    "public_output_bytes_maximum": 1048576,
+    "stream_chunk_bytes_maximum": 1048576,
+    "free_disk_bytes_minimum": 10737418240,
+    "redirects": 0,
+    "retries": 0,
+    "reruns": 0,
+    "producer_is_causal": null,
+    "end_to_end_latency_measured": false
+  },
+  "forbidden_operations": [
+    "operation_before_this_decision_commit_is_pushed_and_both_CI_jobs_are_green",
+    "HL2_before_exact_HL1_implementation_and_activation_are_pushed_and_both_jobs_green",
+    "remaining_119_R1_R2_EDFs_or_any_R3_R6_file_sidecar_participant_dataset_or_substitution",
+    "raw_header_patient_recording_date_annotation_event_trial_task_target_label_signal_quality_reference_or_geometry_publication",
+    "split_epoch_window_feature_cache_derivative_checkpoint_or_model_input_creation",
+    "model_training_inference_calibration_selection_prediction_target_delivery_or_scoring",
+    "consumed_BNCI_EEGMMIDB_S20_S21_S24_S25_SpanishBCBL_or_other_private_artifact_access",
+    "language_model_provider_RW3_stream_device_hardware_upload_release_or_publication",
+    "other_project_access_overwrite_cleanup_or_destructive_operation",
+    "scientific_neural_decoding_unseen_person_motor_intention_motor_cortex_eye_independent_language_live_portable_home_assistive_or_clinical_claim_upgrade"
+  ],
+  "decision_only_access_counters": {
+    "GitHub_CI_verification_calls": 1,
+    "real_or_private_path_opens": 0,
+    "real_HTTP_requests": 0,
+    "real_network_bytes": 0,
+    "real_EDF_payload_bytes": 0,
+    "real_EDF_header_reads": 0,
+    "real_annotation_reads": 0,
+    "real_signal_sample_reads": 0,
+    "real_target_or_label_reads": 0,
+    "payloads_retained": 0,
+    "model_or_checkpoint_opens": 0,
+    "training_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "retries_or_reruns": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0,
+    "end_to_end_latency_measured": false
+  },
+  "next_gate": {
+    "decision_commit_required": true,
+    "decision_push_required": true,
+    "both_remote_CI_jobs_green_required": true,
+    "HL1_may_begin_before_decision_green": false,
+    "HL2_may_begin_before_HL1_implementation_and_activation_green": false,
+    "registered_HL2_execution_ordinal": 1,
+    "rerun_available": false
+  },
+  "claim_boundary": {
+    "engineering_capability_authorized_for_testing": "Build and generated-qualify one proof-bound live wrapper, then use it once to verify the exact public object identity and fixed sensor-header assumptions before bulk acquisition.",
+    "maximum_after_clean_HL2": "Technical confirmation of one exact payload and fixed sensor-header contract.",
+    "scientific_claim_not_established": "This decision is not an EEG result and establishes no neural effect EEG beyond peripheral controls unseen-person generalization spontaneous movement intention motor-cortex causation thought or language decoding live decoding hardware result or clinical utility."
+  }
+}

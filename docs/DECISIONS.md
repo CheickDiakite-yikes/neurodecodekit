@@ -14595,3 +14595,12 @@ green; only then may the single generated qualification run.
   final activation commit binding that proof's exact digest, before the sole
   full FS3 attempt. Keep official, real/private, human/device, network,
   release, Tier C, and scientific authority false.
+- 2026-08-28: Record the maintainer's exact words `continue, make a deep push`
+  as the packet-bound Tier C decision for sole active packet
+  `DREYER-C5R-1-HL`. Bind all-false request `5191e79`, proof `821fad17`, CI
+  `32936247679`, the exact 14,805,604-byte member, and the additive nine-control
+  safety review. Require this decision to be committed, pushed, and green in
+  both required jobs before H-L1 generated/mock wrapper work. Require the exact
+  H-L1 implementation and activation to cross their own green barriers before
+  one H-L2 fixed-header invocation. Authorize no other EDF, annotation, signal,
+  target, model, score, retry, rerun, other-project, release, or claim action.

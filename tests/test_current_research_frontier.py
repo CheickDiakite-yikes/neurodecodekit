@@ -20,7 +20,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(self.frontier["active_lane_id"], "DREYER-C5R-1-HL")
         self.assertEqual(
             self.frontier["status"],
-            "all_false_request_and_proof_remotely_green_awaiting_exact_Tier_C_decision",
+            "packet_bound_Tier_C_decision_recorded_pending_own_remote_green",
         )
 
     def test_scientific_strategy_converges_on_one_empirical_checkpoint(self):
@@ -219,6 +219,10 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(packet["proof_closeout_CI_run_id"], 32_936_247_679)
         self.assertTrue(packet["both_request_and_proof_required_jobs_green"])
         self.assertTrue(packet["all_authority_flags_false"])
+        decision = packet["packet_bound_decision"]
+        self.assertEqual(decision["maintainer_words"], "continue, make a deep push")
+        self.assertFalse(decision["decision_effective_now"])
+        self.assertEqual(decision["decision_only_real_or_private_operations"], 0)
         for key in (
             "real_requests",
             "real_network_bytes",

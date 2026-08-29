@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "recorded_at_local": "2026-08-28",
   "active_lane_id": "DREYER-C5R-1-HL",
-  "status": "all_false_request_and_proof_remotely_green_awaiting_exact_Tier_C_decision",
+  "status": "packet_bound_Tier_C_decision_recorded_pending_own_remote_green",
   "scientific_strategy": {
     "constitution": "docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md",
     "convergence_plan": "docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md",
@@ -986,6 +986,14 @@
       "exact_member_sha256": "a678fe6d37e0496eb381dcac6b877b047d02dfffc659ae4cfc38226f4850e185",
       "all_authority_flags_false": true,
       "fresh_packet_bound_maintainer_decision_required": true,
+      "packet_bound_decision": {
+        "document": "docs/DREYER_C5R_1_STAGE_H_LIVE_PREFLIGHT_DECISION.md",
+        "registry": "registries/dreyer_c5r_1_stage_h_live_preflight_decision.v0.json",
+        "maintainer_words": "continue, make a deep push",
+        "status": "recorded_pending_exact_commit_push_and_both_required_CI_jobs_green",
+        "decision_effective_now": false,
+        "decision_only_real_or_private_operations": 0
+      },
       "real_requests": 0,
       "real_network_bytes": 0,
       "real_EDF_bytes": 0,
@@ -1239,7 +1247,7 @@
     "G_generated_model_firewall_and_scorer": "complete_consumed_result_remotely_green",
     "H_generated_sensor_preflight": "complete_consumed_result_remotely_green",
     "HL_all_false_request_and_proof": "complete_remotely_green",
-    "HL_packet_bound_authorization_decision": "required_not_yet_recorded",
+    "HL_packet_bound_authorization_decision": "recorded_pending_own_remote_green",
     "HL1_live_wrapper": "closed",
     "HL2_one_real_EDF_preflight": "closed",
     "control_plane_update": "complete_remotely_green",
@@ -1258,7 +1266,7 @@
     "EEG_beyond_recorded_peripheral_controls": "not_established"
   },
   "nearest_decisive_goal": "verify_one_exact_fresh_source_EDF_has_the_preregistered_EEG_EOG_EMG_and_sampling_roster_before_bulk_acquisition",
-  "immediate_next_gate": "name_DREYER_C5R_1_HL_as_sole_active_Tier_C_packet_and_wait_for_one_fresh_unambiguous_packet_bound_maintainer_decision",
+  "immediate_next_gate": "commit_push_and_obtain_both_required_remote_green_jobs_for_the_exact_DREYER_C5R_1_HL_decision_before_HL1",
   "claim_boundary": {
     "engineering_capability_established": "fresh_60_participant_replication_contract_generated_target_firewall_compact_model_scorer_and_streaming_sensor_preflight",
     "fresh_replication_design_frozen": true,
