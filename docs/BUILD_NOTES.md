@@ -16511,3 +16511,7 @@ and require both remote jobs green before the one official qualification.
   Optional Neuro Readers `99155058168`, and CI `33273113793` on GitHub `main`.
   Added a proof-only closeout over four exact request artifacts / 25,008 bytes;
   it repeats no qualification and performs no protected or scientific work.
+- 2026-08-29: Proof-only closeout `2c313d5` passed Base `99156829521`, Optional
+  `99156829296`, and CI `33273777182` on GitHub `main`. Added frontier v5 and
+  named `OFNER-C6R-1-HL` as the sole packet eligible for fresh maintainer words;
+  every implementation and real/scientific operation remains false or zero.

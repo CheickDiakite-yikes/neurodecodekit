@@ -272,6 +272,13 @@
 > real-data operations. Prove the request next, then require fresh packet-bound
 > maintainer words before implementation or access.
 >
+> **Ofner active-gate transition (2026-08-29):** request `af9d024` passed CI
+> `33273113793`; proof `2c313d5` passed Base `99156829521`, Optional
+> `99156829296`, and CI `33273777182` on GitHub `main`. `OFNER-C6R-1-HL` is now
+> the sole active Tier C packet for fresh packet-bound maintainer words. Every
+> implementation, network, GDF, real-data, model, score, release, and claim
+> authority remains false until a separate decision is remotely green.
+>
 > **Historical DREYER-C5R-1 frontier (2026-08-26):** the six-step independent-replication
 > build is complete through the real-data gate. (1) The aggregate-only BNCI
 > postmortem localized posterior/visual, calibration, EOG-increment, and

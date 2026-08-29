@@ -14853,3 +14853,8 @@ green; only then may the single generated qualification run.
   passed on GitHub `main`. Freeze a separate proof-only closeout binding four
   request artifacts / 25,008 bytes. The proof grants no implementation,
   network, GDF, real-data, model, score, cleanup, release, or claim authority.
+- 2026-08-29: After proof commit `2c313d5` passed Base `99156829521`, Optional
+  `99156829296`, and CI `33273777182` on GitHub `main`, identify unchanged
+  packet `OFNER-C6R-1-HL` as the sole active Tier C packet for a fresh
+  packet-bound decision. This transition grants no operation authority and no
+  earlier continuation is retroactive.

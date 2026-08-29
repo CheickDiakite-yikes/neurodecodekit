@@ -29,8 +29,10 @@
 > not EEG evidence. The exact implementation and proof are remotely green. An
 > all-false `OFNER-C6R-1-HL` packet now freezes one manifest refresh and two
 > gapless ranges totaling at most 65,536 GDF bytes from subject 1/run 1, but it
-> is inactive and authorizes nothing. Prove that request, then require fresh
-> packet-bound maintainer words. Read `registries/current_research_frontier.v4.json`.
+> authorizes nothing. Request `af9d024` and proof `2c313d5` are green. It is now
+> the sole active Tier C packet for fresh packet-bound maintainer words; a
+> separately green decision is required before implementation. Read
+> `registries/current_research_frontier.v5.json`.
 > COMM-P0-G FS3 remains paused as an adjacent engineering diagnostic.
 
 > Dreyer H-L1R1 recovery update, 2026-08-29: exact generated coordinator
@@ -206,7 +208,7 @@
 Historical exact control-plane label retained for proof compatibility:
 `Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight`.
 
-Start with `registries/current_research_frontier.v4.json`, the machine-readable
+Start with `registries/current_research_frontier.v5.json`, the machine-readable
 snapshot of the active lane, proof chain, consumed status, measurements, goals,
 and next transition.
 

@@ -25,7 +25,8 @@ controlled question. The new claim asks whether central EEG adds held-out
 seven-class imagined-movement information beyond EOG, recorded kinematics,
 posterior EEG, cue/timing, and matched derangement in unseen people.
 
-No real Ofner payload or header has been accessed. No Tier C packet is active.
+No real Ofner payload or header has been accessed. `OFNER-C6R-1-HL` is the sole
+active Tier C packet for a fresh decision, but every operation authority is false.
 The generated-only selector/acquisition milestone passes two complete
 150-member fixture replays and 20 fail-closed cases while separating stable
 scientific identity from expiring signed transport capabilities; its exact
@@ -33,10 +34,11 @@ implementation and proof are remotely green. The follow-on generated GDF 2.x
 header parser and two-range firewall pass two 24,832-byte replays and 41
 refusals, recover the frozen 96-role synthetic roster at 512 Hz, and reject any
 trailing data bytes. It has no live-network execution path and is not EEG
-evidence. Exact implementation and proof are remotely green. The inactive
-`OFNER-C6R-1-HL` request now freezes one manifest refresh plus two range reads
-of at most 65,536 GDF bytes. The ordered next steps are request proof, fresh
-packet-bound maintainer words, one separately activated header check, then a
+evidence. Exact implementation, request, and proof are remotely green. The
+`OFNER-C6R-1-HL` packet freezes one manifest refresh plus two range reads of at
+most 65,536 GDF bytes. The ordered next steps are fresh packet-bound maintainer
+words, one separately green decision, generated wrapper proof, one separately
+activated header check, then a
 fresh acquisition/model preregistration and only later one target-firewalled
 execution. Because no EMG was recorded, even a future pass cannot claim
 independence from all muscle activity.

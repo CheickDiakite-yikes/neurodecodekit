@@ -39,7 +39,7 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
     def test_summary_keeps_science_and_authority_explicit(self):
         summary = summarize_scientific_ledger(self.ledger)
         self.assertEqual(summary["flagship_experiment_id"], "EXP-OFNER-C6R-1")
-        self.assertIsNone(summary["active_tier_c_packet"])
+        self.assertEqual(summary["active_tier_c_packet"], "OFNER-C6R-1-HL")
         self.assertTrue(summary["all_authority_flags_false"])
         self.assertIn(
             "CLAIM-OFNER-NUISANCE-CONTROLLED-MOTOR-IMAGERY",
@@ -49,7 +49,7 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
     def test_operation_boundary_records_consumed_transport_only(self):
         boundary = self.ledger["operation_boundary"]
         self.assertTrue(boundary["all_authority_flags_false"])
-        self.assertIsNone(boundary["active_tier_c_packet"])
+        self.assertEqual(boundary["active_tier_c_packet"], "OFNER-C6R-1-HL")
         self.assertEqual(boundary["real_dreyer_endpoint_requests"], 1)
         self.assertEqual(boundary["real_dreyer_response_opens"], 1)
         self.assertEqual(boundary["generated_Ofner_acquisition_qualification_runs"], 1)
@@ -106,6 +106,18 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
         malformed = copy.deepcopy(self.ledger)
         malformed["claims"][0]["evidence_ids"] = ["EVID-MISSING"]
         with self.assertRaisesRegex(KnowledgeLedgerError, "dangling evidence"):
+            validate_scientific_ledger(malformed)
+
+    def test_blank_active_packet_is_rejected(self):
+        malformed = copy.deepcopy(self.ledger)
+        malformed["operation_boundary"]["active_tier_c_packet"] = ""
+        with self.assertRaisesRegex(KnowledgeLedgerError, "null or nonempty text"):
+            validate_scientific_ledger(malformed)
+
+    def test_nontext_active_packet_is_rejected(self):
+        malformed = copy.deepcopy(self.ledger)
+        malformed["operation_boundary"]["active_tier_c_packet"] = 1
+        with self.assertRaisesRegex(KnowledgeLedgerError, "null or nonempty text"):
             validate_scientific_ledger(malformed)
 
     def test_unsafe_or_nonpublic_evidence_path_is_rejected(self):

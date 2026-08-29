@@ -1,7 +1,7 @@
 # Codex Handoff - NeuroDecodeKit
 
 > **Current scientific frontier, 2026-08-29:** read the Ofner source-reselection
-> decision, `registries/current_research_frontier.v4.json`, and the scientific
+> decision, `registries/current_research_frontier.v5.json`, and the scientific
 > knowledge ledger first. The parked predecessor activation
 > `e3adab26e867f6de7e56f406f59ede51718b577c` passed both required jobs in CI
 > `33261346763` on GitHub `main`. The sole `DREYER-C5R-1-HL2-R0` invocation
@@ -14,7 +14,8 @@
 > 3 EOG + 32 hand/arm movement channels, and CC BY 4.0. The 4.58 GB BIDS
 > derivative is scientifically ineligible because it omits EOG and movement
 > comparators. No GDF payload, event, target, signal, model, prediction, or
-> score was accessed. No Tier C packet is active. The generated-only exact
+> score was accessed. `OFNER-C6R-1-HL` is the sole active Tier C packet for a
+> fresh decision, but every operation authority remains false. The generated-only exact
 > selector/acquisition core passes two complete 150-file fixture replays plus
 > 20 fail-closed cases and is exact-green with its proof. Exact header contract
 > `25fe452` passed Base `99143134373`, Optional `99143134445`, and CI
@@ -26,8 +27,9 @@
 > synthetic engineering only. Exact successor `ca5d1db` and proof `6815338`
 > are green on `main`. The all-false `OFNER-C6R-1-HL` request now freezes one
 > manifest refresh plus two exact ranges totaling at most 65,536 GDF bytes,
-> but it is inactive. Commit, push, and prove the request, then require fresh
-> packet-bound maintainer words before implementation or real access.
+> and request `af9d024` plus proof `2c313d5` are remotely green. Require fresh
+> packet-bound maintainer words and a separately green decision before
+> implementation or real access.
 > Preserve the unrelated tracker inspection file.
 
 > **Historical generated frontier, 2026-08-28:** read Amendment 3 and the FS3

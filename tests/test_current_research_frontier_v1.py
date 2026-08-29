@@ -602,11 +602,11 @@ class CurrentResearchFrontierV1Tests(unittest.TestCase):
         self.assertFalse(claims["registered_C5_partial_passed"])
         self.assertFalse(claims["real_Dreyer_EEG_accessed"])
 
-    def test_control_plane_entrypoints_name_the_parked_frontier(self):
+    def test_control_plane_entrypoints_name_the_current_frontier(self):
         expected = {
-            "AGENTS.md": "No Tier C packet is active",
+            "AGENTS.md": "sole active Tier C packet",
             "START_HERE.md": "Current Frontier: Dreyer H-L2 Consumed At Transport H0",
-            "README.md": "No Tier C packet is active",
+            "README.md": "sole active Tier C packet",
             "docs/CODEX_HANDOFF.md": "Current scientific frontier, 2026-08-29",
             "docs/NEXT_20_LOOPS_TRACKER.md": "DREYER-C5R-1 H-L2 closeout (2026-08-29)",
         }

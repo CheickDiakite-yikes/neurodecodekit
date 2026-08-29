@@ -1,0 +1,83 @@
+{
+  "schema_name": "neurodecodekit.current_research_frontier",
+  "schema_version": "0.6.0",
+  "recorded_at": "2026-08-29",
+  "supersedes": "registries/current_research_frontier.v4.json",
+  "superseded_registry_sha256": "093c79f034d5750090d4269dedf27870b0074e65a32012f28b9b9d672846260d",
+  "status": "OFNER_C6R_1_HL_request_and_proof_green_awaiting_fresh_decision",
+  "active_lane_id": "OFNER-C6R-1-HL",
+  "flagship_experiment": "EXP-OFNER-C6R-1",
+  "scientific_question": "Does central EEG add unseen-person imagined-movement information beyond EOG, hand and arm kinematics, posterior EEG, cue and timing structure, and matched derangement?",
+  "green_packet_chain": {
+    "packet_id": "OFNER-C6R-1-HL",
+    "request_commit": "af9d0247bb816c3432a9eb407fadcd286f84d87c",
+    "request_CI_run_id": 33273113793,
+    "request_base_python_job_id": 99155058261,
+    "request_optional_neuro_readers_job_id": 99155058168,
+    "proof_commit": "2c313d57ca3acebeea985fb788593be88877f68e",
+    "proof_CI_run_id": 33273777182,
+    "proof_base_python_job_id": 99156829521,
+    "proof_optional_neuro_readers_job_id": 99156829296,
+    "all_named_commits_on_GitHub_main": true,
+    "all_named_jobs_green": true
+  },
+  "active_packet_scope": {
+    "exact_member": "sourcedata/motorimagination_subject1_run1.gdf",
+    "declared_member_bytes": 105365484,
+    "proposed_success_manifest_GETs": 1,
+    "proposed_success_GDF_range_GETs": 2,
+    "proposed_GDF_body_bytes_maximum": 65536,
+    "proposed_event_annotation_signal_target_model_or_score_operations": 0,
+    "decision_record_exists": false,
+    "implementation_exists": false,
+    "real_operation_authorized": false
+  },
+  "operation_boundary": {
+    "active_tier_c_packet": "OFNER-C6R-1-HL",
+    "all_operation_authority_flags_false": true,
+    "new_network_requests": 0,
+    "new_GDF_payload_bytes": 0,
+    "new_real_header_reads": 0,
+    "new_event_annotation_target_or_signal_reads": 0,
+    "new_model_training_prediction_or_score_operations": 0,
+    "new_device_release_or_claim_operations": 0
+  },
+  "operation_authority": {
+    "implement_HL1_live_wrapper": false,
+    "run_HL1_generated_qualification": false,
+    "create_HL2_activation": false,
+    "refresh_real_manifest": false,
+    "make_real_GDF_range_request": false,
+    "parse_real_GDF_header": false,
+    "request_or_read_event_annotation_signal_target_or_label": false,
+    "acquire_full_GDF_or_cohort": false,
+    "create_split_epoch_feature_cache_or_derivative": false,
+    "access_model_or_checkpoint": false,
+    "train_infer_predict_or_score": false,
+    "use_language_model_or_provider": false,
+    "touch_other_project": false,
+    "cleanup_or_delete": false,
+    "release_or_publish": false,
+    "upgrade_scientific_claim": false
+  },
+  "claim_boundary": {
+    "source_selection_complete": true,
+    "generated_acquisition_engineering_proven": true,
+    "generated_header_engineering_proven": true,
+    "real_Ofner_GDF_header_verified": false,
+    "real_Ofner_EEG_accessed": false,
+    "neural_advantage_established": false,
+    "unseen_person_generalization_established": false,
+    "EEG_beyond_EOG_and_kinematics_established": false,
+    "motor_cortex_or_movement_intention_established": false,
+    "thought_or_language_decoding_established": false,
+    "live_or_portable_hardware_established": false,
+    "clinical_utility_established": false
+  },
+  "next_gate": {
+    "tier": "Tier_C_decision_required",
+    "action": "obtain_fresh_packet_bound_maintainer_words_then_commit_push_and_remotely_green_the_exact_decision_before_HL1_implementation",
+    "earlier_continue_or_general_approval_retroactive": false,
+    "real_data_authority_created_by_this_transition": false
+  }
+}

@@ -264,8 +264,13 @@ def validate_scientific_ledger(value: Any) -> dict[str, Any]:
             _require_text(item.get("value"), f"scoreboards.{name}[{index}].value")
 
     boundary = _require_mapping(ledger.get("operation_boundary"), "operation_boundary")
-    if boundary.get("active_tier_c_packet") is not None:
-        raise KnowledgeLedgerError("operation boundary must record no active Tier C packet")
+    active_packet = boundary.get("active_tier_c_packet")
+    if active_packet is not None and (
+        not isinstance(active_packet, str) or not active_packet.strip()
+    ):
+        raise KnowledgeLedgerError(
+            "operation boundary active Tier C packet must be null or nonempty text"
+        )
     if boundary.get("all_authority_flags_false") is not True:
         raise KnowledgeLedgerError("operation boundary must remain all-false")
     for field in (

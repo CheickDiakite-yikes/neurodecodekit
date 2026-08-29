@@ -70,10 +70,11 @@ across 15 participants / 13,748,417,608 bytes. This representation reports 61
 EEG, three EOG, 19 glove, and 13 arm channels at 512 Hz. The smaller 4.58 GB
 BIDS derivative is rejected because its public channel sidecar exposes only 61
 EEG channels and omits the required EOG and movement comparators. Read the
-Ofner source-reselection decision, `registries/current_research_frontier.v4.json`,
+Ofner source-reselection decision, `registries/current_research_frontier.v5.json`,
 and the knowledge ledger first. No GDF payload, event, target, annotation,
 signal, model, prediction, or score has been accessed.
-No Tier C packet is active. The generated-only selector/acquisition
+`OFNER-C6R-1-HL` is the sole active Tier C packet for a fresh packet-bound
+decision, but every operation authority remains false. The generated-only selector/acquisition
 core passes two complete 150-member fixture replays and 20 refusal cases with
 zero network and retained payload. It exposes no real execution path and is not
 EEG evidence. Exact implementation `527dffd` passed Base Python `99139395588`,
@@ -89,10 +90,11 @@ event parser, signal parser, model, or scorer. Exact successor `ca5d1db` passed
 Base `99151605412`, Optional `99151605230`, and CI `33271860805`; proof-only
 closeout `6815338` passed Base `99152912864`, Optional `99152912757`, and CI
 `33272310252`, all on GitHub `main`. The all-false `OFNER-C6R-1-HL` range-only
-request is now frozen but inactive. It proposes one manifest refresh and two
+request and proof are now green. It proposes one manifest refresh and two
 gapless ranges totaling at most 65,536 GDF bytes from exactly subject 1/run 1.
-It must receive its own green request proof and fresh packet-bound maintainer
-decision before implementation or real access. Earlier Dreyer progression is
+Exact request `af9d024` passed CI `33273113793`; proof `2c313d5` passed CI
+`33273777182`. It requires fresh packet-bound maintainer words followed by a
+separately committed and remotely green decision before implementation. Earlier Dreyer progression is
 historical: rejected-result
 commit `24a5da2973ef65fa05f5ea7b1d1389370534ad23` passed Base Python
 `99047501588`, Optional Neuro Readers `99047501456`, and CI `33232453046`, then
