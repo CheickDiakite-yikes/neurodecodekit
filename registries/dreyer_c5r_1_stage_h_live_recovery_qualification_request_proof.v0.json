@@ -1,0 +1,68 @@
+{
+  "schema_name": "neurodecodekit.dreyer_c5r_1_stage_h_live_recovery_qualification_request_proof",
+  "schema_version": "0.1.0",
+  "proof_id": "DREYER-C5R-1-HL1R1-QA0-P0",
+  "request_id": "DREYER-C5R-1-HL1R1-QA0",
+  "packet_id": "DREYER-C5R-1-HL1R1",
+  "recorded_at_local": "2026-08-29",
+  "status": "proof_only_closeout_pending_own_commit_push_remote_green",
+  "green_request": {
+    "commit": "0213e7050dd845de16b5f1abac4573f30b534452",
+    "CI_run_id": 33250382778,
+    "base_python_job_id": 99094941511,
+    "optional_neuro_readers_job_id": 99094941619,
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true
+  },
+  "bound_request_artifacts": [
+    {"path":"docs/DREYER_C5R_1_STAGE_H_LIVE_RECOVERY_QUALIFICATION_AUTHORIZATION_PACKET.md","bytes":3464,"sha256":"b13553d5dc2be9a981d891d5b53409348283f68116b0a1a30f74da999df386e0","git_blob":"2005979bc15aee2e2611f90fdef948dcc46334f7"},
+    {"path":"registries/dreyer_c5r_1_stage_h_live_recovery_qualification_authorization_request.v0.json","bytes":6769,"sha256":"30e1ba6011464e0f46badf530bf2d1cc5c797a5c5253d6d68de050787734dafc","git_blob":"21b965fa3a6b9589b85d22c0b42921d77059c1e1"},
+    {"path":"tests/test_dreyer_c5r_1_stage_h_live_recovery_qualification_authorization_request.py","bytes":3210,"sha256":"42bd80af5061ab8aa7dc0d583851a761241370fb9394755ed6d62d63763419d8","git_blob":"43c62480b532eb3eb2db6f7139fa62002c898fa9"}
+  ],
+  "artifact_summary": {
+    "count": 3,
+    "bytes": 13443,
+    "canonical_artifact_set_sha256": "6f0dada73b9891f36a58333430d1e3b98b03089f4102312358e6f0ac6cd5a535"
+  },
+  "proof_operations": {
+    "committed_public_artifact_reads": 3,
+    "committed_public_artifact_hashes": 3,
+    "Git_blob_proof_reads": 3,
+    "qualification_coordinator_implementation_runs": 0,
+    "generated_case_runs": 0,
+    "marker_writes": 0,
+    "registered_qualification_runs": 0,
+    "ignored_output_reads": 0,
+    "real_or_private_path_operations": 0,
+    "HTTP_requests": 0,
+    "network_bytes": 0,
+    "real_EDF_payload_or_header_reads": 0,
+    "annotation_signal_target_or_label_reads": 0,
+    "model_training_inference_prediction_target_delivery_or_score_operations": 0,
+    "provider_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "decision_boundary": {
+    "proof_closeout_remotely_green_now": false,
+    "fresh_packet_bound_maintainer_words_required_after_green": true,
+    "predating_short_form_may_activate": false,
+    "qualification_coordinator_authorized_by_proof": false,
+    "registered_qualification_authorized_by_proof": false,
+    "HL2_authority": false,
+    "real_EDF_authority": false
+  },
+  "claim_boundary": {
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "real_sensor_header_established": false,
+    "neural_information_established": false,
+    "decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_performance_established": false,
+    "clinical_value_established": false
+  }
+}

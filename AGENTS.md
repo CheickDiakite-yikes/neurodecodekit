@@ -87,10 +87,14 @@ it binds six exact artifacts / 69,368 bytes. Exact proof
 `41644a55ada938b0d1d3a042264e8c0b7a48384b` passed Base Python
 `99093675279`, Optional Neuro Readers `99093675204`, and CI `33249903090`,
 then reached GitHub `main`. Read the queued all-false qualification request
-next. It must become remotely green, receive a proof-only closeout, and receive
-fresh packet-bound maintainer words before an additive qualifier or the sole
-registered generated qualification. No earlier `continue` activates it. H-L2
-and real EDF authority remain false.
+next. Exact all-false request
+`0213e7050dd845de16b5f1abac4573f30b534452` passed Base Python
+`99094941511`, Optional Neuro Readers `99094941619`, and CI `33250382778`,
+then reached GitHub `main`. Its proof-only closeout is pending its own remote
+CI. Fresh packet-bound maintainer words after that proof becomes green are
+required before an additive qualifier or the sole registered generated
+qualification. No earlier `continue` activates it. H-L2 and real EDF authority
+remain false.
 `COMM-P0-G-FS3` is paused as an adjacent engineering diagnostic; do not activate
 it under general continuation. No new data, target, model, score, device,
 release, or claim operation is authorized by this state.

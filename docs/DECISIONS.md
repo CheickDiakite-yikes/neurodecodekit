@@ -14679,3 +14679,12 @@ green; only then may the single generated qualification run.
   then fresh packet-bound maintainer words and a green decision. Grant no
   authority now; keep H-L2, real/private data, network, EDF, targets, models,
   scores, devices, releases, other projects, and claims closed.
+- 2026-08-29: Accept all-false qualification request
+  `0213e7050dd845de16b5f1abac4573f30b534452` after Base Python
+  `99094941511`, Optional Neuro Readers `99094941619`, and CI `33250382778`
+  passed on GitHub `main`. Bind its request document, registry, and test as
+  three exact artifacts / 13,443 bytes in a proof-only closeout. Perform no
+  qualifier implementation, generated case, marker, qualification, network,
+  real/private, EDF, target, model, score, device, release, or claim operation.
+  Require the proof itself green and fresh packet-bound maintainer words before
+  any requested authority can activate.

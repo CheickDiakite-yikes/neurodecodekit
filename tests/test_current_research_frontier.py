@@ -20,7 +20,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(self.frontier["active_lane_id"], "DREYER-C5R-1-HL")
         self.assertEqual(
             self.frontier["status"],
-            "HL1_R0_proof_green_HL1R1_implementation_proof_green_qualification_request_pending_HL2_blocked",
+            "HL1_R0_proof_green_HL1R1_qualification_request_green_proof_pending_HL2_blocked",
         )
 
     def test_scientific_strategy_converges_on_one_empirical_checkpoint(self):
@@ -337,13 +337,20 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         )
         self.assertEqual(
             activation_request["status"],
-            "all_false_request_pending_own_commit_push_remote_green",
+            "all_false_request_remotely_green_proof_pending_own_remote_CI",
         )
         self.assertEqual(
             activation_request["bound_green_implementation_proof_commit"],
             "41644a55ada938b0d1d3a042264e8c0b7a48384b",
         )
         self.assertTrue(activation_request["all_authority_flags_false"])
+        self.assertEqual(
+            activation_request["commit"],
+            "0213e7050dd845de16b5f1abac4573f30b534452",
+        )
+        self.assertEqual(activation_request["CI_run_id"], 33_250_382_778)
+        self.assertTrue(activation_request["both_required_jobs_green"])
+        self.assertTrue(activation_request["on_GitHub_main"])
         self.assertTrue(
             activation_request["fresh_packet_bound_maintainer_decision_required"]
         )
@@ -351,6 +358,17 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(activation_request["registered_qualification_runs"], 0)
         self.assertEqual(activation_request["real_or_private_operations"], 0)
         self.assertFalse(activation_request["authority_expanded"])
+        activation_proof = activation_request["proof_only_closeout"]
+        self.assertEqual(
+            activation_proof["proof_id"],
+            "DREYER-C5R-1-HL1R1-QA0-P0",
+        )
+        self.assertEqual(activation_proof["bound_artifacts"], 3)
+        self.assertEqual(activation_proof["bound_bytes"], 13_443)
+        self.assertFalse(activation_proof["both_required_jobs_green"])
+        self.assertEqual(activation_proof["registered_qualification_runs"], 0)
+        self.assertEqual(activation_proof["real_or_private_operations"], 0)
+        self.assertFalse(activation_proof["authority_expanded"])
         for key in (
             "real_requests",
             "real_network_bytes",
