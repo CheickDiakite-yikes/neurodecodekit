@@ -1,0 +1,118 @@
+{
+  "schema_name": "neurodecodekit.dreyer_c5r_1_stage_h_l2_fixed_header_result_proof",
+  "schema_version": "0.1.0",
+  "proof_id": "DREYER-C5R-1-HL2-R0-P0",
+  "recorded_at_local": "2026-08-29",
+  "lane_id": "DREYER-C5R-1-HL",
+  "execution_id": "DREYER-C5R-1-HL2-R0",
+  "status": "proof_only_closeout_effective_after_own_remote_green",
+  "green_result_closeout": {
+    "commit": "eec3db2a225d6ea2377e6a2426297c4d327059b1",
+    "commit_subject": "Close out Dreyer H-L2 transport refusal",
+    "branch": "main",
+    "CI_run_id": 33263185054,
+    "CI_url": "https://github.com/CheickDiakite-yikes/neurodecodekit/actions/runs/33263185054",
+    "base_python_job_id": 99128522536,
+    "base_python_duration": "5m14s",
+    "base_python_conclusion": "success",
+    "optional_neuro_readers_job_id": 99128522652,
+    "optional_neuro_readers_duration": "11m58s",
+    "optional_neuro_readers_conclusion": "success",
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true
+  },
+  "duplicate_branch_proof": {
+    "branch": "codex/loop-54a-vhdr-preregistration",
+    "CI_run_id": 33263182131,
+    "base_python_job_id": 99128514962,
+    "base_python_conclusion": "success",
+    "optional_neuro_readers_job_id": 99128514958,
+    "optional_neuro_readers_conclusion": "success",
+    "both_required_jobs_green": true
+  },
+  "bound_artifacts": [
+    {
+      "path": "docs/DREYER_C5R_1_STAGE_H_L2_FIXED_HEADER_RESULT_CLOSEOUT.md",
+      "bytes": 3766,
+      "sha256": "30c5b3c7586f047dae6a3449b7a20b644894633bfe82aa7ab310c8af55915264",
+      "git_blob": "3aa9eb3b086afcf6571c9cdc197fbb817b5b0caa"
+    },
+    {
+      "path": "registries/dreyer_c5r_1_stage_h_l2_fixed_header_result.v0.json",
+      "bytes": 2624,
+      "sha256": "3bb0c0b94fd09a8be335f01eb8b680f99eb3d1a375d941c5f24681c549cbee7b",
+      "git_blob": "92dff2b4058eb45be358de243cb179c2a197138f"
+    },
+    {
+      "path": "registries/dreyer_c5r_1_stage_h_l2_fixed_header_result_closeout.v0.json",
+      "bytes": 4553,
+      "sha256": "7509d059261f5fe68b0052f43e5bcf9f4c0230d476a72b5ea49d02e32500752c",
+      "git_blob": "4caddf525bfbcda5f5755cd21b55821953a70287"
+    },
+    {
+      "path": "tests/test_dreyer_c5r_1_stage_h_l2_fixed_header_result.py",
+      "bytes": 3791,
+      "sha256": "1ce4564099f6810bbdac09c32f220c92265d132957e1de5c227d4c9223b024f5",
+      "git_blob": "438537fa3915f7257b12307d2ffdf49e19785c2d"
+    }
+  ],
+  "bound_artifact_summary": {
+    "count": 4,
+    "bytes": 14734,
+    "canonical_artifact_set_sha256": "642f681b8836f6c044bda27df5a2b3e84ade95b325b9d02cee6e8631cc0b0e07"
+  },
+  "closed_result": {
+    "route": "DREYER-H0",
+    "refusal_code": "HL2-TRANSPORT",
+    "registered_invocations_consumed": 1,
+    "retry_rerun_repair_resume_substitute_or_reinterpret_allowed": false,
+    "real_HTTP_GET_requests": 1,
+    "real_response_opens": 1,
+    "real_network_body_bytes": 0,
+    "real_payload_SHA256_passes": 0,
+    "real_fixed_header_reads": 0,
+    "real_fixed_header_semantic_parses": 0,
+    "runtime_seconds": 0.6479716249741614,
+    "peak_process_tree_RSS_bytes": 36454400,
+    "payload_retained": false,
+    "biological_null": false
+  },
+  "proof_only_operations": {
+    "existing_GitHub_CI_runs_verified": 2,
+    "unique_committed_public_artifacts_verified": 4,
+    "research_source_network_requests": 0,
+    "ignored_or_private_path_reads": 0,
+    "payload_or_marker_reads": 0,
+    "EDF_header_annotation_or_signal_reads": 0,
+    "target_or_label_reads": 0,
+    "model_training_inference_or_prediction_runs": 0,
+    "scoring_events": 0,
+    "stream_device_or_hardware_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "next_gate": {
+    "proof_closeout_commit_required": true,
+    "proof_closeout_push_required": true,
+    "both_remote_CI_jobs_green_required": true,
+    "active_Tier_C_gate_after_result_closeout": null,
+    "next_reversible_task": "select_and_preregister_a_new_transport_verified_scientific_source_without_reopening_DREYER_C5R_1_HL2",
+    "source_reselection_authorized_as_Tier_A_research": true,
+    "real_data_transaction_authorized": false,
+    "HL2_may_be_reopened": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "consumed_HL2_transport_refusal_has_an_immutable_hash_bound_remotely_verified_public_evidence_chain",
+    "scientific_claim_established": false,
+    "real_EDF_body_accessed": false,
+    "real_EDF_header_accessed": false,
+    "real_sensor_header_established": false,
+    "neural_information_established": false,
+    "decoding_established": false,
+    "unseen_person_generalization_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_performance_established": false,
+    "clinical_value_established": false
+  }
+}
