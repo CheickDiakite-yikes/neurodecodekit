@@ -14688,3 +14688,13 @@ green; only then may the single generated qualification run.
   real/private, EDF, target, model, score, device, release, or claim operation.
   Require the proof itself green and fresh packet-bound maintainer words before
   any requested authority can activate.
+- 2026-08-29: Record the maintainer's exact fresh words `continue` as the
+  packet-bound decision for `DREYER-C5R-1-HL1R1-QA0`. Bind request
+  `0213e705`, proof `d1c003f3`, CI `33250971717`, Base Python `99096464718`,
+  Optional Neuro Readers `99096464770`, and six exact request/proof artifacts /
+  21,197 bytes. Make the decision ineffective until its own commit is pushed
+  and both jobs are green. After that barrier authorize an additive
+  generated-only coordinator and, only after that exact coordinator is green,
+  one registered 43-case qualification. Keep H-L2, real/private paths,
+  network, EDF, targets, models, scores, devices, releases, other projects, and
+  claims closed.

@@ -20,7 +20,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(self.frontier["active_lane_id"], "DREYER-C5R-1-HL")
         self.assertEqual(
             self.frontier["status"],
-            "HL1_R0_proof_green_HL1R1_qualification_request_green_proof_pending_HL2_blocked",
+            "HL1_R0_proof_green_HL1R1_qualification_decision_pending_remote_green_HL2_blocked",
         )
 
     def test_scientific_strategy_converges_on_one_empirical_checkpoint(self):
@@ -365,10 +365,37 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         )
         self.assertEqual(activation_proof["bound_artifacts"], 3)
         self.assertEqual(activation_proof["bound_bytes"], 13_443)
-        self.assertFalse(activation_proof["both_required_jobs_green"])
+        self.assertEqual(
+            activation_proof["commit"],
+            "d1c003f303083d23685da858bca069397b1f9c58",
+        )
+        self.assertEqual(activation_proof["CI_run_id"], 33_250_971_717)
+        self.assertTrue(activation_proof["both_required_jobs_green"])
         self.assertEqual(activation_proof["registered_qualification_runs"], 0)
         self.assertEqual(activation_proof["real_or_private_operations"], 0)
         self.assertFalse(activation_proof["authority_expanded"])
+        qualification_decision = activation_request["packet_bound_decision"]
+        self.assertEqual(
+            qualification_decision["decision_id"],
+            "DREYER-C5R-1-HL1R1-QA0-D0",
+        )
+        self.assertEqual(qualification_decision["maintainer_words"], "continue")
+        self.assertEqual(
+            qualification_decision["status"],
+            "decision_pending_own_commit_push_remote_green",
+        )
+        self.assertFalse(qualification_decision["both_required_jobs_green"])
+        self.assertFalse(qualification_decision["decision_effective_now"])
+        self.assertTrue(
+            qualification_decision["coordinator_authority_after_remote_green"]
+        )
+        self.assertTrue(
+            qualification_decision[
+                "one_registered_qualification_after_coordinator_green"
+            ]
+        )
+        self.assertFalse(qualification_decision["HL2_authority"])
+        self.assertEqual(qualification_decision["real_or_private_operations"], 0)
         for key in (
             "real_requests",
             "real_network_bytes",

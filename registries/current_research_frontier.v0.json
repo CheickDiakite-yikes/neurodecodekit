@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "recorded_at_local": "2026-08-29",
   "active_lane_id": "DREYER-C5R-1-HL",
-  "status": "HL1_R0_proof_green_HL1R1_qualification_request_green_proof_pending_HL2_blocked",
+  "status": "HL1_R0_proof_green_HL1R1_qualification_decision_pending_remote_green_HL2_blocked",
   "scientific_strategy": {
     "constitution": "docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md",
     "convergence_plan": "docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md",
@@ -1148,17 +1148,34 @@
             "proof_id": "DREYER-C5R-1-HL1R1-QA0-P0",
             "document": "docs/DREYER_C5R_1_STAGE_H_LIVE_RECOVERY_QUALIFICATION_REQUEST_PROOF_CLOSEOUT.md",
             "registry": "registries/dreyer_c5r_1_stage_h_live_recovery_qualification_request_proof.v0.json",
-            "status": "proof_only_closeout_pending_own_commit_push_remote_green",
+            "status": "proof_only_closeout_remotely_green",
             "bound_artifacts": 3,
             "bound_bytes": 13443,
+            "commit": "d1c003f303083d23685da858bca069397b1f9c58",
+            "CI_run_id": 33250971717,
+            "base_python_job_id": 99096464718,
+            "optional_neuro_readers_job_id": 99096464770,
+            "both_required_jobs_green": true,
+            "registered_qualification_runs": 0,
+            "real_or_private_operations": 0,
+            "authority_expanded": false
+          },
+          "packet_bound_decision": {
+            "decision_id": "DREYER-C5R-1-HL1R1-QA0-D0",
+            "document": "docs/DREYER_C5R_1_STAGE_H_LIVE_RECOVERY_QUALIFICATION_DECISION.md",
+            "registry": "registries/dreyer_c5r_1_stage_h_live_recovery_qualification_decision.v0.json",
+            "maintainer_words": "continue",
+            "status": "decision_pending_own_commit_push_remote_green",
             "commit": null,
             "CI_run_id": null,
             "base_python_job_id": null,
             "optional_neuro_readers_job_id": null,
             "both_required_jobs_green": false,
-            "registered_qualification_runs": 0,
-            "real_or_private_operations": 0,
-            "authority_expanded": false
+            "decision_effective_now": false,
+            "coordinator_authority_after_remote_green": true,
+            "one_registered_qualification_after_coordinator_green": true,
+            "HL2_authority": false,
+            "real_or_private_operations": 0
           }
         }
       },
