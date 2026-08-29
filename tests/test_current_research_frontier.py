@@ -219,7 +219,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(packet["proof_closeout_CI_run_id"], 32_936_247_679)
         self.assertTrue(packet["both_request_and_proof_required_jobs_green"])
         self.assertTrue(packet["request_all_authority_flags_false"])
-        self.assertFalse(packet["fresh_packet_bound_maintainer_decision_required"])
+        self.assertTrue(packet["fresh_packet_bound_maintainer_decision_required"])
         self.assertFalse(packet["current_HL2_authority"])
         decision = packet["packet_bound_decision"]
         self.assertEqual(decision["maintainer_words"], "continue, make a deep push")

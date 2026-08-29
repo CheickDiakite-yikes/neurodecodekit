@@ -984,8 +984,9 @@
       },
       "exact_member_bytes": 14805604,
       "exact_member_sha256": "a678fe6d37e0496eb381dcac6b877b047d02dfffc659ae4cfc38226f4850e185",
+      "all_authority_flags_false": true,
       "request_all_authority_flags_false": true,
-      "fresh_packet_bound_maintainer_decision_required": false,
+      "fresh_packet_bound_maintainer_decision_required": true,
       "packet_bound_decision": {
         "document": "docs/DREYER_C5R_1_STAGE_H_LIVE_PREFLIGHT_DECISION.md",
         "registry": "registries/dreyer_c5r_1_stage_h_live_preflight_decision.v0.json",
