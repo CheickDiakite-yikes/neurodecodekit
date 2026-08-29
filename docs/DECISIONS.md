@@ -14755,3 +14755,16 @@ green; only then may the single generated qualification run.
   words after that barrier before any decision can activate. The maintainer's
   earlier `continue` predates this packet. Keep H-L2 and real EDF authority
   false.
+- 2026-08-29: Record the maintainer's exact fresh words `continue` as the
+  packet-bound decision for `DREYER-C5R-1-HL2-A0`. Bind request `a97fc191`,
+  proof `036a9ec`, CI `33257159816`, Base Python `99112795545`, Optional Neuro
+  Readers `99112795525`, and six exact request/proof artifacts / 27,477 bytes.
+  Make the decision ineffective until its own commit is pushed and both jobs
+  are green. After that barrier authorize one additive standard-library H-L2
+  execution adapter and generated-only adapter checks. Require that exact
+  implementation green before a no-authority activation record, and that exact
+  activation green before the sole real invocation. Preserve one exact
+  14,805,604-byte public EDF GET and fixed-header-only parse, one-thread and
+  bounded resource caps, marker-before-opener semantics, zero retries/reruns,
+  and every annotation, signal, target, model, score, remaining-file, device,
+  release, other-project, and claim exclusion.

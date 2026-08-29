@@ -20,7 +20,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(self.frontier["active_lane_id"], "DREYER-C5R-1-HL")
         self.assertEqual(
             self.frontier["status"],
-            "HL2_all_false_request_remotely_green_proof_closeout_pending_remote_green",
+            "HL2_packet_bound_decision_recorded_pending_own_remote_green",
         )
 
     def test_scientific_strategy_converges_on_one_empirical_checkpoint(self):
@@ -464,6 +464,14 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertFalse(request["authority_expanded"])
         proof = request["request_proof"]
         self.assertEqual(proof["proof_id"], "DREYER-C5R-1-HL2-A0-P0")
+        self.assertEqual(
+            proof["commit"], "036a9ec7e78b460d464c3349151ddb0e35914d87"
+        )
+        self.assertEqual(proof["CI_run_id"], 33_257_159_816)
+        self.assertEqual(proof["base_python_job_id"], 99_112_795_545)
+        self.assertEqual(proof["optional_neuro_readers_job_id"], 99_112_795_525)
+        self.assertTrue(proof["both_required_jobs_green"])
+        self.assertTrue(proof["on_GitHub_main"])
         self.assertEqual(proof["bound_artifact_count"], 3)
         self.assertEqual(proof["bound_artifact_bytes"], 18_035)
         self.assertEqual(
@@ -477,6 +485,15 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertFalse(proof["predating_maintainer_words_may_activate"])
         self.assertFalse(proof["HL2_authority"])
         self.assertFalse(proof["real_EDF_access_allowed"])
+        decision = request["packet_bound_decision"]
+        self.assertEqual(decision["decision_id"], "DREYER-C5R-1-HL2-A0-D0")
+        self.assertEqual(decision["maintainer_words"], "continue")
+        self.assertEqual(decision["bound_artifact_count"], 6)
+        self.assertEqual(decision["bound_artifact_bytes"], 27_477)
+        self.assertEqual(decision["fresh_CI_verification_calls"], 1)
+        self.assertFalse(decision["effective_before_own_remote_green"])
+        self.assertFalse(decision["HL2_authority_before_all_barriers"])
+        self.assertFalse(decision["real_EDF_access_allowed_before_all_barriers"])
         for key in (
             "real_requests",
             "real_network_bytes",

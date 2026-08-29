@@ -120,11 +120,14 @@ exact-green at `a97fc191106e5fe42859d871d78e59930bef79ac`, Base Python
 is on GitHub `main`. Read its additive proof-only closeout next; it binds three
 exact request artifacts / 18,035 bytes and repeats no implementation,
 qualification, activation, network, real/private, EDF, model, target, score, or
-claim operation. The proof remains pending its own remote green. Only after
-that may fresh packet-bound maintainer words activate a separately recorded
-decision; the maintainer's earlier `continue` predates this packet and cannot
-activate it. Do not rerun or reinterpret Q0. H-L2 and real EDF authority remain
-false.
+claim operation. Exact proof
+`036a9ec7e78b460d464c3349151ddb0e35914d87` passed Base Python
+`99112795545`, Optional Neuro Readers `99112795525`, and CI `33257159816`,
+then reached GitHub `main`. The maintainer's fresh exact words
+`continue` are recorded in decision `DREYER-C5R-1-HL2-A0-D0`. The decision is
+pending its own remote green and remains ineffective. Do not implement the
+adapter, create activation, access the EDF, rerun, or reinterpret Q0 before
+that barrier. H-L2 and real EDF authority remain false.
 `COMM-P0-G-FS3` is paused as an adjacent engineering diagnostic; do not activate
 it under general continuation. No new data, target, model, score, device,
 release, or claim operation is authorized by this state.

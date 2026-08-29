@@ -31,10 +31,13 @@
 > and CI `33255170805`. The all-false H-L2 request
 > `a97fc191106e5fe42859d871d78e59930bef79ac` then passed Base Python
 > `99109482999`, Optional Neuro Readers `99109482995`, and CI `33255920346` on
-> GitHub `main`. Its exact proof-only closeout is pending its own remote green;
-> after that, a fresh packet-bound maintainer decision is still required. This
-> qualifies the corrected one-file transaction wrapper only; no real EDF or
-> EEG was opened, and H-L2 remains closed.
+> GitHub `main`. Exact proof `036a9ec7e78b460d464c3349151ddb0e35914d87`
+> passed Base Python `99112795545`, Optional Neuro Readers `99112795525`, and
+> CI `33257159816`. The maintainer's fresh `continue` is now recorded in
+> packet-bound decision `DREYER-C5R-1-HL2-A0-D0`, which remains ineffective
+> until its own commit is remotely green. This qualifies the corrected
+> one-file transaction wrapper only; no real EDF or EEG was opened, and H-L2
+> remains closed.
 
 > COMM-P0-G FS3 registration frontier, 2026-08-28: Amendment 3 replaces only
 > the redundant second full fictional model replay with a separate zero-model
