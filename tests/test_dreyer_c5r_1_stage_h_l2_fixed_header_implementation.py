@@ -208,8 +208,21 @@ class DreyerStageHL2FixedHeaderImplementationTests(unittest.TestCase):
             "PYTHONPATH": str(ROOT / "src"),
             **{key: "1" for key in hl2.THREAD_ENV_KEYS},
         }
+        # Linux can carry the parent's pre-exec RSS high-water mark into a direct
+        # subprocess. A tiny intermediary gives the measured qualifier a clean
+        # process lineage, matching the standalone execution boundary.
+        isolated_launcher = (
+            "import subprocess,sys;"
+            "result=subprocess.run(sys.argv[1:],capture_output=True);"
+            "sys.stdout.buffer.write(result.stdout);"
+            "sys.stderr.buffer.write(result.stderr);"
+            "raise SystemExit(result.returncode)"
+        )
         completed = subprocess.run(
             [
+                sys.executable,
+                "-c",
+                isolated_launcher,
                 sys.executable,
                 "-m",
                 "neurodecodekit.dreyer_c5r_1_stage_h_l2_cli",
@@ -221,7 +234,11 @@ class DreyerStageHL2FixedHeaderImplementationTests(unittest.TestCase):
             capture_output=True,
             text=True,
         )
-        self.assertEqual(completed.returncode, 0, completed.stderr)
+        self.assertEqual(
+            completed.returncode,
+            0,
+            f"stdout={completed.stdout!r}\nstderr={completed.stderr!r}",
+        )
         qualification = json.loads(completed.stdout)
         self.assertEqual(qualification["transaction_case_count"], 32)
         self.assertEqual(qualification["attempt_count"], 33)
