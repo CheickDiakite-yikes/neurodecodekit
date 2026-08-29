@@ -243,6 +243,15 @@
 > zero payload, event, target, signal, model, prediction, or score operations.
 > No Tier C packet is active. Next qualify an exact generated selector and
 > bounded acquisition adapter, then separately gate one original-GDF header.
+
+> **Ofner generated acquisition qualification (2026-08-29):** the exact
+> 15-by-10 selector, canonical manifest identity, signed-object validator,
+> target-like row firewall, and atomic opaque writer passed two 150-file
+> generated replays plus 20 refusals in 0.108828875 seconds at 26,492,928-byte
+> peak RSS. Network and retained payload were zero. No real execution path or
+> GDF parser exists, so this is engineering proof only. After the exact commit
+> is remotely green, prepare one all-false Tier C packet for a single original
+> GDF fixed-header checkpoint; do not acquire the cohort or read signals.
 >
 > **Historical DREYER-C5R-1 frontier (2026-08-26):** the six-step independent-replication
 > build is complete through the real-data gate. (1) The aggregate-only BNCI

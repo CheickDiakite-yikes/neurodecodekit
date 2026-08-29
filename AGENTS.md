@@ -73,8 +73,11 @@ EEG channels and omits the required EOG and movement comparators. Read the
 Ofner source-reselection decision, `registries/current_research_frontier.v2.json`,
 and the knowledge ledger first. No GDF payload, event, target, annotation,
 signal, model, prediction, or score has been accessed, and no Tier C packet is
-active. No Tier C packet is active. Next perform generated-only
-selector/acquisition qualification, then
+active. No Tier C packet is active. The generated-only selector/acquisition
+core now passes two complete
+150-member fixture replays and 20 refusal cases with zero network and retained
+payload. It exposes no real execution path and is not EEG evidence. After its
+exact commit is remotely green, prepare a separate all-false one-header packet;
 require a separate exact-green Tier C decision before one real GDF header or
 payload operation. Earlier Dreyer progression is historical: rejected-result
 commit `24a5da2973ef65fa05f5ea7b1d1389370534ad23` passed Base Python

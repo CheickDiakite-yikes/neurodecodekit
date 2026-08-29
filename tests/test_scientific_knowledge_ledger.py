@@ -52,12 +52,14 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
         self.assertIsNone(boundary["active_tier_c_packet"])
         self.assertEqual(boundary["real_dreyer_endpoint_requests"], 1)
         self.assertEqual(boundary["real_dreyer_response_opens"], 1)
+        self.assertEqual(boundary["generated_Ofner_acquisition_qualification_runs"], 1)
         for key, value in boundary.items():
             if key not in {
                 "active_tier_c_packet",
                 "all_authority_flags_false",
                 "real_dreyer_endpoint_requests",
                 "real_dreyer_response_opens",
+                "generated_Ofner_acquisition_qualification_runs",
             }:
                 self.assertEqual(value, 0, key)
 
@@ -85,7 +87,8 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
             },
         )
         self.assertIn("GDF fixed-header", update["next_decisive_experiment"])
-        self.assertIn("13,748,417,608", update["evidence_produced"])
+        self.assertIn("150-file generated replays", update["evidence_produced"])
+        self.assertIn("zero network", update["evidence_produced"])
 
     def test_malformed_state_is_rejected(self):
         malformed = copy.deepcopy(self.ledger)

@@ -14822,3 +14822,9 @@ green; only then may the single generated qualification run.
   `bytes_url` field, sorts keys, and emits compact JSON plus one newline. Two
   canonical replays matched at 748,162 bytes / SHA-256 `5e889976`. Treat fresh
   signatures as transport capabilities, not scientific identity drift.
+- 2026-08-29: Accept the Ofner acquisition core as generated-only engineering.
+  It requires the exact 15-by-10 GDF matrix, canonical stable identity, strict
+  signed-object semantics, no target-like row fields, and bounded atomic
+  opaque writes. Two 150-file replays and 20 refusals passed with zero network
+  or retained payload. Expose no real execute mode. Require remote proof and a
+  separate all-false Tier C packet before one source-GDF header request.

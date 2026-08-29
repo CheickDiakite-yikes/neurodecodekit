@@ -14,9 +14,13 @@
 > 3 EOG + 32 hand/arm movement channels, and CC BY 4.0. The 4.58 GB BIDS
 > derivative is scientifically ineligible because it omits EOG and movement
 > comparators. No GDF payload, event, target, signal, model, prediction, or
-> score was accessed. No Tier C packet is active. Next build and qualify the
-> generated-only exact selector/acquisition adapter, then prepare a separate
-> all-false one-header packet. Preserve the unrelated tracker inspection file.
+> score was accessed. No Tier C packet is active. The generated-only exact
+> selector/acquisition core now passes two complete 150-file fixture replays
+> plus 20 fail-closed cases in 0.108828875 seconds at 26,492,928-byte peak RSS,
+> with zero network and zero retained payload. It has no live client, real
+> execution path, or GDF parser and establishes no EEG result. After its exact
+> commit is remotely green, prepare a separate all-false one-header packet.
+> Preserve the unrelated tracker inspection file.
 
 > **Historical generated frontier, 2026-08-28:** read Amendment 3 and the FS3
 > preregistration/contract first. Exact Amendment 3 `b15d3cf` passed Base

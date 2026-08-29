@@ -56,10 +56,22 @@ downloaded. No Tier C packet is active. See the
 and [current machine frontier](registries/current_research_frontier.v2.json).
 COMM-P0 FS3 remains paused as an adjacent engineering diagnostic.
 
+The follow-on generated acquisition qualification now passes two complete
+150-file fixture replays plus 20 adversarial refusals in 0.108829 seconds at
+26,492,928-byte peak RSS, with zero network and zero retained payload. It
+strictly separates stable path/size/SHA-256 identity from expiring signed
+transport URLs and exposes no live-network or real-payload execution path.
+This is engineering proof, not EEG evidence. Read the
+[generated qualification closeout](docs/OFNER_2017_MOTOR_IMAGERY_ACQUISITION_GENERATED_QUALIFICATION.md).
+The next real checkpoint is one separately governed source-GDF fixed header;
+bulk acquisition, signals, targets, models, and scores remain closed.
+
 ## Current Research Frontier
 
 The latest irreversible result remains the consumed Dreyer H-L2 transport H0.
-The latest reversible frontier is the Ofner source selection described above.
+The latest reversible frontier is the Ofner generated acquisition qualification
+described above, pending exact remote proof and a separate all-false one-header
+packet.
 The following COMM-P0-G material is retained as exact
 adjacent-engineering history and is paused. Its proof architecture has a prospective, resource-aware
 successor: Amendment 3 replaces the second redundant full

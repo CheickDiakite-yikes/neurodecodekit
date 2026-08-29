@@ -16477,3 +16477,9 @@ and require both remote jobs green before the one official qualification.
   matched at 748,162 bytes / SHA-256 `5e889976`. The 150 selected paths, sizes,
   checksums, stable bytes URLs, total bytes, license, and measurement report did
   not change. No payload request occurred.
+- 2026-08-29: Added the standard-library Ofner motor-imagery manifest selector,
+  volatile signed-URL adapter, target-like field firewall, atomic capped opaque
+  writer, dry-run/generated-only CLI, and focused tests. The generated
+  qualification completed two 150-file replays / 9,900 bytes each and 20
+  refusals in 0.108828875 seconds at 26,492,928-byte peak RSS. Network, retained
+  payload, GDF parsing, targets, signals, models, and scores were zero.

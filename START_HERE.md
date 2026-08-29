@@ -20,8 +20,11 @@
 > 13,748,417,608 bytes with reported 61 EEG, three EOG, and 32 hand/arm movement
 > channels. The smaller BIDS derivative is rejected because it omits those
 > nuisance comparators. No payload has been downloaded, no Tier C packet is
-> active, and the next task is generated-only selector/acquisition
-> qualification before a separately authorized one-header checkpoint. Read
+> active. The generated-only selector/acquisition core now passes two complete
+> 150-file replays and 20 refusal cases with zero network or retained payload;
+> it exposes no real execution path. This is not EEG evidence. After its exact
+> commit is remotely green, the next task is an all-false packet for one
+> separately authorized source-GDF fixed-header checkpoint. Read
 > `registries/current_research_frontier.v2.json`. COMM-P0-G FS3 remains paused
 > as an adjacent engineering diagnostic.
 
