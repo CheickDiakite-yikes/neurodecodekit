@@ -203,7 +203,26 @@ class DreyerStageHL2FixedHeaderImplementationTests(unittest.TestCase):
                     self.assertFalse(final.exists())
 
     def test_complete_generated_qualification_is_bounded_and_deterministic(self):
-        qualification = hl2.run_generated_qualification()
+        environment = {
+            **os.environ,
+            "PYTHONPATH": str(ROOT / "src"),
+            **{key: "1" for key in hl2.THREAD_ENV_KEYS},
+        }
+        completed = subprocess.run(
+            [
+                sys.executable,
+                "-m",
+                "neurodecodekit.dreyer_c5r_1_stage_h_l2_cli",
+                "qualify-generated",
+            ],
+            cwd=ROOT,
+            env=environment,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr)
+        qualification = json.loads(completed.stdout)
         self.assertEqual(qualification["transaction_case_count"], 32)
         self.assertEqual(qualification["attempt_count"], 33)
         self.assertEqual(qualification["accepted_H1_count"], 2)
