@@ -20,7 +20,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(self.frontier["active_lane_id"], "DREYER-C5R-1-HL")
         self.assertEqual(
             self.frontier["status"],
-            "HL2_packet_bound_decision_recorded_pending_own_remote_green",
+            "HL2_implementation_and_generated_qualification_complete_pending_remote_green",
         )
 
     def test_scientific_strategy_converges_on_one_empirical_checkpoint(self):
@@ -441,7 +441,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(request["request_id"], "DREYER-C5R-1-HL2-A0")
         self.assertEqual(
             request["status"],
-            "request_only_all_authority_false_remotely_green_proof_pending_own_remote_green",
+            "implementation_and_generated_qualification_complete_pending_remote_green",
         )
         self.assertEqual(
             request["commit"], "a97fc191106e5fe42859d871d78e59930bef79ac"
@@ -492,8 +492,24 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(decision["bound_artifact_bytes"], 27_477)
         self.assertEqual(decision["fresh_CI_verification_calls"], 1)
         self.assertFalse(decision["effective_before_own_remote_green"])
+        self.assertTrue(decision["effective_now"])
+        self.assertEqual(
+            decision["commit"],
+            "53f2c48831d1db7875bf09a35f107e35f97c6bf4",
+        )
+        self.assertEqual(decision["CI_run_id"], 33_257_975_186)
+        self.assertTrue(decision["both_required_jobs_green"])
         self.assertFalse(decision["HL2_authority_before_all_barriers"])
         self.assertFalse(decision["real_EDF_access_allowed_before_all_barriers"])
+        implementation = decision["fixed_header_adapter_implementation"]
+        self.assertEqual(implementation["implementation_id"], "DREYER-C5R-1-HL2-I0")
+        self.assertEqual(implementation["transaction_cases"], 32)
+        self.assertEqual(implementation["generated_attempts"], 33)
+        self.assertEqual(implementation["matching_H1_replays"], 2)
+        self.assertEqual(implementation["refusal_observations"], 31)
+        self.assertEqual(implementation["retained_generated_payload_bytes"], 0)
+        self.assertFalse(implementation["activation_present"])
+        self.assertFalse(implementation["HL2_authority"])
         for key in (
             "real_requests",
             "real_network_bytes",

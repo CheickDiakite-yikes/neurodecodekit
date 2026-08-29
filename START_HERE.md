@@ -34,10 +34,17 @@
 > GitHub `main`. Exact proof `036a9ec7e78b460d464c3349151ddb0e35914d87`
 > passed Base Python `99112795545`, Optional Neuro Readers `99112795525`, and
 > CI `33257159816`. The maintainer's fresh `continue` is now recorded in
-> packet-bound decision `DREYER-C5R-1-HL2-A0-D0`, which remains ineffective
-> until its own commit is remotely green. This qualifies the corrected
-> one-file transaction wrapper only; no real EDF or EEG was opened, and H-L2
-> remains closed.
+> packet-bound decision `DREYER-C5R-1-HL2-A0-D0`. Exact decision
+> `53f2c48831d1db7875bf09a35f107e35f97c6bf4` passed Base Python
+> `99114895023`, Optional Neuro Readers `99114895128`, and CI `33257975186` on
+> GitHub `main`. The additive adapter now passes a 32-case / 33-attempt
+> generated qualification with two matching H1 replays and 31 refusal
+> observations in 0.599492667010054 seconds at 39,141,376-byte peak RSS. It
+> used zero network or real/private operations and retained zero generated
+> bytes. This exact implementation still must become remotely green before a
+> no-authority activation can be created, and that activation must become
+> remotely green before the sole real invocation. No real EDF or EEG was
+> opened, and H-L2 remains closed.
 
 > COMM-P0-G FS3 registration frontier, 2026-08-28: Amendment 3 replaces only
 > the redundant second full fictional model replay with a separate zero-model
