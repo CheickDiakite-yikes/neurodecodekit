@@ -14670,3 +14670,12 @@ green; only then may the single generated qualification run.
   no network, real/private, EDF, target, model, score, device, release, or claim
   operation. Require this proof itself to become remotely green before an
   all-false qualification activation request may be frozen.
+- 2026-08-29: Accept H-L1R1 implementation proof
+  `41644a55ada938b0d1d3a042264e8c0b7a48384b` after Base Python
+  `99093675279`, Optional Neuro Readers `99093675204`, and CI `33249903090`
+  passed on GitHub `main`. Freeze `DREYER-C5R-1-HL1R1-QA0` as an all-false
+  request for an additive generated-only qualifier and one later registered
+  43-case qualification. Require the request and a proof-only closeout green,
+  then fresh packet-bound maintainer words and a green decision. Grant no
+  authority now; keep H-L2, real/private data, network, EDF, targets, models,
+  scores, devices, releases, other projects, and claims closed.

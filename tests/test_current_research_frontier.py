@@ -20,7 +20,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(self.frontier["active_lane_id"], "DREYER-C5R-1-HL")
         self.assertEqual(
             self.frontier["status"],
-            "HL1_R0_proof_green_HL1R1_implementation_green_proof_pending_HL2_blocked",
+            "HL1_R0_proof_green_HL1R1_implementation_proof_green_qualification_request_pending_HL2_blocked",
         )
 
     def test_scientific_strategy_converges_on_one_empirical_checkpoint(self):
@@ -321,10 +321,36 @@ class CurrentResearchFrontierTests(unittest.TestCase):
             implementation_proof["canonical_artifact_set_sha256"],
             "b70a95b12bd80e7703e0a1c109c5be734ad278892653ba7336aee472ab4708ed",
         )
-        self.assertFalse(implementation_proof["both_required_jobs_green"])
+        self.assertEqual(
+            implementation_proof["commit"],
+            "41644a55ada938b0d1d3a042264e8c0b7a48384b",
+        )
+        self.assertEqual(implementation_proof["CI_run_id"], 33_249_903_090)
+        self.assertTrue(implementation_proof["both_required_jobs_green"])
         self.assertEqual(implementation_proof["registered_qualification_runs"], 0)
         self.assertEqual(implementation_proof["real_or_private_operations"], 0)
         self.assertFalse(implementation_proof["authority_expanded"])
+        activation_request = recovery["queued_qualification_authorization_request"]
+        self.assertEqual(
+            activation_request["request_id"],
+            "DREYER-C5R-1-HL1R1-QA0",
+        )
+        self.assertEqual(
+            activation_request["status"],
+            "all_false_request_pending_own_commit_push_remote_green",
+        )
+        self.assertEqual(
+            activation_request["bound_green_implementation_proof_commit"],
+            "41644a55ada938b0d1d3a042264e8c0b7a48384b",
+        )
+        self.assertTrue(activation_request["all_authority_flags_false"])
+        self.assertTrue(
+            activation_request["fresh_packet_bound_maintainer_decision_required"]
+        )
+        self.assertFalse(activation_request["predating_short_form_may_activate"])
+        self.assertEqual(activation_request["registered_qualification_runs"], 0)
+        self.assertEqual(activation_request["real_or_private_operations"], 0)
+        self.assertFalse(activation_request["authority_expanded"])
         for key in (
             "real_requests",
             "real_network_bytes",

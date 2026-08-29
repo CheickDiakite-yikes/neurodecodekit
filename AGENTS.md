@@ -83,9 +83,14 @@ exists in a separate module and exposes no qualification or real command. Exact
 implementation `6a0bc7749dd6c36b4d8db019cc6e78acf653c83d` passed Base
 Python `99091760720`, Optional Neuro Readers `99091760774`, and CI
 `33249178006`, then reached GitHub `main`. Read its proof-only closeout next;
-it binds six exact artifacts / 69,368 bytes and is pending its own remote CI.
-The registered qualification still requires a separate all-false activation
-and fresh decision; H-L2 and real EDF authority remain false.
+it binds six exact artifacts / 69,368 bytes. Exact proof
+`41644a55ada938b0d1d3a042264e8c0b7a48384b` passed Base Python
+`99093675279`, Optional Neuro Readers `99093675204`, and CI `33249903090`,
+then reached GitHub `main`. Read the queued all-false qualification request
+next. It must become remotely green, receive a proof-only closeout, and receive
+fresh packet-bound maintainer words before an additive qualifier or the sole
+registered generated qualification. No earlier `continue` activates it. H-L2
+and real EDF authority remain false.
 `COMM-P0-G-FS3` is paused as an adjacent engineering diagnostic; do not activate
 it under general continuation. No new data, target, model, score, device,
 release, or claim operation is authorized by this state.
