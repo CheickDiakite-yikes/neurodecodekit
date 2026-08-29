@@ -27,8 +27,15 @@ class Ofner2017MotorImagerySourceReselectionTests(unittest.TestCase):
             "4e1329ceb93e0cc5e81d0d2d5d1839527299b251",
         )
         self.assertEqual(source["license"], "CC-BY-4.0")
-        self.assertEqual(source["manifest_bytes"], 1_352_270)
-        self.assertRegex(source["manifest_sha256"], r"^[0-9a-f]{64}$")
+        self.assertEqual(source["raw_manifest_first_observed_bytes"], 1_352_270)
+        self.assertEqual(len(set(source["raw_manifest_sha256_observations"])), 2)
+        self.assertFalse(source["raw_manifest_hash_stable"])
+        self.assertEqual(source["canonical_manifest_bytes"], 748_162)
+        self.assertEqual(
+            source["canonical_manifest_sha256"],
+            "5e889976bf5f5c91970d35c968f5a7ee4b1075aeca0ede984414d4666845aa34",
+        )
+        self.assertEqual(source["canonical_manifest_matching_replays"], 2)
 
     def test_exact_original_gdf_surface_fits_allowance(self) -> None:
         surface = self.record["selected_surface"]

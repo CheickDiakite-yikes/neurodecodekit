@@ -15,8 +15,17 @@
     "source_archive_DOI": "10.5281/zenodo.834976",
     "license": "CC-BY-4.0",
     "manifest_url": "https://data.nemar.org/nm000173/v1.0.3/manifest.json",
-    "manifest_bytes": 1352270,
-    "manifest_sha256": "c227c2e8d6530a3b71c85a65576587371348e299b9f21e673dbb583f1d1c82a9"
+    "raw_manifest_first_observed_bytes": 1352270,
+    "raw_manifest_sha256_observations": [
+      "c227c2e8d6530a3b71c85a65576587371348e299b9f21e673dbb583f1d1c82a9",
+      "443f8ed4151d72336b28e66640f24da27bb9d5752d0d76a5487b536e53d4a329"
+    ],
+    "raw_manifest_hash_stable": false,
+    "raw_manifest_instability_reason": "expiring signed url query strings",
+    "canonical_manifest_rule": "delete_only_each_row_url_then_sort_all_object_keys_emit_compact_JSON_and_one_trailing_newline",
+    "canonical_manifest_bytes": 748162,
+    "canonical_manifest_sha256": "5e889976bf5f5c91970d35c968f5a7ee4b1075aeca0ede984414d4666845aa34",
+    "canonical_manifest_matching_replays": 2
   },
   "selected_surface": {
     "representation": "original_source_GDF_motor_imagery_only",
@@ -154,6 +163,7 @@
   },
   "warnings": [
     "public_metadata_not_signal_evidence",
+    "raw_manifest_contains_volatile_expiring_signed_urls",
     "BIDS_BDF_derivative_omits_required_EOG_and_movement_channels",
     "source_GDF_measurement_contract_requires_one_future_header_preflight",
     "no_recorded_EMG_limits_future_attribution",

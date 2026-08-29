@@ -22,10 +22,18 @@ BNCI Horizon 2020 dataset `001-2017`, as the next prospective source for the
 nuisance-controlled unseen-person question.
 
 The selected public revision is NEMAR `nm000173` `v1.0.3`, Git tag object
-`4e1329ceb93e0cc5e81d0d2d5d1839527299b251`. Its official manifest is
-1,352,270 bytes with SHA-256
-`c227c2e8d6530a3b71c85a65576587371348e299b9f21e673dbb583f1d1c82a9`.
-The metadata-only selector identifies exactly:
+`4e1329ceb93e0cc5e81d0d2d5d1839527299b251`.
+
+The manifest endpoint is versioned but its raw response is not byte-stable: it
+contains expiring signed `url` query strings. Two raw observations produced
+different SHA-256 values, `c227c2e8...` and `443f8ed4...`. The frozen identity
+therefore removes only each row's volatile `url` field, preserves `bytes_url`
+and every scientific identity field, sorts object keys, and emits compact JSON
+with one trailing newline. Two independent canonicalizations matched at
+748,162 bytes with SHA-256
+`5e889976bf5f5c91970d35c968f5a7ee4b1075aeca0ede984414d4666845aa34`.
+
+That canonical metadata-only selector identifies exactly:
 
 - 15 participants;
 - 10 motor-imagery runs per participant;
@@ -67,7 +75,8 @@ movement or movement-correlated shortcuts.
 Primary sources:
 
 - NEMAR dataset: <https://nemar.org/dataset/nm000173>
-- immutable manifest: <https://data.nemar.org/nm000173/v1.0.3/manifest.json>
+- versioned manifest endpoint:
+  <https://data.nemar.org/nm000173/v1.0.3/manifest.json>
 - BNCI catalog: <https://bnci-horizon-2020.eu/database/data-sets>
 - official dataset description:
   <https://lampx.tugraz.at/~bci/database/001-2017/dataset_description.pdf>
@@ -124,6 +133,11 @@ identity, dataset/license metadata, one public channel sidecar, one public
 electrode sidecar, and primary-source documents. It made zero EEG-payload,
 event-table, target, annotation, or signal requests and produced zero model or
 scientific-score operations.
+
+The raw-manifest instability check was metadata-only. It changed the future
+identity rule, not the selected files: volatile signed URLs are transport
+capabilities, while paths, sizes, checksums, stable bytes URLs, revision, and
+license remain identity.
 
 No Tier C packet is active. The next reversible milestone is a generated-only
 manifest selector and acquisition implementation qualified against fixtures.

@@ -345,7 +345,7 @@
       "id": "EVID-OFNER-SOURCE-SELECTION",
       "lane": "confirmation",
       "kind": "metadata-only license measurement and storage source selection",
-      "summary": "The immutable NEMAR v1.0.3 manifest identifies 150 original motor-imagery GDF files for 15 participants totaling 13,748,417,608 bytes, with reported 61 EEG, 3 EOG, and 32 movement channels at 512 Hz.",
+      "summary": "The canonicalized NEMAR v1.0.3 manifest identifies 150 original motor-imagery GDF files for 15 participants totaling 13,748,417,608 bytes, with reported 61 EEG, 3 EOG, and 32 movement channels at 512 Hz.",
       "limitations": "No GDF payload, fixed header, event, annotation, target, signal, model, prediction, or score was accessed; recorded EMG is unavailable.",
       "supports": [
         "CLAIM-OFNER-NUISANCE-CONTROLLED-MOTOR-IMAGERY"

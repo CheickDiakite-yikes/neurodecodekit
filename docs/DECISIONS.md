@@ -14815,3 +14815,10 @@ green; only then may the single generated qualification run.
   no payload, header, event, target, signal, model, score, or Tier C authority.
   Next qualify a generated-only selector/acquisition adapter before proposing
   one separately gated original-GDF fixed-header observation.
+- 2026-08-29: Correct the Ofner manifest identity before acquisition code. The
+  versioned endpoint's raw response includes expiring signed `url` fields and
+  changed from SHA-256 `c227c2e8` to `443f8ed4` on recheck. Freeze a canonical
+  identity that removes only `url`, retains every stable path/size/checksum/
+  `bytes_url` field, sorts keys, and emits compact JSON plus one newline. Two
+  canonical replays matched at 748,162 bytes / SHA-256 `5e889976`. Treat fresh
+  signatures as transport capabilities, not scientific identity drift.

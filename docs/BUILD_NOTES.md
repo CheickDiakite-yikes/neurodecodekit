@@ -16471,3 +16471,9 @@ and require both remote jobs green before the one official qualification.
   frontier, updated the scientific ledger, and added strict source/storage/
   authority tests. No real payload, event, target, signal, model, score, or
   claim operation occurred.
+- 2026-08-29: Rechecked the NEMAR manifest before implementing its selector and
+  found raw-response hash drift caused by refreshed signed `url` values. The
+  corrected canonical form removes only that volatile field; two replays
+  matched at 748,162 bytes / SHA-256 `5e889976`. The 150 selected paths, sizes,
+  checksums, stable bytes URLs, total bytes, license, and measurement report did
+  not change. No payload request occurred.
