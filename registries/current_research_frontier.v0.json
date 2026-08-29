@@ -3,7 +3,7 @@
   "schema_version": "0.1.0",
   "recorded_at_local": "2026-08-29",
   "active_lane_id": "DREYER-C5R-1-HL",
-  "status": "HL1R1_Q0_passed_consumed_result_closeout_pending_remote_green_HL2_blocked",
+  "status": "HL1R1_Q0_passed_consumed_result_remotely_green_proof_closeout_pending_remote_green_HL2_blocked",
   "scientific_strategy": {
     "constitution": "docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md",
     "convergence_plan": "docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md",
@@ -1209,7 +1209,27 @@
                 "registered_attempts_consumed": 1,
                 "rerun_allowed": false,
                 "real_or_private_operations": 0,
-                "scientific_value": "none_generated_engineering_only"
+                "scientific_value": "none_generated_engineering_only",
+                "result_closeout_green": {
+                  "commit": "cb7e7f831a1056dfcf878ca23ed53aa6fd4738dc",
+                  "CI_run_id": 33254474440,
+                  "base_python_job_id": 99105690584,
+                  "optional_neuro_readers_job_id": 99105690672,
+                  "both_required_jobs_green": true,
+                  "on_GitHub_main": true
+                },
+                "result_proof": {
+                  "proof_id": "DREYER-C5R-1-HL1R1-Q0-R0-P0",
+                  "document": "docs/DREYER_C5R_1_STAGE_H_LIVE_RECOVERY_QUALIFICATION_RESULT_PROOF_CLOSEOUT.md",
+                  "registry": "registries/dreyer_c5r_1_stage_h_live_recovery_qualification_result_proof.v0.json",
+                  "status": "proof_only_closeout_pending_own_remote_green",
+                  "bound_artifact_count": 3,
+                  "bound_artifact_bytes": 13827,
+                  "qualification_repeated": false,
+                  "ignored_evidence_reopened": false,
+                  "real_or_private_operations": 0,
+                  "HL2_authority": false
+                }
               }
             }
           }
@@ -1472,7 +1492,7 @@
     "HL_packet_bound_authorization_decision": "complete_remotely_green",
     "HL1_live_wrapper": "closed",
     "HL1R1_generated_recovery_coordinator": "complete_remotely_green",
-    "HL1R1_generated_recovery_qualification": "passed_consumed_result_closeout_pending_remote_green",
+    "HL1R1_generated_recovery_qualification": "passed_consumed_result_remotely_green_proof_closeout_pending_remote_green",
     "HL2_one_real_EDF_preflight": "closed",
     "control_plane_update": "complete_remotely_green",
     "A_opaque_acquisition": "complete_consumed_result_remotely_green",
@@ -1489,8 +1509,8 @@
     "live_end_to_end_decoding": "not_established",
     "EEG_beyond_recorded_peripheral_controls": "not_established"
   },
-  "nearest_decisive_goal": "qualify_a_corrected_one_file_wrapper_before_verifying_the_fresh_source_EDF_sensor_roster",
-  "immediate_next_gate": "green_the_HL1R1_result_closeout_then_prepare_a_separate_all_false_HL2_activation_request",
+  "nearest_decisive_goal": "verify_the_fresh_source_EDF_sensor_roster_under_one_exact_fixed_header_preflight",
+  "immediate_next_gate": "green_the_HL1R1_result_proof_then_prepare_a_separate_all_false_HL2_activation_request",
   "claim_boundary": {
     "engineering_capability_established": "fresh_60_participant_replication_contract_generated_target_firewall_compact_model_scorer_streaming_sensor_preflight_and_pre_network_live_wrapper_failure_localization",
     "fresh_replication_design_frozen": true,

@@ -103,9 +103,13 @@ exact-green at `0ef634e4852d9f8a18d4b8a1f50e6a1331bd020a`, Base Python
 `99103540731`, Optional Neuro Readers `99103540620`, and CI `33253657120`.
 The sole `DREYER-C5R-1-HL1R1-Q0` attempt then passed all 65 cases in
 0.1789909170474857 seconds at 37,699,584-byte peak RSS and is consumed. Read
-its result closeout and machine record. The closeout is pending its own remote
-green proof; do not rerun or reinterpret Q0. H-L2 and real EDF authority remain
-false.
+its result closeout and machine record. Exact result closeout
+`cb7e7f831a1056dfcf878ca23ed53aa6fd4738dc` passed Base Python
+`99105690584`, Optional Neuro Readers `99105690672`, and CI `33254474440`,
+then reached GitHub `main`. Read the additive proof-only closeout next. It
+binds three exact result artifacts / 13,827 bytes and repeats no qualification
+or ignored-evidence access. The proof itself is pending its own remote green;
+do not rerun or reinterpret Q0. H-L2 and real EDF authority remain false.
 `COMM-P0-G-FS3` is paused as an adjacent engineering diagnostic; do not activate
 it under general continuation. No new data, target, model, score, device,
 release, or claim operation is authorized by this state.

@@ -1,0 +1,97 @@
+{
+  "schema_name": "neurodecodekit.dreyer_c5r_1_stage_h_live_recovery_qualification_result_proof",
+  "schema_version": "0.1.0",
+  "proof_id": "DREYER-C5R-1-HL1R1-Q0-R0-P0",
+  "recorded_at_local": "2026-08-29",
+  "lane_id": "DREYER-C5R-1-HL",
+  "status": "proof_only_closeout_effective_after_own_remote_green",
+  "green_result_closeout": {
+    "commit": "cb7e7f831a1056dfcf878ca23ed53aa6fd4738dc",
+    "commit_subject": "Close out H-L1R1 generated qualification",
+    "branch": "codex/loop-54a-vhdr-preregistration",
+    "CI_run_id": 33254474440,
+    "CI_url": "https://github.com/CheickDiakite-yikes/neurodecodekit/actions/runs/33254474440",
+    "base_python_job_id": 99105690584,
+    "base_python_duration": "6m36s",
+    "base_python_conclusion": "success",
+    "optional_neuro_readers_job_id": 99105690672,
+    "optional_neuro_readers_duration": "11m59s",
+    "optional_neuro_readers_conclusion": "success",
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true
+  },
+  "bound_artifacts": [
+    {
+      "path": "docs/DREYER_C5R_1_STAGE_H_LIVE_RECOVERY_QUALIFICATION_CLOSEOUT.md",
+      "bytes": 3344,
+      "sha256": "eb2ffc9e220065cbe02c60ad16ab7a3402e7a6d774ba795fb714a5da3c40d0de",
+      "git_blob": "c52a8ae47266fe39ac8e6fc379461f0f08f371c2"
+    },
+    {
+      "path": "registries/dreyer_c5r_1_stage_h_live_recovery_qualification_result.v0.json",
+      "bytes": 5216,
+      "sha256": "f3a1ddb8650e4d6cffe0a8f5d28eab4fbf8b25741ee9c132841d2289e0f62f8d",
+      "git_blob": "f63b517804e840df1f10e6e6ef319ed008a4e116"
+    },
+    {
+      "path": "tests/test_dreyer_c5r_1_stage_h_live_recovery_qualification_result.py",
+      "bytes": 5267,
+      "sha256": "93a8eb4d7e2f30ff3f2ed71533c42d8e01e23fd84fb10b58241695132d801657",
+      "git_blob": "31963462d3f67bcd2271130b5a2b8eb42ddb51b8"
+    }
+  ],
+  "bound_artifact_summary": {
+    "count": 3,
+    "bytes": 13827,
+    "canonical_artifact_set_sha256": "88eea98c743183c5d86485b3cd4d45fdf99f9fe9df783a362aab50750930f1dc"
+  },
+  "closed_result": {
+    "status": "passed_generated_only_consumed",
+    "matrix_cases_passed": 65,
+    "runtime_seconds": 0.1789909170474857,
+    "peak_process_tree_RSS_bytes": 37699584,
+    "generated_input_plus_output_bytes": 1623762,
+    "registered_attempts_consumed": 1,
+    "qualification_may_be_repeated": false,
+    "real_or_private_operations": 0,
+    "scientific_value": "none_generated_engineering_only"
+  },
+  "proof_only_operations": {
+    "GitHub_CI_verification_calls": 1,
+    "committed_aggregate_artifact_reads": 3,
+    "qualification_invocations": 0,
+    "ignored_evidence_file_reads": 0,
+    "generated_case_executions": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "real_or_private_path_operations": 0,
+    "real_EDF_header_or_payload_reads": 0,
+    "annotation_signal_target_or_label_reads": 0,
+    "model_training_or_inference_runs": 0,
+    "prediction_or_score_operations": 0,
+    "stream_device_or_hardware_operations": 0,
+    "release_or_claim_operations": 0
+  },
+  "next_gate": {
+    "proof_closeout_commit_required": true,
+    "proof_closeout_push_required": true,
+    "both_remote_CI_jobs_green_required": true,
+    "HL2_all_false_request_preparation_is_next_after_proof_green": true,
+    "HL2_request_prepared": false,
+    "HL2_authority": false,
+    "real_EDF_access_allowed": false,
+    "retry_rerun_resume_repair_or_substitution_allowed": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "generated_recovery_result_has_an_immutable_hash_bound_remotely_verified_evidence_chain",
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "neural_information_established": false,
+    "decoding_established": false,
+    "unseen_person_generalization_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_performance_established": false,
+    "clinical_value_established": false
+  }
+}

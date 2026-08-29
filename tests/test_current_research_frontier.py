@@ -20,7 +20,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(self.frontier["active_lane_id"], "DREYER-C5R-1-HL")
         self.assertEqual(
             self.frontier["status"],
-            "HL1R1_Q0_passed_consumed_result_closeout_pending_remote_green_HL2_blocked",
+            "HL1R1_Q0_passed_consumed_result_remotely_green_proof_closeout_pending_remote_green_HL2_blocked",
         )
 
     def test_scientific_strategy_converges_on_one_empirical_checkpoint(self):
@@ -418,6 +418,20 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(result["registered_attempts_consumed"], 1)
         self.assertFalse(result["rerun_allowed"])
         self.assertEqual(result["real_or_private_operations"], 0)
+        green = result["result_closeout_green"]
+        self.assertEqual(
+            green["commit"], "cb7e7f831a1056dfcf878ca23ed53aa6fd4738dc"
+        )
+        self.assertEqual(green["CI_run_id"], 33_254_474_440)
+        self.assertTrue(green["both_required_jobs_green"])
+        proof = result["result_proof"]
+        self.assertEqual(proof["proof_id"], "DREYER-C5R-1-HL1R1-Q0-R0-P0")
+        self.assertEqual(proof["bound_artifact_count"], 3)
+        self.assertEqual(proof["bound_artifact_bytes"], 13_827)
+        self.assertFalse(proof["qualification_repeated"])
+        self.assertFalse(proof["ignored_evidence_reopened"])
+        self.assertEqual(proof["real_or_private_operations"], 0)
+        self.assertFalse(proof["HL2_authority"])
         for key in (
             "real_requests",
             "real_network_bytes",
