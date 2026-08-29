@@ -27,7 +27,7 @@
     },
     {
       "path": "tests/test_ofner_gdf_header.py",
-      "sha256": "188c1dc0ca33b9624602ba917f0d02775ba79f792fb28ce1ad377351b25be1e4"
+      "sha256": "8fe108d3fc78c3f40ddbd3ee4ed760bf9e28e4a03d57a78682f94e0fa5bb7910"
     }
   ],
   "measurements": {

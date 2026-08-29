@@ -72,8 +72,8 @@ BIDS derivative is rejected because its public channel sidecar exposes only 61
 EEG channels and omits the required EOG and movement comparators. Read the
 Ofner source-reselection decision, `registries/current_research_frontier.v3.json`,
 and the knowledge ledger first. No GDF payload, event, target, annotation,
-signal, model, prediction, or score has been accessed, and no Tier C packet is
-active. The generated-only selector/acquisition
+signal, model, prediction, or score has been accessed.
+No Tier C packet is active. The generated-only selector/acquisition
 core passes two complete 150-member fixture replays and 20 refusal cases with
 zero network and retained payload. It exposes no real execution path and is not
 EEG evidence. Exact implementation `527dffd` passed Base Python `99139395588`,

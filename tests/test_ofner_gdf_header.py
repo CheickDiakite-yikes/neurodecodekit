@@ -116,6 +116,19 @@ class OfnerGDFHeaderTests(unittest.TestCase):
             parse_complete_header(self.fixture + b"\x00\x00", self.contract)
 
     def test_generated_qualification_is_deterministic_and_bounded(self) -> None:
+        result = self._run_generated_cli()
+        self.assertEqual(result["status"], "accepted_generated_only")
+        measurements = result["measurements"]
+        self.assertEqual(measurements["generated_replays"], 2)
+        self.assertEqual(measurements["combined_range_body_bytes_per_replay"], 24_832)
+        self.assertGreaterEqual(measurements["named_adversarial_refusals"], 30)
+        self.assertEqual(measurements["network_bytes"], 0)
+        self.assertEqual(measurements["retained_generated_payload_bytes"], 0)
+        self.assertTrue(result["determinism"]["replay_summaries_equal"])
+        self.assertTrue(result["determinism"]["transcript_digests_equal"])
+        self.assertTrue(all(value == 0 for value in result["operation_counters"].values()))
+
+    def _run_generated_cli(self) -> dict[str, object]:
         environment = os.environ.copy()
         environment.update(
             {
@@ -140,19 +153,16 @@ class OfnerGDFHeaderTests(unittest.TestCase):
             env=environment,
             text=True,
             capture_output=True,
-            check=True,
+            check=False,
+        )
+        self.assertEqual(
+            completed.returncode,
+            0,
+            f"qualification stderr: {completed.stderr}\nstdout: {completed.stdout}",
         )
         result = json.loads(completed.stdout)
-        self.assertEqual(result["status"], "accepted_generated_only")
-        measurements = result["measurements"]
-        self.assertEqual(measurements["generated_replays"], 2)
-        self.assertEqual(measurements["combined_range_body_bytes_per_replay"], 24_832)
-        self.assertGreaterEqual(measurements["named_adversarial_refusals"], 30)
-        self.assertEqual(measurements["network_bytes"], 0)
-        self.assertEqual(measurements["retained_generated_payload_bytes"], 0)
-        self.assertTrue(result["determinism"]["replay_summaries_equal"])
-        self.assertTrue(result["determinism"]["transcript_digests_equal"])
-        self.assertTrue(all(value == 0 for value in result["operation_counters"].values()))
+        self.assertIsInstance(result, dict)
+        return result
 
     def test_nonunit_thread_environment_refuses(self) -> None:
         old = os.environ.get("OMP_NUM_THREADS")
@@ -181,37 +191,12 @@ class OfnerGDFHeaderTests(unittest.TestCase):
         self.assertNotIn("execute", completed.stdout)
 
     def test_cli_generated_roundtrip_is_json_and_target_free(self) -> None:
-        environment = os.environ.copy()
-        environment.update(
-            {
-                "PYTHONPATH": str(ROOT / "src"),
-                "OPENBLAS_NUM_THREADS": "1",
-                "OMP_NUM_THREADS": "1",
-                "MKL_NUM_THREADS": "1",
-                "VECLIB_MAXIMUM_THREADS": "1",
-                "NUMEXPR_NUM_THREADS": "1",
-            }
-        )
-        completed = subprocess.run(
-            [
-                sys.executable,
-                "-m",
-                "neurodecodekit.ofner_gdf_header_cli",
-                "qualify-generated",
-                "--repo-root",
-                str(ROOT),
-            ],
-            cwd=ROOT,
-            env=environment,
-            text=True,
-            capture_output=True,
-            check=True,
-        )
-        result = json.loads(completed.stdout)
+        result = self._run_generated_cli()
         self.assertEqual(result["operation_counters"]["real_GDF_bytes"], 0)
         self.assertEqual(result["operation_counters"]["signal_sample_reads"], 0)
-        self.assertNotIn("target_text", completed.stdout)
-        self.assertLess(len(completed.stdout.encode("utf-8")), 1024 * 1024)
+        encoded = json.dumps(result, sort_keys=True).encode("utf-8")
+        self.assertNotIn(b"target_text", encoded)
+        self.assertLess(len(encoded), 1024 * 1024)
 
 
 if __name__ == "__main__":
