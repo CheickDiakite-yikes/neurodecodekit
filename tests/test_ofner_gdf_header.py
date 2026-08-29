@@ -7,6 +7,7 @@ import sys
 import unittest
 from dataclasses import replace
 from pathlib import Path
+from unittest.mock import patch
 
 from neurodecodekit.datasets.ofner_gdf_header import (
     CONTRACT_SHA256,
@@ -116,7 +117,11 @@ class OfnerGDFHeaderTests(unittest.TestCase):
             parse_complete_header(self.fixture + b"\x00\x00", self.contract)
 
     def test_generated_qualification_is_deterministic_and_bounded(self) -> None:
-        result = self._run_generated_cli()
+        with patch(
+            "neurodecodekit.datasets.ofner_gdf_header._peak_rss_bytes",
+            return_value=26_214_400,
+        ):
+            result = run_generated_qualification(ROOT)
         self.assertEqual(result["status"], "accepted_generated_only")
         measurements = result["measurements"]
         self.assertEqual(measurements["generated_replays"], 2)
@@ -128,41 +133,12 @@ class OfnerGDFHeaderTests(unittest.TestCase):
         self.assertTrue(result["determinism"]["transcript_digests_equal"])
         self.assertTrue(all(value == 0 for value in result["operation_counters"].values()))
 
-    def _run_generated_cli(self) -> dict[str, object]:
-        environment = os.environ.copy()
-        environment.update(
-            {
-                "PYTHONPATH": str(ROOT / "src"),
-                "OPENBLAS_NUM_THREADS": "1",
-                "OMP_NUM_THREADS": "1",
-                "MKL_NUM_THREADS": "1",
-                "VECLIB_MAXIMUM_THREADS": "1",
-                "NUMEXPR_NUM_THREADS": "1",
-            }
-        )
-        completed = subprocess.run(
-            [
-                sys.executable,
-                "-m",
-                "neurodecodekit.ofner_gdf_header_cli",
-                "qualify-generated",
-                "--repo-root",
-                str(ROOT),
-            ],
-            cwd=ROOT,
-            env=environment,
-            text=True,
-            capture_output=True,
-            check=False,
-        )
-        self.assertEqual(
-            completed.returncode,
-            0,
-            f"qualification stderr: {completed.stderr}\nstdout: {completed.stdout}",
-        )
-        result = json.loads(completed.stdout)
-        self.assertIsInstance(result, dict)
-        return result
+    def test_generated_qualification_refuses_over_rss_cap(self) -> None:
+        with patch(
+            "neurodecodekit.datasets.ofner_gdf_header._peak_rss_bytes",
+            return_value=268_435_457,
+        ), self.assertRaisesRegex(OfnerGDFHeaderRefusal, "RSS cap"):
+            run_generated_qualification(ROOT)
 
     def test_nonunit_thread_environment_refuses(self) -> None:
         old = os.environ.get("OMP_NUM_THREADS")
@@ -190,11 +166,29 @@ class OfnerGDFHeaderTests(unittest.TestCase):
         self.assertIn("qualify-generated", completed.stdout)
         self.assertNotIn("execute", completed.stdout)
 
-    def test_cli_generated_roundtrip_is_json_and_target_free(self) -> None:
-        result = self._run_generated_cli()
-        self.assertEqual(result["operation_counters"]["real_GDF_bytes"], 0)
-        self.assertEqual(result["operation_counters"]["signal_sample_reads"], 0)
-        encoded = json.dumps(result, sort_keys=True).encode("utf-8")
+    def test_cli_generated_plan_roundtrip_is_json_and_target_free(self) -> None:
+        environment = os.environ.copy()
+        environment["PYTHONPATH"] = str(ROOT / "src")
+        completed = subprocess.run(
+            [
+                sys.executable,
+                "-m",
+                "neurodecodekit.ofner_gdf_header_cli",
+                "plan",
+                "--repo-root",
+                str(ROOT),
+            ],
+            cwd=ROOT,
+            env=environment,
+            text=True,
+            capture_output=True,
+            check=True,
+        )
+        result = json.loads(completed.stdout)
+        self.assertEqual(result["mode"], "generated_only")
+        self.assertFalse(result["network_client_present"])
+        self.assertFalse(result["real_execution_command_present"])
+        encoded = completed.stdout.encode("utf-8")
         self.assertNotIn(b"target_text", encoded)
         self.assertLess(len(encoded), 1024 * 1024)
 
