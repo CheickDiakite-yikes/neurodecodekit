@@ -14650,3 +14650,14 @@ green; only then may the single generated qualification run.
   the registered one-shot qualification, H-L2, real/private paths, network,
   EDF, targets, models, scores, devices, releases, other projects, and claims
   closed behind later exact decisions.
+- 2026-08-29: Accept packet-bound decision
+  `eaff077fc14b10886a6c26f45318ae649765e76d` after Base Python
+  `99088241281`, Optional Neuro Readers `99088241372`, and CI `33247816266`
+  passed on GitHub `main`. Implement H-L1R1 additively without changing the
+  consumed predecessor. Exercise deterministic generated H1 and all 43 ordered
+  failure identities as unit-level development checks, not as the registered
+  one-shot qualification. Expose only plan and aggregate inspection commands.
+  Require this exact implementation and both CI jobs green, then a proof-only
+  closeout and separate all-false qualification activation before any official
+  qualification. Keep H-L2, real/private data, network, models, scores,
+  devices, releases, other projects, and claims closed.

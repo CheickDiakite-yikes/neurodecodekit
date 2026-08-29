@@ -74,11 +74,16 @@ Exact request `0152fa5417f85c54d8c022634e73bee69bc8ef70` passed Base Python
 proof-only closeout `8868a0866fd8f31bf7ba435e94b1b619314910ec`
 passed Base Python `99052724528`, Optional Neuro Readers `99052724399`, and CI
 `33234406143`, then reached GitHub `main`. The maintainer's fresh exact words
-`continue` are recorded in the H-L1R1 recovery decision, which is ineffective
-until its own commit is pushed and remotely green. After that barrier, only the
-additive generated implementation and bounded unit-level generated checks are
-authorized. The registered qualification still requires a separate all-false
-activation and fresh decision; H-L2 and real EDF authority remain false.
+`continue` are recorded in H-L1R1 recovery decision
+`eaff077fc14b10886a6c26f45318ae649765e76d`, which passed Base Python
+`99088241281`, Optional Neuro Readers `99088241372`, and CI `33247816266`,
+then reached GitHub `main`. Only the additive generated implementation and
+bounded unit-level generated checks are authorized. The implementation now
+exists in a separate module and exposes no qualification or real command; its
+exact commit must become remotely green before a proof-only closeout or
+qualification activation. The registered qualification still requires a
+separate all-false activation and fresh decision; H-L2 and real EDF authority
+remain false.
 `COMM-P0-G-FS3` is paused as an adjacent engineering diagnostic; do not activate
 it under general continuation. No new data, target, model, score, device,
 release, or claim operation is authorized by this state.

@@ -20,7 +20,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(self.frontier["active_lane_id"], "DREYER-C5R-1-HL")
         self.assertEqual(
             self.frontier["status"],
-            "HL1_R0_proof_green_HL1R1_decision_pending_remote_green_HL2_blocked",
+            "HL1_R0_proof_green_HL1R1_decision_green_implementation_pending_remote_green_HL2_blocked",
         )
 
     def test_scientific_strategy_converges_on_one_empirical_checkpoint(self):
@@ -275,16 +275,35 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(recovery_decision["maintainer_words"], "continue")
         self.assertEqual(
             recovery_decision["status"],
-            "recorded_pending_own_commit_push_remote_green",
+            "remotely_green_implementation_authority_active",
         )
-        self.assertIsNone(recovery_decision["commit"])
-        self.assertFalse(recovery_decision["decision_effective_now"])
+        self.assertEqual(
+            recovery_decision["commit"],
+            "eaff077fc14b10886a6c26f45318ae649765e76d",
+        )
+        self.assertEqual(recovery_decision["CI_run_id"], 33_247_816_266)
+        self.assertTrue(recovery_decision["both_required_jobs_green"])
+        self.assertTrue(recovery_decision["decision_effective_now"])
         self.assertTrue(
             recovery_decision["implementation_authority_after_remote_green"]
         )
         self.assertFalse(recovery_decision["registered_qualification_authority"])
         self.assertFalse(recovery_decision["HL2_authority"])
         self.assertEqual(recovery_decision["real_or_private_operations"], 0)
+        implementation = recovery["generated_recovery_implementation"]
+        self.assertEqual(implementation["implementation_id"], "DREYER-C5R-1-HL1R1-I0")
+        self.assertEqual(
+            implementation["status"],
+            "implementation_complete_pending_own_commit_push_remote_green",
+        )
+        self.assertIsNone(implementation["commit"])
+        self.assertEqual(implementation["focused_tests"], 9)
+        self.assertEqual(implementation["focused_subtests"], 43)
+        self.assertEqual(implementation["ordered_failure_identities_passed"], 43)
+        self.assertEqual(implementation["registered_qualification_runs"], 0)
+        self.assertFalse(implementation["qualification_command_exposed"])
+        self.assertFalse(implementation["real_command_exposed"])
+        self.assertEqual(implementation["real_or_private_operations"], 0)
         for key in (
             "real_requests",
             "real_network_bytes",
