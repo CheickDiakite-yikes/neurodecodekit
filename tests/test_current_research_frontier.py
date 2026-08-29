@@ -20,7 +20,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(self.frontier["active_lane_id"], "DREYER-C5R-1-HL")
         self.assertEqual(
             self.frontier["status"],
-            "HL1R1_Q0_passed_consumed_result_and_proof_remotely_green_HL2_all_false_request_pending_remote_green",
+            "HL2_all_false_request_remotely_green_proof_closeout_pending_remote_green",
         )
 
     def test_scientific_strategy_converges_on_one_empirical_checkpoint(self):
@@ -439,6 +439,20 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertFalse(proof["HL2_authority"])
         request = packet["queued_HL2_activation_request"]
         self.assertEqual(request["request_id"], "DREYER-C5R-1-HL2-A0")
+        self.assertEqual(
+            request["status"],
+            "request_only_all_authority_false_remotely_green_proof_pending_own_remote_green",
+        )
+        self.assertEqual(
+            request["commit"], "a97fc191106e5fe42859d871d78e59930bef79ac"
+        )
+        self.assertEqual(request["CI_run_id"], 33_255_920_346)
+        self.assertEqual(request["base_python_job_id"], 99_109_482_999)
+        self.assertEqual(
+            request["optional_neuro_readers_job_id"], 99_109_482_995
+        )
+        self.assertTrue(request["both_required_jobs_green"])
+        self.assertTrue(request["on_GitHub_main"])
         self.assertTrue(request["all_authority_flags_false"])
         self.assertTrue(request["fresh_packet_bound_maintainer_decision_required"])
         self.assertFalse(request["predating_short_form_may_activate"])
@@ -448,6 +462,21 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(request["requested_remaining_payloads"], 0)
         self.assertEqual(request["real_or_private_operations"], 0)
         self.assertFalse(request["authority_expanded"])
+        proof = request["request_proof"]
+        self.assertEqual(proof["proof_id"], "DREYER-C5R-1-HL2-A0-P0")
+        self.assertEqual(proof["bound_artifact_count"], 3)
+        self.assertEqual(proof["bound_artifact_bytes"], 18_035)
+        self.assertEqual(
+            proof["canonical_artifact_set_sha256"],
+            "d0d0de3cbd7c448852ebdfcb28dc7e3dc2c561307cba164d2be3629f2756382e",
+        )
+        self.assertFalse(proof["decision_recorded"])
+        self.assertTrue(
+            proof["fresh_packet_bound_maintainer_words_required_after_proof_green"]
+        )
+        self.assertFalse(proof["predating_maintainer_words_may_activate"])
+        self.assertFalse(proof["HL2_authority"])
+        self.assertFalse(proof["real_EDF_access_allowed"])
         for key in (
             "real_requests",
             "real_network_bytes",

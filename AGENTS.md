@@ -115,8 +115,16 @@ then reached GitHub `main`. Read the queued all-false
 `DREYER-C5R-1-HL2-A0` fixed-header activation request next. It proposes one
 exact 14,805,604-byte public EDF transaction after its own proof, fresh
 packet-bound decision, implementation, and activation barriers. The request is
-pending its own remote green and authorizes nothing now. Do not rerun or
-reinterpret Q0. H-L2 and real EDF authority remain false.
+exact-green at `a97fc191106e5fe42859d871d78e59930bef79ac`, Base Python
+`99109482999`, Optional Neuro Readers `99109482995`, and CI `33255920346`, and
+is on GitHub `main`. Read its additive proof-only closeout next; it binds three
+exact request artifacts / 18,035 bytes and repeats no implementation,
+qualification, activation, network, real/private, EDF, model, target, score, or
+claim operation. The proof remains pending its own remote green. Only after
+that may fresh packet-bound maintainer words activate a separately recorded
+decision; the maintainer's earlier `continue` predates this packet and cannot
+activate it. Do not rerun or reinterpret Q0. H-L2 and real EDF authority remain
+false.
 `COMM-P0-G-FS3` is paused as an adjacent engineering diagnostic; do not activate
 it under general continuation. No new data, target, model, score, device,
 release, or claim operation is authorized by this state.
