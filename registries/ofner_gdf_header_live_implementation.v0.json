@@ -1,0 +1,157 @@
+{
+  "schema_name": "neurodecodekit.ofner_gdf_header_live_implementation",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-29",
+  "packet_id": "OFNER-C6R-1-HL",
+  "status": "generated_qualified_remote_green_required_before_activation",
+  "green_decision": {
+    "commit": "8ed4b7c93ad1a53c30bdacac63934a30d9f6a2f4",
+    "CI_run_id": 33275389198,
+    "base_python_job_id": 99161070113,
+    "optional_neuro_readers_job_id": 99161070207,
+    "both_required_jobs_green": true,
+    "commit_on_GitHub_main": true
+  },
+  "implementation": {
+    "standard_library_live_wrapper": true,
+    "reuses_exact_qualified_manifest_selector": true,
+    "reuses_exact_qualified_GDF_header_parser": true,
+    "activation_locked_real_command": true,
+    "verified_TLS": true,
+    "proxy_overrides": 0,
+    "redirects": 0,
+    "retries": 0,
+    "fallbacks_or_substitutions": 0,
+    "durable_consumed_marker_before_opener": true,
+    "response_bodies_retained": false,
+    "whole_GDF_file_request_present": false,
+    "event_annotation_or_signal_parser_present": false,
+    "model_or_scorer_present": false
+  },
+  "exact_success_schedule": {
+    "manifest_GET_requests": 1,
+    "GDF_range_GET_requests": 2,
+    "first_range": "bytes=0-255",
+    "second_range": "bytes=256-(declared_header_length-1)",
+    "expected_complete_header_bytes": 24832,
+    "combined_GDF_body_bytes_maximum": 65536,
+    "full_payload_bytes": 105365484,
+    "full_payload_requested": false,
+    "full_payload_SHA256_recomputed": false
+  },
+  "generated_qualification": {
+    "registered_invocations": 1,
+    "all_gates_passed": true,
+    "generated_replays": 2,
+    "mock_requests_per_replay": 3,
+    "named_adversarial_refusals": 35,
+    "generated_input_bytes": 244228,
+    "runtime_seconds": 0.19265995896421373,
+    "peak_process_RSS_bytes": 40435712,
+    "network_bytes": 0,
+    "retained_generated_payload_bytes": 0,
+    "deterministic_measurement_contract": true,
+    "deterministic_request_schedule": true,
+    "marker_precedes_opener": true
+  },
+  "resource_envelope": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 0,
+    "runtime_seconds_maximum": 120,
+    "peak_process_RSS_bytes_maximum": 268435456,
+    "manifest_body_bytes_maximum": 2097152,
+    "GDF_range_body_bytes_maximum": 65536,
+    "total_response_body_bytes_maximum": 2162688,
+    "incremental_disk_bytes_maximum": 4194304,
+    "public_output_bytes_maximum": 1048576,
+    "free_disk_bytes_minimum": 2147483648,
+    "producer_is_causal": null,
+    "required_context_seconds": null,
+    "end_to_end_latency_measured": false,
+    "transport_header_bytes": null,
+    "TLS_bytes": null
+  },
+  "tracked_file_hashes": [
+    {
+      "path": "src/neurodecodekit/datasets/ofner_gdf_header_live.py",
+      "bytes": 70279,
+      "sha256": "029a4cf1f3c7fea8878a74db49ea6e561674bb0ecedfbb5ed54ac9e05ca95ade"
+    },
+    {
+      "path": "src/neurodecodekit/ofner_gdf_header_live_cli.py",
+      "bytes": 2472,
+      "sha256": "6a90c426385f50975bb4fcd0aece0ab2f217277b1f60d792c2bc32ae27205f1c"
+    },
+    {
+      "path": "tests/test_ofner_gdf_header_live.py",
+      "bytes": 11030,
+      "sha256": "b7589d7700d58f830489b43a25bfefe8d23ea5b11dff53711336c19a5a96acdd"
+    },
+    {
+      "path": "registries/ofner_gdf_header_live_generated_qualification.v0.json",
+      "bytes": 2661,
+      "sha256": "e2731b3ad23d76a657c3beee6aa85a51af211c7b1bf4d4e5b441dda93756d640"
+    },
+    {
+      "path": "docs/OFNER_2017_MOTOR_IMAGERY_RANGE_HEADER_LIVE_IMPLEMENTATION.md",
+      "bytes": 4979,
+      "sha256": "48b84ee1af928fd656c57da5aaf89fb8f9f38fb0b7132c5e77116bb70c75f983"
+    }
+  ],
+  "tracked_file_summary": {
+    "count": 5,
+    "bytes": 91421
+  },
+  "execution_state": {
+    "implementation_commit_recorded": false,
+    "implementation_CI_green_recorded": false,
+    "activation_record_created": false,
+    "real_invocation_consumed": false,
+    "real_terminal_route": null
+  },
+  "real_operation_counters": {
+    "manifest_GET_requests": 0,
+    "GDF_range_GET_requests": 0,
+    "source_response_bytes": 0,
+    "real_GDF_header_reads": 0,
+    "whole_GDF_file_requests": 0,
+    "full_payload_SHA256_passes": 0,
+    "event_or_annotation_reads": 0,
+    "signal_sample_reads": 0,
+    "target_or_label_reads": 0,
+    "model_or_checkpoint_opens": 0,
+    "training_runs": 0,
+    "model_inference_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "provider_or_language_model_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0,
+    "retries_or_reruns": 0
+  },
+  "authority": {
+    "create_activation_before_this_exact_implementation_is_remote_green": false,
+    "make_real_manifest_request": false,
+    "make_real_GDF_range_request": false,
+    "read_real_GDF_header": false,
+    "request_whole_GDF_or_other_member": false,
+    "read_event_annotation_signal_target_or_label": false,
+    "access_model_train_infer_predict_or_score": false,
+    "rerun_generated_qualification": false,
+    "upgrade_scientific_claim": false
+  },
+  "next_gate": {
+    "commit_and_push_exact_implementation": true,
+    "both_remote_CI_jobs_green_required": true,
+    "then_create_exact_one_shot_activation": true,
+    "activation_must_be_committed_pushed_and_remotely_green": true,
+    "real_checkpoint_available_now": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "An activation-locked range-only wrapper can verify one exact public GDF fixed-header representation under strict proof transport resource and publication controls.",
+    "scientific_claim_not_established": "Generated mock qualification is not EEG evidence and establishes no neural effect EEG beyond EOG or kinematics unseen-person generalization movement intention motor-cortex causation thought or language decoding live decoding hardware result or clinical utility."
+  }
+}
