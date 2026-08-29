@@ -14865,3 +14865,32 @@ green; only then may the single generated qualification run.
   artifacts / 36,105 bytes. The decision remains ineffective until its exact
   commit is pushed and both remote CI jobs are green; recording it performs no
   implementation, source request, GDF read, model, score, or claim operation.
+- 2026-08-29: Accept packet-bound decision
+  `8ed4b7c93ad1a53c30bdacac63934a30d9f6a2f4` after Base Python
+  `99161070113`, Optional Neuro Readers `99161070207`, and CI `33275389198`
+  passed on GitHub `main`. Implement only the standard-library live wrapper and
+  run the sole generated/mock qualification. Preserve one manifest GET, two
+  range GETs, a 65,536-byte GDF-body ceiling, marker-before-opener ordering,
+  one thread, no retry, and zero event, signal, target, model, score, device,
+  release, or claim authority until a separate activation is green.
+- 2026-08-29: Accept the exact Ofner live wrapper after its sole generated
+  qualification passed two deterministic replays, three mock requests per
+  replay, and 35 named refusals in 0.19265995896421373 seconds at 40,435,712-
+  byte peak RSS, with zero network and zero retained payload. Exact successor
+  `b6c55dfed93d803a14df906f9c0b57c04e44cd58` passed Base Python
+  `99166826652`, Optional Neuro Readers `99166826697`, and CI `33277551227`
+  on GitHub `main`. Freeze one no-authority activation binding that successor;
+  do not access NEMAR before the activation itself is remotely green.
+- 2026-08-29: Accept activation
+  `9513bcdf73f674d2bc3b5b95d56005c97e4dbd26` after Base Python
+  `99168511449`, Optional Neuro Readers `99168511591`, and CI `33278169561`
+  passed on GitHub `main`. Consume the sole `OFNER-C6R-1-HL-R0` invocation at
+  `OFNER-H0-TRANSPORT`: manifest identity selection completed, then the first
+  256-byte GDF range refused before any GDF body byte was accepted. Record one
+  manifest GET / 1,352,270 body bytes, one GDF range attempt / zero GDF body
+  bytes, zero header or scientific operations, 1.1932796670589596 seconds,
+  48,021,504-byte peak RSS, and zero retained payload. Treat this as a
+  fail-closed transport result, not a biological null. Never retry, rerun,
+  repair, resume, substitute, reinterpret, or reopen its ignored marker. Park
+  the exact lane, leave no Tier C packet active, and make artifact-only
+  transport postmortem plus fresh source selection the next reversible work.

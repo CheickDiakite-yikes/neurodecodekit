@@ -10,30 +10,24 @@
 > Scientific strategy, updated 2026-08-29: read
 > `docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md`, then
 > `docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md`, then
-> `registries/scientific_knowledge_ledger.v0.json`. The frozen 60-person Dreyer
-> route is the parked predecessor. Its sole H-L2
-> fixed-header attempt is consumed at aggregate `DREYER-H0`: one endpoint
-> response opened, strict transport validation refused, and zero response-body
-> or EDF-header bytes were read. This is not a biological result. The exact
-> Dreyer lane is parked. The prospective flagship is now `OFNER-C6R-1`: public
+> `registries/scientific_knowledge_ledger.v0.json`. Dreyer remains the parked
+> predecessor. The prospective scientific question is `OFNER-C6R-1`: public
 > metadata selected 15 participants / 150 original motor-imagery GDF files /
 > 13,748,417,608 bytes with reported 61 EEG, three EOG, and 32 hand/arm movement
-> channels. The smaller BIDS derivative is rejected because it omits those
-> nuisance comparators. No payload has been downloaded, no Tier C packet is
-> active. The generated-only selector/acquisition core passes two complete
-> 150-file replays and 20 refusal cases with zero network or retained payload,
-> and its exact implementation and proof are remotely green. The follow-on
-> header-only parser and two-range firewall now pass two 24,832-byte synthetic
-> replays and 41 refusals, recover the frozen 96-role roster at 512 Hz, reject
-> trailing data bytes, and expose no network or real execution command. This is
-> not EEG evidence. The exact implementation and proof are remotely green. An
-> all-false `OFNER-C6R-1-HL` packet now freezes one manifest refresh and two
-> gapless ranges totaling at most 65,536 GDF bytes from subject 1/run 1, but it
-> authorizes nothing. Request `af9d024` and proof `2c313d5` are green. It is now
-> the sole active Tier C packet for fresh packet-bound maintainer words; a
-> separately green decision is required before implementation. Read
-> `registries/current_research_frontier.v5.json`.
-> COMM-P0-G FS3 remains paused as an adjacent engineering diagnostic.
+> channels. Its generated selector and header parser passed their synthetic
+> qualifications. The sole real range-header invocation then consumed at
+> `OFNER-H0-TRANSPORT`: manifest identity selection completed, but the first
+> 256-byte GDF range yielded zero accepted GDF body bytes. No real header,
+> channel roster, geometry, signal, event, target, model, prediction, or score
+> was observed. Runtime was 1.1932796670589596 seconds, peak RSS was 48,021,504
+> bytes, and no payload was retained. This is not a biological result. Never
+> retry, rerun, repair, resume, substitute, reinterpret, or reopen its ignored
+> marker. No Tier C packet is active. Read
+> `registries/current_research_frontier.v6.json`; its predecessor
+> `registries/current_research_frontier.v5.json` remains immutable history. The
+> next reversible work is artifact-only transport postmortem and fresh source
+> selection. Any later real gate still requires fresh packet-bound maintainer
+> words and a separately green Tier C decision. COMM-P0-G FS3 remains paused.
 
 > Dreyer H-L1R1 recovery update, 2026-08-29: exact generated coordinator
 > `0ef634e4852d9f8a18d4b8a1f50e6a1331bd020a` passed Base Python
@@ -203,14 +197,14 @@
 > so runtime architecture, not more model capacity, is the next reversible
 > engineering question.
 
-## Current Frontier: Dreyer H-L2 Consumed At Transport H0
+## Current Frontier: Ofner Range Header Consumed At Transport H0
 
 Historical exact control-plane label retained for proof compatibility:
 `Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight`.
 
-Start with `registries/current_research_frontier.v5.json`, the machine-readable
-snapshot of the active lane, proof chain, consumed status, measurements, goals,
-and next transition.
+Start with `registries/current_research_frontier.v6.json`, the machine-readable
+snapshot of the consumed lane, proof chain, measurements, claim boundary, and
+next transition. Version 5 remains its immutable pre-execution predecessor.
 
 The prior BNCI experiment found real held-out protocol information, but it did
 not establish an EEG-specific effect: posterior EEG slightly beat the selected

@@ -62,9 +62,10 @@ class CurrentResearchFrontierV5Tests(unittest.TestCase):
         for key, value in claims.items():
             self.assertEqual(value, key in proven_engineering, key)
 
-    def test_knowledge_ledger_matches_current_packet(self) -> None:
+    def test_knowledge_ledger_records_the_later_consumed_transition(self) -> None:
         boundary = self.ledger["operation_boundary"]
-        self.assertEqual(boundary["active_tier_c_packet"], "OFNER-C6R-1-HL")
+        self.assertEqual(self.frontier["active_lane_id"], "OFNER-C6R-1-HL")
+        self.assertIsNone(boundary["active_tier_c_packet"])
         self.assertTrue(boundary["all_authority_flags_false"])
 
     def test_current_control_plane_names_v5_and_fresh_decision(self) -> None:

@@ -1,6 +1,6 @@
 # Scientific Convergence And Invention Plan
 
-Date: 2026-08-28
+Date: 2026-08-29
 
 Status: active strategic plan; Tier A analysis only; no new data authority
 
@@ -25,23 +25,26 @@ controlled question. The new claim asks whether central EEG adds held-out
 seven-class imagined-movement information beyond EOG, recorded kinematics,
 posterior EEG, cue/timing, and matched derangement in unseen people.
 
-No real Ofner payload or header has been accessed. `OFNER-C6R-1-HL` is the sole
-active Tier C packet for a fresh decision, but every operation authority is false.
-The generated-only selector/acquisition milestone passes two complete
+No real Ofner payload or header has been accepted. The generated-only
+selector/acquisition milestone passes two complete
 150-member fixture replays and 20 fail-closed cases while separating stable
 scientific identity from expiring signed transport capabilities; its exact
 implementation and proof are remotely green. The follow-on generated GDF 2.x
 header parser and two-range firewall pass two 24,832-byte replays and 41
 refusals, recover the frozen 96-role synthetic roster at 512 Hz, and reject any
-trailing data bytes. It has no live-network execution path and is not EEG
-evidence. Exact implementation, request, and proof are remotely green. The
-`OFNER-C6R-1-HL` packet freezes one manifest refresh plus two range reads of at
-most 65,536 GDF bytes. The ordered next steps are fresh packet-bound maintainer
-words, one separately green decision, generated wrapper proof, one separately
-activated header check, then a
-fresh acquisition/model preregistration and only later one target-firewalled
-execution. Because no EMG was recorded, even a future pass cannot claim
-independence from all muscle activity.
+trailing data bytes. It remains generated engineering, not EEG evidence.
+
+The exact decision, live wrapper, and activation later became remotely green.
+The sole `OFNER-C6R-1-HL-R0` invocation consumed at
+`OFNER-H0-TRANSPORT`: manifest identity selection completed, then the first
+256-byte GDF range yielded zero accepted GDF body bytes. No real GDF header,
+sensor roster, geometry, event, annotation, signal, target, model, prediction,
+or score was observed. This is a transport refusal, not a biological null, and
+the attempt cannot be retried, rerun, repaired, resumed, substituted, or
+reinterpreted. No Tier C packet is active. The ordered next steps are a Tier A
+artifact-only transport postmortem, fresh transport-verified source selection,
+and only then a separately named Tier C proposal. Because no EMG was recorded,
+even a future Ofner pass could not claim independence from all muscle activity.
 
 ## Decision In One Page
 

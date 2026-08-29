@@ -16515,3 +16515,26 @@ and require both remote jobs green before the one official qualification.
   `99156829296`, and CI `33273777182` on GitHub `main`. Added frontier v5 and
   named `OFNER-C6R-1-HL` as the sole packet eligible for fresh maintainer words;
   every implementation and real/scientific operation remains false or zero.
+- 2026-08-29: Packet-bound decision `8ed4b7c` passed Base `99161070113`,
+  Optional `99161070207`, and CI `33275389198` on GitHub `main`. Added the
+  standard-library activation-locked live wrapper, proof collector, consumed
+  marker, range firewall, bounded public reporter, CLI, and adversarial tests.
+  The sole generated qualification passed two deterministic replays, three
+  mock requests per replay, and 35 named refusals in 0.19265995896421373
+  seconds at 40,435,712-byte peak RSS with zero network and retained payload.
+- 2026-08-29: Exact wrapper successor `b6c55df` passed Base `99166826652`,
+  Optional `99166826697`, and CI `33277551227` on GitHub `main`. The successor
+  only made the activation lifecycle test accept the separately governed
+  pre/post-activation states and refreshed its bound implementation registry.
+  Added activation `9513bcd`, which passed Base `99168511449`, Optional
+  `99168511591`, and CI `33278169561` on GitHub `main` before live access.
+- 2026-08-29: Consumed the sole `OFNER-C6R-1-HL-R0` invocation. The exact
+  manifest completed identity selection; the first 256-byte GDF range then
+  refused at `OHL-TRANSPORT` before accepting any GDF body byte. The aggregate
+  result records one manifest GET / 1,352,270 body bytes, one GDF range attempt
+  / zero GDF body bytes, zero full-file, header, event, annotation, signal,
+  target, model, prediction, score, retry, fallback, release, or claim
+  operations, 1.1932796670589596 seconds runtime, 48,021,504-byte peak RSS,
+  4,096 private allocated bytes, 2,340 public output bytes, and zero retained
+  payload. The invocation is consumed and cannot be retried or reinterpreted;
+  no scientific claim changed.

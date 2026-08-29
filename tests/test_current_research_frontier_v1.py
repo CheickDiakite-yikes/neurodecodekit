@@ -604,9 +604,9 @@ class CurrentResearchFrontierV1Tests(unittest.TestCase):
 
     def test_control_plane_entrypoints_name_the_current_frontier(self):
         expected = {
-            "AGENTS.md": "sole active Tier C packet",
-            "START_HERE.md": "Current Frontier: Dreyer H-L2 Consumed At Transport H0",
-            "README.md": "sole active Tier C packet",
+            "AGENTS.md": "registries/current_research_frontier.v6.json",
+            "START_HERE.md": "Current Frontier: Ofner Range Header Consumed At Transport H0",
+            "README.md": "registries/current_research_frontier.v6.json",
             "docs/CODEX_HANDOFF.md": "Current scientific frontier, 2026-08-29",
             "docs/NEXT_20_LOOPS_TRACKER.md": "DREYER-C5R-1 H-L2 closeout (2026-08-29)",
         }

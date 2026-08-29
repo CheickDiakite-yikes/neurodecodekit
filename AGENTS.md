@@ -64,37 +64,25 @@ drift. This is a consumed transport outcome, not a biological null. Never
 retry, rerun, repair, resume, substitute, or reinterpret it, and never inspect
 its ignored marker or private paths.
 
-The prospective flagship is now `OFNER-C6R-1`. Public metadata for immutable
-NEMAR `nm000173` `v1.0.3` selects exactly 150 original motor-imagery GDF files
-across 15 participants / 13,748,417,608 bytes. This representation reports 61
-EEG, three EOG, 19 glove, and 13 arm channels at 512 Hz. The smaller 4.58 GB
-BIDS derivative is rejected because its public channel sidecar exposes only 61
-EEG channels and omits the required EOG and movement comparators. Read the
-Ofner source-reselection decision, `registries/current_research_frontier.v5.json`,
-and the knowledge ledger first. No GDF payload, event, target, annotation,
-signal, model, prediction, or score has been accessed.
-`OFNER-C6R-1-HL` is the sole active Tier C packet for a fresh packet-bound
-decision, but every operation authority remains false. The generated-only selector/acquisition
-core passes two complete 150-member fixture replays and 20 refusal cases with
-zero network and retained payload. It exposes no real execution path and is not
-EEG evidence. Exact implementation `527dffd` passed Base Python `99139395588`,
-Optional Neuro Readers `99139395701`, and CI `33267249838`; exact proof
-`786b124` passed Base `99141069026`, Optional `99141069150`, and CI
-`33267877803`, all on GitHub `main`. Header-only contract
-`OFNER-C6R-1-HG0` is exact-green at `25fe452`, Base `99143134373`, Optional
-`99143134445`, and CI `33268675964`. Its generated-only GDF 2.x parser and
-two-range firewall pass two 24,832-byte synthetic header replays plus 41
-refusals in 0.002138459 seconds at 26,214,400-byte peak RSS, with zero network
-or real/scientific operation. It has no network client, real execution command,
-event parser, signal parser, model, or scorer. Exact successor `ca5d1db` passed
-Base `99151605412`, Optional `99151605230`, and CI `33271860805`; proof-only
-closeout `6815338` passed Base `99152912864`, Optional `99152912757`, and CI
-`33272310252`, all on GitHub `main`. The all-false `OFNER-C6R-1-HL` range-only
-request and proof are now green. It proposes one manifest refresh and two
-gapless ranges totaling at most 65,536 GDF bytes from exactly subject 1/run 1.
-Exact request `af9d024` passed CI `33273113793`; proof `2c313d5` passed CI
-`33273777182`. It requires fresh packet-bound maintainer words followed by a
-separately committed and remotely green decision before implementation. Earlier Dreyer progression is
+`OFNER-C6R-1` remains the prospective scientific question, but its exact
+range-header lane is now consumed and parked. Read the result closeout,
+`registries/current_research_frontier.v6.json`, and the knowledge ledger first.
+Public metadata selected 15 participants / 150 original motor-imagery GDF
+files / 13,748,417,608 bytes and reported 61 EEG, three EOG, 19 glove, and 13
+arm channels at 512 Hz. The sole `OFNER-C6R-1-HL-R0` invocation completed the
+exact manifest identity check, then refused at `OFNER-H0-TRANSPORT` during the
+first `bytes=0-255` GDF request before accepting any GDF body byte. It recorded
+one manifest GET / 1,352,270 body bytes, one GDF range attempt / zero GDF body
+bytes, zero header, event, annotation, signal, target, model, prediction, or
+score operations, 1.1932796670589596 seconds runtime, 48,021,504-byte peak
+RSS, and zero retained payload. This is a consumed transport result, not a
+biological null. Never retry, rerun, repair, resume, substitute, reinterpret,
+or reopen the ignored marker. No Tier C packet is active. The next reversible
+work is artifact-only transport postmortem and fresh transport-verified source
+selection; any new network or real-data operation requires its own exact-green
+Tier C packet. Preserve the predecessor pointer
+`registries/current_research_frontier.v5.json` as immutable history and require
+fresh packet-bound maintainer words for any later real gate. Earlier Dreyer progression is
 historical: rejected-result
 commit `24a5da2973ef65fa05f5ea7b1d1389370534ad23` passed Base Python
 `99047501588`, Optional Neuro Readers `99047501456`, and CI `33232453046`, then

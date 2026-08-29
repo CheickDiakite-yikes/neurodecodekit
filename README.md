@@ -45,17 +45,26 @@ body byte or EDF header was read. The exact Dreyer lane is now consumed and
 parked without a biological interpretation, and the 1.78 GB cohort was not
 downloaded.
 
-The prospective flagship is now the 15-person Ofner 2017 motor-imagery cohort.
-An exact metadata-only audit selected 150 original GDF files totaling
-13,748,417,608 bytes (`12.8042` GiB) with reported 61 EEG, three EOG, and 32
-hand/arm movement channels at 512 Hz. The tempting 4.58 GB BIDS derivative was
-rejected because it omits the EOG and movement comparators needed to distinguish
-central EEG from cheaper eye and overt-motion explanations. No payload has been
-downloaded. `OFNER-C6R-1-HL` is the sole active Tier C packet for a fresh
-decision, but every implementation and real-data authority remains false. See the
-[source decision](docs/OFNER_2017_MOTOR_IMAGERY_SOURCE_RESELECTION_2026_08_29.md)
-and [current machine frontier](registries/current_research_frontier.v5.json).
-COMM-P0 FS3 remains paused as an adjacent engineering diagnostic.
+The prospective scientific question is now the 15-person Ofner 2017
+motor-imagery cohort. An exact metadata-only audit selected 150 original GDF
+files totaling 13,748,417,608 bytes (`12.8042` GiB) with reported 61 EEG, three
+EOG, and 32 hand/arm movement channels at 512 Hz. The tempting 4.58 GB BIDS
+derivative was rejected because it omits the EOG and movement comparators
+needed to distinguish central EEG from cheaper eye and overt-motion
+explanations.
+
+The sole `OFNER-C6R-1-HL-R0` range-header invocation is now consumed and
+parked at `OFNER-H0-TRANSPORT`. The exact manifest passed identity selection,
+but the first 256-byte GDF range produced zero accepted GDF body bytes, so no
+real header, channel roster, geometry, signal, event, target, model, or score
+was observed. This is a transport result, not a biological null. It cannot be
+retried, rerun, repaired, resumed, substituted, or reinterpreted. No Tier C
+packet is active. See the [result closeout](docs/OFNER_2017_MOTOR_IMAGERY_RANGE_HEADER_RESULT_CLOSEOUT.md)
+and [current machine frontier](registries/current_research_frontier.v6.json).
+The predecessor `registries/current_research_frontier.v5.json` remains
+immutable history; any later real gate still needs fresh packet-bound
+maintainer words. COMM-P0 FS3 remains paused as an adjacent engineering
+diagnostic.
 
 The follow-on generated acquisition qualification now passes two complete
 150-file fixture replays plus 20 adversarial refusals in 0.108829 seconds at
@@ -79,18 +88,19 @@ This is still engineering proof, not EEG evidence. The next real checkpoint is
 one separately governed range-only source-GDF header; bulk acquisition,
 signals, targets, models, and scores remain closed.
 
-The all-false [`OFNER-C6R-1-HL` request](docs/OFNER_2017_MOTOR_IMAGERY_RANGE_HEADER_AUTHORIZATION_PACKET.md)
-now freezes that checkpoint at one manifest refresh plus two gapless ranges
-totaling at most 65,536 GDF bytes from exactly subject 1/run 1. Request
-`af9d024` and proof `2c313d5` are green on GitHub `main`; both performed no
-network or real-data operation. Fresh packet-bound maintainer words and a
-separately green decision are required before implementation or any GDF byte.
+The [`OFNER-C6R-1-HL` request](docs/OFNER_2017_MOTOR_IMAGERY_RANGE_HEADER_AUTHORIZATION_PACKET.md),
+decision, implementation, and activation all became exact-green before the
+one-shot execution. The attempt used one CPU thread, 48,021,504-byte peak RSS,
+4,096 private allocated bytes, 2,340 public output bytes, and retained no
+payload. It made one manifest GET and one first-range attempt, with zero
+full-file requests and zero accepted GDF body bytes. The next reversible step
+is artifact-only transport/source research, not another execution.
 
 ## Current Research Frontier
 
-The latest irreversible result remains the consumed Dreyer H-L2 transport H0.
-The latest reversible frontier is the exact-green Ofner range-only header
-packet described above, pending fresh packet-bound maintainer words.
+The latest irreversible result is the consumed Ofner range-header transport H0.
+The latest reversible frontier is artifact-only transport postmortem and fresh
+transport-verified source selection; no real operation is active.
 The following COMM-P0-G material is retained as exact
 adjacent-engineering history and is paused. Its proof architecture has a prospective, resource-aware
 successor: Amendment 3 replaces the second redundant full
@@ -637,10 +647,10 @@ score or claim upgrade occurred. Repeated convergence warnings at the frozen
 80-iteration cap were recorded without changing or rerunning the models.
 
 The machine-readable current state is
-[`registries/current_research_frontier.v5.json`](registries/current_research_frontier.v5.json).
-It freezes the active lane, proof commits, consumed one-shot state, measured
-result, resource caps, five scientific goals, claim boundary, and exact next
-transition so handoffs cannot silently return to an older gate. Prediction
+[`registries/current_research_frontier.v6.json`](registries/current_research_frontier.v6.json).
+It freezes the consumed Ofner transport lane, proof commits, measured result,
+claim boundary, and exact next transition so handoffs cannot silently return
+to an older gate. Prediction
 freeze `2517fd1` passed Base job `97996323987`, Optional job `97996324203`, and
 CI `32908059166`.
 The [Stage T scoring activation](docs/BNCI_2014_001_STAGE_T_SCORING_ACTIVATION.md)

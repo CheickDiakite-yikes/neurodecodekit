@@ -7,7 +7,7 @@
   "flagship": {
     "experiment_id": "EXP-OFNER-C6R-1",
     "claim_id": "CLAIM-OFNER-NUISANCE-CONTROLLED-MOTOR-IMAGERY",
-    "first_empirical_checkpoint": "Verify one exact original Ofner motor-imagery GDF fixed header exposes the reported 61 EEG, 3 EOG, 19 glove, and 13 arm channels at 512 Hz before any bulk acquisition."
+    "first_empirical_checkpoint": "The sole Ofner range-header attempt consumed at transport H0 after manifest identity selection and before any GDF body or header byte was accepted; the biological question remains untested."
   },
   "claims": [
     {
@@ -175,7 +175,7 @@
       "question": "Does central EEG add held-out imagined-movement information beyond EOG, hand and arm kinematics, posterior EEG, cue and timing structure, and matched derangement in unseen people?",
       "state": "BLOCKED_BY_DATA",
       "lane": "confirmation",
-      "strongest_statement": "Public metadata identifies a complete 15-person, 150-file original GDF motor-imagery surface with the required EEG, EOG, and limb-motion comparators inside the 20 GiB allowance; no GDF payload or signal has been accessed.",
+      "strongest_statement": "Public metadata identifies a complete 15-person, 150-file original GDF motor-imagery surface, but the sole range-header attempt refused before accepting any GDF body byte, so the real sensor roster and neural hypothesis remain untested.",
       "coordinates": {
         "generalization": "unseen participant within Ofner 2017 motor imagery",
         "attribution": "increment beyond EOG, hand and arm kinematics, posterior EEG, timing, and derangement; not beyond EMG",
@@ -187,14 +187,15 @@
       "evidence_ids": [
         "EVID-BNCI-R2",
         "EVID-DREYER-HL2-H0",
-        "EVID-OFNER-SOURCE-SELECTION"
+        "EVID-OFNER-SOURCE-SELECTION",
+        "EVID-OFNER-HL-H0"
       ],
       "blockers": [
-        "the original GDF measurement roster has not been verified from a real fixed header",
-        "no real payload acquisition or semantic execution is authorized",
+        "the registered range-header invocation is consumed and cannot be retried or rerun",
+        "the public transport surface did not yield an accepted GDF body or fixed header",
         "no recorded EMG limits peripheral attribution"
       ],
-      "next_discriminator": "Qualify the exact manifest selector and acquisition adapter with fixtures, then separately authorize one GDF fixed-header measurement-contract observation.",
+      "next_discriminator": "Perform an artifact-only transport postmortem and select a fresh transport-verified source without reopening or renaming the consumed Ofner attempt.",
       "unsupported": "Source readiness is not neural evidence and establishes no decoding, motor-cortex origin, spontaneous intention, live operation, or clinical utility."
     },
     {
@@ -385,6 +386,21 @@
       ]
     },
     {
+      "id": "EVID-OFNER-HL-H0",
+      "lane": "confirmation",
+      "kind": "consumed real-endpoint range-header transport checkpoint",
+      "summary": "The exact manifest completed identity selection, then the first 256-byte GDF range refused before any GDF body byte or fixed header was accepted; the route was OFNER-H0-TRANSPORT.",
+      "limitations": "The aggregate record cannot distinguish the exact status, URL, length, encoding, header, body, or close mismatch and says nothing about sensors, physiology, targets, or decoding.",
+      "supports": [],
+      "contradicts": [],
+      "paths": [
+        "registries/ofner_gdf_header_live_result.v0.json",
+        "docs/OFNER_2017_MOTOR_IMAGERY_RANGE_HEADER_RESULT_CLOSEOUT.md",
+        "registries/ofner_gdf_header_live_result_closeout.v0.json",
+        "registries/current_research_frontier.v6.json"
+      ]
+    },
+    {
       "id": "EVID-COMM-DECISION",
       "lane": "discovery",
       "kind": "objective evidence and replication decision",
@@ -479,20 +495,26 @@
       "relation": "supports",
       "object": "EXP-OFNER-C6R-1",
       "rationale": "Generated qualification closes the minimum-byte GDF header parsing and range-firewall uncertainty without contributing biological evidence."
+    },
+    {
+      "subject": "EVID-OFNER-HL-H0",
+      "relation": "narrows",
+      "object": "EXP-OFNER-C6R-1",
+      "rationale": "The fail-closed range checkpoint parks this exact transport-bound lane without resolving the biological question and requires fresh transport or source research rather than a retry."
     }
   ],
   "experiments": [
     {
       "id": "EXP-OFNER-C6R-1",
       "lane": "confirmation",
-      "status": "range_header_request_and_proof_green_awaiting_fresh_decision",
+      "status": "parked_after_consumed_range_header_transport_H0_before_GDF_body_or_header",
       "scientific_question": "Does central EEG add unseen-person imagined-movement information beyond EOG, hand and arm kinematics, posterior EEG, cue and timing structure, and matched derangement?",
       "evidence_target": "A calibrated participant-consistent central-EEG increment over nuisance-only and matched-derangement comparators across all 15 held-out people.",
-      "earliest_checkpoint": "One exact original Ofner GDF range-only header observation after the all-false request and proof are remotely green plus a fresh packet-bound Tier C decision.",
+      "earliest_checkpoint": "Complete an artifact-only transport postmortem and select a fresh transport-verified source before any separately named Tier C proposal.",
       "stop_rule": "Park before bulk acquisition if the original GDF does not expose exactly 61 EEG, 3 EOG, 19 glove, and 13 arm channels at 512 Hz or if the complete selected surface exceeds the frozen storage envelope.",
       "deserves_resources_because": "It is a fresh unseen-person motor-imagery source whose eye and limb-motion sensors directly test the strongest shortcuts identified by the prior real result.",
-      "authority": "OFNER-C6R-1-HL is the sole active Tier C packet for a fresh decision; every operation authority remains false and no real GDF header, event, target, signal, model, or score operation is authorized.",
-      "expected_information_gain": "The bounded real header check would determine whether the reported 96-channel source representation exists before 13.75 GB of acquisition, while reading no event or signal bytes.",
+      "authority": "The sole OFNER-C6R-1-HL invocation is consumed at H0 with no retry, rerun, repair, resume, substitution, or reinterpretation; no Tier C packet is active.",
+      "expected_information_gain": "Realized operationally: H0 prevented the 13.75 GB acquisition path before any GDF body byte while leaving the biological question unresolved.",
       "claim_ids": [
         "CLAIM-OFNER-NUISANCE-CONTROLLED-MOTOR-IMAGERY"
       ],
@@ -501,7 +523,8 @@
         "EVID-DREYER-HL2-H0",
         "EVID-OFNER-SOURCE-SELECTION",
         "EVID-OFNER-ACQUISITION-GENERATED",
-        "EVID-OFNER-HEADER-GENERATED"
+        "EVID-OFNER-HEADER-GENERATED",
+        "EVID-OFNER-HL-H0"
       ]
     },
     {
@@ -606,8 +629,8 @@
       },
       {
         "measure": "Fresh Ofner nuisance-controlled unseen-person effect",
-        "status": "source_selected_generated_header_qualified_real_untested",
-        "value": "15 participants and 150 original GDF files selected; generated header parser passed, with zero real GDF, signal, model, or score operations"
+        "status": "parked_untested_after_transport_H0",
+        "value": "manifest identity selected; first 256-byte GDF range refused with zero accepted GDF body bytes, headers, signals, targets, models, or scores"
       }
     ],
     "functional_utility": [
@@ -639,7 +662,7 @@
     "moonshot": "EXP-COMM-ORTHOGONAL-TASK"
   },
   "operation_boundary": {
-    "active_tier_c_packet": "OFNER-C6R-1-HL",
+    "active_tier_c_packet": null,
     "all_authority_flags_false": true,
     "real_dreyer_endpoint_requests": 1,
     "real_dreyer_response_opens": 1,
@@ -654,6 +677,9 @@
     "generated_Ofner_acquisition_qualification_runs": 1,
     "public_Ofner_header_member_metadata_requests": 1,
     "public_Ofner_header_member_metadata_bytes": 1352270,
+    "public_Ofner_GDF_range_requests": 1,
+    "public_Ofner_GDF_body_bytes": 0,
+    "public_Ofner_fixed_header_reads": 0,
     "generated_Ofner_header_qualification_runs": 1,
     "release_operations": 0,
     "claim_upgrades": 0
