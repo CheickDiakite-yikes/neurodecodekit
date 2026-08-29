@@ -264,13 +264,14 @@ def validate_scientific_ledger(value: Any) -> dict[str, Any]:
             _require_text(item.get("value"), f"scoreboards.{name}[{index}].value")
 
     boundary = _require_mapping(ledger.get("operation_boundary"), "operation_boundary")
-    if boundary.get("active_tier_c_packet") != "DREYER-C5R-1-HL":
-        raise KnowledgeLedgerError("operation boundary must preserve the active Tier C packet")
+    if boundary.get("active_tier_c_packet") is not None:
+        raise KnowledgeLedgerError("operation boundary must record no active Tier C packet")
     if boundary.get("all_authority_flags_false") is not True:
         raise KnowledgeLedgerError("operation boundary must remain all-false")
     for field in (
         "real_dreyer_payload_reads",
         "real_dreyer_header_reads",
+        "real_dreyer_network_body_bytes",
         "new_data_downloads",
         "real_model_runs",
         "target_deliveries",
@@ -278,6 +279,12 @@ def validate_scientific_ledger(value: Any) -> dict[str, Any]:
     ):
         if boundary.get(field) != 0:
             raise KnowledgeLedgerError(f"operation_boundary.{field} must remain zero")
+    for field in (
+        "real_dreyer_endpoint_requests",
+        "real_dreyer_response_opens",
+    ):
+        if boundary.get(field) != 1:
+            raise KnowledgeLedgerError(f"operation_boundary.{field} must equal one")
     return ledger
 
 
@@ -346,14 +353,17 @@ def build_research_update(value: Any) -> dict[str, str]:
     return {
         "scientific_question": experiment["scientific_question"],
         "evidence_produced": (
-            "No new neural evidence in this cycle; prior evidence was normalized into the ledger."
+            "The sole Dreyer H-L2 endpoint response failed strict transport validation "
+            "before any body byte or EDF header was read."
         ),
         "belief_changed": (
-            "Generated proof work is now subordinate to the first real Dreyer measurement check."
+            "The registered Dreyer transport surface cannot currently support the frozen "
+            "confirmation, so that lane is parked without a biological interpretation."
         ),
         "uncertainty_remaining": claim["next_discriminator"],
         "next_decisive_experiment": experiment["earliest_checkpoint"],
         "infrastructure_created_and_why": (
-            "A compact validated knowledge ledger now separates evidence, beliefs, and next tests."
+            "A marker-first transport firewall consumed the one-shot attempt safely and "
+            "prevented an unnecessary 1.78 GB acquisition path."
         ),
     }

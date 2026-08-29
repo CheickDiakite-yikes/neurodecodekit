@@ -224,7 +224,18 @@
 > green activation and proof records. Real/private, network, provider, stream,
 > device, release, and scientific operations remain zero.
 
-> **DREYER-C5R-1 frontier (2026-08-26):** the six-step independent-replication
+> **DREYER-C5R-1 H-L2 closeout (2026-08-29):** activation
+> `e3adab26e867f6de7e56f406f59ede51718b577c` passed both required jobs in CI
+> `33261346763` on GitHub `main`. The sole `DREYER-C5R-1-HL2-R0` invocation
+> consumed at aggregate `DREYER-H0` / `HL2-TRANSPORT`: one endpoint response
+> opened, zero response-body bytes, zero EDF-header reads, no retained payload,
+> 0.6479716249741614 seconds, and 36,454,400-byte peak RSS. This is a transport
+> refusal, not a neural or biological result. Never rerun it or inspect ignored
+> evidence. The exact Dreyer lane and its 1.78 GB continuation are parked, no
+> Tier C packet is active, and transport-verified source reselection is the next
+> reversible scientific task.
+>
+> **Historical DREYER-C5R-1 frontier (2026-08-26):** the six-step independent-replication
 > build is complete through the real-data gate. (1) The aggregate-only BNCI
 > postmortem localized posterior/visual, calibration, EOG-increment, and
 > participant-consistency failures. (2) Dreyer Dataset A was selected with 60
@@ -237,7 +248,7 @@
 > valid sensor-header replays plus 18 adversarial refusals, all with zero real
 > operations. (6) The all-false one-file preflight request `5191e79` and proof
 > closeout `821fad1` are remotely green in CI `32934958878` and `32936247679`.
-> `DREYER-C5R-1-HL` is now the sole active Tier C packet. The next transition
+> `DREYER-C5R-1-HL` was then the sole active Tier C packet. The next transition
 > requires one fresh packet-bound decision, then a remotely proven live wrapper
 > before one 14,805,604-byte EDF fixed-header check. The other 119 files,
 > signal/target reads, training, prediction freeze, scoring, release, and every

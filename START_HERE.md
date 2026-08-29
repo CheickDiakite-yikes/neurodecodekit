@@ -7,16 +7,17 @@
 > Tier C irreversible evidence, real-data, hardware, destructive, release, and
 > claim actions still require separate exact permission.
 
-> Scientific strategy, 2026-08-28: read
+> Scientific strategy, updated 2026-08-29: read
 > `docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md`, then
 > `docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md`, then
 > `registries/scientific_knowledge_ledger.v0.json`. The flagship is the frozen
-> 60-person Dreyer nuisance-controlled unseen-person experiment, and its first
-> empirical checkpoint is one exact `sub-01` R1 EDF fixed-header observation.
-> COMM-P0-G FS3 is paused as an adjacent engineering diagnostic. This strategy
-> changes priority only. The generated H-L1R1 recovery qualification is now
-> consumed and passed, while every real-data, target, model, score, device,
-> release, and claim authority remains false.
+> 60-person Dreyer nuisance-controlled unseen-person experiment. Its sole H-L2
+> fixed-header attempt is consumed at aggregate `DREYER-H0`: one endpoint
+> response opened, strict transport validation refused, and zero response-body
+> or EDF-header bytes were read. This is not a biological result. The exact
+> Dreyer lane is parked, no Tier C packet is active, and source reselection is
+> the next reversible task. COMM-P0-G FS3 remains paused as an adjacent
+> engineering diagnostic.
 
 > Dreyer H-L1R1 recovery update, 2026-08-29: exact generated coordinator
 > `0ef634e4852d9f8a18d4b8a1f50e6a1331bd020a` passed Base Python
@@ -44,9 +45,13 @@
 > bytes. Exact implementation `a9cd0be7c22996154c28bb568e05c623606e7424`
 > passed Base Python `99121591361`, Optional Neuro Readers `99121591482`, and
 > CI `33260534900` on GitHub `main`. No-authority activation
-> `DREYER-C5R-1-HL2-ACT0` now binds six exact implementation artifacts / 79,741
-> bytes, but it must become remotely green before the sole real invocation.
-> No real EDF or EEG was opened, and H-L2 remains closed at this commit.
+> `DREYER-C5R-1-HL2-ACT0` bound six exact implementation artifacts / 79,741
+> bytes. Activation `e3adab26e867f6de7e56f406f59ede51718b577c` passed Base
+> Python `99123725366`, Optional Neuro Readers `99123725302`, and CI
+> `33261346763` on GitHub `main`. The sole invocation then refused with
+> `HL2-TRANSPORT` before body streaming: one GET/response open, zero network
+> body bytes, zero EDF header reads, 0.6479716249741614 seconds, 36,454,400-byte
+> peak RSS, and no payload retained. Never rerun or reopen its ignored evidence.
 
 > COMM-P0-G FS3 registration frontier, 2026-08-28: Amendment 3 replaces only
 > the redundant second full fictional model replay with a separate zero-model
@@ -182,9 +187,12 @@
 > so runtime architecture, not more model capacity, is the next reversible
 > engineering question.
 
-## Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight
+## Current Frontier: Dreyer H-L2 Consumed At Transport H0
 
-Start with `registries/current_research_frontier.v0.json`, the machine-readable
+Historical exact control-plane label retained for proof compatibility:
+`Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight`.
+
+Start with `registries/current_research_frontier.v1.json`, the machine-readable
 snapshot of the active lane, proof chain, consumed status, measurements, goals,
 and next transition.
 
@@ -224,8 +232,9 @@ fixed-header preflight passed two valid replays plus 18 adversarial refusals.
 The first H-L1 wrapper qualification was rejected after finding a cleanup
 defect. Its additive H-L1R1 successor has now passed the complete 65-case
 matrix and is consumed. All are generated engineering with no scientific
-value. No real Dreyer payload, header, annotation, signal, target, model
-outcome, prediction, or score has been read.
+value. The sole later H-L2 endpoint transaction opened one response and then
+refused before any response body or EDF header was read. No annotation, signal,
+target, model outcome, prediction, or score was accessed.
 
 The static live-implementation safety review closes the known path-race,
 atomic-promotion, transport, resource, exception-privacy, and EDF
@@ -236,13 +245,12 @@ All-false request `5191e79e2ccfa50b5042a24357c0c22d68d8f088` passed CI
 `32934958878`. Its proof-only closeout
 `821fad17e06914375c50a7d0dd7017458b2df838` passed Base job `98077895278`,
 Optional Neuro Readers job `98077895460`, and CI `32936247679`.
-`DREYER-C5R-1-HL` remains the sole active Tier C lane. Its H-L1R1 result and
-proof are remotely green. The queued all-false `DREYER-C5R-1-HL2-A0` request
-proposes one exact 14,805,604-byte EDF fixed-header observation after its own
-request proof, fresh packet-bound decision, implementation, and activation
-barriers. The current authority cannot open that file and does not authorize
-the remaining 119 files, signal or target reads, training, scoring, release,
-or a claim upgrade.
+At that historical point `DREYER-C5R-1-HL` was the sole active Tier C lane.
+Its H-L1R1 result and proof became remotely green, and the later H-L2 request,
+decision, implementation, and activation crossed their ordered barriers. The
+sole real attempt then consumed at transport H0 before any body or EDF-header
+read. It cannot be rerun; the remaining 119 files, signals, targets, training,
+scoring, release, and claim upgrade remain unauthorized.
 
 The parallel end-to-end plan is tracked in
 `docs/COMMUNICATION_EEG_SCIENTIFIC_CLAIM_PROGRAM.md`. It selects OpenNeuro
@@ -251,7 +259,7 @@ discovery test, then requires a separately qualified replication cohort,
 dropout-safe causal replay, source-only endpointing, and one consented
 unseen-person device stream. This Tier A plan made zero data, model, target,
 score, provider, stream, or hardware operations and does not change the Dreyer
-gate.
+closeout or activate a new gate.
 
 The generated-only live-session boundary is implemented, qualified, and closed in
 `src/neurodecodekit/streaming/live_session.py` and documented in

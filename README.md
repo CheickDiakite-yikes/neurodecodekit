@@ -38,19 +38,20 @@ separate what is supported, refuted, inconclusive, and still blocked; keep
 discovery distinct from confirmation and translation; and score scientific
 attribution separately from functional utility.
 
-The flagship is the frozen 60-person Dreyer nuisance-controlled unseen-person
-experiment. The next empirical checkpoint is intentionally small: verify one
-exact EDF fixed header before considering the 1.78 GB cohort. The generated
-COMM-P0 FS3 work is paused as an adjacent engineering diagnostic because it
-cannot change a scientific belief today. This reset changes priorities, not
-authority: no fresh Dreyer payload, target, model run, score, or claim has been
-authorized or produced.
+The frozen 60-person Dreyer nuisance-controlled unseen-person experiment was
+the flagship confirmation route. Its one-file checkpoint stopped safely at
+strict transport validation: one endpoint response opened, but no response
+body byte or EDF header was read. The exact Dreyer lane is now consumed and
+parked without a biological interpretation, and the 1.78 GB cohort was not
+downloaded. No Tier C packet is active; the next scientific task is source
+reselection under a new preregistration. COMM-P0 FS3 remains paused as an
+adjacent engineering diagnostic.
 
 ## Current Research Frontier
 
-The active scientific frontier is the Dreyer checkpoint described above. The
-following COMM-P0-G material is retained as exact adjacent-engineering history
-and is paused. Its proof architecture has a prospective, resource-aware
+The latest irreversible frontier result is the consumed Dreyer H-L2 transport
+H0 described above. The following COMM-P0-G material is retained as exact
+adjacent-engineering history and is paused. Its proof architecture has a prospective, resource-aware
 successor: Amendment 3 replaces the second redundant full
 fictional model replay with a separate verifier/scorer process that has no
 model, fit, inference, threshold, calibration, prediction-creation, or update
@@ -131,7 +132,7 @@ an EEG-specific or participant-general decoding advantage. The
 [aggregate-only postmortem](docs/BNCI_2014_001_ARTIFACT_POSTMORTEM_RESULT.md)
 records the exact failure map without reopening private predictions or targets.
 
-The active independent lane is
+The now-parked independent lane was
 [`DREYER-C5R-1`](docs/DREYER_C5R_1_PREREGISTRATION.md), built specifically to
 resolve those failures:
 
@@ -157,13 +158,14 @@ sets, and 2,040 synthetic prediction rows; the sensor preflight completed two
 valid deterministic replays and 18 adversarial refusals. Both used generated
 data only and establish no scientific result.
 
-The sole active Tier C packet is
+The consumed Tier C packet was
 [`DREYER-C5R-1-HL`](docs/DREYER_C5R_1_STAGE_H_LIVE_PREFLIGHT_AUTHORIZATION_PACKET.md).
-Its request and proof are remotely green, but every authority flag remains
-false pending one fresh packet-bound decision. The immediate real operation is
-deliberately only one 14,805,604-byte EDF download and fixed-header check. It
-will verify whether the source file actually exposes the preregistered EEG,
-EOG, EMG, and 512 Hz roster before risking the other 119 files.
+After every ordered green barrier, its sole 14,805,604-byte transaction opened
+one response and refused at strict transport validation before any body byte
+or EDF header was read. The public aggregate records one GET, zero downloaded
+payload bytes, zero header reads, 0.648 seconds, 36,454,400-byte peak RSS, and
+no retained payload. The attempt cannot be retried or reinterpreted. It did
+not verify the preregistered EEG, EOG, EMG, or 512 Hz roster.
 
 The [live-wrapper safety review](docs/DREYER_C5R_1_STAGE_H_LIVE_IMPLEMENTATION_SAFETY_REVIEW.md)
 now freezes the missing one-shot protections: durable marker ordering,
@@ -174,10 +176,11 @@ or evidence.
 
 **What is proven now:** NeuroDecodeKit can localize a failed neural claim from
 aggregate evidence, freeze a stronger independent experiment, enforce its
-target firewall, and qualify its bounded preflight reproducibly.
+target firewall, and fail closed on a real endpoint before a mismatched source
+surface consumes substantial storage.
 
-**What is not proven:** no fresh Dreyer EEG has been accessed, and there is
-still no established EEG-beyond-peripheral advantage, unseen-person neural
+**What is not proven:** no Dreyer EDF body, header, or fresh EEG signal was
+accessed, and there is still no established EEG-beyond-peripheral advantage, unseen-person neural
 decoding, movement-intention or motor-cortex claim, language or thought
 decoding, live system, portable-hardware result, or clinical utility.
 
@@ -593,7 +596,7 @@ score or claim upgrade occurred. Repeated convergence warnings at the frozen
 80-iteration cap were recorded without changing or rerunning the models.
 
 The machine-readable current state is
-[`registries/current_research_frontier.v0.json`](registries/current_research_frontier.v0.json).
+[`registries/current_research_frontier.v1.json`](registries/current_research_frontier.v1.json).
 It freezes the active lane, proof commits, consumed one-shot state, measured
 result, resource caps, five scientific goals, claim boundary, and exact next
 transition so handoffs cannot silently return to an older gate. Prediction

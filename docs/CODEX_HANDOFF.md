@@ -1,6 +1,19 @@
 # Codex Handoff - NeuroDecodeKit
 
-> **Immediate generated frontier, 2026-08-28:** read Amendment 3 and the FS3
+> **Current scientific frontier, 2026-08-29:** read the H-L2 result closeout,
+> `registries/current_research_frontier.v1.json`, and the scientific knowledge
+> ledger first. Activation
+> `e3adab26e867f6de7e56f406f59ede51718b577c` passed both required jobs in CI
+> `33261346763` on GitHub `main`. The sole `DREYER-C5R-1-HL2-R0` invocation
+> then consumed at `DREYER-H0` / `HL2-TRANSPORT`: one response opened, zero
+> body bytes, zero EDF header reads, no payload retained, 0.6479716249741614
+> seconds, and 36,454,400-byte peak RSS. This is a transport refusal, not a
+> biological null. Never retry it or inspect its ignored evidence. The Dreyer
+> lane is parked, no Tier C packet is active, and the next reversible task is
+> transport-verified source reselection. Preserve the unrelated tracker
+> inspection file.
+
+> **Historical generated frontier, 2026-08-28:** read Amendment 3 and the FS3
 > preregistration/contract first. Exact Amendment 3 `b15d3cf` passed Base
 > `98860211722`, Optional Neuro Readers `98860211949`, and CI `33174711145`,
 > then reached GitHub `main`. `COMM-P0-G-FS3-v0` freezes one complete full
@@ -12,7 +25,8 @@
 > three-person-per-cohort model replays and 140 refusal observations. Require
 > the pending proof closeout to become exact-green before one
 > full FS3 rehearsal. Preserve consumed FS2 and the unrelated tracker
-> inspection file. `DREYER-C5R-1-HL` remains the sole all-false Tier C gate.
+> inspection file. At that historical point, `DREYER-C5R-1-HL` was the sole
+> all-false Tier C gate.
 
 > **FS3 implementation and closeout exact-green, 2026-08-28:** read the new FS3
 > implementation document and machine registry. Two isolated reduced producers
@@ -178,7 +192,8 @@
 > `33095028205`. The final tracked activation-proof record is now pending its
 > own green CI. Do not run the official qualification before that last barrier.
 
-> **Current gate, 2026-08-26:** `DREYER-C5R-1-HL` is the sole active Tier C
+> **Historical gate, 2026-08-26:** exact archived label `Current gate, 2026-08-26`.
+> `DREYER-C5R-1-HL` was the sole active Tier C
 > packet. The aggregate-only BNCI postmortem localized four design failures:
 > posterior/visual specificity failed, probability reliability failed, EEG
 > beyond EOG was weak and unvalidated, and participant consistency failed. A

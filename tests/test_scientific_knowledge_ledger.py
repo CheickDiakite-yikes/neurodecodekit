@@ -28,7 +28,7 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
         )
         self.assertEqual(self.ledger["schema_version"], "0.1.0")
         self.assertEqual(self.ledger["flagship"]["experiment_id"], "EXP-DREYER-C5R-1")
-        self.assertIn("fixed header", self.ledger["flagship"]["first_empirical_checkpoint"])
+        self.assertIn("consumed at H0", self.ledger["flagship"]["first_empirical_checkpoint"])
 
     def test_claims_have_valid_states_and_full_coordinates(self):
         for claim in self.ledger["claims"]:
@@ -39,18 +39,26 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
     def test_summary_keeps_science_and_authority_explicit(self):
         summary = summarize_scientific_ledger(self.ledger)
         self.assertEqual(summary["flagship_experiment_id"], "EXP-DREYER-C5R-1")
-        self.assertEqual(summary["active_tier_c_packet"], "DREYER-C5R-1-HL")
+        self.assertIsNone(summary["active_tier_c_packet"])
         self.assertTrue(summary["all_authority_flags_false"])
         self.assertIn(
             "CLAIM-DREYER-NUISANCE-CONTROLLED-EEG",
             summary["unresolved_claim_ids"],
         )
 
-    def test_operation_boundary_records_no_new_empirical_work(self):
+    def test_operation_boundary_records_consumed_transport_only(self):
         boundary = self.ledger["operation_boundary"]
         self.assertTrue(boundary["all_authority_flags_false"])
+        self.assertIsNone(boundary["active_tier_c_packet"])
+        self.assertEqual(boundary["real_dreyer_endpoint_requests"], 1)
+        self.assertEqual(boundary["real_dreyer_response_opens"], 1)
         for key, value in boundary.items():
-            if key not in {"active_tier_c_packet", "all_authority_flags_false"}:
+            if key not in {
+                "active_tier_c_packet",
+                "all_authority_flags_false",
+                "real_dreyer_endpoint_requests",
+                "real_dreyer_response_opens",
+            }:
                 self.assertEqual(value, 0, key)
 
     def test_two_scoreboards_remain_separate(self):
@@ -76,7 +84,7 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
                 "infrastructure_created_and_why",
             },
         )
-        self.assertIn("sub-01 R1 EDF", update["next_decisive_experiment"])
+        self.assertIn("new transport-verified source", update["next_decisive_experiment"])
 
     def test_malformed_state_is_rejected(self):
         malformed = copy.deepcopy(self.ledger)

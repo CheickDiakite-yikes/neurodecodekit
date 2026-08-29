@@ -14791,3 +14791,17 @@ green; only then may the single generated qualification run.
   before the sole invocation. This record performs no marker, request,
   real/private path, EDF, header, annotation, sample, target, model, score,
   device, release, or scientific claim operation.
+- 2026-08-29: Accept no-authority activation
+  `e3adab26e867f6de7e56f406f59ede51718b577c` after Base Python
+  `99123725366`, Optional Neuro Readers `99123725302`, and CI `33261346763`
+  passed on GitHub `main`. Consume the sole registered
+  `DREYER-C5R-1-HL2-R0` invocation at aggregate `DREYER-H0` /
+  `HL2-TRANSPORT`: one public endpoint GET and response open, zero response-body
+  bytes, zero EDF-header reads, zero payload retained, 0.6479716249741614
+  seconds, and 36,454,400-byte peak process-tree RSS. Treat this as a
+  fail-closed transport result, not a biological null. Never retry, rerun,
+  repair, resume, substitute, reinterpret, or inspect ignored/private evidence.
+  Park the exact Dreyer lane and its 1.78 GB continuation, leave no Tier C
+  packet active, and make transport-verified source reselection the next
+  reversible scientific task. Upgrade no neural, decoding, unseen-person,
+  peripheral-adjusted, live, hardware, or clinical claim.

@@ -1,0 +1,121 @@
+{
+  "schema_name": "neurodecodekit.dreyer_c5r_1_stage_h_l2_fixed_header_result_closeout",
+  "schema_version": "0.1.0",
+  "execution_id": "DREYER-C5R-1-HL2-R0",
+  "activation_id": "DREYER-C5R-1-HL2-ACT0",
+  "request_id": "DREYER-C5R-1-HL2-A0",
+  "decision_id": "DREYER-C5R-1-HL2-A0-D0",
+  "lane_id": "DREYER-C5R-1-HL",
+  "recorded_at_local": "2026-08-29",
+  "status": "consumed_H0_transport_refusal_lane_parked_no_rerun",
+  "green_activation": {
+    "commit": "e3adab26e867f6de7e56f406f59ede51718b577c",
+    "activation_registry_sha256": "20e3c55347a88a27ebfe3446ace7ba4ea9f3cb3bee7d0d4fbd63a43db07c22fd",
+    "CI_run_id": 33261346763,
+    "base_python_job_id": 99123725366,
+    "optional_neuro_readers_job_id": 99123725302,
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true
+  },
+  "bound_public_result": {
+    "path": "registries/dreyer_c5r_1_stage_h_l2_fixed_header_result.v0.json",
+    "bytes": 2624,
+    "sha256": "3bb0c0b94fd09a8be335f01eb8b680f99eb3d1a375d941c5f24681c549cbee7b",
+    "git_blob": "92dff2b4058eb45be358de243cb179c2a197138f"
+  },
+  "current_frontier": {
+    "path": "registries/current_research_frontier.v1.json",
+    "bytes": 90814,
+    "sha256": "c7adaf010cbc38c8b079e9233543df0f0e407ea24428827e68af06521310773b",
+    "git_blob": "41f9f97571d73c0a24477dacf2aebeab99c9fd80",
+    "supersedes": "registries/current_research_frontier.v0.json",
+    "superseded_registry_sha256": "42bbf7d87774ae2c2ac1ba6e42831c2bcff5e7833b8ab7c93c186beea9fee6ee"
+  },
+  "result": {
+    "route": "DREYER-H0",
+    "refusal_code": "HL2-TRANSPORT",
+    "registered_invocations": 1,
+    "invocation_consumed": true,
+    "retry_allowed": false,
+    "rerun_allowed": false,
+    "repair_resume_substitute_or_reinterpret_allowed": false,
+    "response_opened": true,
+    "response_closed": true,
+    "cleanup_complete": true,
+    "payload_retained": false,
+    "sensor_contract": null,
+    "geometry_available": false
+  },
+  "measured_resources": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 0,
+    "runtime_seconds": 0.6479716249741614,
+    "peak_process_tree_RSS_bytes": 36454400,
+    "free_disk_bytes_before": 67614752768,
+    "free_disk_bytes_after": 67614748672,
+    "private_allocated_bytes": 4096,
+    "public_result_bytes": 2624,
+    "marker_bytes_reported_without_private_reopen": 268,
+    "end_to_end_latency_measured": false
+  },
+  "operation_counters": {
+    "real_HTTP_GET_requests": 1,
+    "real_response_opens": 1,
+    "real_network_body_bytes": 0,
+    "real_payload_SHA256_passes": 0,
+    "real_fixed_header_reads": 0,
+    "real_fixed_header_semantic_parses": 0,
+    "annotation_semantic_reads": 0,
+    "signal_sample_semantic_reads": 0,
+    "target_or_label_reads": 0,
+    "raw_data_reads": 0,
+    "real_cache_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "provider_calls": 0,
+    "stream_device_or_hardware_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "failure_localization": {
+    "known": "strict_transport_validation_refused_after_response_open_before_body_stream",
+    "unknown": "aggregate_artifact_cannot_distinguish_status_final_URL_content_length_duplicate_header_content_encoding_transfer_encoding_or_header_interface",
+    "more_specific_cause_may_be_claimed": false,
+    "biological_null": false
+  },
+  "frontier_routing": {
+    "DREYER_C5R_1_HL2": "parked_consumed",
+    "remaining_119_EDFs_authorized": false,
+    "bulk_Dreyer_acquisition_authorized": false,
+    "new_Dreyer_packet_may_retry_this_attempt": false,
+    "active_Tier_C_gate_after_closeout": null,
+    "next_reversible_task": "select_and_preregister_a_new_transport_verified_scientific_source_without_reopening_DREYER_C5R_1_HL2"
+  },
+  "closeout_operation_counters": {
+    "ignored_private_path_opens": 0,
+    "payload_or_marker_reopens": 0,
+    "network_requests": 0,
+    "real_data_reads": 0,
+    "model_runs": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "claim_upgrades": 0
+  },
+  "claim_boundary": {
+    "scientific_claim_established": false,
+    "real_EDF_body_accessed": false,
+    "real_EDF_header_accessed": false,
+    "real_sensor_header_established": false,
+    "neural_information_established": false,
+    "decoding_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_performance_established": false,
+    "clinical_value_established": false
+  }
+}
