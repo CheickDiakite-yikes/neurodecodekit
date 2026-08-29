@@ -485,14 +485,14 @@
     {
       "id": "EXP-OFNER-C6R-1",
       "lane": "confirmation",
-      "status": "generated_header_qualified_pending_remote_proof_and_separate_real_header_gate",
+      "status": "generated_header_proven_range_header_request_frozen_inactive",
       "scientific_question": "Does central EEG add unseen-person imagined-movement information beyond EOG, hand and arm kinematics, posterior EEG, cue and timing structure, and matched derangement?",
       "evidence_target": "A calibrated participant-consistent central-EEG increment over nuisance-only and matched-derangement comparators across all 15 held-out people.",
-      "earliest_checkpoint": "One exact original Ofner GDF fixed-header range-only observation after exact remote proof, an all-false packet, and a separate Tier C decision.",
+      "earliest_checkpoint": "One exact original Ofner GDF range-only header observation after the all-false request and proof are remotely green plus a fresh packet-bound Tier C decision.",
       "stop_rule": "Park before bulk acquisition if the original GDF does not expose exactly 61 EEG, 3 EOG, 19 glove, and 13 arm channels at 512 Hz or if the complete selected surface exceeds the frozen storage envelope.",
       "deserves_resources_because": "It is a fresh unseen-person motor-imagery source whose eye and limb-motion sensors directly test the strongest shortcuts identified by the prior real result.",
-      "authority": "Tier B generated header qualification only; no Tier C packet is active and no real GDF header, event, target, signal, model, or score operation is authorized.",
-      "expected_information_gain": "Generated passes remove manifest identity, signed transport, header parsing, and range-overread uncertainty; the next real header check determines whether the reported 96-channel source representation exists.",
+      "authority": "The OFNER-C6R-1-HL request is all-false and inactive; no Tier C packet is active and no real GDF header, event, target, signal, model, or score operation is authorized.",
+      "expected_information_gain": "The bounded real header check would determine whether the reported 96-channel source representation exists before 13.75 GB of acquisition, while reading no event or signal bytes.",
       "claim_ids": [
         "CLAIM-OFNER-NUISANCE-CONTROLLED-MOTOR-IMAGERY"
       ],

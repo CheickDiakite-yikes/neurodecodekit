@@ -1,7 +1,7 @@
 # Codex Handoff - NeuroDecodeKit
 
 > **Current scientific frontier, 2026-08-29:** read the Ofner source-reselection
-> decision, `registries/current_research_frontier.v3.json`, and the scientific
+> decision, `registries/current_research_frontier.v4.json`, and the scientific
 > knowledge ledger first. The parked predecessor activation
 > `e3adab26e867f6de7e56f406f59ede51718b577c` passed both required jobs in CI
 > `33261346763` on GitHub `main`. The sole `DREYER-C5R-1-HL2-R0` invocation
@@ -23,8 +23,11 @@
 > 0.002138459 seconds at 26,214,400-byte peak RSS. It recovers the frozen 96
 > channel roles at 512 Hz, rejects trailing bytes, and has no network client,
 > real command, event parser, signal parser, model, or scorer. This remains
-> synthetic engineering only. Prove the exact implementation next, then
-> prepare a separate all-false range-only one-header packet.
+> synthetic engineering only. Exact successor `ca5d1db` and proof `6815338`
+> are green on `main`. The all-false `OFNER-C6R-1-HL` request now freezes one
+> manifest refresh plus two exact ranges totaling at most 65,536 GDF bytes,
+> but it is inactive. Commit, push, and prove the request, then require fresh
+> packet-bound maintainer words before implementation or real access.
 > Preserve the unrelated tracker inspection file.
 
 > **Historical generated frontier, 2026-08-28:** read Amendment 3 and the FS3

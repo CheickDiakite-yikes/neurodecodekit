@@ -33,8 +33,10 @@ implementation and proof are remotely green. The follow-on generated GDF 2.x
 header parser and two-range firewall pass two 24,832-byte replays and 41
 refusals, recover the frozen 96-role synthetic roster at 512 Hz, and reject any
 trailing data bytes. It has no live-network execution path and is not EEG
-evidence. After exact remote proof, the ordered next steps are an all-false
-range-only one-header packet, one separately authorized header check, then a
+evidence. Exact implementation and proof are remotely green. The inactive
+`OFNER-C6R-1-HL` request now freezes one manifest refresh plus two range reads
+of at most 65,536 GDF bytes. The ordered next steps are request proof, fresh
+packet-bound maintainer words, one separately activated header check, then a
 fresh acquisition/model preregistration and only later one target-firewalled
 execution. Because no EMG was recorded, even a future pass cannot claim
 independence from all muscle activity.

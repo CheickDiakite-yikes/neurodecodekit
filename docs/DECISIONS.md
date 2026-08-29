@@ -14841,3 +14841,10 @@ green; only then may the single generated qualification run.
   512 Hz with zero network or real/scientific operations. Expose no network or
   real execute command. Require exact remote proof before preparing the
   all-false one-member real-header packet.
+- 2026-08-29: Close the generated Ofner header layer after successor
+  `ca5d1db` and proof-only closeout `6815338` passed both required CI jobs on
+  GitHub `main`. Freeze all-false packet `OFNER-C6R-1-HL` around one exact
+  subject-1/run-1 manifest refresh and two gapless GDF ranges totaling at most
+  65,536 bytes. Keep every authority flag false until the request and its
+  separate proof are green and fresh packet-bound maintainer words are
+  recorded. Never interpret a transport refusal as biological evidence.

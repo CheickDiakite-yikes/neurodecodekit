@@ -16499,3 +16499,11 @@ and require both remote jobs green before the one official qualification.
   Ruff, compilation, strict JSON loading, CLI help and roundtrip, and diff
   checks. The complete dependency-light suite passed 6,932 tests with 278
   skips in 255.434 seconds, versus the pre-change 6,903/278 baseline.
+- 2026-08-29: Resolved Linux CI's inherited RSS high-water test artifact
+  without changing the 256 MiB production cap. Exact successor `ca5d1db`
+  passed CI `33271860805`; proof-only closeout `6815338` then passed Base
+  `99152912864`, Optional `99152912757`, and CI `33272310252` on `main`.
+- 2026-08-29: Froze inactive all-false packet `OFNER-C6R-1-HL` for one
+  manifest refresh and two range-only subject-1/run-1 header reads. The request
+  performed zero network, GDF, header, signal, target, model, score, cleanup,
+  release, or claim operations and requires its own remote proof.

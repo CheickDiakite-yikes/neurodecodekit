@@ -1,0 +1,67 @@
+{
+  "schema_name": "neurodecodekit.current_research_frontier",
+  "schema_version": "0.5.0",
+  "recorded_at": "2026-08-29",
+  "supersedes": "registries/current_research_frontier.v3.json",
+  "superseded_registry_sha256": "be8590a589157cef93e8475898efb039d7f462502b5c0b7e9e2d6718fc3b38ac",
+  "status": "OFNER_C6R_1_generated_header_proven_range_header_request_frozen",
+  "active_lane_id": "NO_ACTIVE_TIER_C_GATE",
+  "flagship_experiment": "EXP-OFNER-C6R-1",
+  "scientific_question": "Does central EEG add unseen-person imagined-movement information beyond EOG, hand and arm kinematics, posterior EEG, cue and timing structure, and matched derangement?",
+  "completed_generated_header_proof": {
+    "successor_commit": "ca5d1db35a34762905d4df823766a6d353516c66",
+    "successor_CI_run_id": 33271860805,
+    "proof_closeout_commit": "6815338609176b0f1599cbb2e11b4ce3acc8bad9",
+    "proof_closeout_CI_run_id": 33272310252,
+    "proof_closeout_base_python_job_id": 99152912864,
+    "proof_closeout_optional_neuro_readers_job_id": 99152912757,
+    "both_required_jobs_green": true,
+    "real_or_scientific_operations": 0
+  },
+  "queued_packet": {
+    "packet_id": "OFNER-C6R-1-HL",
+    "document": "docs/OFNER_2017_MOTOR_IMAGERY_RANGE_HEADER_AUTHORIZATION_PACKET.md",
+    "registry": "registries/ofner_2017_motor_imagery_range_header_authorization_request.v0.json",
+    "status": "request_frozen_pending_exact_commit_and_separate_proof_closeout_remote_green",
+    "all_authority_flags_false": true,
+    "active_now": false
+  },
+  "proposed_empirical_checkpoint": {
+    "exact_member": "sourcedata/motorimagination_subject1_run1.gdf",
+    "declared_member_bytes": 105365484,
+    "manifest_GETs_on_success": 1,
+    "GDF_range_GETs_on_success": 2,
+    "GDF_body_bytes_maximum": 65536,
+    "event_annotation_signal_target_model_or_score_operations": 0,
+    "authorized_now": false
+  },
+  "operation_boundary": {
+    "active_tier_c_packet": null,
+    "all_Tier_C_authority_flags_false": true,
+    "new_network_requests": 0,
+    "new_GDF_payload_bytes": 0,
+    "new_real_header_reads": 0,
+    "new_event_annotation_target_or_signal_reads": 0,
+    "new_model_training_prediction_or_score_operations": 0,
+    "new_device_release_or_claim_operations": 0
+  },
+  "claim_boundary": {
+    "source_selection_complete": true,
+    "generated_acquisition_engineering_proven": true,
+    "generated_header_engineering_proven": true,
+    "real_Ofner_GDF_header_verified": false,
+    "real_Ofner_EEG_accessed": false,
+    "neural_advantage_established": false,
+    "unseen_person_generalization_established": false,
+    "EEG_beyond_EOG_and_kinematics_established": false,
+    "motor_cortex_or_movement_intention_established": false,
+    "thought_or_language_decoding_established": false,
+    "live_or_portable_hardware_established": false,
+    "clinical_utility_established": false
+  },
+  "next_gate": {
+    "tier": "Tier_A_proof_only",
+    "action": "commit_push_and_remotely_prove_the_all_false_OFNER_C6R_1_HL_request_then_require_fresh_packet_bound_maintainer_words",
+    "real_data_authority_created": false
+  }
+}

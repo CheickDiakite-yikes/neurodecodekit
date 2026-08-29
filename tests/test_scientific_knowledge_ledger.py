@@ -92,7 +92,7 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
                 "infrastructure_created_and_why",
             },
         )
-        self.assertIn("GDF fixed-header", update["next_decisive_experiment"])
+        self.assertIn("GDF range-only header", update["next_decisive_experiment"])
         self.assertIn("24,832-byte generated GDF 2.x header replays", update["evidence_produced"])
         self.assertIn("zero network", update["evidence_produced"])
 

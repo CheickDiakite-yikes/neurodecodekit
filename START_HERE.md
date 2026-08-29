@@ -26,9 +26,11 @@
 > header-only parser and two-range firewall now pass two 24,832-byte synthetic
 > replays and 41 refusals, recover the frozen 96-role roster at 512 Hz, reject
 > trailing data bytes, and expose no network or real execution command. This is
-> not EEG evidence. After the exact header implementation is remotely proven,
-> prepare an all-false packet for one separately authorized range-only GDF
-> header checkpoint. Read `registries/current_research_frontier.v3.json`.
+> not EEG evidence. The exact implementation and proof are remotely green. An
+> all-false `OFNER-C6R-1-HL` packet now freezes one manifest refresh and two
+> gapless ranges totaling at most 65,536 GDF bytes from subject 1/run 1, but it
+> is inactive and authorizes nothing. Prove that request, then require fresh
+> packet-bound maintainer words. Read `registries/current_research_frontier.v4.json`.
 > COMM-P0-G FS3 remains paused as an adjacent engineering diagnostic.
 
 > Dreyer H-L1R1 recovery update, 2026-08-29: exact generated coordinator
@@ -204,7 +206,7 @@
 Historical exact control-plane label retained for proof compatibility:
 `Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight`.
 
-Start with `registries/current_research_frontier.v3.json`, the machine-readable
+Start with `registries/current_research_frontier.v4.json`, the machine-readable
 snapshot of the active lane, proof chain, consumed status, measurements, goals,
 and next transition.
 

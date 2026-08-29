@@ -262,6 +262,15 @@
 > channels at 512 Hz and rejects trailing data bytes. Network, real GDF/header,
 > events, signals, targets, models, and scores remain zero. Prove this exact
 > implementation, then prepare one all-false Tier C range-only header packet.
+
+> **Ofner range-only request (2026-08-29):** exact successor `ca5d1db` passed
+> Base `99151605412`, Optional `99151605230`, and CI `33271860805`; proof-only
+> closeout `6815338` passed Base `99152912864`, Optional `99152912757`, and CI
+> `33272310252` on GitHub `main`. All-false packet `OFNER-C6R-1-HL` freezes one
+> manifest refresh plus two gapless ranges totaling at most 65,536 GDF bytes
+> from exactly subject 1/run 1. It is inactive and performed zero network or
+> real-data operations. Prove the request next, then require fresh packet-bound
+> maintainer words before implementation or access.
 >
 > **Historical DREYER-C5R-1 frontier (2026-08-26):** the six-step independent-replication
 > build is complete through the real-data gate. (1) The aggregate-only BNCI
