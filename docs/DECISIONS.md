@@ -14613,3 +14613,11 @@ green; only then may the single generated qualification run.
   place reinterpretation, and require a separately governed generated-only
   successor. Real/private, network, EDF, target, model, score, release, and
   scientific-claim operations remain zero.
+- 2026-08-29: Accept `24a5da2973ef65fa05f5ea7b1d1389370534ad23`
+  as the exact remotely green H-L1 rejected-result record after Base Python
+  `99047501588`, Optional Neuro Readers `99047501456`, and CI `33232453046`
+  passed and GitHub `main` resolved to that SHA. Bind the exact failed source,
+  result, closeout, frontier, and tests in a proof-only closeout without reading
+  ignored output, rerunning qualification, repeating reproduction, or repairing
+  the consumed source. Keep H-L2 blocked and require a fresh exact packet-bound
+  decision for any additive generated-only successor qualification.

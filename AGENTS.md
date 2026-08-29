@@ -61,10 +61,13 @@ unseen-person experiment. Its first empirical checkpoint is one exact
 attempt `DREYER-C5R-1-HL1-R0` is consumed and rejected: an opener-construction
 refusal left invocation-owned staging and emitted no aggregate H0. H-L2 is
 blocked; do not activate or access the real EDF from this attempt. Read the
-H-L1 closeout and current frontier before successor work. `COMM-P0-G-FS3` is
-paused as an adjacent engineering diagnostic; do not activate it under general
-continuation. No new data, target, model, score, device, release, or claim
-operation is authorized by this state.
+H-L1 closeout and current frontier before successor work. Exact rejected-result
+commit `24a5da2973ef65fa05f5ea7b1d1389370534ad23` passed Base Python
+`99047501588`, Optional Neuro Readers `99047501456`, and CI `33232453046`, then
+reached GitHub `main`; its proof-only closeout remains pending its own remote
+CI. `COMM-P0-G-FS3` is paused as an adjacent engineering diagnostic; do not
+activate it under general continuation. No new data, target, model, score,
+device, release, or claim operation is authorized by this state.
 
 ## Historical Gate Detail: COMM-P0-G-FS3
 
