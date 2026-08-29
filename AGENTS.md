@@ -98,10 +98,14 @@ Python `99096464718`, Optional Neuro Readers `99096464770`, and CI
 `DREYER-C5R-1-HL1R1-QA0-D0`. Exact decision
 `749fd5695441350d8cc949af19b6ad4bb5863dba` passed Base Python
 `99098454755`, Optional Neuro Readers `99098454800`, and CI `33251731156`,
-then reached GitHub `main`. The additive generated-only 65-case coordinator
-now exists; read its implementation document and registry. Do not consume the
-sole registered qualification until this exact coordinator commit is pushed
-and both jobs are green. H-L2 and real EDF authority remain false.
+then reached GitHub `main`. The additive generated-only 65-case coordinator is
+exact-green at `0ef634e4852d9f8a18d4b8a1f50e6a1331bd020a`, Base Python
+`99103540731`, Optional Neuro Readers `99103540620`, and CI `33253657120`.
+The sole `DREYER-C5R-1-HL1R1-Q0` attempt then passed all 65 cases in
+0.1789909170474857 seconds at 37,699,584-byte peak RSS and is consumed. Read
+its result closeout and machine record. The closeout is pending its own remote
+green proof; do not rerun or reinterpret Q0. H-L2 and real EDF authority remain
+false.
 `COMM-P0-G-FS3` is paused as an adjacent engineering diagnostic; do not activate
 it under general continuation. No new data, target, model, score, device,
 release, or claim operation is authorized by this state.

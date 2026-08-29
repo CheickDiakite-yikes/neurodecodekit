@@ -14,8 +14,18 @@
 > 60-person Dreyer nuisance-controlled unseen-person experiment, and its first
 > empirical checkpoint is one exact `sub-01` R1 EDF fixed-header observation.
 > COMM-P0-G FS3 is paused as an adjacent engineering diagnostic. This strategy
-> changes priority only; `DREYER-C5R-1-HL` remains all-false and no data,
-> target, model, score, device, release, or claim authority changed.
+> changes priority only. The generated H-L1R1 recovery qualification is now
+> consumed and passed, while every real-data, target, model, score, device,
+> release, and claim authority remains false.
+
+> Dreyer H-L1R1 recovery update, 2026-08-29: exact generated coordinator
+> `0ef634e4852d9f8a18d4b8a1f50e6a1331bd020a` passed Base Python
+> `99103540731`, Optional Neuro Readers `99103540620`, and CI `33253657120`
+> on GitHub `main`. The sole Q0 attempt then passed all 65 frozen generated
+> cases in 0.1789909170474857 seconds at 37,699,584-byte peak RSS, with
+> 1,623,762 generated input-plus-output bytes. It is consumed and cannot be
+> rerun. This qualifies the corrected one-file transaction wrapper only; no
+> real EDF or EEG was opened, and H-L2 remains closed behind its own packet.
 
 > COMM-P0-G FS3 registration frontier, 2026-08-28: Amendment 3 replaces only
 > the redundant second full fictional model replay with a separate zero-model
@@ -183,13 +193,18 @@ Read, in order:
 5. `docs/DREYER_C5R_1_STAGE_H_GENERATED_QUALIFICATION_RESULT.md`;
 6. `docs/DREYER_C5R_1_STAGE_H_LIVE_PREFLIGHT_AUTHORIZATION_PACKET.md`;
 7. `docs/DREYER_C5R_1_STAGE_H_LIVE_PREFLIGHT_REQUEST_PROOF_CLOSEOUT.md`; and
-8. `docs/DREYER_C5R_1_STAGE_H_LIVE_IMPLEMENTATION_SAFETY_REVIEW.md`.
+8. `docs/DREYER_C5R_1_STAGE_H_LIVE_IMPLEMENTATION_SAFETY_REVIEW.md`;
+9. `docs/DREYER_C5R_1_STAGE_H_LIVE_RECOVERY_QUALIFICATION_IMPLEMENTATION.md`;
+   and
+10. `docs/DREYER_C5R_1_STAGE_H_LIVE_RECOVERY_QUALIFICATION_CLOSEOUT.md`.
 
 The full generated firewall/model/scorer passed once, and the streaming
 fixed-header preflight passed two valid replays plus 18 adversarial refusals.
-Both qualifications are consumed and have no scientific value. No real Dreyer
-payload, header, annotation, signal, target, model outcome, prediction, or
-score has been read.
+The first H-L1 wrapper qualification was rejected after finding a cleanup
+defect. Its additive H-L1R1 successor has now passed the complete 65-case
+matrix and is consumed. All are generated engineering with no scientific
+value. No real Dreyer payload, header, annotation, signal, target, model
+outcome, prediction, or score has been read.
 
 The static live-implementation safety review closes the known path-race,
 atomic-promotion, transport, resource, exception-privacy, and EDF
@@ -200,12 +215,12 @@ All-false request `5191e79e2ccfa50b5042a24357c0c22d68d8f088` passed CI
 `32934958878`. Its proof-only closeout
 `821fad17e06914375c50a7d0dd7017458b2df838` passed Base job `98077895278`,
 Optional Neuro Readers job `98077895460`, and CI `32936247679`.
-`DREYER-C5R-1-HL` is therefore the sole active Tier C packet. The next fresh,
-unambiguous maintainer `approve`, `continue`, or `proceed` may authorize only
-the packet's proof-gated generated live wrapper and one exact 14,805,604-byte
-EDF header preflight after all intermediate green barriers. It does not
-authorize the remaining 119 files, signal or target reads, training, scoring,
-release, or a claim upgrade.
+`DREYER-C5R-1-HL` remains the sole active Tier C lane. After the H-L1R1 result
+closeout is remotely green, the next gate is a separate all-false H-L2
+activation request for one exact 14,805,604-byte EDF fixed-header observation.
+The current authority cannot open that file and does not authorize the
+remaining 119 files, signal or target reads, training, scoring, release, or a
+claim upgrade.
 
 The parallel end-to-end plan is tracked in
 `docs/COMMUNICATION_EEG_SCIENTIFIC_CLAIM_PROGRAM.md`. It selects OpenNeuro

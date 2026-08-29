@@ -14709,3 +14709,14 @@ green; only then may the single generated qualification run.
   until this exact coordinator commit is pushed and both jobs are green. Keep
   H-L2, the real EDF, network, targets, models, scores, devices, releases,
   other projects, and scientific claims closed.
+- 2026-08-29: Accept exact generated-only coordinator
+  `0ef634e4852d9f8a18d4b8a1f50e6a1331bd020a` after Base Python
+  `99103540731`, Optional Neuro Readers `99103540620`, and CI `33253657120`
+  passed on GitHub `main`. Consume the sole registered
+  `DREYER-C5R-1-HL1R1-Q0` attempt. It passed 65/65 frozen cases in
+  0.1789909170474857 seconds at 37,699,584-byte peak RSS, with 1,623,762
+  generated input-plus-output bytes and 372,882 allocated temporary bytes.
+  Record the ignored marker and aggregate result by size and SHA-256 only;
+  never commit them. Q0 is consumed and cannot be rerun. Keep H-L2, the real
+  EDF, network, targets, models, scores, devices, releases, and scientific
+  claims closed behind a separate later packet.

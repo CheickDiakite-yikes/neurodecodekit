@@ -20,7 +20,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(self.frontier["active_lane_id"], "DREYER-C5R-1-HL")
         self.assertEqual(
             self.frontier["status"],
-            "HL1R1_qualification_coordinator_complete_pending_remote_green_HL2_blocked",
+            "HL1R1_Q0_passed_consumed_result_closeout_pending_remote_green_HL2_blocked",
         )
 
     def test_scientific_strategy_converges_on_one_empirical_checkpoint(self):
@@ -337,7 +337,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         )
         self.assertEqual(
             activation_request["status"],
-            "request_proof_and_decision_green_coordinator_pending_remote_green",
+            "qualification_passed_consumed_result_closeout_pending_remote_green",
         )
         self.assertEqual(
             activation_request["bound_green_implementation_proof_commit"],
@@ -403,10 +403,21 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(qualification_decision["real_or_private_operations"], 0)
         coordinator = qualification_decision["generated_qualification_coordinator"]
         self.assertEqual(coordinator["implementation_id"], "DREYER-C5R-1-HL1R1-QI0")
+        self.assertEqual(
+            coordinator["commit"],
+            "0ef634e4852d9f8a18d4b8a1f50e6a1331bd020a",
+        )
+        self.assertEqual(coordinator["CI_run_id"], 33_253_657_120)
         self.assertEqual(coordinator["development_matrix_cases_passed"], 65)
         self.assertEqual(coordinator["registered_qualification_attempts"], 0)
         self.assertEqual(coordinator["real_or_private_operations"], 0)
         self.assertFalse(coordinator["HL2_authority"])
+        result = coordinator["registered_qualification_result"]
+        self.assertEqual(result["result_id"], "DREYER-C5R-1-HL1R1-Q0-R0")
+        self.assertEqual(result["matrix_cases_passed"], 65)
+        self.assertEqual(result["registered_attempts_consumed"], 1)
+        self.assertFalse(result["rerun_allowed"])
+        self.assertEqual(result["real_or_private_operations"], 0)
         for key in (
             "real_requests",
             "real_network_bytes",
