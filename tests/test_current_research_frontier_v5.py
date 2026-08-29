@@ -68,18 +68,17 @@ class CurrentResearchFrontierV5Tests(unittest.TestCase):
         self.assertIsNone(boundary["active_tier_c_packet"])
         self.assertTrue(boundary["all_authority_flags_false"])
 
-    def test_current_control_plane_names_v5_and_fresh_decision(self) -> None:
-        expected = {
-            "AGENTS.md": "registries/current_research_frontier.v5.json",
-            "README.md": "registries/current_research_frontier.v5.json",
-            "START_HERE.md": "registries/current_research_frontier.v5.json",
-            "docs/CODEX_HANDOFF.md": "registries/current_research_frontier.v5.json",
-        }
-        for path, phrase in expected.items():
-            text = (ROOT / path).read_text(encoding="utf-8")[:12_000]
-            self.assertIn(phrase, text, path)
-            normalized = text.replace("\n> ", " ").replace("\n", " ")
-            self.assertIn("fresh packet-bound", normalized, path)
+    def test_v5_remains_an_immutable_historical_frontier(self) -> None:
+        self.assertEqual(
+            self.frontier["status"],
+            "OFNER_C6R_1_HL_request_and_proof_green_awaiting_fresh_decision",
+        )
+        self.assertEqual(
+            self.frontier["next_gate"]["action"],
+            "obtain_fresh_packet_bound_maintainer_words_then_commit_push_and_"
+            "remotely_green_the_exact_decision_before_HL1_implementation",
+        )
+        self.assertTrue((ROOT / "registries/current_research_frontier.v7.json").is_file())
 
 
 if __name__ == "__main__":
