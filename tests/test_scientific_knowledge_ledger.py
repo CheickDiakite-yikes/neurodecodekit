@@ -27,8 +27,8 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
             "neurodecodekit.scientific_knowledge_ledger",
         )
         self.assertEqual(self.ledger["schema_version"], "0.1.0")
-        self.assertEqual(self.ledger["flagship"]["experiment_id"], "EXP-DREYER-C5R-1")
-        self.assertIn("consumed at H0", self.ledger["flagship"]["first_empirical_checkpoint"])
+        self.assertEqual(self.ledger["flagship"]["experiment_id"], "EXP-OFNER-C6R-1")
+        self.assertIn("original Ofner", self.ledger["flagship"]["first_empirical_checkpoint"])
 
     def test_claims_have_valid_states_and_full_coordinates(self):
         for claim in self.ledger["claims"]:
@@ -38,11 +38,11 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
 
     def test_summary_keeps_science_and_authority_explicit(self):
         summary = summarize_scientific_ledger(self.ledger)
-        self.assertEqual(summary["flagship_experiment_id"], "EXP-DREYER-C5R-1")
+        self.assertEqual(summary["flagship_experiment_id"], "EXP-OFNER-C6R-1")
         self.assertIsNone(summary["active_tier_c_packet"])
         self.assertTrue(summary["all_authority_flags_false"])
         self.assertIn(
-            "CLAIM-DREYER-NUISANCE-CONTROLLED-EEG",
+            "CLAIM-OFNER-NUISANCE-CONTROLLED-MOTOR-IMAGERY",
             summary["unresolved_claim_ids"],
         )
 
@@ -84,7 +84,8 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
                 "infrastructure_created_and_why",
             },
         )
-        self.assertIn("new transport-verified source", update["next_decisive_experiment"])
+        self.assertIn("GDF fixed-header", update["next_decisive_experiment"])
+        self.assertIn("13,748,417,608", update["evidence_produced"])
 
     def test_malformed_state_is_rejected(self):
         malformed = copy.deepcopy(self.ledger)

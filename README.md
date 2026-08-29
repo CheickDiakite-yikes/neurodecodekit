@@ -39,18 +39,28 @@ discovery distinct from confirmation and translation; and score scientific
 attribution separately from functional utility.
 
 The frozen 60-person Dreyer nuisance-controlled unseen-person experiment was
-the flagship confirmation route. Its one-file checkpoint stopped safely at
+the prior flagship confirmation route. Its one-file checkpoint stopped safely at
 strict transport validation: one endpoint response opened, but no response
 body byte or EDF header was read. The exact Dreyer lane is now consumed and
 parked without a biological interpretation, and the 1.78 GB cohort was not
-downloaded. No Tier C packet is active; the next scientific task is source
-reselection under a new preregistration. COMM-P0 FS3 remains paused as an
-adjacent engineering diagnostic.
+downloaded.
+
+The prospective flagship is now the 15-person Ofner 2017 motor-imagery cohort.
+An exact metadata-only audit selected 150 original GDF files totaling
+13,748,417,608 bytes (`12.8042` GiB) with reported 61 EEG, three EOG, and 32
+hand/arm movement channels at 512 Hz. The tempting 4.58 GB BIDS derivative was
+rejected because it omits the EOG and movement comparators needed to distinguish
+central EEG from cheaper eye and overt-motion explanations. No payload has been
+downloaded. No Tier C packet is active. See the
+[source decision](docs/OFNER_2017_MOTOR_IMAGERY_SOURCE_RESELECTION_2026_08_29.md)
+and [current machine frontier](registries/current_research_frontier.v2.json).
+COMM-P0 FS3 remains paused as an adjacent engineering diagnostic.
 
 ## Current Research Frontier
 
-The latest irreversible frontier result is the consumed Dreyer H-L2 transport
-H0 described above. The following COMM-P0-G material is retained as exact
+The latest irreversible result remains the consumed Dreyer H-L2 transport H0.
+The latest reversible frontier is the Ofner source selection described above.
+The following COMM-P0-G material is retained as exact
 adjacent-engineering history and is paused. Its proof architecture has a prospective, resource-aware
 successor: Amendment 3 replaces the second redundant full
 fictional model replay with a separate verifier/scorer process that has no
@@ -596,7 +606,7 @@ score or claim upgrade occurred. Repeated convergence warnings at the frozen
 80-iteration cap were recorded without changing or rerunning the models.
 
 The machine-readable current state is
-[`registries/current_research_frontier.v1.json`](registries/current_research_frontier.v1.json).
+[`registries/current_research_frontier.v2.json`](registries/current_research_frontier.v2.json).
 It freezes the active lane, proof commits, consumed one-shot state, measured
 result, resource caps, five scientific goals, claim boundary, and exact next
 transition so handoffs cannot silently return to an older gate. Prediction

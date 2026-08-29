@@ -1,0 +1,73 @@
+{
+  "schema_name": "neurodecodekit.current_research_frontier",
+  "schema_version": "0.3.0",
+  "recorded_at": "2026-08-29",
+  "supersedes": "registries/current_research_frontier.v1.json",
+  "superseded_registry_sha256": "c7adaf010cbc38c8b079e9233543df0f0e407ea24428827e68af06521310773b",
+  "status": "OFNER_C6R_1_selected_from_metadata_no_payload_authority",
+  "active_lane_id": "NO_ACTIVE_TIER_C_GATE",
+  "scientific_strategy": {
+    "constitution": "docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md",
+    "plan": "docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md",
+    "knowledge_ledger": "registries/scientific_knowledge_ledger.v0.json",
+    "flagship_experiment": "EXP-OFNER-C6R-1",
+    "scientific_question": "Does central EEG add unseen-person imagined-movement information beyond EOG, hand and arm kinematics, posterior EEG, cue and timing structure, and matched derangement?",
+    "first_empirical_checkpoint": "one_exact_original_GDF_fixed_header_measurement_contract_observation",
+    "authority_changed": false
+  },
+  "source_reselection": {
+    "lane_id": "OFNER-C6R-1",
+    "document": "docs/OFNER_2017_MOTOR_IMAGERY_SOURCE_RESELECTION_2026_08_29.md",
+    "registry": "registries/ofner_2017_motor_imagery_source_reselection.v0.json",
+    "status": "selected_prospectively_from_public_metadata",
+    "dataset": "NEMAR_nm000173_v1.0.3_BNCI_001_2017",
+    "representation": "original_source_GDF_motor_imagery_only",
+    "participants": 15,
+    "files": 150,
+    "payload_bytes": 13748417608,
+    "reported_EEG_channels": 61,
+    "reported_EOG_channels": 3,
+    "reported_movement_channels": 32,
+    "reported_EMG_channels": 0,
+    "reported_sampling_rate_hz": 512,
+    "license": "CC-BY-4.0",
+    "within_20_GiB_allowance": true,
+    "source_header_verified": false,
+    "acquisition_authorized": false
+  },
+  "parked_predecessor": {
+    "lane_id": "DREYER-C5R-1",
+    "result": "DREYER-H0",
+    "refusal": "HL2-TRANSPORT",
+    "registered_invocation_consumed": true,
+    "retry_rerun_repair_resume_substitute_or_reinterpret_allowed": false,
+    "network_body_bytes": 0,
+    "EDF_header_reads": 0,
+    "biological_interpretation": false
+  },
+  "operation_boundary": {
+    "active_tier_c_packet": null,
+    "all_irreversible_authority_flags_false": true,
+    "new_EEG_payload_requests": 0,
+    "new_EEG_payload_bytes": 0,
+    "new_header_event_annotation_target_or_signal_reads": 0,
+    "new_model_training_prediction_or_score_operations": 0,
+    "new_device_release_or_claim_operations": 0
+  },
+  "claim_boundary": {
+    "source_selection_complete": true,
+    "real_Ofner_EEG_accessed": false,
+    "neural_advantage_established": false,
+    "unseen_person_generalization_established": false,
+    "EEG_beyond_EOG_and_kinematics_established": false,
+    "motor_cortex_or_movement_intention_established": false,
+    "thought_or_language_decoding_established": false,
+    "live_or_portable_hardware_established": false,
+    "clinical_utility_established": false
+  },
+  "next_gate": {
+    "tier": "Tier_B_generated_only_then_separate_Tier_C",
+    "action": "qualify_an_exact_manifest_selector_and_bounded_acquisition_adapter_with_generated_fixtures_then_prepare_one_all_false_real_data_packet",
+    "real_data_authority_created": false
+  }
+}

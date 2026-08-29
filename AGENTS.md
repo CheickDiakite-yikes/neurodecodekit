@@ -55,16 +55,28 @@ utility. Historical documents remain evidence and safety records, but they do
 not outrank this strategy where priorities conflict.
 
 The frozen 60-person `DREYER-C5R-1` nuisance-controlled unseen-person
-experiment is now parked before payload access. The sole registered H-L2
+experiment is parked before payload access. The sole registered H-L2
 attempt `DREYER-C5R-1-HL2-R0` opened one public endpoint response and refused
 with aggregate `DREYER-H0` / `HL2-TRANSPORT` before reading any response-body
 byte or EDF header. The exact cause is intentionally unavailable from the
 sanitized artifact, so do not infer status, URL, length, encoding, or header
 drift. This is a consumed transport outcome, not a biological null. Never
 retry, rerun, repair, resume, substitute, or reinterpret it, and never inspect
-its ignored marker or private paths. No Tier C packet is active. Read the H-L2
-result closeout, `registries/current_research_frontier.v1.json`, and knowledge ledger before source
-reselection. Earlier Dreyer progression is historical: rejected-result
+its ignored marker or private paths.
+
+The prospective flagship is now `OFNER-C6R-1`. Public metadata for immutable
+NEMAR `nm000173` `v1.0.3` selects exactly 150 original motor-imagery GDF files
+across 15 participants / 13,748,417,608 bytes. This representation reports 61
+EEG, three EOG, 19 glove, and 13 arm channels at 512 Hz. The smaller 4.58 GB
+BIDS derivative is rejected because its public channel sidecar exposes only 61
+EEG channels and omits the required EOG and movement comparators. Read the
+Ofner source-reselection decision, `registries/current_research_frontier.v2.json`,
+and the knowledge ledger first. No GDF payload, event, target, annotation,
+signal, model, prediction, or score has been accessed, and no Tier C packet is
+active. No Tier C packet is active. Next perform generated-only
+selector/acquisition qualification, then
+require a separate exact-green Tier C decision before one real GDF header or
+payload operation. Earlier Dreyer progression is historical: rejected-result
 commit `24a5da2973ef65fa05f5ea7b1d1389370534ad23` passed Base Python
 `99047501588`, Optional Neuro Readers `99047501456`, and CI `33232453046`, then
 reached GitHub `main`. Proof-only closeout

@@ -10,6 +10,27 @@ Canonical directive:
 Machine knowledge source:
 [`scientific_knowledge_ledger.v0.json`](../registries/scientific_knowledge_ledger.v0.json)
 
+## Current Addendum: Ofner Source Reselection
+
+The Dreyer route described below is retained as the rationale and frozen
+failure history, but it is no longer the active prospective source. Its sole
+H-L2 attempt consumed at transport H0 before any EDF body or header read.
+
+The next prospective flagship is `OFNER-C6R-1`. Metadata-only research selected
+the original NEMAR `nm000173` `v1.0.3` motor-imagery GDF surface: 15 people, 150
+files, 13,748,417,608 bytes, and reported 61 EEG, three EOG, 19 glove, and 13 arm
+channels at 512 Hz. The smaller BIDS derivative is rejected because its public
+channel sidecar exposes only EEG and therefore cannot support the nuisance-
+controlled question. The new claim asks whether central EEG adds held-out
+seven-class imagined-movement information beyond EOG, recorded kinematics,
+posterior EEG, cue/timing, and matched derangement in unseen people.
+
+No real Ofner payload or header has been accessed. No Tier C packet is active.
+The ordered next steps are generated-only selector/acquisition qualification,
+one separately authorized fixed-header check, then a fresh preregistration and
+only later one target-firewalled execution. Because no EMG was recorded, even
+a future pass cannot claim independence from all muscle activity.
+
 ## Decision In One Page
 
 NeuroDecodeKit will optimize for belief-changing evidence rather than proof

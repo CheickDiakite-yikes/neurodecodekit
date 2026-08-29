@@ -1,17 +1,22 @@
 # Codex Handoff - NeuroDecodeKit
 
-> **Current scientific frontier, 2026-08-29:** read the H-L2 result closeout,
-> `registries/current_research_frontier.v1.json`, and the scientific knowledge
-> ledger first. Activation
+> **Current scientific frontier, 2026-08-29:** read the Ofner source-reselection
+> decision, `registries/current_research_frontier.v2.json`, and the scientific
+> knowledge ledger first. The parked predecessor activation
 > `e3adab26e867f6de7e56f406f59ede51718b577c` passed both required jobs in CI
 > `33261346763` on GitHub `main`. The sole `DREYER-C5R-1-HL2-R0` invocation
 > then consumed at `DREYER-H0` / `HL2-TRANSPORT`: one response opened, zero
 > body bytes, zero EDF header reads, no payload retained, 0.6479716249741614
 > seconds, and 36,454,400-byte peak RSS. This is a transport refusal, not a
 > biological null. Never retry it or inspect its ignored evidence. The Dreyer
-> lane is parked, no Tier C packet is active, and the next reversible task is
-> transport-verified source reselection. Preserve the unrelated tracker
-> inspection file.
+> lane is parked. Public metadata now selects `OFNER-C6R-1`: 15 participants,
+> 150 original motor-imagery GDF files, 13,748,417,608 bytes, reported 61 EEG +
+> 3 EOG + 32 hand/arm movement channels, and CC BY 4.0. The 4.58 GB BIDS
+> derivative is scientifically ineligible because it omits EOG and movement
+> comparators. No GDF payload, event, target, signal, model, prediction, or
+> score was accessed. No Tier C packet is active. Next build and qualify the
+> generated-only exact selector/acquisition adapter, then prepare a separate
+> all-false one-header packet. Preserve the unrelated tracker inspection file.
 
 > **Historical generated frontier, 2026-08-28:** read Amendment 3 and the FS3
 > preregistration/contract first. Exact Amendment 3 `b15d3cf` passed Base

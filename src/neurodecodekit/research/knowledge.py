@@ -350,20 +350,16 @@ def build_research_update(value: Any) -> dict[str, str]:
     experiment = next(row for row in ledger["experiments"] if row["id"] == experiment_id)
     claim_id = ledger["flagship"]["claim_id"]
     claim = next(row for row in ledger["claims"] if row["id"] == claim_id)
+    evidence_by_id = {item["id"]: item for item in ledger["evidence"]}
+    latest_evidence = evidence_by_id[experiment["evidence_ids"][-1]]
     return {
         "scientific_question": experiment["scientific_question"],
-        "evidence_produced": (
-            "The sole Dreyer H-L2 endpoint response failed strict transport validation "
-            "before any body byte or EDF header was read."
-        ),
-        "belief_changed": (
-            "The registered Dreyer transport surface cannot currently support the frozen "
-            "confirmation, so that lane is parked without a biological interpretation."
-        ),
+        "evidence_produced": latest_evidence["summary"],
+        "belief_changed": claim["strongest_statement"],
         "uncertainty_remaining": claim["next_discriminator"],
         "next_decisive_experiment": experiment["earliest_checkpoint"],
         "infrastructure_created_and_why": (
-            "A marker-first transport firewall consumed the one-shot attempt safely and "
-            "prevented an unnecessary 1.78 GB acquisition path."
+            "The source lock preserves immutable identity, nuisance measurements, storage "
+            "limits, and the claim ceiling before any payload is opened."
         ),
     }

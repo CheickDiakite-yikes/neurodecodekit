@@ -10,14 +10,20 @@
 > Scientific strategy, updated 2026-08-29: read
 > `docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md`, then
 > `docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md`, then
-> `registries/scientific_knowledge_ledger.v0.json`. The flagship is the frozen
-> 60-person Dreyer nuisance-controlled unseen-person experiment. Its sole H-L2
+> `registries/scientific_knowledge_ledger.v0.json`. The frozen 60-person Dreyer
+> route is the parked predecessor. Its sole H-L2
 > fixed-header attempt is consumed at aggregate `DREYER-H0`: one endpoint
 > response opened, strict transport validation refused, and zero response-body
 > or EDF-header bytes were read. This is not a biological result. The exact
-> Dreyer lane is parked, no Tier C packet is active, and source reselection is
-> the next reversible task. COMM-P0-G FS3 remains paused as an adjacent
-> engineering diagnostic.
+> Dreyer lane is parked. The prospective flagship is now `OFNER-C6R-1`: public
+> metadata selected 15 participants / 150 original motor-imagery GDF files /
+> 13,748,417,608 bytes with reported 61 EEG, three EOG, and 32 hand/arm movement
+> channels. The smaller BIDS derivative is rejected because it omits those
+> nuisance comparators. No payload has been downloaded, no Tier C packet is
+> active, and the next task is generated-only selector/acquisition
+> qualification before a separately authorized one-header checkpoint. Read
+> `registries/current_research_frontier.v2.json`. COMM-P0-G FS3 remains paused
+> as an adjacent engineering diagnostic.
 
 > Dreyer H-L1R1 recovery update, 2026-08-29: exact generated coordinator
 > `0ef634e4852d9f8a18d4b8a1f50e6a1331bd020a` passed Base Python
@@ -192,7 +198,7 @@
 Historical exact control-plane label retained for proof compatibility:
 `Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight`.
 
-Start with `registries/current_research_frontier.v1.json`, the machine-readable
+Start with `registries/current_research_frontier.v2.json`, the machine-readable
 snapshot of the active lane, proof chain, consumed status, measurements, goals,
 and next transition.
 

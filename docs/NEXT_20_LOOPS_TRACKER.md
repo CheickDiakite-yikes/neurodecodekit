@@ -234,6 +234,15 @@
 > evidence. The exact Dreyer lane and its 1.78 GB continuation are parked, no
 > Tier C packet is active, and transport-verified source reselection is the next
 > reversible scientific task.
+
+> **Ofner source reselection (2026-08-29):** public metadata selected the
+> original `nm000173` `v1.0.3` motor-imagery GDF surface as `OFNER-C6R-1`: 15
+> participants, 150 files, 13,748,417,608 bytes, and reported 61 EEG + 3 EOG +
+> 32 glove/arm channels at 512 Hz. The 4.58 GB BIDS derivative is rejected
+> because it omits EOG and movement controls. This is source readiness only:
+> zero payload, event, target, signal, model, prediction, or score operations.
+> No Tier C packet is active. Next qualify an exact generated selector and
+> bounded acquisition adapter, then separately gate one original-GDF header.
 >
 > **Historical DREYER-C5R-1 frontier (2026-08-26):** the six-step independent-replication
 > build is complete through the real-data gate. (1) The aggregate-only BNCI

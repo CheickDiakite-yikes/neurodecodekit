@@ -14805,3 +14805,13 @@ green; only then may the single generated qualification run.
   packet active, and make transport-verified source reselection the next
   reversible scientific task. Upgrade no neural, decoding, unseen-person,
   peripheral-adjusted, live, hardware, or clinical claim.
+- 2026-08-29: Select `OFNER-C6R-1` prospectively from public metadata as the
+  successor source after the consumed Dreyer transport H0. Bind NEMAR
+  `nm000173` `v1.0.3` tag object `4e1329c`, its 1,352,270-byte manifest SHA-256
+  `c227c2e8`, and exactly 150 original motor-imagery GDF files across all 15
+  participants / 13,748,417,608 bytes. Reject the smaller 4,578,904,696-byte
+  BIDS imagery derivative because its public channel sidecar retains only 61
+  EEG channels and omits the three EOG plus 32 limb-motion comparators. Create
+  no payload, header, event, target, signal, model, score, or Tier C authority.
+  Next qualify a generated-only selector/acquisition adapter before proposing
+  one separately gated original-GDF fixed-header observation.

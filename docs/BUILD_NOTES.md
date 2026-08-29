@@ -16462,3 +16462,12 @@ and require both remote jobs green before the one official qualification.
   `98913572569`, and CI `33190237036`. Both reached GitHub `main`. Full FS3,
   receipt, official, real/private, device, network, release, and claim counters
   remain zero; only the separate proof-digest activation remains pending.
+- 2026-08-29: Completed the post-Dreyer metadata-only source reselection. NEMAR
+  `nm000173` `v1.0.3` exposes 150 original motor-imagery GDF files for 15
+  participants totaling 13,748,417,608 bytes, each with an exact SHA-256 and
+  stable bytes URL. Public source metadata reports 61 EEG, three EOG, 19 glove,
+  and 13 arm channels at 512 Hz. The 4.58 GB BIDS derivative was explicitly
+  rejected because its channel sidecar contains only EEG. Added a compact v2
+  frontier, updated the scientific ledger, and added strict source/storage/
+  authority tests. No real payload, event, target, signal, model, score, or
+  claim operation occurred.
