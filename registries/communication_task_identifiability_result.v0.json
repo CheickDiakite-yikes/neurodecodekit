@@ -1,0 +1,139 @@
+{
+  "schema_name": "neurodecodekit.communication_task_identifiability_evidence",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-28",
+  "source_contract": {
+    "path": "registries/communication_eeg_prospective_synchronized_cohort_contract.v0.json",
+    "sha256": "aa5e715cca59bb982f9c57f6216b98a10242ba3c18638399cceb8d602e04da16"
+  },
+  "implementation": {
+    "path": "src/neurodecodekit/research/task_identifiability.py",
+    "sha256": "192ba72ae6bf4d3e817ece611bfee03c8f5bccd5e51dc115011318c946a15f0a"
+  },
+  "result": {
+    "belief_update": "Prompted trials cannot identify intention beyond cue content, while the free-choice precommitment endpoint is structurally separable from the generated nuisance schedule and must remain the non-rescuable primary endpoint.",
+    "claim_boundary": {
+      "EEG_beyond_peripheral_established": false,
+      "communication_decoding_established": false,
+      "live_decoding_established": false,
+      "scientific_neural_effect_established": false,
+      "task_schedule_identifiability_checked": true,
+      "unseen_person_generalization_established": false
+    },
+    "endpoint_results": {
+      "free_choice": {
+        "augmented_design_rank": 16,
+        "nuisance_bayes_accuracy": 0.25,
+        "nuisance_design_rank": 13,
+        "nuisance_mutual_information_nats": 0.0,
+        "pairwise_target_information_nats": {
+          "cue_content": 0.0,
+          "cue_side": 0.0,
+          "eog_profile": 0.0,
+          "oral_emg_profile": 0.0,
+          "timing_phase": 0.0
+        },
+        "rows": 64,
+        "target_classes": 4,
+        "target_entropy_nats": 1.3862943611198906,
+        "target_incremental_degrees_of_freedom": 3,
+        "target_separable_from_scheduled_nuisance": true
+      },
+      "prompted": {
+        "augmented_design_rank": 16,
+        "nuisance_bayes_accuracy": 1.0,
+        "nuisance_design_rank": 16,
+        "nuisance_mutual_information_nats": 1.3862943611198904,
+        "pairwise_target_information_nats": {
+          "cue_content": 1.3862943611198906,
+          "cue_side": 0.0,
+          "eog_profile": 0.0,
+          "oral_emg_profile": 0.0,
+          "timing_phase": 0.0
+        },
+        "rows": 64,
+        "target_classes": 4,
+        "target_entropy_nats": 1.3862943611198906,
+        "target_incremental_degrees_of_freedom": 0,
+        "target_separable_from_scheduled_nuisance": false
+      }
+    },
+    "operation_counters": {
+      "device_runs": 0,
+      "human_participants": 0,
+      "model_fits": 0,
+      "model_inference_runs": 0,
+      "network_bytes": 0,
+      "real_or_private_reads": 0,
+      "scientific_scores": 0,
+      "target_deliveries": 0
+    },
+    "power_sensitivity": {
+      "alpha_one_sided": 0.05,
+      "interpretation": "The 21-person design has high two-cohort power only when the true positive-participant probability is near 0.80, not merely at the 0.70 acceptance boundary.",
+      "minimum_positive_participants": 15,
+      "null_tail_probability": 0.03917694091796875,
+      "participants_per_cohort": 21,
+      "power_curve": [
+        {
+          "one_cohort_power": 0.20024599225190837,
+          "true_positive_participant_probability": 0.6,
+          "two_independent_cohorts_joint_power": 0.040098457412951344
+        },
+        {
+          "one_cohort_power": 0.550518117374891,
+          "true_positive_participant_probability": 0.7,
+          "two_independent_cohorts_joint_power": 0.30307019755799425
+        },
+        {
+          "one_cohort_power": 0.8914875462379898,
+          "true_positive_participant_probability": 0.8,
+          "two_independent_cohorts_joint_power": 0.794750045097432
+        },
+        {
+          "one_cohort_power": 0.9004225043710207,
+          "true_positive_participant_probability": 0.804,
+          "two_independent_cohorts_joint_power": 0.8107606863777808
+        },
+        {
+          "one_cohort_power": 0.9967272061154796,
+          "true_positive_participant_probability": 0.9,
+          "two_independent_cohorts_joint_power": 0.9934651234107698
+        }
+      ]
+    },
+    "schema_name": "neurodecodekit.communication_task_identifiability_result",
+    "schema_version": "0.1.0",
+    "scientific_question": "Can the frozen task separate intended command identity from scheduled cue, eye, oral-muscle, and timing profiles?",
+    "status": "passed_generated_design_audit_no_scientific_signal",
+    "storage_and_device": {
+      "biosignal_channels": {
+        "EEG": 64,
+        "EOG": 4,
+        "bilateral_oral_EMG": 4,
+        "photodiode_MISC": 1,
+        "total": 73
+      },
+      "biosignal_sampling_rate_hz": 512,
+      "consent_and_hardware_boundary": "No human recording is authorized; consent, approved hardware, privacy, and a fresh Tier C decision remain mandatory before acquisition.",
+      "fits_frozen_raw_cap": true,
+      "hardware_trigger_required": true,
+      "maximum_enrolled_participants": 44,
+      "maximum_recording_minutes_per_participant": 27.5,
+      "microphone_required": true,
+      "photodiode_required": true,
+      "raw_audio_worst_case_bytes": 2323200000,
+      "raw_biosignal_worst_case_bytes": 8140492800,
+      "raw_cap_headroom_bytes": 273725440,
+      "raw_payload_cap_bytes": 10737418240,
+      "raw_total_worst_case_bytes": 10463692800
+    },
+    "warnings": [
+      "Generated profile independence is not evidence that EEG contains command information.",
+      "Recorded EOG and oral EMG do not exclude unmeasured peripheral contamination.",
+      "Prompted cue content reveals the target and cannot establish intent-specific decoding.",
+      "Free-choice validity still requires blinded target precommitment and a target firewall.",
+      "No recruitment, consent, hardware, private data, or claim operation occurred."
+    ]
+  }
+}

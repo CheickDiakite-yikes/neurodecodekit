@@ -174,7 +174,7 @@
       "question": "Does communication-related EEG add information beyond synchronized eye and oral-muscle activity?",
       "state": "BLOCKED_BY_DATA",
       "lane": "discovery",
-      "strongest_statement": "The project has a frozen measurement strategy and generated firewalls but no qualifying real full-control communication cohort result.",
+      "strongest_statement": "The generated design audit found free-choice command identity structurally separable from the scheduled nuisance profile, while prompted trials remain fully identified by cue content; no qualifying real full-control communication result exists.",
       "coordinates": {
         "generalization": "unseen participant and independent cohort required",
         "attribution": "increment beyond EOG and bilateral oral EMG",
@@ -184,7 +184,8 @@
         "setting": "laboratory first, device translation later"
       },
       "evidence_ids": [
-        "EVID-COMM-DECISION"
+        "EVID-COMM-DECISION",
+        "EVID-COMM-TASK-IDENTIFIABILITY"
       ],
       "blockers": [
         "no operationally qualified public full-control cohort",
@@ -313,6 +314,18 @@
         "docs/COMMUNICATION_EEG_OBJECTIVE_EVIDENCE_AND_REPLICATION_DECISION_2026_08_27.md",
         "registries/communication_eeg_objective_evidence_and_replication_decision.v0.json"
       ]
+    },
+    {
+      "id": "EVID-COMM-TASK-IDENTIFIABILITY",
+      "lane": "discovery",
+      "kind": "generated exact schedule, power, storage, and device audit",
+      "summary": "Prompted targets were perfectly recoverable from cue content, but the free-choice schedule retained all three target degrees of freedom beyond joint cue, eye, oral-EMG, and timing profiles at a 0.25 nuisance ceiling.",
+      "limitations": "This is a generated design-matrix result, not physiology; spontaneous or unmeasured peripheral activity can still confound real EEG.",
+      "supports": [],
+      "contradicts": [],
+      "paths": [
+        "registries/communication_task_identifiability_result.v0.json"
+      ]
     }
   ],
   "relationships": [
@@ -339,6 +352,12 @@
       "relation": "motivates",
       "object": "CLAIM-COMMUNICATION-BEYOND-PERIPHERAL",
       "rationale": "Orthogonalized cues and synchronized peripheral sensors are designed to make the attribution question identifiable."
+    },
+    {
+      "subject": "EVID-COMM-TASK-IDENTIFIABILITY",
+      "relation": "narrows",
+      "object": "CLAIM-COMMUNICATION-BEYOND-PERIPHERAL",
+      "rationale": "The generated audit rules out prompted trials as an intent-specific primary endpoint and preserves free choice as the only structurally identifiable route in the frozen task."
     }
   ],
   "experiments": [
@@ -401,20 +420,21 @@
     {
       "id": "EXP-COMM-ORTHOGONAL-TASK",
       "lane": "discovery",
-      "status": "moonshot_design_only",
+      "status": "generated_identifiability_checkpoint_complete_design_only",
       "scientific_question": "Can an orthogonalized task separate intended communication from lateralized cues, eye movement, and oral-muscle activity?",
       "evidence_target": "A measurement design whose target remains identifiable after matched cue, gaze, EOG, and bilateral oral-EMG controls.",
-      "earliest_checkpoint": "Generated identifiability simulation plus power, storage, consent, and device estimates.",
+      "earliest_checkpoint": "Completed generated identifiability, exact sign-test sensitivity, storage, consent, and device audit.",
       "stop_rule": "Expire or redesign if intended output cannot be separated from cue and peripheral physiology before recruitment.",
       "deserves_resources_because": "Changing the measurement may create more scientific leverage than another model on confounded legacy tasks.",
       "authority": "Design only; no recruitment, device, private data, or human operation is authorized.",
-      "expected_information_gain": "Potentially high but long-horizon and gated by measurement feasibility.",
+      "expected_information_gain": "The generated checkpoint eliminated prompted-cue rescue, preserved free choice, and exposed the effect-strength assumption behind 21-person cohort power; real measurement feasibility remains gated.",
       "claim_ids": [
         "CLAIM-COMMUNICATION-BEYOND-PERIPHERAL",
         "CLAIM-LIVE-CAUSAL-DECODING"
       ],
       "evidence_ids": [
-        "EVID-COMM-DECISION"
+        "EVID-COMM-DECISION",
+        "EVID-COMM-TASK-IDENTIFIABILITY"
       ]
     }
   ],

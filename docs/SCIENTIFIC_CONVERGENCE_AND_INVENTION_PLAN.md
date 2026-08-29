@@ -357,6 +357,24 @@ falsifier: a generated task/measurement identifiability simulation plus a
 power and storage estimate. Expire or redesign if it cannot separate target
 intent from cue and peripheral physiology before participant recruitment.
 
+The generated checkpoint now establishes a narrower design conclusion. Cue
+content makes the 64 prompted trials non-identifying for intention: nuisance
+features recover the target perfectly and target identity adds zero design
+degrees of freedom. The 64 free-choice trials preserve all three four-command
+target degrees of freedom beyond the generated joint cue, eye, oral-EMG, and
+timing schedule, whose nuisance-only ceiling is `0.25`. This validates free
+choice as the non-rescuable primary endpoint, but says nothing about whether
+real EEG contains command information or whether recorded peripheral channels
+capture every contaminating source.
+
+The exact participant-consistency sensitivity also makes the planning
+assumption visible. With 21 complete people per cohort and a 15-of-21
+one-sided gate, two-cohort joint power is `0.3031` when the true positive-person
+probability is `0.70`, versus `0.7948` at `0.80` and `0.8108` at `0.804`. The
+existing 21-person design therefore depends on the stronger approximately
+`0.80` planning assumption; it is not generically high-powered at the bare
+`0.70` acceptance boundary. No frozen protocol is changed by this audit.
+
 ## I. Stop-Doing List
 
 - Stop treating green CI, hashes, or generated replays as scientific progress.
