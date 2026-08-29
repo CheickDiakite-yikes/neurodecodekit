@@ -20,7 +20,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(self.frontier["active_lane_id"], "DREYER-C5R-1-HL")
         self.assertEqual(
             self.frontier["status"],
-            "HL1_R0_proof_green_HL1R1_decision_green_implementation_pending_remote_green_HL2_blocked",
+            "HL1_R0_proof_green_HL1R1_implementation_green_proof_pending_HL2_blocked",
         )
 
     def test_scientific_strategy_converges_on_one_empirical_checkpoint(self):
@@ -294,9 +294,15 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(implementation["implementation_id"], "DREYER-C5R-1-HL1R1-I0")
         self.assertEqual(
             implementation["status"],
-            "implementation_complete_pending_own_commit_push_remote_green",
+            "remotely_green_generated_only_qualification_inactive",
         )
-        self.assertIsNone(implementation["commit"])
+        self.assertEqual(
+            implementation["commit"],
+            "6a0bc7749dd6c36b4d8db019cc6e78acf653c83d",
+        )
+        self.assertEqual(implementation["CI_run_id"], 33_249_178_006)
+        self.assertTrue(implementation["both_required_jobs_green"])
+        self.assertTrue(implementation["on_GitHub_main"])
         self.assertEqual(implementation["focused_tests"], 9)
         self.assertEqual(implementation["focused_subtests"], 43)
         self.assertEqual(implementation["ordered_failure_identities_passed"], 43)
@@ -304,6 +310,21 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertFalse(implementation["qualification_command_exposed"])
         self.assertFalse(implementation["real_command_exposed"])
         self.assertEqual(implementation["real_or_private_operations"], 0)
+        implementation_proof = recovery["generated_recovery_implementation_proof"]
+        self.assertEqual(
+            implementation_proof["proof_id"],
+            "DREYER-C5R-1-HL1R1-I0-P0",
+        )
+        self.assertEqual(implementation_proof["bound_artifacts"], 6)
+        self.assertEqual(implementation_proof["bound_bytes"], 69_368)
+        self.assertEqual(
+            implementation_proof["canonical_artifact_set_sha256"],
+            "b70a95b12bd80e7703e0a1c109c5be734ad278892653ba7336aee472ab4708ed",
+        )
+        self.assertFalse(implementation_proof["both_required_jobs_green"])
+        self.assertEqual(implementation_proof["registered_qualification_runs"], 0)
+        self.assertEqual(implementation_proof["real_or_private_operations"], 0)
+        self.assertFalse(implementation_proof["authority_expanded"])
         for key in (
             "real_requests",
             "real_network_bytes",

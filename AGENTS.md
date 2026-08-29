@@ -79,11 +79,13 @@ passed Base Python `99052724528`, Optional Neuro Readers `99052724399`, and CI
 `99088241281`, Optional Neuro Readers `99088241372`, and CI `33247816266`,
 then reached GitHub `main`. Only the additive generated implementation and
 bounded unit-level generated checks are authorized. The implementation now
-exists in a separate module and exposes no qualification or real command; its
-exact commit must become remotely green before a proof-only closeout or
-qualification activation. The registered qualification still requires a
-separate all-false activation and fresh decision; H-L2 and real EDF authority
-remain false.
+exists in a separate module and exposes no qualification or real command. Exact
+implementation `6a0bc7749dd6c36b4d8db019cc6e78acf653c83d` passed Base
+Python `99091760720`, Optional Neuro Readers `99091760774`, and CI
+`33249178006`, then reached GitHub `main`. Read its proof-only closeout next;
+it binds six exact artifacts / 69,368 bytes and is pending its own remote CI.
+The registered qualification still requires a separate all-false activation
+and fresh decision; H-L2 and real EDF authority remain false.
 `COMM-P0-G-FS3` is paused as an adjacent engineering diagnostic; do not activate
 it under general continuation. No new data, target, model, score, device,
 release, or claim operation is authorized by this state.
