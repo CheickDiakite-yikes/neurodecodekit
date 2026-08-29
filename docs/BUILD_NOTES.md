@@ -16483,3 +16483,19 @@ and require both remote jobs green before the one official qualification.
   qualification completed two 150-file replays / 9,900 bytes each and 20
   refusals in 0.108828875 seconds at 26,492,928-byte peak RSS. Network, retained
   payload, GDF parsing, targets, signals, models, and scores were zero.
+- 2026-08-29: Proved the exact Ofner selector/acquisition result at commit
+  `786b124`, Base Python `99141069026`, Optional Neuro Readers `99141069150`,
+  and CI `33267877803` on GitHub `main`. Then froze header-only protocol
+  `OFNER-C6R-1-HG0`; exact registration `25fe452` passed Base `99143134373`,
+  Optional `99143134445`, and CI `33268675964`. One Tier A manifest refresh
+  selected exact subject-1/run-1 identity while requesting zero GDF bytes.
+- 2026-08-29: Added the dependency-free GDF 2.x header parser, generated-only
+  CLI, and injected HTTP range firewall. Two deterministic 24,832-byte header
+  replays recovered the frozen 96-role roster at 512 Hz and passed 41
+  adversarial refusals in 0.002138459 seconds at 26,214,400-byte peak RSS.
+  Network, real GDF/header, events, signals, targets, models, and scores were
+  zero; the exact implementation/result still requires remote proof.
+- 2026-08-29: Verified the generated header milestone with 34 focused tests,
+  Ruff, compilation, strict JSON loading, CLI help and roundtrip, and diff
+  checks. The complete dependency-light suite passed 6,932 tests with 278
+  skips in 255.434 seconds, versus the pre-change 6,903/278 baseline.

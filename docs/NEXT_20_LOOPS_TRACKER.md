@@ -252,6 +252,16 @@
 > GDF parser exists, so this is engineering proof only. After the exact commit
 > is remotely green, prepare one all-false Tier C packet for a single original
 > GDF fixed-header checkpoint; do not acquire the cohort or read signals.
+
+> **Ofner generated header qualification (2026-08-29):** exact contract
+> `25fe452` passed Base `99143134373`, Optional `99143134445`, and CI
+> `33268675964` on GitHub `main`. A dependency-free GDF 2.x header parser and
+> injected two-range HTTP firewall now pass two deterministic 24,832-byte
+> header replays plus 41 refusals in 0.002138459 seconds at 26,214,400-byte
+> peak RSS. The synthetic header recovers 61 EEG + 3 EOG + 19 glove + 13 arm
+> channels at 512 Hz and rejects trailing data bytes. Network, real GDF/header,
+> events, signals, targets, models, and scores remain zero. Prove this exact
+> implementation, then prepare one all-false Tier C range-only header packet.
 >
 > **Historical DREYER-C5R-1 frontier (2026-08-26):** the six-step independent-replication
 > build is complete through the real-data gate. (1) The aggregate-only BNCI

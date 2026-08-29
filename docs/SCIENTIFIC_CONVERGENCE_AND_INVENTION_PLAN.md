@@ -26,14 +26,18 @@ seven-class imagined-movement information beyond EOG, recorded kinematics,
 posterior EEG, cue/timing, and matched derangement in unseen people.
 
 No real Ofner payload or header has been accessed. No Tier C packet is active.
-The generated-only selector/acquisition milestone now passes two complete
+The generated-only selector/acquisition milestone passes two complete
 150-member fixture replays and 20 fail-closed cases while separating stable
-scientific identity from expiring signed transport capabilities. It has no
-live-network execution path and is not EEG evidence. After exact remote proof,
-the ordered next steps are an all-false one-header packet, one separately
-authorized fixed-header check, then a fresh preregistration and only later one
-target-firewalled execution. Because no EMG was recorded, even a future pass
-cannot claim independence from all muscle activity.
+scientific identity from expiring signed transport capabilities; its exact
+implementation and proof are remotely green. The follow-on generated GDF 2.x
+header parser and two-range firewall pass two 24,832-byte replays and 41
+refusals, recover the frozen 96-role synthetic roster at 512 Hz, and reject any
+trailing data bytes. It has no live-network execution path and is not EEG
+evidence. After exact remote proof, the ordered next steps are an all-false
+range-only one-header packet, one separately authorized header check, then a
+fresh acquisition/model preregistration and only later one target-firewalled
+execution. Because no EMG was recorded, even a future pass cannot claim
+independence from all muscle activity.
 
 ## Decision In One Page
 

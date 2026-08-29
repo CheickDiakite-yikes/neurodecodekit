@@ -20,13 +20,16 @@
 > 13,748,417,608 bytes with reported 61 EEG, three EOG, and 32 hand/arm movement
 > channels. The smaller BIDS derivative is rejected because it omits those
 > nuisance comparators. No payload has been downloaded, no Tier C packet is
-> active. The generated-only selector/acquisition core now passes two complete
-> 150-file replays and 20 refusal cases with zero network or retained payload;
-> it exposes no real execution path. This is not EEG evidence. After its exact
-> commit is remotely green, the next task is an all-false packet for one
-> separately authorized source-GDF fixed-header checkpoint. Read
-> `registries/current_research_frontier.v2.json`. COMM-P0-G FS3 remains paused
-> as an adjacent engineering diagnostic.
+> active. The generated-only selector/acquisition core passes two complete
+> 150-file replays and 20 refusal cases with zero network or retained payload,
+> and its exact implementation and proof are remotely green. The follow-on
+> header-only parser and two-range firewall now pass two 24,832-byte synthetic
+> replays and 41 refusals, recover the frozen 96-role roster at 512 Hz, reject
+> trailing data bytes, and expose no network or real execution command. This is
+> not EEG evidence. After the exact header implementation is remotely proven,
+> prepare an all-false packet for one separately authorized range-only GDF
+> header checkpoint. Read `registries/current_research_frontier.v3.json`.
+> COMM-P0-G FS3 remains paused as an adjacent engineering diagnostic.
 
 > Dreyer H-L1R1 recovery update, 2026-08-29: exact generated coordinator
 > `0ef634e4852d9f8a18d4b8a1f50e6a1331bd020a` passed Base Python
@@ -201,7 +204,7 @@
 Historical exact control-plane label retained for proof compatibility:
 `Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight`.
 
-Start with `registries/current_research_frontier.v2.json`, the machine-readable
+Start with `registries/current_research_frontier.v3.json`, the machine-readable
 snapshot of the active lane, proof chain, consumed status, measurements, goals,
 and next transition.
 

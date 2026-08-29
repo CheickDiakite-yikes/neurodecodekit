@@ -70,16 +70,25 @@ across 15 participants / 13,748,417,608 bytes. This representation reports 61
 EEG, three EOG, 19 glove, and 13 arm channels at 512 Hz. The smaller 4.58 GB
 BIDS derivative is rejected because its public channel sidecar exposes only 61
 EEG channels and omits the required EOG and movement comparators. Read the
-Ofner source-reselection decision, `registries/current_research_frontier.v2.json`,
+Ofner source-reselection decision, `registries/current_research_frontier.v3.json`,
 and the knowledge ledger first. No GDF payload, event, target, annotation,
 signal, model, prediction, or score has been accessed, and no Tier C packet is
-active. No Tier C packet is active. The generated-only selector/acquisition
-core now passes two complete
-150-member fixture replays and 20 refusal cases with zero network and retained
-payload. It exposes no real execution path and is not EEG evidence. After its
-exact commit is remotely green, prepare a separate all-false one-header packet;
-require a separate exact-green Tier C decision before one real GDF header or
-payload operation. Earlier Dreyer progression is historical: rejected-result
+active. The generated-only selector/acquisition
+core passes two complete 150-member fixture replays and 20 refusal cases with
+zero network and retained payload. It exposes no real execution path and is not
+EEG evidence. Exact implementation `527dffd` passed Base Python `99139395588`,
+Optional Neuro Readers `99139395701`, and CI `33267249838`; exact proof
+`786b124` passed Base `99141069026`, Optional `99141069150`, and CI
+`33267877803`, all on GitHub `main`. Header-only contract
+`OFNER-C6R-1-HG0` is exact-green at `25fe452`, Base `99143134373`, Optional
+`99143134445`, and CI `33268675964`. Its generated-only GDF 2.x parser and
+two-range firewall pass two 24,832-byte synthetic header replays plus 41
+refusals in 0.002138459 seconds at 26,214,400-byte peak RSS, with zero network
+or real/scientific operation. It has no network client, real execution command,
+event parser, signal parser, model, or scorer. Prove this exact implementation
+next, then prepare a separate all-false range-only one-header packet; require a
+separate exact-green Tier C decision before one real GDF header or payload
+operation. Earlier Dreyer progression is historical: rejected-result
 commit `24a5da2973ef65fa05f5ea7b1d1389370534ad23` passed Base Python
 `99047501588`, Optional Neuro Readers `99047501456`, and CI `33232453046`, then
 reached GitHub `main`. Proof-only closeout

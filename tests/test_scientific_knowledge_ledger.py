@@ -53,6 +53,9 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
         self.assertEqual(boundary["real_dreyer_endpoint_requests"], 1)
         self.assertEqual(boundary["real_dreyer_response_opens"], 1)
         self.assertEqual(boundary["generated_Ofner_acquisition_qualification_runs"], 1)
+        self.assertEqual(boundary["public_Ofner_header_member_metadata_requests"], 1)
+        self.assertEqual(boundary["public_Ofner_header_member_metadata_bytes"], 1_352_270)
+        self.assertEqual(boundary["generated_Ofner_header_qualification_runs"], 1)
         for key, value in boundary.items():
             if key not in {
                 "active_tier_c_packet",
@@ -60,6 +63,9 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
                 "real_dreyer_endpoint_requests",
                 "real_dreyer_response_opens",
                 "generated_Ofner_acquisition_qualification_runs",
+                "public_Ofner_header_member_metadata_requests",
+                "public_Ofner_header_member_metadata_bytes",
+                "generated_Ofner_header_qualification_runs",
             }:
                 self.assertEqual(value, 0, key)
 
@@ -87,7 +93,7 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
             },
         )
         self.assertIn("GDF fixed-header", update["next_decisive_experiment"])
-        self.assertIn("150-file generated replays", update["evidence_produced"])
+        self.assertIn("24,832-byte generated GDF 2.x header replays", update["evidence_produced"])
         self.assertIn("zero network", update["evidence_produced"])
 
     def test_malformed_state_is_rejected(self):

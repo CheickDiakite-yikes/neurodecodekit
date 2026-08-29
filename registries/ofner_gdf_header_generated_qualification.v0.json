@@ -1,0 +1,133 @@
+{
+  "schema_name": "neurodecodekit.ofner_gdf_header_generated_qualification",
+  "schema_version": "0.1.0",
+  "protocol_id": "OFNER-C6R-1-HG0",
+  "recorded_at_local": "2026-08-29",
+  "status": "accepted_generated_only_pending_exact_commit_remote_green",
+  "green_registration_basis": {
+    "commit": "25fe4521150a6441426d236eacbf5ab27d3bb12d",
+    "CI_run_id": 33268675964,
+    "base_python_job_id": 99143134373,
+    "optional_neuro_readers_job_id": 99143134445,
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true
+  },
+  "contract": {
+    "path": "registries/ofner_2017_motor_imagery_fixed_header_contract.v0.json",
+    "sha256": "c556049ddabdefe3f4de06d451954b8df99508c17ac950850bb8cf83e55fdae5"
+  },
+  "implementation_artifacts": [
+    {
+      "path": "src/neurodecodekit/datasets/ofner_gdf_header.py",
+      "sha256": "a7d286a20c9a50c0a91003c19383eae4e2f9a846e5b44acb276bd724f69d5978"
+    },
+    {
+      "path": "src/neurodecodekit/ofner_gdf_header_cli.py",
+      "sha256": "f5e63c8b1b97fe6f825391636e866c1fb350643fc4d0e2a7352458eb8466d956"
+    },
+    {
+      "path": "tests/test_ofner_gdf_header.py",
+      "sha256": "188c1dc0ca33b9624602ba917f0d02775ba79f792fb28ce1ad377351b25be1e4"
+    }
+  ],
+  "measurements": {
+    "generated_replays": 2,
+    "generated_header_bytes_per_replay": 24832,
+    "range_transcripts_per_replay": 2,
+    "combined_range_body_bytes_per_replay": 24832,
+    "named_adversarial_refusals": 41,
+    "runtime_seconds": 0.002138459123671055,
+    "peak_rss_bytes": 26214400,
+    "network_bytes": 0,
+    "retained_generated_payload_bytes": 0
+  },
+  "determinism": {
+    "replay_summaries_equal": true,
+    "transcript_digests_equal": true,
+    "transcript_sha256": "84504f39c8360076318e4e425b22a8a1a2afb038b4f33fa6d0a950e67e436c11"
+  },
+  "parsed_header": {
+    "version": "GDF 2.20",
+    "header_bytes": 24832,
+    "number_of_signals": 96,
+    "sampling_rate_hz": 512,
+    "EEG_channels": 61,
+    "EOG_channels": 3,
+    "glove_channels": 19,
+    "arm_channels": 13,
+    "unique_normalized_labels": 96,
+    "finite_nonzero_EEG_geometry_channels": 61,
+    "complete_header_sha256": "eec03852246b899979c1fcf49b095a410d951f6d3d3f02b35bd9dfda69a8b4d5"
+  },
+  "refusal_ids": [
+    "fixed_short",
+    "fixed_long",
+    "version_prefix_wrong",
+    "version_non_ascii",
+    "version_1x",
+    "header_blocks_zero",
+    "header_blocks_short",
+    "header_blocks_over_cap",
+    "duration_numerator_zero",
+    "duration_denominator_zero",
+    "signals_zero",
+    "signals_95",
+    "complete_truncated",
+    "complete_trailing",
+    "label_duplicate",
+    "label_empty",
+    "label_non_ascii",
+    "label_control",
+    "EEG_roster_wrong",
+    "EOG_roster_wrong",
+    "glove_roster_wrong",
+    "arm_roster_wrong",
+    "sampling_zero",
+    "sampling_511",
+    "geometry_nan",
+    "range_status_200",
+    "range_redirect",
+    "range_duplicate_header",
+    "range_missing_content_range",
+    "range_malformed_content_range",
+    "range_wrong_start",
+    "range_wrong_total",
+    "range_missing_length",
+    "range_bad_length",
+    "range_gzip",
+    "range_transfer_encoding",
+    "range_body_short",
+    "second_range_gap",
+    "second_range_overlap",
+    "second_range_trailing",
+    "first_total_wrong"
+  ],
+  "capabilities": {
+    "GDF_2x_header_parser_present": true,
+    "two_range_firewall_present": true,
+    "network_client_present": false,
+    "real_execution_command_present": false,
+    "event_parser_present": false,
+    "signal_parser_present": false,
+    "model_or_scorer_present": false
+  },
+  "operation_counters": {
+    "real_manifest_requests": 0,
+    "real_GDF_requests": 0,
+    "real_GDF_bytes": 0,
+    "real_header_reads": 0,
+    "event_or_annotation_reads": 0,
+    "signal_sample_reads": 0,
+    "target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "scores": 0
+  },
+  "warnings": [
+    "generated_header_bytes_are_not_EEG",
+    "no_real_measurement_contract_verified",
+    "no_neural_advantage_or_unseen_person_result",
+    "no_scientific_claim"
+  ]
+}

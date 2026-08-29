@@ -371,6 +371,20 @@
       ]
     },
     {
+      "id": "EVID-OFNER-HEADER-GENERATED",
+      "lane": "confirmation",
+      "kind": "generated-only GDF header and range-firewall qualification",
+      "summary": "Two deterministic 24,832-byte generated GDF 2.x header replays recovered the frozen 96-role roster at 512 Hz and passed 41 header and range refusals with zero network or retained payload.",
+      "limitations": "The header bytes were generated from the public contract and were not EEG; no real GDF, header, event, annotation, target, signal, model, prediction, or score operation occurred.",
+      "supports": [],
+      "contradicts": [],
+      "paths": [
+        "docs/OFNER_2017_MOTOR_IMAGERY_FIXED_HEADER_GENERATED_QUALIFICATION.md",
+        "registries/ofner_gdf_header_generated_qualification.v0.json",
+        "registries/current_research_frontier.v3.json"
+      ]
+    },
+    {
       "id": "EVID-COMM-DECISION",
       "lane": "discovery",
       "kind": "objective evidence and replication decision",
@@ -459,20 +473,26 @@
       "relation": "supports",
       "object": "EXP-OFNER-C6R-1",
       "rationale": "Generated qualification closes the stable-identity and signed-transport engineering uncertainty without contributing biological evidence."
+    },
+    {
+      "subject": "EVID-OFNER-HEADER-GENERATED",
+      "relation": "supports",
+      "object": "EXP-OFNER-C6R-1",
+      "rationale": "Generated qualification closes the minimum-byte GDF header parsing and range-firewall uncertainty without contributing biological evidence."
     }
   ],
   "experiments": [
     {
       "id": "EXP-OFNER-C6R-1",
       "lane": "confirmation",
-      "status": "generated_acquisition_qualified_pending_remote_proof_and_separate_real_header_gate",
+      "status": "generated_header_qualified_pending_remote_proof_and_separate_real_header_gate",
       "scientific_question": "Does central EEG add unseen-person imagined-movement information beyond EOG, hand and arm kinematics, posterior EEG, cue and timing structure, and matched derangement?",
       "evidence_target": "A calibrated participant-consistent central-EEG increment over nuisance-only and matched-derangement comparators across all 15 held-out people.",
-      "earliest_checkpoint": "One exact original Ofner GDF fixed-header observation after exact remote proof, an all-false packet, and a separate Tier C decision.",
+      "earliest_checkpoint": "One exact original Ofner GDF fixed-header range-only observation after exact remote proof, an all-false packet, and a separate Tier C decision.",
       "stop_rule": "Park before bulk acquisition if the original GDF does not expose exactly 61 EEG, 3 EOG, 19 glove, and 13 arm channels at 512 Hz or if the complete selected surface exceeds the frozen storage envelope.",
       "deserves_resources_because": "It is a fresh unseen-person motor-imagery source whose eye and limb-motion sensors directly test the strongest shortcuts identified by the prior real result.",
-      "authority": "Tier B generated qualification only; no Tier C packet is active and no GDF payload, event, target, signal, model, or score operation is authorized.",
-      "expected_information_gain": "The generated pass removes manifest-identity and signed-transport design uncertainty; the next real header check determines whether the reported 96-channel source representation exists.",
+      "authority": "Tier B generated header qualification only; no Tier C packet is active and no real GDF header, event, target, signal, model, or score operation is authorized.",
+      "expected_information_gain": "Generated passes remove manifest identity, signed transport, header parsing, and range-overread uncertainty; the next real header check determines whether the reported 96-channel source representation exists.",
       "claim_ids": [
         "CLAIM-OFNER-NUISANCE-CONTROLLED-MOTOR-IMAGERY"
       ],
@@ -480,7 +500,8 @@
         "EVID-BNCI-R2",
         "EVID-DREYER-HL2-H0",
         "EVID-OFNER-SOURCE-SELECTION",
-        "EVID-OFNER-ACQUISITION-GENERATED"
+        "EVID-OFNER-ACQUISITION-GENERATED",
+        "EVID-OFNER-HEADER-GENERATED"
       ]
     },
     {
@@ -585,8 +606,8 @@
       },
       {
         "measure": "Fresh Ofner nuisance-controlled unseen-person effect",
-        "status": "source_selected_untested",
-        "value": "15 participants and 150 original GDF files selected from metadata; zero payload, signal, model, or score operations"
+        "status": "source_selected_generated_header_qualified_real_untested",
+        "value": "15 participants and 150 original GDF files selected; generated header parser passed, with zero real GDF, signal, model, or score operations"
       }
     ],
     "functional_utility": [
@@ -631,6 +652,9 @@
     "scientific_scores": 0,
     "generated_FS3_runs": 0,
     "generated_Ofner_acquisition_qualification_runs": 1,
+    "public_Ofner_header_member_metadata_requests": 1,
+    "public_Ofner_header_member_metadata_bytes": 1352270,
+    "generated_Ofner_header_qualification_runs": 1,
     "release_operations": 0,
     "claim_upgrades": 0
   }

@@ -14828,3 +14828,16 @@ green; only then may the single generated qualification run.
   opaque writes. Two 150-file replays and 20 refusals passed with zero network
   or retained payload. Expose no real execute mode. Require remote proof and a
   separate all-false Tier C packet before one source-GDF header request.
+- 2026-08-29: Freeze `OFNER-C6R-1-HG0` as a header-only generated
+  qualification after acquisition proof `786b124` became green. Bind exact
+  subject-1/run-1 member identity from one Tier A metadata refresh, but request
+  zero GDF bytes. Replace a future 105,365,484-byte whole-file preflight with
+  two gapless non-overlapping header ranges totaling at most 65,536 bytes.
+  Decode no identity, date, event, annotation, or signal field. Keep every
+  Tier C flag false.
+- 2026-08-29: Accept the local `OFNER-C6R-1-HG0` generated result for remote
+  proof. The standard-library parser and range firewall passed two 24,832-byte
+  synthetic replays and 41 refusals, recovering 96 unique role-bound labels at
+  512 Hz with zero network or real/scientific operations. Expose no network or
+  real execute command. Require exact remote proof before preparing the
+  all-false one-member real-header packet.

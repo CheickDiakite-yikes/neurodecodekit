@@ -53,7 +53,7 @@ rejected because it omits the EOG and movement comparators needed to distinguish
 central EEG from cheaper eye and overt-motion explanations. No payload has been
 downloaded. No Tier C packet is active. See the
 [source decision](docs/OFNER_2017_MOTOR_IMAGERY_SOURCE_RESELECTION_2026_08_29.md)
-and [current machine frontier](registries/current_research_frontier.v2.json).
+and [current machine frontier](registries/current_research_frontier.v3.json).
 COMM-P0 FS3 remains paused as an adjacent engineering diagnostic.
 
 The follow-on generated acquisition qualification now passes two complete
@@ -63,15 +63,27 @@ strictly separates stable path/size/SHA-256 identity from expiring signed
 transport URLs and exposes no live-network or real-payload execution path.
 This is engineering proof, not EEG evidence. Read the
 [generated qualification closeout](docs/OFNER_2017_MOTOR_IMAGERY_ACQUISITION_GENERATED_QUALIFICATION.md).
-The next real checkpoint is one separately governed source-GDF fixed header;
-bulk acquisition, signals, targets, models, and scores remain closed.
+That exact implementation and its proof are now green on GitHub `main`.
+
+The next generated milestone is also complete locally: a dependency-free GDF
+2.x header parser and two-range transport firewall passed two 24,832-byte
+header replays plus 41 adversarial refusals in 0.002138459 seconds at
+26,214,400-byte peak RSS. It recovered the frozen synthetic 61 EEG + 3 EOG +
+19 glove + 13 arm roster at 512 Hz, rejected trailing data bytes, and exposes
+no network client, real execution command, event parser, signal parser, model,
+or scorer. Read the
+[header preregistration](docs/OFNER_2017_MOTOR_IMAGERY_FIXED_HEADER_PREREGISTRATION.md)
+and [generated header result](docs/OFNER_2017_MOTOR_IMAGERY_FIXED_HEADER_GENERATED_QUALIFICATION.md).
+This is still engineering proof, not EEG evidence. The next real checkpoint is
+one separately governed range-only source-GDF header; bulk acquisition,
+signals, targets, models, and scores remain closed.
 
 ## Current Research Frontier
 
 The latest irreversible result remains the consumed Dreyer H-L2 transport H0.
-The latest reversible frontier is the Ofner generated acquisition qualification
+The latest reversible frontier is the Ofner generated header qualification
 described above, pending exact remote proof and a separate all-false one-header
-packet.
+execution packet.
 The following COMM-P0-G material is retained as exact
 adjacent-engineering history and is paused. Its proof architecture has a prospective, resource-aware
 successor: Amendment 3 replaces the second redundant full
@@ -618,7 +630,7 @@ score or claim upgrade occurred. Repeated convergence warnings at the frozen
 80-iteration cap were recorded without changing or rerunning the models.
 
 The machine-readable current state is
-[`registries/current_research_frontier.v2.json`](registries/current_research_frontier.v2.json).
+[`registries/current_research_frontier.v3.json`](registries/current_research_frontier.v3.json).
 It freezes the active lane, proof commits, consumed one-shot state, measured
 result, resource caps, five scientific goals, claim boundary, and exact next
 transition so handoffs cannot silently return to an older gate. Prediction

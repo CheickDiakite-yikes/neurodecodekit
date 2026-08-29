@@ -1,7 +1,7 @@
 # Codex Handoff - NeuroDecodeKit
 
 > **Current scientific frontier, 2026-08-29:** read the Ofner source-reselection
-> decision, `registries/current_research_frontier.v2.json`, and the scientific
+> decision, `registries/current_research_frontier.v3.json`, and the scientific
 > knowledge ledger first. The parked predecessor activation
 > `e3adab26e867f6de7e56f406f59ede51718b577c` passed both required jobs in CI
 > `33261346763` on GitHub `main`. The sole `DREYER-C5R-1-HL2-R0` invocation
@@ -15,11 +15,16 @@
 > derivative is scientifically ineligible because it omits EOG and movement
 > comparators. No GDF payload, event, target, signal, model, prediction, or
 > score was accessed. No Tier C packet is active. The generated-only exact
-> selector/acquisition core now passes two complete 150-file fixture replays
-> plus 20 fail-closed cases in 0.108828875 seconds at 26,492,928-byte peak RSS,
-> with zero network and zero retained payload. It has no live client, real
-> execution path, or GDF parser and establishes no EEG result. After its exact
-> commit is remotely green, prepare a separate all-false one-header packet.
+> selector/acquisition core passes two complete 150-file fixture replays plus
+> 20 fail-closed cases and is exact-green with its proof. Exact header contract
+> `25fe452` passed Base `99143134373`, Optional `99143134445`, and CI
+> `33268675964` on GitHub `main`. The generated-only GDF 2.x parser and
+> two-range firewall now pass two 24,832-byte header replays and 41 refusals in
+> 0.002138459 seconds at 26,214,400-byte peak RSS. It recovers the frozen 96
+> channel roles at 512 Hz, rejects trailing bytes, and has no network client,
+> real command, event parser, signal parser, model, or scorer. This remains
+> synthetic engineering only. Prove the exact implementation next, then
+> prepare a separate all-false range-only one-header packet.
 > Preserve the unrelated tracker inspection file.
 
 > **Historical generated frontier, 2026-08-28:** read Amendment 3 and the FS3
