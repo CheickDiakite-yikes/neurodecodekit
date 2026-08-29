@@ -21,6 +21,7 @@ def test_proof_binds_exact_green_rejected_result_and_artifacts() -> None:
     record = _record()
     green = record["green_rejected_result"]
     rows = record["bound_public_artifacts"]
+    commit = green["commit"]
 
     assert green == {
         "commit": "24a5da2973ef65fa05f5ea7b1d1389370534ad23",
@@ -32,11 +33,13 @@ def test_proof_binds_exact_green_rejected_result_and_artifacts() -> None:
         "working_branch_matches_main": True,
     }
     for row in rows:
-        payload = (ROOT / row["path"]).read_bytes()
+        payload = subprocess.check_output(
+            ["git", "show", f"{commit}:{row['path']}"], cwd=ROOT
+        )
         assert len(payload) == row["bytes"]
         assert hashlib.sha256(payload).hexdigest() == row["sha256"]
         blob = subprocess.check_output(
-            ["git", "hash-object", row["path"]], cwd=ROOT, text=True
+            ["git", "rev-parse", f"{commit}:{row['path']}"], cwd=ROOT, text=True
         ).strip()
         assert blob == row["git_blob"]
 

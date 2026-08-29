@@ -64,10 +64,15 @@ blocked; do not activate or access the real EDF from this attempt. Read the
 H-L1 closeout and current frontier before successor work. Exact rejected-result
 commit `24a5da2973ef65fa05f5ea7b1d1389370534ad23` passed Base Python
 `99047501588`, Optional Neuro Readers `99047501456`, and CI `33232453046`, then
-reached GitHub `main`; its proof-only closeout remains pending its own remote
-CI. `COMM-P0-G-FS3` is paused as an adjacent engineering diagnostic; do not
-activate it under general continuation. No new data, target, model, score,
-device, release, or claim operation is authorized by this state.
+reached GitHub `main`. Proof-only closeout
+`a70fda0a808751c6057ed07117b7d22ee715a273` passed Base Python
+`99049010377`, Optional Neuro Readers `99049010221`, and CI `33233017769`.
+Read the queued all-false `DREYER-C5R-1-HL1R1` recovery packet next. It must
+receive its own green request proof and fresh packet-bound maintainer decision;
+no earlier short form activates it. `COMM-P0-G-FS3` is paused as an adjacent
+engineering diagnostic; do not activate it under general continuation. No new
+data, target, model, score, device, release, or claim operation is authorized
+by this state.
 
 ## Historical Gate Detail: COMM-P0-G-FS3
 

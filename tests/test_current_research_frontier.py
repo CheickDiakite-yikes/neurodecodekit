@@ -20,7 +20,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(self.frontier["active_lane_id"], "DREYER-C5R-1-HL")
         self.assertEqual(
             self.frontier["status"],
-            "HL1_R0_consumed_rejected_HL2_blocked",
+            "HL1_R0_proof_green_HL1R1_request_pending_remote_green_HL2_blocked",
         )
 
     def test_scientific_strategy_converges_on_one_empirical_checkpoint(self):
@@ -239,6 +239,20 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertFalse(qualification["all_acceptance_gates_passed"])
         self.assertFalse(qualification["rerun_allowed"])
         self.assertEqual(qualification["real_or_private_operations"], 0)
+        proof = packet["HL1_generated_qualification_proof"]
+        self.assertEqual(
+            proof["commit"], "a70fda0a808751c6057ed07117b7d22ee715a273"
+        )
+        self.assertEqual(proof["CI_run_id"], 33_233_017_769)
+        self.assertTrue(proof["both_required_jobs_green"])
+        self.assertEqual(proof["qualification_reruns"], 0)
+        recovery = packet["queued_HL1R1_recovery_request"]
+        self.assertEqual(recovery["packet_id"], "DREYER-C5R-1-HL1R1")
+        self.assertTrue(recovery["all_authority_flags_false"])
+        self.assertTrue(recovery["fresh_packet_bound_maintainer_decision_required"])
+        self.assertFalse(recovery["predating_short_form_may_activate"])
+        self.assertEqual(recovery["requested_successor_refusal_cases"], 43)
+        self.assertEqual(recovery["real_or_private_operations"], 0)
         for key in (
             "real_requests",
             "real_network_bytes",
