@@ -45,7 +45,7 @@ body byte or EDF header was read. The exact Dreyer lane is now consumed and
 parked without a biological interpretation, and the 1.78 GB cohort was not
 downloaded.
 
-The prospective scientific question is now the 15-person Ofner 2017
+The latest prospective scientific source was the 15-person Ofner 2017
 motor-imagery cohort. An exact metadata-only audit selected 150 original GDF
 files totaling 13,748,417,608 bytes (`12.8042` GiB) with reported 61 EEG, three
 EOG, and 32 hand/arm movement channels at 512 Hz. The tempting 4.58 GB BIDS
@@ -60,8 +60,22 @@ real header, channel roster, geometry, signal, event, target, model, or score
 was observed. This is a transport result, not a biological null. It cannot be
 retried, rerun, repaired, resumed, substituted, or reinterpreted. No Tier C
 packet is active. See the [result closeout](docs/OFNER_2017_MOTOR_IMAGERY_RANGE_HEADER_RESULT_CLOSEOUT.md)
-and [current machine frontier](registries/current_research_frontier.v6.json).
-The predecessor `registries/current_research_frontier.v5.json` remains
+and [proof closeout](docs/OFNER_2017_MOTOR_IMAGERY_RANGE_HEADER_RESULT_PROOF_CLOSEOUT.md).
+The proof passed Base Python `99174411928`, Optional Neuro Readers
+`99174412006`, and CI `33280371097` on GitHub `main`.
+
+The [artifact-only transport postmortem](docs/NEURAL_PAYLOAD_TRANSPORT_ADMISSION_POSTMORTEM_2026_08_29.md)
+now freezes `NPA1-v0`. It separates scientific source identity, expiring
+transport capability, HTTP framing, bounded content identity, and semantic
+sensor eligibility. Its key finding is architectural: Dreyer and Ofner entered
+one-shot scientific header gates before the exact live delivery surface had
+been separately admitted. It does not claim one shared server or client cause.
+No new source is promoted from metadata alone. The next bounded milestone is a
+generated-only NPA1 validator; any real 256-byte canary remains a separately
+governed Tier C operation.
+
+See the [current machine frontier](registries/current_research_frontier.v7.json).
+The predecessor `registries/current_research_frontier.v6.json` remains
 immutable history; any later real gate still needs fresh packet-bound
 maintainer words. COMM-P0 FS3 remains paused as an adjacent engineering
 diagnostic.
@@ -99,8 +113,8 @@ is artifact-only transport/source research, not another execution.
 ## Current Research Frontier
 
 The latest irreversible result is the consumed Ofner range-header transport H0.
-The latest reversible frontier is artifact-only transport postmortem and fresh
-transport-verified source selection; no real operation is active.
+The latest reversible frontier is generated-only `NPA1-G` transport admission,
+followed by fresh source research; no real operation is active.
 The following COMM-P0-G material is retained as exact
 adjacent-engineering history and is paused. Its proof architecture has a prospective, resource-aware
 successor: Amendment 3 replaces the second redundant full
@@ -647,7 +661,7 @@ score or claim upgrade occurred. Repeated convergence warnings at the frozen
 80-iteration cap were recorded without changing or rerunning the models.
 
 The machine-readable current state is
-[`registries/current_research_frontier.v6.json`](registries/current_research_frontier.v6.json).
+[`registries/current_research_frontier.v7.json`](registries/current_research_frontier.v7.json).
 It freezes the consumed Ofner transport lane, proof commits, measured result,
 claim boundary, and exact next transition so handoffs cannot silently return
 to an older gate. Prediction

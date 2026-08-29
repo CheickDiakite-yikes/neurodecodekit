@@ -23,11 +23,16 @@
 > bytes, and no payload was retained. This is not a biological result. Never
 > retry, rerun, repair, resume, substitute, reinterpret, or reopen its ignored
 > marker. No Tier C packet is active. Read
-> `registries/current_research_frontier.v6.json`; its predecessor
-> `registries/current_research_frontier.v5.json` remains immutable history. The
-> next reversible work is artifact-only transport postmortem and fresh source
-> selection. Any later real gate still requires fresh packet-bound maintainer
-> words and a separately green Tier C decision. COMM-P0-G FS3 remains paused.
+> The exact proof closeout passed Base Python `99174411928`, Optional Neuro
+> Readers `99174412006`, and CI `33280371097` on GitHub `main`. Read
+> `registries/current_research_frontier.v7.json`; its predecessor
+> `registries/current_research_frontier.v6.json` remains immutable history.
+> The artifact-only postmortem freezes `NPA1-v0`: admit a source's live
+> transport with generated fixtures and, later, one separately governed opaque
+> canary before spending a semantic header or scientific gate. No fresh source
+> is promoted yet. The next reversible work is generated-only `NPA1-G`; any
+> metadata network, real canary, header, payload, model, or score operation
+> still requires its applicable later gate. COMM-P0-G FS3 remains paused.
 
 > Dreyer H-L1R1 recovery update, 2026-08-29: exact generated coordinator
 > `0ef634e4852d9f8a18d4b8a1f50e6a1331bd020a` passed Base Python
@@ -202,7 +207,7 @@
 Historical exact control-plane label retained for proof compatibility:
 `Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight`.
 
-Start with `registries/current_research_frontier.v6.json`, the machine-readable
+Start with `registries/current_research_frontier.v7.json`, the machine-readable
 snapshot of the consumed lane, proof chain, measurements, claim boundary, and
 next transition. Version 5 remains its immutable pre-execution predecessor.
 

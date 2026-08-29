@@ -14894,3 +14894,19 @@ green; only then may the single generated qualification run.
   repair, resume, substitute, reinterpret, or reopen its ignored marker. Park
   the exact lane, leave no Tier C packet active, and make artifact-only
   transport postmortem plus fresh source selection the next reversible work.
+- 2026-08-29: Accept Ofner result closeout `e763061` after Base Python
+  `99172768465`, Optional Neuro Readers `99172768381`, and CI `33279743126`
+  passed on GitHub `main`. Its additive proof-only closeout `750adc3` then
+  passed Base Python `99174411928`, Optional Neuro Readers `99174412006`, and
+  CI `33280371097`. The proof binds five unchanged public artifacts / 20,662
+  bytes and repeats no network, payload, marker, generated replay, model,
+  target, score, device, release, or claim operation.
+- 2026-08-29: Freeze artifact-only `NPA1-v0` after comparing the committed
+  Dreyer and Ofner transport H0s, successful BNCI signed-object recovery, and
+  IACKD framing correction. Establish only the shared ordering weakness: live
+  transport admissibility was unresolved when both irreversible scientific
+  header checkpoints began. Do not claim a shared endpoint cause. Promote no
+  source. Next permit only a one-thread, zero-network generated NPA1-G
+  validator after this exact record is remotely green; every metadata-network,
+  canary, header, payload, target, model, score, device, release, and claim
+  operation remains closed.

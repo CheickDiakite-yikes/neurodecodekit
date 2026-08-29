@@ -16538,3 +16538,9 @@ and require both remote jobs green before the one official qualification.
   4,096 private allocated bytes, 2,340 public output bytes, and zero retained
   payload. The invocation is consumed and cannot be retried or reinterpreted;
   no scientific claim changed.
+- 2026-08-29: Closed the consumed Ofner result with exact proof commit
+  `750adc3`, Base Python `99174411928`, Optional Neuro Readers `99174412006`,
+  and CI `33280371097` on GitHub `main`. Added the artifact-only NPA1
+  postmortem, compact v7 frontier, and tests. The selected design moves endpoint
+  admission ahead of semantic sensor checks, promotes no source, uses no new
+  dependency, and authorizes only generated fixture work after remote green.

@@ -1,9 +1,9 @@
 # Codex Handoff - NeuroDecodeKit
 
-> **Current scientific frontier, 2026-08-29:** read the Ofner result closeout,
-> `registries/current_research_frontier.v6.json`, and the scientific knowledge
+> **Current scientific frontier, 2026-08-29:** read the Ofner result and proof
+> closeouts, `registries/current_research_frontier.v7.json`, and the scientific knowledge
 > ledger first. The predecessor
-> `registries/current_research_frontier.v5.json` remains immutable history. The
+> `registries/current_research_frontier.v6.json` remains immutable history. The
 > exact `OFNER-C6R-1-HL` decision, generated-qualified wrapper, and activation
 > became green on GitHub `main`. The sole `OFNER-C6R-1-HL-R0` invocation then
 > consumed at `OFNER-H0-TRANSPORT`: the exact NEMAR manifest completed identity
@@ -14,10 +14,14 @@
 > 48,021,504-byte peak RSS, 4,096 private allocated bytes, and zero retained
 > payload. This is a consumed transport refusal, not a biological null. Never
 > retry, rerun, repair, resume, substitute, reinterpret, or inspect the ignored
-> marker. No Tier C packet is active. Next do only artifact-level transport
-> postmortem and fresh transport-verified source selection. Any later network
-> or real-data gate requires fresh packet-bound maintainer words and a separate
-> exact-green Tier C decision. Preserve the unrelated tracker inspection file.
+> marker. Proof closeout `750adc3` passed Base `99174411928`, Optional
+> `99174412006`, and CI `33280371097` on GitHub `main`. No Tier C packet is
+> active. The artifact-only postmortem freezes `NPA1-v0` and promotes no fresh
+> source. Next implement and generated-qualify only `NPA1-G`, reusing existing
+> transport components under one thread, 30 seconds, 256 MiB RSS, 8 MiB
+> generated I/O, zero network, and zero retained payload. A metadata-network
+> pass or real 256-byte canary needs a later applicable gate; the canary is
+> Tier C. Preserve the unrelated tracker inspection file.
 
 > **Historical generated frontier, 2026-08-28:** read Amendment 3 and the FS3
 > preregistration/contract first. Exact Amendment 3 `b15d3cf` passed Base

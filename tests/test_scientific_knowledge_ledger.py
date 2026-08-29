@@ -27,8 +27,14 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
             "neurodecodekit.scientific_knowledge_ledger",
         )
         self.assertEqual(self.ledger["schema_version"], "0.1.0")
-        self.assertEqual(self.ledger["flagship"]["experiment_id"], "EXP-OFNER-C6R-1")
-        self.assertIn("transport H0", self.ledger["flagship"]["first_empirical_checkpoint"])
+        self.assertEqual(
+            self.ledger["flagship"]["experiment_id"],
+            "EXP-NPA1-FRESH-MOTOR",
+        )
+        self.assertIn(
+            "opaque 256-byte transport canary",
+            self.ledger["flagship"]["first_empirical_checkpoint"],
+        )
 
     def test_claims_have_valid_states_and_full_coordinates(self):
         for claim in self.ledger["claims"]:
@@ -38,11 +44,11 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
 
     def test_summary_keeps_science_and_authority_explicit(self):
         summary = summarize_scientific_ledger(self.ledger)
-        self.assertEqual(summary["flagship_experiment_id"], "EXP-OFNER-C6R-1")
+        self.assertEqual(summary["flagship_experiment_id"], "EXP-NPA1-FRESH-MOTOR")
         self.assertIsNone(summary["active_tier_c_packet"])
         self.assertTrue(summary["all_authority_flags_false"])
         self.assertIn(
-            "CLAIM-OFNER-NUISANCE-CONTROLLED-MOTOR-IMAGERY",
+            "CLAIM-FRESH-NUISANCE-CONTROLLED-EEG",
             summary["unresolved_claim_ids"],
         )
 
@@ -98,9 +104,9 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
                 "infrastructure_created_and_why",
             },
         )
-        self.assertIn("artifact-only transport postmortem", update["next_decisive_experiment"])
-        self.assertIn("first 256-byte GDF range", update["evidence_produced"])
-        self.assertIn("before any GDF body byte", update["evidence_produced"])
+        self.assertIn("Generated-qualify NPA1-G", update["next_decisive_experiment"])
+        self.assertIn("Dreyer and Ofner", update["evidence_produced"])
+        self.assertIn("transport surfaces were admitted", update["evidence_produced"])
 
     def test_malformed_state_is_rejected(self):
         malformed = copy.deepcopy(self.ledger)

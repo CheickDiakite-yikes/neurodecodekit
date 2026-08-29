@@ -10,6 +10,31 @@ Canonical directive:
 Machine knowledge source:
 [`scientific_knowledge_ledger.v0.json`](../registries/scientific_knowledge_ledger.v0.json)
 
+Current machine frontier:
+[`current_research_frontier.v7.json`](../registries/current_research_frontier.v7.json)
+
+## Current Addendum: Transport Admission Before Source Promotion
+
+The exact Ofner result proof passed Base Python `99174411928`, Optional Neuro
+Readers `99174412006`, and CI `33280371097` on GitHub `main`. The Ofner and
+Dreyer lanes are both consumed and parked before any neural payload or sensor
+header was accepted. Neither result is a biological null.
+
+Artifact-only comparison with the successful BNCI signed-object recovery and
+the IACKD framing analysis identifies the shared process weakness: live
+transport admissibility remained unknown until an irreversible scientific
+header checkpoint. The aggregate artifacts do not establish one common NEMAR,
+redirect, range, Python, or server cause.
+
+`NPA1-v0` is now the reversible bridge. It orders scientific source identity,
+transport capability, HTTP framing, bounded content identity, and semantic
+sensor eligibility. Generated `NPA1-G` is next. A fresh source will be promoted
+only after it meets the nuisance-control, participant, geometry, license,
+20 GiB, and transport-admission rules. Any later real 256-byte opaque canary is
+a separately governed Tier C operation and has no scientific value by itself.
+No fresh source, network request, payload, model, score, or claim is activated
+by this plan update.
+
 ## Current Addendum: Ofner Source Reselection
 
 The Dreyer route described below is retained as the rationale and frozen
@@ -49,22 +74,21 @@ even a future Ofner pass could not claim independence from all muscle activity.
 ## Decision In One Page
 
 NeuroDecodeKit will optimize for belief-changing evidence rather than proof
-machinery. The flagship question is whether central EEG adds predictive
-information beyond recorded EOG, wrist EMG, posterior EEG, and timing in
-completely unseen people. The 60-person Dreyer Dataset A R1/R2 experiment is
-the strongest next test because it was selected specifically against the
-failure modes observed in the consumed nine-person BNCI result.
+machinery. The flagship question remains whether central EEG adds predictive
+information beyond recorded peripheral physiology, posterior EEG, cue and
+timing structure, and matched derangement in completely unseen people. No
+dataset is currently promoted for that confirmation.
 
-The earliest real checkpoint is not a model score. It is one 14,805,604-byte
-Dreyer EDF fixed-header observation that determines whether the required 27
-EEG, three EOG, two wrist-EMG, and 512 Hz measurement surface actually exists.
-If that check fails, the 1,779,763,388-byte experiment parks before bulk
-acquisition. If it passes, the scientific path remains A -> Q -> P -> T under
-the existing target firewall.
+The earliest checkpoint is generated `NPA1-G`, followed by fresh public source
+research. A future source must pass scientific eligibility and one separately
+governed opaque live transport canary before a semantic sensor-header check.
+Only after a green header may the scientific path proceed through bounded
+acquisition, target-blind semantics, prediction freeze, and one score.
 
 The generated COMM-P0 FS3 lane is paused after its green wrapper and proof.
 It remains available as an adjacent diagnostic asset, but another generated
-activation or rehearsal does not outrank the first real Dreyer observation.
+activation or rehearsal does not outrank transport admission and fresh source
+selection for the flagship question.
 
 ## A. Current Scientific Knowledge
 
@@ -162,7 +186,11 @@ for every reversible step. Wrap the existing Dreyer source, split, condition,
 estimator, and scorer implementations. Generate future summaries from the
 scientific ledger and standardized evidence bundles.
 
-## C. Flagship Scientific Question
+## C. Historical Dreyer Scientific Question
+
+This section preserves the exact scientific design that motivated the current
+fresh-source criteria. Its Dreyer lane is consumed and is not the active
+execution plan.
 
 In completely unseen participants performing visually cued left-versus-right
 hand motor imagery, do predeclared central EEG features add held-out predictive
@@ -181,7 +209,7 @@ eye movement, covert or overt wrist muscle activity, trial timing, posterior
 visual activity, cross-person sensor misalignment, and probability
 miscalibration.
 
-## D. Discovery And Confirmation Boundary
+## D. Historical Dreyer Discovery And Confirmation Boundary
 
 ### Discovery
 
@@ -213,7 +241,7 @@ prediction, participant result, and score.
 Stage H may only verify the source measurement contract and, after H1, narrow
 the observed EOG/EMG names without changing their count or scientific role.
 
-## E. Decisive Experiment
+## E. Historical Dreyer Decisive Experiment
 
 ### Hypotheses
 

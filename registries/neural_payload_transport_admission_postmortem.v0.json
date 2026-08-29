@@ -1,0 +1,212 @@
+{
+  "schema_name": "neurodecodekit.neural_payload_transport_admission_postmortem",
+  "schema_version": "0.1.0",
+  "research_id": "NPA1-ARTIFACT-POSTMORTEM-v0",
+  "recorded_at_local": "2026-08-29",
+  "status": "tier_A_artifact_only_complete_no_source_promoted_no_irreversible_authority",
+  "evidence_bindings": {
+    "ofner_result_proof": {
+      "path": "registries/ofner_gdf_header_live_result_proof.v0.json",
+      "bytes": 5273,
+      "sha256": "4451d526d4fa7b367de1748b336fdb8c49334a857528bb458a9af7dcc677d145",
+      "git_blob": "8eab5e8b8781c42896c065601e596223fc7ac945",
+      "commit": "750adc39e27ae578fa38381319648a13706b6af1",
+      "CI_run_id": 33280371097,
+      "base_python_job_id": 99174411928,
+      "optional_neuro_readers_job_id": 99174412006,
+      "both_required_jobs_green": true
+    },
+    "dreyer_result_proof": {
+      "path": "registries/dreyer_c5r_1_stage_h_l2_fixed_header_result_proof.v0.json",
+      "bytes": 4765,
+      "sha256": "a74580e2edf92c1ee095916c4f893a7b93efcf96150dc16bb709fe7ffb8c37cb",
+      "git_blob": "70ae62fcf50756d9441a5c4027c7ddc7b61f7284"
+    },
+    "bnci_signed_object_success": {
+      "path": "registries/bnci_2014_001_stage_a_redirect_recovery_result.v0.json",
+      "bytes": 6425,
+      "sha256": "66232ceeb3cc61b3402d1d01970d6630b5e4a25cf7685e5c65f8f50f8f952ae2",
+      "git_blob": "af0bd61d3dd351c52bc7d11bc5c78684a9384e3a"
+    },
+    "iackd_transport_research": {
+      "path": "registries/iackd_transport_stable_recovery_research.v0.json",
+      "bytes": 7648,
+      "sha256": "06916559b4409c8a16adccf837e096bad033ca69164ccef82d6e4048f0ea9bb6",
+      "git_blob": "337572ae006f7a312a3672c85857f489e67702f5"
+    }
+  },
+  "observed_evidence": {
+    "dreyer": {
+      "source_service": "NEMAR",
+      "transaction": "one_full_object_GET_response_open",
+      "accepted_body_bytes": 0,
+      "fixed_header_reads": 0,
+      "aggregate_route": "DREYER-H0",
+      "refusal_code": "HL2-TRANSPORT",
+      "specific_transport_cause_known": false
+    },
+    "ofner": {
+      "source_service": "NEMAR",
+      "manifest_identity_passed": true,
+      "transaction": "first_256_byte_GDF_range_response_open",
+      "accepted_GDF_body_bytes": 0,
+      "fixed_header_reads": 0,
+      "aggregate_route": "OFNER-H0-TRANSPORT",
+      "refusal_code": "OHL-TRANSPORT",
+      "specific_transport_cause_known": false
+    },
+    "bnci": {
+      "source_service": "NEMAR_signed_objects",
+      "transaction": "separately_qualified_redirect_recovery",
+      "files": 18,
+      "accepted_payload_bytes": 779873919,
+      "all_size_and_SHA256_checks_passed": true,
+      "scientific_result": false
+    },
+    "iackd": {
+      "source_service": "OpenNeuro",
+      "transaction": "metadata_response_refused_before_body",
+      "accepted_body_bytes": 0,
+      "architectural_correction": "separate_HTTP_framing_from_bounded_content_identity",
+      "scientific_result": false
+    }
+  },
+  "minimal_causal_conclusion": {
+    "established": "live_transport_admissibility_was_unresolved_when_the_Dreyer_and_Ofner_irreversible_scientific_header_checkpoints_began",
+    "shared_NEMAR_bug_established": false,
+    "redirect_failure_established": false,
+    "range_failure_established": false,
+    "Python_client_failure_established": false,
+    "server_failure_established": false,
+    "biological_null_established": false
+  },
+  "selected_architecture": {
+    "protocol_id": "NPA1-v0",
+    "name": "Neural Payload Admission 1",
+    "identity_order": [
+      "scientific_source_identity",
+      "transport_capability_identity",
+      "HTTP_framing_admissibility",
+      "bounded_content_identity",
+      "semantic_sensor_eligibility"
+    ],
+    "stages": [
+      "NPA1_G_generated_transport_qualification",
+      "NPA1_M_source_identity_research",
+      "NPA1_C_opaque_live_transport_canary",
+      "NPA1_H_fixed_header_observation",
+      "NPA1_A_bounded_acquisition",
+      "NPA1_Q_target_blind_semantic_validation",
+      "NPA1_P_target_firewalled_prediction_freeze",
+      "NPA1_T_one_frozen_score"
+    ],
+    "reuse_existing_components": [
+      "MARC1_bodyless_redirect_and_global_route_guards",
+      "IACKD_framing_content_identity_separation",
+      "BNCI_signed_capability_refresh_and_bounded_hashing",
+      "Ofner_marker_first_resource_caps_and_sanitized_results"
+    ],
+    "new_general_network_framework_allowed": false,
+    "heavy_base_dependency_allowed": false
+  },
+  "generated_qualification_requirements": {
+    "direct_200_profile": true,
+    "direct_206_single_range_profile": true,
+    "bodyless_redirect_counts": [0, 1, 2],
+    "signed_capability_refresh_profile": true,
+    "small_metadata_framing_profiles": [
+      "fixed_length",
+      "chunked",
+      "close_delimited"
+    ],
+    "minimum_deterministic_replays": 2,
+    "minimum_named_adversarial_families": 24,
+    "CPU_threads": 1,
+    "workers": 1,
+    "runtime_cap_seconds": 30,
+    "peak_RSS_cap_bytes": 268435456,
+    "generated_input_plus_output_cap_bytes": 8388608,
+    "network_requests": 0,
+    "retained_generated_payload_bytes": 0
+  },
+  "future_live_canary_contract": {
+    "authorized_now": false,
+    "tier": "Tier_C_separate_exact_green_packet_required",
+    "exact_members": 1,
+    "maximum_opaque_payload_bytes": 256,
+    "semantic_parses": 0,
+    "payload_retained_bytes": 0,
+    "retries_or_reruns": 0,
+    "public_transport_witness_fields": [
+      "terminal_status_class",
+      "redirect_count",
+      "final_host_match",
+      "framing_profile",
+      "content_encoding_state",
+      "range_admissibility_class",
+      "accepted_body_bytes",
+      "segment_SHA256",
+      "response_close_state"
+    ],
+    "raw_URL_or_header_publication": false,
+    "scientific_or_semantic_use_of_segment": false
+  },
+  "fresh_source_admission": {
+    "source_selected_now": null,
+    "selection_status": "parked_until_generated_NPA1_and_fresh_public_source_research",
+    "required_participants_minimum": 10,
+    "recorded_EOG_required": true,
+    "recorded_EMG_or_kinematics_preferred": true,
+    "named_sensor_locations_required": true,
+    "cue_pre_cue_posterior_and_derangement_controls_required": true,
+    "clear_reusable_license_required": true,
+    "selected_surface_cap_bytes": 21474836480,
+    "remotely_green_NPA1_C_witness_required_before_header": true,
+    "Dreyer_reuse_allowed": false,
+    "Ofner_reuse_allowed": false,
+    "BNCI_or_EEGMMIDB_promoted_as_fresh_replication": false,
+    "IACKD_promoted_as_independent_fresh_cohort": false
+  },
+  "operation_counters": {
+    "network_requests": 0,
+    "real_or_private_path_operations": 0,
+    "payload_or_header_reads": 0,
+    "event_annotation_signal_target_or_label_reads": 0,
+    "generated_qualification_runs": 0,
+    "model_or_checkpoint_opens": 0,
+    "training_or_inference_runs": 0,
+    "prediction_sets": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "device_or_hardware_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "authority": {
+    "tier_A_artifact_research_complete": true,
+    "Tier_B_generated_NPA1_G_implementation_allowed_after_this_record_is_remotely_green": true,
+    "active_Tier_C_packet": null,
+    "network_or_real_data_authorized": false,
+    "payload_header_signal_event_target_or_label_access_authorized": false,
+    "model_training_prediction_or_scoring_authorized": false,
+    "device_release_or_claim_upgrade_authorized": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "a_frozen_transport_admission_architecture_separates_endpoint_qualification_from_scientific_payload_gates",
+    "scientific_claim_established": false,
+    "neural_information_established": false,
+    "decoding_established": false,
+    "unseen_person_generalization_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "movement_intention_or_motor_cortex_causation_established": false,
+    "thought_or_language_decoding_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_or_clinical_value_established": false
+  },
+  "next_gate": {
+    "action": "implement_and_generated_qualify_only_NPA1_G_after_this_exact_record_is_committed_pushed_and_both_required_CI_jobs_are_green",
+    "fresh_source_research_after_generated_green": true,
+    "real_transport_canary_authorized": false,
+    "scientific_claim_upgrade_authorized": false
+  }
+}
