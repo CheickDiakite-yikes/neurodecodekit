@@ -1,0 +1,80 @@
+{
+  "schema_name": "neurodecodekit.dreyer_c5r_1_stage_h_live_generated_qualification_result",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-28",
+  "lane_id": "DREYER-C5R-1-HL",
+  "attempt_id": "DREYER-C5R-1-HL1-R0",
+  "status": "consumed_rejected_post_run_failure_cleanup_gate",
+  "green_decision": {
+    "commit": "de6cf80f4bd243e7e60a6933445d0a65291abb90",
+    "CI_run_id": 33230243142,
+    "base_python_job_id": 99041680696,
+    "optional_neuro_readers_job_id": 99041680703,
+    "both_required_jobs_green": true
+  },
+  "raw_one_shot_receipt": {
+    "bytes": 2371,
+    "sha256": "85ecd170ec9d618da2f004d3f5595a5cc03ba3b3f1ed0950e8f983281d6945fc",
+    "self_reported_status": "passed_generated_mock_only_consumed_no_real_or_network_operation",
+    "valid_wrapper_replays": 2,
+    "wrapper_mutation_refusals": 17,
+    "replayed_stage_H_valid_cases": 2,
+    "replayed_stage_H_adversarial_refusals": 18
+  },
+  "measurements": {
+    "runtime_seconds": 0.2434542920673266,
+    "peak_process_RSS_bytes": 31916032,
+    "generated_input_bytes": 321538,
+    "public_output_bytes": 2371,
+    "real_or_private_path_opens": 0,
+    "real_HTTP_requests": 0,
+    "real_network_bytes": 0,
+    "real_EDF_payload_bytes": 0,
+    "real_EDF_header_reads": 0,
+    "annotation_signal_target_or_label_reads": 0,
+    "model_training_inference_prediction_target_delivery_or_score_operations": 0,
+    "producer_causal": null,
+    "required_context_seconds": null,
+    "end_to_end_latency_measured": false
+  },
+  "passed_observations": {
+    "deterministic_H1": true,
+    "aggregate_H0_for_header_geometry": true,
+    "marker_before_opener": true,
+    "one_opener_and_request_per_success_replay": true,
+    "success_responses_closed": true,
+    "single_parser_capture_restored": true,
+    "atomic_no_replace_implementation_present": true
+  },
+  "post_run_acceptance_audit": {
+    "all_gates_passed": false,
+    "generated_reproduction_performed": true,
+    "reproduction_case": "opener_factory_refusal_after_consumed_marker",
+    "observed_refusal_code": "HL1-TRANSPORT",
+    "consumed_marker_present": true,
+    "invocation_staging_directory_present": true,
+    "aggregate_result_present": false,
+    "required_cleanup_passed": false,
+    "required_aggregate_H0_publication_passed": false,
+    "reason": "opener_construction_occurs_before_the_executor_cleanup_try_finally"
+  },
+  "routing": {
+    "registered_qualification_consumed": true,
+    "registered_qualification_rerun_allowed": false,
+    "HL1_accepted": false,
+    "HL2_activation_allowed": false,
+    "HL2_real_invocation_consumed": false,
+    "Dreyer_lane_scientifically_parked": false,
+    "next_step": "freeze_failure_then_prepare_a_separately_governed_generated_only_HL1_successor"
+  },
+  "warnings": [
+    "raw_self_report_was_overruled_by_the_stricter_post_run_acceptance_audit",
+    "the_defect_was_found_before_any_real_or_network_operation",
+    "no_activation_or_real_preflight_is_permitted_from_this_attempt",
+    "generated_mock_engineering_has_no_scientific_value"
+  ],
+  "claim_boundary": {
+    "engineering_capability": "the_one_shot_generated_audit_detected_and_localized_a_pre_network_failure_cleanup_defect",
+    "scientific_claim_not_established": "any_real_EEG_information_EEG_beyond_peripherals_unseen_person_generalization_movement_intention_motor_cortex_language_live_decoding_hardware_or_clinical_result"
+  }
+}

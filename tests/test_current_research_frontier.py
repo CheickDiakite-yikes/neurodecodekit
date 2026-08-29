@@ -20,7 +20,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(self.frontier["active_lane_id"], "DREYER-C5R-1-HL")
         self.assertEqual(
             self.frontier["status"],
-            "packet_bound_Tier_C_decision_recorded_pending_own_remote_green",
+            "HL1_R0_consumed_rejected_HL2_blocked",
         )
 
     def test_scientific_strategy_converges_on_one_empirical_checkpoint(self):
@@ -218,11 +218,27 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         )
         self.assertEqual(packet["proof_closeout_CI_run_id"], 32_936_247_679)
         self.assertTrue(packet["both_request_and_proof_required_jobs_green"])
-        self.assertTrue(packet["all_authority_flags_false"])
+        self.assertTrue(packet["request_all_authority_flags_false"])
+        self.assertFalse(packet["fresh_packet_bound_maintainer_decision_required"])
+        self.assertFalse(packet["current_HL2_authority"])
         decision = packet["packet_bound_decision"]
         self.assertEqual(decision["maintainer_words"], "continue, make a deep push")
-        self.assertFalse(decision["decision_effective_now"])
+        self.assertEqual(
+            decision["commit"],
+            "de6cf80f4bd243e7e60a6933445d0a65291abb90",
+        )
+        self.assertEqual(decision["CI_run_id"], 33_230_243_142)
+        self.assertTrue(decision["both_required_jobs_green"])
+        self.assertTrue(decision["decision_effective_now"])
         self.assertEqual(decision["decision_only_real_or_private_operations"], 0)
+        qualification = packet["HL1_generated_qualification"]
+        self.assertEqual(
+            qualification["status"],
+            "consumed_rejected_post_run_failure_cleanup_gate",
+        )
+        self.assertFalse(qualification["all_acceptance_gates_passed"])
+        self.assertFalse(qualification["rerun_allowed"])
+        self.assertEqual(qualification["real_or_private_operations"], 0)
         for key in (
             "real_requests",
             "real_network_bytes",

@@ -14604,3 +14604,12 @@ green; only then may the single generated qualification run.
   H-L1 implementation and activation to cross their own green barriers before
   one H-L2 fixed-header invocation. Authorize no other EDF, annotation, signal,
   target, model, score, retry, rerun, other-project, release, or claim action.
+- 2026-08-28: Consume and reject `DREYER-C5R-1-HL1-R0`. The generated run
+  self-reported success over two wrapper replays, 17 wrapper refusals, and the
+  inherited Stage H matrix, but stricter post-run audit reproduced an opener-
+  construction refusal after marker durability that left the invocation-owned
+  staging directory and emitted no aggregate H0. Preserve the exact failed
+  source and 2,371-byte receipt, forbid H-L2 activation and any rerun or in-
+  place reinterpretation, and require a separately governed generated-only
+  successor. Real/private, network, EDF, target, model, score, release, and
+  scientific-claim operations remain zero.

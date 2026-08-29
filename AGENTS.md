@@ -57,11 +57,14 @@ not outrank this strategy where priorities conflict.
 The flagship is the frozen 60-person `DREYER-C5R-1` nuisance-controlled
 unseen-person experiment. Its first empirical checkpoint is one exact
 `sub-01` R1 EDF fixed-header observation under the separately governed
-`DREYER-C5R-1-HL` gate. That packet remains all-false until an exact decision
-becomes remotely green. `COMM-P0-G-FS3` is paused as an adjacent engineering
-diagnostic; do not activate it under general continuation. This strategic
-reset authorizes no data, target, model, score, device, release, or claim
-operation.
+`DREYER-C5R-1-HL` gate. Its decision is remotely green, but sole generated
+attempt `DREYER-C5R-1-HL1-R0` is consumed and rejected: an opener-construction
+refusal left invocation-owned staging and emitted no aggregate H0. H-L2 is
+blocked; do not activate or access the real EDF from this attempt. Read the
+H-L1 closeout and current frontier before successor work. `COMM-P0-G-FS3` is
+paused as an adjacent engineering diagnostic; do not activate it under general
+continuation. No new data, target, model, score, device, release, or claim
+operation is authorized by this state.
 
 ## Historical Gate Detail: COMM-P0-G-FS3
 
@@ -282,7 +285,8 @@ Its next reversible gate is generated-only qualification of the reader, task
 grammar, target firewall, stream, freezer, scorer, and caps. It authorizes no
 recruitment, consent collection, device, real/private data, target, model,
 score, provider, release, or scientific claim operation. `DREYER-C5R-1-HL`
-remains the sole active Tier C packet with all authority false.
+remains the sole active Tier C lane, but its H-L1 R0 attempt is consumed and
+rejected and H-L2 authority is false.
 
 Exact registration `df3266ed09132017cc8a9dcc10e8a7d61ea92f61` passed
 Base Python job `98732241444`, Optional Neuro Readers job `98732241603`, and
@@ -473,8 +477,12 @@ reinterpret COMM-G2 as accepted. It has no scientific value.
 7. `docs/DREYER_C5R_1_STAGE_H_LIVE_PREFLIGHT_AUTHORIZATION_PACKET.md`;
 8. `registries/dreyer_c5r_1_stage_h_live_preflight_authorization_request.v0.json`;
 9. `docs/DREYER_C5R_1_STAGE_H_LIVE_PREFLIGHT_REQUEST_PROOF_CLOSEOUT.md`;
-10. `registries/dreyer_c5r_1_stage_h_live_preflight_request_proof.v0.json`; and
-11. `docs/DREYER_C5R_1_STAGE_H_LIVE_IMPLEMENTATION_SAFETY_REVIEW.md`.
+10. `registries/dreyer_c5r_1_stage_h_live_preflight_request_proof.v0.json`;
+11. `docs/DREYER_C5R_1_STAGE_H_LIVE_IMPLEMENTATION_SAFETY_REVIEW.md`;
+12. `docs/DREYER_C5R_1_STAGE_H_LIVE_PREFLIGHT_DECISION.md`;
+13. `registries/dreyer_c5r_1_stage_h_live_preflight_decision.v0.json`;
+14. `docs/DREYER_C5R_1_STAGE_H_LIVE_GENERATED_QUALIFICATION_CLOSEOUT.md`; and
+15. `registries/dreyer_c5r_1_stage_h_live_generated_qualification_result.v0.json`.
 
 The prior BNCI lane is closed and consumed at R2. Its aggregate-only
 postmortem found descriptive protocol information but failed posterior/visual
@@ -511,13 +519,15 @@ promotion, continuous resource checks, sanitized H0/H1 output, and an exact
 EDF header-to-payload geometry check. The five qualified Stage H artifacts
 remain byte-identical.
 
-The next fresh, unambiguous maintainer `approve`, `continue`, or `proceed` may
-bind only unchanged packet `DREYER-C5R-1-HL` by reference. Record an exact
-authorization-only decision and make it remotely green before implementing
-H-L1. H-L1 is generated/mock live-wrapper qualification plus a separately
-green activation. Only after those barriers may H-L2 make one direct request
-for the exact 14,805,604-byte `sub-01` R1 EDF, verify its SHA-256, and parse
-only its fixed header. Every authority flag is false until that decision.
+Decision `de6cf80f4bd243e7e60a6933445d0a65291abb90` passed Base
+`99041680696`, Optional Neuro Readers `99041680703`, and CI `33230243142`.
+The sole H-L1 R0 generated qualification is consumed and rejected. Its raw
+self-report passed two wrapper replays and 35 combined refusals, but post-run
+audit reproduced `HL1-TRANSPORT` after marker durability with staging retained
+and no aggregate H0. Preserve the exact failed source and receipt. Do not
+rerun, repair in place, create an H-L2 activation, request the 14,805,604-byte
+EDF, or reinterpret R0 as accepted. A generated-only successor needs a new
+exact packet and decision; H-L2 remains closed.
 
 Do not request the remaining 119 files, read annotations or signal samples,
 create splits or derivatives, train or infer, deliver targets, score, publish,
