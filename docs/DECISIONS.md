@@ -14781,3 +14781,13 @@ green; only then may the single generated qualification run.
   no-authority activation record. Keep the real EDF, marker, network request,
   fixed-header read, all annotations and samples, targets, models, scores,
   devices, releases, other projects, and scientific claim upgrades closed.
+- 2026-08-29: Accept exact H-L2 adapter implementation
+  `a9cd0be7c22996154c28bb568e05c623606e7424` after Base Python
+  `99121591361`, Optional Neuro Readers `99121591482`, and CI `33260534900`
+  passed on GitHub `main`. Freeze no-authority activation
+  `DREYER-C5R-1-HL2-ACT0`, binding six exact implementation artifacts / 79,741
+  bytes and preserving the one-file, one-GET, fixed-header-only transaction.
+  Require this activation's exact commit and both jobs to become remotely green
+  before the sole invocation. This record performs no marker, request,
+  real/private path, EDF, header, annotation, sample, target, model, score,
+  device, release, or scientific claim operation.

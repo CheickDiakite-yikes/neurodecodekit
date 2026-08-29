@@ -20,7 +20,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(self.frontier["active_lane_id"], "DREYER-C5R-1-HL")
         self.assertEqual(
             self.frontier["status"],
-            "HL2_implementation_and_generated_qualification_complete_pending_remote_green",
+            "HL2_activation_record_frozen_pending_remote_green",
         )
 
     def test_scientific_strategy_converges_on_one_empirical_checkpoint(self):
@@ -441,7 +441,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(request["request_id"], "DREYER-C5R-1-HL2-A0")
         self.assertEqual(
             request["status"],
-            "implementation_and_generated_qualification_complete_pending_remote_green",
+            "activation_record_frozen_pending_remote_green",
         )
         self.assertEqual(
             request["commit"], "a97fc191106e5fe42859d871d78e59930bef79ac"
@@ -503,12 +503,30 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertFalse(decision["real_EDF_access_allowed_before_all_barriers"])
         implementation = decision["fixed_header_adapter_implementation"]
         self.assertEqual(implementation["implementation_id"], "DREYER-C5R-1-HL2-I0")
+        self.assertEqual(
+            implementation["commit"],
+            "a9cd0be7c22996154c28bb568e05c623606e7424",
+        )
+        self.assertEqual(implementation["CI_run_id"], 33_260_534_900)
+        self.assertEqual(implementation["base_python_job_id"], 99_121_591_361)
+        self.assertEqual(
+            implementation["optional_neuro_readers_job_id"], 99_121_591_482
+        )
+        self.assertTrue(implementation["both_required_jobs_green"])
+        self.assertTrue(implementation["on_GitHub_main"])
         self.assertEqual(implementation["transaction_cases"], 32)
         self.assertEqual(implementation["generated_attempts"], 33)
         self.assertEqual(implementation["matching_H1_replays"], 2)
         self.assertEqual(implementation["refusal_observations"], 31)
         self.assertEqual(implementation["retained_generated_payload_bytes"], 0)
-        self.assertFalse(implementation["activation_present"])
+        self.assertTrue(implementation["activation_present"])
+        activation = implementation["activation"]
+        self.assertEqual(activation["activation_id"], "DREYER-C5R-1-HL2-ACT0")
+        self.assertEqual(activation["bound_implementation_artifacts"], 6)
+        self.assertEqual(activation["bound_implementation_bytes"], 79_741)
+        self.assertFalse(activation["effective_before_own_remote_green"])
+        self.assertEqual(activation["registered_real_invocations_authorized_now"], 0)
+        self.assertFalse(activation["real_EDF_authority_now"])
         self.assertFalse(implementation["HL2_authority"])
         for key in (
             "real_requests",

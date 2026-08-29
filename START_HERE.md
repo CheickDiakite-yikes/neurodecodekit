@@ -41,10 +41,12 @@
 > generated qualification with two matching H1 replays and 31 refusal
 > observations in 0.599492667010054 seconds at 39,141,376-byte peak RSS. It
 > used zero network or real/private operations and retained zero generated
-> bytes. This exact implementation still must become remotely green before a
-> no-authority activation can be created, and that activation must become
-> remotely green before the sole real invocation. No real EDF or EEG was
-> opened, and H-L2 remains closed.
+> bytes. Exact implementation `a9cd0be7c22996154c28bb568e05c623606e7424`
+> passed Base Python `99121591361`, Optional Neuro Readers `99121591482`, and
+> CI `33260534900` on GitHub `main`. No-authority activation
+> `DREYER-C5R-1-HL2-ACT0` now binds six exact implementation artifacts / 79,741
+> bytes, but it must become remotely green before the sole real invocation.
+> No real EDF or EEG was opened, and H-L2 remains closed at this commit.
 
 > COMM-P0-G FS3 registration frontier, 2026-08-28: Amendment 3 replaces only
 > the redundant second full fictional model replay with a separate zero-model
