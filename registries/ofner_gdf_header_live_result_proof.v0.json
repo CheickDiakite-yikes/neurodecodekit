@@ -1,0 +1,130 @@
+{
+  "schema_name": "neurodecodekit.ofner_gdf_header_live_result_proof",
+  "schema_version": "0.1.0",
+  "proof_id": "OFNER-C6R-1-HL-R0-P0",
+  "recorded_at_local": "2026-08-29",
+  "packet_id": "OFNER-C6R-1-HL",
+  "execution_id": "OFNER-C6R-1-HL-R0",
+  "status": "proof_only_closeout_effective_after_own_remote_green",
+  "green_result_closeout": {
+    "commit": "e7630617f04560ca610cd0159f6af6d5a91f3910",
+    "commit_subject": "Close consumed Ofner header checkpoint",
+    "branch": "main",
+    "CI_run_id": 33279743126,
+    "CI_url": "https://github.com/CheickDiakite-yikes/neurodecodekit/actions/runs/33279743126",
+    "base_python_job_id": 99172768465,
+    "base_python_duration": "7m11s",
+    "base_python_conclusion": "success",
+    "optional_neuro_readers_job_id": 99172768381,
+    "optional_neuro_readers_duration": "12m4s",
+    "optional_neuro_readers_conclusion": "success",
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true
+  },
+  "duplicate_branch_proof": {
+    "branch": "codex/loop-54a-vhdr-preregistration",
+    "CI_run_id": 33279739640,
+    "base_python_job_id": 99172759089,
+    "base_python_duration": "7m1s",
+    "base_python_conclusion": "success",
+    "optional_neuro_readers_job_id": 99172759184,
+    "optional_neuro_readers_duration": "10m42s",
+    "optional_neuro_readers_conclusion": "success",
+    "both_required_jobs_green": true
+  },
+  "bound_artifacts": [
+    {
+      "path": "docs/OFNER_2017_MOTOR_IMAGERY_RANGE_HEADER_RESULT_CLOSEOUT.md",
+      "bytes": 3842,
+      "sha256": "4caeda7c09073d5756f67d8d0bfc6dae3a80524045471f89da04059bbcc6076b",
+      "git_blob": "8f58af0c3f5fccaa9999bc651b3a4dcd56e10b2c"
+    },
+    {
+      "path": "registries/ofner_gdf_header_live_result.v0.json",
+      "bytes": 2340,
+      "sha256": "95f7b21133b1897bbca27d41832798e88ae61ca2981a1c03661520af0e741955",
+      "git_blob": "027fa308d92979ebb6588aeb468cd5bb7776d73f"
+    },
+    {
+      "path": "registries/ofner_gdf_header_live_result_closeout.v0.json",
+      "bytes": 4810,
+      "sha256": "946b49bcf0c5d7070a874dac745dc455cf57e7cf635710bdb4f5584079fa0c08",
+      "git_blob": "d66217fcad59bb9b2de2f19c7b9a0b78015fc093"
+    },
+    {
+      "path": "registries/current_research_frontier.v6.json",
+      "bytes": 5336,
+      "sha256": "93c3f4fa15aef5675b40ac144212ca6b7274f30b02982c3e7417d7ad5a7b7b3f",
+      "git_blob": "ab319f54f8b01c266340c68df71e332c160e7d57"
+    },
+    {
+      "path": "tests/test_ofner_gdf_header_live_result_closeout.py",
+      "bytes": 4334,
+      "sha256": "5b1298f5e68de54d2bf39700bef397372f6e3d86083c59f3ebbfd34efcec5327",
+      "git_blob": "5b33a6b31f9dc288450b49507d74cd2ce1f2e7b8"
+    }
+  ],
+  "bound_artifact_summary": {
+    "count": 5,
+    "bytes": 20662,
+    "canonical_artifact_set_sha256": "c3c83ed42dbf9feaf2075601af50c2f079753023016656e636fc10f9a5526a48"
+  },
+  "closed_result": {
+    "route": "OFNER-H0-TRANSPORT",
+    "refusal_code": "OHL-TRANSPORT",
+    "registered_invocations_consumed": 1,
+    "retry_rerun_repair_resume_substitute_or_reinterpret_allowed": false,
+    "real_manifest_GET_requests": 1,
+    "real_manifest_body_bytes": 1352270,
+    "real_GDF_range_GET_requests": 1,
+    "real_response_opens": 2,
+    "real_GDF_body_bytes": 0,
+    "real_fixed_header_reads": 0,
+    "real_fixed_header_semantic_parses": 0,
+    "runtime_seconds": 1.1932796670589596,
+    "peak_process_RSS_bytes": 48021504,
+    "payload_retained": false,
+    "biological_null": false
+  },
+  "proof_only_operations": {
+    "existing_GitHub_CI_runs_verified": 2,
+    "unique_committed_public_artifacts_verified": 5,
+    "research_source_network_requests": 0,
+    "ignored_or_private_path_reads": 0,
+    "payload_or_marker_reads": 0,
+    "GDF_header_annotation_or_signal_reads": 0,
+    "target_or_label_reads": 0,
+    "generated_qualification_or_replay_runs": 0,
+    "model_training_inference_or_prediction_runs": 0,
+    "scoring_events": 0,
+    "stream_device_or_hardware_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "next_gate": {
+    "proof_closeout_commit_required": true,
+    "proof_closeout_push_required": true,
+    "both_remote_CI_jobs_green_required": true,
+    "active_Tier_C_gate_after_result_closeout": null,
+    "next_reversible_task": "artifact_only_transport_postmortem_and_fresh_transport_verified_source_selection_without_reopening_OFNER_C6R_1_HL",
+    "transport_research_authorized_as_Tier_A": true,
+    "real_data_transaction_authorized": false,
+    "OFNER_C6R_1_HL_may_be_reopened": false
+  },
+  "claim_boundary": {
+    "engineering_capability": "consumed_Ofner_transport_refusal_has_an_immutable_hash_bound_remotely_verified_public_evidence_chain",
+    "scientific_claim_established": false,
+    "real_GDF_body_accessed": false,
+    "real_GDF_header_accessed": false,
+    "real_sensor_header_established": false,
+    "neural_information_established": false,
+    "decoding_established": false,
+    "unseen_person_generalization_established": false,
+    "EEG_beyond_EOG_and_kinematics_established": false,
+    "movement_intention_or_motor_cortex_causation_established": false,
+    "thought_or_language_decoding_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_performance_established": false,
+    "clinical_value_established": false
+  }
+}
