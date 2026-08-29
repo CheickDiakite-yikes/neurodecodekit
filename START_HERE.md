@@ -26,10 +26,11 @@
 > 1,623,762 generated input-plus-output bytes. It is consumed and cannot be
 > rerun. Exact result closeout `cb7e7f831a1056dfcf878ca23ed53aa6fd4738dc`
 > passed Base Python `99105690584`, Optional Neuro Readers `99105690672`, and
-> CI `33254474440` on GitHub `main`. Its additive proof-only closeout is now
-> pending its own green barrier. This qualifies the corrected one-file
-> transaction wrapper only; no real EDF or EEG was opened, and H-L2 remains
-> closed behind its own packet.
+> CI `33254474440` on GitHub `main`. Exact proof `1ae340354352d544d6d99fe5af6f354ab668bf9c`
+> then passed Base Python `99107500593`, Optional Neuro Readers `99107500410`,
+> and CI `33255170805`. The all-false H-L2 request is now queued and pending its
+> own green barrier. This qualifies the corrected one-file transaction wrapper
+> only; no real EDF or EEG was opened, and H-L2 remains closed.
 
 > COMM-P0-G FS3 registration frontier, 2026-08-28: Amendment 3 replaces only
 > the redundant second full fictional model replay with a separate zero-model
@@ -219,12 +220,13 @@ All-false request `5191e79e2ccfa50b5042a24357c0c22d68d8f088` passed CI
 `32934958878`. Its proof-only closeout
 `821fad17e06914375c50a7d0dd7017458b2df838` passed Base job `98077895278`,
 Optional Neuro Readers job `98077895460`, and CI `32936247679`.
-`DREYER-C5R-1-HL` remains the sole active Tier C lane. Its H-L1R1 result
-closeout is remotely green; the additive result proof must become green next.
-After that, the next gate is a separate all-false H-L2 activation request for
-one exact 14,805,604-byte EDF fixed-header observation. The current authority
-cannot open that file and does not authorize the remaining 119 files, signal
-or target reads, training, scoring, release, or a claim upgrade.
+`DREYER-C5R-1-HL` remains the sole active Tier C lane. Its H-L1R1 result and
+proof are remotely green. The queued all-false `DREYER-C5R-1-HL2-A0` request
+proposes one exact 14,805,604-byte EDF fixed-header observation after its own
+request proof, fresh packet-bound decision, implementation, and activation
+barriers. The current authority cannot open that file and does not authorize
+the remaining 119 files, signal or target reads, training, scoring, release,
+or a claim upgrade.
 
 The parallel end-to-end plan is tracked in
 `docs/COMMUNICATION_EEG_SCIENTIFIC_CLAIM_PROGRAM.md`. It selects OpenNeuro

@@ -20,7 +20,7 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(self.frontier["active_lane_id"], "DREYER-C5R-1-HL")
         self.assertEqual(
             self.frontier["status"],
-            "HL1R1_Q0_passed_consumed_result_remotely_green_proof_closeout_pending_remote_green_HL2_blocked",
+            "HL1R1_Q0_passed_consumed_result_and_proof_remotely_green_HL2_all_false_request_pending_remote_green",
         )
 
     def test_scientific_strategy_converges_on_one_empirical_checkpoint(self):
@@ -428,10 +428,26 @@ class CurrentResearchFrontierTests(unittest.TestCase):
         self.assertEqual(proof["proof_id"], "DREYER-C5R-1-HL1R1-Q0-R0-P0")
         self.assertEqual(proof["bound_artifact_count"], 3)
         self.assertEqual(proof["bound_artifact_bytes"], 13_827)
+        self.assertEqual(
+            proof["commit"], "1ae340354352d544d6d99fe5af6f354ab668bf9c"
+        )
+        self.assertEqual(proof["CI_run_id"], 33_255_170_805)
+        self.assertTrue(proof["both_required_jobs_green"])
         self.assertFalse(proof["qualification_repeated"])
         self.assertFalse(proof["ignored_evidence_reopened"])
         self.assertEqual(proof["real_or_private_operations"], 0)
         self.assertFalse(proof["HL2_authority"])
+        request = packet["queued_HL2_activation_request"]
+        self.assertEqual(request["request_id"], "DREYER-C5R-1-HL2-A0")
+        self.assertTrue(request["all_authority_flags_false"])
+        self.assertTrue(request["fresh_packet_bound_maintainer_decision_required"])
+        self.assertFalse(request["predating_short_form_may_activate"])
+        self.assertEqual(request["requested_member_bytes"], 14_805_604)
+        self.assertEqual(request["requested_real_HTTP_GET_requests"], 1)
+        self.assertEqual(request["requested_fixed_header_parses"], 1)
+        self.assertEqual(request["requested_remaining_payloads"], 0)
+        self.assertEqual(request["real_or_private_operations"], 0)
+        self.assertFalse(request["authority_expanded"])
         for key in (
             "real_requests",
             "real_network_bytes",

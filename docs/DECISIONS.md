@@ -14730,3 +14730,15 @@ green; only then may the single generated qualification run.
   a separate all-false H-L2 activation request. Keep H-L2, the real EDF,
   network, targets, models, scores, devices, releases, and scientific claims
   closed.
+- 2026-08-29: Accept H-L1R1 result proof
+  `1ae340354352d544d6d99fe5af6f354ab668bf9c` after Base Python
+  `99107500593`, Optional Neuro Readers `99107500410`, and CI `33255170805`
+  passed on GitHub `main`. Freeze `DREYER-C5R-1-HL2-A0` as an all-false
+  request for one additive standard-library execution adapter, generated-only
+  adapter checks, one later no-authority activation record, and one exact
+  14,805,604-byte public EDF fixed-header invocation after every ordered green
+  barrier. Grant no authority now. Require this request and a proof-only
+  closeout green, then fresh packet-bound maintainer words and a green decision
+  before implementation. Keep the real EDF, network, annotations, samples,
+  targets, models, scores, remaining 119 files, devices, releases, other
+  projects, and scientific claims closed.

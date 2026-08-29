@@ -108,8 +108,15 @@ its result closeout and machine record. Exact result closeout
 `99105690584`, Optional Neuro Readers `99105690672`, and CI `33254474440`,
 then reached GitHub `main`. Read the additive proof-only closeout next. It
 binds three exact result artifacts / 13,827 bytes and repeats no qualification
-or ignored-evidence access. The proof itself is pending its own remote green;
-do not rerun or reinterpret Q0. H-L2 and real EDF authority remain false.
+or ignored-evidence access. Exact proof
+`1ae340354352d544d6d99fe5af6f354ab668bf9c` passed Base Python
+`99107500593`, Optional Neuro Readers `99107500410`, and CI `33255170805`,
+then reached GitHub `main`. Read the queued all-false
+`DREYER-C5R-1-HL2-A0` fixed-header activation request next. It proposes one
+exact 14,805,604-byte public EDF transaction after its own proof, fresh
+packet-bound decision, implementation, and activation barriers. The request is
+pending its own remote green and authorizes nothing now. Do not rerun or
+reinterpret Q0. H-L2 and real EDF authority remain false.
 `COMM-P0-G-FS3` is paused as an adjacent engineering diagnostic; do not activate
 it under general continuation. No new data, target, model, score, device,
 release, or claim operation is authorized by this state.
