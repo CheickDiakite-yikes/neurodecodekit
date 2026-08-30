@@ -16563,3 +16563,11 @@ and require both remote jobs green before the one official qualification.
   GiB selected payload inside 20 GiB total disk, and no participant dropping.
   No candidate was selected, no network or real/private path was read, and no
   payload, model, score, or claim operation occurred.
+- 2026-08-29: Pre-acceptance review rejected pushed `FMSR1-v0` without any
+  protected operation. Added additive `FMSR1-v1`, frontier v10, focused tests,
+  and current-facing documentation corrections. The successor adds joint
+  nuisance and deranged-joint comparators, freezes five indexes and four exact
+  queries, orders discovery before candidate metadata and transport, requires
+  EMG for every relevant effector, and exactly partitions the 20 GiB ceiling as
+  12+2+2+1+3 GiB. No source, network, real/private path, payload, target, model,
+  score, device, release, or claim operation occurred.

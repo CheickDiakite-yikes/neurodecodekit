@@ -30,18 +30,20 @@
 > 22,577,152-byte peak RSS, zero network, and zero retained payload. The NPA1
 > proof closeout then passed Base Python `99188620896`, Optional Neuro Readers
 > `99188621003`, and CI `33285776358` at exact commit `2ec3d4b` on GitHub
-> `main`. Read `registries/current_research_frontier.v9.json`; its predecessor
+> `main`. Read `registries/current_research_frontier.v10.json`; its predecessor
+> `registries/current_research_frontier.v9.json`, predecessor
 > `registries/current_research_frontier.v8.json`, predecessor
 > `registries/current_research_frontier.v7.json`, and historical
 > `registries/current_research_frontier.v6.json` remain immutable.
-> No fresh source is promoted. `FMSR1-v0` freezes a motor-only source gate:
-> at least ten complete participants, synchronized EEG/EOG/task-relevant EMG,
-> named geometry, full controls, reusable licensing, 16 GiB selected payload,
-> and 20 GiB total incremental disk. Partial-control sources cannot be promoted,
-> and `NO_QUALIFYING_SOURCE` is valid. After this exact registration is remotely
-> green, next draft only an all-false bounded metadata-research authorization
-> packet. Any source metadata network, real
-> canary, header, payload, model, or score operation remains separately gated.
+> No fresh source is promoted. The pushed `FMSR1-v0` draft was rejected before
+> acceptance or protected work. Its all-false `FMSR1-v1` successor prospectively freezes
+> five official source indexes, four exact queries, at least ten complete
+> participants, EEG/EOG/EMG for every relevant effector, named geometry, and
+> joint nuisance-only and joint nuisance plus deranged-central-EEG controls.
+> Its 20 GiB ceiling is partitioned exactly as 12+2+2+1+3 GiB. After v1 is
+> remotely green, next draft only an all-false packet for the frozen discovery
+> queries. Any network, candidate metadata, real canary, header, payload, model,
+> or score operation remains separately gated.
 > COMM-P0-G FS3 remains paused.
 
 > Dreyer H-L1R1 recovery update, 2026-08-29: exact generated coordinator
@@ -217,9 +219,10 @@
 Historical exact control-plane label retained for proof compatibility:
 `Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight`.
 
-Start with `registries/current_research_frontier.v9.json`, the machine-readable
+Start with `registries/current_research_frontier.v10.json`, the machine-readable
 snapshot of the consumed lanes, green NPA1 engineering proof, claim boundary,
-and next transition. Version 7 remains its immutable generated-work predecessor.
+rejected v0 draft, all-false v1 successor, and next transition. Versions 9 and
+7 remain immutable predecessors.
 
 The prior BNCI experiment found real held-out protocol information, but it did
 not establish an EEG-specific effect: posterior EEG slightly beat the selected

@@ -107,9 +107,9 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
             },
         )
         self.assertIn("Preregister and execute", update["next_decisive_experiment"])
-        self.assertIn("FMSR1-v0 freezes", update["evidence_produced"])
+        self.assertIn("FMSR1-v1 prospectively freezes", update["evidence_produced"])
         self.assertIn(
-            "synchronized EEG/EOG/task-relevant EMG",
+            "joint nuisance and deranged-joint comparators",
             update["evidence_produced"],
         )
 

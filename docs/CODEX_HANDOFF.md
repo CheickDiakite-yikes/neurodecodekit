@@ -2,7 +2,7 @@
 
 > **Current scientific frontier, 2026-08-29:** read the Ofner result and proof
 > closeouts, the NPA1 implementation and proof closeout,
-> `registries/current_research_frontier.v9.json`, and the scientific knowledge
+> `registries/current_research_frontier.v10.json`, and the scientific knowledge
 > ledger first. The predecessor
 > `registries/current_research_frontier.v8.json`, predecessor
 > `registries/current_research_frontier.v7.json` and historical
@@ -25,15 +25,16 @@
 > 0.003375791013240814 seconds at 22,577,152-byte peak RSS, with zero network
 > and zero retained payload. No source is promoted and this is not EEG evidence.
 > NPA1 proof closeout `2ec3d4b` passed Base `99188620896`, Optional
-> `99188621003`, and CI `33285776358` on GitHub `main`. `FMSR1-v0` now freezes
-> an all-false motor-only source gate with at least ten complete participants,
-> synchronized EOG and task-relevant EMG, named geometry, full controls, a
-> 16 GiB selected-payload cap inside 20 GiB total incremental disk, and a valid
-> no-qualifying-source outcome. After this exact registration is remotely
-> green, next draft only its artifact-only bounded metadata-research
-> authorization packet. Source-specific metadata network access and any
-> real 256-byte canary remain closed; the canary is Tier C. Preserve the
-> unrelated tracker inspection file.
+> `99188621003`, and CI `33285776358` on GitHub `main`. Independent review
+> rejected pushed draft `FMSR1-v0` before acceptance or protected work. Its
+> all-false `FMSR1-v1` successor prospectively freezes five official indexes, four exact
+> queries, ordered discovery-to-metadata routing, at least ten complete
+> participants, EEG/EOG/EMG for every relevant effector, joint nuisance and
+> deranged-joint controls, and exact 12+2+2+1+3 GiB storage arithmetic. After
+> v1 is exact-green, next draft only an all-false artifact packet for the
+> frozen discovery queries. All network, candidate metadata, real canary,
+> payload, model, score, device, release, and claim authorities remain false.
+> Preserve the unrelated tracker inspection file.
 
 > **Historical generated frontier, 2026-08-28:** read Amendment 3 and the FS3
 > preregistration/contract first. Exact Amendment 3 `b15d3cf` passed Base

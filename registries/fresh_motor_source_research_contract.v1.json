@@ -1,0 +1,347 @@
+{
+  "schema_name": "neurodecodekit.fresh_motor_source_research_contract",
+  "schema_version": "0.2.0",
+  "protocol_id": "FMSR1-v1",
+  "recorded_at": "2026-08-29",
+  "status": "all_authorities_false_additive_successor_pending_exact_commit_remote_green",
+  "human_protocol": "docs/FRESH_MOTOR_SOURCE_RESEARCH_PREREGISTRATION_AMENDMENT_1.md",
+  "supersedes": {
+    "protocol_id": "FMSR1-v0",
+    "commit": "4cac22507fab376da3d76965339a40aabfd9c6a0",
+    "human_path": "docs/FRESH_MOTOR_SOURCE_RESEARCH_PREREGISTRATION.md",
+    "human_sha256": "d4e58fc8697612ce6717da03a29d1b7ae826710c836ce16b812ba478e6c923d8",
+    "machine_path": "registries/fresh_motor_source_research_contract.v0.json",
+    "machine_sha256": "c8b19b005c345092cacf45ad54f252638402aa9c44a0ab046fb1e0adb41533a4",
+    "accepted_as_scientific_registration": false,
+    "protected_operations": 0,
+    "reason": "pre_acceptance_review_found_joint_control_routing_authority_storage_and_status_blockers"
+  },
+  "proof_anchors": {
+    "NPA1_G_proof_closeout_commit": "2ec3d4b2b7b8c51f246e948ce9cbc9d667cecfb5",
+    "NPA1_G_CI_run_id": 33285776358,
+    "NPA1_G_base_python_job_id": 99188620896,
+    "NPA1_G_optional_neuro_readers_job_id": 99188621003,
+    "NPA1_G_both_required_jobs_green": true,
+    "predecessor_frontier_path": "registries/current_research_frontier.v9.json",
+    "predecessor_frontier_sha256": "ab6405dabbb759f23a3c79c945d24c2773b64159eaf8c08535651b086dd041c9",
+    "scientific_constitution_path": "docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md",
+    "scientific_constitution_sha256": "208c9038ee5f489b48ec714f316af315d1f97c75328408130d0ed6b84bc1b845"
+  },
+  "scientific_lane": {
+    "domain": "motor_task_EEG",
+    "question": "Does central EEG add unseen-person motor-task information beyond joint EOG, task-relevant EMG for every relevant effector, posterior EEG, cue and timing structure, relative to matched deranged central EEG?",
+    "minimum_complete_participants": 10,
+    "zero_calibration_participant_holds_required": true,
+    "communication_or_language_source_can_satisfy_lane": false,
+    "candidate_selected": null,
+    "active_Tier_C_lane": null
+  },
+  "frozen_discovery_universe": {
+    "official_indexes": [
+      {
+        "id": "OPENNEURO",
+        "surface": "OpenNeuro dataset search"
+      },
+      {
+        "id": "NEMAR",
+        "surface": "NEMAR dataset search"
+      },
+      {
+        "id": "PHYSIONET",
+        "surface": "PhysioNet data index"
+      },
+      {
+        "id": "GIGADB",
+        "surface": "GigaDB dataset search"
+      },
+      {
+        "id": "BNCI_HORIZON_2020",
+        "surface": "BNCI Horizon 2020 dataset catalogue"
+      }
+    ],
+    "exact_text_queries": [
+      "\"motor imagery\" EEG EOG EMG",
+      "\"movement intention\" EEG EOG EMG",
+      "\"motor execution\" EEG EOG EMG",
+      "\"hand movement\" EEG EOG EMG"
+    ],
+    "catalogue_without_text_search_rule": "traverse_complete_motor_EEG_category_or_DISCOVERY_CAP_PARK",
+    "all_returned_candidates_and_exclusions_recorded": true,
+    "general_search_engine_allowed": false,
+    "result_truncation_allowed": false,
+    "ad_hoc_candidate_addition_allowed": false,
+    "outcome_driven_query_change_allowed": false,
+    "cap_breach_route": "DISCOVERY_CAP_PARK",
+    "NO_QUALIFYING_SOURCE_scope": "only_the_complete_frozen_index_query_and_category_traversal_surface_at_packet_bound_revisions",
+    "NO_QUALIFYING_SOURCE_allowed_after_any_index_or_pagination_cap_park": false
+  },
+  "freshness": {
+    "participant_run_or_evaluation_overlap_allowed": false,
+    "excluded_consumed_source_ids": [
+      "BNCI-2014-001__NEMAR-nm000139",
+      "DREYER-DATASET-A__NEMAR-nm000250",
+      "OFNER-2017__NEMAR-nm000173",
+      "IACKD__OPENNEURO-ds006840",
+      "PHYSIONET-EEGMMIDB",
+      "SPANISHBCBL-S7-S20-S21-S24-S25"
+    ],
+    "consumed_payload_target_prediction_score_or_marker_reuse_allowed": false
+  },
+  "ordered_routing": {
+    "DISCOVERED_CANDIDATE": {
+      "condition": "returned_by_frozen_universe_and_query_grammar",
+      "eligible_for_candidate_specific_metadata_packet": false
+    },
+    "ELIGIBLE_FOR_METADATA_RESEARCH": {
+      "condition": "every_field_in_metadata_eligibility_predicate_is_explicitly_satisfied_by_allowlisted_index_level_fields",
+      "eligible_for_candidate_specific_metadata_packet": true,
+      "eligible_for_transport_canary_packet": false
+    },
+    "FULL_CONFIRMATION_SOURCE": {
+      "condition": "registered_candidate_specific_metadata_pass_verifies_every_hard_gate",
+      "eligible_for_transport_canary_packet": true,
+      "scientific_claim_created": false
+    },
+    "PARTIAL_CONTROL": {
+      "condition": "at_least_ten_participants_and_EEG_EOG_exist_but_EMG_or_another_attribution_gate_fails",
+      "eligible_for_flagship_promotion": false
+    },
+    "MECHANISTIC_BRIDGE": {
+      "condition": "rich_synchronized_controls_but_fewer_than_ten_complete_participants",
+      "eligible_for_flagship_promotion": false
+    },
+    "ENGINEERING_ONLY": {
+      "condition": "format_or_transport_value_without_scientific_control_completeness",
+      "eligible_for_flagship_promotion": false
+    },
+    "PARK": {
+      "condition": "identity_license_completeness_geometry_task_or_storage_unresolved_or_failed",
+      "eligible_for_flagship_promotion": false
+    },
+    "no_candidate_outcomes": [
+      "NO_QUALIFYING_SOURCE",
+      "DISCOVERY_CAP_PARK"
+    ],
+    "criteria_may_be_weakened_after_no_candidate": false
+  },
+  "candidate_canonicalization": {
+    "canonical_candidate_id_components_in_order": [
+      "official_index_id",
+      "immutable_source_identifier",
+      "immutable_release_identifier"
+    ],
+    "component_separator": "::",
+    "unicode_normalization": "NFKC",
+    "surrounding_ASCII_whitespace_trimmed": true,
+    "empty_or_missing_component_allowed": false,
+    "hits_with_same_canonical_candidate_id_merged": true,
+    "merged_query_and_index_evidence_sorted_lexicographically": true,
+    "cross_index_records_merged_without_explicit_shared_immutable_identity": false
+  },
+  "metadata_eligibility_predicate": {
+    "all_fields_required": [
+      "canonical_candidate_id_complete",
+      "source_not_in_excluded_consumed_source_ids",
+      "official_motor_task_description_present",
+      "raw_synchronized_EEG_explicit",
+      "recorded_EOG_explicit",
+      "task_relevant_EMG_for_every_named_effector_explicit",
+      "complete_participant_count_at_least_10",
+      "named_EEG_channels_and_geometry_availability_explicit",
+      "reference_sampling_event_and_target_semantics_availability_explicit",
+      "at_least_two_noncue_motor_classes_explicit",
+      "immutable_official_release_explicit",
+      "reusable_payload_license_identifier_explicit",
+      "complete_cohort_member_sizes_and_hashes_obtainable_without_payload_read",
+      "declared_complete_selected_payload_bytes_at_most_12884901888",
+      "documented_public_format_and_reader_explicit",
+      "complete_values_for_every_deterministic_sort_field"
+    ],
+    "unknown_missing_ambiguous_or_conflicting_value_is_false": true,
+    "query_term_match_alone_can_satisfy_sensor_or_task_field": false,
+    "primary_publication_without_official_index_binding_can_satisfy_predicate": false
+  },
+  "deterministic_candidate_selection": {
+    "selection_pool": "all_and_only_candidates_satisfying_metadata_eligibility_predicate_after_complete_frozen_surface_traversal",
+    "select_exactly_one_for_later_candidate_specific_metadata_packet": true,
+    "ordered_sort_keys": [
+      "complete_participant_count_descending",
+      "bilateral_EMG_coverage_boolean_descending",
+      "kinematic_coverage_boolean_descending",
+      "independent_laboratory_device_participant_component_count_descending",
+      "minimum_trials_per_participant_descending",
+      "storage_headroom_bytes_descending",
+      "canonical_candidate_id_codepoint_ascending"
+    ],
+    "missing_sort_value_allowed": false,
+    "final_tie_possible_after_canonical_candidate_id": false,
+    "model_target_participant_outcome_hidden_payload_download_convenience_or_positive_result_input_allowed": false,
+    "zero_eligible_candidate_outcome": "NO_QUALIFYING_SOURCE",
+    "incomplete_surface_outcome": "DISCOVERY_CAP_PARK"
+  },
+  "noncompensatory_hard_gates": {
+    "minimum_complete_participants": 10,
+    "raw_synchronized_EEG_required_for_every_selected_participant": true,
+    "recorded_EOG_required_for_every_selected_participant": true,
+    "task_relevant_EMG_required_for_every_selected_participant": true,
+    "task_relevant_EMG_required_for_every_relevant_effector": true,
+    "kinematics_can_replace_EMG_for_full_confirmation": false,
+    "named_EEG_channels_and_geometry_required": true,
+    "posterior_comparator_constructible_required": true,
+    "reference_sampling_event_grammar_and_decision_semantics_required": true,
+    "cue_identity_may_equal_target": false,
+    "minimum_identified_motor_classes": 2,
+    "immutable_official_release_required": true,
+    "reusable_payload_license_required": true,
+    "article_license_may_be_imputed_to_payload": false,
+    "target_free_complete_cohort_manifest_required": true,
+    "exact_member_sizes_and_hashes_required_before_semantic_payload_access": true,
+    "participant_dropping_for_storage_allowed": false,
+    "public_format_and_reader_documentation_required": true,
+    "weighted_score_may_rescue_failed_gate": false,
+    "unknown_counts_as_pass": false
+  },
+  "required_future_scientific_conditions": [
+    "no_signal",
+    "EOG_only",
+    "EMG_all_relevant_effectors_only",
+    "posterior_EEG",
+    "cue_only",
+    "timing_only",
+    "pre_cue_EEG",
+    "matched_deranged_central_EEG",
+    "joint_nuisance_only",
+    "joint_nuisance_plus_deranged_central_EEG",
+    "joint_nuisance_plus_central_EEG"
+  ],
+  "joint_comparator_contract": {
+    "joint_nuisance_components": [
+      "EOG",
+      "task_relevant_EMG_for_every_relevant_effector",
+      "posterior_EEG",
+      "cue",
+      "timing"
+    ],
+    "central_joint_and_deranged_joint_use_identical_source_only_calibration": true,
+    "central_joint_and_deranged_joint_use_identical_participant_first_scoring": true,
+    "separate_control_wins_can_replace_joint_comparator_wins": false
+  },
+  "storage_budget": {
+    "selected_source_payload_bytes": 12884901888,
+    "invocation_temporary_bytes": 2147483648,
+    "derivative_and_frozen_prediction_bytes": 2147483648,
+    "atomic_publication_overhead_bytes": 1073741824,
+    "untouched_safety_reserve_bytes": 3221225472,
+    "total_incremental_disk_cap_bytes": 21474836480,
+    "component_sum_must_equal_total": true,
+    "streaming_required_if_second_payload_copy_exceeds_atomic_allowance": true,
+    "participant_dropping_to_fit_budget_allowed": false
+  },
+  "future_discovery_packet_requirements": {
+    "separate_packet_decision_and_remote_proof_required": true,
+    "packet_must_bind_exact_endpoint_URL_revision_and_method_for_each_index": true,
+    "allowed_methods": [
+      "GET",
+      "POST"
+    ],
+    "official_index_domain_allowlist_must_be_exact": true,
+    "general_search_engine_or_provider_allowed": false,
+    "maximum_network_requests": 128,
+    "maximum_response_body_bytes_total": 33554432,
+    "maximum_retained_public_artifact_bytes": 8388608,
+    "maximum_runtime_seconds": 300,
+    "maximum_peak_RSS_bytes": 268435456,
+    "CPU_threads": 1,
+    "workers": 1,
+    "retry_count": 0,
+    "per_request_timeout_must_be_exact_and_at_most_seconds": 30,
+    "redirect_count_per_request_at_most": 3,
+    "redirect_every_hop_scheme_host_port_and_resolved_method_must_match_exact_allowlist_before_contact": true,
+    "redirect_method_rewrite_allowed": false,
+    "ordered_redirect_transcript_must_be_recorded": true,
+    "complete_pagination_required": true,
+    "pagination_cursor_or_page_identity_must_be_recorded": true,
+    "pagination_cycle_duplicate_page_or_truncation_route": "DISCOVERY_CAP_PARK",
+    "response_cap_breach_route": "DISCOVERY_CAP_PARK",
+    "partial_or_truncated_results_may_be_ranked_or_selected": false,
+    "candidate_canonicalization_must_equal_this_contract": true,
+    "deterministic_selection_must_equal_this_contract": true,
+    "retained_field_allowlist": [
+      "official_index_id",
+      "packet_bound_index_revision",
+      "query_or_category_id",
+      "pagination_identity",
+      "ordered_redirect_transcript",
+      "canonical_candidate_id",
+      "immutable_source_identifier",
+      "immutable_release_identifier",
+      "official_title",
+      "official_landing_URL",
+      "motor_task_description",
+      "declared_sensor_modalities_and_roles",
+      "declared_complete_participant_count",
+      "declared_named_channel_and_geometry_availability",
+      "declared_reference_sampling_event_and_target_semantics_availability",
+      "declared_motor_classes",
+      "payload_license_identifier",
+      "declared_member_manifest_availability",
+      "declared_complete_selected_payload_bytes",
+      "documented_format_and_reader",
+      "deterministic_sort_fields",
+      "route",
+      "exclusion_reason",
+      "source_field_provenance"
+    ],
+    "authentication_cookie_or_private_credential_allowed": false,
+    "payload_range_archive_member_header_signal_event_annotation_target_or_label_request_allowed": false,
+    "download_or_payload_URL_retention_allowed": false,
+    "failure_is_fail_closed_and_no_substitution_or_rerun": true
+  },
+  "operation_authority": {
+    "artifact_only_authorization_packet": false,
+    "public_source_discovery_network_research": false,
+    "source_specific_metadata_network_research": false,
+    "web_search_engine_or_provider": false,
+    "live_transport_canary": false,
+    "payload_or_header_access": false,
+    "signal_event_annotation_target_or_label_access": false,
+    "acquisition_cache_split_or_derivative_creation": false,
+    "model_checkpoint_training_inference_prediction_or_score": false,
+    "stream_device_or_hardware": false,
+    "touch_other_project": false,
+    "cleanup_delete_overwrite_rename_or_move": false,
+    "release_or_publish": false,
+    "scientific_claim_upgrade": false
+  },
+  "operation_counters": {
+    "network_requests": 0,
+    "network_bytes": 0,
+    "source_candidates_selected": 0,
+    "real_or_private_path_reads": 0,
+    "payload_or_header_reads": 0,
+    "signal_event_annotation_target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "scores": 0,
+    "incremental_disk_bytes": 0
+  },
+  "claim_boundary": {
+    "source_selected": false,
+    "real_EEG_accessed": false,
+    "neural_advantage_established": false,
+    "unseen_person_generalization_established": false,
+    "EEG_beyond_joint_nuisance_established": false,
+    "motor_cortex_or_movement_intention_established": false,
+    "thought_or_language_decoding_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_or_clinical_value_established": false
+  },
+  "conditional_next_gate_after_exact_remote_green": {
+    "action": "draft_one_all_false_authorization_packet_binding_every_future_discovery_packet_requirement_for_the_frozen_public_source_discovery_universe_and_exact_queries",
+    "describes_present_authority": false,
+    "network_request_authorized_now": false,
+    "real_data_transaction_authorized_now": false,
+    "scientific_claim_upgrade_allowed": false
+  }
+}

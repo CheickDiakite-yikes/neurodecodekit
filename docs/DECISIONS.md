@@ -14934,3 +14934,17 @@ green; only then may the single generated qualification run.
   every network, real-data, model, score, device, release, and claim authority
   false. After this exact registration is remotely green, only an artifact-
   only bounded public-metadata authorization packet may be prepared next.
+- 2026-08-29: Reject pushed `FMSR1-v0` as an unaccepted draft before its
+  registration proof and before any protected operation. Independent review
+  found no combined nuisance comparator, circular source-to-metadata routing,
+  contradictory current authority, incomplete 20 GiB arithmetic, and stale
+  current-facing Ofner language. Preserve v0 and frontier v9 as immutable
+  evidence of the correction; do not activate or reinterpret them.
+- 2026-08-29: Freeze additive all-false `FMSR1-v1` as the corrected source-
+  admission successor. Require five official indexes, four exact queries,
+  complete result accounting, ordered discovery then metadata then canary,
+  EMG for every relevant effector, joint nuisance-only and joint nuisance plus
+  deranged-central-EEG comparators, and exact 12+2+2+1+3 GiB storage
+  allocation. Select no source and keep every operation authority false. Only
+  after this exact successor is remotely green may an all-false artifact packet
+  for the frozen discovery queries be drafted.

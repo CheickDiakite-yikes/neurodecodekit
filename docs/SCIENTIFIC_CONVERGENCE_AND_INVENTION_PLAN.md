@@ -11,7 +11,7 @@ Machine knowledge source:
 [`scientific_knowledge_ledger.v0.json`](../registries/scientific_knowledge_ledger.v0.json)
 
 Current machine frontier:
-[`current_research_frontier.v9.json`](../registries/current_research_frontier.v9.json)
+[`current_research_frontier.v10.json`](../registries/current_research_frontier.v10.json)
 
 ## Current Addendum: Transport Admission Before Source Promotion
 
@@ -37,25 +37,25 @@ validator uncertainty but adds no biological evidence.
 Its proof closeout at exact commit `2ec3d4b` passed Base Python `99188620896`,
 Optional Neuro Readers `99188621003`, and CI `33285776358` on GitHub `main`.
 
-`FMSR1-v0` now preregisters the fresh-source rules for one motor-task lane. A
-full-confirmation source needs at least ten complete unseen participants,
-synchronized EEG/EOG/task-relevant EMG for everyone, named geometry, full cue,
-pre-cue, posterior, timing, and derangement controls, reusable licensing, and a
-16 GiB selected payload inside 20 GiB total incremental disk. Kinematics cannot
-replace EMG for a beyond-muscle claim. Partial-control and mechanistic sources
-may be documented but cannot be promoted, and `NO_QUALIFYING_SOURCE` is an
-acceptable result. Any source-specific metadata request or later 256-byte
-opaque canary remains separately governed; the canary is Tier C and has no
-scientific value by itself. No fresh source, network request, payload, model,
-score, or claim is activated here.
+The pushed `FMSR1-v0` draft was rejected before acceptance or protected work.
+Its additive `FMSR1-v1` successor prospectively freezes five official indexes, four exact
+queries, ordered discovery-to-metadata routing, at least ten complete unseen
+participants, synchronized EEG/EOG/EMG for every relevant effector, named
+geometry, and matched central, joint nuisance-only, and joint nuisance plus
+deranged-central-EEG arms. Its exact 20 GiB partition is 12+2+2+1+3 GiB for
+payload, temporary files, derivatives, atomic publication, and untouched
+reserve. `NO_QUALIFYING_SOURCE` is acceptable. Every current operation
+authority is false; the first conditional next step after exact remote proof is
+only an all-false artifact packet for the frozen discovery queries.
 
-## Current Addendum: Ofner Source Reselection
+## Historical Addendum: Ofner Source Reselection
 
 The Dreyer route described below is retained as the rationale and frozen
 failure history, but it is no longer the active prospective source. Its sole
 H-L2 attempt consumed at transport H0 before any EDF body or header read.
 
-The next prospective flagship is `OFNER-C6R-1`. Metadata-only research selected
+At that historical stage, the prospective flagship was `OFNER-C6R-1`.
+Metadata-only research selected
 the original NEMAR `nm000173` `v1.0.3` motor-imagery GDF surface: 15 people, 150
 files, 13,748,417,608 bytes, and reported 61 EEG, three EOG, 19 glove, and 13 arm
 channels at 512 Hz. The smaller BIDS derivative is rejected because its public
@@ -93,11 +93,12 @@ information beyond recorded peripheral physiology, posterior EEG, cue and
 timing structure, and matched derangement in completely unseen people. No
 dataset is currently promoted for that confirmation.
 
-Generated `NPA1-G` is closed. `FMSR1-v0` is the all-false source-admission
-registration pending this exact commit's remote proof. The earliest remaining
-checkpoint after that proof is one separately governed bounded public-metadata
-research pass. A future source must pass scientific eligibility and one separately governed
-opaque live transport canary before a semantic sensor-header check.
+Generated `NPA1-G` is closed. The v0 source-admission draft is unaccepted;
+`FMSR1-v1` is the all-false successor pending exact remote proof. The earliest
+remaining checkpoint after that proof is one separately governed pass over the
+frozen public discovery universe and exact query set. A future candidate must
+then pass separately governed target-free metadata verification and one opaque
+live transport canary before a semantic sensor-header check.
 Only after a green header may the scientific path proceed through bounded
 acquisition, target-blind semantics, prediction freeze, and one score.
 

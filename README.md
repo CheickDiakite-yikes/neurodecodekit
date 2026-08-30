@@ -81,17 +81,19 @@ The proof closeout itself is green at exact commit `2ec3d4b`, Base Python
 GitHub `main`.
 
 This closes a costly engineering uncertainty, not a scientific one. No fresh
-source has been promoted, and no EEG was accessed. The new all-false
-[`FMSR1-v0` source-admission registration](docs/FRESH_MOTOR_SOURCE_RESEARCH_PREREGISTRATION.md)
-freezes one motor-task question: at least ten complete unseen participants,
-synchronized EEG/EOG/task-relevant EMG, named geometry, full spatial and
-temporal controls, reusable licensing, and a 16 GiB selected-payload cap inside
-20 GiB total incremental disk. Kinematics may strengthen the evidence but
-cannot substitute for EMG in a beyond-muscle claim. Partial datasets cannot be
-promoted, and `NO_QUALIFYING_SOURCE` is a valid outcome. Source-specific
-metadata network access remains closed, and any real 256-byte canary is still
-Tier C. See the
-[current machine frontier](registries/current_research_frontier.v9.json).
+source has been promoted, and no EEG was accessed. Independent review rejected
+the pushed `FMSR1-v0` draft before acceptance or protected work. The additive
+[`FMSR1-v1` successor](docs/FRESH_MOTOR_SOURCE_RESEARCH_PREREGISTRATION_AMENDMENT_1.md)
+prospectively freezes five official source indexes, four exact queries, ordered
+discovery-to-metadata routing, at least ten complete unseen participants,
+synchronized EEG/EOG/EMG for every relevant effector, named geometry, and a
+decisive central-EEG comparison against both joint nuisance-only and joint
+nuisance plus deranged-central-EEG arms. Its exact 20 GiB partition is 12 GiB
+payload, 2 GiB temporary files, 2 GiB derivatives, 1 GiB atomic publication,
+and 3 GiB untouched reserve. `NO_QUALIFYING_SOURCE` remains valid. Every
+current operation authority is false; source discovery, metadata, any real
+canary, payload, model, and score remain separately gated. See the
+[current machine frontier](registries/current_research_frontier.v10.json).
 The predecessors `registries/current_research_frontier.v8.json`,
 `registries/current_research_frontier.v7.json`, and
 `registries/current_research_frontier.v6.json` remain immutable history.
@@ -106,7 +108,7 @@ This is engineering proof, not EEG evidence. Read the
 [generated qualification closeout](docs/OFNER_2017_MOTOR_IMAGERY_ACQUISITION_GENERATED_QUALIFICATION.md).
 That exact implementation and its proof are now green on GitHub `main`.
 
-The next generated milestone is remotely proven: a dependency-free GDF
+The historical Ofner generated milestone was remotely proven: a dependency-free GDF
 2.x header parser and two-range transport firewall passed two 24,832-byte
 header replays plus 41 adversarial refusals in 0.002138459 seconds at
 26,214,400-byte peak RSS. It recovered the frozen synthetic 61 EEG + 3 EOG +
@@ -115,9 +117,10 @@ no network client, real execution command, event parser, signal parser, model,
 or scorer. Read the
 [header preregistration](docs/OFNER_2017_MOTOR_IMAGERY_FIXED_HEADER_PREREGISTRATION.md)
 and [generated header result](docs/OFNER_2017_MOTOR_IMAGERY_FIXED_HEADER_GENERATED_QUALIFICATION.md).
-This is still engineering proof, not EEG evidence. The next real checkpoint is
-one separately governed range-only source-GDF header; bulk acquisition,
-signals, targets, models, and scores remain closed.
+This remains engineering proof, not EEG evidence. Its historical next
+checkpoint was one separately governed range-only source-GDF header; that
+checkpoint is consumed at transport H0, and bulk acquisition, signals, targets,
+models, and scores remain closed.
 
 The [`OFNER-C6R-1-HL` request](docs/OFNER_2017_MOTOR_IMAGERY_RANGE_HEADER_AUTHORIZATION_PACKET.md),
 decision, implementation, and activation all became exact-green before the
@@ -131,10 +134,10 @@ is artifact-only transport/source research, not another execution.
 
 The latest irreversible result is the consumed Ofner range-header transport H0.
 The latest reversible results are green generated-only `NPA1-G` transport
-admission and the all-false `FMSR1-v0` source-admission registration pending
-this exact commit's remote proof. The next eligible work after that proof is
-only an artifact-only bounded metadata-research authorization packet; no
-source-specific network or real operation is active.
+admission and all-false `FMSR1-v1`, pending its exact remote proof. The pushed
+v0 draft is retained as rejected history and authorized no protected work. The
+next conditional step after v1 is green is only an all-false artifact packet
+for the frozen discovery queries; no network or real operation is active.
 The following COMM-P0-G material is retained as exact
 adjacent-engineering history and is paused. Its proof architecture has a prospective, resource-aware
 successor: Amendment 3 replaces the second redundant full
@@ -681,9 +684,9 @@ score or claim upgrade occurred. Repeated convergence warnings at the frozen
 80-iteration cap were recorded without changing or rerunning the models.
 
 The machine-readable current state is
-[`registries/current_research_frontier.v9.json`](registries/current_research_frontier.v9.json).
-It freezes the consumed Ofner lane, green generated NPA1 proof, all-false
-`FMSR1-v0` source-admission registration, claim boundary, and exact next
+[`registries/current_research_frontier.v10.json`](registries/current_research_frontier.v10.json).
+It freezes the consumed Ofner lane, green generated NPA1 proof, rejected v0
+draft, all-false `FMSR1-v1` successor, claim boundary, and exact next
 transition so handoffs cannot silently return to an older gate.
 Prediction
 freeze `2517fd1` passed Base job `97996323987`, Optional job `97996324203`, and

@@ -67,17 +67,11 @@ class CurrentResearchFrontierV9Tests(unittest.TestCase):
             }:
                 self.assertFalse(value, key)
 
-    def test_current_control_plane_names_v9_and_FMSR1(self) -> None:
-        for relative in (
-            "AGENTS.md",
-            "README.md",
-            "START_HERE.md",
-            "docs/CODEX_HANDOFF.md",
-            "docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md",
-        ):
-            text = (ROOT / relative).read_text(encoding="utf-8")[:18_000]
-            self.assertIn("current_research_frontier.v9.json", text, relative)
-            self.assertIn("FMSR1-v0", text, relative)
+    def test_v9_is_preserved_as_the_unaccepted_predecessor(self) -> None:
+        successor = ROOT / "registries/current_research_frontier.v10.json"
+        self.assertTrue(successor.is_file())
+        self.assertIn("pending_remote_green", self.frontier["status"])
+        self.assertEqual(self.frontier["fresh_source_registration"]["protocol_id"], "FMSR1-v0")
 
 
 if __name__ == "__main__":

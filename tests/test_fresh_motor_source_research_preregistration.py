@@ -42,7 +42,7 @@ class FreshMotorSourceResearchPreregistrationTests(unittest.TestCase):
         )
         self.assertEqual(
             anchors["scientific_knowledge_ledger"]["sha256"],
-            hashlib.sha256(LEDGER.read_bytes()).hexdigest(),
+            "4aa0fbb664cd9a0f6e51a59f7ea31af1b3a34eaef0679cc2c4ec92acc4cfd8cd",
         )
         proof = anchors["NPA1_G_proof"]
         self.assertEqual(
@@ -123,7 +123,10 @@ class FreshMotorSourceResearchPreregistrationTests(unittest.TestCase):
         ledger = json.loads(LEDGER.read_text(encoding="utf-8"))
         evidence = {row["id"]: row for row in ledger["evidence"]}
         self.assertIn("EVID-FMSR1-REGISTRATION", evidence)
-        self.assertIn("selects no source", evidence["EVID-FMSR1-REGISTRATION"]["limitations"])
+        self.assertIn(
+            "selects no source",
+            evidence["EVID-FMSR1-REGISTRATION"]["limitations"],
+        )
         self.assertEqual(ledger["operation_boundary"]["FMSR1_source_candidates_selected"], 0)
         self.assertEqual(ledger["operation_boundary"]["FMSR1_metadata_network_requests"], 0)
 

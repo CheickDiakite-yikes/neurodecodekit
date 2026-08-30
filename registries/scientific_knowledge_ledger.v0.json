@@ -7,7 +7,7 @@
   "flagship": {
     "experiment_id": "EXP-NPA1-FRESH-MOTOR",
     "claim_id": "CLAIM-FRESH-NUISANCE-CONTROLLED-EEG",
-    "first_empirical_checkpoint": "After generated NPA1 qualification and fresh source research, one separately governed opaque 256-byte transport canary must pass before any semantic sensor header or scientific payload gate."
+    "first_empirical_checkpoint": "After exact-green FMSR1-v1, separately govern the frozen source-discovery queries, candidate-specific target-free metadata, and one opaque 256-byte transport canary before any semantic sensor header or scientific payload gate."
   },
   "claims": [
     {
@@ -200,13 +200,13 @@
     },
     {
       "id": "CLAIM-FRESH-NUISANCE-CONTROLLED-EEG",
-      "question": "Does central EEG add unseen-person motor-task information beyond recorded EOG, task-relevant EMG, posterior EEG, cue and timing structure, and matched derangement in a fresh cohort?",
+      "question": "Does central EEG add unseen-person motor-task information beyond joint recorded EOG, task-relevant EMG for every relevant effector, posterior EEG, cue and timing structure, relative to matched deranged central EEG in a fresh cohort?",
       "state": "BLOCKED_BY_DATA",
       "lane": "confirmation",
       "strongest_statement": "The prior BNCI result motivates a stricter fresh-cohort test, but no new source has yet passed both nuisance-control eligibility and live transport admission.",
       "coordinates": {
         "generalization": "at least ten completely unseen participants in a fresh cohort",
-        "attribution": "increment beyond recorded EOG and task-relevant EMG plus posterior timing and derangement controls; kinematics may strengthen but cannot replace EMG",
+        "attribution": "increment beyond the joint EOG, all-relevant-effector EMG, posterior EEG, cue and timing comparator and its matched deranged-central-EEG successor; kinematics may strengthen but cannot replace EMG",
         "temporal_regime": "source-causal event-locked offline confirmation before any live translation",
         "output_regime": "predeclared task condition with explicit cue and pre-cue controls",
         "calibration_regime": "zero held-out-person calibration with source-only probability calibration",
@@ -215,14 +215,15 @@
       "evidence_ids": [
         "EVID-BNCI-R2",
         "EVID-NPA1-POSTMORTEM",
-        "EVID-NPA1-G"
+        "EVID-NPA1-G",
+        "EVID-FMSR1-V1-REGISTRATION"
       ],
       "blockers": [
         "no fresh nuisance-complete source is selected",
-        "FMSR1-v0 is pending its exact registration commit and remote CI proof",
+        "FMSR1-v0 was not accepted after pre-proof review and FMSR1-v1 is pending exact remote proof",
         "no live transport canary is authorized"
       ],
-      "next_discriminator": "Make FMSR1-v0 remotely green, then separately govern bounded public metadata research and one later opaque transport canary before a sensor-header checkpoint.",
+      "next_discriminator": "Make FMSR1-v1 remotely green, then separately govern the frozen public source-discovery queries, candidate-specific metadata, and one later opaque transport canary before a sensor-header checkpoint.",
       "unsupported": "The green generated transport validator is not EEG evidence and establishes no neural advantage, motor-cortex origin, movement intention, language decoding, live operation, or clinical utility."
     },
     {
@@ -464,17 +465,31 @@
     {
       "id": "EVID-FMSR1-REGISTRATION",
       "lane": "confirmation",
-      "kind": "all-false fresh motor source-admission preregistration",
-      "summary": "FMSR1-v0 freezes a single motor-task lane, at least ten complete unseen participants, synchronized EEG/EOG/task-relevant EMG, named geometry, full controls, a 16 GiB selected-payload cap inside 20 GiB total incremental disk, deterministic nonpromotion routes, and a valid no-qualifying-source outcome.",
-      "limitations": "The registration selects no source, performs no network or real/private operation, and creates no biological evidence or scientific claim.",
-      "supports": [
-        "CLAIM-FRESH-NUISANCE-CONTROLLED-EEG"
-      ],
+      "kind": "unaccepted all-false fresh motor source-admission draft",
+      "summary": "FMSR1-v0 selected no source and performed no protected operation, but pre-acceptance review rejected its missing joint nuisance comparator, circular metadata route, contradictory authority state, incomplete storage arithmetic, and stale prospective status language.",
+      "limitations": "The draft selects no source, was pushed but not accepted as scientific registration, and was not used to authorize any operation; it creates no biological evidence or scientific claim.",
+      "supports": [],
       "contradicts": [],
       "paths": [
         "docs/FRESH_MOTOR_SOURCE_RESEARCH_PREREGISTRATION.md",
         "registries/fresh_motor_source_research_contract.v0.json",
         "registries/current_research_frontier.v9.json"
+      ]
+    },
+    {
+      "id": "EVID-FMSR1-V1-REGISTRATION",
+      "lane": "confirmation",
+      "kind": "all-false jointly controlled fresh motor source-admission successor",
+      "summary": "Pending exact remote proof, FMSR1-v1 prospectively freezes five official discovery indexes, four exact query strings, complete result accounting, deterministic candidate selection, ordered discovery-to-metadata-to-canary routing, joint nuisance and deranged-joint comparators, EMG for every relevant effector, and exact 12+2+2+1+3 GiB storage arithmetic.",
+      "limitations": "The successor selects no source, performs no network or real/private operation, and creates no biological evidence or scientific claim.",
+      "supports": [
+        "CLAIM-FRESH-NUISANCE-CONTROLLED-EEG"
+      ],
+      "contradicts": [],
+      "paths": [
+        "docs/FRESH_MOTOR_SOURCE_RESEARCH_PREREGISTRATION_AMENDMENT_1.md",
+        "registries/fresh_motor_source_research_contract.v1.json",
+        "registries/current_research_frontier.v10.json"
       ]
     },
     {
@@ -593,22 +608,28 @@
     },
     {
       "subject": "EVID-FMSR1-REGISTRATION",
+      "relation": "motivates",
+      "object": "EXP-NPA1-FRESH-MOTOR",
+      "rationale": "The rejected v0 draft exposed joint-control, routing, authority, storage, and current-status requirements that the additive v1 successor must resolve."
+    },
+    {
+      "subject": "EVID-FMSR1-V1-REGISTRATION",
       "relation": "narrows",
       "object": "EXP-NPA1-FRESH-MOTOR",
-      "rationale": "Only a fresh motor source with at least ten complete participants, synchronized EOG and task-relevant EMG, named geometry, complete controls, reusable licensing, and bounded storage may be promoted."
+      "rationale": "Only a fresh motor source found through the frozen discovery universe and verified through ordered metadata research, with joint nuisance controls and exact storage arithmetic, may reach a later transport canary."
     }
   ],
   "experiments": [
     {
       "id": "EXP-NPA1-FRESH-MOTOR",
       "lane": "confirmation",
-      "status": "FMSR1_all_false_registration_pending_exact_commit_remote_green",
-      "scientific_question": "Does central EEG add unseen-person motor-task information beyond recorded EOG, task-relevant EMG, posterior EEG, cue and timing structure, and matched derangement in a fresh cohort?",
-      "evidence_target": "A calibrated participant-consistent central-EEG increment over nuisance-only and matched-derangement comparators in at least ten completely held-out people.",
-      "earliest_checkpoint": "Preregister and execute bounded fresh-source research by first making FMSR1-v0 remotely green, then running one separately governed public-metadata pass, selecting one full-confirmation source, and passing one separately governed opaque 256-byte transport canary before any semantic header read.",
-      "stop_rule": "Do not promote a source that lacks at least ten complete participants, synchronized EOG and task-relevant EMG for every selected participant, named geometry, full cue/pre-cue/posterior/timing/derangement controls, a reusable license, a 16 GiB selected surface inside 20 GiB total incremental disk, or a remotely green transport witness.",
+      "status": "FMSR1_v1_all_false_successor_pending_exact_commit_remote_green",
+      "scientific_question": "Does central EEG add unseen-person motor-task information beyond joint recorded EOG, task-relevant EMG for every relevant effector, posterior EEG, cue and timing structure, relative to matched deranged central EEG in a fresh cohort?",
+      "evidence_target": "A calibrated participant-consistent central-EEG increment over joint nuisance-only and joint nuisance-plus-deranged-central-EEG comparators in at least ten completely held-out people.",
+      "earliest_checkpoint": "Preregister and execute bounded fresh-source research by first making FMSR1-v1 remotely green, then running the separately governed frozen public discovery queries, verifying one candidate through target-free metadata, and passing one separately governed opaque 256-byte transport canary before any semantic header read.",
+      "stop_rule": "Do not promote a source outside the frozen discovery universe or one that lacks at least ten complete participants, synchronized EOG and task-relevant EMG for every relevant effector, named geometry, joint cue/pre-cue/posterior/timing/derangement controls, a reusable license, exact 12+2+2+1+3 GiB storage fit, or a remotely green transport witness.",
       "deserves_resources_because": "It preserves the strongest unresolved EEG-beyond-peripheral question while preventing a third irreversible scientific checkpoint from being spent on unknown endpoint behavior.",
-      "authority": "Only an artifact-only all-false source-research authorization packet may follow after FMSR1-v0 is remotely green; no source-specific network, canary, payload, model, target, score, device, release, or claim authority exists.",
+      "authority": "All current operation authorities are false. Only after FMSR1-v1 is remotely green may an artifact-only authorization packet for the frozen public discovery queries be drafted; no network, canary, payload, model, target, score, device, release, or claim authority exists now.",
       "expected_information_gain": "High after source admission because the test directly separates a neural increment from eye, muscle or kinematic, posterior, cue, timing, and derangement alternatives.",
       "claim_ids": [
         "CLAIM-FRESH-NUISANCE-CONTROLLED-EEG"
@@ -619,7 +640,8 @@
         "EVID-OFNER-HL-H0",
         "EVID-NPA1-POSTMORTEM",
         "EVID-NPA1-G",
-        "EVID-FMSR1-REGISTRATION"
+        "EVID-FMSR1-REGISTRATION",
+        "EVID-FMSR1-V1-REGISTRATION"
       ]
     },
     {
@@ -800,6 +822,7 @@
     "public_Ofner_fixed_header_reads": 0,
     "generated_Ofner_header_qualification_runs": 1,
     "generated_NPA1_qualification_runs": 1,
+    "FMSR1_v0_accepted_registrations": 0,
     "FMSR1_source_candidates_selected": 0,
     "FMSR1_metadata_network_requests": 0,
     "NPA1_metadata_network_requests": 0,
