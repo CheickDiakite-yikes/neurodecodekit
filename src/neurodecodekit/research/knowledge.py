@@ -364,7 +364,8 @@ def build_research_update(value: Any) -> dict[str, str]:
         "uncertainty_remaining": claim["next_discriminator"],
         "next_decisive_experiment": experiment["earliest_checkpoint"],
         "infrastructure_created_and_why": (
-            "The source lock preserves immutable identity, nuisance measurements, storage "
-            "limits, and the claim ceiling before any payload is opened."
+            "The generated discovery engine tests source identity, complete traversal, "
+            "nuisance eligibility, storage limits, and claim boundaries while the live "
+            "gate remains parked before contact."
         ),
     }

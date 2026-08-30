@@ -66,10 +66,10 @@ its ignored marker or private paths.
 
 `OFNER-C6R-1` remains a scientifically useful but consumed predecessor, not the
 active flagship. Read the result and proof closeouts,
-`registries/current_research_frontier.v12.json`,
+`registries/current_research_frontier.v13.json`,
 `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`, and the knowledge ledger first.
-Its immutable predecessor is `registries/current_research_frontier.v11.json`.
-Its earlier immutable predecessor is
+Its immutable predecessor is `registries/current_research_frontier.v12.json`;
+the earlier immutable predecessors are `registries/current_research_frontier.v11.json` and
 `registries/current_research_frontier.v10.json`.
 Public metadata selected 15 participants / 150 original motor-imagery GDF
 files / 13,748,417,608 bytes and reported 61 EEG, three EOG, 19 glove, and 13
@@ -109,11 +109,22 @@ and untouched reserve. Proof-only closeout and all-false request
 `5c466efd6086db0acce6a57a9f32172c67e157f6`, Base Python `99204462828`,
 Optional Neuro Readers `99204462714`, and CI `33291744779` on GitHub `main`.
 The maintainer's exact packet-bound words are recorded in
-`FMSR1-DISCOVERY-M0-D0`, but that decision is ineffective until its own exact
-commit passes both remote jobs. Before then, implementation and generated
-qualification remain false. Network remains closed until the later exact
-implementation is also remotely green. Candidate-specific metadata, transport
-canary, header, payload, model, score, release, and claim work remain closed.
+`FMSR1-DISCOVERY-M0-D0`. Exact decision
+`b66a3a14c644e828eaffc5bd96a8251e6306d6e3` passed Base Python
+`99316322973`, Optional Neuro Readers `99316322922`, and CI `33333549395`
+on GitHub `main`. Generated-only `FMSR1-DISCOVERY-M0-G1` now passes two
+deterministic 17-root mock-HTTP replays and 25 adversarial refusal cases with
+zero network, payload, model, score, or claim operations. Read its
+implementation document and machine record. Independent review found that the
+packet did not bind actual official-index revisions and a tracked local record
+cannot authenticate GitHub by self-report. The implementation therefore has no
+real transport and its `execute` command refuses before DNS or HTTP. Commit,
+push, and both remote jobs remain pending for a proof-only closeout; a fresh
+additive correction and exact decision are required before public discovery.
+Candidate-specific metadata,
+transport canary, header, payload, model, score, release, and claim work remain
+closed. Do not treat generated source selection as a real candidate or neural
+evidence.
 Preserve `registries/current_research_frontier.v8.json`,
 `registries/current_research_frontier.v7.json`, and
 `registries/current_research_frontier.v6.json` as immutable history and require

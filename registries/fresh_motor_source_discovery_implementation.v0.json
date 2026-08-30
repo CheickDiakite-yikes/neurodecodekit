@@ -1,0 +1,231 @@
+{
+  "schema_name": "neurodecodekit.fresh_motor_source_discovery_implementation",
+  "schema_version": "0.1.0",
+  "recorded_at": "2026-08-30",
+  "implementation_id": "FMSR1-DISCOVERY-M0-G1",
+  "packet_id": "FMSR1-DISCOVERY-M0",
+  "decision_id": "FMSR1-DISCOVERY-M0-D0",
+  "status": "generated_implementation_and_qualification_complete_live_execution_parked_on_inexact_packet",
+  "human_record": "docs/FRESH_MOTOR_SOURCE_DISCOVERY_IMPLEMENTATION.md",
+  "implementation_commit_binding": "this_exact_commit_after_push_and_both_required_CI_jobs_green",
+  "green_decision_commit": "b66a3a14c644e828eaffc5bd96a8251e6306d6e3",
+  "green_decision_CI_run_id": 33333549395,
+  "green_decision_base_python_job_id": 99316322973,
+  "green_decision_optional_neuro_readers_job_id": 99316322922,
+  "registered_plan": {
+    "canonical_bytes": 7439,
+    "canonical_sha256": "9eb3d4a37b7314423c0c5f1b2eae465ae2d3874c26436c75a1df25aaef72cff6",
+    "root_request_count": 17,
+    "official_index_count": 5,
+    "exact_text_query_count": 4,
+    "complete_motor_EEG_category_roots": 1,
+    "exact_endpoint_path_method_host_and_query_key_profiles_bound": true,
+    "profile_revisions_are_implementation_profiles_not_packet_bound_official_revisions": true,
+    "all_five_packet_bound_official_revisions_present": false,
+    "live_execution_armable_under_current_packet": false,
+    "live_execution_blocker": "exact_official_index_revisions_not_packet_bound"
+  },
+  "endpoint_profiles": [
+    {
+      "index_id": "OPENNEURO",
+      "endpoint": "https://openneuro.org/crn/graphql",
+      "method": "POST",
+      "allowed_hosts": ["openneuro.org"],
+      "allowed_path": "/crn/graphql",
+      "allowed_query_keys": [],
+      "profile_revision": "openneuro_crn_graphql_public_profile_2026-08-30",
+      "packet_bound_official_revision": null
+    },
+    {
+      "index_id": "NEMAR",
+      "endpoint": "https://nemar.org/search",
+      "method": "GET",
+      "allowed_hosts": ["nemar.org", "www.nemar.org"],
+      "allowed_path": "/search",
+      "allowed_query_keys": ["cursor", "limit", "offset", "page", "q"],
+      "profile_revision": "nemar_public_search_profile_2026-08-30",
+      "packet_bound_official_revision": null
+    },
+    {
+      "index_id": "PHYSIONET",
+      "endpoint": "https://physionet.org/search/",
+      "method": "GET",
+      "allowed_hosts": ["physionet.org", "www.physionet.org"],
+      "allowed_path": "/search/",
+      "allowed_query_keys": ["cursor", "offset", "page", "q"],
+      "profile_revision": "physionet_public_search_profile_2026-08-30",
+      "packet_bound_official_revision": null
+    },
+    {
+      "index_id": "GIGADB",
+      "endpoint": "https://gigadb.org/search/new",
+      "method": "GET",
+      "allowed_hosts": ["gigadb.org", "www.gigadb.org"],
+      "allowed_path": "/search/new",
+      "allowed_query_keys": ["cursor", "keyword", "offset", "page"],
+      "profile_revision": "gigadb_public_search_profile_2026-08-30",
+      "packet_bound_official_revision": null
+    },
+    {
+      "index_id": "BNCI_HORIZON_2020",
+      "endpoint": "https://bnci-horizon-2020.eu/database/data-sets",
+      "method": "GET",
+      "allowed_hosts": ["bnci-horizon-2020.eu", "www.bnci-horizon-2020.eu"],
+      "allowed_path": "/database/data-sets",
+      "allowed_query_keys": ["cursor", "offset", "page"],
+      "profile_revision": "bnci_horizon_2020_dataset_catalogue_profile_2026-08-30",
+      "packet_bound_official_revision": null
+    }
+  ],
+  "capability_separation": {
+    "generated_transport_type_must_be_exact_FixtureOpener": true,
+    "generated_resolver_must_be_exact_mock_resolver": true,
+    "callable_page_reader_has_real_network_mode": false,
+    "live_transport_implemented": false,
+    "caller_supplied_real_network_boolean_exists": false,
+    "live_executor_accepts_injected_opener_or_resolver": false,
+    "execute_command_refuses_before_DNS_or_HTTP": true
+  },
+  "complete_or_park_contract": {
+    "complete_root_and_pagination_traversal_before_routing": true,
+    "unknown_schema_revision_or_pagination_state": "DISCOVERY_CAP_PARK",
+    "partial_results_ranked_or_selected": false,
+    "duplicate_request_page_identity_or_body_refused": true,
+    "redirect_or_pagination_endpoint_path_drift_refused": true,
+    "redirect_method_or_frozen_query_change_refused": true,
+    "redirect_and_error_bodies_count_toward_caps": true,
+    "unsupported_content_type_bodies_count_toward_caps": true,
+    "response_cap_plus_one_reads": true,
+    "whole_request_monotonic_deadline": true,
+    "only_global_non_multicast_nonreserved_resolution_allowed": true,
+    "payload_like_retained_fields_rejected_recursively": true,
+    "target_like_keys_NFKC_normalized_and_rejected": true,
+    "sole_allowed_target_semantics_field": "declared_reference_sampling_event_and_target_semantics_availability.targets_true",
+    "all_six_exact_contract_source_IDs_and_known_aliases_excluded": true,
+    "deterministic_sort_types_and_arithmetic_validated": true,
+    "every_retained_candidate_fact_requires_provenance": true
+  },
+  "resource_caps": {
+    "maximum_requests": 128,
+    "maximum_wire_body_bytes": 33554432,
+    "maximum_decoded_body_bytes": 33554432,
+    "maximum_page_bytes": 8388608,
+    "maximum_retained_report_bytes": 8388608,
+    "maximum_runtime_seconds_monotonic": 300,
+    "maximum_peak_RSS_bytes": 268435456,
+    "in_process_tests_cap_incremental_peak_RSS_above_entry": true,
+    "standalone_qualification_reports_absolute_process_peak_RSS": true,
+    "maximum_request_timeout_seconds": 30,
+    "maximum_redirects_per_request": 3,
+    "CPU_threads": 1,
+    "workers": 1,
+    "retries": 0,
+    "reruns": 0
+  },
+  "generated_qualification": {
+    "status": "passed_generated_only_two_replay_qualification",
+    "replay_count": 2,
+    "root_requests_per_replay": 17,
+    "mock_HTTP_calls": 34,
+    "deterministic_replay_digest": "7e22a12594b8c9229f0534ed045d3f470f46faca5b3d460a8a8b50297e23b18e",
+    "refusal_case_count": 25,
+    "all_refusal_cases_passed": true,
+    "runtime_seconds": 0.0161428339779377,
+    "peak_RSS_bytes": 52510720,
+    "retained_report_bytes": 4761,
+    "real_network_requests": 0,
+    "real_network_bytes": 0,
+    "payload_or_header_reads": 0,
+    "signal_event_annotation_target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "scores": 0,
+    "provider_calls": 0,
+    "stream_device_or_hardware_runs": 0,
+    "operations_on_other_projects": 0,
+    "cleanup_or_deletion_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "bound_artifacts": [
+    {
+      "path": "src/neurodecodekit/datasets/fresh_motor_source_discovery.py",
+      "bytes": 114568,
+      "sha256": "ce589b5bbfbb3816a74a0e6fb68ac51761bbdd63471648ad00dce8d59e08400a",
+      "git_blob": "b047cacc8fb2ac62e3d0bd6b3d4ffba8f2cde74f"
+    },
+    {
+      "path": "src/neurodecodekit/fmsr1_discovery_cli.py",
+      "bytes": 2808,
+      "sha256": "adba19196b9b0a5e790baf5f01a70e9e9d36181a76872f0ea940953171eb97df",
+      "git_blob": "3c50686c7b73d84dbdf1cfd230817ff811003337"
+    },
+    {
+      "path": "tests/test_fresh_motor_source_discovery.py",
+      "bytes": 22211,
+      "sha256": "5dbaeec45e157fe1166754542bc1e7049c7db19d31988de3835e72f39577a61f",
+      "git_blob": "fd238bafe2d5b29c9ef8d4d4244fe8f2fa0ce139"
+    },
+    {
+      "path": "tests/test_fresh_motor_source_discovery_implementation.py",
+      "bytes": 5083,
+      "sha256": "66c2c0e91b22639662bb259e454fa4ad22f31e2e586bb1220764645d0c51fd36",
+      "git_blob": "879247eebafcd13028b90f1c09019942ef2be13c"
+    },
+    {
+      "path": "docs/FRESH_MOTOR_SOURCE_DISCOVERY_IMPLEMENTATION.md",
+      "bytes": 7888,
+      "sha256": "f57dd06de4e09200a85bef903b0426df2def5ba99fdbe7e0bf9e6885b7353a16",
+      "git_blob": "54a413784bc7ea9db433a67c6b508acfa8311a48"
+    }
+  ],
+  "bound_artifact_summary": {
+    "count": 5,
+    "bytes": 152558
+  },
+  "live_execution_status": {
+    "armable_under_current_packet": false,
+    "exact_official_index_revisions_packet_bound": false,
+    "externally_authenticated_remote_CI_attestation_implemented": false,
+    "real_transport_capability_implemented": false,
+    "maximum_executions_completed": 0,
+    "public_metadata_requests": 0,
+    "correct_route": "PARK_BEFORE_CONTACT",
+    "fresh_additive_packet_and_decision_required": true,
+    "payload_model_score_or_claim_authority": false
+  },
+  "operation_authority_now": {
+    "generated_implementation": true,
+    "generated_qualification": true,
+    "public_metadata_network_execution": false,
+    "source_specific_metadata_or_publication_research": false,
+    "payload_or_header_access": false,
+    "signal_event_annotation_target_or_label_access": false,
+    "model_training_inference_prediction_or_score": false,
+    "provider_stream_device_or_hardware": false,
+    "release_or_claim_upgrade": false
+  },
+  "preexecution_authority_refusal": {
+    "route": "AUTHORITY_REFUSE",
+    "is_registered_discovery_outcome": false,
+    "can_select_or_rank_partial_candidates": false
+  },
+  "next_ordered_record": {
+    "kind": "proof_only_generated_implementation_closeout_after_exact_remote_green",
+    "creates_live_network_authority": false,
+    "required_before_any_later_corrective_packet": true
+  },
+  "claim_boundary": {
+    "scientific_claim_established": false,
+    "real_public_source_discovery_completed": false,
+    "source_selected": false,
+    "real_EEG_accessed": false,
+    "neural_advantage_established": false,
+    "unseen_person_generalization_established": false,
+    "EEG_beyond_joint_nuisance_established": false,
+    "movement_intention_or_motor_cortex_established": false,
+    "thought_or_language_decoding_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_or_clinical_value_established": false
+  }
+}

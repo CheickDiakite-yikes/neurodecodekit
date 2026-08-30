@@ -293,6 +293,51 @@ Every result must state where it sits on these dimensions.
 
 The scientific ledger should help choose the next experiment based on expected information gain, not merely preserve history.
 
+5.1 CANONICAL EVIDENCE GEOMETRY
+
+Use a three-dimensional attribution cube nested inside a five-dimensional
+scientific evidence map. Treat prospective operation as a separate sixth
+translation dimension.
+
+The attribution cube asks what produced the signal:
+
+1. Spatial: central EEG versus geometry-matched posterior or visual EEG.
+2. Temporal: the correct motor window versus pre-cue, cue, and
+   structure-preserving shifted windows.
+3. Physiological: real central EEG versus joint EOG, EMG, and metadata controls,
+   plus matched deranged central EEG.
+
+A neural-attribution result must occupy the correct corner: central location,
+correct motor timing, and predictive increment beyond every registered
+recorded-nuisance and matched-counterfactual control. Passing only a no-signal
+baseline is insufficient. For confirmation, use a participant-level
+intersection-union rule across the registered, capacity-matched cube edges so
+that strength on one comparison cannot average away failure on another.
+
+The outer evidence dimensions ask what the result means and how far it
+generalizes:
+
+4. Task identifiability and autonomy: externally instructed labels versus
+   genuinely self-chosen actions. The former identifies protocol-condition
+   decoding; only a target-identifiable, cue-resistant self-chosen design can
+   advance toward an intention claim.
+5. Population generalization: the same person versus untouched people versus
+   an independently recruited or independent-source replication cohort.
+
+The separate translation dimension asks whether the result works prospectively
+in time:
+
+6. Offline evaluation to causal replay to shadow stream to prospective live
+   decoding.
+
+Progress along dimension six cannot rescue a failed coordinate in dimensions
+one through five. Live motor success does not validate language decoding.
+Communication remains separately preregistered and must include an
+independently scored language-model-only baseline so autocomplete cannot be
+misattributed to neural evidence. This evidence geometry changes scientific
+interpretation and experiment priority; it does not itself grant data, model,
+scoring, release, or claim authority.
+
 6. THINK FROM THE GENERATIVE AND MEASUREMENT PROCESS
 
 Before inventing a model, reason about the full causal chain:

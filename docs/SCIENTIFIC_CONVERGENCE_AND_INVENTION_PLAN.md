@@ -11,7 +11,7 @@ Machine knowledge source:
 [`scientific_knowledge_ledger.v0.json`](../registries/scientific_knowledge_ledger.v0.json)
 
 Current machine frontier:
-[`current_research_frontier.v12.json`](../registries/current_research_frontier.v12.json)
+[`current_research_frontier.v13.json`](../registries/current_research_frontier.v13.json)
 
 Governing hard router:
 [`SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`](SCIENTIFIC_RESULT_HARD_DECISION_TREE.md)
@@ -58,10 +58,20 @@ reserve. `NO_QUALIFYING_SOURCE` is acceptable. Proof-only closeout and
 all-false request `FMSR1-DISCOVERY-M0` are exact-green at `5c466efd`, Base
 `99204462828`, Optional `99204462714`, and CI `33291744779`. Packet-bound
 decision `FMSR1-DISCOVERY-M0-D0` records the maintainer's exact words but is
-ineffective until its own exact commit passes both remote jobs. Network remains
-closed until the later generated implementation is also exact-green.
-The v11 predecessor described this as the pending-decision `FMSR1-DISCOVERY-M0`
-boundary; v12 advances only the decision record.
+exact-green at `b66a3a1`, Base `99316322973`, Optional `99316322922`, and CI
+`33333549395` on GitHub `main`. Generated-only implementation
+`FMSR1-DISCOVERY-M0-G1` now passes two deterministic 17-root mock-HTTP replays
+and 25 adversarial refusals with zero live network or protected operations.
+Independent review found that the packet froze parser profiles, not exact
+official-index revisions, and that a tracked JSON record could verify local
+identity but could not authenticate GitHub by self-report. The implementation
+therefore exposes no real transport and parks live execution before contact.
+The v11 predecessor described the pending packet, v12 recorded the decision,
+and v13 records the local generated implementation plus the fail-closed packet
+defect.
+
+Historical v11 status used the exact phrase pending-decision `FMSR1-DISCOVERY-M0`; it is retained only as an immutable routing marker and
+does not describe the current decision or live authority state.
 
 ## Historical Addendum: Ofner Source Reselection
 
@@ -128,12 +138,15 @@ intersection-union rule; success on one face cannot average away failure on
 another.
 
 Generated `NPA1-G` is closed. The v0 source-admission draft is unaccepted and
-`FMSR1-v1` is exact-green. The earliest remaining checkpoint is remote proof of
-the pending `FMSR1-DISCOVERY-M0-D0` decision, followed by an exact-green
-generated discovery implementation and only then one complete-or-park pass
-over the frozen public discovery universe and exact query set. A future candidate must
-then pass separately governed target-free metadata verification and one opaque
-live transport canary before a semantic sensor-header check.
+`FMSR1-v1` and `FMSR1-DISCOVERY-M0-D0` are exact-green. The generated
+discovery implementation is locally qualified but live execution is not
+armable under the current packet. The earliest remaining checkpoint is exact
+implementation CI followed by a proof-only closeout. Any later public discovery
+requires an additive all-false correction that prebinds an exact official-
+revision admission mechanism and externally authenticates CI, independent
+review, and a fresh exact decision. A future candidate must then pass separately
+governed target-free metadata verification and one opaque live transport canary
+before a semantic sensor-header check.
 Only after a green header may the scientific path proceed through bounded
 acquisition, target-blind semantics, prediction freeze, and one score.
 

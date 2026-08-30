@@ -32,7 +32,7 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
             "EXP-NPA1-FRESH-MOTOR",
         )
         self.assertIn(
-            "opaque 256-byte transport canary",
+            "externally authenticates CI",
             self.ledger["flagship"]["first_empirical_checkpoint"],
         )
 
@@ -82,6 +82,9 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
                 "generated_NPA1_qualification_runs",
                 "FMSR1_v1_accepted_registrations",
                 "FMSR1_discovery_request_artifacts",
+                "FMSR1_generated_discovery_qualification_runs",
+                "FMSR1_generated_mock_HTTP_calls",
+                "FMSR1_generated_refusal_cases",
             }:
                 self.assertEqual(value, 0, key)
 
@@ -108,10 +111,10 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
                 "infrastructure_created_and_why",
             },
         )
-        self.assertIn("Preregister and execute", update["next_decisive_experiment"])
-        self.assertIn("FMSR1-DISCOVERY-M0 requests", update["evidence_produced"])
+        self.assertIn("additive correction", update["next_decisive_experiment"])
+        self.assertIn("25 adversarial refusals", update["evidence_produced"])
         self.assertIn(
-            "128 requests, 32 MiB response",
+            "live execution is parked before contact",
             update["evidence_produced"],
         )
 

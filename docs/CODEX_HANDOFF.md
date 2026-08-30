@@ -1,11 +1,12 @@
 # Codex Handoff - NeuroDecodeKit
 
-> **Current scientific frontier, 2026-08-29:** read the Ofner result and proof
+> **Current scientific frontier, 2026-08-30:** read the Ofner result and proof
 > closeouts, the NPA1 implementation and proof closeout,
-> `registries/current_research_frontier.v12.json`,
+> `registries/current_research_frontier.v13.json`,
 > `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`, and the scientific knowledge
 > ledger first. Its immutable predecessor is
-> `registries/current_research_frontier.v11.json`. The earlier predecessor
+> `registries/current_research_frontier.v12.json`; earlier predecessors are
+> `registries/current_research_frontier.v11.json` and
 > `registries/current_research_frontier.v10.json`, predecessor
 > `registries/current_research_frontier.v8.json`, predecessor
 > `registries/current_research_frontier.v7.json` and historical
@@ -37,11 +38,17 @@
 > deranged-joint controls, and exact 12+2+2+1+3 GiB storage arithmetic. The
 > proof closeout and all-false `FMSR1-DISCOVERY-M0` request are exact-green at
 > `5c466efd`, Base `99204462828`, Optional `99204462714`, and CI
-> `33291744779`. Decision `FMSR1-DISCOVERY-M0-D0` records the maintainer's
-> exact packet-bound words but is ineffective until its own exact commit passes
-> both remote jobs. Implementation is false before that proof; network is false
-> until the exact implementation is separately green. All candidate-specific,
-> payload, model, score, release, and scientific authorities remain false.
+> `33291744779`. Decision `FMSR1-DISCOVERY-M0-D0` is exact-green at `b66a3a1`,
+> Base `99316322973`, Optional `99316322922`, and CI `33333549395`. Generated
+> implementation `FMSR1-DISCOVERY-M0-G1` locally passes two deterministic
+> 17-root mock-HTTP replays and 25 refusals with zero live network or protected
+> operations. Independent review found missing packet-bound official revisions
+> and a self-attested CI-proof weakness. The implementation now has no real
+> transport and parks before contact. Commit and push its exact artifact set,
+> wait for both jobs, and create only a proof closeout. A fresh additive
+> correction and exact decision are required before public discovery. All
+> candidate-specific, payload, model, score, release, and scientific authorities
+> remain false.
 > Preserve the unrelated tracker inspection file.
 
 > **Historical generated frontier, 2026-08-28:** read Amendment 3 and the FS3

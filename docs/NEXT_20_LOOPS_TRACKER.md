@@ -1,5 +1,22 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
+> **Current flagship route (2026-08-30):** the scientific router is a 3D
+> spatial-temporal-physiological attribution cube inside a 5D evidence map that
+> adds task autonomy and population generalization; offline, causal replay,
+> shadow, and prospective live operation form a separate sixth translation
+> dimension. Exact-green decision `FMSR1-DISCOVERY-M0-D0` authorizes the
+> ordered source-discovery work only. Generated implementation
+> `FMSR1-DISCOVERY-M0-G1` locally passes two deterministic 17-root mock-HTTP
+> replays and 25 adversarial refusals with zero real network or protected
+> operations. Review found no exact packet-bound official revisions and no
+> externally authenticated CI attestation, so live execution is parked before
+> contact and no real transport is exposed. Its exact commit and both remote CI
+> jobs are the next barriers for a proof-only closeout. Public discovery now
+> requires a fresh additive correction and exact decision. No source, EEG,
+> model, score, live result, or scientific claim has been created.
+> Read `registries/current_research_frontier.v13.json` and
+> `docs/FRESH_MOTOR_SOURCE_DISCOVERY_IMPLEMENTATION.md` first.
+
 > **COMM-P0-G FS3 prospective successor (2026-08-28):** exact Amendment 3
 > `b15d3cf` passed Base `98860211722`, Optional Neuro Readers `98860211949`,
 > and CI `33174711145`, then reached GitHub `main`. It preserves one complete

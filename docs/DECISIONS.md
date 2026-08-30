@@ -11,6 +11,20 @@ implementation, and the later implementation must become remotely green before
 the single metadata-only execution. Payload, signal, target, model, score,
 release, and claim authority remain false.
 
+Result update: decision `b66a3a1` passed Base Python `99316322973`, Optional
+Neuro Readers `99316322922`, and CI `33333549395` on GitHub `main`. Accept
+local generated implementation `FMSR1-DISCOVERY-M0-G1` for remote proof after
+two deterministic 17-root mock-HTTP replays and 25 adversarial refusals passed
+in 0.0161428339779377 seconds at 52,510,720-byte peak RSS. It made 34 mock
+calls and zero real network, payload, signal, target, model, score, provider,
+device, cleanup, or claim operations. Independent review found that the packet
+did not freeze actual official-index revisions and that a tracked local record
+cannot authenticate GitHub by self-report. Park live execution before contact,
+remove the real transport capability, and use exact implementation CI only for
+a proof-only closeout. A fresh additive correction and exact decision are
+required before public discovery. This generated result is engineering
+evidence only.
+
 Decision: adopt `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md` as the active
 router. A scientific pass requires conjunctive improvement over joint recorded
 controls and structure-preserving deranged EEG, participant-first inference,

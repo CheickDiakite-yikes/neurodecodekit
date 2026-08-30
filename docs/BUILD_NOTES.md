@@ -4,6 +4,33 @@ This file is the working journal for the build. It exists so later agents,
 engineers, and case-study readers can reconstruct not only what changed, but
 why the project moved in small loops.
 
+## 2026-08-30 - FMSR1 generated discovery implementation
+
+- Made the 3D attribution cube, outer 5D evidence map, and separate live
+  translation dimension canonical in the Constitution, hard decision tree,
+  convergence plan, machine frontier, ledger, and contributor-facing docs.
+  This is an interpretation and prioritization change only; it grants no
+  network, data, model, score, release, or claim authority.
+- Question: can the exact-green FMSR1 decision be implemented as a complete-
+  or-park metadata search without opening live network or scientific work?
+- Added a standard-library 17-root planner, strict response reader, exact
+  endpoint and pagination firewall, NFKC target/identity checks, deterministic
+  source router, fail-closed live barrier, CLI, and focused tests.
+- Two deterministic generated replays made 34 mock calls and matched digest
+  `7e22a12594b8c9229f0534ed045d3f470f46faca5b3d460a8a8b50297e23b18e`.
+  Twenty-five adversarial refusals passed in 0.0161428339779377 seconds at
+  52,510,720-byte peak RSS; the report was 4,761 bytes.
+- Real network, payload/header, signal/event/target, model/training/prediction/
+  score, provider/device, cleanup, and claim operations were all zero.
+- Independent review found missing exact official-revision bindings, a
+  self-attested CI-proof weakness, a low-level transport bypass, incomplete
+  consumed-source matching, HTML terminal ambiguity, and cap/network edge
+  cases. The bypass and edge cases are fixed; the packet defects force a park
+  before contact and the implementation now exposes no real transport.
+- The exact implementation commit and both remote CI jobs remain mandatory for
+  a proof-only closeout. A fresh additive correction and decision are required
+  before any metadata-only execution. No source or scientific result exists.
+
 ## Note-taking convention
 
 For each loop, record:

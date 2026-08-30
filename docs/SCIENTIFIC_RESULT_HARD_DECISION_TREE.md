@@ -191,7 +191,8 @@ excluded using their positive-control outcomes.
 
 ## Ordered Scientific Ladder
 
-1. **Source discovery:** exactly one complete-or-park FMSR1 pass.
+1. **Source discovery:** admit an exact, externally verifiable packet, then run
+   exactly one complete-or-park FMSR1 pass.
 2. **Transport admission:** candidate metadata, tiny opaque canary, then one
    fixed header before bulk scientific acquisition.
 3. **Measurement admission:** verify roles, geometry, synchronization, task
@@ -217,6 +218,7 @@ excluded using their positive-control outcomes.
 
 | Observation | Mandatory route |
 |---|---|
+| Exact official revisions or external green attestation are not prebound | Park before contact; repair the packet prospectively and require a fresh decision |
 | Complete search finds no qualifying source | Stop public-source hunting and preregister a motor-specific synchronized EEG/EOG/EMG prospective cohort |
 | Search is incomplete or hits a cap | `DISCOVERY_CAP_PARK`; do not infer that no source exists |
 | Transport or header admission fails | Engineering refusal; no biological interpretation and no payload escalation |
@@ -271,7 +273,11 @@ prospective registration and authority. This document grants none.
 
 ## Immediate Route
 
-`FMSR1-DISCOVERY-M0-D0` is the sole current decision. Only after that decision
-and its exact implementation are separately remotely green may one metadata-
-only discovery execution return one source, `NO_QUALIFYING_SOURCE`, or a park
-or refusal. No third path of indefinite dataset hunting is allowed.
+`FMSR1-DISCOVERY-M0-D0` is exact-green. Its generated-only implementation has
+passed local deterministic and adversarial qualification. Independent review
+found that actual official-index revisions were not packet-bound and that a
+tracked local record cannot authenticate GitHub by self-report. The current
+live route is therefore parked before contact and exposes no real transport.
+After the generated implementation is remotely green and closed out, only a
+fresh additive correction with independent review and a fresh exact decision
+may reopen one metadata-only pass. No third path of indefinite dataset hunting is allowed.

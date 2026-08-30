@@ -1,13 +1,13 @@
 {
   "schema_name": "neurodecodekit.scientific_knowledge_ledger",
   "schema_version": "0.1.0",
-  "recorded_at": "2026-08-29",
+  "recorded_at": "2026-08-30",
   "constitution": "docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md",
   "plan": "docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md",
   "flagship": {
     "experiment_id": "EXP-NPA1-FRESH-MOTOR",
     "claim_id": "CLAIM-FRESH-NUISANCE-CONTROLLED-EEG",
-    "first_empirical_checkpoint": "After the FMSR1-v1 proof and FMSR1-DISCOVERY-M0 request are exact-green, require fresh packet-bound words and a separate exact-green decision before one complete-or-park public discovery pass; candidate-specific metadata and one opaque 256-byte transport canary remain later gates."
+    "first_empirical_checkpoint": "Close out the generated FMSR1 discovery implementation after exact remote CI, then design and independently review an additive all-false correction that prebinds official-index revision admission and externally authenticates CI before any fresh decision can authorize one complete-or-park public discovery pass."
   },
   "claims": [
     {
@@ -217,14 +217,15 @@
         "EVID-NPA1-POSTMORTEM",
         "EVID-NPA1-G",
         "EVID-FMSR1-V1-REGISTRATION",
-        "EVID-FMSR1-V1-PROOF"
+        "EVID-FMSR1-V1-PROOF",
+        "EVID-FMSR1-DISCOVERY-G1"
       ],
       "blockers": [
         "no fresh nuisance-complete source is selected",
-        "FMSR1-DISCOVERY-M0 is an all-false request pending exact remote proof and a separate packet-bound decision",
+        "FMSR1-DISCOVERY-M0-G1 is generated-qualified but live execution is parked because exact official-index revisions and external CI authentication were not prebound",
         "no live transport canary is authorized"
       ],
-      "next_discriminator": "Make the FMSR1-v1 proof closeout and FMSR1-DISCOVERY-M0 request remotely green, then require fresh packet-bound maintainer words and a separate exact-green decision before one complete-or-park public discovery pass.",
+      "next_discriminator": "Make the exact generated implementation remotely green and close it out without live activation, then require an independently reviewed additive correction and fresh exact decision before one complete-or-park public discovery pass.",
       "unsupported": "The green generated transport validator is not EEG evidence and establishes no neural advantage, motor-cortex origin, movement intention, language decoding, live operation, or clinical utility."
     },
     {
@@ -521,6 +522,20 @@
       ]
     },
     {
+      "id": "EVID-FMSR1-DISCOVERY-G1",
+      "lane": "engineering",
+      "kind": "generated complete-or-park discovery qualification and pre-contact gate audit",
+      "summary": "Two deterministic 17-root mock-HTTP replays matched, 25 adversarial refusals passed, and all protected-operation counters remained zero; independent review also showed that the current packet did not bind exact official-index revisions and that a local tracked record cannot externally authenticate GitHub, so live execution is parked before contact.",
+      "limitations": "This is generated transport and routing engineering only. It selected no real source, made no public metadata request, accessed no EEG, and created no model, score, or scientific claim.",
+      "supports": [],
+      "contradicts": [],
+      "paths": [
+        "docs/FRESH_MOTOR_SOURCE_DISCOVERY_IMPLEMENTATION.md",
+        "registries/fresh_motor_source_discovery_implementation.v0.json",
+        "registries/current_research_frontier.v13.json"
+      ]
+    },
+    {
       "id": "EVID-COMM-DECISION",
       "lane": "discovery",
       "kind": "objective evidence and replication decision",
@@ -651,19 +666,25 @@
       "relation": "narrows",
       "object": "EXP-NPA1-FRESH-MOTOR",
       "rationale": "The all-false request fixes the only eligible next network surface and leaves all current authority false."
+    },
+    {
+      "subject": "EVID-FMSR1-DISCOVERY-G1",
+      "relation": "narrows",
+      "object": "EXP-NPA1-FRESH-MOTOR",
+      "rationale": "Generated qualification closes parser and routing uncertainty while the gate audit parks the inexact live packet before contact and identifies the exact correction required."
     }
   ],
   "experiments": [
     {
       "id": "EXP-NPA1-FRESH-MOTOR",
       "lane": "confirmation",
-      "status": "FMSR1_v1_exact_green_FMSR1_DISCOVERY_M0_all_false_request_pending_exact_commit_remote_green_and_separate_decision",
+      "status": "FMSR1_generated_discovery_qualified_live_packet_parked_before_contact",
       "scientific_question": "Does central EEG add unseen-person motor-task information beyond joint recorded EOG, task-relevant EMG for every relevant effector, posterior EEG, cue and timing structure, relative to matched deranged central EEG in a fresh cohort?",
       "evidence_target": "A calibrated participant-consistent central-EEG increment over joint nuisance-only and joint nuisance-plus-deranged-central-EEG comparators in at least ten completely held-out people.",
-      "earliest_checkpoint": "Preregister and execute bounded fresh-source research by first making the FMSR1-v1 proof and FMSR1-DISCOVERY-M0 request remotely green, then requiring fresh packet-bound words and a separate exact-green decision before one complete-or-park public discovery pass; candidate metadata and a 256-byte canary remain later gates.",
+      "earliest_checkpoint": "Make the exact generated discovery implementation remotely green and close it out without live activation, then design and independently review an additive correction that prebinds official-index revision admission and externally authenticates CI before fresh packet-bound words and a separate exact-green decision can authorize one complete-or-park public discovery pass.",
       "stop_rule": "Do not promote a source outside the frozen discovery universe or one that lacks at least ten complete participants, synchronized EOG and task-relevant EMG for every relevant effector, named geometry, joint cue/pre-cue/posterior/timing/derangement controls, a reusable license, exact 12+2+2+1+3 GiB storage fit, or a remotely green transport witness.",
       "deserves_resources_because": "It preserves the strongest unresolved EEG-beyond-peripheral question while preventing a third irreversible scientific checkpoint from being spent on unknown endpoint behavior.",
-      "authority": "All current operation authorities are false. FMSR1-DISCOVERY-M0 grants nothing; fresh packet-bound maintainer words and a separate remotely green decision are required before implementation or network access.",
+      "authority": "Generated implementation and qualification are complete locally. Public discovery, source-specific metadata, payload, model, score, release, and claim authority are false; the existing decision cannot arm live execution because the packet lacks exact official revisions and external CI authentication.",
       "expected_information_gain": "High after source admission because the test directly separates a neural increment from eye, muscle or kinematic, posterior, cue, timing, and derangement alternatives.",
       "claim_ids": [
         "CLAIM-FRESH-NUISANCE-CONTROLLED-EEG"
@@ -677,7 +698,8 @@
         "EVID-FMSR1-REGISTRATION",
         "EVID-FMSR1-V1-REGISTRATION",
         "EVID-FMSR1-V1-PROOF",
-        "EVID-FMSR1-DISCOVERY-REQUEST"
+        "EVID-FMSR1-DISCOVERY-REQUEST",
+        "EVID-FMSR1-DISCOVERY-G1"
       ]
     },
     {
@@ -861,6 +883,10 @@
     "FMSR1_v0_accepted_registrations": 0,
     "FMSR1_v1_accepted_registrations": 1,
     "FMSR1_discovery_request_artifacts": 1,
+    "FMSR1_generated_discovery_qualification_runs": 1,
+    "FMSR1_generated_mock_HTTP_calls": 34,
+    "FMSR1_generated_refusal_cases": 25,
+    "FMSR1_live_execution_armable": 0,
     "FMSR1_source_candidates_selected": 0,
     "FMSR1_metadata_network_requests": 0,
     "NPA1_metadata_network_requests": 0,

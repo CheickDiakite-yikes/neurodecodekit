@@ -1,0 +1,132 @@
+{
+  "schema_name": "neurodecodekit.current_research_frontier",
+  "schema_version": "0.14.0",
+  "recorded_at": "2026-08-30",
+  "supersedes": "registries/current_research_frontier.v12.json",
+  "superseded_registry_sha256": "8278d95ded1e78ec6b1078f0f71b334c075f2eab71c5ebf170be368a191f9dfb",
+  "status": "FMSR1_generated_discovery_implementation_qualified_locally_live_execution_parked_on_inexact_packet",
+  "active_lane_id": "FMSR1-DISCOVERY-M0",
+  "scientific_lane": "fresh_unseen_person_motor_task_EEG_beyond_joint_EOG_EMG_posterior_cue_timing_and_derangement",
+  "governing_hard_decision_tree": "docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md",
+  "scientific_evidence_architecture": {
+    "attribution_cube_dimensions_1_to_3": [
+      "spatial_central_EEG_vs_geometry_matched_posterior_visual_EEG",
+      "temporal_motor_window_vs_pre_cue_cue_and_structure_preserving_shifted_windows",
+      "physiological_real_central_EEG_vs_joint_recorded_controls_and_matched_derangement"
+    ],
+    "outer_evidence_dimensions_4_to_5": [
+      "task_identifiability_and_autonomy_instructed_vs_self_chosen",
+      "population_generalization_same_person_vs_untouched_people_vs_independent_replication"
+    ],
+    "translation_dimension_6": [
+      "offline_evaluation",
+      "causal_replay",
+      "shadow_stream",
+      "prospective_live"
+    ],
+    "dimensions_1_to_3_answer": "what_produced_the_signal",
+    "dimensions_4_to_5_answer": "what_the_result_means_and_how_far_it_generalizes",
+    "dimension_6_answers": "whether_it_works_prospectively_in_time",
+    "correct_attribution_corner_required": true,
+    "primary_cube_rule": "intersection_union_minimum_across_participant_macro_edges",
+    "posterior_EEG_is_neural_spatial_comparator_not_non_neural_nuisance": true,
+    "no_signal_win_alone_establishes_attribution": false,
+    "translation_can_rescue_failed_attribution_or_evidence_dimension": false,
+    "live_motor_success_validates_language_decoding": false,
+    "communication_requires_separate_preregistration_and_independent_LM_only_baseline": true
+  },
+  "current_evidence_coordinate": {
+    "dimension_1_spatial": "not_tested_on_a_fresh_admitted_source",
+    "dimension_2_temporal": "not_tested_on_a_fresh_admitted_source",
+    "dimension_3_physiological": "not_tested_on_a_fresh_admitted_source",
+    "dimension_4_task_autonomy": "source_not_selected",
+    "dimension_5_population_generalization": "source_not_selected",
+    "dimension_6_translation": "not_started",
+    "scientific_claim_upgrade": false
+  },
+  "green_decision": {
+    "decision_id": "FMSR1-DISCOVERY-M0-D0",
+    "commit": "b66a3a14c644e828eaffc5bd96a8251e6306d6e3",
+    "CI_run_id": 33333549395,
+    "base_python_job_id": 99316322973,
+    "optional_neuro_readers_job_id": 99316322922,
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true
+  },
+  "generated_implementation": {
+    "implementation_id": "FMSR1-DISCOVERY-M0-G1",
+    "human_path": "docs/FRESH_MOTOR_SOURCE_DISCOVERY_IMPLEMENTATION.md",
+    "machine_path": "registries/fresh_motor_source_discovery_implementation.v0.json",
+    "module_path": "src/neurodecodekit/datasets/fresh_motor_source_discovery.py",
+    "CLI_path": "src/neurodecodekit/fmsr1_discovery_cli.py",
+    "status": "local_generated_qualification_passed_live_execution_not_armable",
+    "root_requests_per_replay": 17,
+    "replay_count": 2,
+    "mock_HTTP_calls": 34,
+    "refusal_case_count": 25,
+    "deterministic_replay_digest": "7e22a12594b8c9229f0534ed045d3f470f46faca5b3d460a8a8b50297e23b18e",
+    "runtime_seconds": 0.0161428339779377,
+    "peak_RSS_bytes": 52510720,
+    "report_bytes": 4761,
+    "real_network_requests": 0,
+    "payload_or_header_reads": 0,
+    "model_training_prediction_or_score_operations": 0,
+    "scientific_value": false
+  },
+  "execution_barriers": {
+    "exact_implementation_commit_pushed_to_GitHub_main": false,
+    "base_python_job_green_for_exact_implementation_commit": false,
+    "optional_neuro_readers_job_green_for_exact_implementation_commit": false,
+    "proof_only_generated_implementation_closeout_exists": false,
+    "exact_official_index_revisions_packet_bound": false,
+    "externally_authenticated_remote_CI_attestation_implemented": false,
+    "real_transport_capability_implemented": false,
+    "live_execution_armable_under_current_packet": false,
+    "sole_metadata_execution_armed": false,
+    "metadata_execution_attempts": 0,
+    "fresh_corrective_packet_and_decision_required": true
+  },
+  "operation_authority_now": {
+    "generated_discovery_implementation": true,
+    "generated_discovery_qualification": true,
+    "public_source_discovery_network_research": false,
+    "source_specific_metadata_or_publication_research": false,
+    "general_search_engine_or_provider": false,
+    "live_transport_canary": false,
+    "real_payload_or_header_access": false,
+    "event_annotation_signal_target_or_label_access": false,
+    "candidate_selection_from_real_metadata": false,
+    "acquisition_or_derivative_creation": false,
+    "model_checkpoint_training_inference_prediction_or_score": false,
+    "language_model_or_provider": false,
+    "stream_device_or_hardware": false,
+    "touch_other_project": false,
+    "cleanup_or_delete": false,
+    "release_or_publish": false,
+    "scientific_claim_upgrade": false
+  },
+  "hard_scientific_route_after_source_admission": [
+    "within_person_positive_control",
+    "unseen_person_EEG_increment_over_joint_nuisance_and_derangement",
+    "fresh_independent_replication",
+    "causal_shadow_then_live_motor_decoding",
+    "separate_communication_language_program_with_independent_LM_prior"
+  ],
+  "claim_boundary": {
+    "source_selected": false,
+    "real_EEG_accessed": false,
+    "neural_advantage_established": false,
+    "unseen_person_generalization_established": false,
+    "EEG_beyond_joint_peripheral_and_task_controls_established": false,
+    "motor_cortex_or_movement_intention_established": false,
+    "thought_or_language_decoding_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_or_clinical_value_established": false
+  },
+  "next_gate": {
+    "action": "commit_push_and_green_both_jobs_then_close_out_generated_implementation_without_live_activation_and_design_a_fresh_all_false_revision_admission_and_remote_attestation_correction",
+    "network_request_authorized_now": false,
+    "real_data_transaction_authorized": false,
+    "scientific_claim_upgrade_allowed": false
+  }
+}
