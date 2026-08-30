@@ -1,5 +1,35 @@
 # Architecture Decision Log
 
+## 2026-08-30 - Bind FMSR1 discovery and the hard scientific router
+
+Decision: preserve the maintainer's exact words in
+`FMSR1-DISCOVERY-M0-D0` and bind them only to exact-green packet
+`FMSR1-DISCOVERY-M0` at `5c466efd`, CI `33291744779`.
+
+Decision: this decision must become remotely green before generated
+implementation, and the later implementation must become remotely green before
+the single metadata-only execution. Payload, signal, target, model, score,
+release, and claim authority remain false.
+
+Decision: adopt `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md` as the active
+router. A scientific pass requires conjunctive improvement over joint recorded
+controls and structure-preserving deranged EEG, participant-first inference,
+spatial and temporal specificity, untouched confirmation, and independent
+replication before live translation.
+
+Decision: represent spatial, temporal, and physiological attribution as a 3D
+cube nested inside a 5D evidence map that adds task autonomy and population
+generalization. Treat offline, causal replay, shadow, and live operation as a
+separate sixth translation dimension that cannot rescue failed attribution.
+Keep posterior EEG as a neural spatial comparator outside the joint
+EOG/EMG/metadata nuisance bundle, and require a participant-level
+intersection-union pass across every spatial, temporal, and physiological
+edge. Live motor success does not validate language decoding.
+
+Decision: if a complete public-source search returns
+`NO_QUALIFYING_SOURCE`, stop dataset hopping and design a motor-specific,
+self-chosen, synchronized EEG/EOG/EMG/kinematics prospective cohort.
+
 ## 0001 — Build an access layer before a model layer
 
 Decision: start with manifesting, selective download, tiny shards, and honest baselines.

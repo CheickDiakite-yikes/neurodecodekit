@@ -2,9 +2,11 @@
 
 > **Current scientific frontier, 2026-08-29:** read the Ofner result and proof
 > closeouts, the NPA1 implementation and proof closeout,
-> `registries/current_research_frontier.v11.json`, and the scientific knowledge
+> `registries/current_research_frontier.v12.json`,
+> `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`, and the scientific knowledge
 > ledger first. Its immutable predecessor is
-> `registries/current_research_frontier.v10.json`. The earlier predecessor
+> `registries/current_research_frontier.v11.json`. The earlier predecessor
+> `registries/current_research_frontier.v10.json`, predecessor
 > `registries/current_research_frontier.v8.json`, predecessor
 > `registries/current_research_frontier.v7.json` and historical
 > `registries/current_research_frontier.v6.json` remain immutable. The
@@ -19,8 +21,8 @@
 > payload. This is a consumed transport refusal, not a biological null. Never
 > retry, rerun, repair, resume, substitute, reinterpret, or inspect the ignored
 > marker. Proof closeout `750adc3` passed Base `99174411928`, Optional
-> `99174412006`, and CI `33280371097` on GitHub `main`. No Tier C packet is
-> active. Generated-only `NPA1-G` is exact-green at `2e164ff`, Base
+> `99174412006`, and CI `33280371097` on GitHub `main`. Generated-only
+> `NPA1-G` is exact-green at `2e164ff`, Base
 > `99184746988`, Optional `99184747065`, and CI `33284320443`. It passed two
 > matching seven-profile replays and 37 exact refusal families in
 > 0.003375791013240814 seconds at 22,577,152-byte peak RSS, with zero network
@@ -33,10 +35,13 @@
 > queries, ordered discovery-to-metadata routing, at least ten complete
 > participants, EEG/EOG/EMG for every relevant effector, joint nuisance and
 > deranged-joint controls, and exact 12+2+2+1+3 GiB storage arithmetic. The
-> proof closeout and all-false `FMSR1-DISCOVERY-M0` request are pending this
-> exact closeout/request commit's remote proof. The request grants nothing; fresh packet-bound
-> maintainer words and a separate exact-green decision are required before
-> implementation or network. All real and scientific authorities remain false.
+> proof closeout and all-false `FMSR1-DISCOVERY-M0` request are exact-green at
+> `5c466efd`, Base `99204462828`, Optional `99204462714`, and CI
+> `33291744779`. Decision `FMSR1-DISCOVERY-M0-D0` records the maintainer's
+> exact packet-bound words but is ineffective until its own exact commit passes
+> both remote jobs. Implementation is false before that proof; network is false
+> until the exact implementation is separately green. All candidate-specific,
+> payload, model, score, release, and scientific authorities remain false.
 > Preserve the unrelated tracker inspection file.
 
 > **Historical generated frontier, 2026-08-28:** read Amendment 3 and the FS3

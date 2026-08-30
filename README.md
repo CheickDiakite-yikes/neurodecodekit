@@ -93,15 +93,29 @@ decisive central-EEG comparison against both joint nuisance-only and joint
 nuisance plus deranged-central-EEG arms. Its exact 20 GiB partition is 12 GiB
 payload, 2 GiB temporary files, 2 GiB derivatives, 1 GiB atomic publication,
 and 3 GiB untouched reserve. `NO_QUALIFYING_SOURCE` remains valid. Every
-current operation authority is false. The proof-only closeout and all-false
+current operation authority was false. The proof-only closeout and all-false
 [`FMSR1-DISCOVERY-M0` request](docs/FRESH_MOTOR_SOURCE_DISCOVERY_AUTHORIZATION_PACKET.md)
-are pending this exact closeout/request commit's remote proof. The request grants
-nothing; the registration is green, but this closeout/request is ineffective
-until its own exact commit passes both remote jobs. Fresh packet-bound maintainer
-words and a separate exact-green
-decision are required before implementation or network access. See the
-[current machine frontier](registries/current_research_frontier.v11.json).
-Its immutable predecessor is `registries/current_research_frontier.v10.json`.
+are exact-green at `5c466efd`, Base Python `99204462828`, Optional Neuro
+Readers `99204462714`, and CI `33291744779`. The maintainer's exact words are
+recorded in the packet-bound
+[decision](docs/FRESH_MOTOR_SOURCE_DISCOVERY_AUTHORIZATION_DECISION.md), which
+is ineffective until its own exact commit passes both remote jobs. Network
+remains closed until the later generated implementation is also exact-green.
+The [hard scientific decision tree](docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md)
+then routes one admitted source through sensitivity, confirmation,
+independent replication, and only afterward causal/live translation. Its core
+is a 3D spatial-temporal-physiological attribution cube inside a 5D evidence
+map that adds task autonomy and population generalization; offline-to-live
+operation is a separate sixth translation dimension. Live motor success does
+not inherit a language claim. Communication retains its own preregistration
+and independently scored LLM-only baseline. Within the cube, posterior EEG is
+a neural spatial comparator, not part of the EOG/EMG/metadata nuisance bundle;
+the central motor-window condition must win every registered spatial,
+temporal, and physiological edge rather than merely average well. See the
+[current machine frontier](registries/current_research_frontier.v12.json).
+Its immutable predecessor is `registries/current_research_frontier.v11.json`.
+Its earlier immutable predecessor is
+`registries/current_research_frontier.v10.json`.
 The earlier predecessors `registries/current_research_frontier.v8.json`,
 `registries/current_research_frontier.v7.json`, and
 `registries/current_research_frontier.v6.json` remain immutable history.
@@ -692,7 +706,7 @@ score or claim upgrade occurred. Repeated convergence warnings at the frozen
 80-iteration cap were recorded without changing or rerunning the models.
 
 The machine-readable current state is
-[`registries/current_research_frontier.v11.json`](registries/current_research_frontier.v11.json).
+[`registries/current_research_frontier.v12.json`](registries/current_research_frontier.v12.json).
 It freezes the consumed Ofner lane, green generated NPA1 proof, rejected v0
 draft, exact-green `FMSR1-v1`, all-false `FMSR1-DISCOVERY-M0` request, claim boundary, and exact next
 transition so handoffs cannot silently return to an older gate.

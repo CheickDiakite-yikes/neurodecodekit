@@ -66,8 +66,11 @@ its ignored marker or private paths.
 
 `OFNER-C6R-1` remains a scientifically useful but consumed predecessor, not the
 active flagship. Read the result and proof closeouts,
-`registries/current_research_frontier.v11.json`, and the knowledge ledger first.
-Its immutable predecessor is `registries/current_research_frontier.v10.json`.
+`registries/current_research_frontier.v12.json`,
+`docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`, and the knowledge ledger first.
+Its immutable predecessor is `registries/current_research_frontier.v11.json`.
+Its earlier immutable predecessor is
+`registries/current_research_frontier.v10.json`.
 Public metadata selected 15 participants / 150 original motor-imagery GDF
 files / 13,748,417,608 bytes and reported 61 EEG, three EOG, 19 glove, and 13
 arm channels at 512 Hz. The sole `OFNER-C6R-1-HL-R0` invocation completed the
@@ -78,7 +81,7 @@ bytes, zero header, event, annotation, signal, target, model, prediction, or
 score operations, 1.1932796670589596 seconds runtime, 48,021,504-byte peak
 RSS, and zero retained payload. This is a consumed transport result, not a
 biological null. Never retry, rerun, repair, resume, substitute, reinterpret,
-or reopen the ignored marker. No Tier C packet is active. Generated-only
+or reopen the ignored marker. Generated-only
 `NPA1-G` is now exact-green at
 `2e164fffb00e5db79a6c6d810eabbcc2d447c5a1`, Base Python
 `99184746988`, Optional Neuro Readers `99184747065`, and CI `33284320443` on
@@ -102,11 +105,15 @@ central EEG compared against both joint nuisance-only and joint nuisance plus
 deranged-central-EEG arms. Its 20 GiB ceiling is exactly partitioned as
 12+2+2+1+3 GiB for payload, temporary files, derivatives, atomic publication,
 and untouched reserve. Proof-only closeout and all-false request
-`FMSR1-DISCOVERY-M0` are pending this exact closeout/request commit's remote proof.
-The request grants nothing. After it is green, fresh packet-bound maintainer
-words and a separate exact-green decision are required before implementation
-or one bounded discovery pass. Network, candidate metadata, transport canary,
-header, payload, model, and score work remain closed now.
+`FMSR1-DISCOVERY-M0` are exact-green at
+`5c466efd6086db0acce6a57a9f32172c67e157f6`, Base Python `99204462828`,
+Optional Neuro Readers `99204462714`, and CI `33291744779` on GitHub `main`.
+The maintainer's exact packet-bound words are recorded in
+`FMSR1-DISCOVERY-M0-D0`, but that decision is ineffective until its own exact
+commit passes both remote jobs. Before then, implementation and generated
+qualification remain false. Network remains closed until the later exact
+implementation is also remotely green. Candidate-specific metadata, transport
+canary, header, payload, model, score, release, and claim work remain closed.
 Preserve `registries/current_research_frontier.v8.json`,
 `registries/current_research_frontier.v7.json`, and
 `registries/current_research_frontier.v6.json` as immutable history and require

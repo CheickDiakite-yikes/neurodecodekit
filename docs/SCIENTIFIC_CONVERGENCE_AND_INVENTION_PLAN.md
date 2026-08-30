@@ -1,6 +1,6 @@
 # Scientific Convergence And Invention Plan
 
-Date: 2026-08-29
+Date: 2026-08-30
 
 Status: active strategic plan; Tier A analysis only; no new data authority
 
@@ -11,9 +11,15 @@ Machine knowledge source:
 [`scientific_knowledge_ledger.v0.json`](../registries/scientific_knowledge_ledger.v0.json)
 
 Current machine frontier:
-[`current_research_frontier.v11.json`](../registries/current_research_frontier.v11.json)
+[`current_research_frontier.v12.json`](../registries/current_research_frontier.v12.json)
+
+Governing hard router:
+[`SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`](SCIENTIFIC_RESULT_HARD_DECISION_TREE.md)
 
 Immutable predecessor:
+[`current_research_frontier.v11.json`](../registries/current_research_frontier.v11.json)
+
+Earlier immutable predecessor:
 [`current_research_frontier.v10.json`](../registries/current_research_frontier.v10.json)
 
 ## Current Addendum: Transport Admission Before Source Promotion
@@ -48,11 +54,14 @@ participants, synchronized EEG/EOG/EMG for every relevant effector, named
 geometry, and matched central, joint nuisance-only, and joint nuisance plus
 deranged-central-EEG arms. Its exact 20 GiB partition is 12+2+2+1+3 GiB for
 payload, temporary files, derivatives, atomic publication, and untouched
-reserve. `NO_QUALIFYING_SOURCE` is acceptable. Every current operation
-authority is false. Proof-only closeout and all-false request
-`FMSR1-DISCOVERY-M0` are pending this exact closeout/request commit's remote proof.
-That request grants nothing and requires fresh packet-bound maintainer words
-plus a separate exact-green decision before implementation or network.
+reserve. `NO_QUALIFYING_SOURCE` is acceptable. Proof-only closeout and
+all-false request `FMSR1-DISCOVERY-M0` are exact-green at `5c466efd`, Base
+`99204462828`, Optional `99204462714`, and CI `33291744779`. Packet-bound
+decision `FMSR1-DISCOVERY-M0-D0` records the maintainer's exact words but is
+ineffective until its own exact commit passes both remote jobs. Network remains
+closed until the later generated implementation is also exact-green.
+The v11 predecessor described this as the pending-decision `FMSR1-DISCOVERY-M0`
+boundary; v12 advances only the decision record.
 
 ## Historical Addendum: Ofner Source Reselection
 
@@ -99,10 +108,30 @@ information beyond recorded peripheral physiology, posterior EEG, cue and
 timing structure, and matched derangement in completely unseen people. No
 dataset is currently promoted for that confirmation.
 
+The governing architecture is a 3D attribution cube nested inside a 5D
+scientific evidence map. Spatial, temporal, and physiological dimensions ask
+what produced the signal. Task autonomy and population generalization ask what
+the result means and how far it travels. A separate sixth translation
+dimension orders offline evaluation, causal replay, shadow streaming, and
+prospective live operation. Translation cannot rescue failed attribution,
+identifiability, or generalization. Live motor success cannot validate
+language decoding; communication remains separately preregistered with an
+independently scored LLM-only baseline.
+
+Within the attribution cube, posterior EEG remains a neural spatial comparator
+rather than part of the non-neural nuisance bundle. A future source-specific
+confirmation must require the central motor-window condition to beat each
+capacity-matched alternative separately: joint EOG/EMG/metadata, deranged
+central EEG, posterior EEG, pre-cue EEG, cue-window EEG, and
+structure-preserving shifted EEG. The primary router uses a participant-level
+intersection-union rule; success on one face cannot average away failure on
+another.
+
 Generated `NPA1-G` is closed. The v0 source-admission draft is unaccepted and
-`FMSR1-v1` is exact-green. The earliest remaining checkpoint is the separately
-governed, pending-decision `FMSR1-DISCOVERY-M0` complete-or-park pass over the frozen public
-discovery universe and exact query set. A future candidate must
+`FMSR1-v1` is exact-green. The earliest remaining checkpoint is remote proof of
+the pending `FMSR1-DISCOVERY-M0-D0` decision, followed by an exact-green
+generated discovery implementation and only then one complete-or-park pass
+over the frozen public discovery universe and exact query set. A future candidate must
 then pass separately governed target-free metadata verification and one opaque
 live transport canary before a semantic sensor-header check.
 Only after a green header may the scientific path proceed through bounded
