@@ -1,0 +1,151 @@
+{
+  "schema_name": "neurodecodekit.fresh_motor_source_discovery_implementation_proof",
+  "schema_version": "0.1.0",
+  "recorded_at": "2026-08-30",
+  "protocol_id": "FMSR1-DISCOVERY-M0-G1",
+  "packet_id": "FMSR1-DISCOVERY-M0",
+  "decision_id": "FMSR1-DISCOVERY-M0-D0",
+  "status": "proof_only_closeout_pending_exact_commit_remote_green",
+  "human_record": "docs/FRESH_MOTOR_SOURCE_DISCOVERY_IMPLEMENTATION_PROOF_CLOSEOUT.md",
+  "green_implementation_commit": {
+    "commit": "e92e9c21a044b05a187a04812f21e7e7bd5a76b6",
+    "CI_run_id": 33337741165,
+    "base_python_job_id": 99327605264,
+    "base_python_duration": "6m59s",
+    "optional_neuro_readers_job_id": 99327605346,
+    "optional_neuro_readers_duration": "11m37s",
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true
+  },
+  "bound_implementation_and_result_artifacts": [
+    {
+      "path": "src/neurodecodekit/datasets/fresh_motor_source_discovery.py",
+      "bytes": 114568,
+      "sha256": "ce589b5bbfbb3816a74a0e6fb68ac51761bbdd63471648ad00dce8d59e08400a",
+      "git_blob": "b047cacc8fb2ac62e3d0bd6b3d4ffba8f2cde74f"
+    },
+    {
+      "path": "src/neurodecodekit/fmsr1_discovery_cli.py",
+      "bytes": 2808,
+      "sha256": "adba19196b9b0a5e790baf5f01a70e9e9d36181a76872f0ea940953171eb97df",
+      "git_blob": "3c50686c7b73d84dbdf1cfd230817ff811003337"
+    },
+    {
+      "path": "tests/test_fresh_motor_source_discovery.py",
+      "bytes": 22211,
+      "sha256": "5dbaeec45e157fe1166754542bc1e7049c7db19d31988de3835e72f39577a61f",
+      "git_blob": "fd238bafe2d5b29c9ef8d4d4244fe8f2fa0ce139"
+    },
+    {
+      "path": "tests/test_fresh_motor_source_discovery_implementation.py",
+      "bytes": 5083,
+      "sha256": "66c2c0e91b22639662bb259e454fa4ad22f31e2e586bb1220764645d0c51fd36",
+      "git_blob": "879247eebafcd13028b90f1c09019942ef2be13c"
+    },
+    {
+      "path": "docs/FRESH_MOTOR_SOURCE_DISCOVERY_IMPLEMENTATION.md",
+      "bytes": 7888,
+      "sha256": "f57dd06de4e09200a85bef903b0426df2def5ba99fdbe7e0bf9e6885b7353a16",
+      "git_blob": "54a413784bc7ea9db433a67c6b508acfa8311a48"
+    },
+    {
+      "path": "registries/fresh_motor_source_discovery_implementation.v0.json",
+      "bytes": 9737,
+      "sha256": "d50e5f5fc2f24c16078c606a3c07fb84c989ea70b3cc8674dfba158d4ed83d37",
+      "git_blob": "e671e240f326a55c3fb5d1273830836f5d710342"
+    }
+  ],
+  "bound_artifact_summary": {
+    "count": 6,
+    "bytes": 162295,
+    "canonical_line_format": "path|bytes|sha256|git_blob\\n sorted by path",
+    "canonical_artifact_set_sha256": "dc0e49241ccd18a9d659e0df6e29e7cd769672a5440914ad7a164dcbb8134504"
+  },
+  "accepted_generated_qualification": {
+    "deterministic_replays": 2,
+    "root_requests_per_replay": 17,
+    "mock_HTTP_calls": 34,
+    "deterministic_replay_digest": "7e22a12594b8c9229f0534ed045d3f470f46faca5b3d460a8a8b50297e23b18e",
+    "adversarial_refusal_cases": 25,
+    "all_refusals_passed": true,
+    "runtime_seconds": 0.0161428339779377,
+    "absolute_process_peak_RSS_bytes": 52510720,
+    "aggregate_report_bytes": 4761,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "retained_payload_bytes": 0
+  },
+  "independent_review_resolution": {
+    "low_level_transport_bypass_closed": true,
+    "all_exact_consumed_source_IDs_and_aliases_excluded": true,
+    "only_global_non_multicast_nonreserved_resolution_allowed": true,
+    "unsupported_content_type_body_counted": true,
+    "whole_request_monotonic_timeout_enforced": true,
+    "HTML_completeness_and_terminal_state_required": true,
+    "target_like_keys_normalized_and_rejected": true,
+    "in_process_resource_cap_uses_increment_above_entry": true,
+    "standalone_qualification_reports_absolute_process_peak_RSS": true
+  },
+  "unresolved_packet_defects": {
+    "exact_official_index_revisions_packet_bound": false,
+    "externally_authenticated_remote_CI_attestation_implemented": false,
+    "real_transport_capability_present": false,
+    "live_execution_armable": false,
+    "execute_refuses_before_DNS_or_HTTP": true,
+    "fresh_additive_packet_and_decision_required": true
+  },
+  "scope_preservation": {
+    "qualified_module_unchanged_after_measured_invocation": true,
+    "standalone_CLI_unchanged_after_measured_invocation": true,
+    "measured_generated_qualification_rerun": false,
+    "resource_caps_unchanged": true,
+    "authority_expanded": false,
+    "claim_boundary_changed": false,
+    "scientific_evidence_architecture_is_interpretive_only": true
+  },
+  "operation_counters": {
+    "tracked_artifact_reads": 6,
+    "Git_proof_reads": 6,
+    "generated_qualification_invocations": 0,
+    "public_metadata_requests": 0,
+    "network_bytes": 0,
+    "source_candidates_selected": 0,
+    "real_or_private_path_reads": 0,
+    "payload_or_header_reads": 0,
+    "signal_event_annotation_target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "scores": 0,
+    "provider_calls": 0,
+    "stream_or_device_operations": 0,
+    "operations_on_other_projects": 0,
+    "cleanup_or_deletion_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "transition": {
+    "effective_before_this_closeout_commit_remote_green": false,
+    "generated_FMSR1_discovery_engineering_closed_after_remote_green": true,
+    "current_packet_live_execution_eligible_after_closeout": false,
+    "public_source_discovery_network_research_authorized": false,
+    "source_specific_metadata_network_research_authorized": false,
+    "real_payload_or_header_operation_authorized": false,
+    "metadata_execution_attempts": 0,
+    "active_Tier_C_packet_after_closeout": null
+  },
+  "claim_boundary": {
+    "engineering_proof_added": "The exact dependency-free generated FMSR1 planner parser complete-or-park router adversarial firewall and fail-closed live barrier are hash size Git-blob and remote-CI bound.",
+    "scientific_claim_established": false,
+    "real_source_metadata_accessed": false,
+    "real_EEG_accessed": false,
+    "neural_advantage_established": false,
+    "EEG_beyond_joint_nuisance_established": false,
+    "unseen_participant_generalization_established": false,
+    "movement_intention_established": false,
+    "thought_or_language_decoding_established": false,
+    "live_neural_decoding_established": false,
+    "hardware_or_clinical_value_established": false
+  },
+  "next_gate": "design_independently_review_commit_push_and_remotely_prove_an_all_false_revision_admission_and_external_CI_attestation_correction_before_any_fresh_decision_or_public_contact"
+}

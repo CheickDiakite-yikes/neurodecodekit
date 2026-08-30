@@ -83,6 +83,8 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
                 "FMSR1_v1_accepted_registrations",
                 "FMSR1_discovery_request_artifacts",
                 "FMSR1_generated_discovery_qualification_runs",
+                "FMSR1_generated_discovery_green_implementations",
+                "FMSR1_generated_discovery_proof_closeout_artifacts",
                 "FMSR1_generated_mock_HTTP_calls",
                 "FMSR1_generated_refusal_cases",
             }:

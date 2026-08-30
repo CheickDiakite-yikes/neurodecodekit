@@ -2,10 +2,11 @@
 
 > **Current scientific frontier, 2026-08-30:** read the Ofner result and proof
 > closeouts, the NPA1 implementation and proof closeout,
-> `registries/current_research_frontier.v13.json`,
+> `registries/current_research_frontier.v14.json`,
 > `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`, and the scientific knowledge
 > ledger first. Its immutable predecessor is
-> `registries/current_research_frontier.v12.json`; earlier predecessors are
+> `registries/current_research_frontier.v13.json`; earlier predecessors are
+> `registries/current_research_frontier.v12.json`,
 > `registries/current_research_frontier.v11.json` and
 > `registries/current_research_frontier.v10.json`, predecessor
 > `registries/current_research_frontier.v8.json`, predecessor
@@ -40,12 +41,14 @@
 > `5c466efd`, Base `99204462828`, Optional `99204462714`, and CI
 > `33291744779`. Decision `FMSR1-DISCOVERY-M0-D0` is exact-green at `b66a3a1`,
 > Base `99316322973`, Optional `99316322922`, and CI `33333549395`. Generated
-> implementation `FMSR1-DISCOVERY-M0-G1` locally passes two deterministic
+> implementation `FMSR1-DISCOVERY-M0-G1` is exact-green at `e92e9c2`, Base
+> `99327605264`, Optional `99327605346`, and CI `33337741165`. It passes two deterministic
 > 17-root mock-HTTP replays and 25 refusals with zero live network or protected
 > operations. Independent review found missing packet-bound official revisions
 > and a self-attested CI-proof weakness. The implementation now has no real
-> transport and parks before contact. Commit and push its exact artifact set,
-> wait for both jobs, and create only a proof closeout. A fresh additive
+> transport and parks before contact. Its proof-only closeout binds six exact
+> artifacts / 162,295 bytes and is pending this closeout commit's own remote
+> proof; it creates no live authority. A fresh additive
 > correction and exact decision are required before public discovery. All
 > candidate-specific, payload, model, score, release, and scientific authorities
 > remain false.

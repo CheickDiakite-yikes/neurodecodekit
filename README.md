@@ -102,14 +102,18 @@ recorded in the packet-bound
 is exact-green at `b66a3a1`, Base Python `99316322973`, Optional Neuro Readers
 `99316322922`, and CI `33333549395` on GitHub `main`. The generated-only
 [discovery implementation](docs/FRESH_MOTOR_SOURCE_DISCOVERY_IMPLEMENTATION.md)
-now passes two deterministic 17-root mock-HTTP replays and 25 adversarial
+is exact-green at `e92e9c2`, Base Python `99327605264`, Optional Neuro Readers
+`99327605346`, and CI `33337741165`. It passes two deterministic 17-root
+mock-HTTP replays and 25 adversarial
 refusals with zero real network, payload, model, score, or claim operations.
 Independent review also forced a park before live contact: the current packet
-did not freeze actual official-
-index revisions, and a tracked local JSON record cannot authenticate GitHub by
-self-report. The implementation exposes no real transport. Exact CI for this
-generated milestone will support a proof-only closeout, not live activation;
-any public discovery requires a fresh additive correction and exact decision.
+did not freeze actual official-index revisions, and a tracked local JSON
+record cannot authenticate GitHub by
+self-report. The implementation exposes no real transport. Its
+[proof-only closeout](docs/FRESH_MOTOR_SOURCE_DISCOVERY_IMPLEMENTATION_PROOF_CLOSEOUT.md)
+binds six exact artifacts / 162,295 bytes and becomes effective only after its
+own exact commit is remotely green; it does not activate live work. Any public
+discovery requires a fresh additive correction and exact decision.
 The [hard scientific decision tree](docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md)
 then routes one admitted source through sensitivity, confirmation,
 independent replication, and only afterward causal/live translation. Its core
@@ -121,9 +125,10 @@ and independently scored LLM-only baseline. Within the cube, posterior EEG is
 a neural spatial comparator, not part of the EOG/EMG/metadata nuisance bundle;
 the central motor-window condition must win every registered spatial,
 temporal, and physiological edge rather than merely average well. See the
-[current machine frontier](registries/current_research_frontier.v13.json).
-Its immutable predecessor is `registries/current_research_frontier.v12.json`;
-the earlier predecessor is `registries/current_research_frontier.v11.json`.
+[current machine frontier](registries/current_research_frontier.v14.json).
+Its immutable predecessor is `registries/current_research_frontier.v13.json`;
+the earlier predecessors are `registries/current_research_frontier.v12.json`
+and `registries/current_research_frontier.v11.json`.
 Its earlier immutable predecessor is
 `registries/current_research_frontier.v10.json`.
 The earlier predecessors `registries/current_research_frontier.v8.json`,
@@ -719,11 +724,11 @@ score or claim upgrade occurred. Repeated convergence warnings at the frozen
 80-iteration cap were recorded without changing or rerunning the models.
 
 The machine-readable current state is
-[`registries/current_research_frontier.v13.json`](registries/current_research_frontier.v13.json).
+[`registries/current_research_frontier.v14.json`](registries/current_research_frontier.v14.json).
 It freezes the consumed Ofner lane, green generated NPA1 proof, rejected v0
-draft, exact-green `FMSR1-v1` and discovery decision, locally qualified
-generated discovery implementation, claim boundary, and exact next transition
-so handoffs cannot silently return to an older gate.
+draft, exact-green `FMSR1-v1`, discovery decision, and generated implementation,
+the pending proof-only closeout, claim boundary, and exact next transition so
+handoffs cannot silently return to an older gate.
 Prediction
 freeze `2517fd1` passed Base job `97996323987`, Optional job `97996324203`, and
 CI `32908059166`.

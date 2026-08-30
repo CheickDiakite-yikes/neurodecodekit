@@ -22,14 +22,17 @@ why the project moved in small loops.
   52,510,720-byte peak RSS; the report was 4,761 bytes.
 - Real network, payload/header, signal/event/target, model/training/prediction/
   score, provider/device, cleanup, and claim operations were all zero.
+- Exact implementation `e92e9c2` passed Base Python `99327605264`, Optional
+  Neuro Readers `99327605346`, and CI `33337741165` on GitHub `main`. The
+  proof-only closeout now binds six exact artifacts / 162,295 bytes and is
+  effective only after its own exact commit and both jobs are remotely green.
 - Independent review found missing exact official-revision bindings, a
   self-attested CI-proof weakness, a low-level transport bypass, incomplete
   consumed-source matching, HTML terminal ambiguity, and cap/network edge
   cases. The bypass and edge cases are fixed; the packet defects force a park
   before contact and the implementation now exposes no real transport.
-- The exact implementation commit and both remote CI jobs remain mandatory for
-  a proof-only closeout. A fresh additive correction and decision are required
-  before any metadata-only execution. No source or scientific result exists.
+- A fresh additive correction and decision are required before any metadata-
+  only execution. No source or scientific result exists.
 
 ## Note-taking convention
 

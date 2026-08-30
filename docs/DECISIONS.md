@@ -12,8 +12,9 @@ the single metadata-only execution. Payload, signal, target, model, score,
 release, and claim authority remain false.
 
 Result update: decision `b66a3a1` passed Base Python `99316322973`, Optional
-Neuro Readers `99316322922`, and CI `33333549395` on GitHub `main`. Accept
-local generated implementation `FMSR1-DISCOVERY-M0-G1` for remote proof after
+Neuro Readers `99316322922`, and CI `33333549395` on GitHub `main`. Generated
+implementation `FMSR1-DISCOVERY-M0-G1` is exact-green at `e92e9c2`, Base
+`99327605264`, Optional `99327605346`, and CI `33337741165`, after
 two deterministic 17-root mock-HTTP replays and 25 adversarial refusals passed
 in 0.0161428339779377 seconds at 52,510,720-byte peak RSS. It made 34 mock
 calls and zero real network, payload, signal, target, model, score, provider,
@@ -21,9 +22,10 @@ device, cleanup, or claim operations. Independent review found that the packet
 did not freeze actual official-index revisions and that a tracked local record
 cannot authenticate GitHub by self-report. Park live execution before contact,
 remove the real transport capability, and use exact implementation CI only for
-a proof-only closeout. A fresh additive correction and exact decision are
-required before public discovery. This generated result is engineering
-evidence only.
+a proof-only closeout. That closeout binds six exact artifacts / 162,295 bytes
+and becomes effective only after its own exact commit and both jobs are green.
+A fresh additive correction and exact decision are required before public
+discovery. This generated result is engineering evidence only.
 
 Decision: adopt `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md` as the active
 router. A scientific pass requires conjunctive improvement over joint recorded
