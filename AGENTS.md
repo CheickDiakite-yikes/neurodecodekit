@@ -66,7 +66,8 @@ its ignored marker or private paths.
 
 `OFNER-C6R-1` remains a scientifically useful but consumed predecessor, not the
 active flagship. Read the result and proof closeouts,
-`registries/current_research_frontier.v10.json`, and the knowledge ledger first.
+`registries/current_research_frontier.v11.json`, and the knowledge ledger first.
+Its immutable predecessor is `registries/current_research_frontier.v10.json`.
 Public metadata selected 15 participants / 150 original motor-imagery GDF
 files / 13,748,417,608 bytes and reported 61 EEG, three EOG, 19 glove, and 13
 arm channels at 512 Hz. The sole `OFNER-C6R-1-HL-R0` invocation completed the
@@ -93,17 +94,19 @@ checkpoints before their exact live delivery surfaces had been admitted. No
 fresh source is promoted yet. The pushed `FMSR1-v0` draft was rejected before
 acceptance or protected work because it lacked joint nuisance controls, ordered
 discovery-to-metadata routing, complete authority separation, and exact storage
-arithmetic. Its additive `FMSR1-v1` successor prospectively freezes five official source
-indexes, four exact queries, at least ten complete unseen participants,
+arithmetic. Additive `FMSR1-v1` is exact-green at `e09f6cc`, Base Python
+`99197577034`, Optional Neuro Readers `99197577007`, and CI `33289147031`.
+It freezes five official source indexes, four exact queries, at least ten complete unseen participants,
 synchronized EEG/EOG/EMG for every relevant effector, named geometry, and
 central EEG compared against both joint nuisance-only and joint nuisance plus
 deranged-central-EEG arms. Its 20 GiB ceiling is exactly partitioned as
 12+2+2+1+3 GiB for payload, temporary files, derivatives, atomic publication,
-and untouched reserve. Every current operation authority is false. After v1
-is exact-green, only an all-false artifact packet for the frozen discovery
-queries may be drafted; network, candidate metadata, transport canary, header,
-payload, model, or score work remains separately gated, and a real canary is
-Tier C.
+and untouched reserve. Proof-only closeout and all-false request
+`FMSR1-DISCOVERY-M0` are pending this exact closeout/request commit's remote proof.
+The request grants nothing. After it is green, fresh packet-bound maintainer
+words and a separate exact-green decision are required before implementation
+or one bounded discovery pass. Network, candidate metadata, transport canary,
+header, payload, model, and score work remain closed now.
 Preserve `registries/current_research_frontier.v8.json`,
 `registries/current_research_frontier.v7.json`, and
 `registries/current_research_frontier.v6.json` as immutable history and require

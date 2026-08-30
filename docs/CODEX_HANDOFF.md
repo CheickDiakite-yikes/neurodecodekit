@@ -2,8 +2,9 @@
 
 > **Current scientific frontier, 2026-08-29:** read the Ofner result and proof
 > closeouts, the NPA1 implementation and proof closeout,
-> `registries/current_research_frontier.v10.json`, and the scientific knowledge
-> ledger first. The predecessor
+> `registries/current_research_frontier.v11.json`, and the scientific knowledge
+> ledger first. Its immutable predecessor is
+> `registries/current_research_frontier.v10.json`. The earlier predecessor
 > `registries/current_research_frontier.v8.json`, predecessor
 > `registries/current_research_frontier.v7.json` and historical
 > `registries/current_research_frontier.v6.json` remain immutable. The
@@ -26,14 +27,16 @@
 > and zero retained payload. No source is promoted and this is not EEG evidence.
 > NPA1 proof closeout `2ec3d4b` passed Base `99188620896`, Optional
 > `99188621003`, and CI `33285776358` on GitHub `main`. Independent review
-> rejected pushed draft `FMSR1-v0` before acceptance or protected work. Its
-> all-false `FMSR1-v1` successor prospectively freezes five official indexes, four exact
+> rejected pushed draft `FMSR1-v0` before acceptance or protected work.
+> Corrected `FMSR1-v1` is exact-green at `e09f6cc`, Base `99197577034`,
+> Optional `99197577007`, and CI `33289147031`; it freezes five official indexes, four exact
 > queries, ordered discovery-to-metadata routing, at least ten complete
 > participants, EEG/EOG/EMG for every relevant effector, joint nuisance and
-> deranged-joint controls, and exact 12+2+2+1+3 GiB storage arithmetic. After
-> v1 is exact-green, next draft only an all-false artifact packet for the
-> frozen discovery queries. All network, candidate metadata, real canary,
-> payload, model, score, device, release, and claim authorities remain false.
+> deranged-joint controls, and exact 12+2+2+1+3 GiB storage arithmetic. The
+> proof closeout and all-false `FMSR1-DISCOVERY-M0` request are pending this
+> exact closeout/request commit's remote proof. The request grants nothing; fresh packet-bound
+> maintainer words and a separate exact-green decision are required before
+> implementation or network. All real and scientific authorities remain false.
 > Preserve the unrelated tracker inspection file.
 
 > **Historical generated frontier, 2026-08-28:** read Amendment 3 and the FS3

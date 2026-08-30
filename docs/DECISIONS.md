@@ -14948,3 +14948,14 @@ green; only then may the single generated qualification run.
   allocation. Select no source and keep every operation authority false. Only
   after this exact successor is remotely green may an all-false artifact packet
   for the frozen discovery queries be drafted.
+- 2026-08-29: Accept corrected `FMSR1-v1` after exact commit `e09f6cc` passed
+  Base Python `99197577034`, Optional Neuro Readers `99197577007`, and CI
+  `33289147031` on GitHub `main`. Bind five exact artifacts / 47,128 bytes in a
+  proof-only closeout. Freeze all-false request `FMSR1-DISCOVERY-M0` for one
+  future complete-or-park metadata pass over five official indexes and four
+  exact queries, capped at 128 requests, 32 MiB response, 8 MiB retained
+  output, 300 seconds, 256 MiB RSS, one thread, one worker, zero retries, and
+  every redirect hop allowlisted before contact. The request grants no current
+  authority. Require this exact closeout/request commit to become remotely
+  green, then fresh packet-bound maintainer words and a separate exact-green
+  decision before implementation or network access.

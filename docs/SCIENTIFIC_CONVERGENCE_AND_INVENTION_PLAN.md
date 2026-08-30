@@ -11,6 +11,9 @@ Machine knowledge source:
 [`scientific_knowledge_ledger.v0.json`](../registries/scientific_knowledge_ledger.v0.json)
 
 Current machine frontier:
+[`current_research_frontier.v11.json`](../registries/current_research_frontier.v11.json)
+
+Immutable predecessor:
 [`current_research_frontier.v10.json`](../registries/current_research_frontier.v10.json)
 
 ## Current Addendum: Transport Admission Before Source Promotion
@@ -38,15 +41,18 @@ Its proof closeout at exact commit `2ec3d4b` passed Base Python `99188620896`,
 Optional Neuro Readers `99188621003`, and CI `33285776358` on GitHub `main`.
 
 The pushed `FMSR1-v0` draft was rejected before acceptance or protected work.
-Its additive `FMSR1-v1` successor prospectively freezes five official indexes, four exact
+Its additive `FMSR1-v1` successor is exact-green at `e09f6cc`, Base
+`99197577034`, Optional `99197577007`, and CI `33289147031`. It freezes five official indexes, four exact
 queries, ordered discovery-to-metadata routing, at least ten complete unseen
 participants, synchronized EEG/EOG/EMG for every relevant effector, named
 geometry, and matched central, joint nuisance-only, and joint nuisance plus
 deranged-central-EEG arms. Its exact 20 GiB partition is 12+2+2+1+3 GiB for
 payload, temporary files, derivatives, atomic publication, and untouched
 reserve. `NO_QUALIFYING_SOURCE` is acceptable. Every current operation
-authority is false; the first conditional next step after exact remote proof is
-only an all-false artifact packet for the frozen discovery queries.
+authority is false. Proof-only closeout and all-false request
+`FMSR1-DISCOVERY-M0` are pending this exact closeout/request commit's remote proof.
+That request grants nothing and requires fresh packet-bound maintainer words
+plus a separate exact-green decision before implementation or network.
 
 ## Historical Addendum: Ofner Source Reselection
 
@@ -93,10 +99,10 @@ information beyond recorded peripheral physiology, posterior EEG, cue and
 timing structure, and matched derangement in completely unseen people. No
 dataset is currently promoted for that confirmation.
 
-Generated `NPA1-G` is closed. The v0 source-admission draft is unaccepted;
-`FMSR1-v1` is the all-false successor pending exact remote proof. The earliest
-remaining checkpoint after that proof is one separately governed pass over the
-frozen public discovery universe and exact query set. A future candidate must
+Generated `NPA1-G` is closed. The v0 source-admission draft is unaccepted and
+`FMSR1-v1` is exact-green. The earliest remaining checkpoint is the separately
+governed, pending-decision `FMSR1-DISCOVERY-M0` complete-or-park pass over the frozen public
+discovery universe and exact query set. A future candidate must
 then pass separately governed target-free metadata verification and one opaque
 live transport canary before a semantic sensor-header check.
 Only after a green header may the scientific path proceed through bounded
@@ -475,9 +481,10 @@ existing 21-person design therefore depends on the stronger approximately
 Historical artifacts remain intact. Simplification will be additive and
 gradual until a safe archive map exists.
 
-## J. First Empirical Checkpoint
+## J. Historical First Empirical Checkpoint
 
-**Checkpoint:** one exact Dreyer `sub-01` R1 EDF fixed-header observation.
+**Consumed checkpoint:** one exact Dreyer `sub-01` R1 EDF fixed-header
+observation.
 
 **Question:** does the source file expose exactly the required 27 EEG channels,
 three unambiguous EOG channels, two unambiguous wrist-EMG channels, and 512 Hz
@@ -490,11 +497,15 @@ sampling with valid EDF geometry?
 - `H0`: measurement surface absent or ambiguous; park Dreyer before spending
   the cohort budget and promote the next measurement/data solution.
 
-**Current gate:** `DREYER-C5R-1-HL` is exact-green and all-false. The next
-fresh maintainer `approve`, `continue`, or `proceed`, after this packet and its
-boundary are explicitly identified, may bind only its unchanged H-L1 then
-H-L2 sequence. Until that decision becomes remotely green, no wrapper
-implementation, request, EDF byte, or header read is authorized.
+This checkpoint is historical and inert. Its H-L1 and H-L2 attempts are
+consumed and cannot be retried, resumed, repaired, substituted, or reactivated
+by short-form continuation. No Dreyer or Ofner Tier C gate is active.
+
+The current next reversible boundary is the all-false
+`FMSR1-DISCOVERY-M0` request. Only after this exact closeout/request milestone
+is remotely green may fresh packet-bound maintainer words support a separate
+decision; network access remains closed until that decision is itself remotely
+green.
 
 ## Cycle Update Format
 

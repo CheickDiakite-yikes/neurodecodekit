@@ -80,6 +80,8 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
                 "public_Ofner_fixed_header_reads",
                 "generated_Ofner_header_qualification_runs",
                 "generated_NPA1_qualification_runs",
+                "FMSR1_v1_accepted_registrations",
+                "FMSR1_discovery_request_artifacts",
             }:
                 self.assertEqual(value, 0, key)
 
@@ -107,9 +109,9 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
             },
         )
         self.assertIn("Preregister and execute", update["next_decisive_experiment"])
-        self.assertIn("FMSR1-v1 prospectively freezes", update["evidence_produced"])
+        self.assertIn("FMSR1-DISCOVERY-M0 requests", update["evidence_produced"])
         self.assertIn(
-            "joint nuisance and deranged-joint comparators",
+            "128 requests, 32 MiB response",
             update["evidence_produced"],
         )
 

@@ -16571,3 +16571,11 @@ and require both remote jobs green before the one official qualification.
   EMG for every relevant effector, and exactly partitions the 20 GiB ceiling as
   12+2+2+1+3 GiB. No source, network, real/private path, payload, target, model,
   score, device, release, or claim operation occurred.
+- 2026-08-29: Corrected `FMSR1-v1` commit `e09f6cc` passed Base Python
+  `99197577034`, Optional Neuro Readers `99197577007`, and CI `33289147031` on
+  GitHub `main`. Added a proof-only five-artifact / 47,128-byte closeout,
+  all-false `FMSR1-DISCOVERY-M0` request, frontier v11, ledger updates, and
+  focused invariants. The packet freezes one future complete-or-park public
+  metadata pass but grants no implementation or network authority. This
+  milestone performed zero network, source selection, payload, target, model,
+  score, device, release, deletion, or claim operations.
