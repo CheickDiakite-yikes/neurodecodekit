@@ -10,12 +10,32 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PROOF = ROOT / "registries/fresh_motor_source_research_registration_proof.v0.json"
 DOCUMENT = ROOT / "docs/FRESH_MOTOR_SOURCE_RESEARCH_REGISTRATION_PROOF_CLOSEOUT.md"
-EXPECTED_PATHS = {
-    "docs/FRESH_MOTOR_SOURCE_RESEARCH_PREREGISTRATION_AMENDMENT_1.md",
-    "registries/current_research_frontier.v10.json",
-    "registries/fresh_motor_source_research_contract.v1.json",
-    "tests/test_current_research_frontier_v10.py",
-    "tests/test_fresh_motor_source_research_v1.py",
+EXPECTED_ARTIFACTS = {
+    "docs/FRESH_MOTOR_SOURCE_RESEARCH_PREREGISTRATION_AMENDMENT_1.md": (
+        8_812,
+        "c180ca2448de4d03243370d6c3c78da28d4ac367f6b1ef1e4ec3e19484417947",
+        "97fb681d9152ad04751e5766cd9e44d27538348e",
+    ),
+    "registries/current_research_frontier.v10.json": (
+        3_839,
+        "37dcb7d1cd6c0c49e65f2a0ef3060d18c410328159d3d978847ccd57486f2a6d",
+        "615e8a6ec9d8408d568a54569b2630372bf49941",
+    ),
+    "registries/fresh_motor_source_research_contract.v1.json": (
+        15_280,
+        "9667b31282d7e5c852fc3de1b6fe07692952ec5720b79a0ba7c31345ccfbc8cb",
+        "30bec4bdbf21865991bfb61822caea8cc6f02ffd",
+    ),
+    "tests/test_current_research_frontier_v10.py": (
+        3_984,
+        "4bd318cff0846f5b19f58d0df64806c266b6c76ccee3ff075bacb060e76a3bf7",
+        "6bd12b1eb92a36f9f95d90a22da1a9eb9dd7098e",
+    ),
+    "tests/test_fresh_motor_source_research_v1.py": (
+        15_213,
+        "db309ac45d827486dfcb32194cb1f03390324606862157f237687846074156e3",
+        "c32d7af76b4115f4665fb7b3e0b8cef4b40da942",
+    ),
 }
 
 
@@ -36,26 +56,53 @@ class FreshMotorSourceResearchRegistrationProofTests(unittest.TestCase):
         rows = proof["bound_artifacts"]
         summary = proof["bound_artifact_summary"]
         commit = proof["green_registration_commit"]["commit"]
+        commit_available = (
+            subprocess.run(
+                ["git", "cat-file", "-e", f"{commit}^{{commit}}"],
+                cwd=ROOT,
+                capture_output=True,
+                check=False,
+            ).returncode
+            == 0
+        )
+        if not commit_available:
+            shallow = subprocess.check_output(
+                ["git", "rev-parse", "--is-shallow-repository"], cwd=ROOT, text=True
+            ).strip()
+            self.assertEqual(shallow, "true")
         self.assertEqual(len(rows), summary["count"])
-        self.assertEqual({row["path"] for row in rows}, EXPECTED_PATHS)
+        self.assertEqual({row["path"] for row in rows}, set(EXPECTED_ARTIFACTS))
         self.assertEqual(sum(row["bytes"] for row in rows), summary["bytes"])
         canonical_lines = []
         for row in rows:
             payload = (ROOT / row["path"]).read_bytes()
-            commit_payload = subprocess.check_output(
-                ["git", "show", f'{commit}:{row["path"]}'], cwd=ROOT
+            expected_bytes, expected_sha256, expected_blob = EXPECTED_ARTIFACTS[
+                row["path"]
+            ]
+            self.assertEqual(
+                (row["bytes"], row["sha256"], row["git_blob"]),
+                (expected_bytes, expected_sha256, expected_blob),
+                row["path"],
             )
-            self.assertEqual(payload, commit_payload, row["path"])
             self.assertEqual(len(payload), row["bytes"], row["path"])
             self.assertEqual(hashlib.sha256(payload).hexdigest(), row["sha256"])
-            self.assertEqual(len(commit_payload), row["bytes"], row["path"])
+            git_blob_payload = f"blob {len(payload)}\0".encode() + payload
             self.assertEqual(
-                hashlib.sha256(commit_payload).hexdigest(), row["sha256"], row["path"]
+                hashlib.sha1(git_blob_payload, usedforsecurity=False).hexdigest(),
+                row["git_blob"],
+                row["path"],
             )
-            blob = subprocess.check_output(
-                ["git", "rev-parse", f'{commit}:{row["path"]}'], cwd=ROOT, text=True
-            ).strip()
-            self.assertEqual(blob, row["git_blob"], row["path"])
+            if commit_available:
+                commit_payload = subprocess.check_output(
+                    ["git", "show", f'{commit}:{row["path"]}'], cwd=ROOT
+                )
+                self.assertEqual(payload, commit_payload, row["path"])
+                blob = subprocess.check_output(
+                    ["git", "rev-parse", f'{commit}:{row["path"]}'],
+                    cwd=ROOT,
+                    text=True,
+                ).strip()
+                self.assertEqual(blob, row["git_blob"], row["path"])
             canonical_lines.append(
                 f'{row["path"]}|{row["bytes"]}|{row["sha256"]}|{row["git_blob"]}\n'
             )
