@@ -16609,3 +16609,20 @@ and require both remote jobs green before the one official qualification.
   metadata pass but grants no implementation or network authority. This
   milestone performed zero network, source selection, payload, target, model,
   score, device, release, deletion, or claim operations.
+- 2026-08-30: Integrated the governing 3D attribution cube, outer task and
+  population dimensions, and separate offline-to-live translation dimension
+  across the scientific constitution, hard decision tree, frontier, tracker,
+  README, and handoff. Live motor and communication/language claims remain
+  separate, with an independent LLM-only communication baseline.
+- 2026-08-30: Generated `FMSR1-DISCOVERY-M0-G1` passed two deterministic
+  17-root mock-HTTP replays and 25 refusals with zero real network or protected
+  operations. Exact implementation `e92e9c2` passed Base `99327605264`,
+  Optional `99327605346`, and CI `33337741165`; proof closeout `fac60bf` then
+  passed Base `99330615390`, Optional `99330615564`, and CI `33338847448`.
+- 2026-08-30: Added all-false admission correction A1 and frontier v15. The
+  design keeps M0 non-armable, separates revision/snapshot observation from
+  later discovery, requires a fresh same-process live GitHub CI check before
+  each future source contact, and explicitly binds attempt consumption and
+  system-trust residual risk. All five source profiles and every exact CI
+  identity remain null; no network, real-data, model, score, or claim operation
+  occurred.

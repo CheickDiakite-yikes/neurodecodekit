@@ -54,6 +54,16 @@ translation, and report scientific attribution separately from functional
 utility. Historical documents remain evidence and safety records, but they do
 not outrank this strategy where priorities conflict.
 
+The governing architecture is a 3D spatial-temporal-physiological attribution
+cube nested inside a 5D scientific evidence map that adds task autonomy and
+population generalization. Offline evaluation, causal replay, shadow
+streaming, and prospective live operation form a separate sixth translation
+dimension. Dimensions 1-3 ask what produced the signal; dimensions 4-5 ask
+what the result means and how far it generalizes; dimension 6 asks whether it
+works prospectively in time. Live motor success does not validate language
+decoding. Communication remains separately preregistered with an independently
+scored LLM-only baseline.
+
 The frozen 60-person `DREYER-C5R-1` nuisance-controlled unseen-person
 experiment is parked before payload access. The sole registered H-L2
 attempt `DREYER-C5R-1-HL2-R0` opened one public endpoint response and refused
@@ -66,9 +76,10 @@ its ignored marker or private paths.
 
 `OFNER-C6R-1` remains a scientifically useful but consumed predecessor, not the
 active flagship. Read the result and proof closeouts,
-`registries/current_research_frontier.v14.json`,
+`registries/current_research_frontier.v15.json`,
 `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`, and the knowledge ledger first.
-Its immutable predecessor is `registries/current_research_frontier.v13.json`;
+Its immutable predecessor is `registries/current_research_frontier.v14.json`;
+the earlier immutable predecessor is `registries/current_research_frontier.v13.json`;
 the earlier immutable predecessors are `registries/current_research_frontier.v12.json`,
 `registries/current_research_frontier.v11.json`, and
 `registries/current_research_frontier.v10.json`.
@@ -123,10 +134,16 @@ implementation document and machine record. Independent review found that the
 packet did not bind actual official-index revisions and a tracked local record
 cannot authenticate GitHub by self-report. The implementation therefore has no
 real transport and its `execute` command refuses before DNS or HTTP. Read the
-proof-only closeout now; it binds six exact artifacts / 162,295 bytes and
-becomes effective only after its own exact commit and both remote jobs are
-green. It grants no live authority. A fresh additive correction and exact
-decision are required before public discovery.
+proof-only closeout now. Exact closeout
+`fac60bfafaa6414da82b075fa677e2aa31c80e22` passed Base Python
+`99330615390`, Optional Neuro Readers `99330615564`, and CI `33338847448`
+on GitHub `main`; it binds six exact artifacts / 162,295 bytes and grants no
+live authority. Read the all-false admission correction next. It separates a
+future complete revision or opaque snapshot witness from discovery and
+requires a fresh live GitHub CI verification before each future source-contact
+stage. All five source profiles and the exact CI profile remain null, M0 is
+not rearmed, no Tier C packet is active, and this correction itself must become
+remotely green before generated-only admission qualification is eligible.
 Candidate-specific metadata,
 transport canary, header, payload, model, score, release, and claim work remain
 closed. Do not treat generated source selection as a real candidate or neural

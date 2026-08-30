@@ -15005,3 +15005,23 @@ green; only then may the single generated qualification run.
   authority. Require this exact closeout/request commit to become remotely
   green, then fresh packet-bound maintainer words and a separate exact-green
   decision before implementation or network access.
+- 2026-08-30: Adopt the 3D spatial-temporal-physiological attribution cube
+  inside the 5D task-autonomy and population-generalization evidence map, with
+  offline-to-live operation as a separate sixth translation dimension. Require
+  the central motor-window condition to win every registered cube edge. Do not
+  let live motor success inherit a language claim; communication remains
+  separately preregistered with an independently scored LLM-only baseline.
+- 2026-08-30: Accept generated discovery implementation `e92e9c2` after Base
+  Python `99327605264`, Optional Neuro Readers `99327605346`, and CI
+  `33337741165` passed on GitHub `main`. Accept its proof-only closeout
+  `fac60bf` after Base `99330615390`, Optional `99330615564`, and CI
+  `33338847448` passed. Preserve the pre-contact park: M0 omitted exact
+  official-index revisions and cannot externally authenticate CI from a
+  tracked self-report.
+- 2026-08-30: Freeze all-false correction `FMSR1-DISCOVERY-M0-A1`. Do not
+  rearm M0. Require a separately authorized complete source-global revision or
+  opaque snapshot witness, its freeze and remote proof, and a fresh live
+  GitHub CI verification before each future source-contact invocation. Leave
+  all five source profiles and the exact CI profile null. The correction
+  authorizes only its own strategy commit and CI; every network, real-data,
+  model, score, release, and claim operation remains false.

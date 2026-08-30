@@ -30,8 +30,9 @@
 > 22,577,152-byte peak RSS, zero network, and zero retained payload. The NPA1
 > proof closeout then passed Base Python `99188620896`, Optional Neuro Readers
 > `99188621003`, and CI `33285776358` at exact commit `2ec3d4b` on GitHub
-> `main`. Read `registries/current_research_frontier.v14.json` and
+> `main`. Read `registries/current_research_frontier.v15.json` and
 > `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`; its predecessor
+> `registries/current_research_frontier.v14.json`, earlier predecessor
 > `registries/current_research_frontier.v13.json`, predecessor
 > `registries/current_research_frontier.v12.json`, predecessor
 > `registries/current_research_frontier.v11.json`, predecessor
@@ -59,9 +60,13 @@
 > no packet-bound official-index revisions and no external authentication for a
 > self-reported CI record, so the implementation exposes no real transport and
 > the live route is parked before contact. Its proof-only closeout binds six
-> exact artifacts / 162,295 bytes and becomes effective only after its own exact
-> commit and both jobs are green; it cannot activate live work. All public network,
-> payload, signal, target, model, score, release, and claim authority is false.
+> exact artifacts / 162,295 bytes. Exact closeout `fac60bf` passed Base
+> `99330615390`, Optional `99330615564`, and CI `33338847448` on GitHub
+> `main`; it cannot activate live work. Read the all-false A1 admission
+> correction next. It keeps M0 non-armable, leaves all five index profiles and
+> the exact live-CI profile null, and separates future witness, proof, and
+> discovery stages. All public network, payload, signal, target, model, score,
+> release, and claim authority is false.
 > COMM-P0-G FS3 remains paused.
 
 > Dreyer H-L1R1 recovery update, 2026-08-29: exact generated coordinator
@@ -237,11 +242,11 @@
 Historical exact control-plane label retained for proof compatibility:
 `Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight`.
 
-Start with `registries/current_research_frontier.v14.json`, the machine-readable
+Start with `registries/current_research_frontier.v15.json`, the machine-readable
 snapshot of the consumed lanes, green NPA1 engineering proof, claim boundary,
 rejected v0 draft, exact-green v1 registration, discovery decision and generated
-implementation, pending proof-only closeout, and next transition. Versions 13,
-12, 11, 10, 9, and 7 remain immutable predecessors.
+implementation, green proof-only closeout, all-false A1 correction, and next
+transition. Versions 14, 13, 12, 11, 10, 9, and 7 remain immutable predecessors.
 
 The prior BNCI experiment found real held-out protocol information, but it did
 not establish an EEG-specific effect: posterior EEG slightly beat the selected

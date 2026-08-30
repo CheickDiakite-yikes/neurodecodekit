@@ -12,10 +12,14 @@
 > operations. Review found no exact packet-bound official revisions and no
 > externally authenticated CI attestation, so live execution is parked before
 > contact and no real transport is exposed. Its proof-only closeout binds six
-> exact artifacts / 162,295 bytes and is pending its own remote proof. Public discovery now
-> requires a fresh additive correction and exact decision. No source, EEG,
-> model, score, live result, or scientific claim has been created.
-> Read `registries/current_research_frontier.v14.json` and
+> exact artifacts / 162,295 bytes. Exact closeout `fac60bf` passed Base
+> `99330615390`, Optional `99330615564`, and CI `33338847448` on GitHub
+> `main`. The all-false A1 correction now defines separate future
+> revision/snapshot witness, proof, live-CI, and discovery stages while leaving
+> all source and CI profiles null and M0 non-armable. Public discovery still
+> requires a fresh successor packet and exact decision. No source, EEG, model,
+> score, live result, or scientific claim has been created.
+> Read `registries/current_research_frontier.v15.json` and
 > `docs/FRESH_MOTOR_SOURCE_DISCOVERY_IMPLEMENTATION.md` first.
 
 > **COMM-P0-G FS3 prospective successor (2026-08-28):** exact Amendment 3

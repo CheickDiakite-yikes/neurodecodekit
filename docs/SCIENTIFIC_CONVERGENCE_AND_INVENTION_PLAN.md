@@ -66,9 +66,15 @@ Independent review found that the packet froze parser profiles, not exact
 official-index revisions, and that a tracked JSON record could verify local
 identity but could not authenticate GitHub by self-report. The implementation
 therefore exposes no real transport and parks live execution before contact.
-The v11 predecessor described the pending packet, v12 recorded the decision,
-and v13 records the local generated implementation plus the fail-closed packet
-defect.
+Exact proof closeout `fac60bf` passed Base `99330615390`, Optional
+`99330615564`, and CI `33338847448` on GitHub `main`. The all-false A1
+admission correction keeps M0 non-armable and prospectively separates a
+complete source-revision or opaque-snapshot witness, a fresh same-process live
+GitHub CI verification before each source-contact stage, and later candidate
+discovery. Every exact source and CI profile remains null, and no Tier C packet
+is active. Frontier v11 described the pending packet, v12 recorded the
+decision, v13 recorded the local generated implementation, v14 bound its green
+proof, and v15 records the all-false correction.
 
 Historical v11 status used the exact phrase pending-decision `FMSR1-DISCOVERY-M0`; it is retained only as an immutable routing marker and
 does not describe the current decision or live authority state.
@@ -139,12 +145,13 @@ another.
 
 Generated `NPA1-G` is closed. The v0 source-admission draft is unaccepted and
 `FMSR1-v1` and `FMSR1-DISCOVERY-M0-D0` are exact-green. The generated
-discovery implementation is locally qualified but live execution is not
-armable under the current packet. The earliest remaining checkpoint is exact
-implementation CI followed by a proof-only closeout. Any later public discovery
-requires an additive all-false correction that prebinds an exact official-
-revision admission mechanism and externally authenticates CI, independent
-review, and a fresh exact decision. A future candidate must then pass separately
+discovery implementation and its proof-only closeout are exact-green, but live
+execution is not armable under the current packet. The earliest remaining
+checkpoint is to make the all-false A1 admission correction remotely green,
+then generated-qualify only its strict revision/snapshot and live-CI parsers.
+Any later public witness or discovery requires a separately named Tier C packet,
+independent review, live external CI verification, and a fresh exact decision.
+A future candidate must then pass separately
 governed target-free metadata verification and one opaque live transport canary
 before a semantic sensor-header check.
 Only after a green header may the scientific path proceed through bounded

@@ -2,10 +2,11 @@
 
 > **Current scientific frontier, 2026-08-30:** read the Ofner result and proof
 > closeouts, the NPA1 implementation and proof closeout,
-> `registries/current_research_frontier.v14.json`,
+> `registries/current_research_frontier.v15.json`,
 > `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`, and the scientific knowledge
 > ledger first. Its immutable predecessor is
-> `registries/current_research_frontier.v13.json`; earlier predecessors are
+> `registries/current_research_frontier.v14.json`; earlier predecessors are
+> `registries/current_research_frontier.v13.json`,
 > `registries/current_research_frontier.v12.json`,
 > `registries/current_research_frontier.v11.json` and
 > `registries/current_research_frontier.v10.json`, predecessor
@@ -47,9 +48,12 @@
 > operations. Independent review found missing packet-bound official revisions
 > and a self-attested CI-proof weakness. The implementation now has no real
 > transport and parks before contact. Its proof-only closeout binds six exact
-> artifacts / 162,295 bytes and is pending this closeout commit's own remote
-> proof; it creates no live authority. A fresh additive
-> correction and exact decision are required before public discovery. All
+> artifacts / 162,295 bytes. Exact closeout `fac60bf` passed Base
+> `99330615390`, Optional `99330615564`, and CI `33338847448` on GitHub
+> `main`; it creates no live authority. Read the all-false A1 admission
+> correction. It keeps M0 non-armable, leaves every exact index and CI profile
+> null, and prospectively separates witness, proof, and discovery. It must
+> become remotely green before generated-only admission qualification. All
 > candidate-specific, payload, model, score, release, and scientific authorities
 > remain false.
 > Preserve the unrelated tracker inspection file.
