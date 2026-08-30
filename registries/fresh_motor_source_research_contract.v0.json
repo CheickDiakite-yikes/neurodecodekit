@@ -1,0 +1,195 @@
+{
+  "schema_name": "neurodecodekit.fresh_motor_source_research_contract",
+  "schema_version": "0.1.0",
+  "protocol_id": "FMSR1-v0",
+  "recorded_at": "2026-08-29",
+  "status": "preregistered_all_authorities_false_pending_exact_commit_remote_green",
+  "human_protocol": "docs/FRESH_MOTOR_SOURCE_RESEARCH_PREREGISTRATION.md",
+  "proof_anchors": {
+    "current_frontier": {
+      "path": "registries/current_research_frontier.v8.json",
+      "sha256": "ba82d1ebef0355b5dcb4d3deb1a2622c30c483b7b4e4a02030c68eda269644e7"
+    },
+    "NPA1_G_proof": {
+      "path": "registries/neural_payload_admission_generated_qualification_proof.v0.json",
+      "sha256": "530c37e0d43e9aab265f27a6eea5de41971d9d680d32e923c8a63ce4d0219338",
+      "closeout_commit": "2ec3d4b2b7b8c51f246e948ce9cbc9d667cecfb5",
+      "CI_run_id": 33285776358,
+      "base_python_job_id": 99188620896,
+      "optional_neuro_readers_job_id": 99188621003,
+      "both_required_jobs_green": true,
+      "on_GitHub_main": true
+    },
+    "scientific_constitution": {
+      "path": "docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md",
+      "sha256": "208c9038ee5f489b48ec714f316af315d1f97c75328408130d0ed6b84bc1b845"
+    },
+    "scientific_knowledge_ledger": {
+      "path": "registries/scientific_knowledge_ledger.v0.json",
+      "sha256": "4aa0fbb664cd9a0f6e51a59f7ea31af1b3a34eaef0679cc2c4ec92acc4cfd8cd"
+    }
+  },
+  "scientific_lane": {
+    "domain": "motor_task_EEG",
+    "question": "Does central EEG add unseen-person motor-task information beyond recorded EOG, task-relevant EMG, posterior EEG, cue and timing structure, and matched derangement?",
+    "primary_claim_coordinate": "incremental_central_EEG_information_in_completely_unseen_participants",
+    "communication_or_language_source_can_satisfy_lane": false,
+    "candidate_selected": null,
+    "active_Tier_C_lane": null
+  },
+  "freshness": {
+    "participant_run_or_evaluation_overlap_allowed": false,
+    "excluded_consumed_source_ids": [
+      "BNCI-2014-001__NEMAR-nm000139",
+      "DREYER-DATASET-A__NEMAR-nm000250",
+      "OFNER-2017__NEMAR-nm000173",
+      "IACKD__OPENNEURO-ds006840",
+      "PHYSIONET-EEGMMIDB",
+      "SPANISHBCBL-S7-S20-S21-S24-S25"
+    ],
+    "aggregate_lessons_may_inform_design": true,
+    "consumed_payload_target_prediction_score_or_marker_reuse_allowed": false
+  },
+  "noncompensatory_hard_gates": {
+    "minimum_complete_participants": 10,
+    "participant_held_out_zero_calibration_required": true,
+    "raw_synchronized_EEG_required_for_every_selected_participant": true,
+    "recorded_EOG_required_for_every_selected_participant": true,
+    "task_relevant_EMG_required_for_every_selected_participant": true,
+    "bilateral_task_relevant_EMG_preferred": true,
+    "kinematics_can_replace_EMG_for_full_confirmation": false,
+    "named_EEG_channels_and_geometry_required": true,
+    "posterior_comparator_constructible_required": true,
+    "reference_and_sampling_metadata_required": true,
+    "event_grammar_cue_pre_cue_decision_and_target_semantics_required": true,
+    "cue_identity_may_equal_target": false,
+    "minimum_identified_motor_classes": 2,
+    "immutable_official_release_required": true,
+    "reusable_payload_license_required": true,
+    "article_license_may_be_imputed_to_payload": false,
+    "target_free_complete_cohort_manifest_required": true,
+    "exact_member_sizes_required_before_semantic_payload_access": true,
+    "exact_member_hashes_required_before_semantic_payload_access": true,
+    "participant_dropping_for_storage_allowed": false,
+    "selected_source_payload_cap_bytes": 17179869184,
+    "total_incremental_disk_cap_bytes": 21474836480,
+    "public_format_and_reader_documentation_required": true,
+    "required_controls": [
+      "no_signal",
+      "EOG_only",
+      "EMG_only",
+      "posterior_EEG",
+      "cue_only",
+      "timing_only",
+      "pre_cue_EEG",
+      "matched_deranged_EEG"
+    ],
+    "weighted_score_may_rescue_failed_gate": false,
+    "unknown_counts_as_pass": false
+  },
+  "deterministic_routes": {
+    "FULL_CONFIRMATION": {
+      "condition": "all_noncompensatory_hard_gates_pass",
+      "eligible_for_later_source_specific_metadata_packet": true,
+      "scientific_claim_created": false
+    },
+    "PARTIAL_CONTROL": {
+      "condition": "participant_EEG_and_EOG_gates_pass_but_EMG_or_another_attribution_gate_fails",
+      "eligible_for_flagship_promotion": false,
+      "maximum_role": "documented_partial_attribution_development"
+    },
+    "MECHANISTIC_BRIDGE": {
+      "condition": "rich_synchronized_controls_but_fewer_than_ten_complete_participants",
+      "eligible_for_flagship_promotion": false,
+      "maximum_role": "mechanism_development_without_confirmatory_inference"
+    },
+    "ENGINEERING_ONLY": {
+      "condition": "format_or_transport_value_without_scientific_control_completeness",
+      "eligible_for_flagship_promotion": false,
+      "maximum_role": "reader_or_transport_engineering"
+    },
+    "PARK": {
+      "condition": "identity_license_completeness_geometry_task_or_storage_unresolved_or_failed",
+      "eligible_for_flagship_promotion": false,
+      "maximum_role": "none"
+    },
+    "no_full_confirmation_candidate_outcome": "NO_QUALIFYING_SOURCE",
+    "criteria_may_be_weakened_after_no_candidate": false
+  },
+  "eligible_candidate_tie_break_order": [
+    "larger_complete_participant_count",
+    "stronger_bilateral_EMG_plus_kinematic_coverage",
+    "greater_laboratory_device_and_participant_independence",
+    "more_trials_per_participant_under_fixed_identifiable_task",
+    "more_exact_storage_headroom",
+    "lexicographically_smaller_immutable_source_identifier"
+  ],
+  "forbidden_selection_inputs": [
+    "model_performance",
+    "target_statistic",
+    "participant_outcome",
+    "hidden_payload_property",
+    "download_convenience",
+    "desire_for_a_positive_result"
+  ],
+  "future_metadata_research_requirements": {
+    "separate_packet_and_decision_required": true,
+    "official_dataset_or_archive_surfaces_only": true,
+    "primary_publications_allowed": true,
+    "packet_must_freeze_domains_methods_request_count_response_cap_redirect_policy_retained_fields_runtime_and_failure_behavior": true,
+    "payload_or_range_request_allowed": false,
+    "semantic_header_signal_event_target_or_label_read_allowed": false
+  },
+  "stop_rules": [
+    "any_noncompensatory_hard_gate_fails",
+    "participant_dropping_is_needed_to_fit_storage",
+    "payload_access_is_needed_to_answer_metadata_only_question",
+    "candidate_overlaps_a_consumed_evaluation",
+    "official_identity_or_payload_license_is_unknown"
+  ],
+  "operation_authority": {
+    "artifact_only_registration": false,
+    "source_specific_metadata_network_research": false,
+    "web_search_or_provider": false,
+    "live_transport_canary": false,
+    "payload_or_header_access": false,
+    "signal_event_annotation_target_or_label_access": false,
+    "acquisition_cache_split_or_derivative_creation": false,
+    "model_checkpoint_training_inference_prediction_or_score": false,
+    "stream_device_or_hardware": false,
+    "touch_other_project": false,
+    "cleanup_delete_overwrite_rename_or_move": false,
+    "release_or_publish": false,
+    "scientific_claim_upgrade": false
+  },
+  "operation_counters": {
+    "network_requests": 0,
+    "network_bytes": 0,
+    "real_or_private_path_reads": 0,
+    "payload_or_header_reads": 0,
+    "signal_event_annotation_target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "scores": 0,
+    "generated_payload_bytes": 0,
+    "incremental_disk_bytes": 0
+  },
+  "claim_boundary": {
+    "source_selected": false,
+    "real_EEG_accessed": false,
+    "neural_advantage_established": false,
+    "unseen_person_generalization_established": false,
+    "EEG_beyond_EOG_or_EMG_established": false,
+    "motor_cortex_or_movement_intention_established": false,
+    "thought_or_language_decoding_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_or_clinical_value_established": false
+  },
+  "next_gate_after_remote_green": {
+    "action": "draft_one_all_false_bounded_public_metadata_research_authorization_packet_for_FMSR1",
+    "source_specific_request_authorized_now": false,
+    "real_data_transaction_authorized_now": false,
+    "scientific_claim_upgrade_allowed": false
+  }
+}

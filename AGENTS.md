@@ -66,7 +66,7 @@ its ignored marker or private paths.
 
 `OFNER-C6R-1` remains a scientifically useful but consumed predecessor, not the
 active flagship. Read the result and proof closeouts,
-`registries/current_research_frontier.v8.json`, and the knowledge ledger first.
+`registries/current_research_frontier.v9.json`, and the knowledge ledger first.
 Public metadata selected 15 participants / 150 original motor-imagery GDF
 files / 13,748,417,608 bytes and reported 61 EEG, three EOG, 19 glove, and 13
 arm channels at 512 Hz. The sole `OFNER-C6R-1-HL-R0` invocation completed the
@@ -83,15 +83,25 @@ or reopen the ignored marker. No Tier C packet is active. Generated-only
 `99184746988`, Optional Neuro Readers `99184747065`, and CI `33284320443` on
 GitHub `main`. It passed two deterministic seven-profile replays and 37 exact
 refusals in 0.003375791013240814 seconds at 22,577,152-byte peak RSS, with
-zero network and zero retained payload. This is transport engineering only.
+zero network and zero retained payload. Its proof closeout at exact commit
+`2ec3d4b2b7b8c51f246e948ce9cbc9d667cecfb5` passed Base Python
+`99188620896`, Optional Neuro Readers `99188621003`, and CI `33285776358` on
+GitHub `main`. This is transport engineering only.
 The artifact-only postmortem found a shared ordering weakness, not a shared
 server cause: Dreyer and Ofner both reached irreversible scientific header
 checkpoints before their exact live delivery surfaces had been admitted. No
-fresh source is promoted yet. The next reversible work is only an all-false,
-artifact-only fresh-source research preregistration. Any source-specific
-metadata network, transport canary, header, payload, model, or score operation
-requires its applicable later gate; a real canary remains Tier C. Preserve
-`registries/current_research_frontier.v7.json` and
+fresh source is promoted yet. `FMSR1-v0` freezes one motor-task source gate:
+at least ten complete unseen participants, synchronized EEG/EOG/task-relevant
+EMG, named geometry, complete spatial and temporal controls, reusable
+licensing, 16 GiB selected payload, and 20 GiB total incremental disk.
+Kinematics does not replace EMG for a beyond-muscle claim. Partial sources
+cannot be promoted and `NO_QUALIFYING_SOURCE` is valid. After this exact
+registration is remotely green, the next reversible work is only an all-false
+artifact-only bounded metadata-research authorization packet. Any source-
+specific metadata network, transport canary, header, payload, model, or score
+operation requires its applicable later gate; a real canary remains Tier C.
+Preserve `registries/current_research_frontier.v8.json`,
+`registries/current_research_frontier.v7.json`, and
 `registries/current_research_frontier.v6.json` as immutable history and require
 fresh packet-bound maintainer words for any later real gate. Earlier Dreyer progression is
 historical: rejected-result

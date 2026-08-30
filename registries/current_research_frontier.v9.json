@@ -1,0 +1,69 @@
+{
+  "schema_name": "neurodecodekit.current_research_frontier",
+  "schema_version": "0.10.0",
+  "recorded_at": "2026-08-29",
+  "supersedes": "registries/current_research_frontier.v8.json",
+  "superseded_registry_sha256": "ba82d1ebef0355b5dcb4d3deb1a2622c30c483b7b4e4a02030c68eda269644e7",
+  "status": "NPA1_G_proof_green_FMSR1_all_false_registration_pending_remote_green",
+  "active_lane_id": null,
+  "scientific_lane": "fresh_unseen_person_motor_task_EEG_beyond_EOG_EMG_posterior_timing_and_derangement",
+  "NPA1_G_proof_closeout": {
+    "commit": "2ec3d4b2b7b8c51f246e948ce9cbc9d667cecfb5",
+    "CI_run_id": 33285776358,
+    "base_python_job_id": 99188620896,
+    "optional_neuro_readers_job_id": 99188621003,
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true
+  },
+  "fresh_source_registration": {
+    "protocol_id": "FMSR1-v0",
+    "human_path": "docs/FRESH_MOTOR_SOURCE_RESEARCH_PREREGISTRATION.md",
+    "machine_path": "registries/fresh_motor_source_research_contract.v0.json",
+    "candidate_selected": null,
+    "minimum_complete_participants": 10,
+    "recorded_EOG_required": true,
+    "task_relevant_EMG_required": true,
+    "kinematics_substitutes_for_EMG": false,
+    "named_geometry_required": true,
+    "selected_payload_cap_bytes": 17179869184,
+    "total_incremental_disk_cap_bytes": 21474836480,
+    "all_operation_authorities_false": true,
+    "pending_this_exact_commit_remote_green": true
+  },
+  "operation_authority": {
+    "artifact_only_source_research_authorization_packet": true,
+    "source_specific_metadata_network_research": false,
+    "web_search_or_provider": false,
+    "live_transport_canary": false,
+    "real_payload_or_header_access": false,
+    "event_annotation_signal_target_or_label_access": false,
+    "acquisition_or_derivative_creation": false,
+    "model_checkpoint_training_inference_prediction_or_score": false,
+    "language_model_or_provider": false,
+    "stream_device_or_hardware": false,
+    "touch_other_project": false,
+    "cleanup_or_delete": false,
+    "release_or_publish": false,
+    "scientific_claim_upgrade": false
+  },
+  "claim_boundary": {
+    "generated_transport_admission_proven": true,
+    "fresh_source_admission_rules_frozen_after_remote_green": true,
+    "fresh_scientific_source_selected": false,
+    "real_EEG_or_sensor_header_accessed_by_this_transition": false,
+    "neural_advantage_established": false,
+    "unseen_person_generalization_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "motor_cortex_or_movement_intention_established": false,
+    "thought_or_language_decoding_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_or_clinical_value_established": false
+  },
+  "next_gate": {
+    "tier": "artifact_only_all_false",
+    "action": "draft_one_bounded_public_metadata_research_authorization_packet_binding_FMSR1_after_this_registration_is_remotely_green",
+    "source_specific_network_request_authorized": false,
+    "real_data_transaction_authorized": false,
+    "scientific_claim_upgrade_allowed": false
+  }
+}

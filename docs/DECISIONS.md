@@ -14920,3 +14920,17 @@ green; only then may the single generated qualification run.
   make only an all-false artifact-only fresh-source research preregistration
   eligible next. Promote no source and open no metadata-network, canary,
   payload, header, model, score, device, release, or claim authority.
+- 2026-08-29: Accept NPA1 proof-only closeout `2ec3d4b` after Base Python
+  `99188620896`, Optional Neuro Readers `99188621003`, and CI `33285776358`
+  passed on GitHub `main`. Freeze all-false `FMSR1-v0` around one motor-task
+  scientific lane. Require at least ten complete unseen participants,
+  synchronized EEG/EOG/task-relevant EMG for every selected participant,
+  named geometry, cue/pre-cue/posterior/timing/derangement controls, immutable
+  official identity, reusable payload licensing, a 16 GiB selected-payload cap
+  inside 20 GiB total incremental disk, and no participant dropping.
+  Kinematics cannot replace EMG for a beyond-muscle claim. Route incomplete
+  sources to partial, bridge, engineering-only, or park; allow
+  `NO_QUALIFYING_SOURCE` without weakening the gates. Select no source and keep
+  every network, real-data, model, score, device, release, and claim authority
+  false. After this exact registration is remotely green, only an artifact-
+  only bounded public-metadata authorization packet may be prepared next.

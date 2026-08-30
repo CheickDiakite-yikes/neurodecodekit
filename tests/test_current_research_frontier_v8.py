@@ -59,17 +59,15 @@ class CurrentResearchFrontierV8Tests(unittest.TestCase):
             }:
                 self.assertFalse(value, key)
 
-    def test_current_control_plane_names_v8_and_NPA1(self) -> None:
-        for relative in (
-            "AGENTS.md",
-            "README.md",
-            "START_HERE.md",
-            "docs/CODEX_HANDOFF.md",
-            "docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md",
-        ):
-            text = (ROOT / relative).read_text(encoding="utf-8")[:16_000]
-            self.assertIn("current_research_frontier.v8.json", text, relative)
-            self.assertIn("NPA1-G", text, relative)
+    def test_v8_preserves_its_historical_control_plane(self) -> None:
+        self.assertIn("NPA1_G", self.frontier["status"])
+        self.assertEqual(
+            self.frontier["next_gate"]["tier"], "Tier_A_artifact_only_no_network"
+        )
+        self.assertEqual(
+            self.frontier["next_gate"]["action"],
+            "draft_and_remotely_green_an_all_false_fresh_source_research_preregistration_with_candidate_license_nuisance_participant_geometry_storage_and_metadata_boundaries",
+        )
 
 
 if __name__ == "__main__":

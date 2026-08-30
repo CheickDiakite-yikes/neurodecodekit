@@ -10,8 +10,8 @@
 > Scientific strategy, updated 2026-08-29: read
 > `docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md`, then
 > `docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md`, then
-> `registries/scientific_knowledge_ledger.v0.json`. Dreyer remains the parked
-> predecessor. The prospective scientific question is `OFNER-C6R-1`: public
+> `registries/scientific_knowledge_ledger.v0.json`. Dreyer and Ofner are parked
+> predecessors. The former prospective question was `OFNER-C6R-1`: public
 > metadata selected 15 participants / 150 original motor-imagery GDF files /
 > 13,748,417,608 bytes with reported 61 EEG, three EOG, and 32 hand/arm movement
 > channels. Its generated selector and header parser passed their synthetic
@@ -22,18 +22,25 @@
 > was observed. Runtime was 1.1932796670589596 seconds, peak RSS was 48,021,504
 > bytes, and no payload was retained. This is not a biological result. Never
 > retry, rerun, repair, resume, substitute, reinterpret, or reopen its ignored
-> marker. No Tier C packet is active. Read
-> The exact proof closeout passed Base Python `99174411928`, Optional Neuro
+> marker. No Tier C packet is active. The exact Ofner proof closeout passed Base Python `99174411928`, Optional Neuro
 > Readers `99174412006`, and CI `33280371097` on GitHub `main`. Generated-only
 > `NPA1-G` then passed at exact commit `2e164ff`, Base Python `99184746988`,
 > Optional Neuro Readers `99184747065`, and CI `33284320443`: two matching
 > seven-profile replays and 37 refusal families, 0.003375791013240814 seconds,
-> 22,577,152-byte peak RSS, zero network, and zero retained payload. Read
-> `registries/current_research_frontier.v8.json`; its predecessor
-> `registries/current_research_frontier.v7.json` and historical
+> 22,577,152-byte peak RSS, zero network, and zero retained payload. The NPA1
+> proof closeout then passed Base Python `99188620896`, Optional Neuro Readers
+> `99188621003`, and CI `33285776358` at exact commit `2ec3d4b` on GitHub
+> `main`. Read `registries/current_research_frontier.v9.json`; its predecessor
+> `registries/current_research_frontier.v8.json`, predecessor
+> `registries/current_research_frontier.v7.json`, and historical
 > `registries/current_research_frontier.v6.json` remain immutable.
-> No fresh source is promoted. Next draft only an all-false artifact-only
-> fresh-source research preregistration. Any source metadata network, real
+> No fresh source is promoted. `FMSR1-v0` freezes a motor-only source gate:
+> at least ten complete participants, synchronized EEG/EOG/task-relevant EMG,
+> named geometry, full controls, reusable licensing, 16 GiB selected payload,
+> and 20 GiB total incremental disk. Partial-control sources cannot be promoted,
+> and `NO_QUALIFYING_SOURCE` is valid. After this exact registration is remotely
+> green, next draft only an all-false bounded metadata-research authorization
+> packet. Any source metadata network, real
 > canary, header, payload, model, or score operation remains separately gated.
 > COMM-P0-G FS3 remains paused.
 
@@ -210,7 +217,7 @@
 Historical exact control-plane label retained for proof compatibility:
 `Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight`.
 
-Start with `registries/current_research_frontier.v8.json`, the machine-readable
+Start with `registries/current_research_frontier.v9.json`, the machine-readable
 snapshot of the consumed lanes, green NPA1 engineering proof, claim boundary,
 and next transition. Version 7 remains its immutable generated-work predecessor.
 

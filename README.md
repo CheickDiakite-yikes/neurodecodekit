@@ -76,13 +76,24 @@ network, and zero retained payload. The implementation contains no live
 network opener or real execution command. Read the
 [implementation](docs/NEURAL_PAYLOAD_ADMISSION_GENERATED_IMPLEMENTATION.md)
 and [proof closeout](docs/NEURAL_PAYLOAD_ADMISSION_GENERATED_QUALIFICATION_PROOF_CLOSEOUT.md).
+The proof closeout itself is green at exact commit `2ec3d4b`, Base Python
+`99188620896`, Optional Neuro Readers `99188621003`, and CI `33285776358` on
+GitHub `main`.
 
 This closes a costly engineering uncertainty, not a scientific one. No fresh
-source has been promoted, and no EEG was accessed. The next bounded step is an
-all-false fresh-source research preregistration; source-specific metadata
-network access remains closed, and any real 256-byte canary is still Tier C.
-See the [current machine frontier](registries/current_research_frontier.v8.json).
-The predecessors `registries/current_research_frontier.v7.json` and
+source has been promoted, and no EEG was accessed. The new all-false
+[`FMSR1-v0` source-admission registration](docs/FRESH_MOTOR_SOURCE_RESEARCH_PREREGISTRATION.md)
+freezes one motor-task question: at least ten complete unseen participants,
+synchronized EEG/EOG/task-relevant EMG, named geometry, full spatial and
+temporal controls, reusable licensing, and a 16 GiB selected-payload cap inside
+20 GiB total incremental disk. Kinematics may strengthen the evidence but
+cannot substitute for EMG in a beyond-muscle claim. Partial datasets cannot be
+promoted, and `NO_QUALIFYING_SOURCE` is a valid outcome. Source-specific
+metadata network access remains closed, and any real 256-byte canary is still
+Tier C. See the
+[current machine frontier](registries/current_research_frontier.v9.json).
+The predecessors `registries/current_research_frontier.v8.json`,
+`registries/current_research_frontier.v7.json`, and
 `registries/current_research_frontier.v6.json` remain immutable history.
 COMM-P0 FS3 remains paused as an adjacent diagnostic.
 
@@ -119,9 +130,11 @@ is artifact-only transport/source research, not another execution.
 ## Current Research Frontier
 
 The latest irreversible result is the consumed Ofner range-header transport H0.
-The latest reversible result is green generated-only `NPA1-G` transport
-admission. The next active capability is only an artifact-only fresh-source
-research preregistration; no source-specific network or real operation is active.
+The latest reversible results are green generated-only `NPA1-G` transport
+admission and the all-false `FMSR1-v0` source-admission registration pending
+this exact commit's remote proof. The next eligible work after that proof is
+only an artifact-only bounded metadata-research authorization packet; no
+source-specific network or real operation is active.
 The following COMM-P0-G material is retained as exact
 adjacent-engineering history and is paused. Its proof architecture has a prospective, resource-aware
 successor: Amendment 3 replaces the second redundant full
@@ -668,9 +681,10 @@ score or claim upgrade occurred. Repeated convergence warnings at the frozen
 80-iteration cap were recorded without changing or rerunning the models.
 
 The machine-readable current state is
-[`registries/current_research_frontier.v8.json`](registries/current_research_frontier.v8.json).
-It freezes the consumed Ofner lane, green generated NPA1 proof, claim boundary,
-and exact next transition so handoffs cannot silently return to an older gate.
+[`registries/current_research_frontier.v9.json`](registries/current_research_frontier.v9.json).
+It freezes the consumed Ofner lane, green generated NPA1 proof, all-false
+`FMSR1-v0` source-admission registration, claim boundary, and exact next
+transition so handoffs cannot silently return to an older gate.
 Prediction
 freeze `2517fd1` passed Base job `97996323987`, Optional job `97996324203`, and
 CI `32908059166`.

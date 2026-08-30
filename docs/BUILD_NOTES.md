@@ -16554,3 +16554,12 @@ and require both remote jobs green before the one official qualification.
   closeout binds six exact artifacts / 89,732 bytes and does not rerun the
   qualification. No scientific claim changed; the next reversible work is an
   all-false artifact-only fresh-source research preregistration.
+- 2026-08-29: NPA1 proof closeout `2ec3d4b` passed Base Python `99188620896`,
+  Optional Neuro Readers `99188621003`, and CI `33285776358` on GitHub `main`.
+  Added all-false `FMSR1-v0`, its machine contract, compact v9 frontier, and
+  focused invariants. The source gate is motor-only and noncompensatory: at
+  least ten complete participants, synchronized EEG/EOG/task-relevant EMG,
+  named geometry, full spatial and temporal controls, reusable licensing, 16
+  GiB selected payload inside 20 GiB total disk, and no participant dropping.
+  No candidate was selected, no network or real/private path was read, and no
+  payload, model, score, or claim operation occurred.

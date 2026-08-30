@@ -2,8 +2,9 @@
 
 > **Current scientific frontier, 2026-08-29:** read the Ofner result and proof
 > closeouts, the NPA1 implementation and proof closeout,
-> `registries/current_research_frontier.v8.json`, and the scientific knowledge
+> `registries/current_research_frontier.v9.json`, and the scientific knowledge
 > ledger first. The predecessor
+> `registries/current_research_frontier.v8.json`, predecessor
 > `registries/current_research_frontier.v7.json` and historical
 > `registries/current_research_frontier.v6.json` remain immutable. The
 > exact `OFNER-C6R-1-HL` decision, generated-qualified wrapper, and activation
@@ -23,8 +24,14 @@
 > matching seven-profile replays and 37 exact refusal families in
 > 0.003375791013240814 seconds at 22,577,152-byte peak RSS, with zero network
 > and zero retained payload. No source is promoted and this is not EEG evidence.
-> Next draft and remotely green only an all-false artifact-only fresh-source
-> research preregistration. Source-specific metadata network access and any
+> NPA1 proof closeout `2ec3d4b` passed Base `99188620896`, Optional
+> `99188621003`, and CI `33285776358` on GitHub `main`. `FMSR1-v0` now freezes
+> an all-false motor-only source gate with at least ten complete participants,
+> synchronized EOG and task-relevant EMG, named geometry, full controls, a
+> 16 GiB selected-payload cap inside 20 GiB total incremental disk, and a valid
+> no-qualifying-source outcome. After this exact registration is remotely
+> green, next draft only its artifact-only bounded metadata-research
+> authorization packet. Source-specific metadata network access and any
 > real 256-byte canary remain closed; the canary is Tier C. Preserve the
 > unrelated tracker inspection file.
 
