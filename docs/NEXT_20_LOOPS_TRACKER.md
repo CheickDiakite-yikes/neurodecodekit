@@ -14,12 +14,15 @@
 > contact and no real transport is exposed. Its proof-only closeout binds six
 > exact artifacts / 162,295 bytes. Exact closeout `fac60bf` passed Base
 > `99330615390`, Optional `99330615564`, and CI `33338847448` on GitHub
-> `main`. The all-false A1 correction now defines separate future
+> `main`. The all-false A1 correction is exact-green at `8fe98df`, Base
+> `99335260650`, Optional `99335260756`, and CI `33340527773`; it defines separate future
 > revision/snapshot witness, proof, live-CI, and discovery stages while leaving
 > all source and CI profiles null and M0 non-armable. Public discovery still
-> requires a fresh successor packet and exact decision. No source, EEG, model,
+> requires a fresh successor packet and exact decision. Generated-only
+> `FMSR1-R1-G-v0` is now preregistered pending this exact commit's remote proof;
+> it freezes 82 refusal mutations and no live command. No source, EEG, model,
 > score, live result, or scientific claim has been created.
-> Read `registries/current_research_frontier.v15.json` and
+> Read `registries/current_research_frontier.v16.json` and
 > `docs/FRESH_MOTOR_SOURCE_DISCOVERY_IMPLEMENTATION.md` first.
 
 > **COMM-P0-G FS3 prospective successor (2026-08-28):** exact Amendment 3

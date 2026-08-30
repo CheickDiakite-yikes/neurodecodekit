@@ -76,9 +76,10 @@ its ignored marker or private paths.
 
 `OFNER-C6R-1` remains a scientifically useful but consumed predecessor, not the
 active flagship. Read the result and proof closeouts,
-`registries/current_research_frontier.v15.json`,
+`registries/current_research_frontier.v16.json`,
 `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`, and the knowledge ledger first.
-Its immutable predecessor is `registries/current_research_frontier.v14.json`;
+Its immutable predecessor is `registries/current_research_frontier.v15.json`;
+the earlier immutable predecessor is `registries/current_research_frontier.v14.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v13.json`;
 the earlier immutable predecessors are `registries/current_research_frontier.v12.json`,
 `registries/current_research_frontier.v11.json`, and
@@ -142,9 +143,18 @@ live authority. Read the all-false admission correction next. It separates a
 future complete revision or opaque snapshot witness from discovery and
 requires a fresh live GitHub CI verification before each future source-contact
 stage. All five source profiles and the exact CI profile remain null, M0 is
-not rearmed, no Tier C packet is active, and this correction itself must become
-remotely green before generated-only admission qualification is eligible.
-Candidate-specific metadata,
+not rearmed, and no Tier C packet is active. The correction's exact green state
+is `8fe98df7e08e7e1e40860e6023832c3b092d78d2`, Base Python
+`99335260650`, Optional Neuro Readers `99335260756`, and CI `33340527773`
+on GitHub `main`; branch CI `33340523548` also passed both required jobs.
+Read the additive generated-only `FMSR1-R1-G-v0` preregistration and contract
+next. They freeze a separate dependency-free revision/snapshot/attempt-specific
+CI validator, 82 named refusals, durable generated marker mechanics, one
+thread, 30 seconds, 256 MiB RSS, 4 MiB generated input, 1 MiB report, 2 MiB
+temporary disk, and zero network or real-source bytes. The preregistration must
+become exact-green before implementation; the implementation must then become
+exact-green before one generated qualification. No live command exists and no
+GitHub or official-index request is authorized. Candidate-specific metadata,
 transport canary, header, payload, model, score, release, and claim work remain
 closed. Do not treat generated source selection as a real candidate or neural
 evidence.

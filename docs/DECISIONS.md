@@ -15025,3 +15025,12 @@ green; only then may the single generated qualification run.
   all five source profiles and the exact CI profile null. The correction
   authorizes only its own strategy commit and CI; every network, real-data,
   model, score, release, and claim operation remains false.
+- 2026-08-30: Accept the A1 correction state after exact commit `8fe98df`
+  passed Base Python `99335260650`, Optional Neuro Readers `99335260756`, and
+  CI `33340527773` on GitHub `main`; branch CI `33340523548` also passed both
+  jobs. Freeze generated-only preregistration `FMSR1-R1-G-v0` as the next
+  reversible gate. Require an additive no-network module, exact ordered page
+  ledgers, stronger global-revision evidence, attempt-specific CI schemas,
+  durable generated marker mechanics, 82 named refusals, and fixed resource
+  caps. Do not implement until this registration is exact-green and do not
+  contact GitHub or an official index under this contract.

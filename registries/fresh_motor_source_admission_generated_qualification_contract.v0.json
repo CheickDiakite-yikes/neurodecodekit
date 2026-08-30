@@ -1,0 +1,431 @@
+{
+  "schema_name": "neurodecodekit.fresh_motor_source_admission_generated_qualification_contract",
+  "schema_version": "0.1.0",
+  "protocol_id": "FMSR1-R1-G-v0",
+  "recorded_at": "2026-08-30",
+  "status": "generated_only_preregistration_pending_this_exact_commit_and_remote_proof",
+  "human_document": "docs/FRESH_MOTOR_SOURCE_ADMISSION_GENERATED_QUALIFICATION_PREREGISTRATION.md",
+  "predecessor": {
+    "correction_id": "FMSR1-DISCOVERY-M0-A1",
+    "correction_commit": "9b462e17fae4ae122d2852bbadfb1e90c82442ca",
+    "exact_green_state_commit": "8fe98df7e08e7e1e40860e6023832c3b092d78d2",
+    "main_CI_run_id": 33340527773,
+    "main_base_python_job_id": 99335260650,
+    "main_optional_neuro_readers_job_id": 99335260756,
+    "branch_CI_run_id": 33340523548,
+    "branch_base_python_job_id": 99335218249,
+    "branch_optional_neuro_readers_job_id": 99335218398,
+    "both_required_main_jobs_green": true,
+    "both_required_branch_jobs_green": true,
+    "on_GitHub_main": true,
+    "bound_artifact_count": 6,
+    "bound_artifact_bytes": 92513,
+    "canonical_artifact_set_sha256": "537f9b6924e5462535473feb911dde9f5b200af8664f685657d723b81a5e7ae2"
+  },
+  "additive_surface": {
+    "module": "src/neurodecodekit/datasets/fresh_motor_source_admission.py",
+    "CLI": "src/neurodecodekit/fmsr1_admission_cli.py",
+    "commands": [
+      "plan",
+      "qualify-generated"
+    ],
+    "execute_command_present": false,
+    "URL_host_credential_or_source_path_option_present": false,
+    "network_imports_allowed": [],
+    "existing_discovery_module_modified": false,
+    "base_dependency_added": false
+  },
+  "strict_input_grammar": {
+    "encoding": "UTF-8_without_BOM",
+    "duplicate_JSON_keys_allowed": false,
+    "trailing_JSON_allowed": false,
+    "NUL_allowed": false,
+    "floating_point_or_nonfinite_numbers_allowed": false,
+    "booleans_as_integers_allowed": false,
+    "Unicode_confusable_enums_or_job_names_allowed": false,
+    "security_relevant_fields_and_types_exact": true,
+    "unknown_unrelated_GitHub_fields_after_strict_decode": "ignored",
+    "unknown_authority_profile_or_revision_fields": "refuse",
+    "maximum_JSON_depth": 16,
+    "maximum_string_bytes": 65536,
+    "maximum_container_items": 4096
+  },
+  "refusal_precedence": [
+    "AUTHORITY_REFUSE",
+    "QUALIFICATION_NETWORK_REFUSE",
+    "ORDER_REFUSE",
+    "RESOURCE_REFUSE",
+    "ENCODING_REFUSE",
+    "DUPLICATE_REFUSE",
+    "SCHEMA_REFUSE",
+    "TRANSPORT_REFUSE",
+    "IDENTITY_REFUSE",
+    "REVISION_REFUSE",
+    "SNAPSHOT_REFUSE",
+    "CI_RUN_REFUSE",
+    "CI_JOB_REFUSE"
+  ],
+  "generated_index_profiles": [
+    {
+      "index_id": "OPENNEURO_CRN",
+      "generated_mode": "SOURCE_GLOBAL_REVISION"
+    },
+    {
+      "index_id": "NEMAR",
+      "generated_mode": "OPAQUE_COMPLETE_SNAPSHOT_REPLAY"
+    },
+    {
+      "index_id": "PHYSIONET",
+      "generated_mode": "SOURCE_GLOBAL_REVISION"
+    },
+    {
+      "index_id": "GIGADB",
+      "generated_mode": "OPAQUE_COMPLETE_SNAPSHOT_REPLAY"
+    },
+    {
+      "index_id": "BNCI_HORIZON_2020",
+      "generated_mode": "OPAQUE_COMPLETE_SNAPSHOT_REPLAY"
+    }
+  ],
+  "revision_modes": {
+    "exactly_one_mode_payload_required": true,
+    "generated_mode_assignment_admits_real_source": false,
+    "SOURCE_GLOBAL_REVISION": {
+      "required_fields": [
+        "index_id",
+        "issuer_id",
+        "source_host",
+        "revision_kind",
+        "extraction_location",
+        "revision_raw_bytes",
+        "revision_raw_bytes_sha256",
+        "extraction_rule_sha256",
+        "request_profile_sha256",
+        "scope_evidence_sha256",
+        "complete_registered_traversal_scope",
+        "pre_traversal_revision_raw_bytes_sha256",
+        "post_traversal_revision_raw_bytes_sha256"
+      ],
+      "pre_and_post_observations_must_match": true,
+      "complete_registered_traversal_scope_must_be_true": true,
+      "prohibited_standalone_surrogates": [
+        "ETag",
+        "Last-Modified",
+        "body_sha256",
+        "schema_id",
+        "API_version",
+        "frontend_build",
+        "unbound_scope_boolean"
+      ]
+    },
+    "OPAQUE_COMPLETE_SNAPSHOT_REPLAY": {
+      "parallel_arrays_allowed": false,
+      "ordered_pages_field": "pages",
+      "required_page_fields": [
+        "ordinal",
+        "request_identity_sha256",
+        "redirect_transcript",
+        "pagination_identity_sha256",
+        "response_body_bytes",
+        "response_body_sha256",
+        "next_request_identity_sha256",
+        "terminal_state"
+      ],
+      "first_ordinal": 0,
+      "exactly_one_final_terminal_page": true,
+      "terminal_page_next_request_must_be_null": true,
+      "gap_duplicate_cycle_fork_or_reorder_allowed": false,
+      "candidate_fields_parsed_retained_ranked_or_selected": false,
+      "poison_candidate_fixture_required": true
+    }
+  },
+  "generated_CI_profile": {
+    "response_count": 2,
+    "run_endpoint_kind": "exact_workflow_run_attempt",
+    "jobs_endpoint_kind": "jobs_for_exact_run_attempt_per_page_100_page_1",
+    "current_refs_heads_main_request_present": false,
+    "main_semantics": "historical_trigger_branch_reported_by_exact_run",
+    "workflow_blob_hash_proven_by_run_and_jobs_responses": false,
+    "security_fields": [
+      "numeric_repository_id",
+      "numeric_owner_id",
+      "numeric_head_repository_id",
+      "numeric_head_owner_id",
+      "numeric_workflow_id",
+      "numeric_run_id",
+      "head_sha",
+      "event",
+      "head_branch",
+      "run_attempt",
+      "status",
+      "conclusion",
+      "required_job_names",
+      "required_job_ids"
+    ],
+    "repository_and_head_repository_IDs_must_match": true,
+    "head_branch": "main",
+    "run_attempt": 1,
+    "run_status": "completed",
+    "run_conclusion": "success",
+    "required_jobs": [
+      "Base Python",
+      "Optional Neuro Readers"
+    ],
+    "job_total_count": 2,
+    "job_list_length": 2,
+    "job_pagination_allowed": false,
+    "job_names_case_sensitive_without_normalization": true,
+    "HTTP_status": 200,
+    "redirects_allowed": false,
+    "credentials_cookies_or_conditional_requests_allowed": false,
+    "content_encoding": "identity_or_absent",
+    "maximum_response_bytes_each": 1048576,
+    "maximum_response_bytes_cumulative": 2097152,
+    "maximum_request_seconds": 10,
+    "maximum_total_seconds": 30,
+    "maximum_server_date_skew_seconds": 300,
+    "Age_header": "absent_or_zero",
+    "real_API_media_type_version_and_request_identifiers_frozen": false,
+    "live_profile_armable": false
+  },
+  "environment_and_transport_firewall": {
+    "rejected_exact_environment_variables": [
+      "HTTP_PROXY",
+      "HTTPS_PROXY",
+      "ALL_PROXY",
+      "NO_PROXY",
+      "http_proxy",
+      "https_proxy",
+      "all_proxy",
+      "no_proxy",
+      "SSL_CERT_FILE",
+      "SSL_CERT_DIR",
+      "REQUESTS_CA_BUNDLE",
+      "CURL_CA_BUNDLE"
+    ],
+    "generic_proxy_environment_name_detection": true,
+    "system_proxy_injection_allowed": false,
+    "caller_supplied_SSL_context_allowed": false,
+    "alternate_host_or_port_allowed": false,
+    "nonglobal_or_postconnect_peer_allowed": false,
+    "default_opener_fallback_allowed": false,
+    "DNS_socket_TLS_HTTP_or_credential_tripwire_count": 0,
+    "captured_real_response_fixture_allowed": false
+  },
+  "consumed_marker_contract": {
+    "scope": "fresh_qualification_created_temporary_directory_only",
+    "parent_symlink_or_non_directory_allowed": false,
+    "open_flags": [
+      "O_CREAT",
+      "O_EXCL",
+      "O_WRONLY",
+      "O_NOFOLLOW"
+    ],
+    "file_mode_octal": "0600",
+    "exact_canonical_marker_bytes": true,
+    "file_fsync_before_close": true,
+    "no_follow_parent_directory_fsync": true,
+    "exactly_one_creator": true,
+    "later_creator_refuses_before_network": true,
+    "fault_injection_points": [
+      "file_fsync",
+      "parent_directory_fsync"
+    ],
+    "legal_event_sequence": [
+      "marker_durable",
+      "CI_W0_success",
+      "source_contact_started"
+    ],
+    "CI_W0_reusable_as_CI_W1": false,
+    "receipt_resume_after_process_exit": false,
+    "mutable_handoff_allowed": false,
+    "cleanup_scope": "only_invocation_created_generated_temporary_directory"
+  },
+  "accepted_replay_contract": {
+    "deterministic_replays": 2,
+    "generated_index_profiles_per_replay": 5,
+    "revision_modes_covered": 2,
+    "CI_run_attempt_responses_per_replay": 1,
+    "CI_jobs_attempt_responses_per_replay": 1,
+    "legal_ordering_sequences_per_replay": 1,
+    "runtime_and_RSS_excluded_from_deterministic_digest": true
+  },
+  "refusal_mutations": {
+    "AUTHORITY_REFUSE": [
+      "contract_digest_drift",
+      "unregistered_stage",
+      "saved_receipt_as_authority",
+      "incomplete_live_profile",
+      "captured_real_response_fixture"
+    ],
+    "ORDER_REFUSE": [
+      "network_before_marker",
+      "existing_consumed_marker",
+      "marker_after_CI",
+      "CI_W0_reused_as_CI_W1",
+      "process_resume_from_receipt",
+      "mutable_receipt_handoff",
+      "source_contact_before_CI",
+      "post_CI_process_exit_resume"
+    ],
+    "ENCODING_REFUSE": [
+      "invalid_UTF8",
+      "UTF8_BOM",
+      "NUL_byte",
+      "trailing_JSON",
+      "nonfinite_number",
+      "depth_or_container_cap"
+    ],
+    "DUPLICATE_REFUSE": [
+      "duplicate_root_key",
+      "duplicate_nested_key",
+      "duplicate_index_id",
+      "duplicate_job_id",
+      "duplicate_singleton_header"
+    ],
+    "SCHEMA_REFUSE": [
+      "unknown_authority_field",
+      "missing_required_field",
+      "boolean_numeric_identity",
+      "float_numeric_identity",
+      "confusable_enum_or_job_name",
+      "mixed_mode_payload"
+    ],
+    "IDENTITY_REFUSE": [
+      "wrong_index_or_issuer",
+      "wrong_request_profile_hash",
+      "cross_source_evidence",
+      "ledger_identity_drift"
+    ],
+    "REVISION_REFUSE": [
+      "weak_ETag_surrogate",
+      "Last_Modified_surrogate",
+      "body_hash_or_schema_surrogate",
+      "partial_scope",
+      "pre_post_revision_drift"
+    ],
+    "SNAPSHOT_REFUSE": [
+      "snapshot_page_gap",
+      "snapshot_cycle_or_fork",
+      "snapshot_reordered_body_hash",
+      "snapshot_redirect_omission",
+      "snapshot_pagination_conflict",
+      "snapshot_early_terminal",
+      "snapshot_terminal_with_next"
+    ],
+    "TRANSPORT_REFUSE": [
+      "proxy_or_custom_CA_environment",
+      "custom_SSL_context_or_system_proxy",
+      "redirect_or_alternate_host_port",
+      "credential_cookie_or_conditional_request",
+      "nonglobal_or_postconnect_peer",
+      "cache_or_content_encoding"
+    ],
+    "CI_RUN_REFUSE": [
+      "wrong_repository_or_owner_ID",
+      "wrong_head_repository_or_owner_ID",
+      "wrong_workflow_or_run_ID",
+      "wrong_head_SHA",
+      "wrong_event_or_branch",
+      "wrong_attempt",
+      "noncompleted_or_nonsuccess_run",
+      "stale_Date_or_nonzero_Age",
+      "wrong_API_media_or_version_profile"
+    ],
+    "CI_JOB_REFUSE": [
+      "job_total_count_or_pagination",
+      "missing_required_job",
+      "duplicate_required_job_name",
+      "wrong_job_ID",
+      "wrong_job_run_or_attempt",
+      "wrong_job_head_SHA",
+      "skipped_or_nonsuccess_job",
+      "null_or_confusable_job_name"
+    ],
+    "RESOURCE_REFUSE": [
+      "request_count_cap",
+      "wire_or_decoded_byte_cap",
+      "runtime_or_RSS_cap",
+      "generated_output_or_temp_disk_cap",
+      "thread_worker_or_file_count_cap"
+    ],
+    "QUALIFICATION_NETWORK_REFUSE": [
+      "DNS_socket_TLS_HTTP_tripwire",
+      "credential_environment_tripwire",
+      "default_opener_or_network_import_tripwire"
+    ],
+    "marker_durability": [
+      "marker_symlink_or_nonregular_parent",
+      "marker_create_flags_or_permissions",
+      "marker_file_fsync_failure",
+      "marker_parent_fsync_failure",
+      "marker_atomic_second_creator"
+    ]
+  },
+  "refusal_mutation_count": 82,
+  "resource_contract": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "maximum_runtime_seconds": 30,
+    "maximum_absolute_peak_RSS_bytes": 268435456,
+    "maximum_generated_input_bytes": 4194304,
+    "maximum_aggregate_report_bytes": 1048576,
+    "maximum_temporary_generated_disk_bytes": 2097152,
+    "maximum_temporary_generated_file_count": 16,
+    "network_bytes": 0,
+    "real_or_captured_response_bytes": 0,
+    "real_source_or_protected_reads": 0,
+    "model_training_inference_prediction_or_score_runs": 0
+  },
+  "ordered_barriers": [
+    "R1_G_preregistration_exact_green",
+    "R1_G_implementation_and_tests_exact_green",
+    "one_bounded_generated_only_qualification",
+    "R1_G_result_and_implementation_identity_exact_green",
+    "R1_G_proof_only_closeout_exact_green",
+    "fresh_all_false_R1_W_Tier_C_packet_may_then_be_proposed"
+  ],
+  "operation_authority_after_exact_registration_green": {
+    "additive_generated_only_implementation": true,
+    "generated_fixture_tests": true,
+    "one_bounded_generated_only_qualification_after_implementation_exact_green": true,
+    "cleanup_only_invocation_created_generated_temporary_directory": true,
+    "network_or_GitHub_API": false,
+    "official_index_contact_or_source_witness": false,
+    "captured_real_response_bytes": false,
+    "candidate_metadata_or_selection": false,
+    "payload_header_signal_event_annotation_target_or_label": false,
+    "model_checkpoint_training_inference_prediction_or_score": false,
+    "language_model_or_provider": false,
+    "stream_device_or_hardware": false,
+    "release_or_publish": false,
+    "scientific_claim_upgrade": false
+  },
+  "scientific_evidence_coordinate": {
+    "dimension_1_spatial": "unchanged_not_tested_on_a_fresh_admitted_source",
+    "dimension_2_temporal": "unchanged_not_tested_on_a_fresh_admitted_source",
+    "dimension_3_physiological": "unchanged_not_tested_on_a_fresh_admitted_source",
+    "dimension_4_task_autonomy": "unchanged_source_not_selected",
+    "dimension_5_population_generalization": "unchanged_source_not_selected",
+    "dimension_6_translation": "unchanged_not_started",
+    "live_CI_parser_is_live_neural_translation": false,
+    "live_motor_success_validates_language": false,
+    "communication_requires_separate_preregistration": true,
+    "communication_requires_independently_scored_LM_only_baseline": true
+  },
+  "claim_boundary": {
+    "source_authenticity_established": false,
+    "external_CI_authenticity_established": false,
+    "real_source_admitted": false,
+    "real_source_metadata_accessed": false,
+    "real_EEG_accessed": false,
+    "neural_advantage_established": false,
+    "motor_cortex_or_movement_intention_established": false,
+    "unseen_person_generalization_established": false,
+    "thought_or_language_decoding_established": false,
+    "causal_or_live_decoding_established": false,
+    "hardware_or_clinical_value_established": false
+  },
+  "next_gate": "commit_push_and_green_this_exact_generated_only_preregistration_before_writing_the_additive_R1_G_module_or_running_any_qualification"
+}

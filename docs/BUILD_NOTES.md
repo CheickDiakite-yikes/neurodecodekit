@@ -16626,3 +16626,12 @@ and require both remote jobs green before the one official qualification.
   system-trust residual risk. All five source profiles and every exact CI
   identity remain null; no network, real-data, model, score, or claim operation
   occurred.
+- 2026-08-30: A1 exact state `8fe98df` passed Base Python `99335260650`,
+  Optional Neuro Readers `99335260756`, and CI `33340527773` on GitHub `main`;
+  branch CI `33340523548` also passed both jobs. Added generated-only
+  `FMSR1-R1-G-v0` preregistration and frontier v16 after three independent
+  critics rejected implementation before registration. The contract resolves
+  parallel snapshot arrays, weak revision scope, ambiguous current-ref CI
+  semantics, missing proxy/custom-CA refusals, and marker durability. It
+  freezes 82 mutations and zero network or real-source bytes. No implementation
+  or qualification ran in this milestone.

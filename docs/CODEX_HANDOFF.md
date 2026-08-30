@@ -2,10 +2,11 @@
 
 > **Current scientific frontier, 2026-08-30:** read the Ofner result and proof
 > closeouts, the NPA1 implementation and proof closeout,
-> `registries/current_research_frontier.v15.json`,
+> `registries/current_research_frontier.v16.json`,
 > `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`, and the scientific knowledge
 > ledger first. Its immutable predecessor is
-> `registries/current_research_frontier.v14.json`; earlier predecessors are
+> `registries/current_research_frontier.v15.json`; earlier predecessors are
+> `registries/current_research_frontier.v14.json`,
 > `registries/current_research_frontier.v13.json`,
 > `registries/current_research_frontier.v12.json`,
 > `registries/current_research_frontier.v11.json` and
@@ -52,8 +53,13 @@
 > `99330615390`, Optional `99330615564`, and CI `33338847448` on GitHub
 > `main`; it creates no live authority. Read the all-false A1 admission
 > correction. It keeps M0 non-armable, leaves every exact index and CI profile
-> null, and prospectively separates witness, proof, and discovery. It must
-> become remotely green before generated-only admission qualification. All
+> null, and prospectively separates witness, proof, and discovery. Exact state
+> `8fe98df` passed Base `99335260650`, Optional `99335260756`, and CI
+> `33340527773` on GitHub `main`; branch CI `33340523548` also passed both
+> jobs. The next gate is the pending generated-only `FMSR1-R1-G-v0`
+> preregistration. It freezes a separate no-network validator with 82 named
+> refusals and no live command; implementation remains false until the
+> registration is remotely green. All
 > candidate-specific, payload, model, score, release, and scientific authorities
 > remain false.
 > Preserve the unrelated tracker inspection file.

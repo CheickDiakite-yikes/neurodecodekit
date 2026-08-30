@@ -74,7 +74,13 @@ GitHub CI verification before each source-contact stage, and later candidate
 discovery. Every exact source and CI profile remains null, and no Tier C packet
 is active. Frontier v11 described the pending packet, v12 recorded the
 decision, v13 recorded the local generated implementation, v14 bound its green
-proof, and v15 records the all-false correction.
+proof, and v15 records the all-false correction. Exact correction state
+`8fe98df` passed Base `99335260650`, Optional `99335260756`, and CI
+`33340527773` on GitHub `main`. Frontier v16 now freezes the generated-only
+`FMSR1-R1-G-v0` preregistration: a separate dependency-free validator for
+revision, opaque snapshot, attempt-specific CI, and consumed-marker evidence.
+It has no live command, and implementation remains closed until the exact
+registration commit is remotely green.
 
 Historical v11 status used the exact phrase pending-decision `FMSR1-DISCOVERY-M0`; it is retained only as an immutable routing marker and
 does not describe the current decision or live authority state.

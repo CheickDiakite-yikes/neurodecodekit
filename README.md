@@ -121,6 +121,11 @@ source-contact stage, and later candidate discovery. All five source profiles,
 the exact CI profile, and every protected-operation authority remain null or
 false. Any public discovery still requires separately witnessed evidence, a
 fresh successor packet, and an exact-green decision.
+The correction is now exact-green at `8fe98df` with CI `33340527773`. The next
+reversible gate is the generated-only `FMSR1-R1-G-v0` preregistration. It
+freezes a separate dependency-free validator for source-global revisions,
+ordered opaque snapshots, exact run-attempt CI responses, and durable consumed
+markers. It exposes no live command and authorizes no GitHub or source contact.
 The [hard scientific decision tree](docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md)
 then routes one admitted source through sensitivity, confirmation,
 independent replication, and only afterward causal/live translation. Its core
@@ -132,8 +137,9 @@ and independently scored LLM-only baseline. Within the cube, posterior EEG is
 a neural spatial comparator, not part of the EOG/EMG/metadata nuisance bundle;
 the central motor-window condition must win every registered spatial,
 temporal, and physiological edge rather than merely average well. See the
-[current machine frontier](registries/current_research_frontier.v15.json).
-Its immutable predecessor is `registries/current_research_frontier.v14.json`;
+[current machine frontier](registries/current_research_frontier.v16.json).
+Its immutable predecessor is `registries/current_research_frontier.v15.json`;
+the earlier immutable predecessor is `registries/current_research_frontier.v14.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v13.json`;
 the earlier predecessors are `registries/current_research_frontier.v12.json`
 and `registries/current_research_frontier.v11.json`.
@@ -733,10 +739,11 @@ score or claim upgrade occurred. Repeated convergence warnings at the frozen
 80-iteration cap were recorded without changing or rerunning the models.
 
 The machine-readable current state is
-[`registries/current_research_frontier.v15.json`](registries/current_research_frontier.v15.json).
+[`registries/current_research_frontier.v16.json`](registries/current_research_frontier.v16.json).
 It freezes the consumed Ofner lane, green generated NPA1 proof, rejected v0
 draft, exact-green `FMSR1-v1`, discovery decision, and generated implementation,
-the green proof-only closeout, all-false A1 correction, claim boundary, and exact next transition so
+the green proof-only closeout, exact-green all-false A1 correction, pending
+generated-only R1-G preregistration, claim boundary, and exact next transition so
 handoffs cannot silently return to an older gate.
 Prediction
 freeze `2517fd1` passed Base job `97996323987`, Optional job `97996324203`, and

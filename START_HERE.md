@@ -30,8 +30,9 @@
 > 22,577,152-byte peak RSS, zero network, and zero retained payload. The NPA1
 > proof closeout then passed Base Python `99188620896`, Optional Neuro Readers
 > `99188621003`, and CI `33285776358` at exact commit `2ec3d4b` on GitHub
-> `main`. Read `registries/current_research_frontier.v15.json` and
+> `main`. Read `registries/current_research_frontier.v16.json` and
 > `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`; its predecessor
+> `registries/current_research_frontier.v15.json`, earlier predecessor
 > `registries/current_research_frontier.v14.json`, earlier predecessor
 > `registries/current_research_frontier.v13.json`, predecessor
 > `registries/current_research_frontier.v12.json`, predecessor
@@ -65,8 +66,14 @@
 > `main`; it cannot activate live work. Read the all-false A1 admission
 > correction next. It keeps M0 non-armable, leaves all five index profiles and
 > the exact live-CI profile null, and separates future witness, proof, and
-> discovery stages. All public network, payload, signal, target, model, score,
-> release, and claim authority is false.
+> discovery stages. Exact correction state `8fe98df` passed Base
+> `99335260650`, Optional `99335260756`, and CI `33340527773` on GitHub
+> `main`; branch CI `33340523548` also passed both jobs. Read the pending
+> generated-only `FMSR1-R1-G-v0` preregistration next. It freezes 82 exact
+> revision, snapshot, CI, ordering, marker, and resource refusals with no live
+> command. Implementation remains closed until the registration is green. All
+> public network, payload, signal, target, model, score, release, and claim
+> authority is false.
 > COMM-P0-G FS3 remains paused.
 
 > Dreyer H-L1R1 recovery update, 2026-08-29: exact generated coordinator
@@ -242,7 +249,7 @@
 Historical exact control-plane label retained for proof compatibility:
 `Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight`.
 
-Start with `registries/current_research_frontier.v15.json`, the machine-readable
+Start with `registries/current_research_frontier.v16.json`, the machine-readable
 snapshot of the consumed lanes, green NPA1 engineering proof, claim boundary,
 rejected v0 draft, exact-green v1 registration, discovery decision and generated
 implementation, green proof-only closeout, all-false A1 correction, and next
