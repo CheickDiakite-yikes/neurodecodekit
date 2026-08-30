@@ -11,7 +11,7 @@ Machine knowledge source:
 [`scientific_knowledge_ledger.v0.json`](../registries/scientific_knowledge_ledger.v0.json)
 
 Current machine frontier:
-[`current_research_frontier.v7.json`](../registries/current_research_frontier.v7.json)
+[`current_research_frontier.v8.json`](../registries/current_research_frontier.v8.json)
 
 ## Current Addendum: Transport Admission Before Source Promotion
 
@@ -28,12 +28,18 @@ redirect, range, Python, or server cause.
 
 `NPA1-v0` is now the reversible bridge. It orders scientific source identity,
 transport capability, HTTP framing, bounded content identity, and semantic
-sensor eligibility. Generated `NPA1-G` is next. A fresh source will be promoted
-only after it meets the nuisance-control, participant, geometry, license,
-20 GiB, and transport-admission rules. Any later real 256-byte opaque canary is
-a separately governed Tier C operation and has no scientific value by itself.
-No fresh source, network request, payload, model, score, or claim is activated
-by this plan update.
+sensor eligibility. Generated `NPA1-G` is exact-green at `2e164ff`, Base
+`99184746988`, Optional `99184747065`, and CI `33284320443`. Two matching
+seven-profile replays and 37 exact refusals passed under the frozen resource
+caps with zero network and zero retained payload. This removes transport-
+validator uncertainty but adds no biological evidence.
+
+A fresh source will be promoted only after it meets the nuisance-control,
+participant, geometry, license, 20 GiB, and transport-admission rules. The next
+step is an all-false artifact-only source-research preregistration. Any source-
+specific metadata request or later 256-byte opaque canary remains separately
+governed; the canary is Tier C and has no scientific value by itself. No fresh
+source, network request, payload, model, score, or claim is activated here.
 
 ## Current Addendum: Ofner Source Reselection
 
@@ -79,9 +85,10 @@ information beyond recorded peripheral physiology, posterior EEG, cue and
 timing structure, and matched derangement in completely unseen people. No
 dataset is currently promoted for that confirmation.
 
-The earliest checkpoint is generated `NPA1-G`, followed by fresh public source
-research. A future source must pass scientific eligibility and one separately
-governed opaque live transport canary before a semantic sensor-header check.
+Generated `NPA1-G` is closed. The earliest remaining checkpoint is exact fresh
+public-source research under a separately green all-false preregistration. A
+future source must pass scientific eligibility and one separately governed
+opaque live transport canary before a semantic sensor-header check.
 Only after a green header may the scientific path proceed through bounded
 acquisition, target-blind semantics, prediction freeze, and one score.
 

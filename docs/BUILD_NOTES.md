@@ -16544,3 +16544,13 @@ and require both remote jobs green before the one official qualification.
   postmortem, compact v7 frontier, and tests. The selected design moves endpoint
   admission ahead of semantic sensor checks, promotes no source, uses no new
   dependency, and authorizes only generated fixture work after remote green.
+- 2026-08-29: Added and remotely qualified dependency-free `NPA1-G` transport
+  admission. Exact successor `2e164ff` passed Base Python `99184746988`,
+  Optional Neuro Readers `99184747065`, and CI `33284320443` on GitHub `main`.
+  The generated-only result passed two matching seven-profile replays and 37
+  named refusal families in 0.003375791013240814 seconds at 22,577,152-byte
+  peak RSS, with 4,162 generated input bytes, a 4,947-byte aggregate report,
+  zero network, zero real/private access, and zero retained payload. The proof
+  closeout binds six exact artifacts / 89,732 bytes and does not rerun the
+  qualification. No scientific claim changed; the next reversible work is an
+  all-false artifact-only fresh-source research preregistration.

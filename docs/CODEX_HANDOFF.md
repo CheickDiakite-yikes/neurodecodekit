@@ -1,9 +1,11 @@
 # Codex Handoff - NeuroDecodeKit
 
 > **Current scientific frontier, 2026-08-29:** read the Ofner result and proof
-> closeouts, `registries/current_research_frontier.v7.json`, and the scientific knowledge
+> closeouts, the NPA1 implementation and proof closeout,
+> `registries/current_research_frontier.v8.json`, and the scientific knowledge
 > ledger first. The predecessor
-> `registries/current_research_frontier.v6.json` remains immutable history. The
+> `registries/current_research_frontier.v7.json` and historical
+> `registries/current_research_frontier.v6.json` remain immutable. The
 > exact `OFNER-C6R-1-HL` decision, generated-qualified wrapper, and activation
 > became green on GitHub `main`. The sole `OFNER-C6R-1-HL-R0` invocation then
 > consumed at `OFNER-H0-TRANSPORT`: the exact NEMAR manifest completed identity
@@ -16,12 +18,15 @@
 > retry, rerun, repair, resume, substitute, reinterpret, or inspect the ignored
 > marker. Proof closeout `750adc3` passed Base `99174411928`, Optional
 > `99174412006`, and CI `33280371097` on GitHub `main`. No Tier C packet is
-> active. The artifact-only postmortem freezes `NPA1-v0` and promotes no fresh
-> source. Next implement and generated-qualify only `NPA1-G`, reusing existing
-> transport components under one thread, 30 seconds, 256 MiB RSS, 8 MiB
-> generated I/O, zero network, and zero retained payload. A metadata-network
-> pass or real 256-byte canary needs a later applicable gate; the canary is
-> Tier C. Preserve the unrelated tracker inspection file.
+> active. Generated-only `NPA1-G` is exact-green at `2e164ff`, Base
+> `99184746988`, Optional `99184747065`, and CI `33284320443`. It passed two
+> matching seven-profile replays and 37 exact refusal families in
+> 0.003375791013240814 seconds at 22,577,152-byte peak RSS, with zero network
+> and zero retained payload. No source is promoted and this is not EEG evidence.
+> Next draft and remotely green only an all-false artifact-only fresh-source
+> research preregistration. Source-specific metadata network access and any
+> real 256-byte canary remain closed; the canary is Tier C. Preserve the
+> unrelated tracker inspection file.
 
 > **Historical generated frontier, 2026-08-28:** read Amendment 3 and the FS3
 > preregistration/contract first. Exact Amendment 3 `b15d3cf` passed Base

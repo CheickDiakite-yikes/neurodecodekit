@@ -14910,3 +14910,13 @@ green; only then may the single generated qualification run.
   validator after this exact record is remotely green; every metadata-network,
   canary, header, payload, target, model, score, device, release, and claim
   operation remains closed.
+- 2026-08-29: Accept generated-only `NPA1-G` at successor commit `2e164ff`
+  after Base Python `99184746988`, Optional Neuro Readers `99184747065`, and CI
+  `33284320443` passed on GitHub `main`. The accepted qualification contains
+  two deterministic seven-profile fixture replays and 37 exact refusals in
+  0.003375791013240814 seconds at 22,577,152-byte peak RSS, 4,162 generated
+  input bytes, a 4,947-byte aggregate report, zero network, and zero retained
+  payload. Bind six exact artifacts / 89,732 bytes in a proof-only closeout and
+  make only an all-false artifact-only fresh-source research preregistration
+  eligible next. Promote no source and open no metadata-network, canary,
+  payload, header, model, score, device, release, or claim authority.

@@ -65,20 +65,26 @@ The proof passed Base Python `99174411928`, Optional Neuro Readers
 `99174412006`, and CI `33280371097` on GitHub `main`.
 
 The [artifact-only transport postmortem](docs/NEURAL_PAYLOAD_TRANSPORT_ADMISSION_POSTMORTEM_2026_08_29.md)
-now freezes `NPA1-v0`. It separates scientific source identity, expiring
-transport capability, HTTP framing, bounded content identity, and semantic
-sensor eligibility. Its key finding is architectural: Dreyer and Ofner entered
-one-shot scientific header gates before the exact live delivery surface had
-been separately admitted. It does not claim one shared server or client cause.
-No new source is promoted from metadata alone. The next bounded milestone is a
-generated-only NPA1 validator; any real 256-byte canary remains a separately
-governed Tier C operation.
+froze `NPA1-v0`: scientific source identity, expiring transport capability,
+HTTP framing, bounded content identity, and semantic sensor eligibility are
+separate gates. Generated-only `NPA1-G` is now remotely green at commit
+`2e164ff`, Base Python `99184746988`, Optional Neuro Readers `99184747065`, and
+CI `33284320443`. It accepted two deterministic seven-profile fixture replays
+and 37 exact refusal families in 0.003375791013240814 seconds at 22,577,152-byte
+peak RSS, with 4,162 generated input bytes, a 4,947-byte in-memory report, zero
+network, and zero retained payload. The implementation contains no live
+network opener or real execution command. Read the
+[implementation](docs/NEURAL_PAYLOAD_ADMISSION_GENERATED_IMPLEMENTATION.md)
+and [proof closeout](docs/NEURAL_PAYLOAD_ADMISSION_GENERATED_QUALIFICATION_PROOF_CLOSEOUT.md).
 
-See the [current machine frontier](registries/current_research_frontier.v7.json).
-The predecessor `registries/current_research_frontier.v6.json` remains
-immutable history; any later real gate still needs fresh packet-bound
-maintainer words. COMM-P0 FS3 remains paused as an adjacent engineering
-diagnostic.
+This closes a costly engineering uncertainty, not a scientific one. No fresh
+source has been promoted, and no EEG was accessed. The next bounded step is an
+all-false fresh-source research preregistration; source-specific metadata
+network access remains closed, and any real 256-byte canary is still Tier C.
+See the [current machine frontier](registries/current_research_frontier.v8.json).
+The predecessors `registries/current_research_frontier.v7.json` and
+`registries/current_research_frontier.v6.json` remain immutable history.
+COMM-P0 FS3 remains paused as an adjacent diagnostic.
 
 The follow-on generated acquisition qualification now passes two complete
 150-file fixture replays plus 20 adversarial refusals in 0.108829 seconds at
@@ -113,8 +119,9 @@ is artifact-only transport/source research, not another execution.
 ## Current Research Frontier
 
 The latest irreversible result is the consumed Ofner range-header transport H0.
-The latest reversible frontier is generated-only `NPA1-G` transport admission,
-followed by fresh source research; no real operation is active.
+The latest reversible result is green generated-only `NPA1-G` transport
+admission. The next active capability is only an artifact-only fresh-source
+research preregistration; no source-specific network or real operation is active.
 The following COMM-P0-G material is retained as exact
 adjacent-engineering history and is paused. Its proof architecture has a prospective, resource-aware
 successor: Amendment 3 replaces the second redundant full
@@ -661,10 +668,10 @@ score or claim upgrade occurred. Repeated convergence warnings at the frozen
 80-iteration cap were recorded without changing or rerunning the models.
 
 The machine-readable current state is
-[`registries/current_research_frontier.v7.json`](registries/current_research_frontier.v7.json).
-It freezes the consumed Ofner transport lane, proof commits, measured result,
-claim boundary, and exact next transition so handoffs cannot silently return
-to an older gate. Prediction
+[`registries/current_research_frontier.v8.json`](registries/current_research_frontier.v8.json).
+It freezes the consumed Ofner lane, green generated NPA1 proof, claim boundary,
+and exact next transition so handoffs cannot silently return to an older gate.
+Prediction
 freeze `2517fd1` passed Base job `97996323987`, Optional job `97996324203`, and
 CI `32908059166`.
 The [Stage T scoring activation](docs/BNCI_2014_001_STAGE_T_SCORING_ACTIVATION.md)

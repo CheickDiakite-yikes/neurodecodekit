@@ -24,15 +24,18 @@
 > retry, rerun, repair, resume, substitute, reinterpret, or reopen its ignored
 > marker. No Tier C packet is active. Read
 > The exact proof closeout passed Base Python `99174411928`, Optional Neuro
-> Readers `99174412006`, and CI `33280371097` on GitHub `main`. Read
-> `registries/current_research_frontier.v7.json`; its predecessor
-> `registries/current_research_frontier.v6.json` remains immutable history.
-> The artifact-only postmortem freezes `NPA1-v0`: admit a source's live
-> transport with generated fixtures and, later, one separately governed opaque
-> canary before spending a semantic header or scientific gate. No fresh source
-> is promoted yet. The next reversible work is generated-only `NPA1-G`; any
-> metadata network, real canary, header, payload, model, or score operation
-> still requires its applicable later gate. COMM-P0-G FS3 remains paused.
+> Readers `99174412006`, and CI `33280371097` on GitHub `main`. Generated-only
+> `NPA1-G` then passed at exact commit `2e164ff`, Base Python `99184746988`,
+> Optional Neuro Readers `99184747065`, and CI `33284320443`: two matching
+> seven-profile replays and 37 refusal families, 0.003375791013240814 seconds,
+> 22,577,152-byte peak RSS, zero network, and zero retained payload. Read
+> `registries/current_research_frontier.v8.json`; its predecessor
+> `registries/current_research_frontier.v7.json` and historical
+> `registries/current_research_frontier.v6.json` remain immutable.
+> No fresh source is promoted. Next draft only an all-false artifact-only
+> fresh-source research preregistration. Any source metadata network, real
+> canary, header, payload, model, or score operation remains separately gated.
+> COMM-P0-G FS3 remains paused.
 
 > Dreyer H-L1R1 recovery update, 2026-08-29: exact generated coordinator
 > `0ef634e4852d9f8a18d4b8a1f50e6a1331bd020a` passed Base Python
@@ -207,9 +210,9 @@
 Historical exact control-plane label retained for proof compatibility:
 `Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight`.
 
-Start with `registries/current_research_frontier.v7.json`, the machine-readable
-snapshot of the consumed lane, proof chain, measurements, claim boundary, and
-next transition. Version 5 remains its immutable pre-execution predecessor.
+Start with `registries/current_research_frontier.v8.json`, the machine-readable
+snapshot of the consumed lanes, green NPA1 engineering proof, claim boundary,
+and next transition. Version 7 remains its immutable generated-work predecessor.
 
 The prior BNCI experiment found real held-out protocol information, but it did
 not establish an EEG-specific effect: posterior EEG slightly beat the selected

@@ -75,17 +75,16 @@ class CurrentResearchFrontierV7Tests(unittest.TestCase):
             if key != "transport_admission_architecture_frozen":
                 self.assertFalse(value, key)
 
-    def test_current_control_plane_names_v7_and_generated_next_step(self) -> None:
-        for relative in (
-            "AGENTS.md",
-            "README.md",
-            "START_HERE.md",
-            "docs/CODEX_HANDOFF.md",
-            "docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md",
-        ):
-            text = (ROOT / relative).read_text(encoding="utf-8")[:16_000]
-            self.assertIn("current_research_frontier.v7.json", text, relative)
-            self.assertIn("NPA1", text, relative)
+    def test_v7_remains_an_immutable_historical_frontier(self) -> None:
+        self.assertEqual(
+            self.frontier["status"],
+            "NPA1_transport_admission_architecture_frozen_no_source_promoted",
+        )
+        self.assertEqual(
+            self.frontier["selected_architecture"]["next_stage"],
+            "NPA1_G_generated_transport_qualification",
+        )
+        self.assertTrue((ROOT / "registries/current_research_frontier.v8.json").is_file())
 
 
 if __name__ == "__main__":

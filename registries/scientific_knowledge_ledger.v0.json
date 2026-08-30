@@ -214,15 +214,16 @@
       },
       "evidence_ids": [
         "EVID-BNCI-R2",
-        "EVID-NPA1-POSTMORTEM"
+        "EVID-NPA1-POSTMORTEM",
+        "EVID-NPA1-G"
       ],
       "blockers": [
         "no fresh nuisance-complete source is selected",
-        "generated NPA1 transport admission is not yet implemented",
+        "no exact fresh-source research preregistration is remotely green",
         "no live transport canary is authorized"
       ],
-      "next_discriminator": "Generated-qualify NPA1, research a fresh source meeting the control and storage rules, then separately govern one opaque transport canary before a sensor-header checkpoint.",
-      "unsupported": "The transport architecture is not EEG evidence and establishes no neural advantage, motor-cortex origin, movement intention, language decoding, live operation, or clinical utility."
+      "next_discriminator": "Preregister and execute bounded fresh-source research, then separately govern one opaque transport canary before a sensor-header checkpoint.",
+      "unsupported": "The green generated transport validator is not EEG evidence and establishes no neural advantage, motor-cortex origin, movement intention, language decoding, live operation, or clinical utility."
     },
     {
       "id": "CLAIM-COMMUNICATION-BEYOND-PERIPHERAL",
@@ -443,6 +444,24 @@
       ]
     },
     {
+      "id": "EVID-NPA1-G",
+      "lane": "engineering",
+      "kind": "generated-only transport-admission qualification and remote proof",
+      "summary": "NPA1-G passed two deterministic seven-profile fixture replays and 37 exact refusal families under bounded resources with zero network, zero real/private access, and zero retained payload.",
+      "limitations": "Generated delivery fixtures establish no live source behavior, neural measurement, sensor semantics, biological effect, decoding performance, or scientific claim.",
+      "supports": [
+        "CLAIM-FRESH-NUISANCE-CONTROLLED-EEG"
+      ],
+      "contradicts": [],
+      "paths": [
+        "docs/NEURAL_PAYLOAD_ADMISSION_GENERATED_IMPLEMENTATION.md",
+        "registries/neural_payload_admission_generated_implementation.v0.json",
+        "docs/NEURAL_PAYLOAD_ADMISSION_GENERATED_QUALIFICATION_PROOF_CLOSEOUT.md",
+        "registries/neural_payload_admission_generated_qualification_proof.v0.json",
+        "registries/current_research_frontier.v8.json"
+      ]
+    },
+    {
       "id": "EVID-COMM-DECISION",
       "lane": "discovery",
       "kind": "objective evidence and replication decision",
@@ -549,19 +568,25 @@
       "relation": "motivates",
       "object": "EXP-NPA1-FRESH-MOTOR",
       "rationale": "A fresh nuisance-controlled cohort is promoted only after its exact delivery profile passes generated qualification and a separately governed opaque live canary."
+    },
+    {
+      "subject": "EVID-NPA1-G",
+      "relation": "supports",
+      "object": "EXP-NPA1-FRESH-MOTOR",
+      "rationale": "Generated transport admission is now proven, so the next reversible uncertainty is source eligibility and source-specific metadata planning rather than another validator replay."
     }
   ],
   "experiments": [
     {
       "id": "EXP-NPA1-FRESH-MOTOR",
       "lane": "confirmation",
-      "status": "source_selection_pending_generated_transport_admission",
+      "status": "source_research_preregistration_pending_after_green_generated_transport_admission",
       "scientific_question": "Does central EEG add unseen-person task information beyond recorded peripheral physiology, posterior EEG, cue and timing structure, and matched derangement in a fresh cohort?",
       "evidence_target": "A calibrated participant-consistent central-EEG increment over nuisance-only and matched-derangement comparators in at least ten completely held-out people.",
-      "earliest_checkpoint": "Generated-qualify NPA1-G, select a fresh nuisance-complete source, and then pass one separately governed opaque 256-byte transport canary before any semantic header read.",
+      "earliest_checkpoint": "Preregister and execute bounded fresh-source research, select one nuisance-complete source, and then pass one separately governed opaque 256-byte transport canary before any semantic header read.",
       "stop_rule": "Do not promote a source that lacks required nuisance channels, named geometry, cue controls, a reusable license, 20 GiB feasibility, or a remotely green transport witness.",
       "deserves_resources_because": "It preserves the strongest unresolved EEG-beyond-peripheral question while preventing a third irreversible scientific checkpoint from being spent on unknown endpoint behavior.",
-      "authority": "Only generated fixture implementation is eligible after the exact NPA1 frontier becomes remotely green; no network, source, canary, payload, model, target, score, device, release, or claim authority exists.",
+      "authority": "Only an artifact-only all-false fresh-source research preregistration is currently eligible; no source-specific network, canary, payload, model, target, score, device, release, or claim authority exists.",
       "expected_information_gain": "High after source admission because the test directly separates a neural increment from eye, muscle or kinematic, posterior, cue, timing, and derangement alternatives.",
       "claim_ids": [
         "CLAIM-FRESH-NUISANCE-CONTROLLED-EEG"
@@ -570,7 +595,8 @@
         "EVID-BNCI-R2",
         "EVID-DREYER-HL2-H0",
         "EVID-OFNER-HL-H0",
-        "EVID-NPA1-POSTMORTEM"
+        "EVID-NPA1-POSTMORTEM",
+        "EVID-NPA1-G"
       ]
     },
     {
@@ -750,7 +776,7 @@
     "public_Ofner_GDF_body_bytes": 0,
     "public_Ofner_fixed_header_reads": 0,
     "generated_Ofner_header_qualification_runs": 1,
-    "generated_NPA1_qualification_runs": 0,
+    "generated_NPA1_qualification_runs": 1,
     "NPA1_metadata_network_requests": 0,
     "NPA1_transport_canary_requests": 0,
     "NPA1_transport_canary_body_bytes": 0,

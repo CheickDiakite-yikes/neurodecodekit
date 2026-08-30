@@ -65,6 +65,7 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
         self.assertEqual(boundary["public_Ofner_GDF_body_bytes"], 0)
         self.assertEqual(boundary["public_Ofner_fixed_header_reads"], 0)
         self.assertEqual(boundary["generated_Ofner_header_qualification_runs"], 1)
+        self.assertEqual(boundary["generated_NPA1_qualification_runs"], 1)
         for key, value in boundary.items():
             if key not in {
                 "active_tier_c_packet",
@@ -78,6 +79,7 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
                 "public_Ofner_GDF_body_bytes",
                 "public_Ofner_fixed_header_reads",
                 "generated_Ofner_header_qualification_runs",
+                "generated_NPA1_qualification_runs",
             }:
                 self.assertEqual(value, 0, key)
 
@@ -104,9 +106,9 @@ class ScientificKnowledgeLedgerTests(unittest.TestCase):
                 "infrastructure_created_and_why",
             },
         )
-        self.assertIn("Generated-qualify NPA1-G", update["next_decisive_experiment"])
-        self.assertIn("Dreyer and Ofner", update["evidence_produced"])
-        self.assertIn("transport surfaces were admitted", update["evidence_produced"])
+        self.assertIn("Preregister and execute", update["next_decisive_experiment"])
+        self.assertIn("NPA1-G passed", update["evidence_produced"])
+        self.assertIn("zero network", update["evidence_produced"])
 
     def test_malformed_state_is_rejected(self):
         malformed = copy.deepcopy(self.ledger)

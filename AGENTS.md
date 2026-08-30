@@ -66,7 +66,7 @@ its ignored marker or private paths.
 
 `OFNER-C6R-1` remains a scientifically useful but consumed predecessor, not the
 active flagship. Read the result and proof closeouts,
-`registries/current_research_frontier.v7.json`, and the knowledge ledger first.
+`registries/current_research_frontier.v8.json`, and the knowledge ledger first.
 Public metadata selected 15 participants / 150 original motor-imagery GDF
 files / 13,748,417,608 bytes and reported 61 EEG, three EOG, 19 glove, and 13
 arm channels at 512 Hz. The sole `OFNER-C6R-1-HL-R0` invocation completed the
@@ -77,16 +77,23 @@ bytes, zero header, event, annotation, signal, target, model, prediction, or
 score operations, 1.1932796670589596 seconds runtime, 48,021,504-byte peak
 RSS, and zero retained payload. This is a consumed transport result, not a
 biological null. Never retry, rerun, repair, resume, substitute, reinterpret,
-or reopen the ignored marker. No Tier C packet is active. The next reversible
-work is `NPA1-G`: a generated-only, dependency-free transport-admission
-validator with zero network or real-data access. The artifact-only postmortem
-found a shared ordering weakness, not a shared server cause: Dreyer and Ofner
-both reached irreversible scientific header checkpoints before their exact
-live delivery surfaces had been admitted. No fresh source is promoted yet.
-Any metadata-network, transport-canary, header, payload, model, or score
-operation requires its applicable later gate; a real canary remains Tier C.
-Preserve `registries/current_research_frontier.v6.json` as immutable history
-and require fresh packet-bound maintainer words for any later real gate. Earlier Dreyer progression is
+or reopen the ignored marker. No Tier C packet is active. Generated-only
+`NPA1-G` is now exact-green at
+`2e164fffb00e5db79a6c6d810eabbcc2d447c5a1`, Base Python
+`99184746988`, Optional Neuro Readers `99184747065`, and CI `33284320443` on
+GitHub `main`. It passed two deterministic seven-profile replays and 37 exact
+refusals in 0.003375791013240814 seconds at 22,577,152-byte peak RSS, with
+zero network and zero retained payload. This is transport engineering only.
+The artifact-only postmortem found a shared ordering weakness, not a shared
+server cause: Dreyer and Ofner both reached irreversible scientific header
+checkpoints before their exact live delivery surfaces had been admitted. No
+fresh source is promoted yet. The next reversible work is only an all-false,
+artifact-only fresh-source research preregistration. Any source-specific
+metadata network, transport canary, header, payload, model, or score operation
+requires its applicable later gate; a real canary remains Tier C. Preserve
+`registries/current_research_frontier.v7.json` and
+`registries/current_research_frontier.v6.json` as immutable history and require
+fresh packet-bound maintainer words for any later real gate. Earlier Dreyer progression is
 historical: rejected-result
 commit `24a5da2973ef65fa05f5ea7b1d1389370534ad23` passed Base Python
 `99047501588`, Optional Neuro Readers `99047501456`, and CI `33232453046`, then

@@ -602,19 +602,13 @@ class CurrentResearchFrontierV1Tests(unittest.TestCase):
         self.assertFalse(claims["registered_C5_partial_passed"])
         self.assertFalse(claims["real_Dreyer_EEG_accessed"])
 
-    def test_control_plane_entrypoints_name_the_current_frontier(self):
-        expected = {
-            "AGENTS.md": "registries/current_research_frontier.v6.json",
-            "START_HERE.md": "Current Frontier: Ofner Range Header Consumed At Transport H0",
-            "README.md": "registries/current_research_frontier.v6.json",
-            "docs/CODEX_HANDOFF.md": "Current scientific frontier, 2026-08-29",
-            "docs/NEXT_20_LOOPS_TRACKER.md": "DREYER-C5R-1 H-L2 closeout (2026-08-29)",
-        }
-        for path, phrase in expected.items():
-            text = (ROOT / path).read_text(encoding="utf-8")
-            self.assertIn(phrase, text, path)
-        start = (ROOT / "START_HERE.md").read_text(encoding="utf-8")[:8_000]
-        self.assertNotIn("Current Gate: BNCI-C3C5-1", start)
+    def test_v1_remains_an_immutable_historical_frontier(self):
+        self.assertEqual(
+            self.frontier["status"],
+            "DREYER_HL2_consumed_H0_transport_refusal_lane_parked",
+        )
+        self.assertEqual(self.frontier["active_lane_id"], "NO_ACTIVE_TIER_C_GATE")
+        self.assertTrue((ROOT / "registries/current_research_frontier.v8.json").is_file())
 
 
 if __name__ == "__main__":

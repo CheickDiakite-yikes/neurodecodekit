@@ -1,0 +1,125 @@
+{
+  "schema_name": "neurodecodekit.neural_payload_admission_generated_qualification_proof",
+  "schema_version": "0.1.0",
+  "recorded_at_local": "2026-08-29",
+  "protocol_id": "NPA1-G-v0",
+  "status": "proof_only_closeout_pending_exact_commit_remote_green",
+  "green_implementation_commit": {
+    "commit": "2e164fffb00e5db79a6c6d810eabbcc2d447c5a1",
+    "CI_run_id": 33284320443,
+    "base_python_job_id": 99184746988,
+    "base_python_duration": "5m59s",
+    "optional_neuro_readers_job_id": 99184747065,
+    "optional_neuro_readers_duration": "11m44s",
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true
+  },
+  "superseded_remote_failure": {
+    "commit": "be9110b4c91842610cda4774eaabd41a15ef284c",
+    "CI_run_id": 33283665288,
+    "accepted_as_proof": false,
+    "reason": "late_full_suite_CLI_child_inherited_Linux_runner_lifetime_RSS_high_water_mark"
+  },
+  "bound_implementation_and_result_artifacts": [
+    {
+      "path": "src/neurodecodekit/datasets/neural_payload_admission.py",
+      "bytes": 60579,
+      "sha256": "0987b165314a5c86b3cd7a3f9aa4d81b46a6c12ba413b086a4effff221acd470",
+      "git_blob": "47fd6a307eb2abf31b3f07fbdf40b774bcc7917f"
+    },
+    {
+      "path": "src/neurodecodekit/npa1_cli.py",
+      "bytes": 1780,
+      "sha256": "6330719c180a34dd553bbbf5013582f4c7d79c68882ed33050b76a0ed47b5b65",
+      "git_blob": "060efb30818c7475e25afe6b98dd73f92c96c660"
+    },
+    {
+      "path": "tests/test_neural_payload_admission.py",
+      "bytes": 13796,
+      "sha256": "e4569bcfa41532ac94d1ec9ada88406d7a441eeee6410934331a5f21052e1a0c",
+      "git_blob": "85e99e215d3cc2f2a04dff43b8022ea06dc0b195"
+    },
+    {
+      "path": "tests/test_neural_payload_admission_implementation.py",
+      "bytes": 3590,
+      "sha256": "b8a8902c53a2a6c5721c70e142df7f36fc795811e3a94906ea61c18ecec90575",
+      "git_blob": "56ea4fcd0e97ce620854250c8c8d64b70f9fd4a7"
+    },
+    {
+      "path": "docs/NEURAL_PAYLOAD_ADMISSION_GENERATED_IMPLEMENTATION.md",
+      "bytes": 5386,
+      "sha256": "ed139b4c55b014adc8ce09d076646c18160838cfb432bf3000fe84f26b85dd21",
+      "git_blob": "aa5b4625393115a6604a4158a4a45d30064d2617"
+    },
+    {
+      "path": "registries/neural_payload_admission_generated_implementation.v0.json",
+      "bytes": 4601,
+      "sha256": "d7193cb3600cb887d3bc25350dedfa9022d6e17356d7284deeec009d641914a8",
+      "git_blob": "949137cbe713aa6cdbe63e4ca5fc9ed50a4887de"
+    }
+  ],
+  "bound_artifact_summary": {
+    "count": 6,
+    "bytes": 89732,
+    "canonical_artifact_set_sha256": "93e293f9718119019d88d328338ae328d00bcabef2308f135610d33a17efadc5"
+  },
+  "accepted_generated_qualification": {
+    "deterministic_replays": 2,
+    "accepted_profiles_per_replay": 7,
+    "named_adversarial_families": 37,
+    "distinct_refusal_ids": 12,
+    "runtime_seconds": 0.003375791013240814,
+    "peak_RSS_bytes": 22577152,
+    "generated_input_bytes": 4162,
+    "generated_report_bytes": 4947,
+    "network_requests": 0,
+    "retained_generated_payload_bytes": 0
+  },
+  "scope_preservation": {
+    "qualified_module_unchanged_after_measured_invocation": true,
+    "standalone_CLI_unchanged_after_measured_invocation": true,
+    "generated_qualification_rerun": false,
+    "resource_caps_unchanged": true,
+    "authority_expanded": false,
+    "claim_boundary_changed": false
+  },
+  "operation_counters": {
+    "tracked_artifact_reads": 6,
+    "Git_proof_reads": 6,
+    "generated_qualification_invocations": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "real_or_private_path_reads": 0,
+    "payload_or_header_reads": 0,
+    "signal_event_annotation_target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "scores": 0,
+    "stream_or_device_operations": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "transition": {
+    "effective_before_this_closeout_commit_remote_green": false,
+    "generated_NPA1_engineering_closed_after_remote_green": true,
+    "fresh_source_selected": false,
+    "source_specific_metadata_network_research_authorized": false,
+    "real_transport_canary_authorized": false,
+    "real_payload_or_header_operation_authorized": false,
+    "fresh_Tier_C_packet_and_decision_required_for_canary": true,
+    "active_Tier_C_packet_after_closeout": null
+  },
+  "claim_boundary": {
+    "engineering_proof_added": "The exact dependency-free generated NPA1 transport validator is hash size Git-blob and remote-CI bound.",
+    "scientific_claim_established": false,
+    "real_EEG_accessed": false,
+    "neural_advantage_established": false,
+    "EEG_beyond_peripheral_controls_established": false,
+    "unseen_participant_generalization_established": false,
+    "movement_intention_established": false,
+    "thought_or_language_decoding_established": false,
+    "live_neural_decoding_established": false
+  },
+  "next_gate": "draft_and_remotely_green_an_all_false_fresh_source_research_preregistration_before_any_source_specific_network_request"
+}
