@@ -1,0 +1,120 @@
+{
+  "schema_name": "neurodecodekit.neural_payload_admission_generated_implementation",
+  "schema_version": "0.1.0",
+  "recorded_at": "2026-08-29",
+  "protocol_id": "NPA1-G-v0",
+  "status": "generated_qualification_accepted_locally_remote_implementation_proof_pending",
+  "green_frontier": {
+    "commit": "d07eea0bc0ae2d6a218c06e08ef9ffa7e1592c35",
+    "CI_run_id": 33281704903,
+    "base_python_job_id": 99177847778,
+    "optional_neuro_readers_job_id": 99177847631,
+    "both_required_jobs_green": true,
+    "frontier_path": "registries/current_research_frontier.v7.json",
+    "frontier_bytes": 5245,
+    "frontier_sha256": "20fdc3cd9f2878c61984935c61ef05f7b0a4fbee79819778fbc795eb8cb3759c",
+    "frontier_git_blob": "b6910f6e86036c034cec6a71b8716c953adc9822"
+  },
+  "implementation_artifacts": [
+    {
+      "path": "src/neurodecodekit/datasets/neural_payload_admission.py",
+      "bytes": 60579,
+      "sha256": "0987b165314a5c86b3cd7a3f9aa4d81b46a6c12ba413b086a4effff221acd470",
+      "git_blob": "47fd6a307eb2abf31b3f07fbdf40b774bcc7917f"
+    },
+    {
+      "path": "src/neurodecodekit/npa1_cli.py",
+      "bytes": 1780,
+      "sha256": "6330719c180a34dd553bbbf5013582f4c7d79c68882ed33050b76a0ed47b5b65",
+      "git_blob": "060efb30818c7475e25afe6b98dd73f92c96c660"
+    },
+    {
+      "path": "tests/test_neural_payload_admission.py",
+      "bytes": 13618,
+      "sha256": "f44a4a567b47f45cf884142fde0d2ec60d53643fd056e956b0b405e3bdc02800",
+      "git_blob": "af3106092754b933a1766fef757ef881642782ed"
+    }
+  ],
+  "qualification": {
+    "deterministic_replays": 2,
+    "accepted_profiles_per_replay": 7,
+    "accepted_profile_ids": [
+      "direct_200",
+      "direct_206",
+      "metadata_chunked",
+      "metadata_close",
+      "metadata_fixed",
+      "redirect_1",
+      "redirect_2"
+    ],
+    "stable_transcript_sha256": "87fd828a07f5fa66253beb05d76b7620dfa34fbcc3a10159534732d063dd8d13",
+    "stable_transcript_digests_equal": true,
+    "signed_capability_refresh_accepted": true,
+    "named_adversarial_families": 37,
+    "distinct_refusal_ids": 12,
+    "all_gates_passed": true
+  },
+  "measurements": {
+    "generated_input_bytes": 4162,
+    "generated_output_bytes": 4947,
+    "runtime_seconds": 0.003375791013240814,
+    "peak_RSS_bytes": 22577152,
+    "response_opens": 44,
+    "body_reads": 180,
+    "response_closes": 44,
+    "generated_resolver_calls": 55,
+    "CPU_threads": 1,
+    "workers": 1,
+    "end_to_end_latency_measured": false,
+    "retained_generated_payload_bytes": 0
+  },
+  "operation_counters": {
+    "network_requests": 0,
+    "network_bytes": 0,
+    "real_or_private_path_operations": 0,
+    "real_header_reads": 0,
+    "semantic_measurement_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "scores": 0,
+    "device_or_stream_runs": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "independent_review": {
+    "review_rounds": 3,
+    "initial_blockers_fixed": 5,
+    "second_round_blockers_fixed": 1,
+    "final_blockers": 0,
+    "focused_tests_passed": 13
+  },
+  "capabilities": {
+    "dependency_free": true,
+    "exact_request_headers": true,
+    "bodyless_redirects_zero_one_two": true,
+    "fixed_chunked_and_close_delimited_framing": true,
+    "full_object_and_range_segment_identity_separated": true,
+    "incremental_EOF_or_cap_plus_one_reads": true,
+    "issued_TTL_capability_freshness": true,
+    "exact_fixture_types_only": true,
+    "strict_aggregate_report_validator": true,
+    "live_network_client_present": false,
+    "real_execution_command_present": false
+  },
+  "authority": {
+    "proof_only_closeout_after_exact_remote_green": true,
+    "public_source_metadata_network_research": false,
+    "live_transport_canary": false,
+    "real_payload_or_header_access": false,
+    "semantic_signal_event_or_annotation_access": false,
+    "model_training_prediction_or_score": false,
+    "stream_device_or_hardware": false,
+    "release_or_publish": false,
+    "scientific_claim_upgrade": false
+  },
+  "claim_boundary": {
+    "engineering_capability_added": "A dependency-free generated validator now separates stable source identity, expiring transport capability, HTTP framing, bounded content identity, and later sensor semantics.",
+    "scientific_claim_not_established": "Generated transport fixtures establish no neural information, unseen-person generalization, movement-intention decoding, language decoding, live operation, hardware result, or clinical value."
+  },
+  "next_gate": "commit_push_and_obtain_both_required_remote_green_jobs_then_create_a_proof_only_closeout_without_repeating_the_qualification"
+}
