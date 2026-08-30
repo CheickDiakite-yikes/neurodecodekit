@@ -7,7 +7,7 @@
   "flagship": {
     "experiment_id": "EXP-NPA1-FRESH-MOTOR",
     "claim_id": "CLAIM-FRESH-NUISANCE-CONTROLLED-EEG",
-    "first_empirical_checkpoint": "Make the all-false FMSR1 admission correction remotely green, then generated-qualify only the strict revision or complete opaque snapshot and same-process live-CI witness parsers before any separately authorized witness or discovery contact."
+    "first_empirical_checkpoint": "Make the all-false FMSR1 admission correction remotely green, then generated-qualify only the strict revision or complete opaque snapshot parsers and a same-process witness that externally authenticates CI before any separately authorized witness or discovery contact."
   },
   "claims": [
     {
@@ -541,7 +541,7 @@
       "id": "EVID-FMSR1-ADMISSION-A1",
       "lane": "engineering",
       "kind": "all-false revision-snapshot and external-CI admission correction",
-      "summary": "FMSR1-DISCOVERY-M0-A1 keeps M0 non-armable and separates generated admission qualification, a separately authorized source-global revision or complete opaque snapshot witness, its remote proof, a fresh successor discovery packet, and live same-process GitHub CI verification before each future source-contact invocation.",
+      "summary": "After G1 passed 25 adversarial refusals, live execution is parked before contact. FMSR1-DISCOVERY-M0-A1 keeps M0 non-armable and separates generated admission qualification, a separately authorized source-global revision or complete opaque snapshot witness, its remote proof, a fresh successor discovery packet, and live same-process GitHub CI verification before each future source-contact invocation.",
       "limitations": "All five source profiles, all exact CI identities, and every network, real-data, candidate, model, score, release, and claim authority remain null or false. This record changes no scientific evidence coordinate.",
       "supports": [],
       "contradicts": [],
@@ -703,7 +703,7 @@
       "status": "FMSR1_generated_discovery_and_proof_exact_green_all_false_admission_correction_pending_its_own_remote_green_live_packet_parked_before_contact",
       "scientific_question": "Does central EEG add unseen-person motor-task information beyond joint recorded EOG, task-relevant EMG for every relevant effector, posterior EEG, cue and timing structure, relative to matched deranged central EEG in a fresh cohort?",
       "evidence_target": "A calibrated participant-consistent central-EEG increment over joint nuisance-only and joint nuisance-plus-deranged-central-EEG comparators in at least ten completely held-out people.",
-      "earliest_checkpoint": "Make the all-false A1 admission correction remotely green, then generated-qualify only the strict source-global revision, complete opaque snapshot, and same-process live-CI witness parsers before any separately authorized witness or discovery contact.",
+      "earliest_checkpoint": "Make the all-false A1 additive correction remotely green, then generated-qualify only the strict source-global revision, complete opaque snapshot, and same-process live-CI witness parsers before any separately authorized witness or discovery contact.",
       "stop_rule": "Do not promote a source outside the frozen discovery universe or one that lacks at least ten complete participants, synchronized EOG and task-relevant EMG for every relevant effector, named geometry, joint cue/pre-cue/posterior/timing/derangement controls, a reusable license, exact 12+2+2+1+3 GiB storage fit, or a remotely green transport witness.",
       "deserves_resources_because": "It preserves the strongest unresolved EEG-beyond-peripheral question while preventing a third irreversible scientific checkpoint from being spent on unknown endpoint behavior.",
       "authority": "Generated discovery implementation and proof are exact-green. Public witness, discovery, source-specific metadata, payload, model, score, release, and claim authority are false; A1 does not rearm the existing decision and all exact source and CI profiles remain null.",
@@ -909,7 +909,6 @@
     "FMSR1_generated_discovery_qualification_runs": 1,
     "FMSR1_generated_discovery_green_implementations": 1,
     "FMSR1_generated_discovery_proof_closeout_artifacts": 1,
-    "FMSR1_all_false_admission_correction_records": 1,
     "FMSR1_generated_mock_HTTP_calls": 34,
     "FMSR1_generated_refusal_cases": 25,
     "FMSR1_live_execution_armable": 0,
