@@ -1,0 +1,102 @@
+{
+  "schema_name": "neurodecodekit.fresh_motor_source_identity_witness_live_implementation_decision",
+  "schema_version": "0.1.0",
+  "decision_id": "FMSR1-R1-W-I1-D0",
+  "packet_id": "FMSR1-R1-W-v0",
+  "recorded_at": "2026-08-31",
+  "status": "live_executor_implementation_and_generated_qualification_authority_effective_only_after_this_decision_remote_green",
+  "effective_only_after_decision_commit_pushed_and_both_CI_jobs_green": true,
+  "maintainer_words": "get needle moving, eureka results",
+  "maintainer_words_utf8_bytes": 33,
+  "maintainer_words_sha256": "aa3ba07b84c434e5ad66ab29683ce32708b9a25f3b51a86ced7f74a3a3f13854",
+  "interpretation": {
+    "single_named_packet_before_message": "FMSR1-R1-W-v0",
+    "green_generated_implementation_and_missing_live_capability_identified_before_message": true,
+    "authorizes_reversible_live_executor_implementation": true,
+    "authorizes_generated_fixture_only_qualification": true,
+    "does_not_retroactively_authorize_future_live_code": true,
+    "fresh_post_implementation_words_required_for_network": true,
+    "scope_expansion_by_inference": false
+  },
+  "green_generated_implementation_proof": {
+    "commit": "ea37358d8f34efd70f4e95c2a8452aa727f1b2bd",
+    "CI_run_id": 33361847146,
+    "base_python_job_id": 99394572164,
+    "base_python_job_conclusion": "success",
+    "optional_neuro_readers_job_id": 99394572060,
+    "optional_neuro_readers_job_conclusion": "success",
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true
+  },
+  "bound_artifacts": [
+    {
+      "path": "docs/FRESH_MOTOR_SOURCE_IDENTITY_WITNESS_AUTHORIZATION_PACKET.md",
+      "bytes": 11780,
+      "sha256": "6d9343673713a650ad5d1f2ef06574887aba68aeba947bc373a9f88d542430a2",
+      "git_blob": "3e61f44dfeea0e0f763a725ea79bfee8eb717717"
+    },
+    {
+      "path": "registries/fresh_motor_source_identity_witness_authorization_request.v0.json",
+      "bytes": 48747,
+      "sha256": "e805ffc8b2a963055c075fe002c83b6c4e6e2348f865dc07f41051dd7968d3f6",
+      "git_blob": "73ea1fa1808a7edaa2c8c1e65204e902497fbe5f"
+    },
+    {
+      "path": "registries/fresh_motor_source_identity_witness_generated_implementation.v0.json",
+      "bytes": 6471,
+      "sha256": "d7d0359ad28ab81ba325e6729a861c861f659a723056cabeb7a7897fcf61eb78",
+      "git_blob": "98df035940a70c914b1379539b76cc4a93ae4d42"
+    }
+  ],
+  "authorization_after_decision_green": {
+    "additive_standard_library_live_executor": true,
+    "generated_transport_and_refusal_fixtures": true,
+    "generated_qualification_once": true,
+    "tests_documentation_commit_push_and_CI": true,
+    "future_execution_decision_loader_and_fail_closed_live_CLI": true,
+    "GitHub_API_or_official_index_contact": false,
+    "live_source_identity_witness": false,
+    "candidate_semantic_parse_rank_select_or_retain": false,
+    "payload_header_signal_event_annotation_target_or_label": false,
+    "model_checkpoint_training_inference_prediction_or_score": false,
+    "language_model_provider_stream_device_or_hardware": false,
+    "touch_other_project_or_delete_existing_path": false,
+    "release_or_scientific_claim_upgrade": false,
+    "retry_rerun_resume_repair_substitute_or_post_result_amend": false
+  },
+  "decision_only_operation_counters": {
+    "network_requests": 0,
+    "network_bytes": 0,
+    "generated_qualification_runs": 0,
+    "official_index_requests": 0,
+    "candidate_semantic_operations": 0,
+    "payload_or_neural_reads": 0,
+    "target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "scoring_events": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "next_barriers": {
+    "this_decision_commit_push_and_both_jobs_green_before_live_executor_commit": true,
+    "exact_live_executor_commit_push_and_both_jobs_green_before_fresh_words": true,
+    "fresh_post_implementation_execution_bound_maintainer_words_required": true,
+    "separate_execution_decision_commit_push_and_both_jobs_green_before_network": true,
+    "network_authorized_now": false
+  },
+  "claim_boundary": {
+    "scientific_claim_established": false,
+    "source_identity_established": false,
+    "source_selected": false,
+    "real_EEG_accessed": false,
+    "neural_information_established": false,
+    "unseen_person_generalization_established": false,
+    "EEG_beyond_joint_nuisance_established": false,
+    "movement_intention_or_motor_cortex_established": false,
+    "thought_or_language_decoding_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_or_clinical_value_established": false
+  }
+}
+
