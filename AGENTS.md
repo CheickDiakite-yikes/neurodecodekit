@@ -243,6 +243,20 @@ one-shot, stopping, and claim rule remain binding. Candidate access remains
 closed until remote-green activation. Do not treat generated or source-identity
 evidence as neural evidence.
 
+The sole `FMSR1-E2E-v0` activation attempt is now terminal and consumed. Read
+`docs/FRESH_MOTOR_END_TO_END_ACTIVATION_CHECKPOINT_BLOCKER_RESULT.md`,
+`registries/fresh_motor_end_to_end_activation_checkpoint_blocker_result.v0.json`,
+and `registries/current_research_frontier.v28.json`. One clean-worktree
+activation invocation completed three GitHub reads and stopped at aggregate
+`WITNESS_TRANSPORT_PARK / CI_CHECK_IDENTITY` before any scientific-source
+contact. It also bypassed the required durable E2E arm by calling the
+predecessor-bound helper directly, which is an additional Gate A
+protocol-integrity blocker. Do not infer the failed remote predicate, inspect
+response evidence, retry or replace the verifier, retroactively arm, continue
+implementation, contact a source, or reinterpret this as a biological null.
+Scientific-source, payload, target, model, prediction, and score operations
+were all zero.
+
 ### Scientific execution directive
 
 Do not allow proof machinery, synthetic qualification, documentation, or

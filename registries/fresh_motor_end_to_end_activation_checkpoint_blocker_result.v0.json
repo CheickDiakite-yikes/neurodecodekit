@@ -1,0 +1,137 @@
+{
+  "schema_name": "neurodecodekit.fresh_motor_end_to_end_activation_checkpoint_blocker_result",
+  "schema_version": "0.1.0",
+  "result_id": "FMSR1-E2E-v0-ACT0-R0",
+  "packet_id": "FMSR1-E2E-v0",
+  "profile_id": "public_confirmation_v1",
+  "decision_id": "TIER-C-PUBLIC-CONFIRMATION-v1-D0",
+  "recorded_at": "2026-08-31",
+  "status": "consumed_terminal_activation_control_plane_and_protocol_integrity_blocker_no_rerun",
+  "proof_posture": "aggregate_sanitized_blocker_zero_scientific_source_or_neural_operations",
+  "human_result": {
+    "path": "docs/FRESH_MOTOR_END_TO_END_ACTIVATION_CHECKPOINT_BLOCKER_RESULT.md",
+    "bytes": 3235,
+    "sha256": "78e38803d30b87a96ed336f6c95e447c1ec74d6349019188ac53ed1e4c643c1e",
+    "git_blob": "4044018f03af125991eafb3c52aa5b91b8abad49"
+  },
+  "bound_authority": {
+    "activation_commit": "493f7def6d826050dd315b55d61d7712479e08f4",
+    "activation_commit_push_to_GitHub_main_reported_success_before_check": true,
+    "activation_decision_human": {
+      "path": "docs/RESEARCH_AUTONOMY_CHARTER_TIER_C_PUBLIC_CONFIRMATION_DECISION.md",
+      "bytes": 10202,
+      "sha256": "8569ce9e6b0fcb14b1887872907050c81e7ddfc95c11c5ef5efa5a4cac267a12",
+      "git_blob": "503f3e687abc6197352c9eb7f230977e327127b8"
+    },
+    "activation_decision_machine": {
+      "path": "registries/research_autonomy_charter_tier_c_public_confirmation_decision.v0.json",
+      "bytes": 14736,
+      "sha256": "7628dc1629488d1ecacedc77d56d97e6acc478dd9a91b57d582f095249e93010",
+      "git_blob": "a3382219ca752daea2dce11b7edec44e64317721"
+    },
+    "work_order_human": {
+      "path": "docs/FRESH_MOTOR_END_TO_END_REAL_EXPERIMENT_AUTHORIZATION_PACKET.md",
+      "bytes": 30104,
+      "sha256": "376028c3845a717e01ff06279578ccdfea206f3c2fa7831c71226edaae24dba2",
+      "git_blob": "456455fe9f04649d5f62a3286953b6ee6381a211"
+    },
+    "work_order_machine": {
+      "path": "registries/fresh_motor_end_to_end_real_experiment_authorization_request.v0.json",
+      "bytes": 48195,
+      "sha256": "b1d72d693cf37b8a28782e49dcee1a457f2a5089ea410ff9fe051d61ad367919",
+      "git_blob": "3f5f15a08f4f3a3b26613d41daa03c425f4a882a"
+    }
+  },
+  "local_checkpoint_preconditions_observed": {
+    "new_isolated_worktree_created": true,
+    "worktree_HEAD": "493f7def6d826050dd315b55d61d7712479e08f4",
+    "worktree_porcelain_status_empty_before_check": true,
+    "primary_checkout_user_changes_copied_or_used_as_inputs": false,
+    "other_project_modified": false
+  },
+  "activation_checkpoint": {
+    "checkpoint": "activation_remote_green",
+    "verifier_invocations": 1,
+    "GitHub_CI_read_requests": 3,
+    "network_retries": 0,
+    "full_three_request_sequence_completed_before_validation_stop": true,
+    "emitted_route": "WITNESS_TRANSPORT_PARK",
+    "emitted_reason": "CI_CHECK_IDENTITY",
+    "packet_terminal_class": "ANY_OTHER_TERMINAL_ROUTE",
+    "checkpoint_passed": false,
+    "standing_delegation_effective": false,
+    "workflow_response_requested": true,
+    "workflow_identity_validation_reached": false,
+    "GitHub_response_body_bytes": null,
+    "runtime_seconds": null,
+    "peak_RSS_bytes": null,
+    "unknown_metrics_are_zero": false,
+    "more_specific_check_predicate_or_value_inferred": false
+  },
+  "protocol_integrity": {
+    "registered_FMSR1_E2E_entrypoint_used": false,
+    "predecessor_bound_run_CI_W0_helper_called_directly": true,
+    "durable_E2E_attempt_arm_before_first_network_request": false,
+    "required_preflight_and_reservation_sequence_bypassed": true,
+    "protocol_integrity_blocker": true,
+    "retroactive_arm_allowed": false,
+    "missing_arm_makes_requests_non_consuming_or_retryable": false
+  },
+  "operation_counters": {
+    "network_requests_total": 3,
+    "GitHub_control_plane_requests": 3,
+    "official_scientific_source_requests": 0,
+    "discovery_operations": 0,
+    "candidate_semantic_operations": 0,
+    "candidate_selections": 0,
+    "metadata_reads": 0,
+    "manifest_reads": 0,
+    "license_reads": 0,
+    "header_reads": 0,
+    "payload_requests": 0,
+    "payload_bytes": 0,
+    "signal_reads": 0,
+    "event_reads": 0,
+    "annotation_reads": 0,
+    "target_reads": 0,
+    "model_fits": 0,
+    "prediction_sets": 0,
+    "prediction_freezes": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "release_operations": 0,
+    "publication_operations": 0,
+    "claim_promotion_operations": 0
+  },
+  "consumption": {
+    "attempt_consumed": true,
+    "durable_consumed_marker_created": false,
+    "logical_consumption_recorded_by_this_public_aggregate": true,
+    "retry": false,
+    "rerun": false,
+    "resume": false,
+    "repair": false,
+    "substitute_verifier": false,
+    "source_substitution": false,
+    "reuse": false,
+    "unused_budgets_transfer_to_successor": false
+  },
+  "claim_boundary": {
+    "control_plane_or_protocol_blocker_only": true,
+    "source_identity_established": false,
+    "candidate_selected": false,
+    "real_neural_data_accessed": false,
+    "scientific_evidence_established": false,
+    "biological_null": false,
+    "central_EEG_increment_established": false,
+    "unseen_participant_generalization_established": false,
+    "language_thought_intention_motor_cortex_live_hardware_or_clinical_claim": false
+  },
+  "next_state": {
+    "FMSR1_E2E_v0_may_continue": false,
+    "current_profile_has_an_unconsumed_admitted_work_order": false,
+    "automatic_successor_authorized": false,
+    "scientific_source_contact_authorized": false,
+    "implementation_model_prediction_target_or_score_authorized": false
+  }
+}

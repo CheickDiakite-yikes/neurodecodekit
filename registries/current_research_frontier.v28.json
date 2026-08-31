@@ -1,0 +1,105 @@
+{
+  "schema_name": "neurodecodekit.current_research_frontier",
+  "schema_version": "0.29.0",
+  "recorded_at": "2026-08-31",
+  "supersedes": "registries/current_research_frontier.v27.json",
+  "superseded_registry_bytes": 14530,
+  "superseded_registry_sha256": "5a3d59dff11350be9a976b3ba8a100bef475809accb5e51dccc9aa4dbb95f0fe",
+  "superseded_registry_git_blob": "86982c7a4e5d30d1348be139f054d0150a085dc2",
+  "status": "FMSR1_E2E_v0_consumed_at_activation_control_plane_and_protocol_integrity_blocker_no_scientific_result",
+  "active_lane_id": "FMSR1-E2E-v0-ACT0-R0",
+  "active_Tier_C_packet": null,
+  "standing_profile": "public_confirmation_v1",
+  "standing_profile_effective_for_any_unconsumed_work_order": false,
+  "consumed_work_order": {
+    "packet_id": "FMSR1-E2E-v0",
+    "activation_commit": "493f7def6d826050dd315b55d61d7712479e08f4",
+    "result_id": "FMSR1-E2E-v0-ACT0-R0",
+    "checkpoint": "activation_remote_green",
+    "emitted_route": "WITNESS_TRANSPORT_PARK",
+    "emitted_reason": "CI_CHECK_IDENTITY",
+    "packet_terminal_class": "ANY_OTHER_TERMINAL_ROUTE",
+    "attempt_consumed": true,
+    "retry_rerun_resume_repair_substitute_or_reuse": false
+  },
+  "bound_result_artifacts": [
+    {
+      "role": "activation_checkpoint_blocker_human_result",
+      "path": "docs/FRESH_MOTOR_END_TO_END_ACTIVATION_CHECKPOINT_BLOCKER_RESULT.md",
+      "bytes": 3235,
+      "sha256": "78e38803d30b87a96ed336f6c95e447c1ec74d6349019188ac53ed1e4c643c1e",
+      "git_blob": "4044018f03af125991eafb3c52aa5b91b8abad49"
+    },
+    {
+      "role": "activation_checkpoint_blocker_machine_result",
+      "path": "registries/fresh_motor_end_to_end_activation_checkpoint_blocker_result.v0.json",
+      "bytes": 5515,
+      "sha256": "4e8ca792813b08d3066ae3a5fff62e4c49a3a9a136c55c36e98049531119a774",
+      "git_blob": "a5cb73a62d4d5e8367967dd909b08526b67bdeb5"
+    }
+  ],
+  "protocol_integrity": {
+    "registered_FMSR1_E2E_entrypoint_used": false,
+    "durable_E2E_attempt_arm_before_first_network_request": false,
+    "required_preflight_and_reservation_sequence_bypassed": true,
+    "retroactive_arm_allowed": false,
+    "missing_arm_makes_requests_non_consuming_or_retryable": false
+  },
+  "measured_operations": {
+    "activation_verifier_invocations": 1,
+    "GitHub_CI_read_requests": 3,
+    "GitHub_response_body_bytes": null,
+    "network_retries": 0,
+    "official_scientific_source_requests": 0,
+    "candidate_semantic_operations": 0,
+    "metadata_manifest_license_or_header_reads": 0,
+    "payload_requests": 0,
+    "payload_bytes": 0,
+    "signal_event_annotation_or_target_reads": 0,
+    "model_fits": 0,
+    "prediction_sets": 0,
+    "prediction_freezes": 0,
+    "target_deliveries": 0,
+    "scores": 0,
+    "release_publication_or_claim_promotion_operations": 0
+  },
+  "runtime_operation_authority_now": {
+    "GitHub_activation_verifier": false,
+    "implementation_or_generated_qualification": false,
+    "official_public_source_contact": false,
+    "candidate_semantic_parse_rank_or_selection": false,
+    "metadata_manifest_license_header_or_transport_admission": false,
+    "payload_download_or_read": false,
+    "signal_event_annotation_or_target_access": false,
+    "preprocessing_or_derivative_creation": false,
+    "model_training_inference_or_prediction": false,
+    "prediction_freeze": false,
+    "target_delivery_or_scoring": false,
+    "release_publication_or_claim_upgrade": false
+  },
+  "current_evidence_coordinate": {
+    "dimension_1_spatial": "not_tested",
+    "dimension_2_temporal": "not_tested",
+    "dimension_3_physiological": "not_tested",
+    "dimension_4_task_autonomy": "source_not_contacted",
+    "dimension_5_population_generalization": "source_not_selected",
+    "dimension_6_translation": "not_started"
+  },
+  "claim_boundary": {
+    "scientific_evidence_established": false,
+    "biological_null": false,
+    "source_identity_established": false,
+    "candidate_selected": false,
+    "real_EEG_accessed": false,
+    "central_EEG_increment_established": false,
+    "unseen_participant_generalization_established": false,
+    "thought_language_intention_motor_cortex_live_hardware_or_clinical_claim": false
+  },
+  "next_gate": {
+    "action_under_current_profile": null,
+    "FMSR1_E2E_v0_may_continue": false,
+    "automatic_successor_authorized": false,
+    "source_contact_model_prediction_target_or_score_authorized": false,
+    "reason": "sole_exact_admitted_work_order_is_consumed_and_current_profile_admits_no_successor"
+  }
+}
