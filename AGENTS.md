@@ -28,20 +28,28 @@ Do not optimize for impressiveness before reproducibility. A boring baseline tha
 snapshot, and `docs/RESEARCH_AUTONOMY_CHARTER_DECISION.md` is its activation
 record. After the decision commit is remotely green, Tier A routine work and
 Tier B bounded development work may proceed autonomously, including coherent
-commits, pushes, and CI checks. Tier C irreversible evidence, real-data,
-hardware, destructive, release, and claim actions still require a separate
-exact decision. Existing narrower contracts continue to govern and cannot be
-silently loosened.
+commits, pushes, and CI checks. The additive
+`docs/RESEARCH_AUTONOMY_CHARTER_TIER_C_PUBLIC_CONFIRMATION_AMENDMENT.md` and
+`docs/RESEARCH_AUTONOMY_CHARTER_TIER_C_PUBLIC_CONFIRMATION_DECISION.md` create
+the standing `public_confirmation_v1` profile for the exact already-green
+`FMSR1-E2E-v0` work order only. Once their exact commit is on GitHub `main` and
+Base Python plus Optional Neuro Readers are both green, that work order may
+proceed from first source contact through one frozen score and aggregate
+internal closeout without another maintainer message. No later work order or
+replication may self-admit; it needs a new additive profile revision. Existing
+narrower scientific, target-firewall, resource, single-use, and claim contracts
+continue to govern and cannot be silently loosened.
 
-The maintainer's 2026-08-10 short-form instruction removes repetitive
-authorization recital, not separate Tier C decisions. When exactly one named,
-remotely green packet is the active gate and the assistant has just identified
-its packet, commit, CI, and decision boundary, an unambiguous maintainer
-"approve", "continue", or "proceed" may incorporate that packet by reference.
-The decision artifact must quote the maintainer's actual words, bind every
-immutable scope hash, and become remotely green before implementation or
-access. Never fabricate the packet's long sentence as a user utterance, infer
-scope expansion, or use short form when multiple packets or ambiguity exist.
+No recurring human authorization packet or short-form prompt is permitted
+inside an admitted `public_confirmation_v1` route. New hypotheses or weaker
+controls; private, protected, restricted, credentialed, consent- or
+license-ambiguous data; consumed evidence; people, hardware, live operation,
+paid access, outreach, destructive or cross-project work, release,
+publication, payload upload, public claim promotion, clinical claims, or any
+resource increase remain separately human-gated. Outside the standing profile,
+the maintainer's 2026-08-10 short-form rule still allows one unambiguous
+`approve`, `continue`, or `proceed` to bind exactly one named remotely green
+packet. Never fabricate maintainer words or infer scope expansion.
 
 ## Scientific Constitution
 
@@ -220,19 +228,20 @@ The exact live implementation is remotely green at
 Optional Neuro Readers `99515315921`, and CI `33400484765` on GitHub `main`.
 Its predecessor correctly failed shallow CI; the repair removed only a
 historical `git show` dependency while preserving exact local byte, hash, blob,
-and semantic decision validation. Read the live implementation proof-only
-closeout and frontier v26 next. They bind 16 exact artifacts / 314,356 bytes
-and repeat no qualification or protected operation. The closeout must itself
-become remotely green before fresh execution-bound maintainer words can be
-accepted into a separate authority-bearing execution decision. The live gate
-is commit-scoped rather than self-referential: clean local `main`, remote
-`main`, the exact decision blob, two unique successful checks, and the frozen
-workflow blob must agree in three direct GitHub requests. No such words or
-execution decision exist now. A later `D1` still requires its own all-false
-packet, fresh words, authority decision, and remote proof. No GitHub `CI-W0`
-or official-index request is authorized now. Candidate metadata, transport
-canary, header, payload, model, score, release, and claim work remain closed.
-Do not treat generated or source-identity evidence as neural evidence.
+and semantic decision validation. The live implementation proof-only closeout
+and frontier v26 bind 16 exact artifacts / 314,356 bytes and repeat no
+qualification or protected operation. Their earlier requirement for fresh
+execution words and a separate `D1` is historical and is superseded only for
+the exact `FMSR1-E2E-v0` route by frontier v27 and the Tier C public-confirmation
+amendment and decision. Once that exact amendment/decision commit is remotely
+green, protected work must use a newly created clean worktree at exact remote
+`main`; the primary checkout's user changes remain untouched and excluded from
+all imports and inputs. The route then proceeds without another human
+micro-gate, using the bounded activation, implementation, and prediction-freeze
+GitHub verifiers. All consumed roots and every scientific, firewall, resource,
+one-shot, stopping, and claim rule remain binding. Candidate access remains
+closed until remote-green activation. Do not treat generated or source-identity
+evidence as neural evidence.
 
 ### Scientific execution directive
 
@@ -255,8 +264,10 @@ test, or replicate that claim. Existing exact authority boundaries remain in
 force; this directive compresses the route but does not silently grant Tier C.
 Preserve `registries/current_research_frontier.v8.json`,
 `registries/current_research_frontier.v7.json`, and
-`registries/current_research_frontier.v6.json` as immutable history and require
-fresh packet-bound maintainer words for any later real gate. Earlier Dreyer progression is
+`registries/current_research_frontier.v6.json` as immutable history. Fresh
+packet-bound maintainer words remain required for successor work orders,
+replications, new sources, or gates outside exact `FMSR1-E2E-v0`; they are not
+a later micro-gate inside that adopted route. Earlier Dreyer progression is
 historical: rejected-result
 commit `24a5da2973ef65fa05f5ea7b1d1389370534ad23` passed Base Python
 `99047501588`, Optional Neuro Readers `99047501456`, and CI `33232453046`, then

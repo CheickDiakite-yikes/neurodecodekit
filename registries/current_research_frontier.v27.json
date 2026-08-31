@@ -1,0 +1,268 @@
+{
+  "schema_name": "neurodecodekit.current_research_frontier",
+  "schema_version": "0.28.0",
+  "recorded_at": "2026-08-31",
+  "supersedes": "registries/current_research_frontier.v26.json",
+  "superseded_registry_sha256": "62be7e23ec63775a42af612208f9bd219f7f227f0db5110aa98cf67567e04ee2",
+  "status": "public_confirmation_v1_amendment_and_FMSR1_E2E_v0_adoption_pending_activation_decision_remote_green",
+  "active_lane_id": "TIER-C-PUBLIC-CONFIRMATION-v1",
+  "active_Tier_C_packet": "FMSR1-E2E-v0",
+  "active_Tier_C_packet_runtime_authority_before_activation_decision_remote_green": false,
+  "scientific_lane": "fresh_unseen_person_motor_task_EEG_beyond_joint_EOG_EMG_metadata_and_spatial_temporal_counterfactual_controls",
+  "bound_existing_identities": [
+    {
+      "role": "approved_charter_historical_snapshot",
+      "path": "docs/RESEARCH_AUTONOMY_CHARTER_DRAFT.md",
+      "bytes": 6160,
+      "sha256": "c9381bfc729dfca4aaab03929a6623f23c3cf06eb33fbae5379b0517981dcb64",
+      "git_blob": "e55d7d88202021280ec70185ce8bb99892ca4a64"
+    },
+    {
+      "role": "approved_charter_activation_decision_human_record",
+      "path": "docs/RESEARCH_AUTONOMY_CHARTER_DECISION.md",
+      "bytes": 4268,
+      "sha256": "700d7243ff53b191c2bd262424efe45cc5a5e40200b115503a84d3563c93e7b7",
+      "git_blob": "1e2271f038bd0879e8c1694f3ab59619322f2443"
+    },
+    {
+      "role": "approved_charter_activation_decision_machine_record",
+      "path": "registries/research_autonomy_charter_decision.v0.json",
+      "bytes": 5901,
+      "sha256": "edb02e2be125650ac7fbc4dafd359e2e8462ead5a7b38673c323bd58ffb59de4",
+      "git_blob": "70be183fe3633111e7b3164d427a2cb3daf2de34"
+    },
+    {
+      "role": "public_confirmation_v1_amendment_human_record",
+      "path": "docs/RESEARCH_AUTONOMY_CHARTER_TIER_C_PUBLIC_CONFIRMATION_AMENDMENT.md",
+      "bytes": 19301,
+      "sha256": "8e9503cd5021416b8a9d3ce479b5e89ea34067a1a1fba546d0d7c8144888fe33",
+      "git_blob": "a01ec32696c52e33f5228105203563b857ce4f10"
+    },
+    {
+      "role": "public_confirmation_v1_amendment_machine_record",
+      "path": "registries/research_autonomy_charter_tier_c_public_confirmation_amendment.v0.json",
+      "bytes": 25098,
+      "sha256": "cb4f617ec0316927f248b3f485fb45821f4f5580eae077cb877b12b2e52ec1be",
+      "git_blob": "8495dd7053c0e0f855e1101a81673cac18e11087"
+    },
+    {
+      "role": "public_confirmation_v1_activation_decision_human_record",
+      "path": "docs/RESEARCH_AUTONOMY_CHARTER_TIER_C_PUBLIC_CONFIRMATION_DECISION.md",
+      "bytes": 10202,
+      "sha256": "8569ce9e6b0fcb14b1887872907050c81e7ddfc95c11c5ef5efa5a4cac267a12",
+      "git_blob": "503f3e687abc6197352c9eb7f230977e327127b8"
+    },
+    {
+      "role": "public_confirmation_v1_activation_decision_machine_record",
+      "path": "registries/research_autonomy_charter_tier_c_public_confirmation_decision.v0.json",
+      "bytes": 14736,
+      "sha256": "7628dc1629488d1ecacedc77d56d97e6acc478dd9a91b57d582f095249e93010",
+      "git_blob": "a3382219ca752daea2dce11b7edec44e64317721"
+    },
+    {
+      "role": "initial_adopted_work_order_human_record",
+      "path": "docs/FRESH_MOTOR_END_TO_END_REAL_EXPERIMENT_AUTHORIZATION_PACKET.md",
+      "bytes": 30104,
+      "sha256": "376028c3845a717e01ff06279578ccdfea206f3c2fa7831c71226edaae24dba2",
+      "git_blob": "456455fe9f04649d5f62a3286953b6ee6381a211"
+    },
+    {
+      "role": "initial_adopted_work_order_machine_record",
+      "path": "registries/fresh_motor_end_to_end_real_experiment_authorization_request.v0.json",
+      "bytes": 48195,
+      "sha256": "b1d72d693cf37b8a28782e49dcee1a457f2a5089ea410ff9fe051d61ad367919",
+      "git_blob": "3f5f15a08f4f3a3b26613d41daa03c425f4a882a"
+    }
+  ],
+  "same_commit_activation_records": {
+    "amendment_machine_record_path": "registries/research_autonomy_charter_tier_c_public_confirmation_amendment.v0.json",
+    "activation_decision_human_record_path": "docs/RESEARCH_AUTONOMY_CHARTER_TIER_C_PUBLIC_CONFIRMATION_DECISION.md",
+    "activation_decision_machine_record_path": "registries/research_autonomy_charter_tier_c_public_confirmation_decision.v0.json",
+    "exact_identities_bound": true,
+    "effective_before_same_commit_remote_green": false
+  },
+  "standing_delegation": {
+    "profile": "public_confirmation_v1",
+    "claim_class": "motor_central_increment_v1",
+    "amendment_id": "TIER-C-PUBLIC-CONFIRMATION-v1",
+    "effective_now": false,
+    "effect_condition": "amendment_activation_decision_and_both_machine_records_committed_together_on_GitHub_main_and_Base_Python_and_Optional_Neuro_Readers_green_for_the_exact_commit",
+    "admitted_work_order_id_exact": "FMSR1-E2E-v0",
+    "later_work_order_self_admission": false,
+    "future_replication_or_new_work_requires_new_profile_revision_and_activation": true,
+    "later_human_micro_gates_after_machine_admission": 0,
+    "machine_admission_may_relax_a_narrower_registered_contract_except_exact_GitHub_CI_read_partition": false,
+    "exact_FMSR1_control_plane_override": "resource_contract.GitHub_CI_requests_exact_3_total_to_3_per_reached_checkpoint_9_total_maximum",
+    "scientific_or_safety_blocker_may_be_converted_to_a_new_work_order": false
+  },
+  "initial_adopted_work_order": {
+    "standing_tier_c_profile": "public_confirmation_v1",
+    "packet_id": "FMSR1-E2E-v0",
+    "packet_commit": "b4e0689d5cb78706896eb0cc9566c1a707cddb50",
+    "packet_CI_run_id": 33419678858,
+    "packet_base_python_job_id": 99578715549,
+    "packet_optional_neuro_readers_job_id": 99578715620,
+    "packet_both_required_jobs_green": true,
+    "packet_on_GitHub_main": true,
+    "adoption_effective_now": false,
+    "adoption_effective_only_after_activation_decision_remote_green": true,
+    "replaces_pending_fresh_words_separate_packet_decision_and_only_GitHub_CI_requests_exact_3_total": true,
+    "work_order_scope_is_exact_registered_scope_without_expansion": true,
+    "source_substitution_or_criterion_relaxation": false,
+    "additional_human_micro_gates_after_effective_adoption": 0
+  },
+  "runtime_operation_authority_now": {
+    "official_public_source_contact": false,
+    "candidate_semantic_parse_rank_or_selection": false,
+    "metadata_manifest_license_header_or_transport_admission": false,
+    "payload_download_or_read": false,
+    "signal_event_annotation_or_target_access": false,
+    "preprocessing_or_derivative_creation": false,
+    "model_training_inference_or_prediction": false,
+    "prediction_freeze": false,
+    "confirmation_target_delivery": false,
+    "scoring": false,
+    "temporary_cleanup": false,
+    "release_publication_or_scientific_claim_upgrade": false
+  },
+  "preserved_target_and_single_use_gates": {
+    "confirmation_labels_or_outcomes_may_influence_fit_calibration_selection_exclusion_power_threshold_seed_model_protocol_or_source": false,
+    "all_scientifically_material_choices_frozen_before_confirmation_delivery": true,
+    "prediction_workers_receive_confirmation_targets": false,
+    "prediction_aggregator_receives_confirmation_targets": false,
+    "durable_prediction_freeze_precedes_target_delivery": true,
+    "confirmation_target_deliveries_maximum": 1,
+    "scores_maximum": 1,
+    "post_target_updates": 0,
+    "N_byte_identical_EOG_all_relevant_effector_EMG_and_allowed_non_target_metadata_every_neural_arm": true,
+    "central_must_beat_N_posterior_pre_cue_cue_shift_and_derangement_conjunctively": true,
+    "every_registered_comparator_mandatory_on_same_rows_and_schedule": true,
+    "equal_capacity_window_preprocessing_features_missingness_estimator_and_schedule": true,
+    "one_target_blind_common_mask_before_control_mapping": true,
+    "imputation_arm_specific_deletion_or_post_target_dropping": false,
+    "joint_all_edge_power_minimum": 0.8,
+    "power_uses_exact_final_confirmation_N_and_leave_one_development_participant_out_predictions": true,
+    "confirmation_dependent_public_bits_before_single_scorer": 0,
+    "underpowering_stops_before_target_delivery": true,
+    "every_terminal_route_consumes_attempt": true,
+    "retry_rerun_resume_repair_reseed_refreeze_substitute_or_reuse": false,
+    "failed_scientific_result_may_select_another_source": false,
+    "post_outcome_selected_same_estimand_source_may_be_confirmatory": false,
+    "replication_identity_must_be_sealed_before_prior_target_open": true
+  },
+  "preserved_resource_envelope": {
+    "CPU_threads_maximum": 1,
+    "workers_maximum": 1,
+    "numerical_jobs_maximum": 1,
+    "wall_time_seconds_maximum": 86400,
+    "peak_process_tree_RSS_bytes_maximum": 4294967296,
+    "GitHub_remote_green_verification_events_maximum": 3,
+    "GitHub_CI_read_requests_per_reached_event_exact": 3,
+    "GitHub_CI_read_requests_total_maximum": 9,
+    "GitHub_CI_response_body_bytes_per_event_maximum": 8388608,
+    "GitHub_CI_response_body_bytes_total_maximum": 25165824,
+    "explicitly_supersedes_FMSR1_E2E_v0_GitHub_CI_requests_exact_3_total_only": true,
+    "discovery_requests_maximum": 125,
+    "discovery_response_body_bytes_maximum": 33554432,
+    "candidate_metadata_manifest_license_and_header_requests_maximum": 256,
+    "candidate_metadata_manifest_license_and_header_response_body_bytes_maximum": 67108864,
+    "distinct_raw_format_header_reads_maximum": 4,
+    "header_body_bytes_total_maximum": 1048576,
+    "payload_requests_maximum": 2048,
+    "payload_members_maximum": 2048,
+    "network_retries": 0,
+    "selected_payload_bytes_maximum": 12884901888,
+    "scientific_source_credentials_allowed": false,
+    "GitHub_control_plane": {
+      "repository_exact": "CheickDiakite-yikes/neurodecodekit",
+      "branch_exact": "main",
+      "post_activation_push_transactions_maximum": 2,
+      "push_roles_exact": [
+        "implementation",
+        "hash_only_prediction_freeze"
+      ],
+      "existing_host_authentication_may_be_used": true,
+      "credential_read_print_copy_export_or_mutation_allowed": false,
+      "fast_forward_non_force_push_required": true,
+      "push_bytes_each_maximum": 67108864,
+      "push_bytes_total_maximum": 134217728,
+      "response_body_bytes_total_maximum": 16777216,
+      "tag_release_branch_delete_history_rewrite_force_push_or_other_remote_mutation_allowed": false
+    },
+    "clean_worktree": {
+      "new_worktree_at_exact_remote_green_main_required": true,
+      "index_and_working_tree_clean_at_each_remote_green_check": true,
+      "primary_checkout_user_changes_are_cleanliness_exceptions": false,
+      "primary_checkout_user_changes_copied_imported_configured_or_used_as_inputs": false,
+      "exact_path_creation_commit_repository_common_directory_and_zero_external_input_paths_recorded_before_gate_A": true,
+      "primary_checkout_and_other_worktrees_modified": false
+    },
+    "invocation_temporary_bytes_maximum": 2147483648,
+    "derivative_and_frozen_prediction_bytes_maximum": 2147483648,
+    "atomic_aggregate_publication_bytes_maximum": 1073741824,
+    "untouched_reserve_bytes": 3221225472,
+    "total_incremental_disk_bytes_maximum": 21474836480,
+    "filesystem_free_bytes_minimum_after_every_allocation": 21474836480,
+    "narrower_registered_work_order_wins_except_explicit_GitHub_CI_read_partition_override": true,
+    "automated_resource_increase_allowed": false
+  },
+  "authority_remaining_fresh_human_gated_after_delegation": {
+    "private_protected_restricted_credentialed_reidentifiable_or_consent_ambiguous_data": false,
+    "ignored_private_or_consumed_evidence_or_attempt_access": false,
+    "human_subject_recruitment_interaction_intervention_or_recording": false,
+    "hardware_on_a_person_live_stream_shadow_display_or_device_operation": false,
+    "paid_access_meaningful_external_cost_outreach_or_external_party_communication": false,
+    "destructive_git_or_data_operations_or_cross_project_changes": false,
+    "cleanup_outside_new_invocation_root": false,
+    "merge_tag_release_publication_payload_upload_or_public_claim_promotion": false,
+    "clinical_ethical_or_legal_reinterpretation": false,
+    "claim_above_exact_registered_ceiling": false,
+    "resource_increase_unknown_field_ambiguous_predicate_or_unregistered_operation": false
+  },
+  "preserved_history": {
+    "predecessor_frontier_modified": false,
+    "FMSR1_R1_W_v0_reactivated": false,
+    "prior_generated_or_live_qualification_replayed": false,
+    "ignored_marker_private_path_or_consumed_root_opened": false,
+    "existing_data_or_unrelated_user_change_deleted_overwritten_renamed_moved_or_modified": false
+  },
+  "current_evidence_coordinate": {
+    "dimension_1_spatial": "not_tested_on_a_fresh_admitted_source",
+    "dimension_2_temporal": "not_tested_on_a_fresh_admitted_source",
+    "dimension_3_physiological": "not_tested_on_a_fresh_admitted_source",
+    "dimension_4_task_autonomy": "source_not_selected",
+    "dimension_5_population_generalization": "source_not_selected",
+    "dimension_6_translation": "not_started",
+    "scientific_claim_upgrade": false
+  },
+  "claim_boundary": {
+    "source_identity_established": false,
+    "real_source_metadata_accessed": false,
+    "real_EEG_accessed": false,
+    "neural_advantage_established": false,
+    "EEG_beyond_joint_peripheral_and_task_controls_established": false,
+    "motor_cortex_or_movement_intention_established": false,
+    "unseen_person_generalization_established": false,
+    "thought_or_language_decoding_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_or_clinical_value_established": false
+  },
+  "ordered_transition": [
+    "bind_exact_amendment_machine_record_and_activation_decision_human_and_machine_identities",
+    "commit_amendment_machine_record_activation_decision_frontier_and_tests_together",
+    "require_exact_commit_on_GitHub_main_with_Base_Python_and_Optional_Neuro_Readers_green",
+    "only_then_activate_public_confirmation_v1_and_adopt_exact_FMSR1_E2E_v0",
+    "machine_admit_exact_registered_work_order_or_stop_with_one_measured_blocker",
+    "run_at_most_one_consumed_no_substitution_work_order_without_later_human_micro_gate",
+    "retain_only_aggregate_evidence_under_the_exact_claim_ceiling"
+  ],
+  "next_gate": {
+    "action": "commit_and_push_the_already_exact_bound_amendment_decision_frontier_and_tests_then_require_both_remote_jobs_green",
+    "activation_decision_present_and_exactly_bound_now": true,
+    "standing_delegation_effective_now": false,
+    "FMSR1_E2E_v0_adoption_effective_now": false,
+    "runtime_network_or_real_data_authorized_now": false,
+    "target_model_prediction_or_scoring_authorized_now": false,
+    "release_publication_or_claim_upgrade_authorized_now": false
+  }
+}
