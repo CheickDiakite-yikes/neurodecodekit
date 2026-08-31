@@ -1,0 +1,39 @@
+{
+  "schema_name": "neurodecodekit.fresh_motor_source_admission_generated_qualification_activation",
+  "schema_version": "0.1.0",
+  "protocol_id": "FMSR1-R1-G-v0",
+  "recorded_at": "2026-08-31T02:10:19Z",
+  "status": "implementation_exact_green_activation",
+  "implementation_commit": "d9229c1d8e9c56e2ce31da0dec0dcf302fe73eee",
+  "implementation_CI_run_id": 33349080445,
+  "base_python_job_id": 99358753480,
+  "optional_neuro_readers_job_id": 99358753302,
+  "both_required_jobs_green": true,
+  "bound_artifacts": [
+    {
+      "path": "src/neurodecodekit/datasets/fresh_motor_source_admission.py",
+      "bytes": 105178,
+      "sha256": "e2c8368bc58c4659b4e91ca628ab0d4db142f9eb87d2e0bb5f7d998b24c930d3"
+    },
+    {
+      "path": "src/neurodecodekit/fmsr1_admission_cli.py",
+      "bytes": 1276,
+      "sha256": "cae99a9830624a4b8465e5dd2fdeb14adf052b0e65d0a69e86f8364d26ac9f48"
+    },
+    {
+      "path": "tests/test_fresh_motor_source_admission.py",
+      "bytes": 28246,
+      "sha256": "0d152fe4e6419cde125e15632167933c4773af0c61259a3db3b4c9a382e2131c"
+    },
+    {
+      "path": "tests/test_fmsr1_admission_cli.py",
+      "bytes": 4570,
+      "sha256": "fa5667b031a1a28d9577d0a9ccd3dee630a799e4d856d986cb015e3cc9b75a99"
+    }
+  ],
+  "maximum_official_qualification_executions": 1,
+  "official_qualification_root": ".codex_work/fmsr1-r1-g-v0-official",
+  "network_or_GitHub_API_authority": false,
+  "official_index_or_real_source_authority": false,
+  "model_score_or_scientific_claim_authority": false
+}
