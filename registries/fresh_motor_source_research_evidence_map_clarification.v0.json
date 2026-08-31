@@ -1,0 +1,198 @@
+{
+  "schema_name": "neurodecodekit.fresh_motor_source_research_evidence_map_clarification",
+  "schema_version": "0.1.0",
+  "clarification_id": "FMSR1-v1-EVIDENCE-MAP-C0",
+  "recorded_at": "2026-08-30",
+  "status": "strategy_only_all_authorities_false_additive_clarification",
+  "parent_registration": {
+    "protocol_id": "FMSR1-v1",
+    "path": "registries/fresh_motor_source_research_contract.v1.json",
+    "bytes": 15280,
+    "sha256": "9667b31282d7e5c852fc3de1b6fe07692952ec5720b79a0ba7c31345ccfbc8cb",
+    "preserved_byte_for_byte": true,
+    "rewritten": false,
+    "superseded": false,
+    "reactivated": false
+  },
+  "binding": {
+    "human_clarification": {
+      "path": "docs/FRESH_MOTOR_SOURCE_RESEARCH_EVIDENCE_MAP_CLARIFICATION.md",
+      "bytes": 5455,
+      "sha256": "3e8f328d38042789e6fb71ef7e8d219698751b65f8344d9a2bbe9a5bd1f9bef4"
+    },
+    "governing_sources": [
+      {
+        "path": "docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md",
+        "bytes": 14232,
+        "sha256": "4d186d14bc437a1b3e3b6d2c3b4ae911f22ae8fba76212826608a9f48221906b"
+      },
+      {
+        "path": "docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md",
+        "bytes": 30315,
+        "sha256": "ee60365da5a9a1e92c2bba0912a1427763217541bc83c2cd69b3e00827275eb1"
+      },
+      {
+        "path": "docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md",
+        "bytes": 43767,
+        "sha256": "90d591240fd99e9fb100f2526fb3c7338db43b52c263530d1237b664a5eda566"
+      }
+    ]
+  },
+  "parent_interpretive_conflict": {
+    "posterior_EEG_listed_inside_parent_joint_nuisance_components": true,
+    "structure_preserving_shifted_EEG_absent_from_parent_required_future_scientific_conditions": true,
+    "parent_bytes_may_be_changed_to_resolve_conflict": false,
+    "resolution": "apply_this_additive_strategy_clarification_to_any_future_source_specific_experiment_contract"
+  },
+  "governing_scientific_architecture": {
+    "attribution_cube": {
+      "nested_inside_5D_evidence_map": true,
+      "dimensions": [
+        {
+          "dimension_id": 1,
+          "name": "spatial",
+          "question": "what_produced_the_signal",
+          "contrast": "central_EEG_vs_geometry_matched_posterior_visual_EEG"
+        },
+        {
+          "dimension_id": 2,
+          "name": "temporal",
+          "question": "what_produced_the_signal",
+          "contrast": "correct_motor_window_vs_pre_cue_cue_and_structure_preserving_shifted_windows"
+        },
+        {
+          "dimension_id": 3,
+          "name": "physiological",
+          "question": "what_produced_the_signal",
+          "contrast": "real_central_EEG_vs_joint_physiological_nuisance_and_matched_deranged_central_EEG"
+        }
+      ]
+    },
+    "outer_evidence_dimensions": [
+      {
+        "dimension_id": 4,
+        "name": "task_identifiability_and_autonomy",
+        "question": "what_the_result_means",
+        "contrast": "externally_instructed_labels_vs_genuinely_self_chosen_actions"
+      },
+      {
+        "dimension_id": 5,
+        "name": "population_generalization",
+        "question": "how_far_the_result_generalizes",
+        "contrast": "same_person_vs_untouched_people_vs_independent_replication_cohort"
+      }
+    ],
+    "translation_dimension": {
+      "dimension_id": 6,
+      "name": "prospective_translation",
+      "question": "whether_it_works_prospectively_in_time",
+      "nested_inside_5D_evidence_map": false,
+      "separate_from_scientific_evidence_map": true,
+      "ordered_stages": [
+        "offline_evaluation",
+        "causal_replay",
+        "shadow_stream",
+        "prospective_live"
+      ],
+      "can_rescue_failed_dimensions_1_through_5": false,
+      "live_motor_success_establishes_language_decoding": false
+    }
+  },
+  "comparator_roles": {
+    "spatial": {
+      "central_condition": "central_EEG_in_correct_registered_motor_window",
+      "comparator": "geometry_matched_posterior_visual_EEG_in_same_motor_window",
+      "posterior_EEG_is_separate_spatial_comparator": true,
+      "posterior_EEG_is_part_of_physiological_nuisance_only_arm": false
+    },
+    "temporal": {
+      "comparators": [
+        "pre_cue_EEG",
+        "cue_window_EEG",
+        "structure_preserving_shifted_central_EEG"
+      ],
+      "structure_preserving_shifted_EEG_is_temporal_comparator": true,
+      "structure_preserving_shifted_EEG_is_part_of_physiological_nuisance_only_arm": false
+    },
+    "physiological_nuisance_only": {
+      "components": [
+        "EOG",
+        "task_relevant_EMG_for_every_relevant_effector",
+        "non_neural_metadata_including_preregistered_cue_and_timing_covariates"
+      ],
+      "joint_arm_required": true,
+      "posterior_EEG_included": false,
+      "shifted_EEG_included": false,
+      "deranged_central_EEG_included": false
+    },
+    "physiological_counterfactual": {
+      "base_arm": "joint_physiological_nuisance_only",
+      "added_component": "matched_target_blind_structure_preserving_deranged_central_EEG",
+      "same_source_only_calibration_capacity_preprocessing_and_participant_first_scoring_required": true
+    }
+  },
+  "cube_edge_decision": {
+    "candidate": "joint_physiological_nuisance_plus_central_EEG_in_correct_registered_motor_window",
+    "required_comparator_edges": [
+      "joint_physiological_nuisance_only",
+      "joint_physiological_nuisance_plus_matched_deranged_central_EEG",
+      "geometry_matched_posterior_visual_EEG_in_correct_motor_window",
+      "central_EEG_in_pre_cue_window",
+      "central_EEG_in_cue_window",
+      "every_preregistered_structure_preserving_shifted_central_EEG_condition"
+    ],
+    "central_correct_window_EEG_must_win_every_preregistered_cube_edge": true,
+    "intersection_union_rule_required": true,
+    "one_edge_may_average_away_or_rescue_another_failed_edge": false,
+    "beating_no_signal_alone_is_sufficient": false
+  },
+  "effect": {
+    "strategy_distinctions_clarified": true,
+    "parent_FMSR1_v1_changed": false,
+    "R1_G_scope_expanded": false,
+    "active_gate_changed": false,
+    "scientific_result_created": false
+  },
+  "authority_state": {
+    "R1_G_scope_expansion": false,
+    "R1_G_official_qualification": false,
+    "generated_implementation_or_execution": false,
+    "network_or_source_contact": false,
+    "real_or_private_data_access": false,
+    "payload_read_or_download": false,
+    "model_or_checkpoint_access": false,
+    "training": false,
+    "inference": false,
+    "prediction_freeze": false,
+    "target_or_label_delivery": false,
+    "scoring": false,
+    "release": false,
+    "scientific_claim_upgrade": false
+  },
+  "operation_counters": {
+    "generated_qualification_runs": 0,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "real_or_private_path_reads": 0,
+    "payload_reads_or_downloads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "inference_runs": 0,
+    "prediction_sets": 0,
+    "target_or_label_deliveries": 0,
+    "scores": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "claim_boundary": {
+    "neural_effect_established": false,
+    "nuisance_resistant_EEG_information_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "intention_decoding_established": false,
+    "live_neural_decoding_established": false,
+    "language_decoding_established": false,
+    "portable_hardware_result_established": false,
+    "clinical_result_established": false
+  }
+}
