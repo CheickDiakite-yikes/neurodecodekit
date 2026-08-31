@@ -1,0 +1,1028 @@
+{
+  "schema_name": "neurodecodekit.fresh_motor_end_to_end_real_experiment_authorization_request",
+  "schema_version": "0.1.0",
+  "packet_id": "FMSR1-E2E-v0",
+  "recorded_at": "2026-08-31",
+  "status": "all_authorities_false_one_end_to_end_Tier_C_decision_requested",
+  "human_record": {
+    "path": "docs/FRESH_MOTOR_END_TO_END_REAL_EXPERIMENT_AUTHORIZATION_PACKET.md",
+    "bytes": 30104,
+    "sha256": "376028c3845a717e01ff06279578ccdfea206f3c2fa7831c71226edaae24dba2",
+    "git_blob": "456455fe9f04649d5f62a3286953b6ee6381a211"
+  },
+  "scientific_question": "Does correctly timed central EEG add predictive information for completely unseen participants beyond the identical EOG all-relevant-effector EMG and non-neural metadata bundle alone and paired with posterior pre-cue cue-window shifted and deranged EEG controls?",
+  "scientific_lane": "fresh_unseen_person_motor_task_EEG_beyond_joint_EOG_EMG_metadata_and_spatial_temporal_counterfactual_controls",
+  "measured_blocker": {
+    "eligible_already_acquired_authorized_untouched_cohort_count": 0,
+    "candidate_selected": null,
+    "current_data_directory_bytes_approximate": 12884901888,
+    "current_repository_bytes_approximate": 16106127360,
+    "filesystem_free_bytes_observed": 35651923968,
+    "blocked_by": [
+      "no fresh nuisance-complete source has passed deterministic selection and live transport admission",
+      "every already acquired cohort is consumed excluded or fails required EMG geometry timing participant-count or storage criteria",
+      "current FMSR1-R1-W-I1 authority cannot parse candidate science fields select a source access payloads or score"
+    ],
+    "ignored_marker_opened": false,
+    "private_path_opened": false,
+    "consumed_payload_reopened": false,
+    "sealed_target_opened": false,
+    "real_source_network_requests": 0,
+    "real_data_bytes_accessed": 0,
+    "model_runs": 0,
+    "scores": 0
+  },
+  "current_remote_proof": {
+    "repository": "CheickDiakite-yikes/neurodecodekit",
+    "branch": "main",
+    "commit": "bed27b1d4e8470e2de71c3d8ed991c9a8a8399ae",
+    "CI_run_id": 33404089063,
+    "CI_conclusion": "success",
+    "base_python_job_id": 99527229263,
+    "base_python_conclusion": "success",
+    "optional_neuro_readers_job_id": 99527229089,
+    "optional_neuro_readers_conclusion": "success",
+    "verified_live_on": "2026-08-31",
+    "source_identity_witness_implementation_green": true,
+    "candidate_selection_or_scientific_execution_authorized_by_this_proof": false
+  },
+  "bound_predecessor_artifacts": [
+    {
+      "path": "docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md",
+      "bytes": 43767,
+      "sha256": "90d591240fd99e9fb100f2526fb3c7338db43b52c263530d1237b664a5eda566",
+      "git_blob": "dc181cf2d0ae6d90ca483067b9b583e10a1e3e2c"
+    },
+    {
+      "path": "docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md",
+      "bytes": 15229,
+      "sha256": "442fa355a1df66a50ac12c1ef4d5380c7eafdc7776b027f72857379ad1f2d8ca",
+      "git_blob": "594f7092d6a42e58a1f68c1dedf506a7eeb376e1"
+    },
+    {
+      "path": "docs/FRESH_MOTOR_SOURCE_RESEARCH_EVIDENCE_MAP_CLARIFICATION.md",
+      "bytes": 5850,
+      "sha256": "a6b514e8e6204502b284724d0e90749fa50918e1c6ee52718cc764cbdcd608c0",
+      "git_blob": "1bf4c29b998e128bb6df052a5b0e700974170de5"
+    },
+    {
+      "path": "registries/fresh_motor_source_research_contract.v1.json",
+      "bytes": 15280,
+      "sha256": "9667b31282d7e5c852fc3de1b6fe07692952ec5720b79a0ba7c31345ccfbc8cb",
+      "git_blob": "30bec4bdbf21865991bfb61822caea8cc6f02ffd"
+    },
+    {
+      "path": "registries/fresh_motor_source_research_evidence_map_clarification.v0.json",
+      "bytes": 7717,
+      "sha256": "8eca5fade5ccdb691f7c797cf14738cda0ef3eb38bb1b07b148b5d2125c442f4",
+      "git_blob": "2f8a646babf90e1a754beb4715bb75487224ff71"
+    },
+    {
+      "path": "registries/fresh_motor_source_identity_witness_authorization_request.v0.json",
+      "bytes": 48747,
+      "sha256": "e805ffc8b2a963055c075fe002c83b6c4e6e2348f865dc07f41051dd7968d3f6",
+      "git_blob": "73ea1fa1808a7edaa2c8c1e65204e902497fbe5f"
+    },
+    {
+      "path": "registries/fresh_motor_source_identity_witness_live_implementation.v0.json",
+      "bytes": 10859,
+      "sha256": "197edc5968eda1e56b3415b05a343c3066ce7add2b9c71c33fa235d63bc857e5",
+      "git_blob": "cb74a134844ce519117792e7fea4347a4f071c9f"
+    },
+    {
+      "path": "registries/fresh_motor_source_identity_witness_live_implementation_proof.v0.json",
+      "bytes": 5508,
+      "sha256": "0696d65481870efaf56bbb337996e58394a79ffeb086ae07929d3e6ba33aeda3",
+      "git_blob": "8890116819f50639eeb862e803633cc0c93af6d2"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/fresh_motor_source_identity_witness_live.py",
+      "bytes": 117554,
+      "sha256": "7d583fc6d5404352947dd7ff3adecf62f4d0958b315c41563e09c060aceb97fc",
+      "git_blob": "e7476db08b4e452df31144be3370e40323988f62"
+    },
+    {
+      "path": "src/neurodecodekit/datasets/fresh_motor_source_discovery.py",
+      "bytes": 114568,
+      "sha256": "ce589b5bbfbb3816a74a0e6fb68ac51761bbdd63471648ad00dce8d59e08400a",
+      "git_blob": "b047cacc8fb2ac62e3d0bd6b3d4ffba8f2cde74f"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 3040,
+      "sha256": "53ea7e06c7989c7e3ae8030eafe7184aad4916fcefca2f8cfcc05ba7a87c2fc3",
+      "git_blob": "4246b7c7f6f8570df53b1b89705b496b30e38a78"
+    }
+  ],
+  "single_decision_contract": {
+    "packet_grants_authority_now": false,
+    "fresh_short_form_words_required_after_packet_remote_green": true,
+    "accepted_short_form_words": [
+      "approve",
+      "continue",
+      "proceed"
+    ],
+    "decision_must_quote_actual_maintainer_words": true,
+    "decision_must_bind_packet_commit_and_both_packet_files": true,
+    "decision_must_be_committed_pushed_and_both_required_jobs_green": true,
+    "sole_active_Tier_C_packet_after_this_packet_remote_green": "FMSR1-E2E-v0",
+    "supersedes_only_unexecuted_future_authority_route": "FMSR1-R1-W-v0",
+    "superseded_packet_implementation_qualification_output_or_consumed_roots_executed_reactivated_modified_or_deleted": false,
+    "additional_human_micro_gates_after_green_decision": 0,
+    "automated_generated_tests_clean_main_and_remote_CI_are_machine_preconditions_not_new_human_gates": true,
+    "unbound_scientific_discretion_route": "ADAPTER_BLOCKER",
+    "may_create_narrower_follow_on_request_after_terminal_route": false,
+    "may_substitute_source_relax_criteria_or_rerun": false
+  },
+  "requested_ordered_work_order_after_green_decision": [
+    "implement_one_source_agnostic_seven_arm_harness_and_standard_format_adapter",
+    "generated_fixture_tests_commit_push_and_two_job_remote_green",
+    "one_complete_same_process_five_index_identity_and_candidate_discovery_pass",
+    "deterministically_select_exactly_one_candidate_or_stop",
+    "target_free_candidate_metadata_manifest_license_transport_and_header_admission",
+    "bounded_exact_member_acquisition",
+    "target_free_source_specific_freeze_and_disjoint_participant_split",
+    "development_only_positive_controls_and_joint_power_measurement",
+    "compact_model_fit_on_development_participants_only",
+    "freeze_all_condition_probability_predictions_and_hashes",
+    "one_confirmation_target_delivery_one_nonselective_score_domain_check_and_at_most_one_score",
+    "aggregate_evidence_bundle_and_invocation_temporary_cleanup"
+  ],
+  "implementation_contract": {
+    "implementation_milestones_before_real_contact": 1,
+    "source_agnostic_harness_required": true,
+    "source_specific_values_resolved_only_by_prebound_target_free_rules": true,
+    "allowed_candidate_adapter_scope": [
+      "BIDS_1_9_or_later_EEG_reader",
+      "channel_types_units_geometry_and_reference",
+      "synchronized_EOG_and_all_relevant_effector_EMG_roles",
+      "target_free_event_timing_projection",
+      "sealed_target_projection",
+      "equal_duration_window_resolution",
+      "fixed_width_feature_schema",
+      "common_missingness_ledger"
+    ],
+    "allowed_raw_formats": [
+      "EDF_or_BDF",
+      "GDF",
+      "BrainVision",
+      "EEGLAB"
+    ],
+    "required_BIDS_sidecars": [
+      "participants.tsv",
+      "channels.tsv",
+      "electrodes.tsv",
+      "coordsystem.json",
+      "events.tsv",
+      "events.json",
+      "EEG_JSON_sidecar"
+    ],
+    "exact_dependency_versions": {
+      "mne": "1.12.1",
+      "numpy": "2.5.2",
+      "scipy": "1.18.0",
+      "scikit_learn": "1.9.0"
+    },
+    "unsupported_or_ambiguous_semantics_route": "ADAPTER_BLOCKER",
+    "target_isolation_runtime": {
+      "platform": "macOS_current_workspace",
+      "executable": "/usr/bin/sandbox-exec",
+      "profiles_default_deny": true,
+      "profiles_committed_and_SHA256_bound": true,
+      "workers_accept_only_preopened_descriptors": true,
+      "generated_forbidden_path_and_network_open_tests_required": true,
+      "unavailable_or_ineffective_route": "TARGET_FIREWALL_BLOCKER"
+    },
+    "larger_model_or_parallel_research_lane_allowed": false,
+    "generated_fixture_qualification_required": true,
+    "clean_main_required_before_real_contact": true,
+    "base_and_optional_remote_CI_green_required_before_real_contact": true,
+    "fresh_human_words_after_implementation_CI_required": false,
+    "runtime_binds": [
+      "source_identity",
+      "code_commit",
+      "configuration",
+      "participant_split",
+      "row_inventory",
+      "model_configuration",
+      "prediction_freeze",
+      "sealed_target_identity"
+    ]
+  },
+  "source_discovery_contract": {
+    "official_indexes": [
+      "OPENNEURO",
+      "NEMAR",
+      "PHYSIONET",
+      "GIGADB",
+      "BNCI_HORIZON_2020"
+    ],
+    "registered_root_count": 17,
+    "exact_text_queries": [
+      "\"motor imagery\" EEG EOG EMG",
+      "\"movement intention\" EEG EOG EMG",
+      "\"motor execution\" EEG EOG EMG",
+      "\"hand movement\" EEG EOG EMG"
+    ],
+    "complete_traversal_required": true,
+    "preselection_network_allowlists": {
+      "GitHub": "exact_prebound_GitHub_hosts",
+      "discovery": "exact_host_set_bound_by_the_17_registered_roots",
+      "candidate_metadata_and_payload": "exact_postselection_candidate_derived_hosts"
+    },
+    "every_redirect_hop_revalidated_against_stage_allowlist": true,
+    "opaque_snapshot_identity_and_candidate_semantic_parse_integrated_in_one_pass": true,
+    "general_search_engine_allowed": false,
+    "provider_search_allowed": false,
+    "authentication_cookies_or_private_credentials_allowed": false,
+    "ad_hoc_candidate_addition_allowed": false,
+    "excluded_consumed_sources_preserved": true,
+    "partial_or_capped_results_may_be_selected": false,
+    "incomplete_route": "DISCOVERY_CAP_PARK",
+    "zero_eligible_route": "NO_QUALIFYING_SOURCE",
+    "dataset_hopping_after_zero_or_park": false,
+    "prospective_collection_specification_only_after_zero": true,
+    "human_collection_or_hardware_authorized": false
+  },
+  "candidate_contract": {
+    "select_exactly_one_by_existing_FMSR1_total_order": true,
+    "eligibility_pool_before_unchanged_total_order": "existing_FMSR1_noncompensatory_predicate_AND_this_packet_exact_BIDS_sidecar_event_schema_format_and_reader_predicate",
+    "unsupported_higher_ranked_source_may_mask_supported_lower_ranked_source": false,
+    "FMSR1_source_admission_floor_participants": 10,
+    "minimum_complete_participants_for_this_end_to_end_experiment": 15,
+    "maximum_complete_participants": 256,
+    "ten_participants_is_admission_or_pilot_floor_not_automatic_confirmation": true,
+    "raw_synchronized_EEG_required": true,
+    "recorded_EOG_required": true,
+    "task_relevant_EMG_for_every_relevant_effector_required": true,
+    "kinematics_may_replace_EMG": false,
+    "named_geometry_and_reference_required": true,
+    "central_and_posterior_equal_dimensional_sets_constructible": true,
+    "explicit_cue_and_motor_event_timing_required": true,
+    "at_least_two_noncue_motor_classes_required": true,
+    "cue_identity_may_equal_target": false,
+    "immutable_official_release_required": true,
+    "reusable_noncommercial_compatible_payload_license_required": true,
+    "complete_member_manifest_required": true,
+    "source_issued_exact_size_and_cryptographic_hash_required_for_every_member_before_payload_read": true,
+    "documented_public_format_and_reader_required": true,
+    "declared_selected_payload_bytes_maximum": 12884901888,
+    "participant_dropping_to_fit_storage_allowed": false,
+    "unknown_missing_ambiguous_or_conflicting_value_is_false": true,
+    "target_model_outcome_download_convenience_or_positive_result_may_affect_selection": false
+  },
+  "candidate_admission_and_acquisition": {
+    "member_manifest_license_format_sensor_geometry_sampling_and_target_free_event_schema_validation_before_signal_or_target_semantics": true,
+    "per_row_class_assignment_decoded_only_by_isolated_target_broker": true,
+    "opaque_transport_canary_count": 1,
+    "header_selection": "lexicographically_first_member_of_each_distinct_raw_format",
+    "header_reads_maximum": 4,
+    "header_body_bytes_total_maximum": 1048576,
+    "transport_or_header_mismatch_route": "MEASUREMENT_OR_TRANSPORT_BLOCKER",
+    "acquire_only_declared_selected_cohort": true,
+    "exact_member_size_validation": true,
+    "source_issued_member_hash_validation_required": true,
+    "stream_to_isolated_destination": true,
+    "network_retries": 0,
+    "source_substitution": false,
+    "payloads_caches_private_predictions_targets_or_participant_results_committed": false
+  },
+  "participant_split_contract": {
+    "split_uses_only_public_source_and_participant_identities": true,
+    "canonical_sort_key": "sha256(UTF8(canonical_source_id) || 0x00 || UTF8(canonical_participant_id))",
+    "canonical_sort_direction": "ascending",
+    "development_count_rule": "max(5, ceil(total_participants_divided_by_3))",
+    "confirmation_is_all_remaining_participants": true,
+    "minimum_development_participants": 5,
+    "minimum_confirmation_participants": 10,
+    "development_and_confirmation_disjoint": true,
+    "development_may_support": [
+      "sensor_checks",
+      "positive_controls",
+      "leave_one_development_participant_out_power_estimation",
+      "training_only_scaling",
+      "model_fit"
+    ],
+    "confirmation_used_for_fitting_calibration_exclusion_or_model_selection": false,
+    "independent_replication_in_this_packet": false
+  },
+  "target_firewall": {
+    "isolated_target_broker_semantic_reads_maximum": 1,
+    "isolated_target_broker_is_only_process_allowed_raw_annotation_marker_or_events_TSV_access": true,
+    "isolated_target_broker_may_emit_confirmation_values": false,
+    "broker_outputs": [
+      "continuous_signal_only_derivatives_with_annotations_removed",
+      "public_target_free_timing_and_row_ledger",
+      "public_row_free_source_declared_class_vocabulary_order_and_hash",
+      "unlinked_descriptor_only_development_label_bundle_for_development_label_worker",
+      "unlinked_descriptor_only_confirmation_target_vault",
+      "public_keyed_HMAC_SHA256_confirmation_vault_commitment"
+    ],
+    "class_assignment_contract": {
+      "vocabulary_source": "events_json_trial_type_Levels_motor_role_keys_only_before_any_per_row_target_read",
+      "vocabulary_uses_development_or_confirmation_row_values": false,
+      "per_row_trial_type_decoded_only_inside_broker": true,
+      "row_free_source_declared_normalized_vocabulary_sorted_by_Unicode_codepoint": true,
+      "zero_based_integer_assignment": true,
+      "minimum_classes": 2,
+      "maximum_classes": 8,
+      "confirmation_class_values_emitted_before_score": false,
+      "unknown_confirmation_value_handling": "scorer_only_post_freeze_post_target_pre_score_domain_check_routes_TARGET_SCORE_DOMAIN_BLOCKER_with_zero_score_and_zero_row_participant_model_prediction_metric_or_class_order_change"
+    },
+    "public_target_free_ledger_schema": {
+      "allowed_columns_exact": [
+        "opaque_row_id",
+        "cue_onset_sample",
+        "motor_onset_sample",
+        "cue_duration_samples",
+        "cue_to_motor_interval_samples",
+        "cue_type",
+        "within_run_trial_ordinal"
+      ],
+      "opaque_row_id_preimage": "fresh_broker_random_token_only",
+      "forbidden_columns": [
+        "trial_type",
+        "effector",
+        "trial_id",
+        "event_role",
+        "raw_participant_identity",
+        "raw_session_identity",
+        "raw_acquisition_identity",
+        "raw_run_identity",
+        "target",
+        "class",
+        "label"
+      ],
+      "every_undeclared_column_forbidden": true
+    },
+    "scorer_score_domain_check": {
+      "timing": "after_durable_prediction_freeze_and_single_target_delivery_before_any_score",
+      "requirements": [
+        "every_confirmation_target_maps_to_frozen_source_declared_vocabulary",
+        "every_confirmation_participant_by_frozen_class_cell_has_at_least_one_row"
+      ],
+      "may_drop_or_select_rows_or_participants": false,
+      "may_change_model_predictions_metrics_protocol_or_class_order": false,
+      "failure_route": "TARGET_SCORE_DOMAIN_BLOCKER_consumed_zero_scores",
+      "success_route": "one_primary_score_over_every_frozen_confirmation_row"
+    },
+    "protected_development_label_bundle_creation": {
+      "mode": "0600",
+      "no_follow": true,
+      "exclusive_no_clobber": true,
+      "file_fsync": true,
+      "directory_and_created_ancestry_fsync": true,
+      "exact_bytes_and_sha256_recorded": true,
+      "contains_confirmation_targets": false,
+      "directory_entry_unlinked_after_fsync": true,
+      "open_descriptor_passed_only_to_sandboxed_development_worker": true
+    },
+    "protected_vault_creation": {
+      "mode": "0600",
+      "no_follow": true,
+      "exclusive_no_clobber": true,
+      "file_fsync": true,
+      "directory_and_created_ancestry_fsync": true,
+      "directory_entry_unlinked_after_fsync": true,
+      "open_descriptor_retained_only_by_waiting_broker_until_freeze_green": true,
+      "exact_bytes_and_SHA256_private_to_broker_and_scorer": true,
+      "public_commitment": "HMAC_SHA256_of_canonical_vault_bytes_with_unpredictable_256_bit_key",
+      "HMAC_key_storage_before_delivery": "broker_memory_only",
+      "bare_vault_SHA256_public": false
+    },
+    "worker_capability_contract": {
+      "sandbox_executable": "/usr/bin/sandbox-exec",
+      "committed_SHA_bound_default_deny_profiles": true,
+      "preopened_descriptors_only": true,
+      "prediction_worker_allowed_inputs": [
+        "continuous_signal_only_derivatives_without_annotations",
+        "public_target_free_timing_and_metadata_ledger",
+        "frozen_configuration",
+        "development_label_descriptor"
+      ],
+      "prediction_worker_forbidden_inputs": [
+        "raw_members",
+        "annotations",
+        "marker_files",
+        "events.tsv",
+        "confirmation_vault_descriptor",
+        "confirmation_vault_path",
+        "network"
+      ],
+      "generated_tests_prove_forbidden_opens_fail": true,
+      "failure_route": "TARGET_FIREWALL_BLOCKER"
+    },
+    "confirmation_target_values_delivered_to_model_or_prediction_aggregator_before_freeze": false,
+    "if_timing_and_target_cannot_be_separated_by_broker_route": "TARGET_FIREWALL_BLOCKER",
+    "development_label_worker_receives_only_development_targets": true,
+    "participant_scoped_prediction_worker_receives_confirmation_targets": false,
+    "prediction_aggregator_receives_targets": false,
+    "scorer_receives_sealed_confirmation_targets_once_after_freeze": true,
+    "broker_semantic_target_read_counted_separately_from_target_delivery": true,
+    "target_deliveries_maximum": 1,
+    "score_events_maximum": 1,
+    "post_target_parameter_threshold_exclusion_seed_or_protocol_updates": 0,
+    "frozen_before_target_delivery": [
+      "channel_mapping",
+      "reference",
+      "window_definitions",
+      "row_free_source_declared_class_vocabulary_order_and_hash",
+      "feature_schema",
+      "common_row_mask",
+      "missingness_policy",
+      "shift_and_derangement_seeds",
+      "model_and_penalty",
+      "effect_threshold",
+      "statistical_tests",
+      "stopping_rule",
+      "claim_route"
+    ],
+    "development_only_confirmation_blind_values_before_target_delivery": [
+      "cross_fitted_development_margin_vectors",
+      "joint_power_at_exact_final_confirmation_count",
+      "positive_control_results"
+    ]
+  },
+  "nuisance_contract": {
+    "N_components": [
+      "EOG",
+      "task_relevant_EMG_for_every_relevant_effector",
+      "canonical_non_target_identical_cue_type_one_hot",
+      "cue_duration",
+      "cue_to_motor_interval",
+      "within_run_trial_ordinal"
+    ],
+    "posterior_EEG_in_N": false,
+    "raw_participant_session_acquisition_or_run_identity_in_model_features": false,
+    "development_cue_type_validity_rule_before_freeze": "development_labels_only_every_cue_type_spans_at_least_two_target_classes_and_every_target_class_spans_at_least_two_cue_types",
+    "confirmation_cue_type_validity_timing": "one_scorer_after_primary_score_over_every_frozen_confirmation_row",
+    "confirmation_cue_type_validity_failure_effect": "CONFIRMATION_VALIDITY_BLOCKER_claim_ceiling_only_no_row_participant_model_prediction_score_or_metric_change",
+    "target_identical_metadata_in_model_features": false,
+    "N_byte_identical_across_every_neural_arm": true
+  },
+  "condition_contract": {
+    "candidate_condition": "N_plus_central_EEG_correct_motor_window",
+    "conditions": [
+      "N_plus_central_EEG_correct_motor_window",
+      "N_only",
+      "N_plus_geometry_matched_posterior_EEG_correct_motor_window",
+      "N_plus_central_EEG_pre_cue_window",
+      "N_plus_central_EEG_cue_window",
+      "N_plus_one_registered_structure_preserving_shifted_central_EEG",
+      "N_plus_one_registered_target_blind_deranged_central_EEG"
+    ],
+    "registered_shift_condition_count": 1,
+    "registered_derangement_condition_count": 1,
+    "same_rows_every_condition": true,
+    "all_neural_blocks_equal_width": true,
+    "all_neural_windows_equal_duration_seconds": 1.0,
+    "all_neural_arms_same_preprocessing_feature_family_missingness_and_fit_schedule": true,
+    "N_is_scientific_ablation_not_claimed_equal_effective_capacity": true,
+    "strict_added_feature_capacity_controls": [
+      "equal_width_shifted_neural_arm",
+      "equal_width_deranged_neural_arm"
+    ],
+    "every_edge_must_pass": true,
+    "edges_or_offsets_may_be_averaged": false,
+    "winner_selection_allowed": false
+  },
+  "target_free_candidate_specific_resolution": {
+    "allowed_values": [
+      "participant_IDs_and_split_membership",
+      "row_free_class_schema_identity_from_events_JSON",
+      "relevant_effectors_and_EMG_channels",
+      "equal_dimensional_central_and_posterior_channel_sets",
+      "source_relative_equal_duration_pre_cue_cue_and_motor_windows",
+      "cue_timing_and_task_metadata_fields",
+      "target_free_row_floor",
+      "shift_and_derangement_mapping_preimages"
+    ],
+    "per_row_class_decoding_or_integer_assignment": "isolated_target_broker_only",
+    "may_use_confirmation_targets_outcomes_or_desire_for_positive_result": false,
+    "unbound_choice_route": "ADAPTER_BLOCKER"
+  },
+  "adapter_resolution_contract": {
+    "BIDS_label_normalization": "NFKC_then_trim_ASCII_whitespace_preserve_case",
+    "event_layout": {
+      "exactly_one_layout_must_match": true,
+      "wide_required_columns": [
+        "trial_id",
+        "onset",
+        "duration",
+        "trial_type",
+        "cue_type",
+        "effector",
+        "motor_onset"
+      ],
+      "wide_forbidden_column": "event_role",
+      "long_required_columns": [
+        "trial_id",
+        "onset",
+        "duration",
+        "trial_type",
+        "cue_type",
+        "effector",
+        "event_role"
+      ],
+      "long_forbidden_column": "motor_onset",
+      "long_pairing": "exactly_one_cue_and_one_motor_row_share_normalized_trial_id_trial_type_cue_type_and_effector",
+      "layout_and_roles_declared_by": "events.json",
+      "missing_duplicate_conflicting_or_dual_layout_route": "ADAPTER_BLOCKER"
+    },
+    "recording_identity": "exact_BIDS_sub_ses_task_acq_run_recording_entity_tuple",
+    "event_pairing_scope": "within_exact_recording_identity_only",
+    "motor_onset_must_be_strictly_after_cue_onset": true,
+    "trial_order": "cue_onset_sample_then_normalized_trial_id_ascending",
+    "recording_identity_used_as_model_feature": false,
+    "effector_and_EMG_mapping": "exact_explicit_BIDS_channel_description_and_official_motor_class_role",
+    "zero_or_multiple_effector_channel_mappings_route": "ADAPTER_BLOCKER",
+    "central_pair_order": [
+      "C3/C4",
+      "C1/C2",
+      "C5/C6",
+      "FC3/FC4",
+      "FC1/FC2",
+      "FC5/FC6",
+      "CP3/CP4",
+      "CP1/CP2",
+      "CP5/CP6"
+    ],
+    "posterior_pair_order": [
+      "P3/P4",
+      "P1/P2",
+      "P5/P6",
+      "PO3/PO4",
+      "PO1/PO2",
+      "PO5/PO6",
+      "O1/O2",
+      "P7/P8",
+      "PO7/PO8"
+    ],
+    "pair_count_rule": "q_equals_minimum_of_6_complete_central_pairs_and_complete_posterior_pairs",
+    "minimum_pair_count": 3,
+    "valid_coordinates_required_for_every_selected_electrode": true,
+    "reference_rule": "use_explicit_native_hardware_reference_without_rereferencing",
+    "rejected_references": [
+      "unknown",
+      "common_average",
+      "analyzed_central_channel",
+      "analyzed_posterior_channel",
+      "EOG_channel",
+      "EMG_channel"
+    ],
+    "minimum_sampling_Hz": 100.0,
+    "window_duration_seconds": 1.0,
+    "sample_start_rule": "floor(onset_seconds_times_sampling_Hz_plus_0.5)",
+    "sample_count_rule": "floor(sampling_Hz_plus_0.5)",
+    "window_intervals": {
+      "pre_cue": "[cue_onset_minus_1.0,cue_onset)",
+      "cue": "[cue_onset,cue_onset_plus_1.0)",
+      "motor": "[motor_onset,motor_onset_plus_1.0)"
+    },
+    "cue_duration_samples_rule": "floor(duration_seconds_times_sampling_Hz_plus_0.5)",
+    "cue_to_motor_interval_samples_rule": "motor_onset_sample_minus_cue_onset_sample",
+    "timing_stratum": "exact_pair_of_cue_duration_samples_and_cue_to_motor_interval_samples",
+    "class_vocabulary_source": "events_json_trial_type_Levels_motor_role_keys_only_frozen_before_any_per_row_target_read",
+    "class_vocabulary_uses_development_or_confirmation_row_values": false,
+    "class_row_source": "official_BIDS_motor_trial_type_row_assignments_decoded_only_by_target_broker_and_mapped_to_frozen_source_declared_vocabulary",
+    "nonmotor_exclusion_requires_explicit_source_role": true,
+    "class_sort_before_per_row_target_read": "normalized_source_declared_Unicode_codepoint_ascending",
+    "class_integer_assignment_before_per_row_target_read": "zero_based_in_class_sort_order",
+    "minimum_classes": 2,
+    "maximum_classes": 8,
+    "minimum_retained_trials_per_class_per_participant": 20
+  },
+  "feature_contract": {
+    "EEG_per_channel_features": [
+      "arithmetic_mean_voltage",
+      "natural_log_8_to_12_Hz_power",
+      "natural_log_12_to_20_Hz_power",
+      "natural_log_20_to_30_Hz_power"
+    ],
+    "EEG_spectral_transform": {
+      "mean_remove_within_window": true,
+      "window": "Hann",
+      "FFT": "unpadded_real_FFT",
+      "band_edges": "lower_inclusive_upper_exclusive",
+      "power_floor_before_natural_log": 1e-12
+    },
+    "EEG_pair_features": "left_minus_right_for_every_per_channel_feature_and_selected_pair",
+    "EOG_per_channel_features_in_cue_and_motor_windows": [
+      "mean",
+      "standard_deviation",
+      "peak_to_peak",
+      "least_squares_slope"
+    ],
+    "EMG_per_channel_features_in_cue_and_motor_windows": [
+      "mean_absolute_amplitude",
+      "root_mean_square",
+      "waveform_length",
+      "natural_log_20_to_45_Hz_power"
+    ],
+    "training_participant_only_scaling": true,
+    "imputation_allowed": false,
+    "whole_head_or_common_average_reference_that_mixes_posterior_EOG_or_EMG_into_central_EEG": false,
+    "PCA_or_learned_encoder": false,
+    "foundation_model_neural_network_or_LLM": false,
+    "target_conditioned_channel_selection": false,
+    "hyperparameter_search": false
+  },
+  "model_contract": {
+    "family": "multinomial_L2_logistic_regression",
+    "scikit_learn_version": "1.9.0",
+    "penalty": "l2",
+    "C": 0.1,
+    "solver": "lbfgs",
+    "fit_intercept": true,
+    "max_iter": 1000,
+    "tol": 0.000001,
+    "class_weight": null,
+    "random_state": 0,
+    "warm_start": false,
+    "threads": 1,
+    "class_order": "canonical_zero_based_integer_class_order",
+    "binary_behavior": "native_two_column_predict_proba",
+    "multiclass_behavior": "native_multinomial_predict_proba",
+    "probability_method": "native_predict_proba",
+    "native_probability_simplex_absolute_tolerance": 1e-12,
+    "fitted_external_calibrator": false,
+    "held_participant_adaptation": false,
+    "frozen_probability_vectors_are_modified_by_scorer": false,
+    "log_loss_target_probability_floor_only": 0.000001,
+    "Brier_and_calibration_use_native_probabilities": true,
+    "nonconvergence_nonfinite_missing_class_or_simplex_error_route": "MODEL_BLOCKER",
+    "same_estimator_and_schedule_every_arm": true,
+    "larger_model_after_failure_on_same_target": false
+  },
+  "shift_and_derangement_contract": {
+    "mask_precedes_control_mapping": true,
+    "mask_inputs": "unshifted_central_posterior_pre_cue_cue_EOG_EMG_and_metadata_blocks_only",
+    "stratum": "canonical_participant_ID_exact_BIDS_recording_identity_cue_type_cue_duration_samples_and_cue_to_motor_interval_samples",
+    "row_order": "cue_onset_sample_then_normalized_trial_id_ascending",
+    "minimum_rows_per_stratum": 2,
+    "shift": {
+      "kind": "target_blind_no_fixed_point_cyclic_row_shift_of_central_motor_feature_blocks_within_stratum",
+      "offset_rule": "1_plus_int_SHA256_preimage_modulo_m_minus_1",
+      "seed_preimage": "FMSR1-E2E-v0|canonical_source_id|canonical_participant_id|exact_BIDS_recording_identity|cue_type|cue_duration_samples|cue_to_motor_interval_samples|SHIFT",
+      "assignment": "row_j_receives_central_motor_block_from_row_j_plus_offset_modulo_m",
+      "fixed_points_allowed": false,
+      "preserve_exact_feature_multiset_width_spectrum_finite_pattern_row_count_and_N": true
+    },
+    "derangement": {
+      "kind": "target_blind_no_fixed_point_hash_order_successor_permutation_of_central_motor_feature_blocks_within_stratum",
+      "row_hash_preimage": "FMSR1-E2E-v0|canonical_source_id|canonical_participant_id|exact_BIDS_recording_identity|cue_type|cue_duration_samples|cue_to_motor_interval_samples|normalized_trial_id|DERANGE",
+      "row_hash_algorithm": "sha256",
+      "assignment": "each_hash_ordered_row_receives_its_cyclic_successor_central_motor_block",
+      "fixed_points_allowed": false,
+      "preserve_exact_feature_multiset_width_spectrum_finite_pattern_row_count_and_N": true
+    },
+    "development_only_alignment_break_audit": {
+      "prediction_path": "leave_one_development_participant_out",
+      "applies_to": [
+        "shift",
+        "derangement"
+      ],
+      "minimum_target_classes_every_stratum": 2,
+      "maximum_target_agreement_every_control_and_stratum": "sum(class_fraction_squared)+0.05",
+      "confirmation_targets_used": false
+    },
+    "confirmation_stratum_check_timing": "one_scorer_after_primary_score_over_every_frozen_confirmation_row",
+    "confirmation_stratum_check_failure_effect": "CONFIRMATION_VALIDITY_BLOCKER_claim_ceiling_only_no_inclusion_prediction_score_or_metric_change",
+    "failed_alignment_break_audit_route": "INVALID_SENSITIVITY",
+    "seed_search_after_failure": false,
+    "confirmation_target_use_in_seed_or_permutation": false
+  },
+  "missingness_contract": {
+    "required_modality_geometry_or_effector_missing": "STRUCTURAL_FAILURE",
+    "common_target_blind_row_mask_across_all_arms": true,
+    "complete_case_mask_rule": "retain_only_rows_with_all_finite_unshifted_central_posterior_pre_cue_cue_EOG_EMG_and_metadata_features_before_shift_or_derangement_mapping",
+    "imputation_allowed": false,
+    "minimum_target_free_declared_motor_row_fraction_retained_per_participant": 0.8,
+    "minimum_retained_trials_per_class_per_confirmation_participant": 20,
+    "score_domain_nonempty_participant_by_frozen_class_check": "scorer_only_post_freeze_post_target_pre_score_or_TARGET_SCORE_DOMAIN_BLOCKER_consumed_zero_scores",
+    "confirmation_class_floor_checked_only_by_scorer_after_primary_score": true,
+    "confirmation_class_floor_failure_effect": "COHORT_COMPLETENESS_BLOCKER_claim_ceiling_only_no_row_participant_prediction_score_or_metric_change",
+    "arm_specific_row_deletion": false,
+    "post_target_participant_exclusion": false,
+    "shift_and_derangement_preserve_mask": true
+  },
+  "positive_control_contract": {
+    "all_required_before_confirmation_target_open": true,
+    "cross_fitting": "leave_one_development_participant_out_with_every_scaler_mask_and_model_fit_excluding_the_scored_person",
+    "gates": {
+      "peripheral_recoverability": {
+        "scope": "every_required_EOG_and_EMG_channel_for_every_development_participant",
+        "maximum_alignment_error_EEG_samples": 1,
+        "minimum_finite_sample_fraction": 0.99,
+        "robust_scale": "1.4826_times_MAD_volts",
+        "robust_scale_minimum_volts": 1e-8,
+        "robust_scale_maximum_volts": 0.001
+      },
+      "central_mu_beta_temporal_sensitivity": {
+        "effects": [
+          "pre_cue_minus_motor_central_mu_plus_beta_log_power",
+          "cue_minus_motor_central_mu_plus_beta_log_power"
+        ],
+        "per_person_class_window_value": "arithmetic_mean_of_natural_log_power_over_retained_trials_all_selected_central_channels_and_exactly_8_to_12_12_to_20_and_20_to_30_Hz_bands",
+        "within_person_aggregation": "equal_class_mean",
+        "across_person_aggregation": "equal_person_mean",
+        "minimum_participant_mean_nats_each_effect": 0.05,
+        "test": "exact_one_sided_participant_sign_test",
+        "maximum_p_each_effect": 0.05,
+        "ties_count_nonpositive": true
+      },
+      "injected_effect_pipeline_sensitivity": {
+        "cross_fit": "leave_one_development_participant_out",
+        "dimension_order": "selected_pair_major_then_8_to_12_12_to_20_20_to_30_Hz_left_minus_right_log_power",
+        "class_to_dimension": "zero_based_class_integer_k_maps_to_zero_based_dimension_k",
+        "injection_sign": "positive",
+        "injection_magnitude": "0.25_times_training_row_sample_standard_deviation_ddof_1_of_raw_dimension_k",
+        "injection_application": "before_training_only_standardization_to_training_and_held_development_rows_using_the_same_class_mapping",
+        "dimension_collisions_allowed": false,
+        "nonfinite_or_zero_training_standard_deviation_route": "INVALID_SENSITIVITY",
+        "minimum_equal_class_log_loss_improvement_nats": 0.02,
+        "test": "exact_one_sided_participant_sign_test",
+        "maximum_p": 0.05,
+        "ties_count_nonpositive": true,
+        "class_rotation_negative_control": "reuse_positive_injected_fit_but_held_row_class_k_receives_dimension_k_plus_1_modulo_K_while_training_mapping_remains_k",
+        "shift_negative_control": "registered_cross_fitted_N_plus_shifted_central_arm_compared_with_cross_fitted_N_only",
+        "negative_control_rule": "each_must_fail_at_least_one_of_mean_improvement_or_sign_test_criteria"
+      }
+    },
+    "failure_route": "INVALID_SENSITIVITY",
+    "failure_is_biological_null": false,
+    "confirmation_participant_selection_or_exclusion_by_positive_control": false
+  },
+  "prediction_freeze": {
+    "full_ordered_native_probability_vector_required": true,
+    "argmax_only_freeze_allowed": false,
+    "class_order_required": true,
+    "row_and_condition_inventory_required": true,
+    "source_config_code_split_model_sandbox_profile_and_keyed_target_vault_HMAC_required": true,
+    "bare_target_vault_SHA256_in_public_record": false,
+    "private_confirmation_predictions_human_inspectable_before_score": false,
+    "all_condition_predictions_frozen_before_target_delivery": true,
+    "prediction_file_creation": {
+      "exclusive_no_clobber": true,
+      "no_follow": true,
+      "mode": "0400",
+      "file_fsync": true,
+      "parent_directory_and_created_ancestry_fsync": true,
+      "bind_device_inode_bytes_and_sha256": true
+    },
+    "hash_only_freeze_record": {
+      "contains_confirmation_targets_or_probability_values": false,
+      "target_commitment": "HMAC_SHA256_secret_key_canonical_confirmation_vault_bytes",
+      "HMAC_key_public_before_score": false,
+      "committed_and_pushed": true,
+      "base_and_optional_remote_CI_green_required": true
+    },
+    "waiting_target_broker_validates_freeze_identity_before_descriptor_and_key_release": true,
+    "broker_or_descriptor_loss_route": "TARGET_FIREWALL_BLOCKER",
+    "scorer_revalidates_device_inode_bytes_and_sha256_after_score": true,
+    "private_prediction_payload_committed": false
+  },
+  "primary_inference": {
+    "primary_metric": "equal_class_within_participant_then_equal_participant_natural_log_loss",
+    "edge_definition": "d_i_e_equals_LL_i_N_plus_comparator_e_minus_LL_i_N_plus_correct_central_motor_EEG",
+    "edges": [
+      "N_only",
+      "posterior_EEG_correct_motor_window",
+      "central_EEG_pre_cue_window",
+      "central_EEG_cue_window",
+      "structure_preserving_shifted_central_EEG",
+      "target_blind_deranged_central_EEG"
+    ],
+    "minimum_mean_delta_nats_per_trial_each_edge": 0.02,
+    "test": "exact_one_sided_participant_sign_test",
+    "positive_definition": "d_i_e_strictly_greater_than_zero",
+    "ties_count_nonpositive": true,
+    "alpha_each_edge": 0.05,
+    "global_rule": "intersection_union_all_edges_pass",
+    "Bonferroni_for_global_IUT": false,
+    "strong_edge_may_rescue_failed_edge": false,
+    "participant_is_inferential_unit": true,
+    "trial_level_inference": false,
+    "bootstrap": {
+      "kind": "participant_percentile_bootstrap",
+      "draws": 20000,
+      "confidence": 0.95,
+      "seed_preimage": "FMSR1-E2E-v0|canonical_source_id|CI",
+      "seed_algorithm": "sha256"
+    },
+    "positive_participant_interval": "exact_Clopper_Pearson_95_percent",
+    "log_loss_probability_rule": "negative_natural_log_of_maximum_of_native_target_probability_and_0.000001",
+    "Brier_and_calibration_probability_rule": "unchanged_native_probability_simplex",
+    "secondary_metrics": [
+      "participant_macro_balanced_accuracy",
+      "participant_macro_Brier_score",
+      "fixed_10_bin_equal_width_top_label_expected_calibration_error",
+      "classwise_recall",
+      "missingness",
+      "no_signal_prior"
+    ],
+    "expected_calibration_error_bins": "[j/10,(j+1)/10)_for_j_0_through_8_and_[0.9,1.0]_for_last_bin",
+    "secondary_metric_fits": 0,
+    "secondary_metrics_may_rescue_primary_failure": false
+  },
+  "power_contract": {
+    "computed_on_development_participant_margin_vectors_before_confirmation_target_open": true,
+    "development_margin_source": "leave_one_development_participant_out_predictions",
+    "cross_fit_exclusion_rule": "every_transform_scaler_mask_and_model_fit_excludes_the_scored_development_participant",
+    "minimum_joint_power": 0.8,
+    "minimum_mean_effect_gate_nats_per_trial": 0.02,
+    "design_alternative_mean_nats_per_trial": 0.03,
+    "preserve_cross_edge_covariance": true,
+    "algorithm": "center_development_participant_edge_vectors_then_add_0.03_to_every_edge_and_resample_participants_with_replacement",
+    "draws_per_candidate_confirmation_count": 100000,
+    "seed_preimage": "FMSR1-E2E-v0|canonical_source_id|POWER",
+    "seed_algorithm": "sha256",
+    "simulated_success_requires_every_mean_at_least_0.02_and_every_exact_sign_test_p_at_most_0.05": true,
+    "evaluated_confirmation_count": "exact_all_remaining_confirmation_participants",
+    "smaller_count_threshold_substitution_allowed": false,
+    "joint_power_below_0_8_route": "INCONCLUSIVE_UNDERPOWERED_before_confirmation_target_delivery",
+    "underpowering_precedes_target_delivery_scoring_and_edge_interpretation": true,
+    "positive_point_estimate_may_override_underpowered_route": false,
+    "ten_total_participants_automatically_confirmatory": false,
+    "fifteen_total_participants_automatically_adequately_powered": false
+  },
+  "hard_decision": {
+    "unsupported_or_ambiguous_adapter_semantics": "ADAPTER_BLOCKER",
+    "model_nonconvergence_nonfinite_missing_class_or_simplex_error": "MODEL_BLOCKER",
+    "score_domain_unknown_target_or_empty_participant_by_frozen_class_cell": "TARGET_SCORE_DOMAIN_BLOCKER_consumed_zero_scores",
+    "post_score_confirmation_class_floor_failure": "COHORT_COMPLETENESS_BLOCKER_claim_ceiling_only",
+    "positive_control_failure": "INVALID_SENSITIVITY",
+    "central_fails_N_edge": "NO_INCREMENT_BEYOND_RECORDED_NUISANCE",
+    "central_fails_derangement_edge": "MATCHED_EEG_IDENTITY_OR_LEAKAGE_REMAINS_VIABLE",
+    "central_fails_posterior_edge": "SPATIAL_CONFOUND_LOCALIZED",
+    "central_fails_pre_cue_cue_or_shift_edge": "TEMPORAL_OR_TASK_CONFOUND_LOCALIZED",
+    "joint_power_below_0_8_at_exact_final_confirmation_count": "INCONCLUSIVE_UNDERPOWERED_BEFORE_TARGET_DELIVERY",
+    "underpowering_has_precedence_over_edge_interpretation": true,
+    "all_edges_pass_with_adequate_power_one_cohort": "PRELIMINARY_COHORT_SPECIFIC_NUISANCE_RESISTANT_UNSEEN_PERSON_CENTRAL_SCALP_EEG_INCREMENT",
+    "independent_replication_required_for_replicated_claim": true,
+    "motor_result_establishes_intention_language_thought_live_hardware_or_clinical_claim": false
+  },
+  "resource_contract": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "wall_time_seconds_maximum": 86400,
+    "peak_process_tree_RSS_bytes_maximum": 4294967296,
+    "GitHub_CI_requests_exact": 3,
+    "discovery_requests_maximum": 125,
+    "candidate_metadata_header_manifest_requests_maximum": 256,
+    "payload_requests_maximum": 2048,
+    "payload_member_count_maximum": 2048,
+    "network_retries": 0,
+    "network_request_contract": {
+      "scheme": "https",
+      "port": 443,
+      "accept_encoding": "identity",
+      "proxy_allowed": false,
+      "timeout_seconds": 30,
+      "redirects_maximum": 3,
+      "redirects_must_preserve_method": true,
+      "stage_allowlists": {
+        "GitHub": "exact_prebound_GitHub_hosts",
+        "discovery": "exact_host_set_bound_by_the_17_registered_roots",
+        "candidate_metadata_and_payload": "exact_postselection_candidate_derived_hosts"
+      },
+      "every_request_and_redirect_hop_revalidated_against_stage_allowlist": true,
+      "peer_must_be_global_unicast": true
+    },
+    "discovery_response_body_bytes_maximum": 33554432,
+    "candidate_metadata_header_body_bytes_maximum": 67108864,
+    "header_body_bytes_total_maximum": 1048576,
+    "selected_payload_body_bytes_maximum": 12884901888,
+    "complete_participants_maximum": 256,
+    "model_fit_count_maximum": "10_times_development_participant_count_plus_7",
+    "prediction_set_count_maximum": "10_times_development_participant_count_plus_7",
+    "unused_fit_or_prediction_allowance_may_be_reassigned": false,
+    "other_numerical_fit_count": 0,
+    "storage_budget": {
+      "selected_source_payload_bytes": 12884901888,
+      "invocation_temporary_bytes": 2147483648,
+      "derivative_and_frozen_prediction_bytes": 2147483648,
+      "atomic_result_publication_bytes": 1073741824,
+      "untouched_reserve_bytes": 3221225472,
+      "total_incremental_disk_cap_bytes": 21474836480,
+      "component_sum_must_equal_total": true,
+      "free_disk_checked_before_every_allocation": true,
+      "minimum_filesystem_free_bytes_after_every_allocation": 21474836480,
+      "candidate_specific_peak_plan_required_before_acquisition": true,
+      "planned_and_actual_peak_must_preserve_untouched_reserve_and_filesystem_floor": true,
+      "failure_route": "RESOURCE_BLOCKER",
+      "streaming_required_if_second_copy_exceeds_atomic_allowance": true,
+      "participant_dropping_to_fit_budget": false
+    },
+    "measure_and_report": [
+      "runtime_seconds",
+      "peak_process_tree_RSS_bytes",
+      "network_request_and_byte_counts",
+      "input_payload_bytes",
+      "temporary_peak_bytes",
+      "derivative_bytes",
+      "prediction_bytes",
+      "aggregate_output_bytes",
+      "free_disk_before_and_after",
+      "model_fit_count",
+      "prediction_set_count",
+      "isolated_target_broker_read_count",
+      "target_vault_bytes_and_public_keyed_HMAC",
+      "freeze_record_commit_and_remote_CI",
+      "target_delivery_count",
+      "score_domain_check_count_and_result",
+      "score_count"
+    ]
+  },
+  "cleanup_contract": {
+    "allowed": "only_invocation_created_temporary_files_inside_new_work_root",
+    "existing_data_deleted_overwritten_renamed_moved_or_modified": false,
+    "consumed_roots_or_ignored_markers_accessed_or_modified": false,
+    "private_evidence_accessed": false,
+    "unrelated_files_or_other_projects_touched": false,
+    "retained": [
+      "selected_licensed_payload_needed_for_reproduction",
+      "bounded_derivatives",
+      "protected_frozen_predictions",
+      "one_aggregate_evidence_bundle"
+    ],
+    "real_artifacts_committed": false
+  },
+  "single_use_and_terminal_routes": {
+    "official_work_order_invocations_maximum": 1,
+    "consumed_on": [
+      "DISCOVERY_CAP_PARK",
+      "NO_QUALIFYING_SOURCE",
+      "MEASUREMENT_OR_TRANSPORT_BLOCKER",
+      "ADAPTER_BLOCKER",
+      "RESOURCE_BLOCKER",
+      "MODEL_BLOCKER",
+      "COHORT_COMPLETENESS_BLOCKER",
+      "INVALID_SENSITIVITY",
+      "INCONCLUSIVE_UNDERPOWERED",
+      "TARGET_FIREWALL_BLOCKER",
+      "TARGET_SCORE_DOMAIN_BLOCKER",
+      "SCORING_COMPLETE",
+      "PROCESS_EXIT",
+      "ANY_OTHER_TERMINAL_ROUTE"
+    ],
+    "retry_rerun_resume_repair_substitution_or_post_target_tuning": false
+  },
+  "operation_authority_now": {
+    "implementation_under_this_packet": false,
+    "network_or_official_source_contact": false,
+    "candidate_semantic_parse_rank_or_selection": false,
+    "candidate_metadata_header_or_manifest_access": false,
+    "payload_download_or_read": false,
+    "signal_event_annotation_or_target_access": false,
+    "isolated_target_broker_read_or_vault_creation": false,
+    "preprocessing_or_derivative_creation": false,
+    "model_training_or_inference": false,
+    "prediction_freeze": false,
+    "target_delivery": false,
+    "scoring": false,
+    "temporary_cleanup": false,
+    "release_publication_or_scientific_claim_upgrade": false
+  },
+  "requested_authority_after_packet_bound_decision_remote_green": {
+    "one_minimal_generated_tested_implementation_milestone": true,
+    "one_complete_public_source_discovery_and_selection_pass": true,
+    "one_selected_candidate_metadata_header_manifest_and_acquisition": true,
+    "one_target_firewalled_preprocessing_and_model_run": true,
+    "one_isolated_target_broker_read_and_protected_vault_creation": true,
+    "one_prediction_freeze_hash_only_commit_push_and_two_job_CI": true,
+    "one_confirmation_target_delivery": true,
+    "one_score": true,
+    "invocation_created_temporary_cleanup": true,
+    "source_substitution_or_rerun": false,
+    "hardware_human_collection_release_publication_or_claim_promotion": false
+  },
+  "claim_boundary_now": {
+    "source_selected": false,
+    "real_EEG_accessed": false,
+    "model_run": false,
+    "score_produced": false,
+    "neural_advantage_established": false,
+    "EEG_beyond_joint_peripheral_spatial_temporal_and_derangement_controls_established": false,
+    "unseen_person_generalization_established": false,
+    "independent_replication_established": false,
+    "movement_intention_or_motor_cortex_established": false,
+    "thought_or_language_decoding_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_or_clinical_value_established": false
+  },
+  "maximum_claim_after_successful_adequately_powered_single_score": "preliminary_cohort_specific_nuisance_resistant_unseen_participant_central_scalp_EEG_increment_under_the_frozen_method",
+  "explicitly_out_of_scope": [
+    "independent_replication",
+    "causal_source_claim",
+    "self_chosen_intention_claim",
+    "communication_or_language_decoding",
+    "causal_replay_shadow_stream_or_live_operation",
+    "hardware_or_human_subject_operation",
+    "clinical_claim",
+    "release_publication_or_public_scientific_claim_promotion",
+    "another_project",
+    "destructive_cleanup"
+  ]
+}
