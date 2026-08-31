@@ -16746,3 +16746,9 @@ and require both remote jobs green before the one official qualification.
   artifacts / 314,356 bytes. No qualification, live witness, official-index,
   candidate, EEG, target, model, prediction, score, release, or claim operation
   was performed.
+- 2026-08-31: First proof-closeout commit `c674def` failed Base
+  `99522972149` and Optional `99522971803` in CI `33402803185` on the same
+  historical documentation assertion: expanded README status moved the
+  immutable Ofner frontier-v6 link beyond a legacy 14,000-character scan. The
+  correction restores that early link and records the failed run. No
+  implementation artifact or protected operation changed.

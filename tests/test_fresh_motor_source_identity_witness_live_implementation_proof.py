@@ -74,6 +74,14 @@ class FreshMotorSourceIdentityWitnessLiveImplementationProofTests(
         )
 
     def test_closeout_repeats_no_protected_operation(self) -> None:
+        repair = self.proof["failed_proof_closeout_and_repair"]
+        self.assertEqual(
+            repair["failed_commit"], "c674def312911fa2d5ef40c409d4590b77d6c94f"
+        )
+        self.assertEqual(repair["failed_CI_run_id"], 33_402_803_185)
+        self.assertFalse(repair["implementation_artifacts_modified"])
+        self.assertFalse(repair["generated_qualification_repeated"])
+        self.assertEqual(repair["protected_operations"], 0)
         scope = self.proof["scope_preservation"]
         self.assertFalse(scope["generated_qualification_rerun"])
         self.assertFalse(scope["live_witness_invoked"])
@@ -100,6 +108,8 @@ class FreshMotorSourceIdentityWitnessLiveImplementationProofTests(
         self.assertIn("Scientific claim not established:", document)
         self.assertIn("fresh maintainer words", document)
         self.assertIn("does not rerun qualification", document)
+        readme_prefix = (ROOT / "README.md").read_text(encoding="utf-8")[:14_000]
+        self.assertIn("registries/current_research_frontier.v6.json", readme_prefix)
 
 
 if __name__ == "__main__":

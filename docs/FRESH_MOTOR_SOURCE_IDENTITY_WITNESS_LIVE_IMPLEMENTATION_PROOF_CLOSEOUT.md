@@ -31,6 +31,14 @@ and semantic decision validation. A regression test now proves the loader does
 not invoke Git at all. This was an engineering repair; the consumed generated
 qualification was not repeated.
 
+The first proof-closeout commit,
+`c674def312911fa2d5ef40c409d4590b77d6c94f`, then failed both complete CI
+suites in run `33402803185`. The new README detail had moved the immutable
+Ofner frontier-v6 link beyond a legacy 14,000-character control-plane scan.
+This correction restores that explicit historical link near the Ofner result.
+It changes no implementation artifact and performs no qualification, live
+witness, official-index, candidate, EEG, model, score, or claim operation.
+
 ## Bound Evidence
 
 This proof binds the exact 10,859-byte implementation ledger, which binds 15

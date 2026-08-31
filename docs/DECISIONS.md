@@ -15140,3 +15140,7 @@ green; only then may the single generated qualification run.
   repository, workflow, packet, and `CI-W0` contract. Until that later decision
   is green, prohibit `CI-W0`, official-index contact, candidate handling, real
   EEG, model, prediction, score, release, or scientific-claim operations.
+- 2026-08-31: Preserve failed proof-closeout CI `33402803185` as documentation-
+  compatibility evidence. Repair only the missing early README reference to
+  immutable Ofner frontier v6, retain exact implementation `a2af6c4`
+  byte-for-byte, and require a fresh correction commit plus both remote jobs.

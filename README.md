@@ -61,6 +61,8 @@ was observed. This is a transport result, not a biological null. It cannot be
 retried, rerun, repaired, resumed, substituted, or reinterpreted. No Tier C
 packet is active. See the [result closeout](docs/OFNER_2017_MOTOR_IMAGERY_RANGE_HEADER_RESULT_CLOSEOUT.md)
 and [proof closeout](docs/OFNER_2017_MOTOR_IMAGERY_RANGE_HEADER_RESULT_PROOF_CLOSEOUT.md).
+The immutable machine frontier for that consumed result remains
+[`registries/current_research_frontier.v6.json`](registries/current_research_frontier.v6.json).
 The proof passed Base Python `99174411928`, Optional Neuro Readers
 `99174412006`, and CI `33280371097` on GitHub `main`.
 

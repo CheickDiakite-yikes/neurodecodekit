@@ -26,6 +26,17 @@
     "regression_test_forbids_loader_Git_call": true,
     "generated_qualification_repeated": false
   },
+  "failed_proof_closeout_and_repair": {
+    "failed_commit": "c674def312911fa2d5ef40c409d4590b77d6c94f",
+    "failed_CI_run_id": 33402803185,
+    "failed_base_python_job_id": 99522972149,
+    "failed_optional_neuro_readers_job_id": 99522971803,
+    "failure_class": "immutable_Ofner_frontier_v6_anchor_moved_beyond_legacy_README_14000_character_scan",
+    "repair": "restore an explicit frontier v6 link beside the early Ofner result",
+    "implementation_artifacts_modified": false,
+    "generated_qualification_repeated": false,
+    "protected_operations": 0
+  },
   "bound_artifact_ledger": {
     "path": "registries/fresh_motor_source_identity_witness_live_implementation.v0.json",
     "bytes": 10859,
