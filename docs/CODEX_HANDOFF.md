@@ -2,10 +2,11 @@
 
 > **Current scientific frontier, 2026-08-30:** read the Ofner result and proof
 > closeouts, the NPA1 implementation and proof closeout,
-> `registries/current_research_frontier.v16.json`,
+> `registries/current_research_frontier.v17.json`,
 > `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`, and the scientific knowledge
 > ledger first. Its immutable predecessor is
-> `registries/current_research_frontier.v15.json`; earlier predecessors are
+> `registries/current_research_frontier.v16.json`; earlier predecessors are
+> `registries/current_research_frontier.v15.json`,
 > `registries/current_research_frontier.v14.json`,
 > `registries/current_research_frontier.v13.json`,
 > `registries/current_research_frontier.v12.json`,
@@ -56,12 +57,14 @@
 > null, and prospectively separates witness, proof, and discovery. Exact state
 > `8fe98df` passed Base `99335260650`, Optional `99335260756`, and CI
 > `33340527773` on GitHub `main`; branch CI `33340523548` also passed both
-> jobs. The next gate is the pending generated-only `FMSR1-R1-G-v0`
-> preregistration. It freezes a separate no-network validator with 82 named
-> refusals and no live command; implementation remains false until the
-> registration is remotely green. All
-> candidate-specific, payload, model, score, release, and scientific authorities
-> remain false.
+> jobs. Generated-only `FMSR1-R1-G-v0` registration is exact-green at
+> `d53f3e8`, Base `99339083749`, Optional `99339083636`, and CI `33341954248`.
+> Its additive implementation passes all 82 named refusals across 13 routes and
+> final independent review returned `ACCEPT`. The official generated
+> qualification has not run. Do not add its activation record or create its
+> durable official root until this exact implementation commit is remotely
+> green. All candidate-specific, network, payload, model, score, release, and
+> scientific authorities remain false.
 > Preserve the unrelated tracker inspection file.
 
 > **Historical generated frontier, 2026-08-28:** read Amendment 3 and the FS3

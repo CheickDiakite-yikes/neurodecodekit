@@ -1,0 +1,189 @@
+{
+  "schema_name": "neurodecodekit.fresh_motor_source_admission_generated_implementation",
+  "schema_version": "0.1.0",
+  "recorded_at": "2026-08-30",
+  "protocol_id": "FMSR1-R1-G-v0",
+  "implementation_id": "FMSR1-R1-G-I0",
+  "status": "generated_only_implementation_local_complete_official_qualification_not_run_pending_this_exact_commit_remote_green_and_separate_activation",
+  "human_record": "docs/FRESH_MOTOR_SOURCE_ADMISSION_GENERATED_QUALIFICATION_IMPLEMENTATION.md",
+  "implementation_commit_binding": "this_exact_commit_after_push_and_both_required_GitHub_main_CI_jobs_green",
+  "green_registration": {
+    "commit": "d53f3e8870b1f3ae6f014411c9932f20474b8092",
+    "CI_run_id": 33341954248,
+    "base_python_job_id": 99339083749,
+    "optional_neuro_readers_job_id": 99339083636,
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true
+  },
+  "implementation_surface": {
+    "module": "src/neurodecodekit/datasets/fresh_motor_source_admission.py",
+    "CLI": "src/neurodecodekit/fmsr1_admission_cli.py",
+    "commands": [
+      "plan",
+      "qualify-generated"
+    ],
+    "execute_witness_live_or_transport_command_present": false,
+    "URL_host_credential_source_or_output_path_option_present": false,
+    "network_imports": [],
+    "base_dependency_added": false,
+    "existing_hash_bound_discovery_module_modified": false
+  },
+  "admission_capabilities": {
+    "exact_closed_authority_profile": true,
+    "exact_generated_source_global_revision_profiles": 2,
+    "exact_generated_opaque_snapshot_profiles": 3,
+    "exact_generated_index_profiles": 5,
+    "parallel_snapshot_arrays_allowed": false,
+    "arbitrary_resigned_revision_or_snapshot_evidence_allowed": false,
+    "exact_generated_CI_response_envelopes_per_replay": 2,
+    "captured_or_real_response_provenance_allowed": false,
+    "exact_API_request_host_port_header_peer_TLS_profile": true,
+    "exact_repository_owner_workflow_run_head_attempt_and_job_identity": true,
+    "strict_duplicate_ambiguous_or_confusable_input_refusal": true,
+    "public_report_nested_fields_and_refusal_rows_exact": true,
+    "live_transport_capability": false
+  },
+  "marker_and_one_shot_contract": {
+    "writes_restricted_to_active_qualification_owned_root": true,
+    "arbitrary_caller_path_allowed": false,
+    "exact_protocol_stage_execution_ordinal_and_generated_flag_before_open": true,
+    "open_flags": [
+      "O_CREAT",
+      "O_EXCL",
+      "O_WRONLY",
+      "O_NOFOLLOW"
+    ],
+    "file_mode_octal": "0600",
+    "file_fsync_before_close": true,
+    "parent_directory_fsync": true,
+    "parent_device_and_inode_reverified": true,
+    "official_generated_root": ".codex_work/fmsr1-r1-g-v0-official",
+    "official_generated_root_exists_now": false,
+    "existing_root_refuses_before_replay": true,
+    "failed_attempt_remains_consumed": true,
+    "cleanup_or_deletion_performed": false
+  },
+  "component_verification": {
+    "official_qualification_invoked": false,
+    "focused_test_count": 28,
+    "focused_tests_passed": 28,
+    "registered_refusal_case_count": 82,
+    "registered_refusal_cases_passed": 82,
+    "distinct_refusal_routes": 13,
+    "Python_compilation_passed": true,
+    "Ruff_passed": true,
+    "CLI_help_passed": true,
+    "CLI_plan_passed": true,
+    "independent_review_initial_disposition": "REJECT",
+    "independent_review_initial_blocker_count": 5,
+    "independent_review_final_disposition": "ACCEPT",
+    "independent_review_remaining_blocker_count": 0
+  },
+  "resource_contract": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "maximum_runtime_seconds": 30,
+    "maximum_absolute_peak_RSS_bytes": 268435456,
+    "maximum_generated_input_bytes": 4194304,
+    "maximum_aggregate_report_bytes": 1048576,
+    "maximum_temporary_generated_disk_bytes": 2097152,
+    "maximum_temporary_generated_file_count": 16,
+    "network_bytes": 0,
+    "real_or_captured_response_bytes": 0,
+    "real_source_or_protected_reads": 0,
+    "model_training_inference_prediction_or_score_runs": 0
+  },
+  "bound_artifacts": [
+    {
+      "path": "src/neurodecodekit/datasets/fresh_motor_source_admission.py",
+      "bytes": 100548,
+      "sha256": "e4179e964f9ff688dc9f7cd9de4a9e449050c8dd0858095d7f4725b9671e1529",
+      "git_blob": "99f64f2b3ce22069108022716a1e910c65d08605"
+    },
+    {
+      "path": "src/neurodecodekit/fmsr1_admission_cli.py",
+      "bytes": 1276,
+      "sha256": "cae99a9830624a4b8465e5dd2fdeb14adf052b0e65d0a69e86f8364d26ac9f48",
+      "git_blob": "9a7b8201df8b544693f9de23e33424b787c026c8"
+    },
+    {
+      "path": "tests/test_fresh_motor_source_admission.py",
+      "bytes": 28029,
+      "sha256": "eea809cd2276a0d0b240f77a0c23623cf3f577f5bf4fa36afa11f8684216c648",
+      "git_blob": "397d83057fe3c52dad88a5a7b959a85567519b82"
+    },
+    {
+      "path": "tests/test_fmsr1_admission_cli.py",
+      "bytes": 4570,
+      "sha256": "fa5667b031a1a28d9577d0a9ccd3dee630a799e4d856d986cb015e3cc9b75a99",
+      "git_blob": "e19a02ccf6c39a2dc084ca1db7ab6eac3c7b5b98"
+    },
+    {
+      "path": "docs/FRESH_MOTOR_SOURCE_ADMISSION_GENERATED_QUALIFICATION_IMPLEMENTATION.md",
+      "bytes": 6853,
+      "sha256": "f3748cac8fb29658ca15bc4c310ea08dc29060f95b0b065db98bcfdccf365447",
+      "git_blob": "b86e7747cbe06f422aef06ef0e2c0f073963573c"
+    },
+    {
+      "path": "registries/current_research_frontier.v17.json",
+      "bytes": 8160,
+      "sha256": "d30e9e5857e19a658e48f1beff78ab11890a227610ddaf9d66ad6bceb51d21a1",
+      "git_blob": "c3c850f453633008980cb70d3d80c5e27d57e8c3"
+    }
+  ],
+  "bound_artifact_summary": {
+    "count": 6,
+    "bytes": 149436,
+    "canonical_manifest_bytes": 1230,
+    "canonical_manifest_sha256": "94e03afe5f24b3f26e339155cacc9e36795111acf0f6d5e3cf6ea6149e3d04c6"
+  },
+  "official_qualification": {
+    "activation_record_present": false,
+    "activation_record_path": "registries/fresh_motor_source_admission_generated_qualification_activation.v0.json",
+    "implementation_exact_green": false,
+    "official_runs": 0,
+    "durable_consumed_marker_created": false,
+    "report_emitted": false,
+    "runtime_seconds": null,
+    "absolute_peak_RSS_bytes": null,
+    "generated_input_bytes": null,
+    "generated_output_bytes": null,
+    "temporary_generated_bytes": null,
+    "warnings": null,
+    "unavailable_fields": null
+  },
+  "operation_authority_now": {
+    "commit_push_and_CI_for_this_generated_implementation": true,
+    "create_activation_before_exact_implementation_green": false,
+    "run_official_generated_qualification_before_activation_green": false,
+    "network_or_GitHub_API": false,
+    "official_index_contact_or_source_witness": false,
+    "candidate_metadata_or_selection": false,
+    "payload_header_signal_event_annotation_target_or_label": false,
+    "model_checkpoint_training_inference_prediction_or_score": false,
+    "language_model_or_provider": false,
+    "stream_device_or_hardware": false,
+    "release_or_publish": false,
+    "scientific_claim_upgrade": false
+  },
+  "claim_boundary": {
+    "source_authenticity_established": false,
+    "external_CI_authenticity_established": false,
+    "real_source_admitted": false,
+    "real_EEG_accessed": false,
+    "neural_advantage_established": false,
+    "motor_cortex_or_movement_intention_established": false,
+    "unseen_person_generalization_established": false,
+    "thought_or_language_decoding_established": false,
+    "causal_or_live_decoding_established": false,
+    "hardware_or_clinical_value_established": false
+  },
+  "next_gate": {
+    "action": "commit_push_and_green_this_exact_implementation_then_add_and_green_a_separate_activation_record_before_one_official_generated_qualification",
+    "network_request_authorized": false,
+    "real_data_transaction_authorized": false,
+    "model_or_scoring_authorized": false,
+    "scientific_claim_upgrade_allowed": false
+  }
+}

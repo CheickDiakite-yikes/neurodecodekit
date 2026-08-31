@@ -30,8 +30,9 @@
 > 22,577,152-byte peak RSS, zero network, and zero retained payload. The NPA1
 > proof closeout then passed Base Python `99188620896`, Optional Neuro Readers
 > `99188621003`, and CI `33285776358` at exact commit `2ec3d4b` on GitHub
-> `main`. Read `registries/current_research_frontier.v16.json` and
+> `main`. Read `registries/current_research_frontier.v17.json` and
 > `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`; its predecessor
+> `registries/current_research_frontier.v16.json`, earlier predecessor
 > `registries/current_research_frontier.v15.json`, earlier predecessor
 > `registries/current_research_frontier.v14.json`, earlier predecessor
 > `registries/current_research_frontier.v13.json`, predecessor
@@ -68,12 +69,16 @@
 > the exact live-CI profile null, and separates future witness, proof, and
 > discovery stages. Exact correction state `8fe98df` passed Base
 > `99335260650`, Optional `99335260756`, and CI `33340527773` on GitHub
-> `main`; branch CI `33340523548` also passed both jobs. Read the pending
-> generated-only `FMSR1-R1-G-v0` preregistration next. It freezes 82 exact
-> revision, snapshot, CI, ordering, marker, and resource refusals with no live
-> command. Implementation remains closed until the registration is green. All
-> public network, payload, signal, target, model, score, release, and claim
-> authority is false.
+> `main`; branch CI `33340523548` also passed both jobs. Generated-only
+> `FMSR1-R1-G-v0` registration is now exact-green at `d53f3e8`, Base
+> `99339083749`, Optional `99339083636`, and CI `33341954248`. Read its
+> implementation and frontier v17 next. The implementation passes all 82 exact
+> revision, snapshot, CI, ordering, marker, and resource mutations across 13
+> routes; independent re-review returned `ACCEPT`. The official generated
+> qualification has not run, and its separate activation record and durable
+> root remain absent until this implementation is remotely green. All public
+> network, payload, signal, target, model, score, release, and claim authority
+> is false.
 > COMM-P0-G FS3 remains paused.
 
 > Dreyer H-L1R1 recovery update, 2026-08-29: exact generated coordinator
@@ -249,11 +254,12 @@
 Historical exact control-plane label retained for proof compatibility:
 `Current Gate: DREYER-C5R-1-HL One-File Sensor Preflight`.
 
-Start with `registries/current_research_frontier.v16.json`, the machine-readable
+Start with `registries/current_research_frontier.v17.json`, the machine-readable
 snapshot of the consumed lanes, green NPA1 engineering proof, claim boundary,
 rejected v0 draft, exact-green v1 registration, discovery decision and generated
-implementation, green proof-only closeout, all-false A1 correction, and next
-transition. Versions 14, 13, 12, 11, 10, 9, and 7 remain immutable predecessors.
+implementation, green proof-only closeout, all-false A1 correction, generated
+R1-G implementation gate, and next transition. Versions 16, 15, 14, 13, 12,
+11, 10, 9, and 7 remain immutable predecessors.
 
 The prior BNCI experiment found real held-out protocol information, but it did
 not establish an EEG-specific effect: posterior EEG slightly beat the selected

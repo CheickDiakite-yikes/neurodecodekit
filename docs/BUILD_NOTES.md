@@ -16635,3 +16635,14 @@ and require both remote jobs green before the one official qualification.
   semantics, missing proxy/custom-CA refusals, and marker durability. It
   freezes 82 mutations and zero network or real-source bytes. No implementation
   or qualification ran in this milestone.
+- 2026-08-30: Registration `d53f3e8` passed Base Python `99339083749`,
+  Optional Neuro Readers `99339083636`, and CI `33341954248` on GitHub `main`.
+  Added the activation-gated `FMSR1-R1-G-I0` generated-only admission module,
+  narrow CLI, 28 core tests, six-artifact implementation record, and frontier
+  v17. All 82 frozen mutations pass across 13 refusal routes. Independent review
+  rejected five draft weaknesses; after exact-profile, provenance, one-shot,
+  owned-filesystem, marker-identity, and report hardening, final re-review
+  returned `ACCEPT`. The official qualification, activation record, and durable
+  official root remain absent pending this exact implementation commit and
+  remote proof. No network, source, real/captured response, EEG, model, score,
+  release, cleanup, or scientific-claim operation occurred.

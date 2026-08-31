@@ -76,11 +76,14 @@ is active. Frontier v11 described the pending packet, v12 recorded the
 decision, v13 recorded the local generated implementation, v14 bound its green
 proof, and v15 records the all-false correction. Exact correction state
 `8fe98df` passed Base `99335260650`, Optional `99335260756`, and CI
-`33340527773` on GitHub `main`. Frontier v16 now freezes the generated-only
-`FMSR1-R1-G-v0` preregistration: a separate dependency-free validator for
-revision, opaque snapshot, attempt-specific CI, and consumed-marker evidence.
-It has no live command, and implementation remains closed until the exact
-registration commit is remotely green.
+`33340527773` on GitHub `main`. Generated-only `FMSR1-R1-G-v0` registration is
+exact-green at `d53f3e8`, Base `99339083749`, Optional `99339083636`, and CI
+`33341954248`. Frontier v17 records its locally complete dependency-free
+validator for exact revision, opaque snapshot, attempt-specific CI, and
+consumed-marker evidence. It passes all 82 frozen mutations across 13 routes,
+and final independent review returned `ACCEPT`. It has no live command. Its
+official generated qualification and separate activation remain closed until
+the exact implementation commit is remotely green.
 
 Historical v11 status used the exact phrase pending-decision `FMSR1-DISCOVERY-M0`; it is retained only as an immutable routing marker and
 does not describe the current decision or live authority state.

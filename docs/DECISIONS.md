@@ -15034,3 +15034,12 @@ green; only then may the single generated qualification run.
   durable generated marker mechanics, 82 named refusals, and fixed resource
   caps. Do not implement until this registration is exact-green and do not
   contact GitHub or an official index under this contract.
+- 2026-08-30: Accept local implementation `FMSR1-R1-G-I0` for commit only
+  after final independent review returned `ACCEPT`. Bind exact generated
+  revision, snapshot, CI, request, peer, ordering, report, and marker identities;
+  refuse arbitrary caller paths and persist a tiny Git-ignored one-shot marker
+  before any later official replay. Require this exact implementation and both
+  GitHub `main` jobs to become green before adding a separate activation record.
+  Require that activation to become green before the sole official generated
+  qualification. Do not run it now, and open no network, real-source, payload,
+  target, model, score, release, or scientific-claim authority.

@@ -19,10 +19,14 @@
 > revision/snapshot witness, proof, live-CI, and discovery stages while leaving
 > all source and CI profiles null and M0 non-armable. Public discovery still
 > requires a fresh successor packet and exact decision. Generated-only
-> `FMSR1-R1-G-v0` is now preregistered pending this exact commit's remote proof;
-> it freezes 82 refusal mutations and no live command. No source, EEG, model,
-> score, live result, or scientific claim has been created.
-> Read `registries/current_research_frontier.v16.json` and
+> `FMSR1-R1-G-v0` registration is exact-green at `d53f3e8`, Base
+> `99339083749`, Optional `99339083636`, and CI `33341954248`. Its additive
+> implementation passes 82/82 frozen refusal mutations across 13 routes; final
+> independent review returned `ACCEPT`. The official generated qualification
+> remains unrun until this exact implementation and a separate activation are
+> remotely green. No source, EEG, model, score, live result, or scientific
+> claim has been created.
+> Read `registries/current_research_frontier.v17.json` and
 > `docs/FRESH_MOTOR_SOURCE_DISCOVERY_IMPLEMENTATION.md` first.
 
 > **COMM-P0-G FS3 prospective successor (2026-08-28):** exact Amendment 3
