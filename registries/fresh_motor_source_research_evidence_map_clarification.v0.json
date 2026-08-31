@@ -23,13 +23,13 @@
     "governing_sources": [
       {
         "path": "docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md",
-        "bytes": 14232,
-        "sha256": "4d186d14bc437a1b3e3b6d2c3b4ae911f22ae8fba76212826608a9f48221906b"
+        "bytes": 14689,
+        "sha256": "51662eab08cd1130c3f32c7b017effbfaed33cb0765438c97cc05730382a452c"
       },
       {
         "path": "docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md",
-        "bytes": 30315,
-        "sha256": "ee60365da5a9a1e92c2bba0912a1427763217541bc83c2cd69b3e00827275eb1"
+        "bytes": 31306,
+        "sha256": "327aa983269a5a5691c321a5de8b75a9b3f6d7726a1ec1c7a7460d9a29bfbd58"
       },
       {
         "path": "docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md",
