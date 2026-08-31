@@ -30,7 +30,7 @@
 > 22,577,152-byte peak RSS, zero network, and zero retained payload. The NPA1
 > proof closeout then passed Base Python `99188620896`, Optional Neuro Readers
 > `99188621003`, and CI `33285776358` at exact commit `2ec3d4b` on GitHub
-> `main`. Read `registries/current_research_frontier.v22.json` and
+> `main`. Read `registries/current_research_frontier.v23.json` and
 > `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`; its predecessor
 > `registries/current_research_frontier.v21.json`, earlier predecessors
 > `registries/current_research_frontier.v20.json`,
@@ -92,11 +92,16 @@
 > `99381828165`, Optional `99381828024`, and CI `33357313608` on GitHub
 > `main`. It binds five opaque snapshot
 > profiles and 17 exact roots in a canonical page/root/profile/global hash tree
-> but grants no authority. The maintainer's exact fresh words are now recorded
-> in implementation-only decision `FMSR1-R1-W-I0-D0`, which remains pending
-> its own exact commit and remote proof. Once green it may authorize generated
-> implementation only; one live witness still requires fresh second words, an exact-code-bound
-> second decision, and the three-call commit-scoped GitHub proof. `D1` keeps its
+> but grants no authority. Implementation-only decision `FMSR1-R1-W-I0-D0` is
+> exact-green at `e158e8c`, Base `99385124402`, Optional `99385124488`, and CI
+> `33358495852` on GitHub `main`. Generated implementation `FMSR1-R1-W-I0`
+> then passed its sole fixture qualification: two identical five-profile,
+> 17-root, 34-page replays plus 22 fail-closed mutations in 0.035018666880205274
+> seconds at 21,364,736-byte peak RSS, with zero network, candidate-semantic,
+> neural, target, model, prediction, score, or claim operations. It is pending
+> this exact implementation commit and remote proof and must not be rerun. One
+> live witness still requires fresh second words, an exact-code-bound second
+> decision, and the three-call commit-scoped GitHub proof. `D1` keeps its
 > own later packet/decision barrier. All public network, payload, signal,
 > target, model, score, release, and claim authority remains false.
 > COMM-P0-G FS3 remains paused.

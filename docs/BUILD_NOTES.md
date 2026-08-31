@@ -4,6 +4,24 @@ This file is the working journal for the build. It exists so later agents,
 engineers, and case-study readers can reconstruct not only what changed, but
 why the project moved in small loops.
 
+## 2026-08-31 - R1-W generated witness implementation
+
+- Implemented the final generated-only dependency before one real source
+  witness: a standard-library pagination-control validator and canonical
+  page/root/profile/global hash tree over exactly five profiles and 17 roots.
+- Kept candidate regions opaque. Generated target-like poison survives only as
+  response byte count and SHA-256; the CLI exposes no network, live, execute,
+  candidate-parser, payload-reader, model, or scorer path.
+- The sole generated qualification passed two identical 34-page replays and 22
+  adversarial refusals in 0.035018666880205274 seconds at 21,364,736-byte peak
+  RSS. Generated input was 5,112 bytes and the report was 2,244 bytes.
+- Network, official-index, candidate-semantic, source-selection, payload,
+  neural, target, model, training, prediction, score, release, and claim
+  operations were zero. Never rerun `FMSR1-R1-W-Q0`.
+- The next gate is this exact implementation on GitHub `main` with both jobs
+  green, then fresh execution-bound maintainer words and one separately green
+  exact-code-bound decision before one consumed live witness.
+
 ## 2026-08-31 - R1-W implementation-only decision
 
 - Verified all-false witness packet `FMSR1-R1-W-v0` on GitHub `main` at exact

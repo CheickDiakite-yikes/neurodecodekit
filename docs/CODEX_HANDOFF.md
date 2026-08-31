@@ -2,7 +2,7 @@
 
 > **Current scientific frontier, 2026-08-31:** read the Ofner result and proof
 > closeouts, the NPA1 implementation and proof closeout,
-> `registries/current_research_frontier.v22.json`,
+> `registries/current_research_frontier.v23.json`,
 > `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`, and the scientific knowledge
 > ledger first. Its immutable predecessor is
 > `registries/current_research_frontier.v21.json`; earlier predecessors are
@@ -92,9 +92,17 @@
 > authorities remain false now. The packet itself is exact-green at `d4ae388`,
 > Base `99381828165`, Optional `99381828024`, and CI `33357313608` on GitHub
 > `main`. The maintainer's fresh words are recorded in implementation-only
-> decision `FMSR1-R1-W-I0-D0`. That decision is pending its own exact commit
-> and remote proof; do not implement before it is green, and do not add a live
-> command or contact GitHub or an official index under this first decision.
+> decision `FMSR1-R1-W-I0-D0`. It is exact-green at `e158e8c`, Base
+> `99385124402`, Optional `99385124488`, and CI `33358495852` on GitHub
+> `main`. Generated implementation `FMSR1-R1-W-I0` passed its sole consumed
+> qualification with two identical five-profile / 17-root / 34-page replays,
+> 22 refusal observations, 0.035018666880205274 seconds runtime, and
+> 21,364,736-byte peak RSS. It performed zero network, candidate-semantic,
+> neural, target, model, prediction, score, release, or claim operations. Do
+> not rerun it. The implementation is pending this exact commit and remote
+> proof. Do not add a live command or contact GitHub or an official index until
+> fresh second execution-bound maintainer words and a separate exact-green
+> execution decision exist.
 > Preserve the unrelated tracker inspection file.
 
 > **Historical generated frontier, 2026-08-28:** read Amendment 3 and the FS3

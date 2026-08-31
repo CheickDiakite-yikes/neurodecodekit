@@ -194,10 +194,17 @@ It selects opaque complete
 snapshot replay for all five frozen indexes, binds all 17 roots in a canonical
 page-to-root-to-profile-to-global hash tree, requires exact typed
 pagination-only control decoding, and grants no authority. Read implementation
-decision `FMSR1-R1-W-I0-D0` and frontier v22 next. The maintainer's exact words
-are recorded there; the decision is pending its own exact commit and remote
-proof and may authorize only generated implementation and qualification after
-it becomes green. Exact code and CI must then exist before fresh second maintainer
+decision `FMSR1-R1-W-I0-D0`, the generated implementation result, and frontier
+v23 next. The decision is exact-green at
+`e158e8cef2bc0267e5161e947b35409081ea37d7`, Base Python `99385124402`,
+Optional Neuro Readers `99385124488`, and CI `33358495852` on GitHub `main`.
+The sole generated `FMSR1-R1-W-Q0` qualification passed two identical
+five-profile / 17-root / 34-page replays and 22 adversarial refusals in
+0.035018666880205274 seconds at 21,364,736-byte peak RSS. Network,
+candidate-semantic, neural, target, model, prediction, score, release, and
+claim operations were zero. It is consumed and must not be rerun. The exact
+implementation is pending its own commit and remote proof. Exact code and CI
+must then exist before fresh second maintainer
 words and an authority-bearing execution decision can authorize one consumed
 same-process CI-gated witness. The live gate is commit-scoped rather than
 self-referential: clean local `main`, remote `main`, the exact decision blob,

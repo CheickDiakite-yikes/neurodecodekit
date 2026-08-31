@@ -34,7 +34,7 @@
 > `99367259785`, and CI `33352074929`. Proof-only closeout `dbfaf68` passed
 > Base `99369471021`, Optional `99369470875`, and CI `33352882661` without a
 > rerun. No scientific claim changed. Read
-> `registries/current_research_frontier.v22.json`, the measured result, the
+> `registries/current_research_frontier.v23.json`, the measured result, the
 > proof-only closeout, and the all-false `FMSR1-R1-W-v0` packet first. The
 > packet binds five opaque snapshot profiles and 17 exact roots but grants no
 > authority. Its canonical page/root/profile/global hash tree and typed
@@ -43,9 +43,14 @@
 > execution requires exact code, green CI, fresh second maintainer words, a
 > second authority-bearing decision, and a commit-scoped three-call GitHub
 > proof. The packet is exact-green at `d4ae388`, Base `99381828165`, Optional
-> `99381828024`, and CI `33357313608`. The maintainer's fresh words are recorded
-> in implementation-only decision `FMSR1-R1-W-I0-D0`, pending its own exact
-> commit and remote proof. `D1` remains separately packeted and authorized.
+> `99381828024`, and CI `33357313608`. Implementation-only decision
+> `FMSR1-R1-W-I0-D0` is exact-green at `e158e8c`, Base `99385124402`, Optional
+> `99385124488`, and CI `33358495852`. Generated implementation
+> `FMSR1-R1-W-I0` passed its sole consumed qualification with two identical
+> five-profile / 17-root / 34-page replays and 22 refusals in
+> 0.035018666880205274 seconds at 21,364,736-byte peak RSS, with zero network
+> or scientific operations. It is pending this exact commit and remote proof.
+> `D1` remains separately packeted and unauthorized.
 
 > **COMM-P0-G FS3 prospective successor (2026-08-28):** exact Amendment 3
 > `b15d3cf` passed Base `98860211722`, Optional Neuro Readers `98860211949`,

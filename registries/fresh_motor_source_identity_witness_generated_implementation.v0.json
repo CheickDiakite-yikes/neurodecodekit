@@ -1,0 +1,176 @@
+{
+  "schema_name": "neurodecodekit.fresh_motor_source_identity_witness_generated_implementation",
+  "schema_version": "0.1.0",
+  "recorded_at": "2026-08-31",
+  "packet_id": "FMSR1-R1-W-v0",
+  "implementation_id": "FMSR1-R1-W-I0",
+  "qualification_id": "FMSR1-R1-W-Q0",
+  "status": "sole_generated_qualification_passed_pending_this_exact_commit_and_both_remote_jobs",
+  "green_implementation_decision": {
+    "decision_id": "FMSR1-R1-W-I0-D0",
+    "commit": "e158e8cef2bc0267e5161e947b35409081ea37d7",
+    "CI_run_id": 33358495852,
+    "base_python_job_id": 99385124402,
+    "optional_neuro_readers_job_id": 99385124488,
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true
+  },
+  "bound_packet": {
+    "path": "registries/fresh_motor_source_identity_witness_authorization_request.v0.json",
+    "bytes": 48747,
+    "sha256": "e805ffc8b2a963055c075fe002c83b6c4e6e2348f865dc07f41051dd7968d3f6"
+  },
+  "implementation_artifacts": [
+    {
+      "path": "src/neurodecodekit/datasets/fresh_motor_source_identity_witness.py",
+      "bytes": 71151,
+      "sha256": "233513896b77ca4534f0ab11dd20de306e8bc0a1c714018f9c5823d56396f75d",
+      "git_blob": "70c97c9eeddd56039bfbfdae0254184bf64ee88b"
+    },
+    {
+      "path": "src/neurodecodekit/fmsr1_witness_cli.py",
+      "bytes": 1523,
+      "sha256": "7c9cd79ca816eb40e606650ab68afcfd0374a6f5c77a0de608d7d22e19460c0c",
+      "git_blob": "96db32b5cd5f758acdae4582f3a75bd2e97747c9"
+    },
+    {
+      "path": "tests/test_fresh_motor_source_identity_witness_generated_implementation.py",
+      "bytes": 14573,
+      "sha256": "25fb641354491513504c97064af5b719581b9cce4bf433eee8d960e480051e03",
+      "git_blob": "114eb976c1498f1554e6f613112835fb10573014"
+    },
+    {
+      "path": "tests/test_fmsr1_witness_cli.py",
+      "bytes": 3089,
+      "sha256": "ed08cd27cb4ecabeeb1dd092e47100351caa0cf55aec81765441f94d50de27d7",
+      "git_blob": "669f8c2d76d61794e2317ff49164ea1ff413939e"
+    }
+  ],
+  "implementation_artifact_summary": {
+    "count": 4,
+    "bytes": 90336
+  },
+  "surface": {
+    "standard_library_only": true,
+    "official_index_profiles": 5,
+    "root_request_count": 17,
+    "profile_root_membership": [4, 4, 4, 4, 1],
+    "candidate_entity_semantic_decode_extract_iterate_or_retain": false,
+    "candidate_entity_allowed_public_representation": [
+      "byte_count",
+      "sha256"
+    ],
+    "page_root_profile_global_hash_tree": true,
+    "CLI_commands": [
+      "plan",
+      "inspect-generated",
+      "qualify-generated"
+    ],
+    "network_import_or_opener": false,
+    "live_or_execute_command": false,
+    "candidate_parser_or_selector": false,
+    "payload_reader": false,
+    "model_or_scorer": false
+  },
+  "generated_qualification": {
+    "consumed": true,
+    "rerun_allowed": false,
+    "route": "GENERATED_WITNESS_QUALIFIED",
+    "deterministic_replays": 2,
+    "profile_count": 5,
+    "root_count": 17,
+    "page_count": 34,
+    "generated_input_bytes": 5112,
+    "generated_entity_body_bytes": 5112,
+    "refusal_observations": 22,
+    "refusal_routes": [
+      "CI_REFUSE",
+      "HASH_TREE_REFUSE",
+      "PAGINATION_REFUSE",
+      "REQUEST_REFUSE",
+      "TARGET_FIREWALL_REFUSE",
+      "TRANSPORT_REFUSE",
+      "URL_REFUSE"
+    ],
+    "replay_ledger_sha256": "e6c523a33168336f00a77b962ead3b0f785e74c1573edd55a01214c6bfcc1c66",
+    "CI_fixture_receipt_sha256": "bce73e6adf7456993aa4afa35fd3679c87e313eb4c3295884c5d1194df8a85b4",
+    "runtime_seconds": 0.035018666880205274,
+    "peak_RSS_bytes": 21364736,
+    "report_bytes": 2244,
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "producer_is_causal": "not_applicable_source_identity_only",
+    "end_to_end_latency_measured": false
+  },
+  "qualification_caps": {
+    "maximum_runtime_seconds": 30,
+    "maximum_peak_RSS_bytes": 268435456,
+    "maximum_generated_input_bytes": 4194304,
+    "maximum_report_bytes": 1048576,
+    "runtime_within_cap": true,
+    "peak_RSS_within_cap": true,
+    "generated_input_within_cap": true,
+    "report_within_cap": true
+  },
+  "operation_counters": {
+    "generated_fixture_exchanges": 34,
+    "generated_replays": 2,
+    "generated_CI_fixture_validations": 1,
+    "network_requests": 0,
+    "network_bytes": 0,
+    "official_index_requests": 0,
+    "candidate_semantic_operations": 0,
+    "source_selections": 0,
+    "payload_or_neural_reads": 0,
+    "target_or_label_reads": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "prediction_sets": 0,
+    "scoring_events": 0,
+    "scientific_claim_upgrades": 0
+  },
+  "warnings": [
+    "Generated fixtures only; no GitHub API or official index was contacted.",
+    "Candidate entities were opaque byte ranges and were neither extracted nor retained.",
+    "The generated witness is not authority for a live source transaction."
+  ],
+  "unavailable_fields": [
+    "official source identity",
+    "candidate metadata or source eligibility",
+    "EEG EOG EMG signal or geometry",
+    "target label event annotation or trial",
+    "model prediction score or neural advantage",
+    "end-to-end live latency"
+  ],
+  "authority_now": {
+    "commit_push_and_remote_CI_for_this_implementation": true,
+    "GitHub_API_or_official_index_network": false,
+    "live_source_identity_witness": false,
+    "candidate_parsing_ranking_or_selection": false,
+    "real_payload_header_signal_event_annotation_target_or_label": false,
+    "model_training_inference_prediction_or_score": false,
+    "release_or_scientific_claim_upgrade": false
+  },
+  "next_gate": {
+    "implementation_commit_push_and_both_remote_jobs_green_first": true,
+    "fresh_second_execution_bound_maintainer_words_required": true,
+    "separate_exact_execution_decision_required": true,
+    "execution_decision_must_bind_implementation_commit_artifacts_CI_repository_workflow_packet_and_words": true,
+    "one_consumed_same_process_live_witness_only_after_execution_decision_green": true,
+    "network_authorized_now": false
+  },
+  "claim_boundary": {
+    "scientific_claim_established": false,
+    "source_identity_established": false,
+    "source_selected": false,
+    "real_EEG_accessed": false,
+    "neural_information_established": false,
+    "unseen_person_generalization_established": false,
+    "EEG_beyond_joint_nuisance_established": false,
+    "movement_intention_or_motor_cortex_established": false,
+    "thought_or_language_decoding_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_or_clinical_value_established": false
+  }
+}

@@ -1,5 +1,20 @@
 # Architecture Decision Log
 
+## 2026-08-31 - Freeze the generated R1-W witness and stop before contact
+
+Decision: accept `FMSR1-R1-W-I0` as the smallest immediate dependency of the
+real source-selection experiment. It may decode only registered pagination
+controls, retain candidate bodies only as byte count and digest, reconcile the
+complete five-profile / 17-root hash tree, and expose generated CLI commands.
+It may not contain a live transport or scientific path.
+
+Result: sole generated qualification `FMSR1-R1-W-Q0` passed two identical
+34-page replays and 22 refusal observations in 0.035018666880205274 seconds at
+21,364,736-byte peak RSS, with zero network or protected scientific
+operations. It is consumed. Commit and remotely prove the exact implementation,
+then require fresh second maintainer words and a separately green execution
+decision before one live witness.
+
 ## 2026-08-31 - Bind R1-W generated implementation only
 
 Decision: preserve the maintainer's exact words, `need real results, real
