@@ -31,9 +31,18 @@
 > 13 routes, 0.022029167041182518 seconds, 21,397,504-byte peak RSS, and zero
 > network, real-source, EEG, model, score, or claim operations. It cannot be
 > rerun. Corrected result tree `9f5ff18` passed Base `99367259645`, Optional
-> `99367259785`, and CI `33352074929`. No scientific claim changed. Read
-> `registries/current_research_frontier.v20.json`, the measured result, and its
-> proof-only closeout first.
+> `99367259785`, and CI `33352074929`. Proof-only closeout `dbfaf68` passed
+> Base `99369471021`, Optional `99369470875`, and CI `33352882661` without a
+> rerun. No scientific claim changed. Read
+> `registries/current_research_frontier.v21.json`, the measured result, the
+> proof-only closeout, and the all-false `FMSR1-R1-W-v0` packet first. The
+> packet binds five opaque snapshot profiles and 17 exact roots but grants no
+> authority. Its canonical page/root/profile/global hash tree and typed
+> pagination/redirect contracts make the future witness replayable. Its first
+> later decision can authorize generated implementation only; live witness
+> execution requires exact code, green CI, fresh second maintainer words, a
+> second authority-bearing decision, and a commit-scoped three-call GitHub
+> proof. `D1` remains separately packeted and authorized.
 
 > **COMM-P0-G FS3 prospective successor (2026-08-28):** exact Amendment 3
 > `b15d3cf` passed Base `98860211722`, Optional Neuro Readers `98860211949`,

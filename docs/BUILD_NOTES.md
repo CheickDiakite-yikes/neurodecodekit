@@ -16680,3 +16680,17 @@ and require both remote jobs green before the one official qualification.
   four-artifact / 30,764-byte closeout; it performs no official-root read,
   qualification rerun, network, real-source, neural, model, score, or claim
   operation.
+- 2026-08-31: Proof closeout `dbfaf68` passed Base Python `99369471021`,
+  Optional Neuro Readers `99369470875`, and CI `33352882661` on GitHub `main`.
+  Added the all-false `FMSR1-R1-W-v0` source-identity witness packet, machine
+  request, exact 17-root replay tests, and frontier v21. Three independent
+  critics rejected the first draft's flat ledger, prose pagination, two-call
+  CI check, candidate-byte wording, and code-before-authority sequence. The
+  hardened packet uses five opaque complete-snapshot profiles, a canonical
+  page/root/profile/global hash tree across 17 independent root chains, exact
+  typed pagination and redirect grammars, and a commit-scoped three-request
+  current-main/check-runs/workflow-blob CI proof with no future-commit
+  self-reference. It preserves durable pending/armed semantics, separate
+  implementation and live-execution decisions, and a separate later D1
+  authority barrier. The packet performs zero network or protected operation
+  and grants no authority.

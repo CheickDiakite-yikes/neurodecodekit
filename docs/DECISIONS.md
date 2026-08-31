@@ -15083,3 +15083,17 @@ green; only then may the single generated qualification run.
   this closeout becomes remotely green, prohibit further generated rehearsal
   and allow preparation of one all-false `R1-W` source-identity witness packet;
   execution still requires fresh packet-bound Tier C authority.
+- 2026-08-31: Accept proof closeout `dbfaf68` as exact-green engineering
+  evidence and close the R1-G generated lane without rerun. Freeze all-false
+  `FMSR1-R1-W-v0` for commit and remote proof only. Use opaque complete-snapshot
+  replay for all five indexes and require 17 independently terminal root
+  chains in a canonical page/root/profile/global hash tree, exact typed
+  pagination-only decoding and redirect evidence, durable pending/armed
+  consumption, and commit-scoped current-main/check-runs/workflow-blob CI
+  verification without a future-commit self-reference.
+  The first future packet-bound decision may authorize only generated
+  implementation and qualification. Require exact code and green CI plus fresh
+  second maintainer words and a second authority-bearing decision before one
+  live witness. Keep `D1` behind its own later packet, fresh words, authority
+  decision, and remote proof. This packet grants no network, source, neural,
+  target, model, score, release, or claim authority.

@@ -2,10 +2,11 @@
 
 > **Current scientific frontier, 2026-08-31:** read the Ofner result and proof
 > closeouts, the NPA1 implementation and proof closeout,
-> `registries/current_research_frontier.v20.json`,
+> `registries/current_research_frontier.v21.json`,
 > `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`, and the scientific knowledge
 > ledger first. Its immutable predecessor is
-> `registries/current_research_frontier.v19.json`; earlier predecessors are
+> `registries/current_research_frontier.v20.json`; earlier predecessors are
+> `registries/current_research_frontier.v19.json`,
 > `registries/current_research_frontier.v18.json`,
 > `registries/current_research_frontier.v17.json`,
 > `registries/current_research_frontier.v16.json`,
@@ -74,9 +75,20 @@
 > neural, target, model, prediction, score, release, or claim operations. Never
 > rerun or remove its ignored official root. Corrected result tree `9f5ff18`
 > passed Base `99367259645`, Optional `99367259785`, and CI `33352074929`.
-> Read the measured result, proof-only closeout, and frontier v20. All
-> candidate-specific, network, payload, model, score,
-> release, and scientific authorities remain false.
+> Proof-only closeout `dbfaf68` passed Base `99369471021`, Optional
+> `99369470875`, and CI `33352882661` on GitHub `main` without a rerun. Read
+> the all-false `FMSR1-R1-W-v0` packet and frontier v21. It binds all five
+> official indexes to opaque complete-snapshot replay and all 17 exact roots in
+> a canonical page/root/profile/global hash tree.
+> The packet grants nothing: a first fresh decision may authorize generated
+> implementation only; exact code and CI must then exist before fresh second
+> words and an authority-bearing execution decision may authorize one consumed
+> live witness. Its commit-scoped CI proof verifies clean local/remote `main`,
+> the two exact successful checks, the decision blob, and frozen workflow blob
+> without asking a tracked decision to predict its own commit. `D1` retains a
+> separate later packet, fresh-words, decision, and green-proof barrier. All
+> candidate-specific, network, payload, model, score, release, and scientific
+> authorities remain false now.
 > Preserve the unrelated tracker inspection file.
 
 > **Historical generated frontier, 2026-08-28:** read Amendment 3 and the FS3

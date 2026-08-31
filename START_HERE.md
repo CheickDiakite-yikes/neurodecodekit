@@ -30,8 +30,11 @@
 > 22,577,152-byte peak RSS, zero network, and zero retained payload. The NPA1
 > proof closeout then passed Base Python `99188620896`, Optional Neuro Readers
 > `99188621003`, and CI `33285776358` at exact commit `2ec3d4b` on GitHub
-> `main`. Read `registries/current_research_frontier.v18.json` and
+> `main`. Read `registries/current_research_frontier.v21.json` and
 > `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`; its predecessor
+> `registries/current_research_frontier.v20.json`, earlier predecessors
+> `registries/current_research_frontier.v19.json` and
+> `registries/current_research_frontier.v18.json`, earlier predecessor
 > `registries/current_research_frontier.v17.json`, earlier predecessor
 > `registries/current_research_frontier.v16.json`, earlier predecessor
 > `registries/current_research_frontier.v15.json`, earlier predecessor
@@ -74,14 +77,23 @@
 > `FMSR1-R1-G-v0` registration is now exact-green at `d53f3e8`, Base
 > `99339083749`, Optional `99339083636`, and CI `33341954248`. Read its
 > implementation, durability amendment, evidence-map clarification, and
-> frontier v18 next. Implementation `c3f536d` passed Base `99347978123`,
+> frontier v21 next. Implementation `c3f536d` passed Base `99347978123`,
 > Optional `99347978190`, and CI `33345237136`, but post-green review rejected
 > activation because directory ancestry durability and pre-arm versus armed
-> consumption were not exact. The local additive `I1` successor corrects those
-> issues and must become freshly exact-green before activation. The official
-> qualification has not run, and its separate activation record and durable
-> root remain absent. All public network, payload, signal, target, model, score,
-> release, and claim authority is false.
+> consumption were not exact. Corrected `I1` `d9229c1` and activation
+> `3de14c3` passed their required jobs before the sole generated qualification.
+> That run is consumed and passed with two matching five-profile replays,
+> 82/82 refusals, 0.022029167041182518 seconds runtime, 21,397,504-byte peak
+> RSS, and zero network or protected operations. Result `9f5ff18` and proof
+> closeout `dbfaf68` are exact-green; CI `33352882661` passed Base
+> `99369471021` and Optional `99369470875`. Never rerun the qualification.
+> Read the all-false `FMSR1-R1-W-v0` packet next. It binds five opaque snapshot
+> profiles and 17 exact roots in a canonical page/root/profile/global hash tree
+> but grants no authority. Generated implementation requires a fresh first
+> decision; one live witness requires fresh second words, an exact-code-bound
+> second decision, and the three-call commit-scoped GitHub proof. `D1` keeps its
+> own later packet/decision barrier. All public network, payload, signal,
+> target, model, score, release, and claim authority remains false.
 > COMM-P0-G FS3 remains paused.
 
 > Dreyer H-L1R1 recovery update, 2026-08-29: exact generated coordinator

@@ -1,0 +1,91 @@
+{
+  "schema_name": "neurodecodekit.current_research_frontier",
+  "schema_version": "0.22.0",
+  "recorded_at": "2026-08-31",
+  "supersedes": "registries/current_research_frontier.v20.json",
+  "superseded_registry_sha256": "3f9cfe71f4ca8ed192cb20daabc1e7bccaa4abf221576354c0663cfa7de94954",
+  "status": "FMSR1_R1_W_all_false_source_identity_witness_packet_pending_this_exact_commit_and_remote_proof",
+  "active_lane_id": null,
+  "active_Tier_C_packet": null,
+  "scientific_lane": "fresh_unseen_person_motor_task_EEG_beyond_joint_EOG_EMG_posterior_cue_timing_and_derangement",
+  "green_generated_closeout": {
+    "protocol_id": "FMSR1-R1-G-v0",
+    "proof_id": "FMSR1-R1-G-P0",
+    "commit": "dbfaf682595c33d3c6de10e88503fb84a2a6254c",
+    "CI_run_id": 33352882661,
+    "base_python_job_id": 99369471021,
+    "optional_neuro_readers_job_id": 99369470875,
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true,
+    "qualification_consumed": true,
+    "qualification_rerun_authorized": false,
+    "scientific_value": false
+  },
+  "proposed_packet": {
+    "packet_id": "FMSR1-R1-W-v0",
+    "human_path": "docs/FRESH_MOTOR_SOURCE_IDENTITY_WITNESS_AUTHORIZATION_PACKET.md",
+    "machine_path": "registries/fresh_motor_source_identity_witness_authorization_request.v0.json",
+    "status": "all_false_pending_this_exact_commit_and_remote_proof",
+    "official_index_profiles": 5,
+    "root_request_identities": 17,
+    "mode_for_every_profile": "OPAQUE_COMPLETE_SNAPSHOT_REPLAY",
+    "candidate_fields_parsed_ranked_or_selected": false,
+    "network_requests_performed_by_packet": 0,
+    "grants_authority": false
+  },
+  "current_evidence_coordinate": {
+    "dimension_1_spatial": "not_tested_on_a_fresh_admitted_source",
+    "dimension_2_temporal": "not_tested_on_a_fresh_admitted_source",
+    "dimension_3_physiological": "not_tested_on_a_fresh_admitted_source",
+    "dimension_4_task_autonomy": "source_not_selected",
+    "dimension_5_population_generalization": "source_not_selected",
+    "dimension_6_translation": "not_started",
+    "scientific_claim_upgrade": false
+  },
+  "operation_authority_now": {
+    "commit_push_and_CI_for_this_all_false_packet": true,
+    "implement_or_execute_R1_W": false,
+    "GitHub_API_or_official_index_network": false,
+    "candidate_parsing_ranking_or_selection": false,
+    "real_payload_header_signal_event_annotation_target_or_label": false,
+    "model_training_inference_prediction_or_score": false,
+    "release_or_scientific_claim_upgrade": false
+  },
+  "ordered_route_after_packet_exact_green": [
+    "obtain_fresh_first_packet_bound_maintainer_words_for_generated_implementation",
+    "commit_push_and_green_first_implementation_only_R1_W_decision",
+    "implement_and_generated_qualify_exact_witness_surface",
+    "commit_push_and_green_exact_implementation",
+    "obtain_fresh_second_execution_bound_maintainer_words_after_exact_code_and_CI_exist",
+    "bind_exact_code_CI_and_three_request_CI_W0_profile_in_authority_bearing_execution_decision",
+    "commit_push_and_green_second_execution_decision",
+    "run_one_consumed_same_process_CI_gated_five_index_witness",
+    "commit_push_and_green_result_without_rerun",
+    "prepare_all_false_D1_packet_only_after_WITNESS_COMPLETE",
+    "commit_push_and_green_all_false_D1_packet",
+    "obtain_fresh_D1_packet_bound_maintainer_words",
+    "commit_push_and_green_separate_D1_authority_bearing_decision",
+    "run_one_complete_or_park_discovery",
+    "stage_one_candidate_source_to_frozen_score_work_order_if_exactly_one_source_qualifies"
+  ],
+  "claim_boundary": {
+    "source_identity_established": false,
+    "real_source_metadata_accessed": false,
+    "real_EEG_accessed": false,
+    "neural_advantage_established": false,
+    "EEG_beyond_joint_peripheral_and_task_controls_established": false,
+    "motor_cortex_or_movement_intention_established": false,
+    "unseen_person_generalization_established": false,
+    "thought_or_language_decoding_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_or_clinical_value_established": false
+  },
+  "next_gate": {
+    "action": "commit_push_and_green_this_all_false_packet",
+    "fresh_packet_bound_maintainer_words_required_after_green": true,
+    "network_request_authorized_now": false,
+    "real_data_transaction_authorized": false,
+    "model_or_scoring_authorized": false,
+    "scientific_claim_upgrade_allowed": false
+  }
+}

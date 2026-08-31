@@ -1,0 +1,1133 @@
+{
+  "schema_name": "neurodecodekit.fresh_motor_source_identity_witness_authorization_request",
+  "schema_version": "0.1.0",
+  "recorded_at": "2026-08-31",
+  "packet_id": "FMSR1-R1-W-v0",
+  "status": "all_authorities_false_request_pending_exact_commit_remote_proof_and_fresh_packet_bound_decision",
+  "human_packet": "docs/FRESH_MOTOR_SOURCE_IDENTITY_WITNESS_AUTHORIZATION_PACKET.md",
+  "green_predecessor": {
+    "protocol_id": "FMSR1-R1-G-v0",
+    "proof_id": "FMSR1-R1-G-P0",
+    "commit": "dbfaf682595c33d3c6de10e88503fb84a2a6254c",
+    "CI_run_id": 33352882661,
+    "base_python_job_id": 99369471021,
+    "optional_neuro_readers_job_id": 99369470875,
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true,
+    "proof_path": "registries/fresh_motor_source_admission_generated_qualification_proof.v0.json",
+    "proof_bytes": 3350,
+    "proof_sha256": "078d14cb0b2bd4a3776c96752e2ba7a8ff7238a6f5a7f48ffa1eb8fc13b55765",
+    "proof_git_blob": "d6eb437a4595c17f0b2a1556f4fafd6937733823",
+    "bound_result_artifacts": 4,
+    "bound_result_bytes": 30764,
+    "qualification_consumed": true,
+    "qualification_rerun_authorized": false
+  },
+  "governing_contracts": [
+    {
+      "path": "registries/fresh_motor_source_research_contract.v1.json",
+      "bytes": 15280,
+      "sha256": "9667b31282d7e5c852fc3de1b6fe07692952ec5720b79a0ba7c31345ccfbc8cb",
+      "git_blob": "30bec4bdbf21865991bfb61822caea8cc6f02ffd"
+    },
+    {
+      "path": "registries/fresh_motor_source_research_evidence_map_clarification.v0.json",
+      "bytes": 7717,
+      "sha256": "8eca5fade5ccdb691f7c797cf14738cda0ef3eb38bb1b07b148b5d2125c442f4",
+      "git_blob": "2f8a646babf90e1a754beb4715bb75487224ff71"
+    },
+    {
+      "path": "registries/fresh_motor_source_discovery_admission_correction.v0.json",
+      "bytes": 12121,
+      "sha256": "136eef1e517d312d5089c5ea5fb9d188b3c9e07eb5f7417533da9f78056e0da3",
+      "git_blob": "363b5e3d04fd8622c8b2befec71bb302d6ab02dd"
+    },
+    {
+      "path": "registries/fresh_motor_source_admission_generated_qualification_contract.v0.json",
+      "bytes": 14837,
+      "sha256": "e4716d08f85cdadce01afc4d96b65f92919f6eebdc580f68345193927bcc7979",
+      "git_blob": "993120646633506bf4c6d4089aa534668aa04128"
+    },
+    {
+      "path": "registries/fresh_motor_source_discovery_implementation.v0.json",
+      "bytes": 9737,
+      "sha256": "d50e5f5fc2f24c16078c606a3c07fb84c989ea70b3cc8674dfba158d4ed83d37",
+      "git_blob": "e671e240f326a55c3fb5d1273830836f5d710342"
+    },
+    {
+      "path": "registries/fresh_motor_source_admission_generated_implementation.v1.json",
+      "bytes": 9880,
+      "sha256": "385f4321bf350525bc2fa3d15408ac5536b24f07571e4b5427fc7199b404c7ad",
+      "git_blob": "2f2d6777addad9783f570804fc9e57a0cdc9f6fe"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 3040,
+      "sha256": "53ea7e06c7989c7e3ae8030eafe7184aad4916fcefca2f8cfcc05ba7a87c2fc3",
+      "git_blob": "4246b7c7f6f8570df53b1b89705b496b30e38a78"
+    }
+  ],
+  "scientific_decision_question": "can_all_five_frozen_official_index_surfaces_be_given_complete_replayable_byte_identity_before_candidate_parsing",
+  "requested_ordered_authority_after_separate_exact_green_decision": {
+    "additive_standard_library_witness_implementation": true,
+    "generated_fixture_only_qualification": true,
+    "implementation_commit_push_and_both_remote_jobs_green": true,
+    "live_network_or_source_witness": false,
+    "stop_after_implementation_remote_green": true,
+    "fresh_second_execution_bound_maintainer_words_required": true,
+    "second_authority_bearing_decision_binds_code_CI_and_CI_W0_profile": true,
+    "one_same_process_CI_gated_source_identity_witness_only_after_second_decision_green": true,
+    "armed_execution_consumed_on_success_park_refusal_timeout_crash_or_exit": true,
+    "retry_or_rerun": false
+  },
+  "frozen_discovery_plan": {
+    "implementation_id": "FMSR1-DISCOVERY-M0-G1",
+    "canonical_JSON_object_bytes": 7438,
+    "canonical_JSON_object_sha256": "3966132f90f718da9580f6aa1e9a6cf69906448d94d4412e8c98413c8c30fb4e",
+    "canonical_plan_bytes": 7439,
+    "canonical_plan_sha256": "9eb3d4a37b7314423c0c5f1b2eae465ae2d3874c26436c75a1df25aaef72cff6",
+    "canonical_plan_representation": "canonical_JSON_object_plus_one_LF",
+    "root_request_count": 17,
+    "exact_text_queries": [
+      "\"motor imagery\" EEG EOG EMG",
+      "\"movement intention\" EEG EOG EMG",
+      "\"motor execution\" EEG EOG EMG",
+      "\"hand movement\" EEG EOG EMG"
+    ],
+    "root_request_identities": [
+      {
+        "index_id": "OPENNEURO",
+        "query_or_category_id": "query_1",
+        "url": "https://openneuro.org/crn/graphql",
+        "method": "POST",
+        "body_sha256": "a6971294531af63b41727782dccadfe236f735c2cc8022a9172a2e80a7b3aef1",
+        "page_identity": "OPENNEURO:query_1:1"
+      },
+      {
+        "index_id": "OPENNEURO",
+        "query_or_category_id": "query_2",
+        "url": "https://openneuro.org/crn/graphql",
+        "method": "POST",
+        "body_sha256": "51fe35abe165cd64a0fe456cb7bd27f1c32f2690e99b796641fcfd2ba8dba3d8",
+        "page_identity": "OPENNEURO:query_2:1"
+      },
+      {
+        "index_id": "OPENNEURO",
+        "query_or_category_id": "query_3",
+        "url": "https://openneuro.org/crn/graphql",
+        "method": "POST",
+        "body_sha256": "a015f45947e2cce3e54b177978f29681aec688724bbfe416d21ec8f99bdb8c08",
+        "page_identity": "OPENNEURO:query_3:1"
+      },
+      {
+        "index_id": "OPENNEURO",
+        "query_or_category_id": "query_4",
+        "url": "https://openneuro.org/crn/graphql",
+        "method": "POST",
+        "body_sha256": "0633427bb41388506048f6c4a8125b6bb409c5af70f1ce439c617acdbe2f914d",
+        "page_identity": "OPENNEURO:query_4:1"
+      },
+      {
+        "index_id": "NEMAR",
+        "query_or_category_id": "query_1",
+        "url": "https://nemar.org/search?q=%22motor+imagery%22+EEG+EOG+EMG",
+        "method": "GET",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "page_identity": "NEMAR:query_1:1"
+      },
+      {
+        "index_id": "NEMAR",
+        "query_or_category_id": "query_2",
+        "url": "https://nemar.org/search?q=%22movement+intention%22+EEG+EOG+EMG",
+        "method": "GET",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "page_identity": "NEMAR:query_2:1"
+      },
+      {
+        "index_id": "NEMAR",
+        "query_or_category_id": "query_3",
+        "url": "https://nemar.org/search?q=%22motor+execution%22+EEG+EOG+EMG",
+        "method": "GET",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "page_identity": "NEMAR:query_3:1"
+      },
+      {
+        "index_id": "NEMAR",
+        "query_or_category_id": "query_4",
+        "url": "https://nemar.org/search?q=%22hand+movement%22+EEG+EOG+EMG",
+        "method": "GET",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "page_identity": "NEMAR:query_4:1"
+      },
+      {
+        "index_id": "PHYSIONET",
+        "query_or_category_id": "query_1",
+        "url": "https://physionet.org/search/?q=%22motor+imagery%22+EEG+EOG+EMG",
+        "method": "GET",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "page_identity": "PHYSIONET:query_1:1"
+      },
+      {
+        "index_id": "PHYSIONET",
+        "query_or_category_id": "query_2",
+        "url": "https://physionet.org/search/?q=%22movement+intention%22+EEG+EOG+EMG",
+        "method": "GET",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "page_identity": "PHYSIONET:query_2:1"
+      },
+      {
+        "index_id": "PHYSIONET",
+        "query_or_category_id": "query_3",
+        "url": "https://physionet.org/search/?q=%22motor+execution%22+EEG+EOG+EMG",
+        "method": "GET",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "page_identity": "PHYSIONET:query_3:1"
+      },
+      {
+        "index_id": "PHYSIONET",
+        "query_or_category_id": "query_4",
+        "url": "https://physionet.org/search/?q=%22hand+movement%22+EEG+EOG+EMG",
+        "method": "GET",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "page_identity": "PHYSIONET:query_4:1"
+      },
+      {
+        "index_id": "GIGADB",
+        "query_or_category_id": "query_1",
+        "url": "https://gigadb.org/search/new?keyword=%22motor+imagery%22+EEG+EOG+EMG",
+        "method": "GET",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "page_identity": "GIGADB:query_1:1"
+      },
+      {
+        "index_id": "GIGADB",
+        "query_or_category_id": "query_2",
+        "url": "https://gigadb.org/search/new?keyword=%22movement+intention%22+EEG+EOG+EMG",
+        "method": "GET",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "page_identity": "GIGADB:query_2:1"
+      },
+      {
+        "index_id": "GIGADB",
+        "query_or_category_id": "query_3",
+        "url": "https://gigadb.org/search/new?keyword=%22motor+execution%22+EEG+EOG+EMG",
+        "method": "GET",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "page_identity": "GIGADB:query_3:1"
+      },
+      {
+        "index_id": "GIGADB",
+        "query_or_category_id": "query_4",
+        "url": "https://gigadb.org/search/new?keyword=%22hand+movement%22+EEG+EOG+EMG",
+        "method": "GET",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "page_identity": "GIGADB:query_4:1"
+      },
+      {
+        "index_id": "BNCI_HORIZON_2020",
+        "query_or_category_id": "complete_motor_EEG_category",
+        "url": "https://bnci-horizon-2020.eu/database/data-sets",
+        "method": "GET",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "page_identity": "BNCI_HORIZON_2020:category:1"
+      }
+    ],
+    "query_or_category_changes_allowed": false,
+    "general_search_or_ad_hoc_candidate_allowed": false
+  },
+  "exact_source_HTTP_profile": {
+    "scheme": "https",
+    "port": 443,
+    "HTTP_version": "HTTP/1.1",
+    "application_headers_in_order": [
+      ["User-Agent", "NeuroDecodeKit-FMSR1-R1-W-v0/0.1 (+https://github.com/CheickDiakite-yikes/neurodecodekit)"],
+      ["Accept", "application/json, text/html;q=0.9, application/xhtml+xml;q=0.8"],
+      ["Accept-Encoding", "identity"],
+      ["Connection", "close"]
+    ],
+    "OpenNeuro_application_header_appended": ["Content-Type", "application/json"],
+    "protocol_managed_headers_in_order_after_application_headers": [
+      {
+        "name": "Host",
+        "value_rule": "lowercase_ASCII_canonical_host_without_port_because_port_is_443",
+        "required_for_methods": ["GET", "POST"]
+      },
+      {
+        "name": "Content-Length",
+        "value_rule": "base_10_ASCII_exact_request_body_octet_count_without_leading_zero",
+        "required_for_methods": ["POST"]
+      }
+    ],
+    "Transfer_Encoding_request_header_allowed": false,
+    "implicit_or_automatically_added_header_outside_the_two_protocol_managed_headers_allowed": false,
+    "request_body_encoding": "canonical_UTF_8_JSON_without_BOM_or_trailing_newline",
+    "request_identity_covers": [
+      "method",
+      "canonical_scheme_host_port_path_and_query",
+      "application_headers_in_order",
+      "protocol_managed_headers_in_order",
+      "exact_request_body_bytes"
+    ],
+    "other_headers_allowed": false,
+    "authentication_cookies_conditionals_or_compression_allowed": false
+  },
+  "source_response_transport_profile": {
+    "successful_terminal_status": 200,
+    "redirect_statuses_for_GET": [301, 302, 303, 307, 308],
+    "redirect_statuses_for_POST": [307, 308],
+    "maximum_redirects_per_root_request": 3,
+    "maximum_request_seconds": 30,
+    "whole_invocation_monotonic_deadline_seconds": 300,
+    "normalized_media_types": [
+      "application/json",
+      "text/html",
+      "application/xhtml+xml"
+    ],
+    "charset": "absent_or_UTF_8_case_insensitive",
+    "content_encoding": "absent_or_identity",
+    "content_length_and_transfer_encoding_both_present_allowed": false,
+    "transfer_encoding": "absent_or_exact_chunked",
+    "duplicate_singleton_headers_allowed": false,
+    "interim_1xx_responses_allowed": false,
+    "redirect_method_rewrite_allowed": false,
+    "redirect_target_must_preserve_exact_profile_before_contact": true,
+    "DNS_answers_must_all_be_global_unicast": true,
+    "selected_peer_and_post_connect_peer_must_match_and_be_global_unicast": true,
+    "system_CA_store_only": true,
+    "exact_hostname_and_SNI_verification": true,
+    "TLS_minimum_version": "TLSv1.2",
+    "raw_response_identity": "HTTP_entity_body_after_transfer_framing_with_no_content_decoding"
+  },
+  "continuation_URL_canonicalization": {
+    "algorithm_id": "FMSR1_URL_FORM_V0",
+    "input_type": "nonempty_UTF_8_string_1_to_4096_octets",
+    "relative_reference_resolution": "RFC3986_against_the_current_canonical_page_URL_before_validation",
+    "userinfo_allowed": false,
+    "fragment_allowed": false,
+    "scheme": "https",
+    "host_normalization": "IDNA2008_ToASCII_then_lowercase_and_exact_profile_allowlist",
+    "explicit_port_allowed": false,
+    "effective_port": 443,
+    "path_rule": "nonempty_absolute_ASCII_path_equal_to_the_profile_allowed_path_after_percent_triplets_are_uppercased_without_decoding_reserved_octets",
+    "query_form_decoder": {
+      "grammar": "application_x_www_form_urlencoded",
+      "plus_decodes_to_space": true,
+      "percent_triplets_must_be_complete": true,
+      "decoded_encoding": "strict_UTF_8",
+      "decoded_strings_must_be_NFC": true,
+      "control_or_NUL_codepoints_allowed": false,
+      "empty_key_or_value_allowed": false,
+      "duplicate_keys_allowed": false,
+      "unknown_keys_allowed": false,
+      "maximum_decoded_value_UTF_8_octets": 4096
+    },
+    "query_validation": "fixed_root_key_and_value_remain_byte_equal_after_decode_and_exactly_one_profile_allowed_continuation_key_may_be_added_or_changed",
+    "mixed_continuation_keys_allowed": false,
+    "canonical_query_key_order": "fixed_root_key_then_unchanged_optional_keys_in_profile_order_then_the_one_active_continuation_key",
+    "canonical_query_encoder": "UTF_8_then_application_x_www_form_urlencoded_with_uppercase_percent_hex_space_as_plus_and_no_safe_punctuation",
+    "canonical_request_target": "ASCII_path_then_question_mark_and_canonical_query_when_nonempty",
+    "any_noncanonical_or_ambiguous_input_route": "WITNESS_TRANSPORT_PARK"
+  },
+  "revision_admission": {
+    "mode_for_every_profile": "OPAQUE_COMPLETE_SNAPSHOT_REPLAY",
+    "SOURCE_GLOBAL_REVISION_selected": false,
+    "reason": "no_source_issued_immutable_value_with_documented_complete_traversal_scope_is_frozen",
+    "ETag_Last_Modified_API_version_schema_frontend_build_or_body_hash_claimed_as_semantic_revision": false,
+    "complete_five_profile_coverage_required": true,
+    "partial_universe_admitted": false
+  },
+  "index_profiles": [
+    {
+      "index_id": "OPENNEURO_CRN",
+      "discovery_plan_index_id": "OPENNEURO",
+      "mode": "OPAQUE_COMPLETE_SNAPSHOT_REPLAY",
+      "endpoint": "https://openneuro.org/crn/graphql",
+      "method": "POST",
+      "allowed_hosts": ["openneuro.org"],
+      "allowed_path": "/crn/graphql",
+      "allowed_query_keys": [],
+      "root_request_count": 4,
+      "root_POST_body_sha256_values": [
+        "a6971294531af63b41727782dccadfe236f735c2cc8022a9172a2e80a7b3aef1",
+        "51fe35abe165cd64a0fe456cb7bd27f1c32f2690e99b796641fcfd2ba8dba3d8",
+        "a015f45947e2cce3e54b177978f29681aec688724bbfe416d21ec8f99bdb8c08",
+        "0633427bb41388506048f6c4a8125b6bb409c5af70f1ce439c617acdbe2f914d"
+      ],
+      "pagination_grammar_id": "OPENNEURO_CRN_GRAPHQL_CONTROL_V0",
+      "candidate_entity_bytes_read_for_count_and_hash": true,
+      "candidate_semantic_decode_extract_iterate_or_retain_allowed": false,
+      "canonical_plan_profile_bytes": 1342,
+      "canonical_plan_profile_sha256": "5c3778b15275f3074cc0a40c1edb7b0a715c993db5104c5c2ff12bde9e1011c9"
+    },
+    {
+      "index_id": "NEMAR",
+      "discovery_plan_index_id": "NEMAR",
+      "mode": "OPAQUE_COMPLETE_SNAPSHOT_REPLAY",
+      "endpoint": "https://nemar.org/search",
+      "method": "GET",
+      "allowed_hosts": ["nemar.org", "www.nemar.org"],
+      "allowed_path": "/search",
+      "allowed_query_keys": ["cursor", "limit", "offset", "page", "q"],
+      "root_request_count": 4,
+      "pagination_grammar_id": "NEMAR_CONTROL_V0",
+      "candidate_entity_bytes_read_for_count_and_hash": true,
+      "candidate_semantic_decode_extract_iterate_or_retain_allowed": false,
+      "canonical_plan_profile_bytes": 1440,
+      "canonical_plan_profile_sha256": "5f3f4268758a0486c8b578785dbb0e34f34e4bab75c1bd43f41828e10dae4d09"
+    },
+    {
+      "index_id": "PHYSIONET",
+      "discovery_plan_index_id": "PHYSIONET",
+      "mode": "OPAQUE_COMPLETE_SNAPSHOT_REPLAY",
+      "endpoint": "https://physionet.org/search/",
+      "method": "GET",
+      "allowed_hosts": ["physionet.org", "www.physionet.org"],
+      "allowed_path": "/search/",
+      "allowed_query_keys": ["cursor", "offset", "page", "q"],
+      "root_request_count": 4,
+      "pagination_grammar_id": "PHYSIONET_CONTROL_V0",
+      "candidate_entity_bytes_read_for_count_and_hash": true,
+      "candidate_semantic_decode_extract_iterate_or_retain_allowed": false,
+      "canonical_plan_profile_bytes": 1506,
+      "canonical_plan_profile_sha256": "e11e59c6ee089c76ad6791ec7ae8e5b53d5fef1ff036c4a8e26c6a6452128312"
+    },
+    {
+      "index_id": "GIGADB",
+      "discovery_plan_index_id": "GIGADB",
+      "mode": "OPAQUE_COMPLETE_SNAPSHOT_REPLAY",
+      "endpoint": "https://gigadb.org/search/new",
+      "method": "GET",
+      "allowed_hosts": ["gigadb.org", "www.gigadb.org"],
+      "allowed_path": "/search/new",
+      "allowed_query_keys": ["cursor", "keyword", "offset", "page"],
+      "root_request_count": 4,
+      "pagination_grammar_id": "GIGADB_CONTROL_V0",
+      "candidate_entity_bytes_read_for_count_and_hash": true,
+      "candidate_semantic_decode_extract_iterate_or_retain_allowed": false,
+      "canonical_plan_profile_bytes": 1509,
+      "canonical_plan_profile_sha256": "8ca50c4bf2ef6d40b0bdef06c021d39697ffff77685047b2725159513faebeac"
+    },
+    {
+      "index_id": "BNCI_HORIZON_2020",
+      "discovery_plan_index_id": "BNCI_HORIZON_2020",
+      "mode": "OPAQUE_COMPLETE_SNAPSHOT_REPLAY",
+      "endpoint": "https://bnci-horizon-2020.eu/database/data-sets",
+      "method": "GET",
+      "allowed_hosts": ["bnci-horizon-2020.eu", "www.bnci-horizon-2020.eu"],
+      "allowed_path": "/database/data-sets",
+      "allowed_query_keys": ["cursor", "offset", "page"],
+      "root_request_count": 1,
+      "pagination_grammar_id": "BNCI_HORIZON_2020_CONTROL_V0",
+      "candidate_entity_bytes_read_for_count_and_hash": true,
+      "candidate_semantic_decode_extract_iterate_or_retain_allowed": false,
+      "canonical_plan_profile_bytes": 797,
+      "canonical_plan_profile_sha256": "3a4bf3a314eb2889515e4bb29ad43d630cbe4de111f7b38ab92f8de39826f768"
+    }
+  ],
+  "shared_pagination_control_schemas": {
+    "GENERIC_JSON_CONTROL_V0": {
+      "encoding": "strict_UTF_8_without_BOM",
+      "root_type": "object",
+      "duplicate_object_keys_allowed": false,
+      "number_syntax_for_routing_fields_allowed": false,
+      "candidate_value_pointers": ["/results", "/datasets", "/items"],
+      "candidate_values_are_stream_skipped_as_raw_tokens_without_semantic_decode_or_iteration": true,
+      "exactly_one_control_variant_required": true,
+      "control_variants": [
+        {
+          "variant_id": "TOP_LEVEL_NEXT",
+          "required_pointer": "/next",
+          "required_type": "null_or_nonempty_string",
+          "forbidden_pointers": ["/pagination"],
+          "null_means_terminal": true,
+          "string_means_continuation_URL": true
+        },
+        {
+          "variant_id": "PAGINATION_NEXT",
+          "required_pointer": "/pagination/next",
+          "required_type": "null_or_nonempty_string",
+          "required_parent_type": "object",
+          "forbidden_pointers": ["/next", "/pagination/has_next"],
+          "null_means_terminal": true,
+          "string_means_continuation_URL": true
+        },
+        {
+          "variant_id": "PAGINATION_HAS_NEXT_FALSE",
+          "required_pointer": "/pagination/has_next",
+          "required_type": "boolean",
+          "required_exact_value": false,
+          "required_parent_type": "object",
+          "forbidden_pointers": ["/next", "/pagination/next"],
+          "means_terminal": true
+        }
+      ],
+      "continuation_string_UTF_8_octets_minimum": 1,
+      "continuation_string_UTF_8_octets_maximum": 4096,
+      "continuation_string_is_processed_only_by": "FMSR1_URL_FORM_V0",
+      "missing_ambiguous_or_mistyped_control_route": "WITNESS_TRANSPORT_PARK"
+    },
+    "GENERIC_HTML_CONTROL_V0": {
+      "normalized_media_types": ["text/html", "application/xhtml+xml"],
+      "encoding": "strict_UTF_8_without_BOM",
+      "parser": "HTML5_tokenization_subset_using_ASCII_case_insensitive_tag_and_attribute_names_and_HTML5_character_reference_decoding",
+      "script_style_template_and_comment_contents_ignored": true,
+      "candidate_text_attributes_links_JSON_LD_and_microdata_semantically_decoded": false,
+      "container_match_variants": [
+        {
+          "variant_id": "NAV_ARIA_PAGINATION",
+          "tag": "nav",
+          "attribute": "aria-label",
+          "ASCII_casefolded_trimmed_exact_value": "pagination"
+        },
+        {
+          "variant_id": "ROLE_ARIA_PAGINATION",
+          "attribute": "role",
+          "ASCII_casefolded_trimmed_exact_value": "navigation",
+          "second_attribute": "aria-label",
+          "second_ASCII_casefolded_trimmed_exact_value": "pagination"
+        },
+        {
+          "variant_id": "CLASS_TOKEN",
+          "ASCII_whitespace_separated_class_token_exactly_one_of": ["pagination", "pager"]
+        },
+        {
+          "variant_id": "ID_EXACT",
+          "ASCII_casefolded_id_exactly_one_of": ["pagination", "pager"]
+        }
+      ],
+      "distinct_matching_container_count": 1,
+      "next_control": {
+        "descendant_tag": "a",
+        "rel_ASCII_whitespace_token_required": "next",
+        "href_required": true,
+        "href_UTF_8_octets_minimum": 1,
+        "href_UTF_8_octets_maximum": 4096,
+        "matching_element_count": "zero_or_one",
+        "one_match_means_continuation_URL_processed_only_by": "FMSR1_URL_FORM_V0"
+      },
+      "terminal_control_when_no_next": {
+        "exactly_one_descendant_required": true,
+        "variant_A": {
+          "rel_ASCII_whitespace_token": "next",
+          "aria_disabled_ASCII_casefolded_trimmed_exact_value": "true"
+        },
+        "variant_B": {
+          "ASCII_whitespace_separated_class_tokens_all_required": ["next", "disabled"]
+        },
+        "href_on_terminal_control_allowed": false
+      },
+      "missing_multiple_ambiguous_or_mistyped_control_route": "WITNESS_TRANSPORT_PARK"
+    }
+  },
+  "pagination_grammars": [
+    {
+      "grammar_id": "OPENNEURO_CRN_GRAPHQL_CONTROL_V0",
+      "index_id": "OPENNEURO_CRN",
+      "normalized_media_types": ["application/json"],
+      "encoding": "strict_UTF_8_without_BOM",
+      "root_type": "object",
+      "duplicate_object_keys_allowed": false,
+      "only_semantically_decoded_pointers_and_types": {
+        "/data": "object",
+        "/data/datasets": "object",
+        "/data/datasets/pageInfo": "object",
+        "/data/datasets/pageInfo/hasNextPage": "boolean",
+        "/data/datasets/pageInfo/endCursor": "null_or_string"
+      },
+      "candidate_value_pointer": "/data/datasets/edges",
+      "candidate_value_is_stream_skipped_as_raw_tokens_without_semantic_decode_or_iteration": true,
+      "continuation_case": {
+        "hasNextPage_exact_value": true,
+        "endCursor_type": "string",
+        "endCursor_UTF_8_octets_minimum": 1,
+        "endCursor_UTF_8_octets_maximum": 4096,
+        "endCursor_must_be_NFC_and_contain_no_control_or_NUL_codepoint": true,
+        "next_body_base": "the_exact_root_canonical_JSON_object",
+        "only_mutable_JSON_pointer": "/variables/after",
+        "all_other_values_and_object_keys_byte_identical_after_canonical_reserialization": true,
+        "canonical_reserialization": "UTF_8_JSON_sort_keys_true_separators_comma_colon_ensure_ascii_true_without_BOM_or_trailing_newline"
+      },
+      "terminal_case": {
+        "hasNextPage_exact_value": false,
+        "endCursor_required_exact_value": null,
+        "next_request": null
+      },
+      "missing_extra_ambiguous_or_mistyped_control_route": "WITNESS_TRANSPORT_PARK"
+    },
+    {
+      "grammar_id": "NEMAR_CONTROL_V0",
+      "index_id": "NEMAR",
+      "media_type_branches": {
+        "application/json": "GENERIC_JSON_CONTROL_V0",
+        "text/html": "GENERIC_HTML_CONTROL_V0",
+        "application/xhtml+xml": "GENERIC_HTML_CONTROL_V0"
+      },
+      "fixed_root_query_key": "q",
+      "allowed_continuation_keys": ["cursor", "offset", "page"],
+      "unchanged_optional_keys_in_canonical_order": ["limit"],
+      "continuation_key_value_types": {
+        "cursor": "nonempty_UTF_8_string_1_to_4096_octets",
+        "offset": "base_10_nonnegative_integer_without_leading_zero_except_zero",
+        "page": "base_10_positive_integer_without_leading_zero"
+      },
+      "URL_algorithm_id": "FMSR1_URL_FORM_V0",
+      "terminal_without_exact_schema_evidence_allowed": false
+    },
+    {
+      "grammar_id": "PHYSIONET_CONTROL_V0",
+      "index_id": "PHYSIONET",
+      "media_type_branches": {
+        "application/json": "GENERIC_JSON_CONTROL_V0",
+        "text/html": "GENERIC_HTML_CONTROL_V0",
+        "application/xhtml+xml": "GENERIC_HTML_CONTROL_V0"
+      },
+      "fixed_root_query_key": "q",
+      "allowed_continuation_keys": ["cursor", "offset", "page"],
+      "unchanged_optional_keys_in_canonical_order": [],
+      "continuation_key_value_types": {
+        "cursor": "nonempty_UTF_8_string_1_to_4096_octets",
+        "offset": "base_10_nonnegative_integer_without_leading_zero_except_zero",
+        "page": "base_10_positive_integer_without_leading_zero"
+      },
+      "URL_algorithm_id": "FMSR1_URL_FORM_V0",
+      "terminal_without_exact_schema_evidence_allowed": false
+    },
+    {
+      "grammar_id": "GIGADB_CONTROL_V0",
+      "index_id": "GIGADB",
+      "media_type_branches": {
+        "application/json": "GENERIC_JSON_CONTROL_V0",
+        "text/html": "GENERIC_HTML_CONTROL_V0",
+        "application/xhtml+xml": "GENERIC_HTML_CONTROL_V0"
+      },
+      "fixed_root_query_key": "keyword",
+      "allowed_continuation_keys": ["cursor", "offset", "page"],
+      "unchanged_optional_keys_in_canonical_order": [],
+      "continuation_key_value_types": {
+        "cursor": "nonempty_UTF_8_string_1_to_4096_octets",
+        "offset": "base_10_nonnegative_integer_without_leading_zero_except_zero",
+        "page": "base_10_positive_integer_without_leading_zero"
+      },
+      "URL_algorithm_id": "FMSR1_URL_FORM_V0",
+      "terminal_without_exact_schema_evidence_allowed": false
+    },
+    {
+      "grammar_id": "BNCI_HORIZON_2020_CONTROL_V0",
+      "index_id": "BNCI_HORIZON_2020",
+      "media_type_branches": {
+        "application/json": "GENERIC_JSON_CONTROL_V0",
+        "text/html": "GENERIC_HTML_CONTROL_V0",
+        "application/xhtml+xml": "GENERIC_HTML_CONTROL_V0"
+      },
+      "fixed_root_query_key": null,
+      "allowed_continuation_keys": ["cursor", "offset", "page"],
+      "unchanged_optional_keys_in_canonical_order": [],
+      "continuation_key_value_types": {
+        "cursor": "nonempty_UTF_8_string_1_to_4096_octets",
+        "offset": "base_10_nonnegative_integer_without_leading_zero_except_zero",
+        "page": "base_10_positive_integer_without_leading_zero"
+      },
+      "URL_algorithm_id": "FMSR1_URL_FORM_V0",
+      "terminal_without_exact_schema_evidence_allowed": false
+    }
+  ],
+  "redirect_hop_contract": {
+    "transcript_type": "array",
+    "minimum_items": 0,
+    "maximum_items": 3,
+    "hop_ordinals": "contiguous_base_0_in_request_order",
+    "required_fields_in_canonical_order": [
+      "hop_ordinal",
+      "global_request_ordinal",
+      "request_identity_sha256",
+      "method",
+      "canonical_request_target_sha256",
+      "request_headers_sha256",
+      "request_body_bytes",
+      "request_body_sha256",
+      "DNS_answer_set_sha256",
+      "selected_peer_sha256",
+      "post_connect_peer_sha256",
+      "selected_and_post_connect_peer_equal_and_global",
+      "TLS_hostname",
+      "TLS_SNI",
+      "TLS_version",
+      "system_CA_verification_succeeded",
+      "HTTP_status",
+      "response_headers_sha256",
+      "Location_raw_UTF_8_bytes",
+      "Location_raw_sha256",
+      "normalized_next_request_identity_sha256",
+      "normalized_next_scheme",
+      "normalized_next_host_ascii",
+      "normalized_next_port",
+      "normalized_next_path_and_query_sha256",
+      "content_encoding",
+      "transfer_framing",
+      "wire_bytes",
+      "entity_body_bytes",
+      "entity_body_sha256",
+      "request_elapsed_nanoseconds",
+      "whole_invocation_elapsed_nanoseconds"
+    ],
+    "field_types": {
+      "hop_ordinal": "integer_minimum_0",
+      "global_request_ordinal": "integer_minimum_0",
+      "request_identity_sha256": "lowercase_hex_64",
+      "method": "GET_or_POST",
+      "canonical_request_target_sha256": "lowercase_hex_64",
+      "request_headers_sha256": "lowercase_hex_64",
+      "request_body_bytes": "integer_minimum_0",
+      "request_body_sha256": "lowercase_hex_64",
+      "DNS_answer_set_sha256": "lowercase_hex_64",
+      "selected_peer_sha256": "lowercase_hex_64",
+      "post_connect_peer_sha256": "lowercase_hex_64",
+      "selected_and_post_connect_peer_equal_and_global": "boolean_exact_true",
+      "TLS_hostname": "nonempty_ASCII_string",
+      "TLS_SNI": "nonempty_ASCII_string",
+      "TLS_version": "TLSv1.2_or_TLSv1.3",
+      "system_CA_verification_succeeded": "boolean_exact_true",
+      "HTTP_status": "integer_in_method_specific_redirect_allowlist",
+      "response_headers_sha256": "lowercase_hex_64",
+      "Location_raw_UTF_8_bytes": "integer_1_to_4096",
+      "Location_raw_sha256": "lowercase_hex_64",
+      "normalized_next_request_identity_sha256": "lowercase_hex_64",
+      "normalized_next_scheme": "string_exact_https",
+      "normalized_next_host_ascii": "lowercase_ASCII_profile_allowlisted_host",
+      "normalized_next_port": "integer_exact_443",
+      "normalized_next_path_and_query_sha256": "lowercase_hex_64",
+      "content_encoding": "absent_or_identity",
+      "transfer_framing": "content_length_or_chunked_or_connection_close",
+      "wire_bytes": "integer_minimum_0",
+      "entity_body_bytes": "integer_minimum_0",
+      "entity_body_sha256": "lowercase_hex_64",
+      "request_elapsed_nanoseconds": "integer_minimum_0",
+      "whole_invocation_elapsed_nanoseconds": "integer_minimum_0"
+    },
+    "Location_header_count": 1,
+    "Location_decoding": "raw_header_value_must_be_strict_UTF_8_then_FMSR1_URL_FORM_V0",
+    "method_and_body_preserved_exactly": true,
+    "DNS_TLS_and_peer_evidence_required_for_every_hop": true,
+    "redirect_response_headers_and_entity_body_are_counted_and_hashed": true,
+    "next_hop_request_identity_must_equal_previous_normalized_next_request_identity": true,
+    "final_nonredirect_request_is_recorded_in_page_transport_evidence_not_redirect_transcript": true,
+    "any_missing_extra_mistyped_off_allowlist_or_noncanonical_field_route": "WITNESS_TRANSPORT_PARK"
+  },
+  "opaque_snapshot_ledger_contract": {
+    "outer_field": "profiles",
+    "required_outer_fields": [
+      "schema_name",
+      "schema_version",
+      "packet_id",
+      "profiles",
+      "profile_sha256_values",
+      "global_root_sha256_values",
+      "total_root_count",
+      "total_page_count",
+      "total_wire_bytes",
+      "total_entity_body_bytes",
+      "canonical_global_ledger_sha256"
+    ],
+    "profile_order": [
+      "OPENNEURO_CRN",
+      "NEMAR",
+      "PHYSIONET",
+      "GIGADB",
+      "BNCI_HORIZON_2020"
+    ],
+    "profile_root_membership": {
+      "OPENNEURO_CRN": [0, 1, 2, 3],
+      "NEMAR": [4, 5, 6, 7],
+      "PHYSIONET": [8, 9, 10, 11],
+      "GIGADB": [12, 13, 14, 15],
+      "BNCI_HORIZON_2020": [16]
+    },
+    "required_profile_fields": [
+      "profile_ordinal",
+      "index_id",
+      "mode",
+      "root_ordinals",
+      "roots",
+      "root_sha256_values",
+      "complete",
+      "page_count",
+      "terminal_root_count",
+      "wire_bytes",
+      "entity_body_bytes",
+      "warnings",
+      "unavailable_fields",
+      "canonical_profile_ledger_sha256"
+    ],
+    "exact_root_count": 17,
+    "root_order_must_equal_frozen_discovery_plan": true,
+    "required_root_fields": [
+      "root_ordinal",
+      "index_id",
+      "query_or_category_id",
+      "initial_request_identity_sha256",
+      "complete",
+      "page_count",
+      "terminal_page_count",
+      "pages",
+      "page_sha256_values",
+      "canonical_root_ledger_sha256"
+    ],
+    "required_page_fields": [
+      "page_ordinal",
+      "request_identity_sha256",
+      "request_body_sha256",
+      "redirect_transcript",
+      "pagination_identity_sha256",
+      "response_body_bytes",
+      "response_body_sha256",
+      "next_request_identity_sha256",
+      "terminal_state",
+      "transport_evidence",
+      "canonical_page_ledger_sha256"
+    ],
+    "required_transport_evidence_fields": [
+      "global_request_ordinal",
+      "method",
+      "scheme",
+      "host_ascii",
+      "port",
+      "path_and_query_sha256",
+      "request_headers_sha256",
+      "request_body_bytes",
+      "request_body_sha256",
+      "DNS_answer_set_sha256",
+      "selected_peer_sha256",
+      "post_connect_peer_sha256",
+      "selected_and_post_connect_peer_equal_and_global",
+      "TLS_hostname",
+      "TLS_SNI",
+      "TLS_version",
+      "system_CA_verification_succeeded",
+      "HTTP_status",
+      "response_headers_sha256",
+      "normalized_media_type",
+      "charset",
+      "content_encoding",
+      "transfer_framing",
+      "wire_bytes",
+      "entity_body_bytes",
+      "request_elapsed_nanoseconds",
+      "whole_invocation_elapsed_nanoseconds"
+    ],
+    "raw_response_identity": "HTTP_entity_body_after_transfer_framing_with_no_content_decoding",
+    "first_page_ordinal_per_root": 0,
+    "exactly_one_terminal_page_per_root": true,
+    "terminal_page_next_request_must_be_null": true,
+    "duplicate_request_or_pagination_identity_gap_cycle_fork_reorder_or_truncation_allowed": false,
+    "identical_response_body_hash_for_distinct_request_identities_allowed": true,
+    "candidate_entity_bytes_read_for_count_and_hash": true,
+    "candidate_semantic_decode_extract_iterate_retain_rank_or_select_allowed": false,
+    "minimum_source_specific_pagination_control_decode_only": true,
+    "all_17_roots_complete_required": true,
+    "all_root_ordinals_appear_in_exactly_one_profile": true,
+    "profile_root_order_and_global_root_order_must_match_membership": true,
+    "profile_and_global_counts_and_bytes_must_equal_nested_sums": true,
+    "child_digest_reconciliation": {
+      "each_root_page_sha256_values_must_equal_its_pages_canonical_page_ledger_sha256_in_page_ordinal_order": true,
+      "each_profile_root_sha256_values_must_equal_its_roots_canonical_root_ledger_sha256_in_profile_membership_order": true,
+      "outer_profile_sha256_values_must_equal_profiles_canonical_profile_ledger_sha256_in_profile_order": true,
+      "outer_global_root_sha256_values_must_equal_all_profile_roots_canonical_root_ledger_sha256_in_global_root_ordinal_order": true,
+      "digest_array_substitution_omission_duplication_or_reordering_allowed": false
+    },
+    "warnings_and_unavailable_fields_are_sorted_unique_ASCII_string_arrays": true,
+    "canonical_hash_contract": {
+      "encoding": "UTF_8_JSON_sort_keys_true_separators_comma_colon_ensure_ascii_true_without_BOM_plus_one_LF",
+      "hash": "SHA_256_lowercase_hex",
+      "page_preimage_fields": [
+        "page_ordinal",
+        "request_identity_sha256",
+        "request_body_sha256",
+        "redirect_transcript",
+        "pagination_identity_sha256",
+        "response_body_bytes",
+        "response_body_sha256",
+        "next_request_identity_sha256",
+        "terminal_state",
+        "transport_evidence"
+      ],
+      "root_preimage_fields": [
+        "root_ordinal",
+        "index_id",
+        "query_or_category_id",
+        "initial_request_identity_sha256",
+        "complete",
+        "page_count",
+        "terminal_page_count",
+        "page_sha256_values"
+      ],
+      "profile_preimage_fields": [
+        "profile_ordinal",
+        "index_id",
+        "mode",
+        "root_ordinals",
+        "root_sha256_values",
+        "complete",
+        "page_count",
+        "terminal_root_count",
+        "wire_bytes",
+        "entity_body_bytes",
+        "warnings",
+        "unavailable_fields"
+      ],
+      "global_preimage_fields": [
+        "schema_name",
+        "schema_version",
+        "packet_id",
+        "profile_sha256_values",
+        "global_root_sha256_values",
+        "total_root_count",
+        "total_page_count",
+        "total_wire_bytes",
+        "total_entity_body_bytes"
+      ],
+      "page_object_hash_field_excluded_from_its_own_preimage": "canonical_page_ledger_sha256",
+      "root_object_hash_field_excluded_from_its_own_preimage": "canonical_root_ledger_sha256",
+      "profile_object_hash_field_excluded_from_its_own_preimage": "canonical_profile_ledger_sha256",
+      "global_object_hash_field_excluded_from_its_own_preimage": "canonical_global_ledger_sha256"
+    },
+    "complete_boolean_without_structural_17_root_proof_sufficient": false,
+    "later_D1_requires_exact_replay_before_candidate_parsing": true,
+    "drift_route": "WITNESS_TRANSPORT_PARK"
+  },
+  "CI_W0_contract": {
+    "exact_API_host": "api.github.com",
+    "exact_Accept": "application/vnd.github+json",
+    "exact_API_version": "2022-11-28",
+    "current_main_ref_request": "/repos/CheickDiakite-yikes/neurodecodekit/git/ref/heads/main",
+    "exact_HEAD_check_runs_request_template": "/repos/CheickDiakite-yikes/neurodecodekit/commits/{local_HEAD_sha}/check-runs?per_page=100&page=1",
+    "exact_workflow_blob_request": "/repos/CheickDiakite-yikes/neurodecodekit/git/blobs/4246b7c7f6f8570df53b1b89705b496b30e38a78",
+    "request_order": [
+      "current_main_ref_request",
+      "exact_HEAD_check_runs_request_template",
+      "exact_workflow_blob_request"
+    ],
+    "request_count": 3,
+    "maximum_response_bytes_each": 1048576,
+    "maximum_response_bytes_cumulative": 3145728,
+    "maximum_request_seconds": 10,
+    "maximum_total_seconds": 30,
+    "maximum_server_date_skew_seconds": 300,
+    "Age_header": "absent_or_zero",
+    "content_encoding": "identity_or_absent",
+    "redirects_allowed": false,
+    "credentials_cookies_conditional_requests_proxy_custom_CA_or_system_proxy_allowed": false,
+    "globally_routable_peer_required": true,
+    "exact_hostname_and_SNI_verification": true,
+    "search_for_matching_run_allowed": false,
+    "local_repository_requirements": {
+      "branch": "main",
+      "working_tree_and_index_clean": true,
+      "HEAD_is_full_lowercase_hex_40": true,
+      "authority_decision_path_is_tracked_at_HEAD": true,
+      "authority_decision_blob_matches_bytes_loaded_before_network": true,
+      "implementation_artifact_set_matches_decision_before_network": true
+    },
+    "current_main_ref_object_SHA_must_equal_local_HEAD": true,
+    "check_runs_request_SHA_substitution_must_equal_local_HEAD": true,
+    "check_runs_response_total_count": 2,
+    "required_jobs": ["Base Python", "Optional Neuro Readers"],
+    "required_job_multiplicity_each": 1,
+    "required_job_status": "completed",
+    "required_job_conclusion": "success",
+    "additional_check_runs_allowed": false,
+    "required_check_run_app_slug": "github-actions",
+    "workflow_blob_content_SHA256": "53ea7e06c7989c7e3ae8030eafe7184aad4916fcefca2f8cfcc05ba7a87c2fc3",
+    "workflow_blob_decoded_bytes": 3040,
+    "workflow_blob_git_SHA1": "4246b7c7f6f8570df53b1b89705b496b30e38a78",
+    "second_authority_bearing_execution_decision_must_bind": [
+      "numeric_repository_id",
+      "numeric_owner_id",
+      "numeric_head_repository_id",
+      "numeric_head_owner_id",
+      "workflow_path",
+      "workflow_blob_sha256",
+      "workflow_blob_git_sha1",
+      "implementation_commit",
+      "implementation_artifact_set_sha256",
+      "authority_decision_path",
+      "authority_decision_schema_and_id",
+      "packet_id_and_packet_artifact_hashes",
+      "CI_W0_contract_sha256",
+      "fresh_maintainer_words"
+    ],
+    "decision_does_not_claim_its_future_commit_or_future_check_run_ids": true,
+    "runtime_authority_commit_is_local_HEAD_containing_the_exact_decision_blob": true,
+    "runtime_record_must_bind": [
+      "local_HEAD_authority_commit",
+      "authority_decision_blob_sha256",
+      "current_main_ref_response_sha256",
+      "exact_check_runs_request_identity_sha256",
+      "Base_Python_check_run_id",
+      "Optional_Neuro_Readers_check_run_id",
+      "check_runs_response_sha256",
+      "workflow_blob_response_sha256"
+    ],
+    "authorized_execution_decision_must_bind_unchanged_green_implementation_artifacts": true,
+    "implementation_specific_values_bound_now": false,
+    "source_contact_before_second_decision_exact_green_and_live_CI_success": false,
+    "saved_receipt_authority_bearing": false
+  },
+  "attempt_and_transport_firewall": {
+    "state_machine": [
+      "CLOSED",
+      "LOCAL_PREFLIGHT",
+      "RESERVED_PENDING",
+      "ARMED_CONSUMED",
+      "CI_W0",
+      "SEVENTEEN_ROOT_WITNESS",
+      "FINALIZE",
+      "COMPLETE_OR_PARK"
+    ],
+    "official_invocation_root": ".codex_work/fmsr1-r1-w-v0-official",
+    "official_invocation_root_retained_forever": true,
+    "local_preflight_checks": [
+      "packet_decision_and_artifact_hashes",
+      "second_execution_decision_and_CI_profile_complete",
+      "thread_environment",
+      "proxy_and_custom_CA_environment_absent",
+      "repository_work_root_and_attempt_path_no_follow",
+      "disk_and_resource_caps",
+      "candidate_parser_capability_absent"
+    ],
+    "local_preflight_network_operations": 0,
+    "preflight_refusal_creates_official_root": false,
+    "reserved_pending_event": "official_attempt_directory_created_relative_to_held_work_root_descriptor",
+    "arming_event": "work_root_fsync_succeeded_after_attempt_directory_creation",
+    "armed_attempt_consumed_even_if_marker_or_report_is_missing_after_crash": true,
+    "durable_no_follow_consumed_marker_before_first_GitHub_DNS_or_socket": true,
+    "consumed_marker_name": "consumed.json",
+    "consumed_marker_schema_name": "neurodecodekit.fresh_motor_source_identity_witness_consumed_marker",
+    "consumed_marker_required_fields": [
+      "schema_name",
+      "schema_version",
+      "packet_id",
+      "packet_sha256",
+      "implementation_commit",
+      "implementation_artifact_set_sha256",
+      "execution_decision_id",
+      "execution_decision_commit",
+      "execution_decision_sha256",
+      "CI_W0_profile_sha256",
+      "stage",
+      "state"
+    ],
+    "consumed_marker_stage": "FMSR1_R1_W",
+    "consumed_marker_state": "ARMED_CONSUMED",
+    "marker_file_mode": "0600",
+    "invocation_root_mode": "0700",
+    "open_directory_flags": ["O_RDONLY", "O_DIRECTORY", "O_NOFOLLOW"],
+    "child_creation_relative_to_held_parent_descriptors": true,
+    "repository_work_and_attempt_device_inode_binding_and_recheck_required": true,
+    "arming_fsync_order": [
+      "repository_root_after_work_root_admission",
+      "work_root_after_attempt_root_creation",
+      "consumed_marker_file_before_close",
+      "attempt_root_after_marker_creation"
+    ],
+    "marker_file_and_ancestor_directory_fsync_required": true,
+    "pending_reservation_left_fail_closed_on_pre_arm_durability_failure": true,
+    "official_root_marker_or_result_delete_repair_resume_or_reuse_allowed": false,
+    "CI_and_source_contact_same_process": true,
+    "pause_user_input_reexec_resume_or_mutable_handoff_allowed": false,
+    "proxy_auto_discovery_disabled": true,
+    "proxy_custom_CA_credentials_cookies_or_conditional_requests_allowed": false,
+    "system_trust_store_only": true,
+    "globally_routable_pre_and_post_connect_peer_required": true,
+    "source_redirects_within_exact_profile_allowlist": true,
+    "source_redirect_method_rewrite_allowed": false,
+    "GitHub_redirects_allowed": false,
+    "unsupported_content_encoding_body_consumption_allowed": false,
+    "every_contact_counter_incremented_before_DNS_or_open": true,
+    "candidate_discovery_parser_module_reachable_from_live_CLI": false,
+    "generated_qualification_must_cover_all_five_opaque_profiles_and_17_root_chains": true,
+    "generated_poison_candidate_fixtures_must_refuse_any_semantic_candidate_access": true
+  },
+  "resource_caps": {
+    "CPU_threads": 1,
+    "workers": 1,
+    "numerical_jobs": 1,
+    "maximum_runtime_seconds": 300,
+    "maximum_peak_RSS_bytes": 268435456,
+    "CI_requests": 3,
+    "maximum_CI_decoded_bytes": 3145728,
+    "maximum_official_index_requests": 125,
+    "maximum_total_network_requests": 128,
+    "maximum_official_index_wire_bytes": 33554432,
+    "maximum_official_index_decoded_bytes": 33554432,
+    "maximum_page_bytes": 8388608,
+    "maximum_retained_witness_artifact_bytes": 1048576,
+    "maximum_temporary_generated_disk_bytes": 2097152,
+    "minimum_free_disk_bytes": 2147483648,
+    "retry_count": 0,
+    "rerun_count": 0,
+    "new_payload_bytes": 0
+  },
+  "result_router": {
+    "allowed_routes": [
+      "WITNESS_COMPLETE",
+      "WITNESS_CAP_PARK",
+      "WITNESS_TRANSPORT_PARK",
+      "NAMED_FAIL_CLOSED_REFUSAL"
+    ],
+    "all_five_complete_required_for_WITNESS_COMPLETE": true,
+    "partial_ledger_can_authorize_D1": false,
+    "WITNESS_COMPLETE_requires_result_commit_push_and_both_remote_jobs_green_before_D1_packet": true,
+    "measured_park_stops_unregistered_dataset_hopping": true,
+    "next_route_after_park": "prospective_synchronized_EEG_EOG_EMG_collection_design"
+  },
+  "operation_authority_now": {
+    "implementation": false,
+    "generated_qualification": false,
+    "GitHub_API_or_official_index_network": false,
+    "source_witness": false,
+    "candidate_parsing_ranking_or_selection": false,
+    "publication_or_source_specific_metadata": false,
+    "payload_URL_download_archive_member_or_header": false,
+    "EEG_EOG_EMG_event_annotation_target_or_label": false,
+    "model_checkpoint_training_inference_prediction_or_score": false,
+    "language_model_provider_stream_device_or_hardware": false,
+    "cleanup_delete_overwrite_rename_move_other_project": false,
+    "release_or_scientific_claim_upgrade": false
+  },
+  "operation_counters_now": {
+    "network_requests": 0,
+    "network_bytes": 0,
+    "real_source_reads": 0,
+    "candidate_fields_parsed": 0,
+    "candidates_ranked_or_selected": 0,
+    "payload_or_neural_bytes": 0,
+    "target_or_label_reads": 0,
+    "model_training_prediction_or_score_operations": 0,
+    "incremental_disk_bytes": 0
+  },
+  "claim_boundary": {
+    "packet_is_scientific_evidence": false,
+    "source_identity_established": false,
+    "source_selected": false,
+    "real_EEG_accessed": false,
+    "neural_advantage_established": false,
+    "EEG_beyond_joint_nuisance_established": false,
+    "movement_intention_or_motor_cortex_established": false,
+    "unseen_person_generalization_established": false,
+    "thought_or_language_decoding_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_or_clinical_value_established": false
+  },
+  "decision_requirement": {
+    "this_request_grants_authority": false,
+    "packet_must_be_committed_pushed_and_both_remote_jobs_green_first": true,
+    "fresh_first_maintainer_words_required_for_generated_implementation": true,
+    "first_decision_commit_and_both_remote_jobs_green_required_before_implementation": true,
+    "first_decision_authorizes_live_network_or_witness": false,
+    "implementation_and_generated_qualification_must_be_committed_pushed_and_both_remote_jobs_green": true,
+    "fresh_second_maintainer_words_required_for_live_execution": true,
+    "second_authority_bearing_execution_decision_must_bind_exact_code_CI_and_CI_W0_profile": true,
+    "second_execution_decision_commit_and_both_remote_jobs_green_required_before_execution": true,
+    "general_continuation_or_prior_authorization_sufficient": false
+  }
+}

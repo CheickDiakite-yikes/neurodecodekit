@@ -76,9 +76,10 @@ its ignored marker or private paths.
 
 `OFNER-C6R-1` remains a scientifically useful but consumed predecessor, not the
 active flagship. Read the result and proof closeouts,
-`registries/current_research_frontier.v20.json`,
+`registries/current_research_frontier.v21.json`,
 `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`, and the knowledge ledger first.
-Its immutable predecessor is `registries/current_research_frontier.v19.json`;
+Its immutable predecessor is `registries/current_research_frontier.v20.json`;
+the earlier immutable predecessor is `registries/current_research_frontier.v19.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v18.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v17.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v16.json`;
@@ -179,11 +180,24 @@ operations. Never rerun, repair, resume, reuse, or delete its ignored official
 root. Corrected result tree `9f5ff18ff85988581f49b65a121ce80d75b67048`
 passed Base `99367259645`, Optional `99367259785`, and CI `33352074929` after
 restoring one immutable strategy file changed by the failed predecessor result
-commit. The proof-only closeout is local and must become green without a rerun.
-No live command or GitHub/official-index request is authorized.
-Candidate metadata, transport canary, header, payload, model, score, release,
-and claim work remain closed. Do not treat generated evidence as source
-authentication or neural evidence.
+commit. Proof-only closeout `dbfaf682595c33d3c6de10e88503fb84a2a6254c`
+passed Base `99369471021`, Optional `99369470875`, and CI `33352882661` on
+GitHub `main`; the generated lane is closed with no rerun. Read the all-false
+`FMSR1-R1-W-v0` packet and frontier v21 next. It selects opaque complete
+snapshot replay for all five frozen indexes, binds all 17 roots in a canonical
+page-to-root-to-profile-to-global hash tree, requires exact typed
+pagination-only control decoding, and grants no authority.
+Its first later decision may authorize only generated implementation and
+qualification. Exact code and CI must then exist before fresh second maintainer
+words and an authority-bearing execution decision can authorize one consumed
+same-process CI-gated witness. The live gate is commit-scoped rather than
+self-referential: clean local `main`, remote `main`, the exact decision blob,
+two unique successful checks, and the frozen workflow blob must agree in three
+direct GitHub requests. A later `D1` still requires its own all-false packet,
+fresh words, authority decision, and remote proof. No live command or
+GitHub/official-index request is authorized now. Candidate metadata, transport
+canary, header, payload, model, score, release, and claim work remain closed.
+Do not treat generated or source-identity evidence as neural evidence.
 
 ### Scientific execution directive
 
