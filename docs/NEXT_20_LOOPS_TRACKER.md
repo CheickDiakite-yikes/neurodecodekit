@@ -30,8 +30,10 @@
 > consumed and passed: two matching five-profile replays, 82/82 refusals across
 > 13 routes, 0.022029167041182518 seconds, 21,397,504-byte peak RSS, and zero
 > network, real-source, EEG, model, score, or claim operations. It cannot be
-> rerun. No scientific claim changed. Read
-> `registries/current_research_frontier.v19.json` and the measured result first.
+> rerun. Corrected result tree `9f5ff18` passed Base `99367259645`, Optional
+> `99367259785`, and CI `33352074929`. No scientific claim changed. Read
+> `registries/current_research_frontier.v20.json`, the measured result, and its
+> proof-only closeout first.
 
 > **COMM-P0-G FS3 prospective successor (2026-08-28):** exact Amendment 3
 > `b15d3cf` passed Base `98860211722`, Optional Neuro Readers `98860211949`,

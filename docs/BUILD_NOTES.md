@@ -16671,3 +16671,12 @@ and require both remote jobs green before the one official qualification.
   output bytes, 636 temporary bytes, and zero network, real-source, neural,
   target, model, prediction, score, release, or claim operations. No rerun is
   authorized and no scientific evidence changed.
+- 2026-08-31: Initial result commit `5c2d6f4` failed both complete CI suites on
+  one shared immutable-artifact mismatch: the hash-bound convergence plan was
+  32,052 rather than 32,004 bytes. Correction `9f5ff18` restored the exact
+  32,004-byte / `bdec19e5` identity without rerunning the consumed
+  qualification. Base `99367259645`, Optional `99367259785`, and CI
+  `33352074929` then passed all 7,283 applicable tests. Added one proof-only
+  four-artifact / 30,764-byte closeout; it performs no official-root read,
+  qualification rerun, network, real-source, neural, model, score, or claim
+  operation.

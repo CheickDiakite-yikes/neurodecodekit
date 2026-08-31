@@ -2,10 +2,11 @@
 
 > **Current scientific frontier, 2026-08-31:** read the Ofner result and proof
 > closeouts, the NPA1 implementation and proof closeout,
-> `registries/current_research_frontier.v19.json`,
+> `registries/current_research_frontier.v20.json`,
 > `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`, and the scientific knowledge
 > ledger first. Its immutable predecessor is
-> `registries/current_research_frontier.v18.json`; earlier predecessors are
+> `registries/current_research_frontier.v19.json`; earlier predecessors are
+> `registries/current_research_frontier.v18.json`,
 > `registries/current_research_frontier.v17.json`,
 > `registries/current_research_frontier.v16.json`,
 > `registries/current_research_frontier.v15.json`,
@@ -71,8 +72,10 @@
 > replays, 82/82 refusals across 13 routes, 0.022029167041182518 seconds,
 > 21,397,504-byte peak RSS, 636 temporary bytes, and zero network, real-source,
 > neural, target, model, prediction, score, release, or claim operations. Never
-> rerun or remove its ignored official root. Read the measured result and
-> frontier v19. All candidate-specific, network, payload, model, score,
+> rerun or remove its ignored official root. Corrected result tree `9f5ff18`
+> passed Base `99367259645`, Optional `99367259785`, and CI `33352074929`.
+> Read the measured result, proof-only closeout, and frontier v20. All
+> candidate-specific, network, payload, model, score,
 > release, and scientific authorities remain false.
 > Preserve the unrelated tracker inspection file.
 

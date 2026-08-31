@@ -1,0 +1,88 @@
+{
+  "schema_name": "neurodecodekit.current_research_frontier",
+  "schema_version": "0.21.0",
+  "recorded_at": "2026-08-31",
+  "supersedes": "registries/current_research_frontier.v19.json",
+  "superseded_registry_sha256": "eabff5f3e0707072732fb4fce0e094b492ebce13a5b885b6b6b7c67aa2494200",
+  "status": "FMSR1_R1_G_result_exact_green_proof_only_closeout_pending_this_exact_commit_remote_green",
+  "active_lane_id": null,
+  "active_Tier_C_packet": null,
+  "scientific_lane": "fresh_unseen_person_motor_task_EEG_beyond_joint_EOG_EMG_posterior_cue_timing_and_derangement",
+  "green_generated_result": {
+    "protocol_id": "FMSR1-R1-G-v0",
+    "commit": "9f5ff18ff85988581f49b65a121ce80d75b67048",
+    "CI_run_id": 33352074929,
+    "base_python_job_id": 99367259645,
+    "optional_neuro_readers_job_id": 99367259785,
+    "both_required_jobs_green": true,
+    "consumed": true,
+    "rerun_authorized": false,
+    "deterministic_replays": 2,
+    "refusals_passed": 82,
+    "distinct_refusal_routes": 13,
+    "runtime_seconds": 0.022029167041182518,
+    "absolute_peak_RSS_bytes": 21397504,
+    "network_real_neural_target_model_prediction_score_or_claim_operations": 0,
+    "scientific_value": false
+  },
+  "proof_closeout": {
+    "proof_id": "FMSR1-R1-G-P0",
+    "human_path": "docs/FRESH_MOTOR_SOURCE_ADMISSION_GENERATED_QUALIFICATION_PROOF_CLOSEOUT.md",
+    "machine_path": "registries/fresh_motor_source_admission_generated_qualification_proof.v0.json",
+    "status": "local_complete_pending_this_exact_commit_and_both_remote_jobs",
+    "qualification_reruns": 0,
+    "bound_result_artifacts": 4,
+    "bound_result_bytes": 30764
+  },
+  "current_evidence_coordinate": {
+    "dimension_1_spatial": "not_tested_on_a_fresh_admitted_source",
+    "dimension_2_temporal": "not_tested_on_a_fresh_admitted_source",
+    "dimension_3_physiological": "not_tested_on_a_fresh_admitted_source",
+    "dimension_4_task_autonomy": "source_not_selected",
+    "dimension_5_population_generalization": "source_not_selected",
+    "dimension_6_translation": "not_started",
+    "scientific_claim_upgrade": false
+  },
+  "operation_authority_now": {
+    "commit_push_and_CI_for_this_proof_closeout": true,
+    "additional_generated_qualification_or_rehearsal": false,
+    "prepare_R1_W_packet_before_closeout_exact_green": false,
+    "GitHub_API_or_other_network": false,
+    "source_identity_witness_or_discovery": false,
+    "real_payload_header_signal_event_annotation_target_or_label": false,
+    "model_training_inference_prediction_or_score": false,
+    "release_or_scientific_claim_upgrade": false
+  },
+  "ordered_successor_route_after_closeout_green": [
+    "prepare_one_all_false_R1_W_source_identity_witness_packet",
+    "fresh_packet_bound_maintainer_decision_and_remote_green",
+    "one_R1_W_witness_over_all_five_frozen_indexes_without_candidate_parsing",
+    "one_complete_D1_discovery_or_measured_NO_QUALIFYING_SOURCE_or_cap_blocker",
+    "one_staged_candidate_source_to_score_work_order_if_exactly_one_source_qualifies",
+    "target_firewalled_compact_models_and_capacity_matched_controls",
+    "prediction_freeze_before_one_target_delivery",
+    "one_participant_macro_score_without_post_target_tuning",
+    "independent_replication_before_live_translation"
+  ],
+  "claim_boundary": {
+    "source_authenticity_established": false,
+    "real_source_metadata_accessed": false,
+    "real_EEG_accessed": false,
+    "neural_advantage_established": false,
+    "EEG_beyond_joint_peripheral_and_task_controls_established": false,
+    "motor_cortex_or_movement_intention_established": false,
+    "unseen_person_generalization_established": false,
+    "thought_or_language_decoding_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_or_clinical_value_established": false
+  },
+  "next_gate": {
+    "action": "commit_push_and_green_this_proof_only_closeout_without_rerun",
+    "next_reversible_action_after_green": "prepare_one_all_false_R1_W_packet",
+    "next_substantive_action_requires_fresh_Tier_C_decision": true,
+    "network_request_authorized_now": false,
+    "real_data_transaction_authorized": false,
+    "model_or_scoring_authorized": false,
+    "scientific_claim_upgrade_allowed": false
+  }
+}

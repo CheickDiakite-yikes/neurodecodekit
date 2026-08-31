@@ -15076,3 +15076,10 @@ green; only then may the single generated qualification run.
   official root. Require this result and one non-executing proof closeout to
   become exact-green, then stop synthetic work and route to a fresh separately
   authorized `R1-W` source witness and one complete `D1` discovery.
+- 2026-08-31: Preserve failed result CI `33351221770` as evidence of an
+  immutable-plan drift, accept corrected exact-green result tree `9f5ff18` with
+  CI `33352074929`, and permit exactly one proof-only closeout that binds four
+  result artifacts / 30,764 bytes without rerunning the qualification. After
+  this closeout becomes remotely green, prohibit further generated rehearsal
+  and allow preparation of one all-false `R1-W` source-identity witness packet;
+  execution still requires fresh packet-bound Tier C authority.

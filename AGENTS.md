@@ -76,9 +76,10 @@ its ignored marker or private paths.
 
 `OFNER-C6R-1` remains a scientifically useful but consumed predecessor, not the
 active flagship. Read the result and proof closeouts,
-`registries/current_research_frontier.v19.json`,
+`registries/current_research_frontier.v20.json`,
 `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`, and the knowledge ledger first.
-Its immutable predecessor is `registries/current_research_frontier.v18.json`;
+Its immutable predecessor is `registries/current_research_frontier.v19.json`;
+the earlier immutable predecessor is `registries/current_research_frontier.v18.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v17.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v16.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v15.json`;
@@ -175,8 +176,11 @@ five-profile replays, all 82 refusals across 13 routes, 0.022029167041182518
 seconds, 21,397,504-byte peak RSS, 636 temporary bytes, and zero network,
 real-source, neural, target, model, prediction, score, release, or claim
 operations. Never rerun, repair, resume, reuse, or delete its ignored official
-root. The result is pending its exact commit and remote proof. No live command
-or GitHub/official-index request is authorized.
+root. Corrected result tree `9f5ff18ff85988581f49b65a121ce80d75b67048`
+passed Base `99367259645`, Optional `99367259785`, and CI `33352074929` after
+restoring one immutable strategy file changed by the failed predecessor result
+commit. The proof-only closeout is local and must become green without a rerun.
+No live command or GitHub/official-index request is authorized.
 Candidate metadata, transport canary, header, payload, model, score, release,
 and claim work remain closed. Do not treat generated evidence as source
 authentication or neural evidence.

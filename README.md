@@ -139,6 +139,10 @@ five-profile replays, all 82 refusals across 13 routes,
 bytes, and zero network, real-source, neural, target, model, prediction, score,
 release, or claim operations. It cannot be rerun. Read the
 [measured result](docs/FRESH_MOTOR_SOURCE_ADMISSION_GENERATED_QUALIFICATION_RESULT.md).
+The corrected result tree `9f5ff18` passed Base `99367259645`, Optional
+`99367259785`, and CI `33352074929`; its
+[proof-only closeout](docs/FRESH_MOTOR_SOURCE_ADMISSION_GENERATED_QUALIFICATION_PROOF_CLOSEOUT.md)
+performs no rerun and is the final generated-lane dependency.
 The [hard scientific decision tree](docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md)
 then routes one admitted source through sensitivity, confirmation,
 independent replication, and only afterward causal/live translation. Its core
@@ -154,8 +158,9 @@ physiological edge rather than merely average well. Engineering may close only
 the final immediate dependency of this experiment; the next substantive block
 must produce real-data evidence or a measured blocker. See the
 [additive evidence-map clarification](docs/FRESH_MOTOR_SOURCE_RESEARCH_EVIDENCE_MAP_CLARIFICATION.md)
-and [current machine frontier](registries/current_research_frontier.v19.json).
-Its immutable predecessor is `registries/current_research_frontier.v18.json`;
+and [current machine frontier](registries/current_research_frontier.v20.json).
+Its immutable predecessor is `registries/current_research_frontier.v19.json`;
+the earlier immutable predecessor is `registries/current_research_frontier.v18.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v17.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v16.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v15.json`;
@@ -760,12 +765,13 @@ score or claim upgrade occurred. Repeated convergence warnings at the frozen
 80-iteration cap were recorded without changing or rerunning the models.
 
 The machine-readable current state is
-[`registries/current_research_frontier.v19.json`](registries/current_research_frontier.v19.json).
+[`registries/current_research_frontier.v20.json`](registries/current_research_frontier.v20.json).
 It freezes the consumed Ofner lane, green generated NPA1 proof, rejected v0
 draft, exact-green `FMSR1-v1`, discovery decision, and generated implementation,
 the green proof-only closeout, exact-green all-false A1 correction, exact-green
 R1-G registration, rejected green I0 implementation, corrected exact-green I1,
-green activation, consumed generated result, claim boundary, and exact next transition so
+green activation, exact-green consumed generated result, proof-only closeout,
+claim boundary, and exact next transition so
 handoffs cannot silently return to an older gate.
 Prediction
 freeze `2517fd1` passed Base job `97996323987`, Optional job `97996324203`, and
