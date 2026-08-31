@@ -149,8 +149,12 @@ artifact is the all-false
 It conservatively assigns all five indexes to opaque complete-snapshot replay,
 binds all 17 initial requests in a canonical page/root/profile/global hash tree,
 permits only exact typed pagination-control decoding, and grants no network or
-implementation authority. A first fresh decision may authorize generated
-implementation only; after exact code and CI exist, fresh second maintainer
+implementation authority. The packet is exact-green at `d4ae388`, Base Python
+`99381828165`, Optional Neuro Readers `99381828024`, and CI `33357313608` on
+GitHub `main`. The maintainer's exact fresh words are preserved in the
+[implementation-only decision](docs/FRESH_MOTOR_SOURCE_IDENTITY_WITNESS_IMPLEMENTATION_DECISION.md),
+which is pending its own exact commit and remote proof. Once green it may
+authorize generated implementation only; after exact code and CI exist, fresh second maintainer
 words and a second authority-bearing decision are required for one consumed
 live witness. Its three-call CI gate compares clean local
 `main` with remote `main`, the two unique successful checks on that exact
@@ -172,8 +176,9 @@ physiological edge rather than merely average well. Engineering may close only
 the final immediate dependency of this experiment; the next substantive block
 must produce real-data evidence or a measured blocker. See the
 [additive evidence-map clarification](docs/FRESH_MOTOR_SOURCE_RESEARCH_EVIDENCE_MAP_CLARIFICATION.md)
-and [current machine frontier](registries/current_research_frontier.v21.json).
-Its immutable predecessor is `registries/current_research_frontier.v20.json`;
+and [current machine frontier](registries/current_research_frontier.v22.json).
+Its immutable predecessor is `registries/current_research_frontier.v21.json`;
+the earlier immutable predecessor is `registries/current_research_frontier.v20.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v19.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v18.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v17.json`;

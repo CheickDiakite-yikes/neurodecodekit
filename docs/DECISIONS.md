@@ -1,5 +1,20 @@
 # Architecture Decision Log
 
+## 2026-08-31 - Bind R1-W generated implementation only
+
+Decision: preserve the maintainer's exact words, `need real results, real
+scientific results, focus on that and only that and keep going`, in
+`FMSR1-R1-W-I0-D0` and bind them only to exact-green packet
+`FMSR1-R1-W-v0` at `d4ae388`, CI `33357313608`.
+
+Decision: the demand for real results controls priority but does not skip the
+packet's ordered evidence barriers. This first decision must become remotely
+green before one standard-library generated implementation and fixture-only
+qualification. It authorizes no live command, DNS, socket, GitHub API,
+official-index, candidate, payload, neural, model, score, release, or claim
+operation. Exact implementation code and CI must exist before fresh second
+maintainer words can support a separately green one-shot live-witness decision.
+
 ## 2026-08-30 - Bind FMSR1 discovery and the hard scientific router
 
 Decision: preserve the maintainer's exact words in

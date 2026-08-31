@@ -30,9 +30,10 @@
 > 22,577,152-byte peak RSS, zero network, and zero retained payload. The NPA1
 > proof closeout then passed Base Python `99188620896`, Optional Neuro Readers
 > `99188621003`, and CI `33285776358` at exact commit `2ec3d4b` on GitHub
-> `main`. Read `registries/current_research_frontier.v21.json` and
+> `main`. Read `registries/current_research_frontier.v22.json` and
 > `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`; its predecessor
-> `registries/current_research_frontier.v20.json`, earlier predecessors
+> `registries/current_research_frontier.v21.json`, earlier predecessors
+> `registries/current_research_frontier.v20.json`,
 > `registries/current_research_frontier.v19.json` and
 > `registries/current_research_frontier.v18.json`, earlier predecessor
 > `registries/current_research_frontier.v17.json`, earlier predecessor
@@ -87,10 +88,14 @@
 > RSS, and zero network or protected operations. Result `9f5ff18` and proof
 > closeout `dbfaf68` are exact-green; CI `33352882661` passed Base
 > `99369471021` and Optional `99369470875`. Never rerun the qualification.
-> Read the all-false `FMSR1-R1-W-v0` packet next. It binds five opaque snapshot
+> The all-false `FMSR1-R1-W-v0` packet is exact-green at `d4ae388`, Base
+> `99381828165`, Optional `99381828024`, and CI `33357313608` on GitHub
+> `main`. It binds five opaque snapshot
 > profiles and 17 exact roots in a canonical page/root/profile/global hash tree
-> but grants no authority. Generated implementation requires a fresh first
-> decision; one live witness requires fresh second words, an exact-code-bound
+> but grants no authority. The maintainer's exact fresh words are now recorded
+> in implementation-only decision `FMSR1-R1-W-I0-D0`, which remains pending
+> its own exact commit and remote proof. Once green it may authorize generated
+> implementation only; one live witness still requires fresh second words, an exact-code-bound
 > second decision, and the three-call commit-scoped GitHub proof. `D1` keeps its
 > own later packet/decision barrier. All public network, payload, signal,
 > target, model, score, release, and claim authority remains false.

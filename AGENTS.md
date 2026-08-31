@@ -186,13 +186,18 @@ passed Base `99367259645`, Optional `99367259785`, and CI `33352074929` after
 restoring one immutable strategy file changed by the failed predecessor result
 commit. Proof-only closeout `dbfaf682595c33d3c6de10e88503fb84a2a6254c`
 passed Base `99369471021`, Optional `99369470875`, and CI `33352882661` on
-GitHub `main`; the generated lane is closed with no rerun. Read the all-false
-`FMSR1-R1-W-v0` packet and frontier v21 next. It selects opaque complete
+GitHub `main`; the generated lane is closed with no rerun. The all-false
+`FMSR1-R1-W-v0` packet and frontier v21 are exact-green at
+`d4ae388d883b8fb04fc75546e6a30aec2fbfa6f2`, Base Python `99381828165`,
+Optional Neuro Readers `99381828024`, and CI `33357313608` on GitHub `main`.
+It selects opaque complete
 snapshot replay for all five frozen indexes, binds all 17 roots in a canonical
 page-to-root-to-profile-to-global hash tree, requires exact typed
-pagination-only control decoding, and grants no authority.
-Its first later decision may authorize only generated implementation and
-qualification. Exact code and CI must then exist before fresh second maintainer
+pagination-only control decoding, and grants no authority. Read implementation
+decision `FMSR1-R1-W-I0-D0` and frontier v22 next. The maintainer's exact words
+are recorded there; the decision is pending its own exact commit and remote
+proof and may authorize only generated implementation and qualification after
+it becomes green. Exact code and CI must then exist before fresh second maintainer
 words and an authority-bearing execution decision can authorize one consumed
 same-process CI-gated witness. The live gate is commit-scoped rather than
 self-referential: clean local `main`, remote `main`, the exact decision blob,

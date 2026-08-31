@@ -4,6 +4,22 @@ This file is the working journal for the build. It exists so later agents,
 engineers, and case-study readers can reconstruct not only what changed, but
 why the project moved in small loops.
 
+## 2026-08-31 - R1-W implementation-only decision
+
+- Verified all-false witness packet `FMSR1-R1-W-v0` on GitHub `main` at exact
+  commit `d4ae388`, Base Python `99381828165`, Optional Neuro Readers
+  `99381828024`, and CI `33357313608`.
+- Preserved the maintainer's exact fresh words in decision
+  `FMSR1-R1-W-I0-D0`, binding them to generated implementation and
+  generated-fixture qualification only after this decision becomes remotely
+  green.
+- Performed one GitHub proof verification and zero implementation,
+  qualification, network, candidate, payload, neural, target, model,
+  prediction, score, release, deletion, or claim operations.
+- The immediate post-green task is the smallest standard-library witness
+  implementation. It must expose no live command and must stop for fresh second
+  execution-bound words after its exact implementation and CI are known.
+
 ## 2026-08-30 - FMSR1 generated discovery implementation
 
 - Made the 3D attribution cube, outer 5D evidence map, and separate live
