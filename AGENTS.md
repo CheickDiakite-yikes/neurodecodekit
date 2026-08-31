@@ -88,7 +88,11 @@ the earlier immutable predecessor is `registries/current_research_frontier.v14.j
 the earlier immutable predecessor is `registries/current_research_frontier.v13.json`;
 the earlier immutable predecessors are `registries/current_research_frontier.v12.json`,
 `registries/current_research_frontier.v11.json`, and
-`registries/current_research_frontier.v10.json`.
+`registries/current_research_frontier.v10.json`. Preserve
+`registries/current_research_frontier.v9.json`,
+`registries/current_research_frontier.v8.json`,
+`registries/current_research_frontier.v7.json`, and
+`registries/current_research_frontier.v6.json` as earlier immutable history.
 Public metadata selected 15 participants / 150 original motor-imagery GDF
 files / 13,748,417,608 bytes and reported 61 EEG, three EOG, 19 glove, and 13
 arm channels at 512 Hz. The sole `OFNER-C6R-1-HL-R0` invocation completed the
