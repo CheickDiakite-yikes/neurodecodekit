@@ -1,0 +1,85 @@
+{
+  "schema_name": "neurodecodekit.current_research_frontier",
+  "schema_version": "0.26.0",
+  "recorded_at": "2026-08-31",
+  "supersedes": "registries/current_research_frontier.v24.json",
+  "superseded_registry_sha256": "77bfd29fcdd6e4958a799afb6af4a3625eff22db9d2e51318960058eb72df196",
+  "status": "FMSR1_R1_W_I1_generated_qualification_passed_exact_implementation_commit_and_remote_proof_pending",
+  "active_lane_id": "FMSR1-R1-W-I1",
+  "active_Tier_C_packet": "FMSR1-R1-W-v0",
+  "scientific_lane": "fresh_unseen_person_motor_task_EEG_beyond_joint_EOG_EMG_posterior_cue_timing_and_derangement",
+  "green_live_implementation_decision": {
+    "decision_id": "FMSR1-R1-W-I1-D0",
+    "commit": "0c50299dc5223ba0f2b1f337beded51038bffd4d",
+    "CI_run_id": 33364407489,
+    "base_python_job_id": 99401989268,
+    "optional_neuro_readers_job_id": 99401989133,
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true
+  },
+  "live_implementation": {
+    "implementation_id": "FMSR1-R1-W-I1",
+    "qualification_id": "FMSR1-R1-W-I1-Q0",
+    "qualification_passed": true,
+    "qualification_consumed": true,
+    "qualification_replay_allowed": false,
+    "deterministic_replays": 2,
+    "profile_count": 5,
+    "root_count": 17,
+    "page_count": 34,
+    "candidate_semantic_accesses": 0,
+    "network_requests": 0,
+    "real_source_access": false,
+    "status": "pending_this_exact_commit_and_both_remote_jobs"
+  },
+  "current_evidence_coordinate": {
+    "dimension_1_spatial": "not_tested_on_a_fresh_admitted_source",
+    "dimension_2_temporal": "not_tested_on_a_fresh_admitted_source",
+    "dimension_3_physiological": "not_tested_on_a_fresh_admitted_source",
+    "dimension_4_task_autonomy": "source_not_selected",
+    "dimension_5_population_generalization": "source_not_selected",
+    "dimension_6_translation": "not_started",
+    "scientific_claim_upgrade": false
+  },
+  "operation_authority_now": {
+    "commit_push_and_CI_for_exact_live_implementation": true,
+    "repeat_generated_qualification": false,
+    "GitHub_API_or_official_index_network": false,
+    "candidate_parsing_ranking_or_selection": false,
+    "real_payload_header_signal_event_annotation_target_or_label": false,
+    "model_training_inference_prediction_or_score": false,
+    "release_or_scientific_claim_upgrade": false
+  },
+  "ordered_route": [
+    "commit_push_and_green_exact_FMSR1_R1_W_I1_live_executor",
+    "obtain_fresh_execution_bound_maintainer_words_after_exact_code_and_CI_exist",
+    "bind_exact_code_CI_repository_workflow_packet_CI_W0_and_words_in_execution_decision",
+    "commit_push_and_green_execution_decision",
+    "run_one_consumed_same_process_CI_gated_five_index_witness",
+    "commit_push_and_green_result_without_rerun",
+    "prepare_all_false_D1_packet_only_after_WITNESS_COMPLETE",
+    "run_one_discovery_only_after_separate_D1_decision",
+    "stage_one_candidate_source_to_frozen_score_work_order_if_exactly_one_source_qualifies"
+  ],
+  "claim_boundary": {
+    "source_identity_established": false,
+    "real_source_metadata_accessed": false,
+    "real_EEG_accessed": false,
+    "neural_advantage_established": false,
+    "EEG_beyond_joint_peripheral_and_task_controls_established": false,
+    "motor_cortex_or_movement_intention_established": false,
+    "unseen_person_generalization_established": false,
+    "thought_or_language_decoding_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_or_clinical_value_established": false
+  },
+  "next_gate": {
+    "action": "commit_push_and_green_exact_live_executor_then_obtain_fresh_execution_bound_words",
+    "fresh_maintainer_words_required_before_implementation_commit_and_CI": false,
+    "fresh_execution_bound_words_required_after_live_implementation_green": true,
+    "network_request_authorized_now": false,
+    "real_data_transaction_authorized": false,
+    "model_or_scoring_authorized": false,
+    "scientific_claim_upgrade_allowed": false
+  }
+}

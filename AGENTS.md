@@ -203,17 +203,30 @@ five-profile / 17-root / 34-page replays and 22 adversarial refusals in
 0.035018666880205274 seconds at 21,364,736-byte peak RSS. Network,
 candidate-semantic, neural, target, model, prediction, score, release, and
 claim operations were zero. It is consumed and must not be rerun. The exact
-implementation is pending its own commit and remote proof. Exact code and CI
-must then exist before fresh second maintainer
-words and an authority-bearing execution decision can authorize one consumed
+generated implementation is exact-green at
+`ea37358d8f34efd70f4e95c2a8452aa727f1b2bd`, Base Python `99394572164`,
+Optional Neuro Readers `99394572060`, and CI `33361847146` on GitHub `main`.
+The additive live implementation decision `FMSR1-R1-W-I1-D0` is exact-green at
+`0c50299dc5223ba0f2b1f337beded51038bffd4d`, Base Python `99401989268`,
+Optional Neuro Readers `99401989133`, and CI `33364407489` on GitHub `main`.
+The sole zero-network live-adapter qualification `FMSR1-R1-W-I1-Q0` then passed
+two matching five-profile / 17-root / 34-page replays, 76 generated transport
+calls, 16 refusals including six direct transport parks, and zero candidate
+semantic accesses in 0.1274927919730544 seconds at 40,583,168-byte peak RSS.
+Network, official-index, real-source, neural, target, model, prediction, score,
+release, and claim operations were zero. It is consumed and must not be rerun.
+Read the live implementation document, exact machine result, and frontier v25.
+The exact live implementation is pending this commit and both remote jobs.
+Exact code and CI must exist before fresh execution-bound maintainer words and
+an authority-bearing execution decision can authorize one consumed
 same-process CI-gated witness. The live gate is commit-scoped rather than
 self-referential: clean local `main`, remote `main`, the exact decision blob,
 two unique successful checks, and the frozen workflow blob must agree in three
 direct GitHub requests. A later `D1` still requires its own all-false packet,
-fresh words, authority decision, and remote proof. No live command or
-GitHub/official-index request is authorized now. Candidate metadata, transport
-canary, header, payload, model, score, release, and claim work remain closed.
-Do not treat generated or source-identity evidence as neural evidence.
+fresh words, authority decision, and remote proof. No GitHub or official-index
+request is authorized now. Candidate metadata, transport canary, header,
+payload, model, score, release, and claim work remain closed. Do not treat
+generated or source-identity evidence as neural evidence.
 
 ### Scientific execution directive
 
