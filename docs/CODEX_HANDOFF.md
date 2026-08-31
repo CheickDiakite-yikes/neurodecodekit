@@ -2,7 +2,7 @@
 
 > **Current scientific frontier, 2026-08-31:** read the Ofner result and proof
 > closeouts, the NPA1 implementation and proof closeout,
-> `registries/current_research_frontier.v23.json`,
+> `registries/current_research_frontier.v26.json`,
 > `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`, and the scientific knowledge
 > ledger first. Its immutable predecessor is
 > `registries/current_research_frontier.v21.json`; earlier predecessors are
@@ -78,7 +78,7 @@
 > passed Base `99367259645`, Optional `99367259785`, and CI `33352074929`.
 > Proof-only closeout `dbfaf68` passed Base `99369471021`, Optional
 > `99369470875`, and CI `33352882661` on GitHub `main` without a rerun. Read
-> the all-false `FMSR1-R1-W-v0` packet and frontier v21. It binds all five
+> the all-false `FMSR1-R1-W-v0` packet and frontier v26. It binds all five
 > official indexes to opaque complete-snapshot replay and all 17 exact roots in
 > a canonical page/root/profile/global hash tree.
 > The packet grants nothing: a first fresh decision may authorize generated
@@ -98,11 +98,22 @@
 > qualification with two identical five-profile / 17-root / 34-page replays,
 > 22 refusal observations, 0.035018666880205274 seconds runtime, and
 > 21,364,736-byte peak RSS. It performed zero network, candidate-semantic,
-> neural, target, model, prediction, score, release, or claim operations. Do
-> not rerun it. The implementation is pending this exact commit and remote
-> proof. Do not add a live command or contact GitHub or an official index until
-> fresh second execution-bound maintainer words and a separate exact-green
-> execution decision exist.
+> neural, target, model, prediction, score, release, or claim operations. Exact
+> generated implementation `ea37358` passed Base `99394572164`, Optional
+> `99394572060`, and CI `33361847146`. The additive live decision
+> `FMSR1-R1-W-I1-D0` is exact-green at `0c50299`, Base `99401989268`, Optional
+> `99401989133`, and CI `33364407489`. The sole zero-network live-adapter
+> qualification passed two matching five-profile / 17-root / 34-page replays,
+> 76 generated transport calls, 16 refusals including six direct transport
+> refusals, and zero candidate semantic accesses in 0.1274927919730544 seconds
+> at 40,583,168-byte peak RSS. It is consumed and must not be rerun. Exact live
+> implementation `a2af6c4` passed Base `99515316155`, Optional `99515315921`,
+> and CI `33400484765` on GitHub `main`. Read its proof-only closeout: it binds
+> 16 artifacts / 314,356 bytes and repeats no qualification or protected
+> operation. Require this closeout commit and both jobs green before accepting
+> fresh execution-bound maintainer words into a separate decision. No such
+> words or decision exist now. Do not contact GitHub through `CI-W0`, contact an
+> official index, or perform any real-data or model operation.
 > Preserve the unrelated tracker inspection file.
 
 > **Historical generated frontier, 2026-08-28:** read Amendment 3 and the FS3

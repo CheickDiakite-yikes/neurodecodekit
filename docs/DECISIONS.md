@@ -15127,3 +15127,16 @@ green; only then may the single generated qualification run.
   live witness. Keep `D1` behind its own later packet, fresh words, authority
   decision, and remote proof. This packet grants no network, source, neural,
   target, model, score, release, or claim authority.
+- 2026-08-31: Accept exact-green live source-witness implementation `a2af6c4`
+  as engineering evidence after Base Python `99515316155`, Optional Neuro
+  Readers `99515315921`, and CI `33400484765` passed on GitHub `main`. Preserve
+  failed predecessor `ec94683` as evidence of the shallow-checkout defect.
+  Permit one proof-only closeout binding the 15 implementation artifacts plus
+  their exact ledger, 16 artifacts / 314,356 bytes total. Do not repeat the
+  consumed qualification or invoke the live witness.
+- 2026-08-31: Require the proof-only closeout to become exact-green before
+  accepting fresh execution-bound maintainer words. Only then may a separate
+  decision bind those words to the exact implementation, artifact proof, CI,
+  repository, workflow, packet, and `CI-W0` contract. Until that later decision
+  is green, prohibit `CI-W0`, official-index contact, candidate handling, real
+  EEG, model, prediction, score, release, or scientific-claim operations.

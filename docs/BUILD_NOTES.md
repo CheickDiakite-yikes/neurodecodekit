@@ -16728,3 +16728,21 @@ and require both remote jobs green before the one official qualification.
   implementation and live-execution decisions, and a separate later D1
   authority barrier. The packet performs zero network or protected operation
   and grants no authority.
+- 2026-08-31: Generated witness implementation `ea37358` passed Base Python
+  `99394572164`, Optional Neuro Readers `99394572060`, and CI `33361847146` on
+  GitHub `main`. Additive live-adapter decision `0c50299` then passed Base
+  `99401989268`, Optional `99401989133`, and CI `33364407489`. The sole
+  zero-network qualification consumed and passed with two matching
+  five-profile / 17-root / 34-page replays, 76 generated transport calls, 16
+  refusals including six direct transport refusals, zero candidate semantic
+  accesses, 0.1274927919730544 seconds runtime, and 40,583,168-byte peak RSS.
+  It made zero network or protected operations and cannot be rerun.
+- 2026-08-31: Initial live implementation `ec94683` failed both clean CI jobs
+  because one decision loader depended on historical `git show` in a shallow
+  checkout. Repair `a2af6c4` removed only that history-depth dependency and
+  retained exact no-follow local bytes, SHA-256, Git-blob, and semantic
+  validation. Base `99515316155`, Optional `99515315921`, and CI `33400484765`
+  passed on GitHub `main`. Added a proof-only closeout binding 16 exact
+  artifacts / 314,356 bytes. No qualification, live witness, official-index,
+  candidate, EEG, target, model, prediction, score, release, or claim operation
+  was performed.

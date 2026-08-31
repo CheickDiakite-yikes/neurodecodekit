@@ -1,0 +1,87 @@
+{
+  "schema_name": "neurodecodekit.current_research_frontier",
+  "schema_version": "0.27.0",
+  "recorded_at": "2026-08-31",
+  "supersedes": "registries/current_research_frontier.v25.json",
+  "superseded_registry_sha256": "b60dcc9b5db8b601963e72549f3c62922b25beaa9d1776d332d8ca242d468d23",
+  "status": "FMSR1_R1_W_I1_exact_green_proof_only_closeout_pending_this_commit_and_remote_proof",
+  "active_lane_id": "FMSR1-R1-W-I1-P0",
+  "active_Tier_C_packet": "FMSR1-R1-W-v0",
+  "scientific_lane": "fresh_unseen_person_motor_task_EEG_beyond_joint_EOG_EMG_posterior_cue_timing_and_derangement",
+  "green_live_implementation": {
+    "implementation_id": "FMSR1-R1-W-I1",
+    "qualification_id": "FMSR1-R1-W-I1-Q0",
+    "commit": "a2af6c4c016a81652b3c1bae13d8c8e5e56ef4e9",
+    "CI_run_id": 33400484765,
+    "base_python_job_id": 99515316155,
+    "optional_neuro_readers_job_id": 99515315921,
+    "both_required_jobs_green": true,
+    "on_GitHub_main": true,
+    "qualification_passed": true,
+    "qualification_consumed": true,
+    "qualification_replay_allowed": false,
+    "candidate_semantic_accesses": 0,
+    "network_requests_during_qualification": 0,
+    "real_source_access": false
+  },
+  "implementation_proof_closeout": {
+    "proof_id": "FMSR1-R1-W-I1-P0",
+    "human_path": "docs/FRESH_MOTOR_SOURCE_IDENTITY_WITNESS_LIVE_IMPLEMENTATION_PROOF_CLOSEOUT.md",
+    "machine_path": "registries/fresh_motor_source_identity_witness_live_implementation_proof.v0.json",
+    "bound_artifact_count": 16,
+    "bound_artifact_bytes": 314356,
+    "status": "pending_this_closeout_commit_and_both_remote_jobs"
+  },
+  "current_evidence_coordinate": {
+    "dimension_1_spatial": "not_tested_on_a_fresh_admitted_source",
+    "dimension_2_temporal": "not_tested_on_a_fresh_admitted_source",
+    "dimension_3_physiological": "not_tested_on_a_fresh_admitted_source",
+    "dimension_4_task_autonomy": "source_not_selected",
+    "dimension_5_population_generalization": "source_not_selected",
+    "dimension_6_translation": "not_started",
+    "scientific_claim_upgrade": false
+  },
+  "operation_authority_now": {
+    "commit_push_and_CI_for_this_proof_only_closeout": true,
+    "repeat_generated_qualification": false,
+    "fresh_execution_bound_maintainer_words_present": false,
+    "create_execution_decision_now": false,
+    "GitHub_CI_W0_or_official_index_network": false,
+    "live_source_identity_witness": false,
+    "candidate_parsing_ranking_or_selection": false,
+    "real_payload_header_signal_event_annotation_target_or_label": false,
+    "model_training_inference_prediction_or_score": false,
+    "release_or_scientific_claim_upgrade": false
+  },
+  "ordered_route": [
+    "commit_push_and_green_FMSR1_R1_W_I1_P0_proof_only_closeout",
+    "obtain_fresh_execution_bound_maintainer_words_after_exact_proof_is_green",
+    "bind_exact_code_artifacts_CI_repository_workflow_packet_CI_W0_and_words_in_execution_decision",
+    "commit_push_and_green_execution_decision",
+    "run_one_consumed_same_process_CI_gated_five_index_witness",
+    "commit_push_and_green_result_without_rerun",
+    "prepare_all_false_D1_packet_only_after_WITNESS_COMPLETE",
+    "run_one_discovery_only_after_separate_D1_decision",
+    "stage_one_candidate_source_to_frozen_score_work_order_if_exactly_one_source_qualifies"
+  ],
+  "claim_boundary": {
+    "source_identity_established": false,
+    "real_source_metadata_accessed": false,
+    "real_EEG_accessed": false,
+    "neural_advantage_established": false,
+    "EEG_beyond_joint_peripheral_and_task_controls_established": false,
+    "motor_cortex_or_movement_intention_established": false,
+    "unseen_person_generalization_established": false,
+    "thought_or_language_decoding_established": false,
+    "causal_live_decoding_established": false,
+    "hardware_or_clinical_value_established": false
+  },
+  "next_gate": {
+    "action": "commit_push_and_green_proof_only_closeout_then_obtain_fresh_execution_bound_words",
+    "fresh_execution_bound_words_required_after_proof_green": true,
+    "network_request_authorized_now": false,
+    "real_data_transaction_authorized": false,
+    "model_or_scoring_authorized": false,
+    "scientific_claim_upgrade_allowed": false
+  }
+}

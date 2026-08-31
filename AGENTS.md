@@ -215,18 +215,24 @@ calls, 16 refusals including six direct transport parks, and zero candidate
 semantic accesses in 0.1274927919730544 seconds at 40,583,168-byte peak RSS.
 Network, official-index, real-source, neural, target, model, prediction, score,
 release, and claim operations were zero. It is consumed and must not be rerun.
-Read the live implementation document, exact machine result, and frontier v25.
-The exact live implementation is pending this commit and both remote jobs.
-Exact code and CI must exist before fresh execution-bound maintainer words and
-an authority-bearing execution decision can authorize one consumed
-same-process CI-gated witness. The live gate is commit-scoped rather than
-self-referential: clean local `main`, remote `main`, the exact decision blob,
-two unique successful checks, and the frozen workflow blob must agree in three
-direct GitHub requests. A later `D1` still requires its own all-false packet,
-fresh words, authority decision, and remote proof. No GitHub or official-index
-request is authorized now. Candidate metadata, transport canary, header,
-payload, model, score, release, and claim work remain closed. Do not treat
-generated or source-identity evidence as neural evidence.
+The exact live implementation is remotely green at
+`a2af6c4c016a81652b3c1bae13d8c8e5e56ef4e9`, Base Python `99515316155`,
+Optional Neuro Readers `99515315921`, and CI `33400484765` on GitHub `main`.
+Its predecessor correctly failed shallow CI; the repair removed only a
+historical `git show` dependency while preserving exact local byte, hash, blob,
+and semantic decision validation. Read the live implementation proof-only
+closeout and frontier v26 next. They bind 16 exact artifacts / 314,356 bytes
+and repeat no qualification or protected operation. The closeout must itself
+become remotely green before fresh execution-bound maintainer words can be
+accepted into a separate authority-bearing execution decision. The live gate
+is commit-scoped rather than self-referential: clean local `main`, remote
+`main`, the exact decision blob, two unique successful checks, and the frozen
+workflow blob must agree in three direct GitHub requests. No such words or
+execution decision exist now. A later `D1` still requires its own all-false
+packet, fresh words, authority decision, and remote proof. No GitHub `CI-W0`
+or official-index request is authorized now. Candidate metadata, transport
+canary, header, payload, model, score, release, and claim work remain closed.
+Do not treat generated or source-identity evidence as neural evidence.
 
 ### Scientific execution directive
 

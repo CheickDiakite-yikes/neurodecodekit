@@ -159,14 +159,25 @@ Readers `99385124488`, and CI `33358495852`. The resulting
 passed one consumed qualification with two identical five-profile, 17-root,
 34-page replays and 22 adversarial refusals in 0.035018666880205274 seconds at
 21,364,736-byte peak RSS. It made zero network, candidate-semantic, neural,
-target, model, prediction, score, or claim operations and is pending this exact
-commit and remote proof. After exact code and CI exist, fresh second maintainer
-words and a second authority-bearing decision are required for one consumed
-live witness. Its three-call CI gate compares clean local
-`main` with remote `main`, the two unique successful checks on that exact
-commit, and the frozen workflow blob without a self-referential future commit.
-`D1` remains behind its own later packet, fresh words, decision, and green
-proof.
+target, model, prediction, score, or claim operations. Exact implementation
+`ea37358` passed Base `99394572164`, Optional `99394572060`, and CI
+`33361847146`. The additive live-adapter decision is exact-green at `0c50299`,
+Base `99401989268`, Optional `99401989133`, and CI `33364407489`. Its sole
+zero-network generated qualification is consumed and passed: two matching
+five-profile / 17-root / 34-page replays, 76 generated transport calls, 16
+refusals including six direct transport refusals, zero candidate semantic
+accesses, 0.1274927919730544 seconds runtime, and 40,583,168-byte peak RSS.
+The exact [live implementation](docs/FRESH_MOTOR_SOURCE_IDENTITY_WITNESS_LIVE_IMPLEMENTATION.md)
+is remotely green at `a2af6c4`, Base `99515316155`, Optional `99515315921`,
+and CI `33400484765`. Its
+[proof-only closeout](docs/FRESH_MOTOR_SOURCE_IDENTITY_WITNESS_LIVE_IMPLEMENTATION_PROOF_CLOSEOUT.md)
+binds 16 artifacts / 314,356 bytes and is pending its own commit and remote
+proof. After that proof is green, fresh maintainer words and a separate
+authority-bearing decision are required for one consumed live witness. Its
+three-call CI gate compares clean local `main` with remote `main`, the two
+unique successful checks on that exact commit, and the frozen workflow blob.
+No official index or EEG has been accessed. `D1` remains behind its own later
+packet, fresh words, decision, and green proof.
 The [hard scientific decision tree](docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md)
 then routes one admitted source through sensitivity, confirmation,
 independent replication, and only afterward causal/live translation. Its core
@@ -182,8 +193,11 @@ physiological edge rather than merely average well. Engineering may close only
 the final immediate dependency of this experiment; the next substantive block
 must produce real-data evidence or a measured blocker. See the
 [additive evidence-map clarification](docs/FRESH_MOTOR_SOURCE_RESEARCH_EVIDENCE_MAP_CLARIFICATION.md)
-and [current machine frontier](registries/current_research_frontier.v23.json).
-Its immutable predecessor is `registries/current_research_frontier.v21.json`;
+and [current machine frontier](registries/current_research_frontier.v26.json).
+Its immutable predecessor is `registries/current_research_frontier.v25.json`;
+earlier predecessors are `registries/current_research_frontier.v24.json`,
+`registries/current_research_frontier.v23.json`, and
+`registries/current_research_frontier.v21.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v20.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v19.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v18.json`;
@@ -235,16 +249,15 @@ is artifact-only transport/source research, not another execution.
 ## Current Research Frontier
 
 The latest irreversible result is the consumed Ofner range-header transport H0.
-The latest reversible results are green generated-only `NPA1-G` transport
-admission, exact-green `FMSR1-v1`, exact-green discovery decision
-`FMSR1-DISCOVERY-M0-D0`, exact-green generated implementation
-`FMSR1-DISCOVERY-M0-G1`, exact-green proof closeout `fac60bf`, exact-green A1
-correction `8fe98df`, and exact-green R1-G registration `d53f3e8`. The first
-R1-G implementation `c3f536d` is retained as green-but-rejected history after
-post-green durability review. Its local additive `I1` successor is the current
-reversible gate and requires a fresh exact commit plus both remote CI jobs
-before activation. No network or real operation is active, and the official
-generated qualification has not run.
+The latest reversible result is exact-green live source-witness implementation
+`a2af6c4`, Base `99515316155`, Optional `99515315921`, and CI `33400484765`.
+Its sole zero-network generated qualification is consumed; no rerun is open.
+The current proof-only closeout binds 16 exact artifacts / 314,356 bytes and
+must pass both remote jobs before fresh execution-bound maintainer words may be
+accepted. No live witness, official-index request, candidate selection, real
+EEG access, model run, score, or scientific claim is active. The latest
+irreversible scientific result remains the consumed Ofner range-header
+transport H0, which is a transport refusal rather than a biological null.
 The following COMM-P0-G material is retained as exact
 adjacent-engineering history and is paused. Its proof architecture has a prospective, resource-aware
 successor: Amendment 3 replaces the second redundant full

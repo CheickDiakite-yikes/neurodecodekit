@@ -34,7 +34,7 @@
 > `99367259785`, and CI `33352074929`. Proof-only closeout `dbfaf68` passed
 > Base `99369471021`, Optional `99369470875`, and CI `33352882661` without a
 > rerun. No scientific claim changed. Read
-> `registries/current_research_frontier.v23.json`, the measured result, the
+> `registries/current_research_frontier.v26.json`, the measured result, the
 > proof-only closeout, and the all-false `FMSR1-R1-W-v0` packet first. The
 > packet binds five opaque snapshot profiles and 17 exact roots but grants no
 > authority. Its canonical page/root/profile/global hash tree and typed
@@ -49,8 +49,20 @@
 > `FMSR1-R1-W-I0` passed its sole consumed qualification with two identical
 > five-profile / 17-root / 34-page replays and 22 refusals in
 > 0.035018666880205274 seconds at 21,364,736-byte peak RSS, with zero network
-> or scientific operations. It is pending this exact commit and remote proof.
-> `D1` remains separately packeted and unauthorized.
+> or scientific operations. Exact implementation `ea37358` passed Base
+> `99394572164`, Optional `99394572060`, and CI `33361847146`. Additive live
+> decision `FMSR1-R1-W-I1-D0` is exact-green at `0c50299`, Base `99401989268`,
+> Optional `99401989133`, and CI `33364407489`. The sole zero-network live-
+> adapter qualification then passed two matching five-profile / 17-root /
+> 34-page replays, 76 generated transport calls, 16 refusals including six
+> direct transport refusals, and zero candidate semantic accesses in
+> 0.1274927919730544 seconds at 40,583,168-byte peak RSS. It is consumed and
+> cannot be rerun. Exact live implementation `a2af6c4` passed Base
+> `99515316155`, Optional `99515315921`, and CI `33400484765`. Its proof-only
+> closeout binds 16 artifacts / 314,356 bytes and is pending this commit and
+> both remote jobs. No fresh execution-bound words exist yet. No official
+> index, candidate, EEG, model, prediction, score, or claim operation is
+> authorized. `D1` remains separately packeted and unauthorized.
 
 > **COMM-P0-G FS3 prospective successor (2026-08-28):** exact Amendment 3
 > `b15d3cf` passed Base `98860211722`, Optional Neuro Readers `98860211949`,
