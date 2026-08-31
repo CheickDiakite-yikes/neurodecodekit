@@ -1,0 +1,173 @@
+{
+  "analysis_class": "retrospective_evidence_synthesis_not_preregistered_confirmation",
+  "analysis_code": {
+    "bytes": 14652,
+    "path": "src/neurodecodekit/evaluation/public_motor_cross_cohort_synthesis.py",
+    "sha256": "9b4c3694586764585b7b1f88652fe2fe9ecd3264f3bb45a476c94649df70d223"
+  },
+  "cohort_independence": {
+    "BNCI_NEMAR_dataset_id": "nm000139",
+    "BNCI_NEMAR_version": "v1.0.2",
+    "BNCI_biological_person_overlap_with_EEGMMIDB_known": false,
+    "BNCI_is_distinct_dataset": true,
+    "BNCI_official_dataset_id": "BNCI_001_2014",
+    "EEGMMIDB_confirmation_participants": [
+      "S004",
+      "S005",
+      "S006",
+      "S007",
+      "S008",
+      "S009",
+      "S010",
+      "S011",
+      "S012",
+      "S013",
+      "S014",
+      "S015"
+    ],
+    "EEGMMIDB_dataset_id": "eegmmidb",
+    "EEGMMIDB_participant_disjoint_recordings": true,
+    "EEGMMIDB_participant_overlap": [],
+    "EEGMMIDB_pilot_participants": [
+      "S001",
+      "S002",
+      "S003"
+    ],
+    "EEGMMIDB_version": "1.0.0",
+    "independent_team_replication": false,
+    "method_selection_independent_of_pilot_outcome": false
+  },
+  "cross_cohort_spatial_control_convergence": {
+    "cohort_participant_records": 24,
+    "cohorts": [
+      {
+        "candidate_id": "central_sensorimotor_channel_model",
+        "candidate_macro_balanced_accuracy": 0.5208333333333334,
+        "candidate_minus_control_macro_balanced_accuracy": -0.09226190476190477,
+        "cohort": "EEGMMIDB_S001_S003_WO9",
+        "control_macro_balanced_accuracy": 0.6130952380952381,
+        "participants": 3,
+        "strongest_spatial_control": "frontal_occipital_proxy"
+      },
+      {
+        "candidate_id": "execution_central_sensorimotor",
+        "candidate_macro_balanced_accuracy": 0.6495535714285714,
+        "candidate_minus_control_macro_balanced_accuracy": -0.02157738095238082,
+        "cohort": "EEGMMIDB_S004_S015_WO9R",
+        "control_macro_balanced_accuracy": 0.6711309523809522,
+        "participants": 12,
+        "strongest_spatial_control": "frontal_proxy"
+      },
+      {
+        "candidate_id": "selected_E",
+        "candidate_macro_balanced_accuracy": 0.38348765432098764,
+        "candidate_minus_control_macro_balanced_accuracy": -0.008873456790123468,
+        "cohort": "BNCI_2014_001_STAGE_T",
+        "control_macro_balanced_accuracy": 0.3923611111111111,
+        "participants": 9,
+        "registered_contrast": "C3_macro_control_margin",
+        "strongest_spatial_control": "posterior_EEG"
+      }
+    ],
+    "cohorts_with_negative_candidate_minus_control_margin": 3,
+    "equal_cohort_weight_descriptive_margin": -0.04090424750146968,
+    "formal_pooled_effect_valid": false,
+    "nominal_all_negative_probability_under_independent_fair_signs": 0.125,
+    "participant_count_weighted_descriptive_margin": -0.02564897486772481,
+    "reason": "tasks, feature definitions, and spatial controls differ across cohorts, the strongest-control operation favors negative margins, and participant-level paired margins are not public",
+    "sign_test_valid": false
+  },
+  "operation_counters": {
+    "model_fits": 0,
+    "network_requests": 0,
+    "prediction_sets": 0,
+    "private_or_ignored_reads": 0,
+    "raw_neural_payload_reads": 0,
+    "scores": 0,
+    "target_deliveries": 0,
+    "tracked_public_JSON_bytes_read": 114392,
+    "tracked_public_JSON_content_open_events": 6,
+    "tracked_public_JSON_files_read": 6,
+    "tracked_public_contract_or_identity_JSON_bytes_read": 90790,
+    "tracked_public_contract_or_identity_JSON_files_read": 3,
+    "tracked_public_result_JSON_bytes_read": 23602,
+    "tracked_public_result_JSON_files_read": 3
+  },
+  "peripheral_attribution": {
+    "BNCI_EOG_delta_sign_flip_p": 0.291015625,
+    "BNCI_EOG_plus_EEG_log_loss_gain": 0.025523996696223097,
+    "BNCI_EOG_plus_deranged_EEG_log_loss_gain": 0.018430851535548427,
+    "BNCI_deranged_delta_sign_flip_p": 0.322265625,
+    "cohorts_with_recorded_EOG": 1,
+    "cohorts_with_recorded_task_relevant_EMG": 0,
+    "joint_EOG_EMG_attribution_tested": false
+  },
+  "recorded_at": "2026-08-31",
+  "replicated_low_frequency_task_information": {
+    "Fisher_value_is_confirmatory": false,
+    "cohorts": 2,
+    "confirmation_participant_sign_flip_p": 0.0029296875,
+    "confirmatory_p_value": 0.0029296875,
+    "correct_events": 159,
+    "descriptive_event_accuracy": 0.7066666666666667,
+    "held_out_execution_events": 225,
+    "participant_count_weighted_mean_macro_balanced_accuracy": 0.705952380952381,
+    "participants": 15,
+    "pilot_within_participant_label_permutation_p": 0.00018310546875,
+    "reason": "the low-frequency family was promoted after the pilot outcome; the two p-values also use different null randomizations; only the disjoint S004-S015 result is prospective confirmation",
+    "retrospective_Fisher_nominal_p": 8.28175364762081e-06,
+    "retrospective_Fisher_statistic": 28.876615512204935
+  },
+  "result_id": "PUBLIC-MOTOR-SYNTHESIS-v0",
+  "schema_name": "neurodecodekit.public_motor_cross_cohort_synthesis_result",
+  "schema_version": "0.1.0",
+  "scientific_conclusion": {
+    "active_FMSR1_conjunction_established": false,
+    "brain_specific_motor_signal_established": false,
+    "clinical_claim_established": false,
+    "convergent_negative_result": "No examined registered candidate contrast outperformed its strongest available spatial control across the three cohort phases.",
+    "language_or_thought_decoding_established": false,
+    "supported": "A fixed low-frequency EEG representation prospectively replicated held-out-run left-right task information in 12 fresh participants after a three-participant discovery cohort.",
+    "why_not": "No cohort jointly measured and tested EOG plus all relevant-effector EMG with the complete frozen spatial, timing, shift, and derangement arms."
+  },
+  "source_identities": {
+    "bnci_research": {
+      "bytes": 9016,
+      "path": "registries/bnci_2014_001_cross_participant_eeg_gain_research.v0.json",
+      "sha256": "5a333709dbbf8c2e30f33c9f47240d8830d34b78ac9eda5ae22ede68a751ded2"
+    },
+    "bnci_result": {
+      "bytes": 4951,
+      "path": "registries/bnci_2014_001_stage_t_result.v0.json",
+      "sha256": "e836cefb9daf9df090f6f74a12ad90ae6448156d73850414fcca3367e81da9b2"
+    },
+    "wo9_contract": {
+      "bytes": 18604,
+      "path": "registries/physionet_motor_positive_control_contract.v0.json",
+      "sha256": "4f00f8e2cb257e912a947b49268c1476554f3e671eb9322926592df4908b144e"
+    },
+    "wo9_result": {
+      "bytes": 10443,
+      "path": "registries/physionet_motor_positive_control_result.v0.json",
+      "sha256": "017c62162774b5cd32a635f58bb4c503f903a8e901cb2b696efa0890a1040579"
+    },
+    "wo9r_contract": {
+      "bytes": 63170,
+      "path": "registries/physionet_low_frequency_cohort_confirmation_contract.v0.json",
+      "sha256": "ce0dcf5e5ddd598fb69b5baa73f827bbc3f51c4aeab8578d2d2eebda87cd0935"
+    },
+    "wo9r_result": {
+      "bytes": 8208,
+      "path": "registries/physionet_low_frequency_cohort_confirmation_result.v0.json",
+      "sha256": "d6cda8b4ce5f6da7add4a78ac8b1e74587cd8ab8eacf0dce8b806c076e85699a"
+    }
+  },
+  "status": "completed_retrospective_public_aggregate_scientific_synthesis",
+  "warnings": [
+    "aggregate_only_synthesis_does_not_reopen_or_rescore_consumed_experiments",
+    "retrospective_Fisher_combination_is_descriptive_not_confirmatory",
+    "three_cohort_sign_probability_is_nominal_not_a_valid_inferential_p_value",
+    "cross_cohort_spatial_effect_pooling_is_not_valid_without_harmonized_methods",
+    "task_information_is_not_neural_source_attribution"
+  ]
+}
