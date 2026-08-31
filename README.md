@@ -129,13 +129,16 @@ at `c3f536d` passed Base `99347978123`, Optional `99347978190`, and CI
 `33345237136`, but a later independent durability review rejected activation:
 the marker and attempt directory were fsynced while their newly created
 directory ancestry was not, and pre-arm refusal had been described too broadly
-as attempt consumption. A local additive `I1` successor now fsyncs the
-repository root, work root, and attempt root, binds no-follow directory
-identities, and distinguishes pre-arm refusal, a pending reservation, and a
-durably armed consumed attempt.
-It requires a fresh exact commit and two-job remote proof before activation.
-The official qualification has not run, its activation and official root
-remain absent, and it authorizes no GitHub or source contact.
+as attempt consumption. Corrected successor `I1` reached GitHub `main` at
+`d9229c1`, with Base `99358753480`, Optional `99358753302`, and CI
+`33349080445` green. Activation `3de14c3` then passed Base `99361845630`,
+Optional `99361845491`, and CI `33350175624` before the sole generated
+qualification. That one-shot run is now consumed and passed: two identical
+five-profile replays, all 82 refusals across 13 routes,
+0.022029167041182518 seconds runtime, 21,397,504-byte peak RSS, 636 temporary
+bytes, and zero network, real-source, neural, target, model, prediction, score,
+release, or claim operations. It cannot be rerun. Read the
+[measured result](docs/FRESH_MOTOR_SOURCE_ADMISSION_GENERATED_QUALIFICATION_RESULT.md).
 The [hard scientific decision tree](docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md)
 then routes one admitted source through sensitivity, confirmation,
 independent replication, and only afterward causal/live translation. Its core
@@ -151,8 +154,9 @@ physiological edge rather than merely average well. Engineering may close only
 the final immediate dependency of this experiment; the next substantive block
 must produce real-data evidence or a measured blocker. See the
 [additive evidence-map clarification](docs/FRESH_MOTOR_SOURCE_RESEARCH_EVIDENCE_MAP_CLARIFICATION.md)
-and [current machine frontier](registries/current_research_frontier.v18.json).
-Its immutable predecessor is `registries/current_research_frontier.v17.json`;
+and [current machine frontier](registries/current_research_frontier.v19.json).
+Its immutable predecessor is `registries/current_research_frontier.v18.json`;
+the earlier immutable predecessor is `registries/current_research_frontier.v17.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v16.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v15.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v14.json`;
@@ -756,12 +760,12 @@ score or claim upgrade occurred. Repeated convergence warnings at the frozen
 80-iteration cap were recorded without changing or rerunning the models.
 
 The machine-readable current state is
-[`registries/current_research_frontier.v18.json`](registries/current_research_frontier.v18.json).
+[`registries/current_research_frontier.v19.json`](registries/current_research_frontier.v19.json).
 It freezes the consumed Ofner lane, green generated NPA1 proof, rejected v0
 draft, exact-green `FMSR1-v1`, discovery decision, and generated implementation,
 the green proof-only closeout, exact-green all-false A1 correction, exact-green
-R1-G registration, rejected green I0 implementation, corrected local I1
-successor, claim boundary, and exact next transition so
+R1-G registration, rejected green I0 implementation, corrected exact-green I1,
+green activation, consumed generated result, claim boundary, and exact next transition so
 handoffs cannot silently return to an older gate.
 Prediction
 freeze `2517fd1` passed Base job `97996323987`, Optional job `97996324203`, and

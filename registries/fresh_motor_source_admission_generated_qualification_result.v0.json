@@ -1,0 +1,582 @@
+{
+  "claim_boundary": {
+    "engineering_capability_added": "A dependency-free generated validator separates revision, snapshot, attempt-specific CI, and consumed-marker evidence from malformed or ambiguous counterexamples without exposing live transport.",
+    "scientific_claim_not_established": "Generated fixtures contain no human neural measurements, targets, predictions, or scores and establish no source authenticity, neural advantage, intention decoding, unseen-person generalization, language decoding, or live operation."
+  },
+  "green_registration": {
+    "CI_run_id": 33341954248,
+    "base_python_job_id": 99339083749,
+    "both_required_jobs_green": true,
+    "commit": "d53f3e8870b1f3ae6f014411c9932f20474b8092",
+    "optional_neuro_readers_job_id": 99339083636
+  },
+  "measurements": {
+    "CPU_threads": 1,
+    "absolute_peak_RSS_bytes": 21397504,
+    "accepted_response_envelopes": 4,
+    "end_to_end_latency_measured": false,
+    "generated_input_bytes": 614976,
+    "generated_output_bytes": 13264,
+    "marker_creates": 3,
+    "marker_directory_fsyncs": 5,
+    "marker_file_fsyncs": 3,
+    "numerical_jobs": 1,
+    "producer_is_causal": null,
+    "runtime_seconds": 0.022029167041182518,
+    "temporary_generated_bytes": 636,
+    "temporary_generated_file_count": 7,
+    "workers": 1
+  },
+  "operation_counters": {
+    "DNS_calls": 0,
+    "HTTP_calls": 0,
+    "TLS_calls": 0,
+    "candidate_metadata_reads": 0,
+    "credential_reads": 0,
+    "default_opener_calls": 0,
+    "model_runs": 0,
+    "operations_on_other_projects": 0,
+    "payload_or_header_reads": 0,
+    "prediction_sets": 0,
+    "provider_calls": 0,
+    "real_or_captured_response_bytes": 0,
+    "real_source_reads": 0,
+    "release_operations": 0,
+    "scientific_claim_upgrades": 0,
+    "scores": 0,
+    "signal_event_annotation_target_or_label_reads": 0,
+    "socket_calls": 0,
+    "stream_device_or_hardware_runs": 0,
+    "training_runs": 0
+  },
+  "protocol_id": "FMSR1-R1-G-v0",
+  "qualification": {
+    "CI_responses_per_replay": 2,
+    "all_refusals_passed": true,
+    "deterministic_replays": 2,
+    "distinct_refusal_routes": 13,
+    "global_revision_count_per_replay": 2,
+    "legal_ordering_sequences_per_replay": 1,
+    "profile_count_per_replay": 5,
+    "refusal_case_count": 82,
+    "refusals": [
+      {
+        "expected_route": "AUTHORITY_REFUSE",
+        "mutation": "contract_digest_drift",
+        "observed_route": "AUTHORITY_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "AUTHORITY_REFUSE",
+        "mutation": "unregistered_stage",
+        "observed_route": "AUTHORITY_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "AUTHORITY_REFUSE",
+        "mutation": "saved_receipt_as_authority",
+        "observed_route": "AUTHORITY_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "AUTHORITY_REFUSE",
+        "mutation": "incomplete_live_profile",
+        "observed_route": "AUTHORITY_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "AUTHORITY_REFUSE",
+        "mutation": "captured_real_response_fixture",
+        "observed_route": "AUTHORITY_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "ORDER_REFUSE",
+        "mutation": "network_before_marker",
+        "observed_route": "ORDER_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "ORDER_REFUSE",
+        "mutation": "existing_consumed_marker",
+        "observed_route": "ORDER_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "ORDER_REFUSE",
+        "mutation": "marker_after_CI",
+        "observed_route": "ORDER_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "ORDER_REFUSE",
+        "mutation": "CI_W0_reused_as_CI_W1",
+        "observed_route": "ORDER_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "ORDER_REFUSE",
+        "mutation": "process_resume_from_receipt",
+        "observed_route": "ORDER_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "ORDER_REFUSE",
+        "mutation": "mutable_receipt_handoff",
+        "observed_route": "ORDER_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "ORDER_REFUSE",
+        "mutation": "source_contact_before_CI",
+        "observed_route": "ORDER_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "ORDER_REFUSE",
+        "mutation": "post_CI_process_exit_resume",
+        "observed_route": "ORDER_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "ENCODING_REFUSE",
+        "mutation": "invalid_UTF8",
+        "observed_route": "ENCODING_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "ENCODING_REFUSE",
+        "mutation": "UTF8_BOM",
+        "observed_route": "ENCODING_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "ENCODING_REFUSE",
+        "mutation": "NUL_byte",
+        "observed_route": "ENCODING_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "ENCODING_REFUSE",
+        "mutation": "trailing_JSON",
+        "observed_route": "ENCODING_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "ENCODING_REFUSE",
+        "mutation": "nonfinite_number",
+        "observed_route": "ENCODING_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "ENCODING_REFUSE",
+        "mutation": "depth_or_container_cap",
+        "observed_route": "ENCODING_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "DUPLICATE_REFUSE",
+        "mutation": "duplicate_root_key",
+        "observed_route": "DUPLICATE_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "DUPLICATE_REFUSE",
+        "mutation": "duplicate_nested_key",
+        "observed_route": "DUPLICATE_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "DUPLICATE_REFUSE",
+        "mutation": "duplicate_index_id",
+        "observed_route": "DUPLICATE_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "DUPLICATE_REFUSE",
+        "mutation": "duplicate_job_id",
+        "observed_route": "DUPLICATE_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "DUPLICATE_REFUSE",
+        "mutation": "duplicate_singleton_header",
+        "observed_route": "DUPLICATE_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "SCHEMA_REFUSE",
+        "mutation": "unknown_authority_field",
+        "observed_route": "SCHEMA_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "SCHEMA_REFUSE",
+        "mutation": "missing_required_field",
+        "observed_route": "SCHEMA_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "SCHEMA_REFUSE",
+        "mutation": "boolean_numeric_identity",
+        "observed_route": "SCHEMA_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "SCHEMA_REFUSE",
+        "mutation": "float_numeric_identity",
+        "observed_route": "SCHEMA_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "SCHEMA_REFUSE",
+        "mutation": "confusable_enum_or_job_name",
+        "observed_route": "SCHEMA_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "SCHEMA_REFUSE",
+        "mutation": "mixed_mode_payload",
+        "observed_route": "SCHEMA_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "IDENTITY_REFUSE",
+        "mutation": "wrong_index_or_issuer",
+        "observed_route": "IDENTITY_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "IDENTITY_REFUSE",
+        "mutation": "wrong_request_profile_hash",
+        "observed_route": "IDENTITY_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "IDENTITY_REFUSE",
+        "mutation": "cross_source_evidence",
+        "observed_route": "IDENTITY_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "IDENTITY_REFUSE",
+        "mutation": "ledger_identity_drift",
+        "observed_route": "IDENTITY_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "REVISION_REFUSE",
+        "mutation": "weak_ETag_surrogate",
+        "observed_route": "REVISION_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "REVISION_REFUSE",
+        "mutation": "Last_Modified_surrogate",
+        "observed_route": "REVISION_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "REVISION_REFUSE",
+        "mutation": "body_hash_or_schema_surrogate",
+        "observed_route": "REVISION_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "REVISION_REFUSE",
+        "mutation": "partial_scope",
+        "observed_route": "REVISION_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "REVISION_REFUSE",
+        "mutation": "pre_post_revision_drift",
+        "observed_route": "REVISION_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "SNAPSHOT_REFUSE",
+        "mutation": "snapshot_page_gap",
+        "observed_route": "SNAPSHOT_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "SNAPSHOT_REFUSE",
+        "mutation": "snapshot_cycle_or_fork",
+        "observed_route": "SNAPSHOT_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "SNAPSHOT_REFUSE",
+        "mutation": "snapshot_reordered_body_hash",
+        "observed_route": "SNAPSHOT_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "SNAPSHOT_REFUSE",
+        "mutation": "snapshot_redirect_omission",
+        "observed_route": "SNAPSHOT_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "SNAPSHOT_REFUSE",
+        "mutation": "snapshot_pagination_conflict",
+        "observed_route": "SNAPSHOT_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "SNAPSHOT_REFUSE",
+        "mutation": "snapshot_early_terminal",
+        "observed_route": "SNAPSHOT_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "SNAPSHOT_REFUSE",
+        "mutation": "snapshot_terminal_with_next",
+        "observed_route": "SNAPSHOT_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "TRANSPORT_REFUSE",
+        "mutation": "proxy_or_custom_CA_environment",
+        "observed_route": "TRANSPORT_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "TRANSPORT_REFUSE",
+        "mutation": "custom_SSL_context_or_system_proxy",
+        "observed_route": "TRANSPORT_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "TRANSPORT_REFUSE",
+        "mutation": "redirect_or_alternate_host_port",
+        "observed_route": "TRANSPORT_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "TRANSPORT_REFUSE",
+        "mutation": "credential_cookie_or_conditional_request",
+        "observed_route": "TRANSPORT_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "TRANSPORT_REFUSE",
+        "mutation": "nonglobal_or_postconnect_peer",
+        "observed_route": "TRANSPORT_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "TRANSPORT_REFUSE",
+        "mutation": "cache_or_content_encoding",
+        "observed_route": "TRANSPORT_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "CI_RUN_REFUSE",
+        "mutation": "wrong_repository_or_owner_ID",
+        "observed_route": "CI_RUN_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "CI_RUN_REFUSE",
+        "mutation": "wrong_head_repository_or_owner_ID",
+        "observed_route": "CI_RUN_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "CI_RUN_REFUSE",
+        "mutation": "wrong_workflow_or_run_ID",
+        "observed_route": "CI_RUN_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "CI_RUN_REFUSE",
+        "mutation": "wrong_head_SHA",
+        "observed_route": "CI_RUN_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "CI_RUN_REFUSE",
+        "mutation": "wrong_event_or_branch",
+        "observed_route": "CI_RUN_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "CI_RUN_REFUSE",
+        "mutation": "wrong_attempt",
+        "observed_route": "CI_RUN_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "CI_RUN_REFUSE",
+        "mutation": "noncompleted_or_nonsuccess_run",
+        "observed_route": "CI_RUN_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "CI_RUN_REFUSE",
+        "mutation": "stale_Date_or_nonzero_Age",
+        "observed_route": "CI_RUN_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "CI_RUN_REFUSE",
+        "mutation": "wrong_API_media_or_version_profile",
+        "observed_route": "CI_RUN_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "CI_JOB_REFUSE",
+        "mutation": "job_total_count_or_pagination",
+        "observed_route": "CI_JOB_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "CI_JOB_REFUSE",
+        "mutation": "missing_required_job",
+        "observed_route": "CI_JOB_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "CI_JOB_REFUSE",
+        "mutation": "duplicate_required_job_name",
+        "observed_route": "CI_JOB_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "CI_JOB_REFUSE",
+        "mutation": "wrong_job_ID",
+        "observed_route": "CI_JOB_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "CI_JOB_REFUSE",
+        "mutation": "wrong_job_run_or_attempt",
+        "observed_route": "CI_JOB_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "CI_JOB_REFUSE",
+        "mutation": "wrong_job_head_SHA",
+        "observed_route": "CI_JOB_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "CI_JOB_REFUSE",
+        "mutation": "skipped_or_nonsuccess_job",
+        "observed_route": "CI_JOB_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "CI_JOB_REFUSE",
+        "mutation": "null_or_confusable_job_name",
+        "observed_route": "CI_JOB_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "RESOURCE_REFUSE",
+        "mutation": "request_count_cap",
+        "observed_route": "RESOURCE_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "RESOURCE_REFUSE",
+        "mutation": "wire_or_decoded_byte_cap",
+        "observed_route": "RESOURCE_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "RESOURCE_REFUSE",
+        "mutation": "runtime_or_RSS_cap",
+        "observed_route": "RESOURCE_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "RESOURCE_REFUSE",
+        "mutation": "generated_output_or_temp_disk_cap",
+        "observed_route": "RESOURCE_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "RESOURCE_REFUSE",
+        "mutation": "thread_worker_or_file_count_cap",
+        "observed_route": "RESOURCE_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "QUALIFICATION_NETWORK_REFUSE",
+        "mutation": "DNS_socket_TLS_HTTP_tripwire",
+        "observed_route": "QUALIFICATION_NETWORK_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "QUALIFICATION_NETWORK_REFUSE",
+        "mutation": "credential_environment_tripwire",
+        "observed_route": "QUALIFICATION_NETWORK_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "QUALIFICATION_NETWORK_REFUSE",
+        "mutation": "default_opener_or_network_import_tripwire",
+        "observed_route": "QUALIFICATION_NETWORK_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "ORDER_REFUSE",
+        "mutation": "marker_symlink_or_nonregular_parent",
+        "observed_route": "ORDER_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "ORDER_REFUSE",
+        "mutation": "marker_create_flags_or_permissions",
+        "observed_route": "ORDER_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "ORDER_REFUSE",
+        "mutation": "marker_file_fsync_failure",
+        "observed_route": "ORDER_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "ORDER_REFUSE",
+        "mutation": "marker_parent_fsync_failure",
+        "observed_route": "ORDER_REFUSE",
+        "status": "passed"
+      },
+      {
+        "expected_route": "ORDER_REFUSE",
+        "mutation": "marker_atomic_second_creator",
+        "observed_route": "ORDER_REFUSE",
+        "status": "passed"
+      }
+    ],
+    "replay_digest": "9629a2a54164a16a1889af8209510b0fd08d5958a32c29c95732bbc6db44277f",
+    "replay_digests_equal": true,
+    "snapshot_count_per_replay": 3
+  },
+  "schema_name": "neurodecodekit.fresh_motor_source_admission_generated_qualification",
+  "schema_version": "0.1.0",
+  "status": "passed_generated_only_zero_network",
+  "unavailable": [
+    "live_GitHub_identity",
+    "official_index_revision_or_snapshot",
+    "source_authenticity",
+    "workflow_blob_identity",
+    "current_main_ref_identity",
+    "candidate_dataset",
+    "neural_measurement",
+    "end_to_end_latency"
+  ],
+  "warnings": [
+    "generated_fixtures_only_not_source_authentication",
+    "injected_CI_responses_only_not_live_GitHub_verification",
+    "generated_index_modes_do_not_admit_real_sources",
+    "historical_run_branch_is_not_current_refs_heads_main",
+    "workflow_blob_identity_remains_unavailable",
+    "one_shot_generated_audit_marker_retained_under_git_ignored_codex_work",
+    "qualification_is_not_neural_evidence"
+  ]
+}

@@ -15068,3 +15068,11 @@ green; only then may the single generated qualification run.
   score, and independent replication. Separate scientific evidence from
   supporting engineering, never tune after held-out targets, and preserve all
   existing Tier C authority boundaries.
+- 2026-08-31: Accept the sole consumed `FMSR1-R1-G-v0` generated qualification
+  as bounded engineering evidence only. It passed after exact-green activation
+  with two matching five-profile replays, all 82 registered refusals, one
+  thread, 0.022029167041182518 seconds runtime, 21,397,504-byte peak RSS, and
+  zero protected operations. Never rerun, repair, resume, reuse, or delete its
+  official root. Require this result and one non-executing proof closeout to
+  become exact-green, then stop synthetic work and route to a fresh separately
+  authorized `R1-W` source witness and one complete `D1` discovery.

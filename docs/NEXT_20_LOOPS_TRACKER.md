@@ -1,6 +1,6 @@
 # NeuroDecodeKit Original 20-Loop Tracker + Post-Roadmap Status
 
-> **Current flagship route (2026-08-30):** the scientific router is a 3D
+> **Current flagship route (2026-08-31):** the scientific router is a 3D
 > spatial-temporal-physiological attribution cube inside a 5D evidence map that
 > adds task autonomy and population generalization; offline, causal replay,
 > shadow, and prospective live operation form a separate sixth translation
@@ -23,15 +23,15 @@
 > `99339083749`, Optional `99339083636`, and CI `33341954248`. Its additive
 > implementation `c3f536d` passed Base `99347978123`, Optional `99347978190`,
 > and CI `33345237136`, but post-green review rejected activation on directory-
-> ancestry durability and pre-arm/armed-consumption semantics. The local `I1`
-> successor now passes 37 focused tests including nine durability tests. A
-> later critic's pending-reservation and capacity-matching blockers are fixed
-> locally, and final re-review returned `ACCEPT` with no P0/P1 findings; it must
-> still earn a
-> fresh exact commit and both remote CI jobs. The official qualification remains
-> unrun. No source, EEG, model, score, live result, or scientific claim has been
-> created. Read `registries/current_research_frontier.v18.json` and the `I1`
-> implementation amendment first.
+> ancestry durability and pre-arm/armed-consumption semantics. Corrected `I1`
+> `d9229c1` passed Base `99358753480`, Optional `99358753302`, and CI
+> `33349080445`; activation `3de14c3` passed Base `99361845630`, Optional
+> `99361845491`, and CI `33350175624`. The sole generated qualification is now
+> consumed and passed: two matching five-profile replays, 82/82 refusals across
+> 13 routes, 0.022029167041182518 seconds, 21,397,504-byte peak RSS, and zero
+> network, real-source, EEG, model, score, or claim operations. It cannot be
+> rerun. No scientific claim changed. Read
+> `registries/current_research_frontier.v19.json` and the measured result first.
 
 > **COMM-P0-G FS3 prospective successor (2026-08-28):** exact Amendment 3
 > `b15d3cf` passed Base `98860211722`, Optional Neuro Readers `98860211949`,

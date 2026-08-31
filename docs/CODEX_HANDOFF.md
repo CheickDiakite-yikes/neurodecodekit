@@ -1,11 +1,12 @@
 # Codex Handoff - NeuroDecodeKit
 
-> **Current scientific frontier, 2026-08-30:** read the Ofner result and proof
+> **Current scientific frontier, 2026-08-31:** read the Ofner result and proof
 > closeouts, the NPA1 implementation and proof closeout,
-> `registries/current_research_frontier.v18.json`,
+> `registries/current_research_frontier.v19.json`,
 > `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`, and the scientific knowledge
 > ledger first. Its immutable predecessor is
-> `registries/current_research_frontier.v17.json`; earlier predecessors are
+> `registries/current_research_frontier.v18.json`; earlier predecessors are
+> `registries/current_research_frontier.v17.json`,
 > `registries/current_research_frontier.v16.json`,
 > `registries/current_research_frontier.v15.json`,
 > `registries/current_research_frontier.v14.json`,
@@ -63,15 +64,16 @@
 > Implementation `c3f536d` passed Base `99347978123`, Optional `99347978190`,
 > and CI `33345237136`, but post-green review rejected activation on directory-
 > ancestry durability and pre-arm/armed-consumption semantics. Preserve I0.
-> The local additive `I1` successor passes 37 focused tests, including nine
-> durability tests. A later critic required an exact pending-reservation versus
-> durable-arming boundary and identical nuisance bundles on every neural
-> comparator; both corrections are local, and final re-review returned
-> `ACCEPT` with no P0/P1 findings. Read
-> its amendment, v1 machine record, evidence-map clarification, and frontier
-> v18. Commit, push, and green that exact successor before creating activation.
-> The official qualification has not run. All candidate-specific, network,
-> payload, model, score, release, and scientific authorities remain false.
+> Corrected `I1` `d9229c1` passed Base `99358753480`, Optional `99358753302`,
+> and CI `33349080445`. Activation `3de14c3` passed Base `99361845630`,
+> Optional `99361845491`, and CI `33350175624` before the sole generated run.
+> That qualification is consumed and passed: two matching five-profile
+> replays, 82/82 refusals across 13 routes, 0.022029167041182518 seconds,
+> 21,397,504-byte peak RSS, 636 temporary bytes, and zero network, real-source,
+> neural, target, model, prediction, score, release, or claim operations. Never
+> rerun or remove its ignored official root. Read the measured result and
+> frontier v19. All candidate-specific, network, payload, model, score,
+> release, and scientific authorities remain false.
 > Preserve the unrelated tracker inspection file.
 
 > **Historical generated frontier, 2026-08-28:** read Amendment 3 and the FS3

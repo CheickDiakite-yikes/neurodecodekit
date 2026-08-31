@@ -76,9 +76,10 @@ its ignored marker or private paths.
 
 `OFNER-C6R-1` remains a scientifically useful but consumed predecessor, not the
 active flagship. Read the result and proof closeouts,
-`registries/current_research_frontier.v18.json`,
+`registries/current_research_frontier.v19.json`,
 `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`, and the knowledge ledger first.
-Its immutable predecessor is `registries/current_research_frontier.v17.json`;
+Its immutable predecessor is `registries/current_research_frontier.v18.json`;
+the earlier immutable predecessor is `registries/current_research_frontier.v17.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v16.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v15.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v14.json`;
@@ -153,22 +154,29 @@ Generated-only `FMSR1-R1-G-v0` registration is exact-green at
 `d53f3e8870b1f3ae6f014411c9932f20474b8092`, Base Python `99339083749`,
 Optional Neuro Readers `99339083636`, and CI `33341954248` on GitHub `main`.
 Read its implementation, durability amendment, evidence-map clarification, and
-frontier v18 next. Implementation `c3f536d3e527117d9347ed0d6c4fdbc39d7d44ac`
+frontier v19 next. Implementation `c3f536d3e527117d9347ed0d6c4fdbc39d7d44ac`
 passed Base Python `99347978123`, Optional Neuro Readers `99347978190`, and CI
 `33345237136`, but post-green independent review rejected activation because
 newly created directory ancestry was not fully fsynced and pre-arm refusal was
 described too broadly as consumed. Preserve I0 as immutable rejected history.
-The local additive `FMSR1-R1-G-I1` successor fsyncs repository, work, and
+The additive `FMSR1-R1-G-I1` successor fsyncs repository, work, and
 attempt directories; binds no-follow device/inode identities; and distinguishes
 pre-arm refusal, pending reservation, and durable armed consumption. Its 37
 focused tests pass, including nine durability tests. A later critic required
 this exact arming boundary plus capacity-matched nuisance bundles on every
 scientific comparator; both were corrected, and final independent re-review
 returned `ACCEPT` with no P0/P1 findings.
-It still requires a fresh exact commit and both CI jobs before any
-activation. The official generated qualification has not run, and its
-activation record and durable official root remain absent. No live command
-exists and no GitHub or official-index request is authorized.
+Exact I1 `d9229c1d8e9c56e2ce31da0dec0dcf302fe73eee` passed Base Python
+`99358753480`, Optional Neuro Readers `99358753302`, and CI `33349080445`.
+Activation `3de14c3d2e77181dac158f89e92e3a3f26cc10ae` then passed Base
+`99361845630`, Optional `99361845491`, and CI `33350175624` before execution.
+The sole official generated qualification is consumed and passed: two matching
+five-profile replays, all 82 refusals across 13 routes, 0.022029167041182518
+seconds, 21,397,504-byte peak RSS, 636 temporary bytes, and zero network,
+real-source, neural, target, model, prediction, score, release, or claim
+operations. Never rerun, repair, resume, reuse, or delete its ignored official
+root. The result is pending its exact commit and remote proof. No live command
+or GitHub/official-index request is authorized.
 Candidate metadata, transport canary, header, payload, model, score, release,
 and claim work remain closed. Do not treat generated evidence as source
 authentication or neural evidence.

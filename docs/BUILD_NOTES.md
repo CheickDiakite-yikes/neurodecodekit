@@ -16661,3 +16661,13 @@ and require both remote jobs green before the one official qualification.
   deranged comparator arms.
   Activation and the official root remain absent; no network, source, EEG,
   model, score, release, cleanup, or claim operation occurred.
+- 2026-08-31: Corrected `FMSR1-R1-G-I1` exact commit `d9229c1` passed Base
+  Python `99358753480`, Optional Neuro Readers `99358753302`, and CI
+  `33349080445`. Activation `3de14c3` then passed Base `99361845630`, Optional
+  `99361845491`, and CI `33350175624` on GitHub `main`. The sole official
+  generated qualification consumed and passed with two matching five-profile
+  replays, 82/82 refusals across 13 routes, 0.022029167041182518 seconds,
+  21,397,504-byte peak RSS, 614,976 generated input bytes, 13,264 canonical
+  output bytes, 636 temporary bytes, and zero network, real-source, neural,
+  target, model, prediction, score, release, or claim operations. No rerun is
+  authorized and no scientific evidence changed.

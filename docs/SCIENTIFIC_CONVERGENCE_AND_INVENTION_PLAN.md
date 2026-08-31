@@ -1,6 +1,6 @@
 # Scientific Convergence And Invention Plan
 
-Date: 2026-08-30
+Date: 2026-08-31
 
 Status: active strategic plan; Tier A analysis only; no new data authority
 
@@ -11,7 +11,7 @@ Machine knowledge source:
 [`scientific_knowledge_ledger.v0.json`](../registries/scientific_knowledge_ledger.v0.json)
 
 Current machine frontier:
-[`current_research_frontier.v18.json`](../registries/current_research_frontier.v18.json)
+[`current_research_frontier.v19.json`](../registries/current_research_frontier.v19.json)
 
 Governing hard router:
 [`SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`](SCIENTIFIC_RESULT_HARD_DECISION_TREE.md)
@@ -84,12 +84,12 @@ evidence. Commit `c3f536d` passed Base `99347978123`, Optional `99347978190`,
 and CI `33345237136`, but a later independent durability review rejected
 activation because the official attempt's newly created directory ancestry was
 not fully fsynced and pre-arm refusal was described as consumed. Frontier v18
-records the local additive `I1` correction: repository, work, and attempt
-directories are now fsynced and no-follow identity-bound, while pre-arm
-refusals remain unconsumed and any armed attempt remains consumed. The
-corrected successor must receive a fresh exact commit and both remote CI jobs
-before activation. It has no live command, and the official qualification has
-not run.
+records the additive `I1` correction. Corrected `I1` and its activation then
+passed both required GitHub `main` jobs. Frontier v19 records the sole consumed
+generated qualification: two deterministic five-profile replays, 82/82
+refusals, bounded resources, and zero network, real-source, neural, target,
+model, prediction, score, or claim operations. This closes the final generated
+dependency but creates no scientific evidence.
 
 Historical v11 status used the exact phrase pending-decision `FMSR1-DISCOVERY-M0`; it is retained only as an immutable routing marker and
 does not describe the current decision or live authority state.
