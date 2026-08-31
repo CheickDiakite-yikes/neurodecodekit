@@ -552,6 +552,47 @@
       ]
     },
     {
+      "id": "EVID-FMSR1-R1-G-REGISTRATION",
+      "lane": "engineering",
+      "kind": "exact-green generated-only revision-snapshot-CI admission registration",
+      "summary": "FMSR1-R1-G-v0 is exact-green at d53f3e8 / CI 33341954248 and freezes 82 generated refusal mutations, exact source-revision or opaque-snapshot profiles, attempt-specific CI evidence, one-shot durability, and zero live authority.",
+      "limitations": "This is generated admission design only. It authenticates no official source or external CI witness, selects no source, accesses no EEG, and creates no scientific result.",
+      "supports": [],
+      "contradicts": [],
+      "paths": [
+        "docs/FRESH_MOTOR_SOURCE_ADMISSION_GENERATED_QUALIFICATION_PREREGISTRATION.md",
+        "registries/fresh_motor_source_admission_generated_qualification_contract.v0.json",
+        "registries/current_research_frontier.v16.json"
+      ]
+    },
+    {
+      "id": "EVID-FMSR1-R1-G-I0-POSTGREEN-REVIEW",
+      "lane": "engineering",
+      "kind": "post-green durability rejection and local corrected implementation successor",
+      "summary": "Implementation c3f536d passed CI 33345237136 but was rejected before activation because directory ancestry durability and pre-arm versus armed consumption were incomplete; local I1 adds three-directory fsync, no-follow inode binding, and exact consumption semantics.",
+      "limitations": "I1 remains local until a fresh exact commit and both CI jobs pass. The official generated qualification has not run, and no network, source, neural, model, score, or claim operation occurred.",
+      "supports": [],
+      "contradicts": [],
+      "paths": [
+        "docs/FRESH_MOTOR_SOURCE_ADMISSION_GENERATED_QUALIFICATION_IMPLEMENTATION_AMENDMENT_1.md",
+        "registries/fresh_motor_source_admission_generated_implementation.v1.json",
+        "registries/current_research_frontier.v18.json"
+      ]
+    },
+    {
+      "id": "EVID-FMSR1-EVIDENCE-MAP-C0",
+      "lane": "discovery",
+      "kind": "all-false additive scientific comparator-role clarification",
+      "summary": "This all-false clarification changes no result: G1 passed 25 adversarial refusals and live execution is parked before contact. It preserves FMSR1-v1 while separating posterior EEG as spatial, shifted central EEG as temporal, joint EOG/EMG/metadata as physiological nuisance-only, and nuisance plus deranged central EEG as the physiological counterfactual.",
+      "limitations": "This is strategy only. It expands no R1-G, network, real-data, model, score, release, or scientific-claim authority.",
+      "supports": [],
+      "contradicts": [],
+      "paths": [
+        "docs/FRESH_MOTOR_SOURCE_RESEARCH_EVIDENCE_MAP_CLARIFICATION.md",
+        "registries/fresh_motor_source_research_evidence_map_clarification.v0.json"
+      ]
+    },
+    {
       "id": "EVID-COMM-DECISION",
       "lane": "discovery",
       "kind": "objective evidence and replication decision",
@@ -694,19 +735,37 @@
       "relation": "narrows",
       "object": "EXP-NPA1-FRESH-MOTOR",
       "rationale": "The all-false correction prevents runtime self-admission by separating source revision or snapshot observation, remote proof, live external CI verification, and later discovery while creating no contact authority."
+    },
+    {
+      "subject": "EVID-FMSR1-R1-G-REGISTRATION",
+      "relation": "narrows",
+      "object": "EXP-NPA1-FRESH-MOTOR",
+      "rationale": "The exact-green generated-only registration freezes revision, opaque-snapshot, attempt-specific CI, ordering, durability, refusal, and resource contracts without opening live transport."
+    },
+    {
+      "subject": "EVID-FMSR1-R1-G-I0-POSTGREEN-REVIEW",
+      "relation": "narrows",
+      "object": "EXP-NPA1-FRESH-MOTOR",
+      "rationale": "Post-green independent review rejected activation of c3f536d because newly created directory ancestry was not fully fsynced and pre-arm refusal was described too broadly as consumption; the local I1 successor must earn fresh remote proof."
+    },
+    {
+      "subject": "EVID-FMSR1-EVIDENCE-MAP-C0",
+      "relation": "narrows",
+      "object": "EXP-NPA1-FRESH-MOTOR",
+      "rationale": "The additive all-false clarification preserves FMSR1-v1 while separating posterior EEG as spatial, shifted EEG as temporal, joint EOG/EMG/metadata as physiological nuisance-only, and nuisance plus deranged central EEG as the physiological counterfactual."
     }
   ],
   "experiments": [
     {
       "id": "EXP-NPA1-FRESH-MOTOR",
       "lane": "confirmation",
-      "status": "FMSR1_generated_discovery_and_proof_exact_green_all_false_admission_correction_pending_its_own_remote_green_live_packet_parked_before_contact",
+      "status": "FMSR1_R1_G_registration_exact_green_first_implementation_green_but_rejected_corrected_I1_local_pending_fresh_remote_proof_live_packet_parked_before_contact",
       "scientific_question": "Does central EEG add unseen-person motor-task information beyond joint recorded EOG, task-relevant EMG for every relevant effector, posterior EEG, cue and timing structure, relative to matched deranged central EEG in a fresh cohort?",
       "evidence_target": "A calibrated participant-consistent central-EEG increment over joint nuisance-only and joint nuisance-plus-deranged-central-EEG comparators in at least ten completely held-out people.",
-      "earliest_checkpoint": "Make the all-false A1 additive correction remotely green, then generated-qualify only the strict source-global revision, complete opaque snapshot, and same-process live-CI witness parsers before any separately authorized witness or discovery contact.",
+      "earliest_checkpoint": "Commit, push, and remotely green the R1-G I1 additive correction for durability; add and remotely green one exact activation; run the sole generated qualification; then move directly, under the required Tier C decision, to real source admission and the target-firewalled compact-model experiment or record its measured blocker without another architecture loop.",
       "stop_rule": "Do not promote a source outside the frozen discovery universe or one that lacks at least ten complete participants, synchronized EOG and task-relevant EMG for every relevant effector, named geometry, joint cue/pre-cue/posterior/timing/derangement controls, a reusable license, exact 12+2+2+1+3 GiB storage fit, or a remotely green transport witness.",
       "deserves_resources_because": "It preserves the strongest unresolved EEG-beyond-peripheral question while preventing a third irreversible scientific checkpoint from being spent on unknown endpoint behavior.",
-      "authority": "Generated discovery implementation and proof are exact-green. Public witness, discovery, source-specific metadata, payload, model, score, release, and claim authority are false; A1 does not rearm the existing decision and all exact source and CI profiles remain null.",
+      "authority": "Generated discovery implementation and proof, A1, and R1-G registration are exact-green. The first R1-G implementation is green but rejected for activation; corrected I1 is local only. Public witness, discovery, source-specific metadata, payload, model, score, release, and claim authority are false, and all exact live source and CI profiles remain null.",
       "expected_information_gain": "High after source admission because the test directly separates a neural increment from eye, muscle or kinematic, posterior, cue, timing, and derangement alternatives.",
       "claim_ids": [
         "CLAIM-FRESH-NUISANCE-CONTROLLED-EEG"
@@ -722,7 +781,10 @@
         "EVID-FMSR1-V1-PROOF",
         "EVID-FMSR1-DISCOVERY-REQUEST",
         "EVID-FMSR1-DISCOVERY-G1",
-        "EVID-FMSR1-ADMISSION-A1"
+        "EVID-FMSR1-ADMISSION-A1",
+        "EVID-FMSR1-R1-G-REGISTRATION",
+        "EVID-FMSR1-R1-G-I0-POSTGREEN-REVIEW",
+        "EVID-FMSR1-EVIDENCE-MAP-C0"
       ]
     },
     {

@@ -150,8 +150,26 @@ class FreshMotorSourceResearchEvidenceMapClarificationTests(unittest.TestCase):
 
     def test_central_correct_window_condition_must_win_every_cube_edge(self) -> None:
         decision = self.value["cube_edge_decision"]
-        self.assertEqual(len(decision["required_comparator_edges"]), 6)
-        self.assertEqual(len(set(decision["required_comparator_edges"])), 6)
+        self.assertEqual(
+            decision["required_comparator_edges"],
+            [
+                "joint_physiological_nuisance_only",
+                "joint_physiological_nuisance_plus_matched_deranged_central_EEG",
+                "joint_physiological_nuisance_plus_geometry_matched_posterior_visual_EEG_in_correct_motor_window",
+                "joint_physiological_nuisance_plus_central_EEG_in_pre_cue_window",
+                "joint_physiological_nuisance_plus_central_EEG_in_cue_window",
+                "joint_physiological_nuisance_plus_every_preregistered_structure_preserving_shifted_central_EEG_condition",
+            ],
+        )
+        self.assertEqual(
+            decision["shared_neural_comparator_base_arm"],
+            "joint_physiological_nuisance_only",
+        )
+        self.assertTrue(
+            decision[
+                "every_neural_comparator_retains_identical_joint_nuisance_bundle"
+            ]
+        )
         self.assertTrue(
             decision[
                 "central_correct_window_EEG_must_win_every_preregistered_cube_edge"
@@ -216,7 +234,8 @@ class FreshMotorSourceResearchEvidenceMapClarificationTests(unittest.TestCase):
             "`structure_preserving_shifted_central_EEG` are separate temporal comparators",
             "task-relevant EMG for every relevant effector",
             "matched, target-blind, structure-preserving deranged central EEG",
-            "It must beat every preregistered cube edge",
+            "Every neural comparator retains that identical",
+            "The candidate must beat every",
             "does not expand `FMSR1-R1-G-v0`",
             "Every operational authority remains",
         ):

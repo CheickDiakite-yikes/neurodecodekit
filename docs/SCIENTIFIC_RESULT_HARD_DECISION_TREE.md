@@ -120,6 +120,12 @@ MD     = model(N + D_k(C))
 neural comparator. The no-signal prior remains a mandatory sanity baseline, but
 beating it alone cannot establish any attribution coordinate.
 
+The additive
+[`FMSR1-v1-EVIDENCE-MAP-C0`](FRESH_MOTOR_SOURCE_RESEARCH_EVIDENCE_MAP_CLARIFICATION.md)
+record preserves the historical `FMSR1-v1` bytes and makes these comparator
+roles authoritative for every later source-specific experiment contract. It is
+strategy-only and expands no current authority.
+
 Temporal shifts and derangements preserve participant, run, cue/timing stratum,
 feature shape, spectral statistics, missingness, and nuisance magnitude while
 breaking the registered timing or target alignment. Their fixed offset and seed
@@ -273,11 +279,22 @@ prospective registration and authority. This document grants none.
 
 ## Immediate Route
 
-`FMSR1-DISCOVERY-M0-D0` is exact-green. Its generated-only implementation has
-passed local deterministic and adversarial qualification. Independent review
-found that actual official-index revisions were not packet-bound and that a
-tracked local record cannot authenticate GitHub by self-report. The current
-live route is therefore parked before contact and exposes no real transport.
-After the generated implementation is remotely green and closed out, only a
-fresh additive correction with independent review and a fresh exact decision
-may reopen one metadata-only pass. No third path of indefinite dataset hunting is allowed.
+`FMSR1-DISCOVERY-M0-D0`, its generated implementation and proof, the A1
+admission correction, and generated-only `FMSR1-R1-G-v0` registration are
+exact-green. The first R1-G implementation also passed both CI jobs, but
+post-green review rejected activation because its one-shot directory ancestry
+was not fully fsynced and its pre-arm versus armed consumption boundary was
+ambiguous. A local additive `I1` successor corrects those two issues. It must
+be committed, pushed, and pass fresh Base and Optional CI before a separate
+activation record may be added and remotely greened. Only then may the one
+official generated qualification run. The current live route remains parked
+before contact and exposes no real transport.
+No third path of indefinite dataset hunting is allowed.
+
+`R1-G` is the final narrow engineering dependency of the active scientific
+hypothesis, not a new research lane. After its sole generated qualification,
+the next substantive block must directly attempt real source admission and then
+the target-firewalled compact-model experiment, or report the exact measured
+external blocker. Do not add another proof-only architecture loop. Existing
+Tier C decisions remain mandatory, held-out targets cannot guide tuning, and
+scientific evidence must be reported separately from supporting engineering.

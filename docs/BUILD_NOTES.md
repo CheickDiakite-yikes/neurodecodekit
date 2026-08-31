@@ -16646,3 +16646,18 @@ and require both remote jobs green before the one official qualification.
   official root remain absent pending this exact implementation commit and
   remote proof. No network, source, real/captured response, EEG, model, score,
   release, cleanup, or scientific-claim operation occurred.
+- 2026-08-30: Exact implementation `c3f536d` passed Base Python `99347978123`,
+  Optional Neuro Readers `99347978190`, and CI `33345237136`, but a new
+  independent post-green review rejected activation before the official run.
+  Added local corrective successor `FMSR1-R1-G-I1`, which fsyncs repository,
+  work, and attempt directories, binds their no-follow device/inode identities,
+  and separates pre-arm refusal, pending reservation, and durable arming.
+  Thirty-seven focused tests now pass, including nine durability tests. An
+  intermediate review accepted the first correction; a later review rejected
+  the pending-reservation boundary and unmatched comparator wording. Both were
+  corrected, and final independent re-review returned `ACCEPT` with no P0/P1
+  findings. Added an all-false evidence-map clarification that keeps the same
+  joint nuisance bundle in posterior, shifted, pre-cue, cue, central, and
+  deranged comparator arms.
+  Activation and the official root remain absent; no network, source, EEG,
+  model, score, release, cleanup, or claim operation occurred.

@@ -21,13 +21,17 @@
 > requires a fresh successor packet and exact decision. Generated-only
 > `FMSR1-R1-G-v0` registration is exact-green at `d53f3e8`, Base
 > `99339083749`, Optional `99339083636`, and CI `33341954248`. Its additive
-> implementation passes 82/82 frozen refusal mutations across 13 routes; final
-> independent review returned `ACCEPT`. The official generated qualification
-> remains unrun until this exact implementation and a separate activation are
-> remotely green. No source, EEG, model, score, live result, or scientific
-> claim has been created.
-> Read `registries/current_research_frontier.v17.json` and
-> `docs/FRESH_MOTOR_SOURCE_DISCOVERY_IMPLEMENTATION.md` first.
+> implementation `c3f536d` passed Base `99347978123`, Optional `99347978190`,
+> and CI `33345237136`, but post-green review rejected activation on directory-
+> ancestry durability and pre-arm/armed-consumption semantics. The local `I1`
+> successor now passes 37 focused tests including nine durability tests. A
+> later critic's pending-reservation and capacity-matching blockers are fixed
+> locally, and final re-review returned `ACCEPT` with no P0/P1 findings; it must
+> still earn a
+> fresh exact commit and both remote CI jobs. The official qualification remains
+> unrun. No source, EEG, model, score, live result, or scientific claim has been
+> created. Read `registries/current_research_frontier.v18.json` and the `I1`
+> implementation amendment first.
 
 > **COMM-P0-G FS3 prospective successor (2026-08-28):** exact Amendment 3
 > `b15d3cf` passed Base `98860211722`, Optional Neuro Readers `98860211949`,

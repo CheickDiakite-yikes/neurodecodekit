@@ -76,9 +76,10 @@ its ignored marker or private paths.
 
 `OFNER-C6R-1` remains a scientifically useful but consumed predecessor, not the
 active flagship. Read the result and proof closeouts,
-`registries/current_research_frontier.v17.json`,
+`registries/current_research_frontier.v18.json`,
 `docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`, and the knowledge ledger first.
-Its immutable predecessor is `registries/current_research_frontier.v16.json`;
+Its immutable predecessor is `registries/current_research_frontier.v17.json`;
+the earlier immutable predecessor is `registries/current_research_frontier.v16.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v15.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v14.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v13.json`;
@@ -151,18 +152,46 @@ on GitHub `main`; branch CI `33340523548` also passed both required jobs.
 Generated-only `FMSR1-R1-G-v0` registration is exact-green at
 `d53f3e8870b1f3ae6f014411c9932f20474b8092`, Base Python `99339083749`,
 Optional Neuro Readers `99339083636`, and CI `33341954248` on GitHub `main`.
-Read its implementation document, machine record, and frontier v17 next. The
-additive dependency-free implementation validates exact generated revision,
-opaque snapshot, attempt-specific CI, ordering, and durable-marker evidence;
-all 82 frozen mutations pass across 13 refusal routes. Independent review
-initially rejected five weaknesses, then returned `ACCEPT` after exact identity,
-activation, one-shot, filesystem, and report hardening. The official generated
-qualification has not run. Its activation record and durable official root are
-absent until this exact implementation commit and both CI jobs become green.
-No live command exists and no GitHub or official-index request is authorized.
+Read its implementation, durability amendment, evidence-map clarification, and
+frontier v18 next. Implementation `c3f536d3e527117d9347ed0d6c4fdbc39d7d44ac`
+passed Base Python `99347978123`, Optional Neuro Readers `99347978190`, and CI
+`33345237136`, but post-green independent review rejected activation because
+newly created directory ancestry was not fully fsynced and pre-arm refusal was
+described too broadly as consumed. Preserve I0 as immutable rejected history.
+The local additive `FMSR1-R1-G-I1` successor fsyncs repository, work, and
+attempt directories; binds no-follow device/inode identities; and distinguishes
+pre-arm refusal, pending reservation, and durable armed consumption. Its 37
+focused tests pass, including nine durability tests. A later critic required
+this exact arming boundary plus capacity-matched nuisance bundles on every
+scientific comparator; both were corrected, and final independent re-review
+returned `ACCEPT` with no P0/P1 findings.
+It still requires a fresh exact commit and both CI jobs before any
+activation. The official generated qualification has not run, and its
+activation record and durable official root remain absent. No live command
+exists and no GitHub or official-index request is authorized.
 Candidate metadata, transport canary, header, payload, model, score, release,
 and claim work remain closed. Do not treat generated evidence as source
 authentication or neural evidence.
+
+### Scientific execution directive
+
+Do not allow proof machinery, synthetic qualification, documentation, or
+nested gates to become the work. Every substantive work block must target a
+named scientific hypothesis using real neural data and end in measured
+scientific evidence or an explicit measured blocker. Supporting engineering is
+allowed only when it is the final immediate dependency of that exact
+experiment, must stay minimal, and must be followed directly by the real
+execution rather than another architecture loop. The default route is real
+data -> target firewall -> compact model -> frozen predictions -> one score ->
+independent replication. Never tune after held-out targets or manufacture a
+positive result. Every progress report must separate scientific evidence from
+supporting engineering.
+
+The active hypothesis is that correctly timed central EEG adds unseen-person
+motor information beyond capacity-matched EOG, EMG, metadata, posterior EEG,
+shifted EEG, and deranged-EEG controls. Park work that does not directly enable,
+test, or replicate that claim. Existing exact authority boundaries remain in
+force; this directive compresses the route but does not silently grant Tier C.
 Preserve `registries/current_research_frontier.v8.json`,
 `registries/current_research_frontier.v7.json`, and
 `registries/current_research_frontier.v6.json` as immutable history and require

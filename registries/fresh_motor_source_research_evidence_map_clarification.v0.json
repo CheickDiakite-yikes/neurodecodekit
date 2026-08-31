@@ -17,19 +17,19 @@
   "binding": {
     "human_clarification": {
       "path": "docs/FRESH_MOTOR_SOURCE_RESEARCH_EVIDENCE_MAP_CLARIFICATION.md",
-      "bytes": 5455,
-      "sha256": "3e8f328d38042789e6fb71ef7e8d219698751b65f8344d9a2bbe9a5bd1f9bef4"
+      "bytes": 5850,
+      "sha256": "a6b514e8e6204502b284724d0e90749fa50918e1c6ee52718cc764cbdcd608c0"
     },
     "governing_sources": [
       {
         "path": "docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md",
-        "bytes": 14689,
-        "sha256": "51662eab08cd1130c3f32c7b017effbfaed33cb0765438c97cc05730382a452c"
+        "bytes": 15229,
+        "sha256": "442fa355a1df66a50ac12c1ef4d5380c7eafdc7776b027f72857379ad1f2d8ca"
       },
       {
         "path": "docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md",
-        "bytes": 31306,
-        "sha256": "327aa983269a5a5691c321a5de8b75a9b3f6d7726a1ec1c7a7460d9a29bfbd58"
+        "bytes": 32004,
+        "sha256": "bdec19e5abe50f79ed672f5cfdd16bbc2b5b8b4ea60eb5320ec6caca8e4cc295"
       },
       {
         "path": "docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md",
@@ -133,13 +133,15 @@
   },
   "cube_edge_decision": {
     "candidate": "joint_physiological_nuisance_plus_central_EEG_in_correct_registered_motor_window",
+    "shared_neural_comparator_base_arm": "joint_physiological_nuisance_only",
+    "every_neural_comparator_retains_identical_joint_nuisance_bundle": true,
     "required_comparator_edges": [
       "joint_physiological_nuisance_only",
       "joint_physiological_nuisance_plus_matched_deranged_central_EEG",
-      "geometry_matched_posterior_visual_EEG_in_correct_motor_window",
-      "central_EEG_in_pre_cue_window",
-      "central_EEG_in_cue_window",
-      "every_preregistered_structure_preserving_shifted_central_EEG_condition"
+      "joint_physiological_nuisance_plus_geometry_matched_posterior_visual_EEG_in_correct_motor_window",
+      "joint_physiological_nuisance_plus_central_EEG_in_pre_cue_window",
+      "joint_physiological_nuisance_plus_central_EEG_in_cue_window",
+      "joint_physiological_nuisance_plus_every_preregistered_structure_preserving_shifted_central_EEG_condition"
     ],
     "central_correct_window_EEG_must_win_every_preregistered_cube_edge": true,
     "intersection_union_rule_required": true,

@@ -100,14 +100,20 @@ participant-first scoring as the central condition.
 ## Every-Edge Success Rule
 
 The candidate central condition is joint nuisance plus central EEG in the
-correct registered motor window. It must beat every preregistered cube edge:
+correct registered motor window. Every neural comparator retains that identical
+joint nuisance bundle and swaps only the registered EEG location, window, or
+counterfactual. This capacity matching prevents nuisance information from
+creating an apparent central-EEG increment. The candidate must beat every
+preregistered cube edge:
 
 1. joint physiological nuisance only;
 2. joint physiological nuisance plus matched deranged central EEG;
-3. geometry-matched posterior EEG in the correct motor window;
-4. central EEG in the pre-cue window;
-5. central EEG in the cue window; and
-6. every preregistered structure-preserving shifted central-EEG condition.
+3. joint physiological nuisance plus geometry-matched posterior EEG in the
+   correct motor window;
+4. joint physiological nuisance plus central EEG in the pre-cue window;
+5. joint physiological nuisance plus central EEG in the cue window; and
+6. joint physiological nuisance plus every preregistered
+   structure-preserving shifted central-EEG condition.
 
 This is an intersection-union requirement. All registered edges must point in
 the predicted direction and satisfy their frozen minimum-effect and inference

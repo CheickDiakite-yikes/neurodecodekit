@@ -15043,3 +15043,28 @@ green; only then may the single generated qualification run.
   Require that activation to become green before the sole official generated
   qualification. Do not run it now, and open no network, real-source, payload,
   target, model, score, release, or scientific-claim authority.
+- 2026-08-30: Reject activation of exact-green `FMSR1-R1-G-I0` after
+  independent post-green review found incomplete directory-ancestry fsync and
+  ambiguous pre-arm versus armed consumption semantics. Preserve I0 and its
+  green CI as rejected evidence; do not activate or run it. Accept local `I1`
+  correction for commit only after its focused suite and corrective re-review
+  pass. Require a fresh exact `I1` commit and both remote CI jobs before adding
+  any activation. Preserve `FMSR1-v1` bytes and adopt the additive all-false
+  evidence-map clarification for future source-specific contracts. Open no
+  network, real source, payload, target, model, score, release, or claim
+  authority.
+- 2026-08-30: Accept corrected local `FMSR1-R1-G-I1` for commit and fresh CI
+  after final independent re-review found no P0/P1 issue. Treat attempt-directory
+  creation as a pending reservation and successful parent-directory fsync as
+  durable arming; keep every neural cube comparator capacity-matched by
+  retaining the identical joint nuisance bundle. Record 37 focused tests and
+  nine durability tests. This acceptance does not activate or run the official
+  qualification.
+- 2026-08-30: Adopt the scientific execution directive. Every substantive work
+  block must target the named central-EEG-beyond-nuisance hypothesis with real
+  neural data and end in measured evidence or a measured blocker. Allow only
+  minimal engineering that is the final immediate dependency, then move
+  directly through target firewall, compact model, frozen predictions, one
+  score, and independent replication. Separate scientific evidence from
+  supporting engineering, never tune after held-out targets, and preserve all
+  existing Tier C authority boundaries.

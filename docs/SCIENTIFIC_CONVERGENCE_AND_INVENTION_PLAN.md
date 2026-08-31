@@ -11,7 +11,7 @@ Machine knowledge source:
 [`scientific_knowledge_ledger.v0.json`](../registries/scientific_knowledge_ledger.v0.json)
 
 Current machine frontier:
-[`current_research_frontier.v13.json`](../registries/current_research_frontier.v13.json)
+[`current_research_frontier.v18.json`](../registries/current_research_frontier.v18.json)
 
 Governing hard router:
 [`SCIENTIFIC_RESULT_HARD_DECISION_TREE.md`](SCIENTIFIC_RESULT_HARD_DECISION_TREE.md)
@@ -78,12 +78,18 @@ proof, and v15 records the all-false correction. Exact correction state
 `8fe98df` passed Base `99335260650`, Optional `99335260756`, and CI
 `33340527773` on GitHub `main`. Generated-only `FMSR1-R1-G-v0` registration is
 exact-green at `d53f3e8`, Base `99339083749`, Optional `99339083636`, and CI
-`33341954248`. Frontier v17 records its locally complete dependency-free
-validator for exact revision, opaque snapshot, attempt-specific CI, and
-consumed-marker evidence. It passes all 82 frozen mutations across 13 routes,
-and final independent review returned `ACCEPT`. It has no live command. Its
-official generated qualification and separate activation remain closed until
-the exact implementation commit is remotely green.
+`33341954248`. Frontier v17 records the first dependency-free validator for
+exact revision, opaque snapshot, attempt-specific CI, and consumed-marker
+evidence. Commit `c3f536d` passed Base `99347978123`, Optional `99347978190`,
+and CI `33345237136`, but a later independent durability review rejected
+activation because the official attempt's newly created directory ancestry was
+not fully fsynced and pre-arm refusal was described as consumed. Frontier v18
+records the local additive `I1` correction: repository, work, and attempt
+directories are now fsynced and no-follow identity-bound, while pre-arm
+refusals remain unconsumed and any armed attempt remains consumed. The
+corrected successor must receive a fresh exact commit and both remote CI jobs
+before activation. It has no live command, and the official qualification has
+not run.
 
 Historical v11 status used the exact phrase pending-decision `FMSR1-DISCOVERY-M0`; it is retained only as an immutable routing marker and
 does not describe the current decision or live authority state.
@@ -133,6 +139,18 @@ information beyond recorded peripheral physiology, posterior EEG, cue and
 timing structure, and matched derangement in completely unseen people. No
 dataset is currently promoted for that confirmation.
 
+### Execution compression rule
+
+Every substantive work block must target that named hypothesis with real neural
+data and end in measured scientific evidence or an explicit measured blocker.
+Supporting engineering is allowed only as the minimal final dependency of that
+exact experiment and must lead directly to execution, not another nested gate.
+The default route is real data -> target firewall -> compact model -> frozen
+predictions -> one score -> independent replication. Held-out targets may not
+drive tuning, and a positive result may not be manufactured. Reports must state
+scientific evidence and supporting engineering separately. Existing Tier C
+authority boundaries remain unchanged.
+
 The governing architecture is a 3D attribution cube nested inside a 5D
 scientific evidence map. Spatial, temporal, and physiological dimensions ask
 what produced the signal. Task autonomy and population generalization ask what
@@ -152,14 +170,24 @@ structure-preserving shifted EEG. The primary router uses a participant-level
 intersection-union rule; success on one face cannot average away failure on
 another.
 
-Generated `NPA1-G` is closed. The v0 source-admission draft is unaccepted and
-`FMSR1-v1` and `FMSR1-DISCOVERY-M0-D0` are exact-green. The generated
-discovery implementation and its proof-only closeout are exact-green, but live
-execution is not armable under the current packet. The earliest remaining
-checkpoint is to make the all-false A1 admission correction remotely green,
-then generated-qualify only its strict revision/snapshot and live-CI parsers.
-Any later public witness or discovery requires a separately named Tier C packet,
-independent review, live external CI verification, and a fresh exact decision.
+The additive
+[`FMSR1-v1-EVIDENCE-MAP-C0`](FRESH_MOTOR_SOURCE_RESEARCH_EVIDENCE_MAP_CLARIFICATION.md)
+clarification preserves the exact-green `FMSR1-v1` bytes while resolving its
+older comparator grouping for any future source-specific experiment contract.
+Posterior EEG is spatial, shifted central EEG is temporal, joint EOG plus
+task-relevant EMG plus metadata is physiological nuisance-only, and joint
+nuisance plus deranged central EEG is the physiological counterfactual. The
+clarification is strategy-only and grants no operational authority.
+
+Generated `NPA1-G` is closed. The v0 source-admission draft is unaccepted;
+`FMSR1-v1`, `FMSR1-DISCOVERY-M0-D0`, its generated implementation and proof,
+the A1 correction, and the R1-G registration are exact-green. The first R1-G
+implementation is green but rejected for activation. The earliest remaining
+checkpoint is to commit, push, and green the corrected `I1` durability
+successor, then add and remotely green one exact activation record before the
+sole generated qualification. Any later public witness or discovery requires
+a separately named Tier C packet, independent review, live external CI
+verification, and a fresh exact decision.
 A future candidate must then pass separately
 governed target-free metadata verification and one opaque live transport canary
 before a semantic sensor-header check.

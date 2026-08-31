@@ -125,13 +125,17 @@ The correction is exact-green at `8fe98df` with CI `33340527773`, and the
 generated-only `FMSR1-R1-G-v0` registration is exact-green at `d53f3e8`, Base
 `99339083749`, Optional `99339083636`, and CI `33341954248`. Its additive
 [implementation](docs/FRESH_MOTOR_SOURCE_ADMISSION_GENERATED_QUALIFICATION_IMPLEMENTATION.md)
-now binds exact generated source-global revisions, ordered opaque snapshots,
-run-attempt CI evidence, and durable one-shot markers. All 82 frozen mutations
-pass across 13 refusal routes, and independent re-review returned `ACCEPT`
-after five blocking weaknesses were corrected. The official generated
-qualification has not run; activation remains absent until this exact
-implementation is committed, pushed, and remotely green. It exposes no live
-command and authorizes no GitHub or source contact.
+at `c3f536d` passed Base `99347978123`, Optional `99347978190`, and CI
+`33345237136`, but a later independent durability review rejected activation:
+the marker and attempt directory were fsynced while their newly created
+directory ancestry was not, and pre-arm refusal had been described too broadly
+as attempt consumption. A local additive `I1` successor now fsyncs the
+repository root, work root, and attempt root, binds no-follow directory
+identities, and distinguishes pre-arm refusal, a pending reservation, and a
+durably armed consumed attempt.
+It requires a fresh exact commit and two-job remote proof before activation.
+The official qualification has not run, its activation and official root
+remain absent, and it authorizes no GitHub or source contact.
 The [hard scientific decision tree](docs/SCIENTIFIC_RESULT_HARD_DECISION_TREE.md)
 then routes one admitted source through sensitivity, confirmation,
 independent replication, and only afterward causal/live translation. Its core
@@ -141,10 +145,15 @@ operation is a separate sixth translation dimension. Live motor success does
 not inherit a language claim. Communication retains its own preregistration
 and independently scored LLM-only baseline. Within the cube, posterior EEG is
 a neural spatial comparator, not part of the EOG/EMG/metadata nuisance bundle;
-the central motor-window condition must win every registered spatial,
-temporal, and physiological edge rather than merely average well. See the
-[current machine frontier](registries/current_research_frontier.v17.json).
-Its immutable predecessor is `registries/current_research_frontier.v16.json`;
+every neural comparator retains that identical nuisance bundle, and the central
+motor-window condition must win every registered spatial, temporal, and
+physiological edge rather than merely average well. Engineering may close only
+the final immediate dependency of this experiment; the next substantive block
+must produce real-data evidence or a measured blocker. See the
+[additive evidence-map clarification](docs/FRESH_MOTOR_SOURCE_RESEARCH_EVIDENCE_MAP_CLARIFICATION.md)
+and [current machine frontier](registries/current_research_frontier.v18.json).
+Its immutable predecessor is `registries/current_research_frontier.v17.json`;
+the earlier immutable predecessor is `registries/current_research_frontier.v16.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v15.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v14.json`;
 the earlier immutable predecessor is `registries/current_research_frontier.v13.json`;
@@ -194,12 +203,13 @@ The latest irreversible result is the consumed Ofner range-header transport H0.
 The latest reversible results are green generated-only `NPA1-G` transport
 admission, exact-green `FMSR1-v1`, exact-green discovery decision
 `FMSR1-DISCOVERY-M0-D0`, exact-green generated implementation
-`FMSR1-DISCOVERY-M0-G1`, and exact-green proof closeout `fac60bf`. The pushed
-v0 draft is retained as rejected history and authorized no protected work. No
-network or real operation is active. The current live packet remains parked on
-missing revision/snapshot binding and external CI authentication; it cannot be
-activated by its existing decision. The all-false A1 correction is the next
-reversible record and creates no live authority.
+`FMSR1-DISCOVERY-M0-G1`, exact-green proof closeout `fac60bf`, exact-green A1
+correction `8fe98df`, and exact-green R1-G registration `d53f3e8`. The first
+R1-G implementation `c3f536d` is retained as green-but-rejected history after
+post-green durability review. Its local additive `I1` successor is the current
+reversible gate and requires a fresh exact commit plus both remote CI jobs
+before activation. No network or real operation is active, and the official
+generated qualification has not run.
 The following COMM-P0-G material is retained as exact
 adjacent-engineering history and is paused. Its proof architecture has a prospective, resource-aware
 successor: Amendment 3 replaces the second redundant full
@@ -746,11 +756,12 @@ score or claim upgrade occurred. Repeated convergence warnings at the frozen
 80-iteration cap were recorded without changing or rerunning the models.
 
 The machine-readable current state is
-[`registries/current_research_frontier.v17.json`](registries/current_research_frontier.v17.json).
+[`registries/current_research_frontier.v18.json`](registries/current_research_frontier.v18.json).
 It freezes the consumed Ofner lane, green generated NPA1 proof, rejected v0
 draft, exact-green `FMSR1-v1`, discovery decision, and generated implementation,
 the green proof-only closeout, exact-green all-false A1 correction, exact-green
-R1-G registration, local generated-only implementation, claim boundary, and exact next transition so
+R1-G registration, rejected green I0 implementation, corrected local I1
+successor, claim boundary, and exact next transition so
 handoffs cannot silently return to an older gate.
 Prediction
 freeze `2517fd1` passed Base job `97996323987`, Optional job `97996324203`, and

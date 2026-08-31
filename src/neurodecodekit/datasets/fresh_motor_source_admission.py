@@ -1107,60 +1107,146 @@ def _qualification_temp_root(prefix: str = "fmsr1-r1g-") -> Iterator[Path]:
             _ACTIVE_QUALIFICATION_ROOTS.discard(root)
 
 
+def _fsync_directory_or_refuse(
+    descriptor: int,
+    directory_fsync: Callable[[int], None],
+    reason: str,
+) -> None:
+    try:
+        directory_fsync(descriptor)
+    except OSError as exc:
+        raise FMSR1AdmissionRefusal("ORDER_REFUSE", reason) from exc
+
+
 @contextmanager
 def _official_qualification_root(
     repo_root: str | Path | None = None,
+    *,
+    directory_fsync: Callable[[int], None] = os.fsync,
 ) -> Iterator[tuple[Path, dict[str, object]]]:
     """Create the durable one-shot generated audit root without deleting it."""
 
     root = (
-        Path(repo_root).resolve(strict=True)
+        Path(os.path.abspath(os.fspath(repo_root)))
         if repo_root is not None
         else Path(__file__).resolve().parents[3]
     )
-    root_info = os.lstat(root)
-    if stat.S_ISLNK(root_info.st_mode) or not stat.S_ISDIR(root_info.st_mode):
-        _refuse("ORDER_REFUSE", "repository root type differs")
-    work_root = root / OFFICIAL_QUALIFICATION_ROOT.parent
+    if not hasattr(os, "O_NOFOLLOW") or not hasattr(os, "O_DIRECTORY"):
+        _refuse("ORDER_REFUSE", "required no-follow directory flags unavailable")
+    directory_flags = os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW
+    root_fd: int | None = None
+    work_fd: int | None = None
+    attempt_fd: int | None = None
+    attempt_root: Path | None = None
+    active = False
     try:
-        os.mkdir(work_root, 0o700)
-    except FileExistsError:
-        pass
-    except OSError as exc:
-        raise FMSR1AdmissionRefusal(
-            "ORDER_REFUSE", "generated work root unavailable"
-        ) from exc
-    _assert_regular_directory_no_follow(work_root)
-    attempt_root = root / OFFICIAL_QUALIFICATION_ROOT
-    try:
-        os.mkdir(attempt_root, 0o700)
-    except FileExistsError as exc:
-        raise FMSR1AdmissionRefusal(
-            "ORDER_REFUSE", "official generated qualification is already consumed"
-        ) from exc
-    except OSError as exc:
-        raise FMSR1AdmissionRefusal(
-            "ORDER_REFUSE", "official qualification root unavailable"
-        ) from exc
-    attempt_root = attempt_root.resolve(strict=True)
-    _ACTIVE_QUALIFICATION_ROOTS.add(attempt_root)
-    marker_bytes = canonical_json_bytes(
-        {
-            "execution_ordinal": 1,
-            "generated": True,
-            "protocol_id": PROTOCOL_ID,
-            "stage": "OFFICIAL_GENERATED_QUALIFICATION",
-        }
-    )
-    try:
+        root_info = os.lstat(root)
+        if stat.S_ISLNK(root_info.st_mode) or not stat.S_ISDIR(root_info.st_mode):
+            _refuse("ORDER_REFUSE", "repository root type differs")
+        root_fd = os.open(root, directory_flags)
+        opened_root = os.fstat(root_fd)
+        if (opened_root.st_dev, opened_root.st_ino) != (
+            root_info.st_dev,
+            root_info.st_ino,
+        ):
+            _refuse("ORDER_REFUSE", "repository root identity changed")
+
+        work_name = OFFICIAL_QUALIFICATION_ROOT.parent.as_posix()
+        if "/" in work_name or work_name in {"", ".", ".."}:
+            _refuse("ORDER_REFUSE", "generated work root identity differs")
+        try:
+            os.mkdir(work_name, 0o700, dir_fd=root_fd)
+        except FileExistsError:
+            pass
+        except OSError as exc:
+            raise FMSR1AdmissionRefusal(
+                "ORDER_REFUSE", "generated work root unavailable"
+            ) from exc
+        work_info = os.stat(work_name, dir_fd=root_fd, follow_symlinks=False)
+        if stat.S_ISLNK(work_info.st_mode) or not stat.S_ISDIR(work_info.st_mode):
+            _refuse("ORDER_REFUSE", "generated work root type differs")
+        work_fd = os.open(work_name, directory_flags, dir_fd=root_fd)
+        opened_work = os.fstat(work_fd)
+        if (opened_work.st_dev, opened_work.st_ino) != (
+            work_info.st_dev,
+            work_info.st_ino,
+        ):
+            _refuse("ORDER_REFUSE", "generated work root identity changed")
+        _fsync_directory_or_refuse(
+            root_fd, directory_fsync, "generated work root durability failed"
+        )
+
+        attempt_name = OFFICIAL_QUALIFICATION_ROOT.name
+        try:
+            os.mkdir(attempt_name, 0o700, dir_fd=work_fd)
+        except FileExistsError as exc:
+            raise FMSR1AdmissionRefusal(
+                "ORDER_REFUSE", "official generated qualification is already consumed"
+            ) from exc
+        except OSError as exc:
+            raise FMSR1AdmissionRefusal(
+                "ORDER_REFUSE", "official qualification root unavailable"
+            ) from exc
+        attempt_info = os.stat(attempt_name, dir_fd=work_fd, follow_symlinks=False)
+        if stat.S_ISLNK(attempt_info.st_mode) or not stat.S_ISDIR(attempt_info.st_mode):
+            _refuse("ORDER_REFUSE", "official qualification root type differs")
+        attempt_fd = os.open(attempt_name, directory_flags, dir_fd=work_fd)
+        opened_attempt = os.fstat(attempt_fd)
+        attempt_identity = (opened_attempt.st_dev, opened_attempt.st_ino)
+        if attempt_identity != (attempt_info.st_dev, attempt_info.st_ino):
+            _refuse("ORDER_REFUSE", "official qualification root identity changed")
+        # The new directory is only a pending reservation until its parent entry
+        # is durable. A failure here leaves the reservation fail-closed.
+        _fsync_directory_or_refuse(
+            work_fd,
+            directory_fsync,
+            "official qualification reservation durability failed before arming",
+        )
+
+        attempt_root = root / OFFICIAL_QUALIFICATION_ROOT
+        path_attempt = os.lstat(attempt_root)
+        if (path_attempt.st_dev, path_attempt.st_ino) != attempt_identity:
+            _refuse("ORDER_REFUSE", "official qualification path identity changed")
+        attempt_root = attempt_root.resolve(strict=True)
+        resolved_attempt = os.lstat(attempt_root)
+        if (resolved_attempt.st_dev, resolved_attempt.st_ino) != attempt_identity:
+            _refuse("ORDER_REFUSE", "official qualification path identity changed")
+        _ACTIVE_QUALIFICATION_ROOTS.add(attempt_root)
+        active = True
+        marker_bytes = canonical_json_bytes(
+            {
+                "execution_ordinal": 1,
+                "generated": True,
+                "protocol_id": PROTOCOL_ID,
+                "stage": "OFFICIAL_GENERATED_QUALIFICATION",
+            }
+        )
         marker = create_consumed_marker(
             attempt_root,
             marker_bytes,
             expected_stage="OFFICIAL_GENERATED_QUALIFICATION",
+            directory_fsync=directory_fsync,
+            expected_parent_identity=attempt_identity,
         )
+        marker["ancestry_directory_fsyncs"] = 2
+        marker["directory_fsyncs"] = int(marker["directory_fsyncs"]) + 2
+        marker["attempt_state"] = "armed_and_consumed"
+        current_attempt = os.stat(
+            attempt_name, dir_fd=work_fd, follow_symlinks=False
+        )
+        path_attempt = os.lstat(attempt_root)
+        if (
+            (current_attempt.st_dev, current_attempt.st_ino) != attempt_identity
+            or (path_attempt.st_dev, path_attempt.st_ino) != attempt_identity
+        ):
+            _refuse("ORDER_REFUSE", "official qualification path identity changed")
         yield attempt_root, marker
     finally:
-        _ACTIVE_QUALIFICATION_ROOTS.discard(attempt_root)
+        if active and attempt_root is not None:
+            _ACTIVE_QUALIFICATION_ROOTS.discard(attempt_root)
+        for descriptor in (attempt_fd, work_fd, root_fd):
+            if descriptor is not None:
+                os.close(descriptor)
 
 
 def _assert_regular_directory_no_follow(path: Path) -> None:
@@ -1198,6 +1284,7 @@ def create_consumed_marker(
     expected_stage: str,
     file_fsync: Callable[[int], None] = os.fsync,
     directory_fsync: Callable[[int], None] = os.fsync,
+    expected_parent_identity: tuple[int, int] | None = None,
 ) -> dict[str, object]:
     """Create one durable no-follow generated consumed marker."""
 
@@ -1232,8 +1319,14 @@ def create_consumed_marker(
         directory_flags = os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW
         parent_fd = os.open(parent_path, directory_flags)
         opened_info = os.fstat(parent_fd)
-        if (opened_info.st_dev, opened_info.st_ino) != (info.st_dev, info.st_ino):
+        opened_identity = (opened_info.st_dev, opened_info.st_ino)
+        if opened_identity != (info.st_dev, info.st_ino):
             raise OSError("parent identity changed")
+        if (
+            expected_parent_identity is not None
+            and opened_identity != expected_parent_identity
+        ):
+            raise OSError("parent identity differs from armed attempt")
     except OSError as exc:
         raise FMSR1AdmissionRefusal(
             "ORDER_REFUSE", "marker parent unavailable"
@@ -2421,7 +2514,7 @@ def validate_public_report(report: Mapping[str, object]) -> None:
         or measurements.get("accepted_response_envelopes") != 4
         or measurements.get("marker_creates") != 3
         or measurements.get("marker_file_fsyncs") != 3
-        or measurements.get("marker_directory_fsyncs") != 3
+        or measurements.get("marker_directory_fsyncs") != 5
         or measurements.get("producer_is_causal") is not None
         or measurements.get("end_to_end_latency_measured") is not False
     ):
@@ -2523,8 +2616,8 @@ def run_generated_qualification(
     with _official_qualification_root(repo_root) as (temp_root, attempt_marker):
         metrics.generated_input_bytes += int(attempt_marker["bytes"])
         metrics.marker_creates += 1
-        metrics.marker_file_fsyncs += 1
-        metrics.marker_directory_fsyncs += 1
+        metrics.marker_file_fsyncs += int(attempt_marker["file_fsyncs"])
+        metrics.marker_directory_fsyncs += int(attempt_marker["directory_fsyncs"])
         first = _run_acceptance_replay(temp_root, metrics)
         second = _run_acceptance_replay(temp_root, metrics)
         first_digest = _sha256(canonical_json_bytes(first))

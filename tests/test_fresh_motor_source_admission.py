@@ -180,7 +180,7 @@ def _valid_public_report() -> dict[str, object]:
             "accepted_response_envelopes": 4,
             "marker_creates": 3,
             "marker_file_fsyncs": 3,
-            "marker_directory_fsyncs": 3,
+            "marker_directory_fsyncs": 5,
             "runtime_seconds": 0.1,
             "absolute_peak_RSS_bytes": 1,
             "CPU_threads": 1,
@@ -503,6 +503,9 @@ class FreshMotorSourceAdmissionTests(unittest.TestCase):
                 marker,
             ):
                 self.assertEqual(marker["mode"], "0600")
+                self.assertEqual(marker["attempt_state"], "armed_and_consumed")
+                self.assertEqual(marker["ancestry_directory_fsyncs"], 2)
+                self.assertEqual(marker["directory_fsyncs"], 3)
                 self.assertTrue((attempt_root / "consumed.json").is_file())
             self.assertTrue((attempt_root / "consumed.json").is_file())
             with self.assert_refusal("ORDER_REFUSE"):
