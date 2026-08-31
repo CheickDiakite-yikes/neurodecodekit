@@ -57,16 +57,6 @@ def load_green_live_implementation_decision(repo_root: str | Path) -> Mapping[st
         raise live.LiveWitnessRefusal(
             "LIVE_AUTHORITY_REFUSE", "live implementation decision drifted"
         )
-    tracked = live._git(
-        root,
-        "show",
-        (
-            f"{live.LIVE_IMPLEMENTATION_DECISION_COMMIT}:"
-            f"{live.LIVE_IMPLEMENTATION_DECISION_RELATIVE_PATH.as_posix()}"
-        ),
-    ).encode()
-    if tracked != payload:
-        raise live.LiveWitnessRefusal("LIVE_AUTHORITY_REFUSE", "green decision commit differs")
     decision = live._strict_mapping(payload)
     proof = decision.get("green_generated_implementation_proof")
     authority = decision.get("authorization_after_decision_green")

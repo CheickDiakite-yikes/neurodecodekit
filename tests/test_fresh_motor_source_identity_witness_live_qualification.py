@@ -39,11 +39,17 @@ class FreshMotorSourceIdentityWitnessLiveQualificationTests(unittest.TestCase):
         self.assertFalse(authority["release_or_scientific_claim_upgrade"])
 
     def test_green_live_implementation_decision_is_exact(self) -> None:
-        decision = qualification.load_green_live_implementation_decision(ROOT)
+        with mock.patch.object(
+            live,
+            "_git",
+            side_effect=AssertionError("shallow CI history must stay unopened"),
+        ) as historical_git:
+            decision = qualification.load_green_live_implementation_decision(ROOT)
         self.assertEqual(decision["decision_id"], live.LIVE_IMPLEMENTATION_DECISION_ID)
         self.assertFalse(
             decision["authorization_after_decision_green"]["GitHub_API_or_official_index_contact"]
         )
+        historical_git.assert_not_called()
 
     def test_generated_contact_replays_all_roots_without_socket_access(self) -> None:
         replay = qualification._run_replay(ROOT)
