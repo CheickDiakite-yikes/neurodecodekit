@@ -657,6 +657,40 @@ def replay(root, participant, trial):
     )
 
 
+def infer(repo, model_path, window_path, index):
+    """Run a saved model on preprocessed EEG, without labels or scoring."""
+    import numpy as np
+
+    module = load_module(
+        repo / "src/neurodecodekit/models/imagined_word_decoder.py", "local_word_model"
+    )
+    model = module.ImaginedWordDecoder.load(model_path)
+    windows = np.load(window_path, mmap_mode="r", allow_pickle=False)
+    if windows.ndim == 2:
+        if index != 0:
+            raise ValueError("A single window only has index 0")
+        window = windows[None, ...]
+    elif windows.ndim == 3 and 0 <= index < len(windows):
+        window = windows[index : index + 1]
+    else:
+        raise ValueError("Expected preprocessed [8,500] or [trials,8,500] EEG and a valid index")
+    started = time.monotonic()
+    probabilities = model.predict_proba(window)[0]
+    i = int(np.argmax(probabilities))
+    print(
+        json.dumps(
+            {
+                "mode": "saved-model inference, no scoring",
+                "word": str(model.classes_[i]),
+                "probabilities": dict(zip(model.classes_.tolist(), probabilities.tolist())),
+                "inference_seconds": time.monotonic() - started,
+                "note": "Experimental probabilities; useful word decoding has not been established.",
+            },
+            indent=2,
+        )
+    )
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--site")
@@ -670,6 +704,7 @@ def main():
             "freeze",
             "score",
             "replay",
+            "infer",
             "broker",
             "predictor",
             "scorer",
@@ -683,6 +718,10 @@ def main():
     parser.add_argument("--digest")
     parser.add_argument("--participant", default="0")
     parser.add_argument("--trial", default="0")
+    parser.add_argument(
+        "--window", type=Path, help="Already filtered, two-second EEG windows in volts; no labels"
+    )
+    parser.add_argument("--index", type=int, default=0)
     args = parser.parse_args()
     args.root = args.root.resolve()
     args.repo = args.repo.resolve()
@@ -704,6 +743,10 @@ def main():
         score(args.repo, args.root, args.freeze_commit)
     elif args.action == "replay":
         replay(args.root, args.participant, args.trial)
+    elif args.action == "infer":
+        if not args.model or not args.window:
+            parser.error("infer requires --model and --window")
+        infer(args.repo, args.model, args.window, args.index)
     elif args.action == "broker":
         broker(args.root, args.output)
     elif args.action == "predictor":

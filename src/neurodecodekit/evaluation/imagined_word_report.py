@@ -336,6 +336,23 @@ def render_html_report(result: Mapping) -> str:
 
     primary = result["primary_arm"]
     arms = [primary, *result["control_arms"], *result["diagnostic_arms"]]
+    all_mean_gains_positive = all(
+        edge["macro_log_loss"]["mean_gain"] > 0 for edge in result["comparisons"].values()
+    )
+    outcome = (
+        "EEG has positive mean gains against every null control; independent confirmation is still needed."
+        if all_mean_gains_positive else
+        "Useful word decoding was not demonstrated: EEG did not beat every null control."
+    )
+    labels = result["class_labels"]
+    confusion = {reference: {word: 0 for word in labels} for reference in labels}
+    for row in result["prediction_rows"]:
+        confusion[row["reference"]][row["arms"][primary]["word"]] += 1
+    confusion_rows = "".join(
+        f"<tr><th>{escape(reference)}</th>"
+        + "".join(f"<td>{confusion[reference][word]}</td>" for word in labels) + "</tr>"
+        for reference in labels
+    )
 
     def interval(value):
         return "unavailable" if value is None else f"[{value[0]:.4f}, {value[1]:.4f}]"
@@ -409,7 +426,7 @@ def render_html_report(result: Mapping) -> str:
     digest = result.get("provenance", {}).get("prediction_sha256", "not supplied to this renderer")
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
-<title>Imagined-word decoding · held-block report</title>
+<title>Imagined-word decoding · held-out recording report</title>
 <style>
 body{{font:16px/1.55 system-ui,sans-serif;color:#172b35;background:#fafaf8;margin:0}}
 main{{max-width:1200px;margin:auto;padding:32px 24px}}h1{{line-height:1.15;margin-bottom:12px}}
@@ -420,7 +437,8 @@ thead th{{background:#edf1ee}}.scroll{{overflow:auto}}small{{display:block;color
 .correct span{{color:#136044}}.incorrect span{{color:#983833}}code{{overflow-wrap:anywhere}}
 select{{font:inherit;padding:6px;margin:0 0 16px 8px}}details{{margin-top:28px}}
 </style></head><body><main>
-<p>NeuroDecodeKit · local evaluation</p><h1>Prompted imagined words, held-out block</h1>
+<p>NeuroDecodeKit · local evaluation</p><h1>Prompted imagined words, held-out recording</h1>
+<p><strong>{escape(outcome)}</strong></p>
 <p>{result['n_participants']} calibrated participants · {result['n_trials']} held-out trials ·
 {len(result['class_labels'])} predefined words · session {escape(result['heldout_session'])}</p>
 <p class="scope">{escape(result['claim_scope'])}</p>
@@ -439,6 +457,11 @@ confirmation tests. The number of participants, not the number of trials, is the
 <th>Descriptive 95% interval</th><th>People with positive gain</th></tr></thead>
 <tbody>{''.join(comparison_rows)}</tbody></table></div>
 {diagnostics_html}
+<h2>EEG word confusions</h2><p>Pooled counts: rows are references, columns are predictions.
+These counts describe errors; participant-level comparisons above remain the primary analysis.</p>
+<div class="scroll"><table><thead><tr><th>Reference / predicted</th>
+{''.join(f'<th>{escape(word)}</th>' for word in labels)}</tr></thead>
+<tbody>{confusion_rows}</tbody></table></div>
 <details><summary>Every participant and arm</summary><div class="scroll"><table><thead><tr>
 <th>Participant</th><th>Arm</th><th>Trials</th><th>Class-macro log loss</th>
 <th>Balanced accuracy</th><th>Exact accuracy</th></tr></thead>
