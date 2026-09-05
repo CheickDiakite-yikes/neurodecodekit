@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "decision_id": "EEGMMIDB-SMR-D1-D0",
+  "request_id": "EEGMMIDB-SMR-D1",
+  "attempt_id": "EEGMMIDB-SMR-D1-R0",
+  "actual_maintainer_words": "continue",
+  "request_commit": "cdc39c9e325a07d2c34b9bb45b64cd77b873b87d",
+  "packet_path": "docs/EEGMMIDB_SMR_D1_END_TO_END_REQUEST.md",
+  "packet_sha256": "fc46fec758da005b6b8874b8c8fb4545a1648a2b4fc240b6ed39421f47475be6",
+  "request_path": "registries/eegmmidb_smr_d1_request.v0.json",
+  "request_sha256": "2a5260fe9d3697941450306fad94b473abfba3aa9c74900a2fcf287824ff5bdd",
+  "request_ci": {
+    "run_id": 33985792419,
+    "Base Python": 101358918594,
+    "Optional Neuro Readers": 101358918855,
+    "conclusion": "success"
+  },
+  "activation": "After this exact decision is on main and both required CI jobs pass. Then the entire unchanged request is authorized without another human decision.",
+  "scope": "One complete EEGMMIDB-SMR-D1 experiment, including implementation, exact bounded source verification/acquisition, development analysis, target-isolated confirmation predictions, hash-only freeze, one score, invocation-created temporary cleanup, and sanitized aggregate closeout. Narrower task-condition question expressly adopted; all claim and resource limits remain binding.",
+  "excluded": [
+    "consumed predecessors or evidence",
+    "other participants, runs, sources or projects",
+    "dependency downloads or version substitutions",
+    "paid compute, providers, devices or outreach",
+    "post-target tuning, retries, reruns, participant substitution",
+    "public payload or participant-row upload",
+    "release, publication or claim promotion"
+  ],
+  "operations_at_decision": {
+    "scientific_source_requests": 0,
+    "payload_bytes": 0,
+    "neural_reads": 0,
+    "target_reads": 0,
+    "fits": 0,
+    "confirmation_predictions": 0,
+    "scientific_scores": 0
+  }
+}
