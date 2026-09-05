@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "request_id": "EEGMMIDB-SMR-D1",
+  "attempt_id": "EEGMMIDB-SMR-D1-R0",
+  "status": "pending_maintainer_decision",
+  "created": "2026-09-05",
+  "packet_path": "docs/EEGMMIDB_SMR_D1_END_TO_END_REQUEST.md",
+  "packet_sha256": "fc46fec758da005b6b8874b8c8fb4545a1648a2b4fc240b6ed39421f47475be6",
+  "packet_is_complete_scientific_contract": true,
+  "actual_maintainer_words": null,
+  "decision_commit": null,
+  "request_green_ci": null,
+  "authority": {
+    "implementation": false,
+    "dependency_download": false,
+    "official_source_contact": false,
+    "real_download": false,
+    "real_header": false,
+    "real_signal": false,
+    "development_target": false,
+    "development_fit": false,
+    "development_score": false,
+    "confirmation_feature": false,
+    "confirmation_prediction": false,
+    "prediction_freeze": false,
+    "confirmation_target_delivery": false,
+    "confirmation_score": false,
+    "invocation_temporary_cleanup": false,
+    "public_payload_upload": false,
+    "release": false,
+    "publication": false,
+    "claim_promotion": false,
+    "consumed_attempt_reuse": false
+  },
+  "proposed_scope": "New narrower EEG task-condition diagnostic outside FMSR1; no EOG/EMG-independent attribution claim.",
+  "source": {
+    "dataset": "PhysioNet EEG Motor Movement/Imagery Dataset",
+    "version": "1.0.0",
+    "doi": "10.13026/C28G6P",
+    "license_expected": "ODC-By-1.0",
+    "verification_state": "not_contacted",
+    "landing_url": "https://physionet.org/content/eegmmidb/1.0.0/",
+    "checksum_url": "https://physionet.org/files/eegmmidb/1.0.0/SHA256SUMS.txt",
+    "file_base_url": "https://physionet.org/files/eegmmidb/1.0.0/",
+    "exact_payload_bytes": null,
+    "file_sha256": null
+  },
+  "files": [
+    {
+      "participant": "S031",
+      "run": 3,
+      "partition": "development",
+      "path": "S031/S031R03.edf"
+    },
+    {
+      "participant": "S031",
+      "run": 7,
+      "partition": "development",
+      "path": "S031/S031R07.edf"
+    },
+    {
+      "participant": "S032",
+      "run": 3,
+      "partition": "development",
+      "path": "S032/S032R03.edf"
+    },
+    {
+      "participant": "S032",
+      "run": 7,
+      "partition": "development",
+      "path": "S032/S032R07.edf"
+    },
+    {
+      "participant": "S033",
+      "run": 3,
+      "partition": "development",
+      "path": "S033/S033R03.edf"
+    },
+    {
+      "participant": "S033",
+      "run": 7,
+      "partition": "development",
+      "path": "S033/S033R07.edf"
+    },
+    {
+      "participant": "S034",
+      "run": 3,
+      "partition": "development",
+      "path": "S034/S034R03.edf"
+    },
+    {
+      "participant": "S034",
+      "run": 7,
+      "partition": "development",
+      "path": "S034/S034R07.edf"
+    },
+    {
+      "participant": "S035",
+      "run": 3,
+      "partition": "development",
+      "path": "S035/S035R03.edf"
+    },
+    {
+      "participant": "S035",
+      "run": 7,
+      "partition": "development",
+      "path": "S035/S035R07.edf"
+    },
+    {
+      "participant": "S036",
+      "run": 3,
+      "partition": "development",
+      "path": "S036/S036R03.edf"
+    },
+    {
+      "participant": "S036",
+      "run": 7,
+      "partition": "development",
+      "path": "S036/S036R07.edf"
+    },
+    {
+      "participant": "S037",
+      "run": 3,
+      "partition": "development",
+      "path": "S037/S037R03.edf"
+    },
+    {
+      "participant": "S037",
+      "run": 7,
+      "partition": "development",
+      "path": "S037/S037R07.edf"
+    },
+    {
+      "participant": "S038",
+      "run": 3,
+      "partition": "development",
+      "path": "S038/S038R03.edf"
+    },
+    {
+      "participant": "S038",
+      "run": 7,
+      "partition": "development",
+      "path": "S038/S038R07.edf"
+    },
+    {
+      "participant": "S039",
+      "run": 3,
+      "partition": "development",
+      "path": "S039/S039R03.edf"
+    },
+    {
+      "participant": "S039",
+      "run": 7,
+      "partition": "development",
+      "path": "S039/S039R07.edf"
+    },
+    {
+      "participant": "S040",
+      "run": 3,
+      "partition": "development",
+      "path": "S040/S040R03.edf"
+    },
+    {
+      "participant": "S040",
+      "run": 7,
+      "partition": "development",
+      "path": "S040/S040R07.edf"
+    },
+    {
+      "participant": "S041",
+      "run": 11,
+      "partition": "confirmation",
+      "path": "S041/S041R11.edf"
+    },
+    {
+      "participant": "S042",
+      "run": 11,
+      "partition": "confirmation",
+      "path": "S042/S042R11.edf"
+    },
+    {
+      "participant": "S043",
+      "run": 11,
+      "partition": "confirmation",
+      "path": "S043/S043R11.edf"
+    },
+    {
+      "participant": "S044",
+      "run": 11,
+      "partition": "confirmation",
+      "path": "S044/S044R11.edf"
+    },
+    {
+      "participant": "S045",
+      "run": 11,
+      "partition": "confirmation",
+      "path": "S045/S045R11.edf"
+    },
+    {
+      "participant": "S046",
+      "run": 11,
+      "partition": "confirmation",
+      "path": "S046/S046R11.edf"
+    },
+    {
+      "participant": "S047",
+      "run": 11,
+      "partition": "confirmation",
+      "path": "S047/S047R11.edf"
+    },
+    {
+      "participant": "S048",
+      "run": 11,
+      "partition": "confirmation",
+      "path": "S048/S048R11.edf"
+    },
+    {
+      "participant": "S049",
+      "run": 11,
+      "partition": "confirmation",
+      "path": "S049/S049R11.edf"
+    },
+    {
+      "participant": "S050",
+      "run": 11,
+      "partition": "confirmation",
+      "path": "S050/S050R11.edf"
+    },
+    {
+      "participant": "S051",
+      "run": 11,
+      "partition": "confirmation",
+      "path": "S051/S051R11.edf"
+    },
+    {
+      "participant": "S052",
+      "run": 11,
+      "partition": "confirmation",
+      "path": "S052/S052R11.edf"
+    },
+    {
+      "participant": "S053",
+      "run": 11,
+      "partition": "confirmation",
+      "path": "S053/S053R11.edf"
+    },
+    {
+      "participant": "S054",
+      "run": 11,
+      "partition": "confirmation",
+      "path": "S054/S054R11.edf"
+    },
+    {
+      "participant": "S055",
+      "run": 11,
+      "partition": "confirmation",
+      "path": "S055/S055R11.edf"
+    },
+    {
+      "participant": "S056",
+      "run": 11,
+      "partition": "confirmation",
+      "path": "S056/S056R11.edf"
+    },
+    {
+      "participant": "S057",
+      "run": 11,
+      "partition": "confirmation",
+      "path": "S057/S057R11.edf"
+    },
+    {
+      "participant": "S058",
+      "run": 11,
+      "partition": "confirmation",
+      "path": "S058/S058R11.edf"
+    },
+    {
+      "participant": "S059",
+      "run": 11,
+      "partition": "confirmation",
+      "path": "S059/S059R11.edf"
+    },
+    {
+      "participant": "S060",
+      "run": 11,
+      "partition": "confirmation",
+      "path": "S060/S060R11.edf"
+    }
+  ],
+  "limits": {
+    "metadata_gets": 2,
+    "edf_heads": 40,
+    "edf_gets": 40,
+    "metadata_bytes": 4194304,
+    "single_edf_bytes": 8388608,
+    "all_edf_bytes": 268435456,
+    "incremental_disk_bytes": 536870912,
+    "peak_process_tree_rss_bytes": 1073741824,
+    "global_storage_ceiling_bytes": 21474836480,
+    "untouched_global_reserve_bytes": 3221225472,
+    "minimum_filesystem_free_bytes": 21474836480,
+    "cpu_threads": 1,
+    "workers": 1,
+    "optimizer_fits": 17,
+    "confirmation_people": 20,
+    "final_scores": 1,
+    "retries": 0,
+    "reruns": 0,
+    "acquisition_seconds": 1800,
+    "numerical_seconds": 1800,
+    "end_to_end_seconds": 14400
+  },
+  "primary": {
+    "measure": "class_macro_natural_log_loss",
+    "increment": "control_loss_minus_central_loss",
+    "effect_threshold_nats": 0.02,
+    "edge_count": 7,
+    "test": "one_sided_exact_binomial_sign_test_of_majority_increment_above_threshold",
+    "alpha": 0.05,
+    "minimum_wins_per_edge": 15,
+    "all_edges_required": true,
+    "tail_at_minimum": 0.020694732666015625
+  },
+  "measurements_so_far": {
+    "official_source_requests": 0,
+    "real_payload_bytes": 0,
+    "real_header_reads": 0,
+    "real_signal_reads": 0,
+    "target_reads": 0,
+    "optimizer_fits": 0,
+    "confirmation_predictions": 0,
+    "scientific_scores": 0
+  },
+  "known_limits": [
+    "No EOG/EMG recording, so cannot test the full active attribution hypothesis.",
+    "Class-specific visual cue remains unresolved.",
+    "Absence of tracked prior use does not prove absence of unrecorded use.",
+    "Exact source sizes, hashes, channel availability and license have not been verified live.",
+    "Minimal runner and OS target firewall are specified, not yet implemented.",
+    "One cohort and one fitted development model do not provide independent replication."
+  ],
+  "execution_versions": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "scipy": "1.18.0",
+    "mne": "1.12.1",
+    "scikit-learn": "1.9.0"
+  }
+}
