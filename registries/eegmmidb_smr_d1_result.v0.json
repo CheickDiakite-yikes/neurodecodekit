@@ -1,0 +1,106 @@
+{
+  "attempt": "EEGMMIDB-SMR-D1-R0",
+  "phase": "terminal_development_check_failed",
+  "started_unix": 1788639340.4882739,
+  "source_requests": 62,
+  "metadata_gets": 2,
+  "edf_heads": 40,
+  "edf_gets": 20,
+  "metadata_body_bytes": 317701,
+  "edf_body_bytes": 51277440,
+  "acquisition_seconds": 293.6029492919333,
+  "numerical_seconds": 76.75091383396648,
+  "peak_process_tree_rss_bytes": 220577792,
+  "peak_incremental_disk_bytes": 65269760,
+  "fit_invocations_reserved": 10,
+  "fit_calls_started": 10,
+  "fits_completed": 10,
+  "final_scores": 0,
+  "rss_measurement": "100ms tree samples and conservative parent-plus-largest-child high-water bound",
+  "confirmation_target_deliveries": 0,
+  "confirmation_target_read_started": 0,
+  "score_invocation_reserved": false,
+  "preparation": {
+    "decision_ci": {
+      "commit": "d129e16ccc636279878a3c03aebdecf0692d7c21",
+      "run": 33986827323,
+      "jobs": {
+        "Base Python": 101361857274,
+        "Optional Neuro Readers": 101361857405
+      }
+    },
+    "implementation_ci": {
+      "commit": "2befbc14073ad96aca61e22066dd74aaa3a1c61e",
+      "run": 33989065199,
+      "jobs": {
+        "Base Python": 101367882204,
+        "Optional Neuro Readers": 101367882052
+      }
+    },
+    "implementation_sha256": "baba2aecae0aaabf8eeb4801f9c7560debf2825f9cc430fcfc3da60d981056d2",
+    "isolation": {
+      "passed": true,
+      "denial_count": 7,
+      "file_denials": 4,
+      "numpy": "2.5.2",
+      "scipy": "1.18.0",
+      "sklearn": "1.9.0",
+      "official_source_requests": 0,
+      "runtime_seconds": 20.60509145911783,
+      "script_sha256": "baba2aecae0aaabf8eeb4801f9c7560debf2825f9cc430fcfc3da60d981056d2"
+    },
+    "existing_allocation_measurement_bytes": 15993839616,
+    "subsequent_write_allowance_bytes": 1073741824
+  },
+  "development_missingness": {
+    "original_trials": 300,
+    "retained_trials": 300,
+    "excluded_trials": 0
+  },
+  "development_result": {
+    "people": 10,
+    "fits": 10,
+    "mean_balanced_accuracy": 0.5794642857142857,
+    "mean_macro_log_loss": 0.6912969928410554,
+    "mean_binary_macro_brier": 0.24770122881172293,
+    "mean_log_loss_increment": 0.0018501877188899396,
+    "people_increment_above_002": 3,
+    "passed": false
+  },
+  "temporary_entries_cleaned": 0,
+  "retained_temporary_bytes": 0,
+  "elapsed_seconds": 371.8076140880585,
+  "retained_allocated_bytes": 64974848,
+  "disk_partition_bytes": {
+    "raw": 63881216,
+    "metadata": 335872,
+    "tmp": 0,
+    "derived": 147456,
+    "runtime": 610304
+  },
+  "schema_version": 1,
+  "experiment": "EEGMMIDB-SMR-D1",
+  "source_state_sha256": "6d359eb4df5f045fa913650cbebf8f813c935c7fa3f2648c04bc4d82b6213365",
+  "request_path": "registries/eegmmidb_smr_d1_request.v0.json",
+  "decision_path": "registries/eegmmidb_smr_d1_decision.v0.json",
+  "scientific_outcome": "fixed_development_adequacy_criterion_failed",
+  "unseen_person_hypothesis_tested": false,
+  "development_participant_evaluations": 10,
+  "confirmation_edf_gets": 0,
+  "development_trial_count_includes_training_and_evaluation": true,
+  "required_mean_balanced_accuracy": 0.55,
+  "required_people_with_increment_above_002": 6,
+  "no_signal_macro_log_loss": 0.6931471805599453,
+  "terminal_and_consumed": true,
+  "strongest_supported_claim": "The fixed central EEG plus timing metadata candidate failed its predeclared within-person held-run adequacy rule.",
+  "unsupported_claims": [
+    "statistically significant above-chance decoding",
+    "increment attributable to central EEG rather than timing metadata",
+    "absence of neural information",
+    "failed unseen-person generalization",
+    "peripheral-independent motor information",
+    "language decoding",
+    "clinical utility"
+  ],
+  "independent_review": "Three read-only critics reviewed the reported aggregates and interpretation; no independent re-execution or replication."
+}
