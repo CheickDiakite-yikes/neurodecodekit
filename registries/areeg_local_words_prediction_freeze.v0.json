@@ -1,0 +1,40 @@
+{
+  "experiment": "ArEEG-local-words-r0",
+  "revision": "4ba1bb516d6cc98917143b0dfca23947935c7b15",
+  "prediction_sha256": "3fa938356513638ecfe7a91a5ea038eaa20454db06c0ac7a22caa0485f03eb3b",
+  "prediction_bytes": 314232,
+  "manifest_sha256": "f202e0a47242e9faf4f578a4e5343cc060370e36119cb72cfe01cd03b77879eb",
+  "model_sha256": {
+    "0": "d3c60032a3ddff870e514666943b7ee2e7e0cba774987d854da5eb1ae61f8089",
+    "1": "52e80e5a86c13aa1278512c7fc738248fac5a1807d73b2592cb3f3af3ca3b717",
+    "10": "ac54918abd8985d018baf5544a55071e7d147e0d30c4361ca51266cb7710ee2d",
+    "11": "d101211f1877a63f47fb6987bf0bee3d6cecb0da20062887255db1cb101947f2",
+    "3": "f6848947da0f2e78ff7fc227b273c0799bbb41e7c1646686d926fdfcc7ba726c",
+    "4": "733c9c474028329f1f41829d8018deacd09cec37b34667534456af62f09edf58",
+    "5": "f8cd50c3d86ba7318022b8298076b6b8ac5a10d5d4f768529ae669456f71c105",
+    "6": "c967d19c7f5c2e8f6ba67cb817846cd51154762bc528ff3996bcf30aac00c5fa",
+    "7": "f133898bf3ffbf54ccf97f3224df4f0c21bb910e6f5776f11e25687c9605508a",
+    "8": "c921d1e068e332b0d01d5f1f4c5da62fcf38ad7a84f3fa2c36819b731779c519",
+    "9": "a3a8b6bb360ba54d5ed1709436801881cb195f5ccf7bf6a4a85e41e10ceefb66"
+  },
+  "measurements": {
+    "seconds": 1.4360961250495166,
+    "peak_rss_bytes": 360972288,
+    "fit_count": 55,
+    "fitted_calibration_trials": 1373,
+    "prediction_rows": 274,
+    "target_access_denials": [
+      "targets.json",
+      "sub-0_ses-5_task-innerspeech_eeg.vmrk"
+    ],
+    "classes": [
+      "down",
+      "left",
+      "right",
+      "select",
+      "up"
+    ],
+    "model_feature_count": 36
+  },
+  "claim": "Calibrated prompted word classification across held-out recordings."
+}
