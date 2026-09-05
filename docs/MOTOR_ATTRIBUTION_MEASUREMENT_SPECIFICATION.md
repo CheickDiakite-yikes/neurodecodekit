@@ -103,10 +103,12 @@ before confirmation. Class shortages and missingness must never be repaired
 by dropping unfavorable confirmation people.
 
 Primary inference: for each person and each of six edges, compute the
-comparator minus candidate class-balanced natural-log loss. The proposed claim
-requires an exact one-sided sign test that a majority of people exceed
-0.020 nats on **every** edge. This tests majority-person increments, not a
-population-mean effect. Report mean increments and bootstrap intervals
+comparator minus candidate class-balanced natural-log loss. For each edge
+separately, require a one-sided exact sign-test p <= 0.05 for participant
+increments above 0.020 nats, counting ties as nonpositive; all six tests must
+pass. This tests a majority separately on each edge, not necessarily the same
+majority on all edges, and does not test a population-mean effect. Report mean
+increments and bootstrap intervals
 separately, alongside participant-balanced accuracy, Brier score, calibration,
 class counts, missingness and resource measurements. A failed edge prevents
 the conjunction; it does not by itself prove a confound caused the failure.
