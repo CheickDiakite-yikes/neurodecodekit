@@ -1,0 +1,89 @@
+{
+  "experiment": "WORD-RECORDING-D2",
+  "before_fitting_utc": "2026-09-06T01:25:18.131686+00:00",
+  "D1_design": {
+    "experiment": "WORD-RECORDING-D1",
+    "recorded_before_fitting_utc": "2026-09-06T01:19:10.082040+00:00",
+    "code_protocol_sha256": {
+      "docs/WORD_RECORDING_DIAGNOSTIC.md": "cd265f716afb2599632dc271dd324d05f6ae355254f93ecb5c06ccba800d9cc5",
+      "src/neurodecodekit/experiments/word_recording_diagnostic.py": "c09c7f5c6f98a5145aae9429d31247fb8bfe0e55b84c3714c1eb0b7645c50277",
+      "tests/test_word_recording_diagnostic.py": "2540f0f58c295ccc0ce675dcbfc70df58ec4b9433f21c910a1041c75cd68993c",
+      "src/neurodecodekit/models/timesfm_word_features.py": "6587375122f5231cf28e7ed610e794fd5961a8ee0b236666fb62760f9fe4d105",
+      "src/neurodecodekit/models/imagined_word_decoder.py": "a56d1f05902ac187ef08c08bdd61c3a5c26d00d04c50a9c5186111665ae88d38"
+    },
+    "feature_sha256": {
+      "joint_hidden.npy": "9a966c187983008272a888cd2ceca6d7d31163b31bd6c075b739f3b931c853bd",
+      "covariance.npy": "062df046d438dd4a3ca91a068418fbc984c197aba36886507a7040a37f681597",
+      "temporal.npy": "1f244c6115b6f3d7fdcb44632aeab10a2ba60edffa61d28ecc70b655a9930e62"
+    },
+    "feature_process": {
+      "seconds": 73.75593249988742,
+      "sampled_peak_rss_bytes": 2330918912,
+      "returncode": 0,
+      "network_denied": true,
+      "only_development_inputs_allowed": true
+    },
+    "train_counts_histogram": {
+      "16": 27,
+      "17": 108,
+      "18": 86,
+      "19": 19
+    },
+    "fit_or_score_operations_so_far": 0
+  },
+  "adapter_hashes": {
+    "src/neurodecodekit/experiments/word_recording_balanced.py": "0c08c10c078dd45122bfff4234483ae3354e75da999fa134c9aae5e4e927af84",
+    "docs/WORD_RECORDING_BALANCED_DIAGNOSTIC.md": "128c26fc57a2b6f0eeb820b6855b2ac5fff451d9d155790ddac0709b1eb4b760",
+    "tests/test_word_recording_balanced.py": "37d27bbd199db5d160a4e66464b17fafdfdc0bbc26f1e4eaf6737766ac7786aa"
+  },
+  "reuses_development_features_only": true,
+  "feature_storage": "three read-only-used hard links; no extraction or mixed cache read",
+  "prediction_freeze": {
+    "experiment": "WORD-RECORDING-D2",
+    "predictions_sha256": "7c9ad620ea5aa64d2fa51330941de532523ac7e6f90a2d3e6cf86b5c49679f03",
+    "split_sha256": "25bd162cab7c7e39e5c31e68e07c746681e9e104077ccbdfb215737a511ebd1f",
+    "arms": [
+      "joint_hidden",
+      "joint_hidden_shuffled",
+      "joint_hidden_noise",
+      "covariance",
+      "covariance_shuffled",
+      "covariance_noise",
+      "temporal",
+      "temporal_shuffled",
+      "temporal_noise",
+      "uniform",
+      "prior",
+      "metadata"
+    ],
+    "classes": [
+      "down",
+      "left",
+      "right",
+      "select",
+      "up"
+    ],
+    "conditions": [
+      "within",
+      "cross"
+    ],
+    "trials": 1198,
+    "folds": 240,
+    "fits": 4800,
+    "input_sha256": {
+      "train.npy": "ee281590858b6eac2bed9a37ab90ffad2f599a396dfc43a3f0cc87f65cf58ac7",
+      "calibration.json": "6240820e00627ed25819a314d3865abb8fabfc2a22cb1ef20f1187c841d7704a"
+    },
+    "parent": "WORD-RECORDING-D1",
+    "treatment": "class_weight=balanced in every learned logistic head only"
+  },
+  "frozen_before_score_utc": "2026-09-06T01:26:40.598442+00:00",
+  "exact_D1_splits_verified": true,
+  "process": {
+    "seconds": 34.276333916932344,
+    "sampled_peak_rss_bytes": 474546176,
+    "returncode": 0,
+    "network_denied": true,
+    "only_development_inputs_allowed": true
+  }
+}

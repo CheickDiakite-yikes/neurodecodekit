@@ -1,0 +1,1746 @@
+{
+  "experiment": "WORD-RECORDING-D1",
+  "lane": "reused development diagnostic",
+  "participants": 12,
+  "recordings": 48,
+  "trials": 1198,
+  "folds": 240,
+  "training_count_range": [
+    16,
+    19
+  ],
+  "mean_training_count": 17.404166666666665,
+  "freeze": {
+    "experiment": "WORD-RECORDING-D1",
+    "predictions_sha256": "6e9c6a605030e1ce88a6a631d7afea04519cd35accacfb9053348592be96d023",
+    "split_sha256": "25bd162cab7c7e39e5c31e68e07c746681e9e104077ccbdfb215737a511ebd1f",
+    "arms": [
+      "joint_hidden",
+      "joint_hidden_shuffled",
+      "joint_hidden_noise",
+      "covariance",
+      "covariance_shuffled",
+      "covariance_noise",
+      "temporal",
+      "temporal_shuffled",
+      "temporal_noise",
+      "uniform",
+      "prior",
+      "metadata"
+    ],
+    "classes": [
+      "down",
+      "left",
+      "right",
+      "select",
+      "up"
+    ],
+    "conditions": [
+      "within",
+      "cross"
+    ],
+    "trials": 1198,
+    "folds": 240,
+    "fits": 4800,
+    "input_sha256": {
+      "train.npy": "ee281590858b6eac2bed9a37ab90ffad2f599a396dfc43a3f0cc87f65cf58ac7",
+      "calibration.json": "6240820e00627ed25819a314d3865abb8fabfc2a22cb1ef20f1187c841d7704a"
+    }
+  },
+  "summary": {
+    "within/joint_hidden": {
+      "log_loss": 1.8023871412479127,
+      "balanced_accuracy": 0.12833333333333333
+    },
+    "within/joint_hidden_shuffled": {
+      "log_loss": 1.8110816477724543,
+      "balanced_accuracy": 0.10750000000000003
+    },
+    "within/joint_hidden_noise": {
+      "log_loss": 1.7831944408030476,
+      "balanced_accuracy": 0.09749999999999999
+    },
+    "within/covariance": {
+      "log_loss": 2.0689563227378303,
+      "balanced_accuracy": 0.14583333333333334
+    },
+    "within/covariance_shuffled": {
+      "log_loss": 2.087551100235395,
+      "balanced_accuracy": 0.14916666666666667
+    },
+    "within/covariance_noise": {
+      "log_loss": 1.7958766467041827,
+      "balanced_accuracy": 0.12104166666666667
+    },
+    "within/temporal": {
+      "log_loss": 1.8735426229808974,
+      "balanced_accuracy": 0.10666666666666669
+    },
+    "within/temporal_shuffled": {
+      "log_loss": 1.8671551289766135,
+      "balanced_accuracy": 0.11854166666666667
+    },
+    "within/temporal_noise": {
+      "log_loss": 1.7831008196566627,
+      "balanced_accuracy": 0.10250000000000004
+    },
+    "within/uniform": {
+      "log_loss": 1.6094379124341003,
+      "balanced_accuracy": 0.20000000000000004
+    },
+    "within/prior": {
+      "log_loss": 1.7314929036544562,
+      "balanced_accuracy": 0.08916666666666667
+    },
+    "within/metadata": {
+      "log_loss": 1.7845642616691064,
+      "balanced_accuracy": 0.10916666666666669
+    },
+    "cross/joint_hidden": {
+      "log_loss": 1.8021928110863141,
+      "balanced_accuracy": 0.12
+    },
+    "cross/joint_hidden_shuffled": {
+      "log_loss": 1.813983231776273,
+      "balanced_accuracy": 0.10791666666666667
+    },
+    "cross/joint_hidden_noise": {
+      "log_loss": 1.7828757792078909,
+      "balanced_accuracy": 0.10166666666666668
+    },
+    "cross/covariance": {
+      "log_loss": 3.1247063228302427,
+      "balanced_accuracy": 0.1658333333333333
+    },
+    "cross/covariance_shuffled": {
+      "log_loss": 2.997700653575327,
+      "balanced_accuracy": 0.15770833333333334
+    },
+    "cross/covariance_noise": {
+      "log_loss": 1.80676558223493,
+      "balanced_accuracy": 0.11375000000000003
+    },
+    "cross/temporal": {
+      "log_loss": 1.9350948537145278,
+      "balanced_accuracy": 0.12583333333333338
+    },
+    "cross/temporal_shuffled": {
+      "log_loss": 1.9513681751719056,
+      "balanced_accuracy": 0.12125000000000002
+    },
+    "cross/temporal_noise": {
+      "log_loss": 1.7813736530912168,
+      "balanced_accuracy": 0.09166666666666667
+    },
+    "cross/uniform": {
+      "log_loss": 1.6094379124341003,
+      "balanced_accuracy": 0.20000000000000004
+    },
+    "cross/prior": {
+      "log_loss": 1.7314929036544562,
+      "balanced_accuracy": 0.08916666666666667
+    },
+    "cross/metadata": {
+      "log_loss": 1.8272561105097118,
+      "balanced_accuracy": 0.12520833333333337
+    }
+  },
+  "people": [
+    {
+      "participant": "0",
+      "arms": {
+        "within/joint_hidden": {
+          "log_loss": 1.8190654325901854,
+          "balanced_accuracy": 0.13
+        },
+        "within/joint_hidden_shuffled": {
+          "log_loss": 1.818431754002491,
+          "balanced_accuracy": 0.13
+        },
+        "within/joint_hidden_noise": {
+          "log_loss": 1.7846808682614674,
+          "balanced_accuracy": 0.07999999999999999
+        },
+        "within/covariance": {
+          "log_loss": 1.8762488050385568,
+          "balanced_accuracy": 0.19
+        },
+        "within/covariance_shuffled": {
+          "log_loss": 1.9467768164900485,
+          "balanced_accuracy": 0.13
+        },
+        "within/covariance_noise": {
+          "log_loss": 1.7737036031034927,
+          "balanced_accuracy": 0.15
+        },
+        "within/temporal": {
+          "log_loss": 1.8683110740725388,
+          "balanced_accuracy": 0.09000000000000001
+        },
+        "within/temporal_shuffled": {
+          "log_loss": 1.948370558536164,
+          "balanced_accuracy": 0.14
+        },
+        "within/temporal_noise": {
+          "log_loss": 1.7970156873130692,
+          "balanced_accuracy": 0.05
+        },
+        "within/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "within/prior": {
+          "log_loss": 1.7349061141498048,
+          "balanced_accuracy": 0.08
+        },
+        "within/metadata": {
+          "log_loss": 1.7892053960961565,
+          "balanced_accuracy": 0.09
+        },
+        "cross/joint_hidden": {
+          "log_loss": 1.833076138670355,
+          "balanced_accuracy": 0.09000000000000001
+        },
+        "cross/joint_hidden_shuffled": {
+          "log_loss": 1.798426308942303,
+          "balanced_accuracy": 0.12
+        },
+        "cross/joint_hidden_noise": {
+          "log_loss": 1.7873604887932557,
+          "balanced_accuracy": 0.08
+        },
+        "cross/covariance": {
+          "log_loss": 5.838386204829511,
+          "balanced_accuracy": 0.18
+        },
+        "cross/covariance_shuffled": {
+          "log_loss": 4.083733376209221,
+          "balanced_accuracy": 0.18
+        },
+        "cross/covariance_noise": {
+          "log_loss": 1.8151595382060837,
+          "balanced_accuracy": 0.09000000000000001
+        },
+        "cross/temporal": {
+          "log_loss": 2.471564423103399,
+          "balanced_accuracy": 0.06000000000000001
+        },
+        "cross/temporal_shuffled": {
+          "log_loss": 2.2351141455801677,
+          "balanced_accuracy": 0.1
+        },
+        "cross/temporal_noise": {
+          "log_loss": 1.7778172689221075,
+          "balanced_accuracy": 0.08000000000000002
+        },
+        "cross/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "cross/prior": {
+          "log_loss": 1.7349061141498048,
+          "balanced_accuracy": 0.08
+        },
+        "cross/metadata": {
+          "log_loss": 1.801089641105613,
+          "balanced_accuracy": 0.16000000000000003
+        }
+      }
+    },
+    {
+      "participant": "1",
+      "arms": {
+        "within/joint_hidden": {
+          "log_loss": 1.7787593099150334,
+          "balanced_accuracy": 0.15000000000000002
+        },
+        "within/joint_hidden_shuffled": {
+          "log_loss": 1.78946517775015,
+          "balanced_accuracy": 0.07999999999999999
+        },
+        "within/joint_hidden_noise": {
+          "log_loss": 1.7741623826598998,
+          "balanced_accuracy": 0.09000000000000001
+        },
+        "within/covariance": {
+          "log_loss": 1.775901585939125,
+          "balanced_accuracy": 0.11000000000000001
+        },
+        "within/covariance_shuffled": {
+          "log_loss": 1.892306229793194,
+          "balanced_accuracy": 0.060000000000000005
+        },
+        "within/covariance_noise": {
+          "log_loss": 1.8111085910504825,
+          "balanced_accuracy": 0.07
+        },
+        "within/temporal": {
+          "log_loss": 1.8239978809803792,
+          "balanced_accuracy": 0.07
+        },
+        "within/temporal_shuffled": {
+          "log_loss": 1.831977595563603,
+          "balanced_accuracy": 0.05000000000000001
+        },
+        "within/temporal_noise": {
+          "log_loss": 1.785130215401058,
+          "balanced_accuracy": 0.06000000000000001
+        },
+        "within/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "within/prior": {
+          "log_loss": 1.7239071735501459,
+          "balanced_accuracy": 0.07
+        },
+        "within/metadata": {
+          "log_loss": 1.731304898529257,
+          "balanced_accuracy": 0.14
+        },
+        "cross/joint_hidden": {
+          "log_loss": 1.7627685074997343,
+          "balanced_accuracy": 0.13
+        },
+        "cross/joint_hidden_shuffled": {
+          "log_loss": 1.8148184556269618,
+          "balanced_accuracy": 0.07999999999999999
+        },
+        "cross/joint_hidden_noise": {
+          "log_loss": 1.7665623781167032,
+          "balanced_accuracy": 0.09000000000000001
+        },
+        "cross/covariance": {
+          "log_loss": 2.631404196444303,
+          "balanced_accuracy": 0.15000000000000002
+        },
+        "cross/covariance_shuffled": {
+          "log_loss": 2.314077818145136,
+          "balanced_accuracy": 0.15000000000000002
+        },
+        "cross/covariance_noise": {
+          "log_loss": 1.8056486574392927,
+          "balanced_accuracy": 0.16
+        },
+        "cross/temporal": {
+          "log_loss": 1.7277194517224377,
+          "balanced_accuracy": 0.12000000000000001
+        },
+        "cross/temporal_shuffled": {
+          "log_loss": 1.848374912366884,
+          "balanced_accuracy": 0.09000000000000001
+        },
+        "cross/temporal_noise": {
+          "log_loss": 1.7597253978915184,
+          "balanced_accuracy": 0.11
+        },
+        "cross/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "cross/prior": {
+          "log_loss": 1.7239071735501459,
+          "balanced_accuracy": 0.07
+        },
+        "cross/metadata": {
+          "log_loss": 1.8252321032425258,
+          "balanced_accuracy": 0.09
+        }
+      }
+    },
+    {
+      "participant": "2",
+      "arms": {
+        "within/joint_hidden": {
+          "log_loss": 1.8352562838630944,
+          "balanced_accuracy": 0.1
+        },
+        "within/joint_hidden_shuffled": {
+          "log_loss": 1.7997269319359779,
+          "balanced_accuracy": 0.11
+        },
+        "within/joint_hidden_noise": {
+          "log_loss": 1.7829153520273349,
+          "balanced_accuracy": 0.06
+        },
+        "within/covariance": {
+          "log_loss": 2.238062607425408,
+          "balanced_accuracy": 0.13
+        },
+        "within/covariance_shuffled": {
+          "log_loss": 1.9719667871810866,
+          "balanced_accuracy": 0.13
+        },
+        "within/covariance_noise": {
+          "log_loss": 1.8066429375961306,
+          "balanced_accuracy": 0.14
+        },
+        "within/temporal": {
+          "log_loss": 1.7922027740142505,
+          "balanced_accuracy": 0.07
+        },
+        "within/temporal_shuffled": {
+          "log_loss": 1.7915075805031464,
+          "balanced_accuracy": 0.1
+        },
+        "within/temporal_noise": {
+          "log_loss": 1.7822050020901474,
+          "balanced_accuracy": 0.1
+        },
+        "within/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "within/prior": {
+          "log_loss": 1.7271062379776263,
+          "balanced_accuracy": 0.1
+        },
+        "within/metadata": {
+          "log_loss": 1.7648100451814512,
+          "balanced_accuracy": 0.11000000000000001
+        },
+        "cross/joint_hidden": {
+          "log_loss": 1.8314674303835679,
+          "balanced_accuracy": 0.11
+        },
+        "cross/joint_hidden_shuffled": {
+          "log_loss": 1.825419806619676,
+          "balanced_accuracy": 0.11000000000000001
+        },
+        "cross/joint_hidden_noise": {
+          "log_loss": 1.7817030738018067,
+          "balanced_accuracy": 0.15000000000000002
+        },
+        "cross/covariance": {
+          "log_loss": 2.6168819878352076,
+          "balanced_accuracy": 0.15000000000000002
+        },
+        "cross/covariance_shuffled": {
+          "log_loss": 2.3912083953749015,
+          "balanced_accuracy": 0.17
+        },
+        "cross/covariance_noise": {
+          "log_loss": 1.825009890618431,
+          "balanced_accuracy": 0.1
+        },
+        "cross/temporal": {
+          "log_loss": 1.829814388686206,
+          "balanced_accuracy": 0.14
+        },
+        "cross/temporal_shuffled": {
+          "log_loss": 1.8524638588078612,
+          "balanced_accuracy": 0.11000000000000001
+        },
+        "cross/temporal_noise": {
+          "log_loss": 1.7784085701727843,
+          "balanced_accuracy": 0.05
+        },
+        "cross/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "cross/prior": {
+          "log_loss": 1.7271062379776263,
+          "balanced_accuracy": 0.1
+        },
+        "cross/metadata": {
+          "log_loss": 1.826171964985268,
+          "balanced_accuracy": 0.15000000000000002
+        }
+      }
+    },
+    {
+      "participant": "3",
+      "arms": {
+        "within/joint_hidden": {
+          "log_loss": 1.8565761281846112,
+          "balanced_accuracy": 0.060000000000000005
+        },
+        "within/joint_hidden_shuffled": {
+          "log_loss": 1.8757278711327172,
+          "balanced_accuracy": 0.060000000000000005
+        },
+        "within/joint_hidden_noise": {
+          "log_loss": 1.8321062488641333,
+          "balanced_accuracy": 0.09000000000000001
+        },
+        "within/covariance": {
+          "log_loss": 2.1634869296060133,
+          "balanced_accuracy": 0.14
+        },
+        "within/covariance_shuffled": {
+          "log_loss": 2.1148772576116928,
+          "balanced_accuracy": 0.12
+        },
+        "within/covariance_noise": {
+          "log_loss": 1.8241984293662057,
+          "balanced_accuracy": 0.09000000000000001
+        },
+        "within/temporal": {
+          "log_loss": 1.8787282809232064,
+          "balanced_accuracy": 0.11
+        },
+        "within/temporal_shuffled": {
+          "log_loss": 1.9013235683562264,
+          "balanced_accuracy": 0.08000000000000002
+        },
+        "within/temporal_noise": {
+          "log_loss": 1.8296990292016,
+          "balanced_accuracy": 0.1
+        },
+        "within/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "within/prior": {
+          "log_loss": 1.766582559771697,
+          "balanced_accuracy": 0.060000000000000005
+        },
+        "within/metadata": {
+          "log_loss": 1.8521297530298617,
+          "balanced_accuracy": 0.09000000000000001
+        },
+        "cross/joint_hidden": {
+          "log_loss": 1.8196078282001815,
+          "balanced_accuracy": 0.08000000000000002
+        },
+        "cross/joint_hidden_shuffled": {
+          "log_loss": 1.848320651078671,
+          "balanced_accuracy": 0.09999999999999999
+        },
+        "cross/joint_hidden_noise": {
+          "log_loss": 1.8400097176290122,
+          "balanced_accuracy": 0.04
+        },
+        "cross/covariance": {
+          "log_loss": 2.365902024448631,
+          "balanced_accuracy": 0.15000000000000002
+        },
+        "cross/covariance_shuffled": {
+          "log_loss": 2.878269128984093,
+          "balanced_accuracy": 0.10000000000000002
+        },
+        "cross/covariance_noise": {
+          "log_loss": 1.843652997903013,
+          "balanced_accuracy": 0.08000000000000002
+        },
+        "cross/temporal": {
+          "log_loss": 2.071686663750367,
+          "balanced_accuracy": 0.08
+        },
+        "cross/temporal_shuffled": {
+          "log_loss": 2.0349439690312248,
+          "balanced_accuracy": 0.09
+        },
+        "cross/temporal_noise": {
+          "log_loss": 1.8400063932721928,
+          "balanced_accuracy": 0.060000000000000005
+        },
+        "cross/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "cross/prior": {
+          "log_loss": 1.766582559771697,
+          "balanced_accuracy": 0.060000000000000005
+        },
+        "cross/metadata": {
+          "log_loss": 1.8449268687837064,
+          "balanced_accuracy": 0.12
+        }
+      }
+    },
+    {
+      "participant": "4",
+      "arms": {
+        "within/joint_hidden": {
+          "log_loss": 1.828556824880865,
+          "balanced_accuracy": 0.13
+        },
+        "within/joint_hidden_shuffled": {
+          "log_loss": 1.8144298013024132,
+          "balanced_accuracy": 0.14
+        },
+        "within/joint_hidden_noise": {
+          "log_loss": 1.7990842441826715,
+          "balanced_accuracy": 0.1
+        },
+        "within/covariance": {
+          "log_loss": 1.877148819261484,
+          "balanced_accuracy": 0.08000000000000002
+        },
+        "within/covariance_shuffled": {
+          "log_loss": 1.8753380007661076,
+          "balanced_accuracy": 0.15000000000000002
+        },
+        "within/covariance_noise": {
+          "log_loss": 1.7983151737325898,
+          "balanced_accuracy": 0.12000000000000001
+        },
+        "within/temporal": {
+          "log_loss": 1.8708864353674897,
+          "balanced_accuracy": 0.08
+        },
+        "within/temporal_shuffled": {
+          "log_loss": 1.8536004017795613,
+          "balanced_accuracy": 0.09
+        },
+        "within/temporal_noise": {
+          "log_loss": 1.8025942221396867,
+          "balanced_accuracy": 0.10000000000000002
+        },
+        "within/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "within/prior": {
+          "log_loss": 1.7423698164391817,
+          "balanced_accuracy": 0.07
+        },
+        "within/metadata": {
+          "log_loss": 1.8211249375852856,
+          "balanced_accuracy": 0.13
+        },
+        "cross/joint_hidden": {
+          "log_loss": 1.822433607927675,
+          "balanced_accuracy": 0.13
+        },
+        "cross/joint_hidden_shuffled": {
+          "log_loss": 1.8265012207893598,
+          "balanced_accuracy": 0.09000000000000001
+        },
+        "cross/joint_hidden_noise": {
+          "log_loss": 1.8002714461811191,
+          "balanced_accuracy": 0.11000000000000001
+        },
+        "cross/covariance": {
+          "log_loss": 1.8360695230872195,
+          "balanced_accuracy": 0.21000000000000002
+        },
+        "cross/covariance_shuffled": {
+          "log_loss": 1.9144141142745204,
+          "balanced_accuracy": 0.1
+        },
+        "cross/covariance_noise": {
+          "log_loss": 1.7925956839175456,
+          "balanced_accuracy": 0.14
+        },
+        "cross/temporal": {
+          "log_loss": 1.81628476117256,
+          "balanced_accuracy": 0.13
+        },
+        "cross/temporal_shuffled": {
+          "log_loss": 1.8402768339664681,
+          "balanced_accuracy": 0.09000000000000001
+        },
+        "cross/temporal_noise": {
+          "log_loss": 1.7975444197106203,
+          "balanced_accuracy": 0.09000000000000001
+        },
+        "cross/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "cross/prior": {
+          "log_loss": 1.7423698164391817,
+          "balanced_accuracy": 0.07
+        },
+        "cross/metadata": {
+          "log_loss": 1.8479713271926195,
+          "balanced_accuracy": 0.13
+        }
+      }
+    },
+    {
+      "participant": "5",
+      "arms": {
+        "within/joint_hidden": {
+          "log_loss": 1.7031551108932947,
+          "balanced_accuracy": 0.21000000000000002
+        },
+        "within/joint_hidden_shuffled": {
+          "log_loss": 1.7433948055087414,
+          "balanced_accuracy": 0.12
+        },
+        "within/joint_hidden_noise": {
+          "log_loss": 1.722144060099056,
+          "balanced_accuracy": 0.060000000000000005
+        },
+        "within/covariance": {
+          "log_loss": 1.7241605247626828,
+          "balanced_accuracy": 0.16000000000000003
+        },
+        "within/covariance_shuffled": {
+          "log_loss": 1.8040605783768433,
+          "balanced_accuracy": 0.19
+        },
+        "within/covariance_noise": {
+          "log_loss": 1.7429769796102752,
+          "balanced_accuracy": 0.11
+        },
+        "within/temporal": {
+          "log_loss": 1.901561313298752,
+          "balanced_accuracy": 0.16999999999999998
+        },
+        "within/temporal_shuffled": {
+          "log_loss": 1.8632868686978568,
+          "balanced_accuracy": 0.16
+        },
+        "within/temporal_noise": {
+          "log_loss": 1.728874870145385,
+          "balanced_accuracy": 0.08
+        },
+        "within/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "within/prior": {
+          "log_loss": 1.692315168475658,
+          "balanced_accuracy": 0.08
+        },
+        "within/metadata": {
+          "log_loss": 1.7461359250248458,
+          "balanced_accuracy": 0.09000000000000001
+        },
+        "cross/joint_hidden": {
+          "log_loss": 1.7051532629897705,
+          "balanced_accuracy": 0.13
+        },
+        "cross/joint_hidden_shuffled": {
+          "log_loss": 1.7817707422132296,
+          "balanced_accuracy": 0.1
+        },
+        "cross/joint_hidden_noise": {
+          "log_loss": 1.7237954027364943,
+          "balanced_accuracy": 0.11000000000000001
+        },
+        "cross/covariance": {
+          "log_loss": 2.235619829377806,
+          "balanced_accuracy": 0.19
+        },
+        "cross/covariance_shuffled": {
+          "log_loss": 2.3367413300409847,
+          "balanced_accuracy": 0.26
+        },
+        "cross/covariance_noise": {
+          "log_loss": 1.7237135397614956,
+          "balanced_accuracy": 0.15000000000000002
+        },
+        "cross/temporal": {
+          "log_loss": 1.7662897236832755,
+          "balanced_accuracy": 0.16
+        },
+        "cross/temporal_shuffled": {
+          "log_loss": 1.8924018425339926,
+          "balanced_accuracy": 0.13
+        },
+        "cross/temporal_noise": {
+          "log_loss": 1.7225466056654313,
+          "balanced_accuracy": 0.060000000000000005
+        },
+        "cross/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "cross/prior": {
+          "log_loss": 1.692315168475658,
+          "balanced_accuracy": 0.08
+        },
+        "cross/metadata": {
+          "log_loss": 1.8319563567015065,
+          "balanced_accuracy": 0.07
+        }
+      }
+    },
+    {
+      "participant": "6",
+      "arms": {
+        "within/joint_hidden": {
+          "log_loss": 1.8083339450792435,
+          "balanced_accuracy": 0.17
+        },
+        "within/joint_hidden_shuffled": {
+          "log_loss": 1.8423778183632793,
+          "balanced_accuracy": 0.13
+        },
+        "within/joint_hidden_noise": {
+          "log_loss": 1.8072037205696896,
+          "balanced_accuracy": 0.08
+        },
+        "within/covariance": {
+          "log_loss": 2.4294737639065014,
+          "balanced_accuracy": 0.19
+        },
+        "within/covariance_shuffled": {
+          "log_loss": 2.802458266745408,
+          "balanced_accuracy": 0.15000000000000002
+        },
+        "within/covariance_noise": {
+          "log_loss": 1.8167393498496256,
+          "balanced_accuracy": 0.12
+        },
+        "within/temporal": {
+          "log_loss": 1.8617301626117795,
+          "balanced_accuracy": 0.09000000000000001
+        },
+        "within/temporal_shuffled": {
+          "log_loss": 1.8335765871418566,
+          "balanced_accuracy": 0.11
+        },
+        "within/temporal_noise": {
+          "log_loss": 1.80787415272227,
+          "balanced_accuracy": 0.13999999999999999
+        },
+        "within/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "within/prior": {
+          "log_loss": 1.7474025200952088,
+          "balanced_accuracy": 0.1
+        },
+        "within/metadata": {
+          "log_loss": 1.7791375353303962,
+          "balanced_accuracy": 0.11000000000000001
+        },
+        "cross/joint_hidden": {
+          "log_loss": 1.8386202755768704,
+          "balanced_accuracy": 0.13000000000000003
+        },
+        "cross/joint_hidden_shuffled": {
+          "log_loss": 1.8398488731891747,
+          "balanced_accuracy": 0.10000000000000002
+        },
+        "cross/joint_hidden_noise": {
+          "log_loss": 1.8051718085907558,
+          "balanced_accuracy": 0.1
+        },
+        "cross/covariance": {
+          "log_loss": 3.0923628633053473,
+          "balanced_accuracy": 0.19000000000000003
+        },
+        "cross/covariance_shuffled": {
+          "log_loss": 3.1436515701147654,
+          "balanced_accuracy": 0.08000000000000002
+        },
+        "cross/covariance_noise": {
+          "log_loss": 1.8299433182307498,
+          "balanced_accuracy": 0.1
+        },
+        "cross/temporal": {
+          "log_loss": 1.8714084915023281,
+          "balanced_accuracy": 0.14
+        },
+        "cross/temporal_shuffled": {
+          "log_loss": 1.8532899635073123,
+          "balanced_accuracy": 0.1
+        },
+        "cross/temporal_noise": {
+          "log_loss": 1.8052277605166498,
+          "balanced_accuracy": 0.14
+        },
+        "cross/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "cross/prior": {
+          "log_loss": 1.7474025200952088,
+          "balanced_accuracy": 0.1
+        },
+        "cross/metadata": {
+          "log_loss": 1.8538137565015005,
+          "balanced_accuracy": 0.14
+        }
+      }
+    },
+    {
+      "participant": "7",
+      "arms": {
+        "within/joint_hidden": {
+          "log_loss": 1.8370215990830439,
+          "balanced_accuracy": 0.11000000000000001
+        },
+        "within/joint_hidden_shuffled": {
+          "log_loss": 1.8508504609847645,
+          "balanced_accuracy": 0.09000000000000001
+        },
+        "within/joint_hidden_noise": {
+          "log_loss": 1.819609994300048,
+          "balanced_accuracy": 0.14
+        },
+        "within/covariance": {
+          "log_loss": 1.8630032157112544,
+          "balanced_accuracy": 0.15
+        },
+        "within/covariance_shuffled": {
+          "log_loss": 1.917070946069601,
+          "balanced_accuracy": 0.15000000000000002
+        },
+        "within/covariance_noise": {
+          "log_loss": 1.816172970290878,
+          "balanced_accuracy": 0.18
+        },
+        "within/temporal": {
+          "log_loss": 1.8499753184973053,
+          "balanced_accuracy": 0.15
+        },
+        "within/temporal_shuffled": {
+          "log_loss": 1.8814008699199984,
+          "balanced_accuracy": 0.13
+        },
+        "within/temporal_noise": {
+          "log_loss": 1.820801050329119,
+          "balanced_accuracy": 0.1
+        },
+        "within/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "within/prior": {
+          "log_loss": 1.7568965200593412,
+          "balanced_accuracy": 0.09000000000000001
+        },
+        "within/metadata": {
+          "log_loss": 1.8302164296746912,
+          "balanced_accuracy": 0.1
+        },
+        "cross/joint_hidden": {
+          "log_loss": 1.8173018300020811,
+          "balanced_accuracy": 0.13
+        },
+        "cross/joint_hidden_shuffled": {
+          "log_loss": 1.8705095079358025,
+          "balanced_accuracy": 0.06000000000000001
+        },
+        "cross/joint_hidden_noise": {
+          "log_loss": 1.827715351250022,
+          "balanced_accuracy": 0.09
+        },
+        "cross/covariance": {
+          "log_loss": 2.1195690370552938,
+          "balanced_accuracy": 0.11000000000000001
+        },
+        "cross/covariance_shuffled": {
+          "log_loss": 2.0079161375955135,
+          "balanced_accuracy": 0.14
+        },
+        "cross/covariance_noise": {
+          "log_loss": 1.8807436055385884,
+          "balanced_accuracy": 0.07
+        },
+        "cross/temporal": {
+          "log_loss": 1.8687597909038964,
+          "balanced_accuracy": 0.18
+        },
+        "cross/temporal_shuffled": {
+          "log_loss": 1.9068716546615365,
+          "balanced_accuracy": 0.15000000000000002
+        },
+        "cross/temporal_noise": {
+          "log_loss": 1.817536507891762,
+          "balanced_accuracy": 0.08
+        },
+        "cross/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "cross/prior": {
+          "log_loss": 1.7568965200593412,
+          "balanced_accuracy": 0.09000000000000001
+        },
+        "cross/metadata": {
+          "log_loss": 1.84642393940307,
+          "balanced_accuracy": 0.11
+        }
+      }
+    },
+    {
+      "participant": "8",
+      "arms": {
+        "within/joint_hidden": {
+          "log_loss": 1.748247207226216,
+          "balanced_accuracy": 0.13
+        },
+        "within/joint_hidden_shuffled": {
+          "log_loss": 1.8008163861332565,
+          "balanced_accuracy": 0.08
+        },
+        "within/joint_hidden_noise": {
+          "log_loss": 1.730437336338997,
+          "balanced_accuracy": 0.14
+        },
+        "within/covariance": {
+          "log_loss": 2.2049428950464707,
+          "balanced_accuracy": 0.15000000000000002
+        },
+        "within/covariance_shuffled": {
+          "log_loss": 2.181653920221991,
+          "balanced_accuracy": 0.21000000000000002
+        },
+        "within/covariance_noise": {
+          "log_loss": 1.752932535225769,
+          "balanced_accuracy": 0.15
+        },
+        "within/temporal": {
+          "log_loss": 1.7969611989924563,
+          "balanced_accuracy": 0.11000000000000001
+        },
+        "within/temporal_shuffled": {
+          "log_loss": 1.7916319417183397,
+          "balanced_accuracy": 0.09
+        },
+        "within/temporal_noise": {
+          "log_loss": 1.7222238288654268,
+          "balanced_accuracy": 0.16000000000000003
+        },
+        "within/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "within/prior": {
+          "log_loss": 1.6985903510250586,
+          "balanced_accuracy": 0.10999999999999999
+        },
+        "within/metadata": {
+          "log_loss": 1.7289205490464084,
+          "balanced_accuracy": 0.12000000000000001
+        },
+        "cross/joint_hidden": {
+          "log_loss": 1.790125045934233,
+          "balanced_accuracy": 0.07
+        },
+        "cross/joint_hidden_shuffled": {
+          "log_loss": 1.7126571916604152,
+          "balanced_accuracy": 0.18
+        },
+        "cross/joint_hidden_noise": {
+          "log_loss": 1.7318094198776008,
+          "balanced_accuracy": 0.09
+        },
+        "cross/covariance": {
+          "log_loss": 2.933710946819456,
+          "balanced_accuracy": 0.16
+        },
+        "cross/covariance_shuffled": {
+          "log_loss": 2.8039477374663355,
+          "balanced_accuracy": 0.17000000000000004
+        },
+        "cross/covariance_noise": {
+          "log_loss": 1.7589897714236484,
+          "balanced_accuracy": 0.12000000000000001
+        },
+        "cross/temporal": {
+          "log_loss": 1.766830270523492,
+          "balanced_accuracy": 0.08
+        },
+        "cross/temporal_shuffled": {
+          "log_loss": 1.7891218410505314,
+          "balanced_accuracy": 0.11
+        },
+        "cross/temporal_noise": {
+          "log_loss": 1.7242550087961073,
+          "balanced_accuracy": 0.15000000000000002
+        },
+        "cross/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "cross/prior": {
+          "log_loss": 1.6985903510250586,
+          "balanced_accuracy": 0.10999999999999999
+        },
+        "cross/metadata": {
+          "log_loss": 1.7645991884568557,
+          "balanced_accuracy": 0.15000000000000002
+        }
+      }
+    },
+    {
+      "participant": "9",
+      "arms": {
+        "within/joint_hidden": {
+          "log_loss": 1.8114817597595538,
+          "balanced_accuracy": 0.13999999999999999
+        },
+        "within/joint_hidden_shuffled": {
+          "log_loss": 1.8185317398674279,
+          "balanced_accuracy": 0.14
+        },
+        "within/joint_hidden_noise": {
+          "log_loss": 1.8022025734122553,
+          "balanced_accuracy": 0.11
+        },
+        "within/covariance": {
+          "log_loss": 2.6537135473393727,
+          "balanced_accuracy": 0.21000000000000002
+        },
+        "within/covariance_shuffled": {
+          "log_loss": 2.525879646321535,
+          "balanced_accuracy": 0.2
+        },
+        "within/covariance_noise": {
+          "log_loss": 1.8207511334360995,
+          "balanced_accuracy": 0.12
+        },
+        "within/temporal": {
+          "log_loss": 1.8382685308141258,
+          "balanced_accuracy": 0.13
+        },
+        "within/temporal_shuffled": {
+          "log_loss": 1.860605004405219,
+          "balanced_accuracy": 0.13
+        },
+        "within/temporal_noise": {
+          "log_loss": 1.795988256673765,
+          "balanced_accuracy": 0.12000000000000001
+        },
+        "within/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "within/prior": {
+          "log_loss": 1.7417635764331743,
+          "balanced_accuracy": 0.09
+        },
+        "within/metadata": {
+          "log_loss": 1.8126367210654828,
+          "balanced_accuracy": 0.12000000000000002
+        },
+        "cross/joint_hidden": {
+          "log_loss": 1.8368386657518212,
+          "balanced_accuracy": 0.16999999999999998
+        },
+        "cross/joint_hidden_shuffled": {
+          "log_loss": 1.882570678604906,
+          "balanced_accuracy": 0.11000000000000001
+        },
+        "cross/joint_hidden_noise": {
+          "log_loss": 1.799333624948884,
+          "balanced_accuracy": 0.12000000000000001
+        },
+        "cross/covariance": {
+          "log_loss": 4.461376386742034,
+          "balanced_accuracy": 0.21000000000000002
+        },
+        "cross/covariance_shuffled": {
+          "log_loss": 3.8351558903666483,
+          "balanced_accuracy": 0.24000000000000005
+        },
+        "cross/covariance_noise": {
+          "log_loss": 1.8191172367278936,
+          "balanced_accuracy": 0.12000000000000001
+        },
+        "cross/temporal": {
+          "log_loss": 1.8924663799725605,
+          "balanced_accuracy": 0.14
+        },
+        "cross/temporal_shuffled": {
+          "log_loss": 1.863154550053519,
+          "balanced_accuracy": 0.14
+        },
+        "cross/temporal_noise": {
+          "log_loss": 1.8094921583460772,
+          "balanced_accuracy": 0.08000000000000002
+        },
+        "cross/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "cross/prior": {
+          "log_loss": 1.7417635764331743,
+          "balanced_accuracy": 0.09
+        },
+        "cross/metadata": {
+          "log_loss": 1.8313727095505186,
+          "balanced_accuracy": 0.14
+        }
+      }
+    },
+    {
+      "participant": "10",
+      "arms": {
+        "within/joint_hidden": {
+          "log_loss": 1.767369170859305,
+          "balanced_accuracy": 0.12
+        },
+        "within/joint_hidden_shuffled": {
+          "log_loss": 1.782712418474929,
+          "balanced_accuracy": 0.11000000000000001
+        },
+        "within/joint_hidden_noise": {
+          "log_loss": 1.7696599941051128,
+          "balanced_accuracy": 0.1
+        },
+        "within/covariance": {
+          "log_loss": 2.1481360465866555,
+          "balanced_accuracy": 0.08
+        },
+        "within/covariance_shuffled": {
+          "log_loss": 2.1282415688685665,
+          "balanced_accuracy": 0.15000000000000002
+        },
+        "within/covariance_noise": {
+          "log_loss": 1.7763512487533237,
+          "balanced_accuracy": 0.06
+        },
+        "within/temporal": {
+          "log_loss": 2.1412932606723363,
+          "balanced_accuracy": 0.09000000000000001
+        },
+        "within/temporal_shuffled": {
+          "log_loss": 2.051081131517637,
+          "balanced_accuracy": 0.2
+        },
+        "within/temporal_noise": {
+          "log_loss": 1.762750446294117,
+          "balanced_accuracy": 0.1
+        },
+        "within/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "within/prior": {
+          "log_loss": 1.7214511336833984,
+          "balanced_accuracy": 0.1
+        },
+        "within/metadata": {
+          "log_loss": 1.7758733229062766,
+          "balanced_accuracy": 0.12000000000000002
+        },
+        "cross/joint_hidden": {
+          "log_loss": 1.7822561827624657,
+          "balanced_accuracy": 0.12
+        },
+        "cross/joint_hidden_shuffled": {
+          "log_loss": 1.800453422549743,
+          "balanced_accuracy": 0.08
+        },
+        "cross/joint_hidden_noise": {
+          "log_loss": 1.7612453547886124,
+          "balanced_accuracy": 0.11000000000000001
+        },
+        "cross/covariance": {
+          "log_loss": 2.3786767191875535,
+          "balanced_accuracy": 0.14
+        },
+        "cross/covariance_shuffled": {
+          "log_loss": 2.6738472634544044,
+          "balanced_accuracy": 0.12
+        },
+        "cross/covariance_noise": {
+          "log_loss": 1.7812370102414687,
+          "balanced_accuracy": 0.1
+        },
+        "cross/temporal": {
+          "log_loss": 2.0590306769878803,
+          "balanced_accuracy": 0.16000000000000003
+        },
+        "cross/temporal_shuffled": {
+          "log_loss": 2.3238677157078182,
+          "balanced_accuracy": 0.15000000000000002
+        },
+        "cross/temporal_noise": {
+          "log_loss": 1.7663639905423922,
+          "balanced_accuracy": 0.09000000000000001
+        },
+        "cross/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "cross/prior": {
+          "log_loss": 1.7214511336833984,
+          "balanced_accuracy": 0.1
+        },
+        "cross/metadata": {
+          "log_loss": 1.8638405580747572,
+          "balanced_accuracy": 0.09000000000000001
+        }
+      }
+    },
+    {
+      "participant": "11",
+      "arms": {
+        "within/joint_hidden": {
+          "log_loss": 1.8348229226405066,
+          "balanced_accuracy": 0.09
+        },
+        "within/joint_hidden_shuffled": {
+          "log_loss": 1.7965146078133047,
+          "balanced_accuracy": 0.09999999999999999
+        },
+        "within/joint_hidden_noise": {
+          "log_loss": 1.7741265148159036,
+          "balanced_accuracy": 0.12
+        },
+        "within/covariance": {
+          "log_loss": 1.8731971322304404,
+          "balanced_accuracy": 0.15999999999999998
+        },
+        "within/covariance_shuffled": {
+          "log_loss": 1.8899831843786672,
+          "balanced_accuracy": 0.15000000000000002
+        },
+        "within/covariance_noise": {
+          "log_loss": 1.8106268084353168,
+          "balanced_accuracy": 0.14250000000000002
+        },
+        "within/temporal": {
+          "log_loss": 1.8585952455261485,
+          "balanced_accuracy": 0.12000000000000002
+        },
+        "within/temporal_shuffled": {
+          "log_loss": 1.7974994395797514,
+          "balanced_accuracy": 0.14250000000000002
+        },
+        "within/temporal_noise": {
+          "log_loss": 1.7620530747043075,
+          "balanced_accuracy": 0.12000000000000002
+        },
+        "within/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "within/prior": {
+          "log_loss": 1.7246236721931798,
+          "balanced_accuracy": 0.12000000000000001
+        },
+        "within/metadata": {
+          "log_loss": 1.783275626559165,
+          "balanced_accuracy": 0.09
+        },
+        "cross/joint_hidden": {
+          "log_loss": 1.786664957337014,
+          "balanced_accuracy": 0.15000000000000002
+        },
+        "cross/joint_hidden_shuffled": {
+          "log_loss": 1.7665019221050324,
+          "balanced_accuracy": 0.165
+        },
+        "cross/joint_hidden_noise": {
+          "log_loss": 1.769531283780423,
+          "balanced_accuracy": 0.13
+        },
+        "cross/covariance": {
+          "log_loss": 4.986516154830552,
+          "balanced_accuracy": 0.15
+        },
+        "cross/covariance_shuffled": {
+          "log_loss": 5.589445080877395,
+          "balanced_accuracy": 0.1825
+        },
+        "cross/covariance_noise": {
+          "log_loss": 1.8053757368109489,
+          "balanced_accuracy": 0.13499999999999998
+        },
+        "cross/temporal": {
+          "log_loss": 2.0792832225659286,
+          "balanced_accuracy": 0.12
+        },
+        "cross/temporal_shuffled": {
+          "log_loss": 1.976536814795554,
+          "balanced_accuracy": 0.195
+        },
+        "cross/temporal_noise": {
+          "log_loss": 1.7775597553669589,
+          "balanced_accuracy": 0.11000000000000001
+        },
+        "cross/uniform": {
+          "log_loss": 1.6094379124341003,
+          "balanced_accuracy": 0.2
+        },
+        "cross/prior": {
+          "log_loss": 1.7246236721931798,
+          "balanced_accuracy": 0.12000000000000001
+        },
+        "cross/metadata": {
+          "log_loss": 1.7896749121186009,
+          "balanced_accuracy": 0.15250000000000002
+        }
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "treatment": "within/joint_hidden",
+      "baseline": "cross/joint_hidden",
+      "log_loss_gain": {
+        "mean": -0.0001943301615986067,
+        "ci95_descriptive": [
+          -0.01539415969402446,
+          0.013967536056264157
+        ],
+        "positive_people": 6
+      },
+      "balanced_accuracy_gain": {
+        "mean": 0.008333333333333331,
+        "ci95_descriptive": [
+          -0.014166666666666668,
+          0.030833333333333338
+        ],
+        "positive_people": 5
+      }
+    },
+    {
+      "treatment": "within/joint_hidden",
+      "baseline": "within/uniform",
+      "log_loss_gain": {
+        "mean": -0.19294922881381246,
+        "ci95_descriptive": [
+          -0.21513724098745293,
+          -0.1677990065947966
+        ],
+        "positive_people": 0
+      },
+      "balanced_accuracy_gain": {
+        "mean": -0.07166666666666668,
+        "ci95_descriptive": [
+          -0.09166666666666667,
+          -0.05081249999999993
+        ],
+        "positive_people": 1
+      }
+    },
+    {
+      "treatment": "within/joint_hidden",
+      "baseline": "within/prior",
+      "log_loss_gain": {
+        "mean": -0.07089423759345649,
+        "ci95_descriptive": [
+          -0.08552729014997563,
+          -0.055393859749702935
+        ],
+        "positive_people": 0
+      },
+      "balanced_accuracy_gain": {
+        "mean": 0.03916666666666666,
+        "ci95_descriptive": [
+          0.016666666666666666,
+          0.06333333333333334
+        ],
+        "positive_people": 9
+      }
+    },
+    {
+      "treatment": "within/joint_hidden",
+      "baseline": "within/metadata",
+      "log_loss_gain": {
+        "mean": -0.01782287957880624,
+        "ci95_descriptive": [
+          -0.034395199761968,
+          -0.001402091525947838
+        ],
+        "positive_people": 3
+      },
+      "balanced_accuracy_gain": {
+        "mean": 0.01916666666666666,
+        "ci95_descriptive": [
+          -1.1564823173178713e-18,
+          0.0425
+        ],
+        "positive_people": 7
+      }
+    },
+    {
+      "treatment": "within/joint_hidden",
+      "baseline": "within/joint_hidden_shuffled",
+      "log_loss_gain": {
+        "mean": 0.008694506524541642,
+        "ci95_descriptive": [
+          -0.007028276979385156,
+          0.022755751624812717
+        ],
+        "positive_people": 8
+      },
+      "balanced_accuracy_gain": {
+        "mean": 0.020833333333333332,
+        "ci95_descriptive": [
+          0.004166666666666655,
+          0.04000000000000001
+        ],
+        "positive_people": 6
+      }
+    },
+    {
+      "treatment": "within/joint_hidden",
+      "baseline": "within/joint_hidden_noise",
+      "log_loss_gain": {
+        "mean": -0.01919270044486528,
+        "ci95_descriptive": [
+          -0.03176913171825861,
+          -0.007278139668006908
+        ],
+        "positive_people": 2
+      },
+      "balanced_accuracy_gain": {
+        "mean": 0.030833333333333334,
+        "ci95_descriptive": [
+          0.0033333333333333353,
+          0.06085416666666675
+        ],
+        "positive_people": 8
+      }
+    },
+    {
+      "treatment": "within/covariance",
+      "baseline": "cross/covariance",
+      "log_loss_gain": {
+        "mean": 1.0557500000924127,
+        "ci95_descriptive": [
+          0.4378328332593373,
+          1.8116613437256428
+        ],
+        "positive_people": 11
+      },
+      "balanced_accuracy_gain": {
+        "mean": -0.020000000000000007,
+        "ci95_descriptive": [
+          -0.04583333333333334,
+          0.0008333333333333295
+        ],
+        "positive_people": 3
+      }
+    },
+    {
+      "treatment": "within/covariance",
+      "baseline": "within/uniform",
+      "log_loss_gain": {
+        "mean": -0.45951841030373003,
+        "ci95_descriptive": [
+          -0.6228519351587081,
+          -0.31891497103934574
+        ],
+        "positive_people": 0
+      },
+      "balanced_accuracy_gain": {
+        "mean": -0.05416666666666667,
+        "ci95_descriptive": [
+          -0.07666666666666667,
+          -0.032499999999999994
+        ],
+        "positive_people": 1
+      }
+    },
+    {
+      "treatment": "within/covariance",
+      "baseline": "within/prior",
+      "log_loss_gain": {
+        "mean": -0.3374634190833741,
+        "ci95_descriptive": [
+          -0.498725691707346,
+          -0.1984485413520467
+        ],
+        "positive_people": 0
+      },
+      "balanced_accuracy_gain": {
+        "mean": 0.056666666666666664,
+        "ci95_descriptive": [
+          0.03416666666666667,
+          0.07833333333333335
+        ],
+        "positive_people": 11
+      }
+    },
+    {
+      "treatment": "within/covariance",
+      "baseline": "within/metadata",
+      "log_loss_gain": {
+        "mean": -0.2843920610687239,
+        "ci95_descriptive": [
+          -0.4455007203531963,
+          -0.14422015409049552
+        ],
+        "positive_people": 1
+      },
+      "balanced_accuracy_gain": {
+        "mean": 0.03666666666666666,
+        "ci95_descriptive": [
+          0.006666666666666664,
+          0.06333333333333334
+        ],
+        "positive_people": 9
+      }
+    },
+    {
+      "treatment": "within/covariance",
+      "baseline": "within/covariance_shuffled",
+      "log_loss_gain": {
+        "mean": 0.018594777497564736,
+        "ci95_descriptive": [
+          -0.06186063458567486,
+          0.10382728650633816
+        ],
+        "positive_people": 6
+      },
+      "balanced_accuracy_gain": {
+        "mean": -0.0033333333333333375,
+        "ci95_descriptive": [
+          -0.028354166666666673,
+          0.020833333333333325
+        ],
+        "positive_people": 6
+      }
+    },
+    {
+      "treatment": "within/covariance",
+      "baseline": "within/covariance_noise",
+      "log_loss_gain": {
+        "mean": -0.27307967603364797,
+        "ci95_descriptive": [
+          -0.43254778356289014,
+          -0.1359045109659219
+        ],
+        "positive_people": 2
+      },
+      "balanced_accuracy_gain": {
+        "mean": 0.024791666666666674,
+        "ci95_descriptive": [
+          0.0029166666666666703,
+          0.045421875000000035
+        ],
+        "positive_people": 9
+      }
+    },
+    {
+      "treatment": "within/temporal",
+      "baseline": "cross/temporal",
+      "log_loss_gain": {
+        "mean": 0.0615522307336302,
+        "ci95_descriptive": [
+          -0.03366591049149172,
+          0.18624787757673883
+        ],
+        "positive_people": 7
+      },
+      "balanced_accuracy_gain": {
+        "mean": -0.01916666666666667,
+        "ci95_descriptive": [
+          -0.04,
+          0.0016666666666666635
+        ],
+        "positive_people": 5
+      }
+    },
+    {
+      "treatment": "within/temporal",
+      "baseline": "within/uniform",
+      "log_loss_gain": {
+        "mean": -0.2641047105467971,
+        "ci95_descriptive": [
+          -0.32121813672530714,
+          -0.22586734151204693
+        ],
+        "positive_people": 0
+      },
+      "balanced_accuracy_gain": {
+        "mean": -0.09333333333333334,
+        "ci95_descriptive": [
+          -0.11000000000000003,
+          -0.07583333333333335
+        ],
+        "positive_people": 0
+      }
+    },
+    {
+      "treatment": "within/temporal",
+      "baseline": "within/prior",
+      "log_loss_gain": {
+        "mean": -0.14204971932644114,
+        "ci95_descriptive": [
+          -0.20203321962512283,
+          -0.10307888891483141
+        ],
+        "positive_people": 0
+      },
+      "balanced_accuracy_gain": {
+        "mean": 0.0175,
+        "ci95_descriptive": [
+          3.469446951953614e-18,
+          0.03749999999999999
+        ],
+        "positive_people": 8
+      }
+    },
+    {
+      "treatment": "within/temporal",
+      "baseline": "within/metadata",
+      "log_loss_gain": {
+        "mean": -0.08897836131179088,
+        "ci95_descriptive": [
+          -0.14982153037883686,
+          -0.04834419490370738
+        ],
+        "positive_people": 0
+      },
+      "balanced_accuracy_gain": {
+        "mean": -0.0025000000000000044,
+        "ci95_descriptive": [
+          -0.025833333333333337,
+          0.020833333333333325
+        ],
+        "positive_people": 6
+      }
+    },
+    {
+      "treatment": "within/temporal",
+      "baseline": "within/temporal_shuffled",
+      "log_loss_gain": {
+        "mean": -0.006387494004284029,
+        "ci95_descriptive": [
+          -0.031203358540113003,
+          0.017684983334357696
+        ],
+        "positive_people": 5
+      },
+      "balanced_accuracy_gain": {
+        "mean": -0.011875000000000002,
+        "ci95_descriptive": [
+          -0.034796875,
+          0.007499999999999994
+        ],
+        "positive_people": 5
+      }
+    },
+    {
+      "treatment": "within/temporal",
+      "baseline": "within/temporal_noise",
+      "log_loss_gain": {
+        "mean": -0.09044180332423474,
+        "ci95_descriptive": [
+          -0.15421282184191165,
+          -0.047741791295700824
+        ],
+        "positive_people": 0
+      },
+      "balanced_accuracy_gain": {
+        "mean": 0.004166666666666663,
+        "ci95_descriptive": [
+          -0.017499999999999998,
+          0.02666666666666666
+        ],
+        "positive_people": 6
+      }
+    }
+  ],
+  "interval_scope": "Unadjusted descriptive paired bootstrap across people; no significance declaration.",
+  "resources": {
+    "features": {
+      "seconds": 72.51924041612074,
+      "peak_rss_bytes": 2330951680,
+      "threads": 1
+    },
+    "predict": {
+      "seconds": 31.983628666959703,
+      "peak_rss_bytes": 470499328,
+      "threads": 1
+    },
+    "score": {
+      "seconds": 0.22948945919051766,
+      "peak_rss_bytes": 49332224,
+      "threads": 1
+    },
+    "disk_bytes_at_score": 55688941
+  },
+  "source_revision": "4ba1bb516d6cc98917143b0dfca23947935c7b15",
+  "readout": "standardize -> PCA8 whiten -> multinomial logistic C=0.1, unweighted",
+  "claim": "No demonstrated within-recording word separability with these representations and 16-19 training trials; no TimesFM recording-gap detected. Below-uniform controls indicate a small-sample class-prior limitation."
+}
