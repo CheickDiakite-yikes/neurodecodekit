@@ -1,0 +1,136 @@
+{
+  "source": "OpenNeuro ds007591",
+  "version": "1.0.1",
+  "source_commit": "034af61aba855c58450977bf1c1916085c586cd6",
+  "selection": "All3participants; earliest session per person per minimallyovert/covert condition; its calibration and all online runs; selected solely by filenames",
+  "files": [
+    {
+      "path": "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-calibration_run-01_eeg.edf",
+      "signal_bytes": 82497276,
+      "signal_sha256": "f53385fb148c1cfaa1c8175ca3160d9068856d8b8067fd67ff0a44d437a2f99d",
+      "events_path": "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-calibration_run-01_events.tsv",
+      "events_git_blob_sha": "8ad93d0bd18858e7b4acd7247d1ee9950a3e6594",
+      "events_bytes": 5456
+    },
+    {
+      "path": "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-online_run-01_eeg.edf",
+      "signal_bytes": 79648876,
+      "signal_sha256": "58ec751836248256064b5f58138c973621236f6f480323b6920e60b7425d5658",
+      "events_path": "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-online_run-01_events.tsv",
+      "events_git_blob_sha": "42f29e1a67c3feb530622bdd70ce2d8fcd14e6d5",
+      "events_bytes": 2704
+    },
+    {
+      "path": "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-online_run-02_eeg.edf",
+      "signal_bytes": 52514918,
+      "signal_sha256": "8383f1f67341bb4f34bc6af525cc87d34e6f7fe51fc7b09431e7bfb151632fa6",
+      "events_path": "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-online_run-02_events.tsv",
+      "events_git_blob_sha": "f93a9ba709041313ec46ac9624cf1e978e5789be",
+      "events_bytes": 1876
+    },
+    {
+      "path": "sub-1/ses-20230529/eeg/sub-1_ses-20230529_task-covert_acq-calibration_run-01_eeg.edf",
+      "signal_bytes": 109485866,
+      "signal_sha256": "6636c862212b5fe74bb1c394c3ce899d4bf82764ae86b2f0d084e7ee888864fc",
+      "events_path": "sub-1/ses-20230529/eeg/sub-1_ses-20230529_task-covert_acq-calibration_run-01_events.tsv",
+      "events_git_blob_sha": "03f2e0ca4ab6179d56bf189f6dfef0cebba7b75b",
+      "events_bytes": 4584
+    },
+    {
+      "path": "sub-1/ses-20230529/eeg/sub-1_ses-20230529_task-covert_acq-online_run-01_eeg.edf",
+      "signal_bytes": 51234648,
+      "signal_sha256": "747ed263b5d04d3ffeae6af65f4bc5290e2194f8897af23e5683f40e4cfca742",
+      "events_path": "sub-1/ses-20230529/eeg/sub-1_ses-20230529_task-covert_acq-online_run-01_events.tsv",
+      "events_git_blob_sha": "cfff9cc295fd1474a92e6734beba2a2b13c884d8",
+      "events_bytes": 2079
+    },
+    {
+      "path": "sub-2/ses-20230512/eeg/sub-2_ses-20230512_task-minimallyovert_acq-calibration_run-01_eeg.edf",
+      "signal_bytes": 94887816,
+      "signal_sha256": "3de7af4a9d150bdf3047e1b055f8d90dbb9c262ad6f0c9df23d460c3704be6d5",
+      "events_path": "sub-2/ses-20230512/eeg/sub-2_ses-20230512_task-minimallyovert_acq-calibration_run-01_events.tsv",
+      "events_git_blob_sha": "cd66aff43f8f666c189b2c728d9477b54aa71343",
+      "events_bytes": 5471
+    },
+    {
+      "path": "sub-2/ses-20230512/eeg/sub-2_ses-20230512_task-minimallyovert_acq-online_run-01_eeg.edf",
+      "signal_bytes": 73596026,
+      "signal_sha256": "aa3f9bca611a0f709544cf5f4493b294903855771156203cd3b041f9170e3c79",
+      "events_path": "sub-2/ses-20230512/eeg/sub-2_ses-20230512_task-minimallyovert_acq-online_run-01_events.tsv",
+      "events_git_blob_sha": "22213e169e7045f45b9f4acdffeab8251d6764c7",
+      "events_bytes": 2500
+    },
+    {
+      "path": "sub-2/ses-20230516/eeg/sub-2_ses-20230516_task-covert_acq-calibration_run-01_eeg.edf",
+      "signal_bytes": 101721120,
+      "signal_sha256": "99c508bb60bd1c2a25d0b8394cd562d96271d62d0ad535a216337a321d70c3ee",
+      "events_path": "sub-2/ses-20230516/eeg/sub-2_ses-20230516_task-covert_acq-calibration_run-01_events.tsv",
+      "events_git_blob_sha": "f830647942f23b1ec57c3b7520b764185542c7e2",
+      "events_bytes": 4583
+    },
+    {
+      "path": "sub-2/ses-20230516/eeg/sub-2_ses-20230516_task-covert_acq-online_run-01_eeg.edf",
+      "signal_bytes": 118885586,
+      "signal_sha256": "c9991bc4ae5212dd721d33a9a8f149c5bb8e148900187ed09485791d1331363f",
+      "events_path": "sub-2/ses-20230516/eeg/sub-2_ses-20230516_task-covert_acq-online_run-01_events.tsv",
+      "events_git_blob_sha": "aaa8171a5987c7d5200c05974b3272379adfceaa",
+      "events_bytes": 2106
+    },
+    {
+      "path": "sub-3/ses-20230523/eeg/sub-3_ses-20230523_task-minimallyovert_acq-calibration_run-01_eeg.edf",
+      "signal_bytes": 96594144,
+      "signal_sha256": "b9c1dd6fb07902c048bb5faf99cce9bd5cb11f25ab91cd22400b277246bdc697",
+      "events_path": "sub-3/ses-20230523/eeg/sub-3_ses-20230523_task-minimallyovert_acq-calibration_run-01_events.tsv",
+      "events_git_blob_sha": "a380e2514d6eb77860cd12d5d580f72a74231325",
+      "events_bytes": 5492
+    },
+    {
+      "path": "sub-3/ses-20230523/eeg/sub-3_ses-20230523_task-minimallyovert_acq-online_run-01_eeg.edf",
+      "signal_bytes": 54222340,
+      "signal_sha256": "e090790f8f34a43f8739bb73d7045d8e9a1c8ca40e5c3b1b4b174383d404ce38",
+      "events_path": "sub-3/ses-20230523/eeg/sub-3_ses-20230523_task-minimallyovert_acq-online_run-01_events.tsv",
+      "events_git_blob_sha": "277e6172d1a715f18af4d7638b4f6a5a96bc26a7",
+      "events_bytes": 2508
+    },
+    {
+      "path": "sub-3/ses-20230524/eeg/sub-3_ses-20230524_task-covert_acq-calibration_run-01_eeg.edf",
+      "signal_bytes": 80109096,
+      "signal_sha256": "f7137959a499e91c5db06a5871140eee21c8f268e68a22a78082586fdfededf7",
+      "events_path": "sub-3/ses-20230524/eeg/sub-3_ses-20230524_task-covert_acq-calibration_run-01_events.tsv",
+      "events_git_blob_sha": "6e8d3c851fa6691470a58d4a3768adef502bf5da",
+      "events_bytes": 4002
+    },
+    {
+      "path": "sub-3/ses-20230524/eeg/sub-3_ses-20230524_task-covert_acq-online_run-01_eeg.edf",
+      "signal_bytes": 40121696,
+      "signal_sha256": "3539034102133f5e2cbff9801ee2b546d9b26daa3c0810a757a10a529fe5d7af",
+      "events_path": "sub-3/ses-20230524/eeg/sub-3_ses-20230524_task-covert_acq-online_run-01_events.tsv",
+      "events_git_blob_sha": "75b48393d1119ecbdfc9ad283fe4f4b967d69c48",
+      "events_bytes": 1776
+    }
+  ],
+  "signal_bytes": 1035519408,
+  "event_bytes": 45137,
+  "real_signal_or_trial_rows_read": false,
+  "experiment_id": "SPEECH-REPRO-1",
+  "status": "proposed; no signal or target access authorized by this manifest",
+  "code_commit": "0dca00584c528b288392684dcec0d496b6aa4951",
+  "compute_probe": {
+    "parameter_count": 12293,
+    "mean_train_step_s": 0.1296243292046711,
+    "measured_steps": 12,
+    "peak_rss_bytes": 765345792,
+    "torch_version": "2.13.0",
+    "real_data_access": false,
+    "scientific_evidence": false
+  },
+  "storage_snapshot": {
+    "data_cache_work_allocated_bytes": 16427315200,
+    "free_filesystem_bytes": 88096792576,
+    "increment_cap_bytes": 1610612736,
+    "untouched_reserve_bytes": 3221225472,
+    "research_data_ceiling_bytes": 21474836480,
+    "scope": "data, cache, .codex_work; existing interpreter and Git history excluded"
+  },
+  "authorized_now": false
+}
