@@ -1,0 +1,177 @@
+{
+  "experiment": "TIMESFM-WORDS-R1",
+  "stage": "all predictions frozen; fresh targets not scored",
+  "created_at": "2026-09-06T00:50:53.944079+00:00",
+  "source_revision": "4ba1bb516d6cc98917143b0dfca23947935c7b15",
+  "train_sessions": [
+    0,
+    1,
+    3,
+    4
+  ],
+  "fresh_evaluation_session": 6,
+  "participants": 12,
+  "train_trials": 1198,
+  "test_trials": 300,
+  "arms": 17,
+  "predictive_head_dimensions": 32,
+  "class_order": [
+    "down",
+    "left",
+    "right",
+    "select",
+    "up"
+  ],
+  "prediction_sha256": "90d4c7f4dd6cc24431f8a2dd653ceb9aeb5c52fd5d4d27e7c8c1b8f4c2e955c2",
+  "code_and_protocol_sha256": {
+    "src/neurodecodekit/experiments/timesfm_words.py": "43db3e307e8aff0a7eb49eeebb775ca03889b4ecf65529b3075014738f4aded4",
+    "src/neurodecodekit/models/timesfm_word_features.py": "6587375122f5231cf28e7ed610e794fd5961a8ee0b236666fb62760f9fe4d105",
+    "src/neurodecodekit/models/imagined_word_decoder.py": "a56d1f05902ac187ef08c08bdd61c3a5c26d00d04c50a9c5186111665ae88d38",
+    "src/neurodecodekit/evaluation/imagined_word_report.py": "16a9937aee1b557e2a0c47c86acaf6143aab1ebcc3fba617b0fe9f54748d5a4d",
+    "docs/TIMESFM_WORDS_EXPERIMENT.md": "306c3240f2dbc007e1963afac0690bf6a8b09d924a5e9f77ed08e9506805d92b",
+    "tests/test_timesfm_word_features.py": "a49f81a5ec22a1fc8879e54202daabb28b2377acd070ede97fc6c7e6bd199f76"
+  },
+  "inputs_sha256": {
+    "prepared/train.npy": "ee281590858b6eac2bed9a37ab90ffad2f599a396dfc43a3f0cc87f65cf58ac7",
+    "prepared/test.npy": "5c7d6fcb06ce8feb634db923e223fce939b00534fea3660cb2a48d43dae41172",
+    "prepared/calibration.json": "6240820e00627ed25819a314d3865abb8fabfc2a22cb1ef20f1187c841d7704a",
+    "prepared/test_ids.json": "f951ac98bbb9c500fc3ffb2f88a8b1f89b56dd9c7aeaed768ac0973f6568f7dd"
+  },
+  "feature_files_sha256": {
+    "actual-covariance.npy": "b92bc157b2e288fffb937c99ffb6bd49970224125336ebd0175728c376e790b5",
+    "actual-forecast_residual.npy": "dc31f46de810c61adf04007e08bf3fb862effdb21e948d9493547976fdd01f12",
+    "actual-independent_hidden.npy": "bffadcdde6fae97cd62147c5258e944528eeb3cfab9946d626bc16b7889c71a8",
+    "actual-joint_hidden.npy": "ea40314e1a7edb6fb429de1922fcd1e797a685750c21a080910bc9766179b481",
+    "actual-temporal.npy": "79074528118179b8b687bbc80f35a975db102be12da604fd87c5064f5dd7af16",
+    "noise-covariance.npy": "95f4d6978c6a1a50523c71ba1bb4482f94f1eb65745dc387d80b9f3822fdd9bc",
+    "noise-forecast_residual.npy": "918acefcd029e817e6591151589e636a993199becf7422bd79046b7177364486",
+    "noise-independent_hidden.npy": "4faf05107c2bab4b400069720bed34b2f50522c11a2c7262dc57cb7b002aa216",
+    "noise-joint_hidden.npy": "6f8bc4a919de7deb810fd1d449f601ae685f79c09a81d25b1a82db442da05336",
+    "noise-temporal.npy": "59973b6a01e40e03a14fd5cf45a01d7563c35516bfd360c3a956eed19ee48165"
+  },
+  "acquisition": {
+    "files": 36,
+    "bytes": 45969075,
+    "seconds": 12.542830999940634
+  },
+  "feature_measurements": {
+    "modes": [
+      {
+        "condition": "actual",
+        "mode": "joint_hidden",
+        "shape": [
+          1498,
+          10240
+        ],
+        "seconds": 78.408015208086
+      },
+      {
+        "condition": "actual",
+        "mode": "independent_hidden",
+        "shape": [
+          1498,
+          10240
+        ],
+        "seconds": 67.89113399991766
+      },
+      {
+        "condition": "actual",
+        "mode": "forecast_residual",
+        "shape": [
+          1498,
+          512
+        ],
+        "seconds": 72.84295399999246
+      },
+      {
+        "condition": "actual",
+        "mode": "covariance",
+        "shape": [
+          1498,
+          36
+        ],
+        "seconds": 0.14447966706939042
+      },
+      {
+        "condition": "actual",
+        "mode": "temporal",
+        "shape": [
+          1498,
+          1024
+        ],
+        "seconds": 0.003534332849085331
+      },
+      {
+        "condition": "noise",
+        "mode": "joint_hidden",
+        "shape": [
+          1498,
+          10240
+        ],
+        "seconds": 67.76490429206751
+      },
+      {
+        "condition": "noise",
+        "mode": "independent_hidden",
+        "shape": [
+          1498,
+          10240
+        ],
+        "seconds": 67.94557483308017
+      },
+      {
+        "condition": "noise",
+        "mode": "forecast_residual",
+        "shape": [
+          1498,
+          512
+        ],
+        "seconds": 75.04920387500897
+      },
+      {
+        "condition": "noise",
+        "mode": "covariance",
+        "shape": [
+          1498,
+          36
+        ],
+        "seconds": 0.08315937500447035
+      },
+      {
+        "condition": "noise",
+        "mode": "temporal",
+        "shape": [
+          1498,
+          1024
+        ],
+        "seconds": 0.0036405420396476984
+      }
+    ],
+    "seconds": 433.8706004580017,
+    "peak_rss_bytes": 2328510464,
+    "torch_threads": 1,
+    "weights_sha256": "a7592b0a8432baee54483254e5647856911ce69e09d09a9bb65904b2d98f17da",
+    "target_and_raw_read_denied": true
+  },
+  "feature_process": {
+    "returncode": 0,
+    "seconds": 435.2171679579187,
+    "sampled_peak_rss_bytes": 2328510464,
+    "network_denied": true,
+    "os_file_whitelist": true
+  },
+  "prediction_measurements": {
+    "seconds": 4.557827792130411,
+    "numerical_fits": 192,
+    "peak_rss_bytes": 349962240
+  },
+  "prediction_process": {
+    "returncode": 0,
+    "seconds": 7.111080082831904,
+    "sampled_peak_rss_bytes": 349929472,
+    "network_denied": true,
+    "os_file_whitelist": true
+  },
+  "invocation_bytes_at_freeze": 1662853583,
+  "validation": "33 tests and 12 subtests passed; no target scoring in tests; independent source, model, and statistical review"
+}
