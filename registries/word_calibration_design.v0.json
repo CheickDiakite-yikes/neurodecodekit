@@ -1,0 +1,65 @@
+{
+  "experiment": "WORD-CALIBRATION-D4",
+  "declared_before_fitting_utc": "2026-09-06T14:42:05.646453+00:00",
+  "code_sha256": {
+    "src/neurodecodekit/experiments/word_calibration_learning_curve.py": "1bd3da38b6e193b5b3938e25fd3829af97b4e8f4ac3c2460ddc25a2ed465fe4d",
+    "src/neurodecodekit/experiments/word_timing_diagnostic.py": "aba312599364fddb1bb1c373a75422b2ae88cbaf52cea119418c2c36e5422983",
+    "src/neurodecodekit/experiments/word_recording_diagnostic.py": "c09c7f5c6f98a5145aae9429d31247fb8bfe0e55b84c3714c1eb0b7645c50277",
+    "src/neurodecodekit/experiments/word_recording_balanced.py": "0c08c10c078dd45122bfff4234483ae3354e75da999fa134c9aae5e4e927af84"
+  },
+  "protocol_tests_sha256": {
+    "docs/WORD_CALIBRATION_LEARNING_CURVE.md": "fcd6fff3cbb041eb636522f8be08825d15f7620816aa92bda7bdc0b4d18b7ddb",
+    "tests/test_word_calibration_learning_curve.py": "8edf9860125e9a10ab36dd27c5a0288dba83e74f091f9238655ed13adb88f923"
+  },
+  "feature_sha256": {
+    "early": {
+      "joint_hidden": "230c90385fefb454941d21ca67060625a49fa06050eb87b99a80b5506055c978",
+      "covariance": "2441476ff05697a8e770deccbbace7cb6d79e7625365b23bb39b0105e45c6135",
+      "temporal": "010d9a3648b4ac76b38da70a2bb8ac52496a1b526170bf39956a82e66a7e8ea5"
+    },
+    "late": {
+      "joint_hidden": "9a966c187983008272a888cd2ceca6d7d31163b31bd6c075b739f3b931c853bd",
+      "covariance": "062df046d438dd4a3ca91a068418fbc984c197aba36886507a7040a37f681597",
+      "temporal": "1f244c6115b6f3d7fdcb44632aeab10a2ba60edffa61d28ecc70b655a9930e62"
+    }
+  },
+  "feature_paths": {
+    "early": {
+      "joint_hidden": ".codex_work/word-timing-d3/features/joint_hidden.npy",
+      "covariance": ".codex_work/word-timing-d3/features/covariance.npy",
+      "temporal": ".codex_work/word-timing-d3/features/temporal.npy"
+    },
+    "late": {
+      "joint_hidden": ".codex_work/word-recording-d1/features/joint_hidden.npy",
+      "covariance": ".codex_work/word-recording-d1/features/covariance.npy",
+      "temporal": ".codex_work/word-recording-d1/features/temporal.npy"
+    }
+  },
+  "feature_bytes": 108644992,
+  "calibration_sha256": "6240820e00627ed25819a314d3865abb8fabfc2a22cb1ef20f1187c841d7704a",
+  "training_sizes": [
+    15,
+    30,
+    60
+  ],
+  "C_by_size": {
+    "15": 0.1,
+    "30": 0.05,
+    "60": 0.025
+  },
+  "participants": 12,
+  "recordings": 48,
+  "trials": 1198,
+  "donor_recording_class_counts": [
+    4,
+    5
+  ],
+  "free_bytes_before": 88366473216,
+  "versions": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.0",
+    "scikit-learn": "1.9.0"
+  },
+  "fits_or_scores_so_far": 0,
+  "new_download_bytes": 0
+}

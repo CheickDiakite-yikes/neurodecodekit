@@ -1,0 +1,84 @@
+{
+  "experiment": "WORD-CALIBRATION-D4",
+  "frozen_before_score_utc": "2026-09-06T14:44:34.313060+00:00",
+  "design_sha256": "6fd31ea628fefb657c9cf56325e5fa763e0ff1495801fd4a4753450a44eb412c",
+  "prediction_freeze": {
+    "experiment": "WORD-CALIBRATION-D4",
+    "windows": [
+      "early",
+      "late"
+    ],
+    "sizes": [
+      15,
+      30,
+      60
+    ],
+    "arms": [
+      "joint_hidden",
+      "joint_hidden_shuffled",
+      "joint_hidden_noise",
+      "covariance",
+      "covariance_shuffled",
+      "covariance_noise",
+      "temporal",
+      "temporal_shuffled",
+      "temporal_noise",
+      "uniform",
+      "prior",
+      "metadata"
+    ],
+    "classes": [
+      "down",
+      "left",
+      "right",
+      "select",
+      "up"
+    ],
+    "shape": [
+      2,
+      3,
+      12,
+      1198,
+      5
+    ],
+    "predictions_sha256": "4a316640413b60be5a1dee0944b2a0e0b9c21a32ae9bc96ef067c0690ad17aec",
+    "split_sha256": "673a613bae5672c901ab115a2ca1319926ebf1cfdbac54558449aaf974b62229",
+    "feature_sha256": {
+      "early": {
+        "joint_hidden": "230c90385fefb454941d21ca67060625a49fa06050eb87b99a80b5506055c978",
+        "covariance": "2441476ff05697a8e770deccbbace7cb6d79e7625365b23bb39b0105e45c6135",
+        "temporal": "010d9a3648b4ac76b38da70a2bb8ac52496a1b526170bf39956a82e66a7e8ea5"
+      },
+      "late": {
+        "joint_hidden": "9a966c187983008272a888cd2ceca6d7d31163b31bd6c075b739f3b931c853bd",
+        "covariance": "062df046d438dd4a3ca91a068418fbc984c197aba36886507a7040a37f681597",
+        "temporal": "1f244c6115b6f3d7fdcb44632aeab10a2ba60edffa61d28ecc70b655a9930e62"
+      }
+    },
+    "calibration_sha256": "6240820e00627ed25819a314d3865abb8fabfc2a22cb1ef20f1187c841d7704a",
+    "design_sha256": "6fd31ea628fefb657c9cf56325e5fa763e0ff1495801fd4a4753450a44eb412c",
+    "fits": 2304,
+    "trials": 1198,
+    "folds": 48,
+    "C_by_size": {
+      "15": 0.1,
+      "30": 0.05,
+      "60": 0.025
+    }
+  },
+  "prediction_resources": {
+    "seconds": 19.314104832941666,
+    "peak_rss_bytes": 565936128,
+    "threads": 1
+  },
+  "offline_process": {
+    "seconds": 20.163648208836094,
+    "sampled_peak_rss_bytes": 565936128,
+    "returncode": 0,
+    "offline": true,
+    "source_scope": "exact development whitelist"
+  },
+  "new_bytes_before_score": 3544722,
+  "score_operations_so_far": 0,
+  "independent_prefit_reviews": "Model and statistical critics found no P0/P1 or numerical/protocol defects; source critic verified public feature hashes."
+}
