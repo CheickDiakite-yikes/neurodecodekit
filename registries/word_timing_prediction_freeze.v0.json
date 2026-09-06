@@ -1,0 +1,96 @@
+{
+  "experiment": "WORD-TIMING-D3",
+  "declared_before_fitting_utc": "2026-09-06T10:41:12.743717+00:00",
+  "code_protocol_late_aggregate_sha256": {
+    "src/neurodecodekit/experiments/word_timing_diagnostic.py": "aba312599364fddb1bb1c373a75422b2ae88cbaf52cea119418c2c36e5422983",
+    "docs/WORD_TIMING_DIAGNOSTIC.md": "e843b80a873cd3e75dd1666041677c754cc3bc23b4f54ed3946e8916e72fd4d0",
+    "tests/test_word_timing_diagnostic.py": "84e0534aa476ceb819188802ea1cbf4d2e156de43060bbd840d52ddfd0384d57",
+    "src/neurodecodekit/experiments/word_recording_diagnostic.py": "c09c7f5c6f98a5145aae9429d31247fb8bfe0e55b84c3714c1eb0b7645c50277",
+    "src/neurodecodekit/experiments/word_recording_balanced.py": "0c08c10c078dd45122bfff4234483ae3354e75da999fa134c9aae5e4e927af84",
+    "src/neurodecodekit/models/timesfm_word_features.py": "6587375122f5231cf28e7ed610e794fd5961a8ee0b236666fb62760f9fe4d105",
+    "src/neurodecodekit/models/imagined_word_decoder.py": "a56d1f05902ac187ef08c08bdd61c3a5c26d00d04c50a9c5186111665ae88d38",
+    "registries/word_recording_balanced_result.v0.json": "af9746ee3c05521ec8fd978c76ce6e4d397f51c3bb451d4b08ad25062363fcd4"
+  },
+  "source_receipt": {
+    "selected_files": 144,
+    "verified_source_bytes": 189555798,
+    "trials": 1198,
+    "same_exclusions": 2,
+    "calibration_sha256": "6240820e00627ed25819a314d3865abb8fabfc2a22cb1ef20f1187c841d7704a",
+    "early_array_sha256": "377f86ff712b0ce560a731f7bf6269586ce41a0a4daca57745baae6b19cd19cc",
+    "samples": 500,
+    "window_seconds": [
+      0,
+      2
+    ],
+    "position_index_adjustment": -1
+  },
+  "source_revision": "4ba1bb516d6cc98917143b0dfca23947935c7b15",
+  "late_fits_or_scores": 0,
+  "new_fits_or_scores_so_far": 0,
+  "prediction_freeze": {
+    "experiment": "WORD-TIMING-D3",
+    "predictions_sha256": "c0ab9af2d5f712600856fb699b88d11341e7b9f03275f2fc91588e594af87fae",
+    "split_sha256": "25bd162cab7c7e39e5c31e68e07c746681e9e104077ccbdfb215737a511ebd1f",
+    "arms": [
+      "joint_hidden",
+      "joint_hidden_shuffled",
+      "joint_hidden_noise",
+      "covariance",
+      "covariance_shuffled",
+      "covariance_noise",
+      "temporal",
+      "temporal_shuffled",
+      "temporal_noise",
+      "uniform",
+      "prior",
+      "metadata"
+    ],
+    "classes": [
+      "down",
+      "left",
+      "right",
+      "select",
+      "up"
+    ],
+    "conditions": [
+      "within",
+      "cross"
+    ],
+    "trials": 1198,
+    "folds": 240,
+    "fits": 4800,
+    "input_sha256": {
+      "calibration.json": "6240820e00627ed25819a314d3865abb8fabfc2a22cb1ef20f1187c841d7704a",
+      "early_train.npy": "377f86ff712b0ce560a731f7bf6269586ce41a0a4daca57745baae6b19cd19cc"
+    },
+    "window_seconds": [
+      0,
+      2
+    ]
+  },
+  "frozen_before_score_utc": "2026-09-06T10:43:49.644456+00:00",
+  "feature_sha256": {
+    "joint_hidden.npy": "230c90385fefb454941d21ca67060625a49fa06050eb87b99a80b5506055c978",
+    "covariance.npy": "2441476ff05697a8e770deccbbace7cb6d79e7625365b23bb39b0105e45c6135",
+    "temporal.npy": "010d9a3648b4ac76b38da70a2bb8ac52496a1b526170bf39956a82e66a7e8ea5"
+  },
+  "resources": {
+    "prepare": {
+      "seconds": 1.4376242919825017,
+      "peak_rss_bytes": 173211648,
+      "threads": 1
+    },
+    "features": {
+      "seconds": 71.03872004104778,
+      "peak_rss_bytes": 2350448640,
+      "threads": 1
+    },
+    "predict": {
+      "seconds": 31.443545583169907,
+      "peak_rss_bytes": 463028224,
+      "threads": 1
+    }
+  },
+  "disk_bytes_before_score": 74804438
+}
