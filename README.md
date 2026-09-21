@@ -30,19 +30,24 @@ irreversible Tier C events.
 
 ## Scientific Operating Model
 
-**Current priority (September 21, 2026):** obtain the complete, frozen
-SPEECH-REPRO-1 result: does EEG add five-word information beyond measured
-nuisances on later recordings of known people? The
-[calibration audit and correction](docs/SPEECH_REPRODUCTION_CALIBRATION_CORRECTION.md)
-confirm that our extra minimum-ten-examples-per-class guard, not the author's
-ten-fold procedure, blocked the last pair. All six calibration sets support
-the unchanged procedure; all training folds retain five classes and the
-previous 50 fits' split assignments match exactly. The maintainer approved one
-corrected complete two-hour invocation, reusing those fits and training only
-the final ten. Both failed roots remain immutable. No held-out score exists
-yet; no partial scoring, automatic retry or post-test tuning is permitted.
-Report reference prediction separately from conditional EEG contribution,
-including both conditions and every null. Earlier closeouts remain history.
+**Current result and priority (September 21, 2026):**
+[SPEECH-REPRO-1 completed and scored once](docs/SPEECH_REPRODUCTION_RESULT.md).
+The minimally overt EEGNet reference reached **52.49% balanced accuracy**, above
+the 20% baseline in all three people. But auxiliary-only prediction reached
+**84.83%**, and adding filtered EEG failed the registered conditional log-loss
+test (mean log-loss gain **-0.022513**, only 1/3 people improved). Covert reference
+BA was **18.13%**; the joint model also failed the full control conjunction.
+All 341 trials, both conditions and all nine arms remain in the
+[complete aggregate result](registries/speech_reproduction_result.v0.json).
+
+The next scientific priority is to identify which auxiliary modalities carry
+the strong minimally overt signal: propose calibration-only ablations separating
+display/timing from microphone, lips and eyes, then design an untouched,
+cue-resistant confirmation. No follow-up execution is authorized by this note.
+This consumed evaluation must not be retuned or rescored. We have evidence for
+task-label prediction, not EEG-specific thought decoding, cortical origin,
+clinical utility or unseen-person generalization. Both failed roots and the
+successful one-shot evidence remain preserved. Earlier closeouts remain history.
 
 The [Scientific Discovery and Invention Constitution](docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md)
 now governs research priorities. Its companion
