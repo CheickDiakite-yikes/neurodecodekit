@@ -4,6 +4,9 @@
 covert calibration recording failed event/trigger alignment. No scientific
 score or decoding conclusion was produced. See the
 [failure record and next priority](SPEECH_REPRODUCTION_EXECUTION_FAILURE.md).
+The subsequent [label-blind audit](SPEECH_REPRODUCTION_TIMING_AUDIT.md) explains
+the format misclassification and assesses checkpoint reuse; it does not resume
+the failed run or change the fixed scientific settings below.
 
 September 21, 2026. Continue the scientifically selected experiment in
 [the September 6 decision](SPEECH_REPRODUCTION_RESEARCH_DECISION.md), not the

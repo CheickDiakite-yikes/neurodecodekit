@@ -3,6 +3,11 @@
 September 21, 2026. **No scientific score was produced.** The run stopped after
 6,115 seconds (101.9 minutes), below its approved six-hour maximum.
 
+**Subsequent diagnosis:** the authorized
+[label-blind timing audit](SPEECH_REPRODUCTION_TIMING_AUDIT.md) identified a
+reader-format assumption and verified all 50 saved checkpoints. The account
+below records what was known at failure. Recovery remains unactivated.
+
 ## What happened
 
 All 13 pinned source recordings were acquired and hash-verified. Five of six
