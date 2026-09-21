@@ -1,5 +1,11 @@
 # SPEECH-REPRO-1: approved, bounded recovery
 
+**Outcome: stopped before evaluation.** Timing/padding checks and reuse of all
+50 existing fits succeeded, but the final calibration set failed the executor's
+minimum-per-class guard before new reference training. Read the
+[recovery failure and next decision](SPEECH_REPRODUCTION_RECOVERY_FAILURE.md).
+This invocation is terminal; the authorization below is historical, not a retry.
+
 September 21, 2026. The maintainer answered **"approved"** to:
 "May I apply the narrow fix and complete the unchanged experiment, with a
 two-hour recovery cap?" This authorizes implementation and one complete recovery

@@ -30,18 +30,18 @@ irreversible Tier C events.
 
 ## Scientific Operating Model
 
-**Current priority (September 21, 2026):** execute the
-[approved two-hour recovery](docs/SPEECH_REPRODUCTION_RECOVERY.md) and finish
-the controlled speech comparison. The
-[label-blind audit](docs/SPEECH_REPRODUCTION_TIMING_AUDIT.md) traced the stopped
-`SPEECH-REPRO-1` run to a reader-format assumption: the final two recordings
-contain pre-cut trials with retained triggers. All 13 source identities and
-50 saved reference checkpoints are intact. Recovery appears feasible without
-repeating those EEGNet fits; the maintainer has now approved this narrow recovery.
+**Current priority (September 21, 2026):** resolve calibration compatibility
+before proposing another execution. The
+[SPEECH-REPRO-1 recovery](docs/SPEECH_REPRODUCTION_RECOVERY_FAILURE.md) passed all
+13 timing/padding checks and reused all 50 existing EEGNet fits, then stopped
+after 172 seconds: the final calibration set failed our minimum-ten-examples-
+per-class guard before new reference training. This does not establish that
+ten-fold splitting is impossible. A calibration-only audit of class support
+and the author's splitting procedure is proposed, not yet authorized.
 No held-out score exists; EEG-specific word information remains untested.
-No automatic rerun or partial scoring is authorized. The
-[failure record](docs/SPEECH_REPRODUCTION_EXECUTION_FAILURE.md) and source-specific
-closeouts below remain historical records, not the current speech result.
+No automatic rerun, rule relaxation or partial scoring is authorized; the
+monitor is paused. Earlier closeouts remain historical records, not this
+experiment's scientific result.
 
 The [Scientific Discovery and Invention Constitution](docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md)
 now governs research priorities. Its companion
