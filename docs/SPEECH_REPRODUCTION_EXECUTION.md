@@ -1,5 +1,10 @@
 # SPEECH-REPRO-1 execution
 
+**Outcome: stopped before evaluation.** After five completed pairs, the final
+covert calibration recording failed event/trigger alignment. No scientific
+score or decoding conclusion was produced. See the
+[failure record and next priority](SPEECH_REPRODUCTION_EXECUTION_FAILURE.md).
+
 September 21, 2026. Continue the scientifically selected experiment in
 [the September 6 decision](SPEECH_REPRODUCTION_RESEARCH_DECISION.md), not the
 superseded July checkout. Its exact selection commit, `7554fc4`, has both

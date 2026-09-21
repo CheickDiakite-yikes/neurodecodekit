@@ -30,6 +30,15 @@ irreversible Tier C events.
 
 ## Scientific Operating Model
 
+**Current priority (September 21, 2026):** resolve the label-blind timing
+question blocking the controlled speech reproduction, before any further
+training. `SPEECH-REPRO-1` acquired all 13 selected recordings and completed
+50 reference fits, then stopped on participant 3's covert calibration timing.
+No held-out score was produced; EEG-specific word information remains untested
+by this experiment. Read the [failure record and proposed next step](docs/SPEECH_REPRODUCTION_EXECUTION_FAILURE.md).
+No automatic rerun or partial scoring is authorized. The source-specific
+closeouts below remain historical records, not the current speech result.
+
 The [Scientific Discovery and Invention Constitution](docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md)
 now governs research priorities. Its companion
 [convergence plan](docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md) and
