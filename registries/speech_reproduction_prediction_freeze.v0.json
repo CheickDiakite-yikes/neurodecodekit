@@ -1,0 +1,2457 @@
+{
+  "arms": [
+    "auxiliary_only",
+    "auxiliary_raw_eeg",
+    "auxiliary_filtered_eeg",
+    "auxiliary_preaction_eeg",
+    "auxiliary_deranged_eeg",
+    "auxiliary_filtered_eeg_shuffled_labels",
+    "uniform",
+    "training_prior",
+    "eegnet_reference"
+  ],
+  "calibration_audit_sha256": "d64abead8ca2c6b31a6248c54bc5c4578bb5ae8eef61f0a01b23e4f2b5219b74",
+  "code_commit": "29d1f10f04aebb9e2ec972a7cb8fa7e626f82832",
+  "compact_settings": {
+    "auxiliary_features_including_timing": 392,
+    "bands_hz": [
+      [
+        2,
+        4
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        8,
+        13
+      ],
+      [
+        13,
+        30
+      ],
+      [
+        30,
+        60
+      ],
+      [
+        60,
+        118
+      ]
+    ],
+    "eeg_features": 8960,
+    "intercept_penalized": false,
+    "ridge_penalty": 1.0,
+    "time_bins": 64
+  },
+  "execution_amendment": "docs/SPEECH_REPRODUCTION_CALIBRATION_CORRECTION.md",
+  "execution_root": "data/speech_repro_1_corrected_20260921",
+  "execution_seconds": 1277.6134815216064,
+  "experiment_id": "SPEECH-REPRO-1",
+  "failed_recovery_artifacts_sha256": {
+    "execution_failed.json": "acb4394ead52bbe084e547b192e9a92012841bd0bdeddd8dc08daa7645cc8dc5",
+    "pair_reports/sub-1_ses-20230511_minimallyovert.json": "d2690abf50a8cd3654f23375a81ef5bd078af6fd01799160c6129a816542c43c",
+    "pair_reports/sub-1_ses-20230529_covert.json": "f43bdc1568abdd24efcee7eda968ae069425d77414f8ff684e79ff90d0d30d7d",
+    "pair_reports/sub-2_ses-20230512_minimallyovert.json": "252b60f81c6edcbefbe388fd2fd9b3b02edcf4e9d943b58b8809ced0a7ae4e6b",
+    "pair_reports/sub-2_ses-20230516_covert.json": "0b53c31bead99eb1dd9578a62b831821adf912441bbb002661abf1f722d2223a",
+    "pair_reports/sub-3_ses-20230523_minimallyovert.json": "2558e7bfdfd2b4537a7a2e9daba30a24b1c9318e8811e01e1907ea4c8bfc0a13",
+    "preflight.json": "91d3ab7f54620f5ce85bc88ff46dfe878f3db9eaf8e8b4beccfc6e57b4ee2aef",
+    "private_targets/sub-1_ses-20230511_task-minimallyovert_acq-online_run-01.json": "211b61c6c73f1c0d593792b59d7a2faf03aaaf90eb716bce2753204f07034155",
+    "private_targets/sub-1_ses-20230511_task-minimallyovert_acq-online_run-02.json": "95a140851b4ccac67aa7bf5644b2fbed9b1f82b8ad56654ce8c1cb3a0144493d",
+    "private_targets/sub-1_ses-20230529_task-covert_acq-online_run-01.json": "9e51f7957f496ff239a722de560d0905a94d103d9d2c86d5c4b8fc5d0a256f3d",
+    "private_targets/sub-2_ses-20230512_task-minimallyovert_acq-online_run-01.json": "b34eea5066b83053dc3ff418db153bf58f67b5c3831e8b057936e63790b3f542",
+    "private_targets/sub-2_ses-20230516_task-covert_acq-online_run-01.json": "ffa5db4594d7f9ddb15fa6b22302167a728f60920b2fa0c5ec2ddf318249be95",
+    "private_targets/sub-3_ses-20230523_task-minimallyovert_acq-online_run-01.json": "eef5e5d1bbe5b3ec3b8c4b07d08306fbf6c7ef6ca104f06e4051ba824ed31823",
+    "private_targets/sub-3_ses-20230524_task-covert_acq-online_run-01.json": "c17ca9e7a8945a9269ec6df6ad986101c28471b231912a27cc93db038e2d7a3b",
+    "started.json": "f1768b75da2e61939610106171cb99429937124a61f18d8f21824ec4fb13cbf6"
+  },
+  "failed_recovery_failure_sha256": "acb4394ead52bbe084e547b192e9a92012841bd0bdeddd8dc08daa7645cc8dc5",
+  "maximum_total_seconds": 7200,
+  "n_evaluation_trials": 341,
+  "online_labels_released_to_scorer": false,
+  "original_artifacts_sha256": {
+    "checkpoints/sub-1_ses-20230511_minimallyovert/fold-00.pt": "44805d6ed81709d1545b1908966db0e64e43b66e4644262b548f24931d91ae75",
+    "checkpoints/sub-1_ses-20230511_minimallyovert/fold-01.pt": "2cf1e6d9eb9ecf6022c8a2614bf78c2ad5a02d2da85923c799ab934343273739",
+    "checkpoints/sub-1_ses-20230511_minimallyovert/fold-02.pt": "bf1af0b69e271095176cc35a6900fa22b5cc99c5a234410d2ad692f688aaff81",
+    "checkpoints/sub-1_ses-20230511_minimallyovert/fold-03.pt": "e8da572a1555bd80af6f73da264c6aabba8872384ac74835b9f8a9fc9917d41f",
+    "checkpoints/sub-1_ses-20230511_minimallyovert/fold-04.pt": "314c2fa3fd409ac80ef7535c716a3f49f4c3ffe76304f4536e4862402e75cfd2",
+    "checkpoints/sub-1_ses-20230511_minimallyovert/fold-05.pt": "8409453f7de62bcabdbacaf69937e8d2c1cb3183dde59333bbf81f8228306dc6",
+    "checkpoints/sub-1_ses-20230511_minimallyovert/fold-06.pt": "0082963af7e34277c5d4f517a0e7ae55d2a45bd49415149c6f529340cd70ce4a",
+    "checkpoints/sub-1_ses-20230511_minimallyovert/fold-07.pt": "ba4966578c8cfd7b5a6088675e13169bf4977b5dc42845c0c7dcd77fbbd7aab3",
+    "checkpoints/sub-1_ses-20230511_minimallyovert/fold-08.pt": "31499acf3abaadee40243a24ccaeef1e48d30e49ae06b289464be1c824df125c",
+    "checkpoints/sub-1_ses-20230511_minimallyovert/fold-09.pt": "695ed73dc7af092ab48ac44adb7f9295b89011d25e8a29c53efaf6f754932be0",
+    "checkpoints/sub-1_ses-20230529_covert/fold-00.pt": "756a7baa5cef1da155a31d6cd3c2cdd84f12f064ce4558407cd839a152f3f634",
+    "checkpoints/sub-1_ses-20230529_covert/fold-01.pt": "951601635afa0a57cc946bb343728431be67a1047c56d05b211b5c102005b4d0",
+    "checkpoints/sub-1_ses-20230529_covert/fold-02.pt": "9483ad03d6290b4a2311f0462bb8f36b1e1074361c60f2029f23ffc7485ca52a",
+    "checkpoints/sub-1_ses-20230529_covert/fold-03.pt": "d299f7c5b9e3abdc06200d9b32ebff2c88becb01953ed747c5bd6d08a8188e47",
+    "checkpoints/sub-1_ses-20230529_covert/fold-04.pt": "85d45f279f18d1ab209a60b4afc1c63788ff3ce988225d3d0f0f0ae372cc6389",
+    "checkpoints/sub-1_ses-20230529_covert/fold-05.pt": "912e12415dac4bd07012d55806ff021b5b9ed998529e7ccc4dedf35e2deb529f",
+    "checkpoints/sub-1_ses-20230529_covert/fold-06.pt": "d5b392d52a8d8927a24e30176a91639a811e7c3da683d1f6025046df24bb1a3c",
+    "checkpoints/sub-1_ses-20230529_covert/fold-07.pt": "2f198781f6f293aed3e8783ca816456688ee440da8edb074604e9e87da72efea",
+    "checkpoints/sub-1_ses-20230529_covert/fold-08.pt": "a8ac25e9c09eb5cfe200738c1ac6615091839f31c3baef5ba289c16894e7016f",
+    "checkpoints/sub-1_ses-20230529_covert/fold-09.pt": "ea9a127a5a204cab8b0bc9fc2f46bfa6d333124f71b2ea05699064a3e8fc167f",
+    "checkpoints/sub-2_ses-20230512_minimallyovert/fold-00.pt": "23a77015ae5b7b6851563ee61cca8831c325a6a1fc1b82aac004e64f3782a01d",
+    "checkpoints/sub-2_ses-20230512_minimallyovert/fold-01.pt": "5857fc9e2efd1a1cc003e31d947976e27b93c12f988aa84fc5ed066b54943048",
+    "checkpoints/sub-2_ses-20230512_minimallyovert/fold-02.pt": "b10f893462a1b9580630212c0c0020030033ad27ce0ab085af16efab250a5379",
+    "checkpoints/sub-2_ses-20230512_minimallyovert/fold-03.pt": "90a7505188ba82b9c4f9cdb5a8d7fac0a5e6df9d372f3b507202878473857f27",
+    "checkpoints/sub-2_ses-20230512_minimallyovert/fold-04.pt": "bcac115a976584e751dc8030d0823d7ac379ba8e5fe02563bac9600ae25c8ba1",
+    "checkpoints/sub-2_ses-20230512_minimallyovert/fold-05.pt": "7ad34358da52ce1e721752c4eee67d4bcbc4c0e05d817858038a5c9e31292045",
+    "checkpoints/sub-2_ses-20230512_minimallyovert/fold-06.pt": "350eda07868a80b57b448b1a1bd40692d26039f68887261e2d374436ccbfac68",
+    "checkpoints/sub-2_ses-20230512_minimallyovert/fold-07.pt": "663a1aa772f7275a34f91b738f7b5937012d4df7ba84176ead0bc1b913fd89e2",
+    "checkpoints/sub-2_ses-20230512_minimallyovert/fold-08.pt": "329d4027953d38c91b26eb245cfa31dcf18acced57d5c58040eb3392f56cb063",
+    "checkpoints/sub-2_ses-20230512_minimallyovert/fold-09.pt": "355b03d8bede7588dfdc81da6c5a38809358e98a028aa9055634c9b77b8fc060",
+    "checkpoints/sub-2_ses-20230516_covert/fold-00.pt": "f4824cdd97058cab4635ee8407988b858fce34d7d8cf5f04a6794fb6c1ce25c2",
+    "checkpoints/sub-2_ses-20230516_covert/fold-01.pt": "3bf8dabb60bc3119ef7eb3c4a3d738ea8a7f38ac0c6afca8363b88b75470977f",
+    "checkpoints/sub-2_ses-20230516_covert/fold-02.pt": "26022339ff8b121d1fb28ef42b265578fae7a971d8e67524b3f76ba814331208",
+    "checkpoints/sub-2_ses-20230516_covert/fold-03.pt": "04a1948239b92685567f9a77552408c3f3114885f1e39a62ef05136ec3b7bdb2",
+    "checkpoints/sub-2_ses-20230516_covert/fold-04.pt": "2a0ba273a6cc3ea6a70ab83167337fdf5e432121080a7a20f371636181b7e2a2",
+    "checkpoints/sub-2_ses-20230516_covert/fold-05.pt": "83b658ee9b807c5fe0996af00f978ca20c506a167034a20c0d799e3ecdffb7a9",
+    "checkpoints/sub-2_ses-20230516_covert/fold-06.pt": "5ffa8717e5b058a74abfcbb013fb419c16e339ee514cc84b05efb6e82197e2f8",
+    "checkpoints/sub-2_ses-20230516_covert/fold-07.pt": "7d9da80722dc682edb6712653b5b419b7ebe4ea5a43d311523bf620d99164a6d",
+    "checkpoints/sub-2_ses-20230516_covert/fold-08.pt": "7bf031cf124a999a168b086d26da9842fb2c9c9ef750c0e7b151c9d6a8257e14",
+    "checkpoints/sub-2_ses-20230516_covert/fold-09.pt": "424a52250f0b62f18cb80bebe34f254d9af9a7a84f6e4b3d55ff45911b516f88",
+    "checkpoints/sub-3_ses-20230523_minimallyovert/fold-00.pt": "bb0e25b2e032bd78e22a9ac030b208b29d42ab32001e4436ee2c7eec08c2e264",
+    "checkpoints/sub-3_ses-20230523_minimallyovert/fold-01.pt": "2be55c0f37c860a993993d55a471a75858c0c4a7f47363dad370172a843f1f16",
+    "checkpoints/sub-3_ses-20230523_minimallyovert/fold-02.pt": "266bb5f2e4c101448b56f0e42615e4455338ef76ef77e8e41c76ec1d9f716aff",
+    "checkpoints/sub-3_ses-20230523_minimallyovert/fold-03.pt": "ae976f710a21d0fabc820e39c24ee8b4a94fedb442c5b6bbd0fac36425af9905",
+    "checkpoints/sub-3_ses-20230523_minimallyovert/fold-04.pt": "c0e3ef6ee38e524a4beeacf1873e54dc7188f5d6f8c8b6d26f49add49294103c",
+    "checkpoints/sub-3_ses-20230523_minimallyovert/fold-05.pt": "832f286b7f1b4aa812c83b12ad5675531167b5ab580793128e2df3199e649233",
+    "checkpoints/sub-3_ses-20230523_minimallyovert/fold-06.pt": "06b16518885b843db8efeeaf1887e61af86daf7fe11d2e2c172062d35f6f2422",
+    "checkpoints/sub-3_ses-20230523_minimallyovert/fold-07.pt": "abe5de679fc54d9fc822e599e749dfa1415064f8fa347e27fd3bba03cec33a2f",
+    "checkpoints/sub-3_ses-20230523_minimallyovert/fold-08.pt": "290a40de17c3e5d3b2860ca71aa8738bc954302a37866dde8685a513a8723649",
+    "checkpoints/sub-3_ses-20230523_minimallyovert/fold-09.pt": "9c49db01e584dfa32e0114b8ea46a2632db0776cb3f2096c4cffd61d9101aed4",
+    "execution_failed.json": "cc260c268518fe2764132a57f83bf4b519ba07003c04192f036be45648fc33b6",
+    "pair_reports/sub-1_ses-20230511_minimallyovert.json": "05a1d4facb5bd897798a0b15f59e1376017188830e7722843513b4142018ca67",
+    "pair_reports/sub-1_ses-20230529_covert.json": "207dbb2c37341d2e4d3912f87b2e4843041beddc653a95cdf5d322f443e9febd",
+    "pair_reports/sub-2_ses-20230512_minimallyovert.json": "373fdb63e7dba11c45df3c104a4e39a656c00684f3763a5e971b2ba39d4fbd1d",
+    "pair_reports/sub-2_ses-20230516_covert.json": "a7f36c2d1f7f778afacda21c48f80962d4f0e8835ad52b2d93a6c6bd30ab5a24",
+    "pair_reports/sub-3_ses-20230523_minimallyovert.json": "68288adb078de0ec18219bb613d305d99bacf706e859009781aac2bd4b003614",
+    "private_targets/sub-1_ses-20230511_task-minimallyovert_acq-online_run-01.json": "211b61c6c73f1c0d593792b59d7a2faf03aaaf90eb716bce2753204f07034155",
+    "private_targets/sub-1_ses-20230511_task-minimallyovert_acq-online_run-02.json": "95a140851b4ccac67aa7bf5644b2fbed9b1f82b8ad56654ce8c1cb3a0144493d",
+    "private_targets/sub-1_ses-20230529_task-covert_acq-online_run-01.json": "9e51f7957f496ff239a722de560d0905a94d103d9d2c86d5c4b8fc5d0a256f3d",
+    "private_targets/sub-2_ses-20230512_task-minimallyovert_acq-online_run-01.json": "b34eea5066b83053dc3ff418db153bf58f67b5c3831e8b057936e63790b3f542",
+    "private_targets/sub-2_ses-20230516_task-covert_acq-online_run-01.json": "ffa5db4594d7f9ddb15fa6b22302167a728f60920b2fa0c5ec2ddf318249be95",
+    "private_targets/sub-3_ses-20230523_task-minimallyovert_acq-online_run-01.json": "eef5e5d1bbe5b3ec3b8c4b07d08306fbf6c7ef6ca104f06e4051ba824ed31823",
+    "started.json": "f00ef15a0a296f870af7b4f8e1e53671f9b2525279fad8d1645376634b2035d1"
+  },
+  "original_failure_sha256": "cc260c268518fe2764132a57f83bf4b519ba07003c04192f036be45648fc33b6",
+  "pairs": [
+    {
+      "calibration_trials": 100,
+      "checkpoint_reuse": {
+        "calibration_labels_used_for_split_validation_only": true,
+        "calibration_validation_scored": false,
+        "elapsed_seconds": 1.5,
+        "new_fit_count": 0,
+        "online_labels_received": false,
+        "original_metadata_sha256": "d5d4b137c1ad9067ad0eb69cc7f462b75b714dff604c828ca00e2ecb194df6d3",
+        "original_pair_report_sha256": "05a1d4facb5bd897798a0b15f59e1376017188830e7722843513b4142018ca67",
+        "original_selection_preserved": true,
+        "reused_fits": 10,
+        "selected_folds": [
+          8,
+          9,
+          1,
+          2
+        ],
+        "serialized_checkpoint_bytes": 561640,
+        "verified_checkpoint_count": 10
+      },
+      "elapsed_seconds": 47.47305774688721,
+      "evaluation_trials": 91,
+      "extraction": [
+        {
+          "extra_leading_triggers": 0,
+          "private_targets_sha256": null,
+          "recording_id": "sub-1_ses-20230511_task-minimallyovert_acq-calibration_run-01",
+          "retained_bad_eeg_channels": 9,
+          "route": "source_continuous_trigger_buffer",
+          "trailing_edf_padding_samples": 0,
+          "trials": 100
+        },
+        {
+          "extra_leading_triggers": 0,
+          "private_targets_sha256": "211b61c6c73f1c0d593792b59d7a2faf03aaaf90eb716bce2753204f07034155",
+          "recording_id": "sub-1_ses-20230511_task-minimallyovert_acq-online_run-01",
+          "retained_bad_eeg_channels": 3,
+          "route": "source_continuous_trigger_buffer",
+          "trailing_edf_padding_samples": 0,
+          "trials": 54
+        },
+        {
+          "extra_leading_triggers": 0,
+          "private_targets_sha256": "95a140851b4ccac67aa7bf5644b2fbed9b1f82b8ad56654ce8c1cb3a0144493d",
+          "recording_id": "sub-1_ses-20230511_task-minimallyovert_acq-online_run-02",
+          "retained_bad_eeg_channels": 3,
+          "route": "source_continuous_trigger_buffer",
+          "trailing_edf_padding_samples": 0,
+          "trials": 37
+        }
+      ],
+      "model": {
+        "additional_input_normalization": false,
+        "architecture": "EEGNet-128x320",
+        "author_commit": "0dca00584c528b288392684dcec0d496b6aa4951",
+        "batch_size": 16,
+        "deviations": [
+          "100 manuscript epochs instead of source YAML 1000",
+          "seed 20260906 plus fold index; CPU deterministic execution",
+          "deterministic calibration validation instead of source dataset jitter",
+          "correct sample-weighted validation loss instead of source stale-training-loss bug",
+          "stable fold-index tie-break for calibration accuracy ranking",
+          "softmax of source ensemble scores supplies uncalibrated probabilities"
+        ],
+        "elapsed_seconds": 1260.2660000000033,
+        "ensemble": "per-model per-trial five-logit population z-score, four-fold mean, softmax",
+        "epochs_per_fold": 100,
+        "final_repetition_jitter_samples": 0,
+        "fold_selection": "highest accuracy at lowest validation-loss checkpoint; fold-index ties",
+        "folds": [
+          {
+            "best_epoch": 1,
+            "best_validation_loss": 1.6229658126831055,
+            "checkpoint_validation_accuracy": 0.0,
+            "elapsed_seconds": 128.78100000000268,
+            "epochs": 100,
+            "fold": 0,
+            "state_sha256": "2b1242c619e8792fda8c1fac66b892f585f727d3a38da48ae643a8712c9c3437",
+            "training_trials": 90,
+            "validation_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              7,
+              8,
+              9,
+              10
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 1.3426637649536133,
+            "checkpoint_validation_accuracy": 0.6,
+            "elapsed_seconds": 128.18800000000192,
+            "epochs": 100,
+            "fold": 1,
+            "state_sha256": "a2c751b009bd173722411c8acff663590533ebe0131dbccc92da7c8c965a47d7",
+            "training_trials": 90,
+            "validation_indices": [
+              6,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 1.0328501462936401,
+            "checkpoint_validation_accuracy": 0.6,
+            "elapsed_seconds": 151.43800000000192,
+            "epochs": 100,
+            "fold": 2,
+            "state_sha256": "c561fe43d1c3ea5ba4342e2b919dc0c572bfaee678fababfc00c739137869926",
+            "training_trials": 90,
+            "validation_indices": [
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              28,
+              30,
+              31
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 1.1368205547332764,
+            "checkpoint_validation_accuracy": 0.5,
+            "elapsed_seconds": 121.36000000000058,
+            "epochs": 100,
+            "fold": 3,
+            "state_sha256": "bd17427325ecfc9e8644ef43246a3d5b9b133869c3d16351642a8c4a1c7d5397",
+            "training_trials": 90,
+            "validation_indices": [
+              27,
+              29,
+              32,
+              33,
+              35,
+              37,
+              38,
+              39,
+              40,
+              41
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 1.4791584014892578,
+            "checkpoint_validation_accuracy": 0.2,
+            "elapsed_seconds": 118.90699999999924,
+            "epochs": 100,
+            "fold": 4,
+            "state_sha256": "9613d65bafa8f29e56fa2baa8b8eb66485694ad0bb9f34110686e42ac95ea69f",
+            "training_trials": 90,
+            "validation_indices": [
+              34,
+              36,
+              42,
+              44,
+              47,
+              49,
+              50,
+              51,
+              52,
+              53
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 1.4068288803100586,
+            "checkpoint_validation_accuracy": 0.2,
+            "elapsed_seconds": 118.09399999999732,
+            "epochs": 100,
+            "fold": 5,
+            "state_sha256": "fd936ed9fd995efdeba04b10300152d63357f9fe1a380c13a2691b95cea6e9de",
+            "training_trials": 90,
+            "validation_indices": [
+              43,
+              45,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              62,
+              64
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 1.2539485692977905,
+            "checkpoint_validation_accuracy": 0.4,
+            "elapsed_seconds": 124.51600000000326,
+            "epochs": 100,
+            "fold": 6,
+            "state_sha256": "d9a4ed36811ee7d8ee58c449263927f86f9e5eac193e0e84686828ae218fda77",
+            "training_trials": 90,
+            "validation_indices": [
+              46,
+              48,
+              54,
+              61,
+              66,
+              68,
+              70,
+              71,
+              75,
+              76
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 76,
+            "best_validation_loss": 1.567840337753296,
+            "checkpoint_validation_accuracy": 0.2,
+            "elapsed_seconds": 121.86000000000058,
+            "epochs": 100,
+            "fold": 7,
+            "state_sha256": "936cbe32802cb01339c9052912c86b834ddc3a61c1300a1881865498da9071da",
+            "training_trials": 90,
+            "validation_indices": [
+              63,
+              65,
+              67,
+              72,
+              73,
+              77,
+              78,
+              80,
+              86,
+              88
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 1.1025394201278687,
+            "checkpoint_validation_accuracy": 0.7,
+            "elapsed_seconds": 124.03100000000268,
+            "epochs": 100,
+            "fold": 8,
+            "state_sha256": "cad572596564f4259f2dddd3c1aefe86d849681d879a8f6df46bdcc73a895fbb",
+            "training_trials": 90,
+            "validation_indices": [
+              69,
+              74,
+              79,
+              81,
+              82,
+              83,
+              84,
+              85,
+              89,
+              90
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 0.9658433794975281,
+            "checkpoint_validation_accuracy": 0.7,
+            "elapsed_seconds": 121.28100000000268,
+            "epochs": 100,
+            "fold": 9,
+            "state_sha256": "2530bf514784ad174791c482b4d3b3021afba23af6f0ed0e0ef7337d531b7f64",
+            "training_trials": 90,
+            "validation_indices": [
+              87,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99
+            ],
+            "validation_trials": 10
+          }
+        ],
+        "learning_rate": 0.0001,
+        "maximum_total_seconds": 21600,
+        "memory_format": "channels_last",
+        "memory_format_eval_equivalence_tolerance": {
+          "atol": 1e-06,
+          "rtol": 1e-05
+        },
+        "mkldnn": true,
+        "online_labels_received": false,
+        "online_recording_trials": {
+          "online": 91
+        },
+        "optimizer": "AdamW",
+        "parameters": 12293,
+        "seed": 20260906,
+        "selected_folds": [
+          8,
+          9,
+          1,
+          2
+        ],
+        "source_license": "CC0-1.0",
+        "split": "StratifiedKFold(10, shuffle=False)",
+        "threads": 1,
+        "torch_version": "2.14.0+cpu",
+        "training_jitter_samples": [
+          -25,
+          24
+        ],
+        "validation_and_online_jitter": false,
+        "weight_decay": 0.01
+      },
+      "new_reference_fits": 0,
+      "pair_id": "sub-1_ses-20230511_minimallyovert"
+    },
+    {
+      "calibration_trials": 100,
+      "checkpoint_reuse": {
+        "calibration_labels_used_for_split_validation_only": true,
+        "calibration_validation_scored": false,
+        "elapsed_seconds": 0.7969999999913853,
+        "new_fit_count": 0,
+        "online_labels_received": false,
+        "original_metadata_sha256": "d4aba341b415f4ca6b61927ff145aae02dc697524ae2f3f5c5ca09003a8ebe3f",
+        "original_pair_report_sha256": "207dbb2c37341d2e4d3912f87b2e4843041beddc653a95cdf5d322f443e9febd",
+        "original_selection_preserved": true,
+        "reused_fits": 10,
+        "selected_folds": [
+          2,
+          8,
+          3,
+          0
+        ],
+        "serialized_checkpoint_bytes": 561640,
+        "verified_checkpoint_count": 10
+      },
+      "elapsed_seconds": 70.63670897483826,
+      "evaluation_trials": 50,
+      "extraction": [
+        {
+          "extra_leading_triggers": 0,
+          "private_targets_sha256": null,
+          "recording_id": "sub-1_ses-20230529_task-covert_acq-calibration_run-01",
+          "retained_bad_eeg_channels": 11,
+          "route": "source_continuous_trigger_buffer",
+          "trailing_edf_padding_samples": 0,
+          "trials": 100
+        },
+        {
+          "extra_leading_triggers": 0,
+          "private_targets_sha256": "9e51f7957f496ff239a722de560d0905a94d103d9d2c86d5c4b8fc5d0a256f3d",
+          "recording_id": "sub-1_ses-20230529_task-covert_acq-online_run-01",
+          "retained_bad_eeg_channels": 8,
+          "route": "source_continuous_trigger_buffer",
+          "trailing_edf_padding_samples": 0,
+          "trials": 50
+        }
+      ],
+      "model": {
+        "additional_input_normalization": false,
+        "architecture": "EEGNet-128x320",
+        "author_commit": "0dca00584c528b288392684dcec0d496b6aa4951",
+        "batch_size": 16,
+        "deviations": [
+          "100 manuscript epochs instead of source YAML 1000",
+          "seed 20260906 plus fold index; CPU deterministic execution",
+          "deterministic calibration validation instead of source dataset jitter",
+          "correct sample-weighted validation loss instead of source stale-training-loss bug",
+          "stable fold-index tie-break for calibration accuracy ranking",
+          "softmax of source ensemble scores supplies uncalibrated probabilities"
+        ],
+        "elapsed_seconds": 1324.4689999999973,
+        "ensemble": "per-model per-trial five-logit population z-score, four-fold mean, softmax",
+        "epochs_per_fold": 100,
+        "final_repetition_jitter_samples": 0,
+        "fold_selection": "highest accuracy at lowest validation-loss checkpoint; fold-index ties",
+        "folds": [
+          {
+            "best_epoch": 1,
+            "best_validation_loss": 1.6206897497177124,
+            "checkpoint_validation_accuracy": 0.2,
+            "elapsed_seconds": 123.03199999999924,
+            "epochs": 100,
+            "fold": 0,
+            "state_sha256": "fec81f55a16f99882696b76acb4d6de50e35e66795f687714f7474e3ac1d75bc",
+            "training_trials": 90,
+            "validation_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              10,
+              12
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 1,
+            "best_validation_loss": 1.6144872903823853,
+            "checkpoint_validation_accuracy": 0.1,
+            "elapsed_seconds": 129.34399999999732,
+            "epochs": 100,
+            "fold": 1,
+            "state_sha256": "bb3913f62faa498d9541beedbf219c9c31f6fd93989b078806de0587787ead2d",
+            "training_trials": 90,
+            "validation_indices": [
+              8,
+              9,
+              11,
+              13,
+              14,
+              16,
+              17,
+              22,
+              23,
+              24
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 77,
+            "best_validation_loss": 1.5305012464523315,
+            "checkpoint_validation_accuracy": 0.4,
+            "elapsed_seconds": 163.76599999999598,
+            "epochs": 100,
+            "fold": 2,
+            "state_sha256": "268a249b3c05387751975b2325edec6967a8d9670a6701b5b1322116a1b1e50a",
+            "training_trials": 90,
+            "validation_indices": [
+              15,
+              18,
+              19,
+              20,
+              25,
+              26,
+              27,
+              31,
+              35,
+              37
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 96,
+            "best_validation_loss": 1.6195704936981201,
+            "checkpoint_validation_accuracy": 0.3,
+            "elapsed_seconds": 141.78100000000268,
+            "epochs": 100,
+            "fold": 3,
+            "state_sha256": "f6e15b53ab2a6419510cfbcc46dca66fd4da6f49e70a5cc89926fb822d2a2388",
+            "training_trials": 90,
+            "validation_indices": [
+              21,
+              28,
+              29,
+              33,
+              34,
+              38,
+              40,
+              41,
+              42,
+              44
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 1,
+            "best_validation_loss": 1.619593858718872,
+            "checkpoint_validation_accuracy": 0.1,
+            "elapsed_seconds": 146.01599999999598,
+            "epochs": 100,
+            "fold": 4,
+            "state_sha256": "14395ad03bf554a109231a4aeb73a01bedbc9ce6aa90724e8a42c385cf1754d4",
+            "training_trials": 90,
+            "validation_indices": [
+              30,
+              32,
+              36,
+              39,
+              43,
+              45,
+              47,
+              48,
+              52,
+              55
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 10,
+            "best_validation_loss": 1.580873966217041,
+            "checkpoint_validation_accuracy": 0.2,
+            "elapsed_seconds": 130.9059999999954,
+            "epochs": 100,
+            "fold": 5,
+            "state_sha256": "1e65ec3ce963c335850a2457cea51982cbd111d6e3feb9800d24409755b3b641",
+            "training_trials": 90,
+            "validation_indices": [
+              46,
+              49,
+              50,
+              51,
+              53,
+              54,
+              56,
+              57,
+              58,
+              74
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 46,
+            "best_validation_loss": 1.6162612438201904,
+            "checkpoint_validation_accuracy": 0.1,
+            "elapsed_seconds": 121.65600000000268,
+            "epochs": 100,
+            "fold": 6,
+            "state_sha256": "335f86bed662b7119cd08dc552715e8e2bc96785f9fbafa7a37753c0533c7905",
+            "training_trials": 90,
+            "validation_indices": [
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              71,
+              78
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 2,
+            "best_validation_loss": 1.6071550846099854,
+            "checkpoint_validation_accuracy": 0.2,
+            "elapsed_seconds": 137.7190000000046,
+            "epochs": 100,
+            "fold": 7,
+            "state_sha256": "1e4c43dfad7299ab556488863d3daaebdfac775d68861cc23192e9047625e3b3",
+            "training_trials": 90,
+            "validation_indices": [
+              67,
+              68,
+              69,
+              70,
+              72,
+              75,
+              77,
+              79,
+              81,
+              83
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 90,
+            "best_validation_loss": 1.5801955461502075,
+            "checkpoint_validation_accuracy": 0.4,
+            "elapsed_seconds": 115.48500000000058,
+            "epochs": 100,
+            "fold": 8,
+            "state_sha256": "ba0a312577aff695ec4470494be922be6fb1c7561ee307a01257e746f0230e24",
+            "training_trials": 90,
+            "validation_indices": [
+              73,
+              76,
+              80,
+              82,
+              84,
+              85,
+              86,
+              87,
+              88,
+              93
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 18,
+            "best_validation_loss": 1.614529013633728,
+            "checkpoint_validation_accuracy": 0.1,
+            "elapsed_seconds": 113.8289999999979,
+            "epochs": 100,
+            "fold": 9,
+            "state_sha256": "f6d65a17c7050816b846a397663397366416fb88a554df8ae1a48fb595af8214",
+            "training_trials": 90,
+            "validation_indices": [
+              89,
+              90,
+              91,
+              92,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99
+            ],
+            "validation_trials": 10
+          }
+        ],
+        "learning_rate": 0.0001,
+        "maximum_total_seconds": 21600,
+        "memory_format": "channels_last",
+        "memory_format_eval_equivalence_tolerance": {
+          "atol": 1e-06,
+          "rtol": 1e-05
+        },
+        "mkldnn": true,
+        "online_labels_received": false,
+        "online_recording_trials": {
+          "online": 50
+        },
+        "optimizer": "AdamW",
+        "parameters": 12293,
+        "seed": 20260906,
+        "selected_folds": [
+          2,
+          8,
+          3,
+          0
+        ],
+        "source_license": "CC0-1.0",
+        "split": "StratifiedKFold(10, shuffle=False)",
+        "threads": 1,
+        "torch_version": "2.14.0+cpu",
+        "training_jitter_samples": [
+          -25,
+          24
+        ],
+        "validation_and_online_jitter": false,
+        "weight_decay": 0.01
+      },
+      "new_reference_fits": 0,
+      "pair_id": "sub-1_ses-20230529_covert"
+    },
+    {
+      "calibration_trials": 100,
+      "checkpoint_reuse": {
+        "calibration_labels_used_for_split_validation_only": true,
+        "calibration_validation_scored": false,
+        "elapsed_seconds": 0.8130000000091968,
+        "new_fit_count": 0,
+        "online_labels_received": false,
+        "original_metadata_sha256": "b3b829a8bbf371c57697a51193011834c71270d43cd64060b8a68a7b9dadc884",
+        "original_pair_report_sha256": "373fdb63e7dba11c45df3c104a4e39a656c00684f3763a5e971b2ba39d4fbd1d",
+        "original_selection_preserved": true,
+        "reused_fits": 10,
+        "selected_folds": [
+          6,
+          0,
+          1,
+          5
+        ],
+        "serialized_checkpoint_bytes": 561640,
+        "verified_checkpoint_count": 10
+      },
+      "elapsed_seconds": 97.56326460838318,
+      "evaluation_trials": 50,
+      "extraction": [
+        {
+          "extra_leading_triggers": 0,
+          "private_targets_sha256": null,
+          "recording_id": "sub-2_ses-20230512_task-minimallyovert_acq-calibration_run-01",
+          "retained_bad_eeg_channels": 3,
+          "route": "source_continuous_trigger_buffer",
+          "trailing_edf_padding_samples": 0,
+          "trials": 100
+        },
+        {
+          "extra_leading_triggers": 0,
+          "private_targets_sha256": "b34eea5066b83053dc3ff418db153bf58f67b5c3831e8b057936e63790b3f542",
+          "recording_id": "sub-2_ses-20230512_task-minimallyovert_acq-online_run-01",
+          "retained_bad_eeg_channels": 3,
+          "route": "source_continuous_trigger_buffer",
+          "trailing_edf_padding_samples": 0,
+          "trials": 50
+        }
+      ],
+      "model": {
+        "additional_input_normalization": false,
+        "architecture": "EEGNet-128x320",
+        "author_commit": "0dca00584c528b288392684dcec0d496b6aa4951",
+        "batch_size": 16,
+        "deviations": [
+          "100 manuscript epochs instead of source YAML 1000",
+          "seed 20260906 plus fold index; CPU deterministic execution",
+          "deterministic calibration validation instead of source dataset jitter",
+          "correct sample-weighted validation loss instead of source stale-training-loss bug",
+          "stable fold-index tie-break for calibration accuracy ranking",
+          "softmax of source ensemble scores supplies uncalibrated probabilities"
+        ],
+        "elapsed_seconds": 1085.563000000002,
+        "ensemble": "per-model per-trial five-logit population z-score, four-fold mean, softmax",
+        "epochs_per_fold": 100,
+        "final_repetition_jitter_samples": 0,
+        "fold_selection": "highest accuracy at lowest validation-loss checkpoint; fold-index ties",
+        "folds": [
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 1.2537404298782349,
+            "checkpoint_validation_accuracy": 0.7,
+            "elapsed_seconds": 113.92200000000594,
+            "epochs": 100,
+            "fold": 0,
+            "state_sha256": "63375422732b76c128d20e3863507885e1fa16fde0f47d5dd4ff032cbc52b6f2",
+            "training_trials": 90,
+            "validation_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 0.9366050958633423,
+            "checkpoint_validation_accuracy": 0.6,
+            "elapsed_seconds": 117.5,
+            "epochs": 100,
+            "fold": 1,
+            "state_sha256": "0c0f0091d32a0496f1d8da41c043420a5e7c3df595561e677a6eca5e14857d28",
+            "training_trials": 90,
+            "validation_indices": [
+              9,
+              10,
+              11,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              23
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 71,
+            "best_validation_loss": 1.4299330711364746,
+            "checkpoint_validation_accuracy": 0.3,
+            "elapsed_seconds": 111.43699999999808,
+            "epochs": 100,
+            "fold": 2,
+            "state_sha256": "cdace1f0b06ba2b8597efcbb78526bee9eedea3986d123e7b6b3b448d2945ee9",
+            "training_trials": 90,
+            "validation_indices": [
+              19,
+              20,
+              21,
+              22,
+              24,
+              25,
+              27,
+              33,
+              36,
+              37
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 1.2298452854156494,
+            "checkpoint_validation_accuracy": 0.4,
+            "elapsed_seconds": 107.29699999999866,
+            "epochs": 100,
+            "fold": 3,
+            "state_sha256": "16c707def402d20278a85c3054a3ea930bcddf1129884881a71095a5c0e5c2d9",
+            "training_trials": 90,
+            "validation_indices": [
+              26,
+              28,
+              29,
+              30,
+              31,
+              38,
+              39,
+              43,
+              45,
+              49
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 95,
+            "best_validation_loss": 1.4086377620697021,
+            "checkpoint_validation_accuracy": 0.4,
+            "elapsed_seconds": 104.92199999999866,
+            "epochs": 100,
+            "fold": 4,
+            "state_sha256": "d98e5f59ae9855ed1b16155c41fe05caaef2afd32f28f869be8a61620e44d4ae",
+            "training_trials": 90,
+            "validation_indices": [
+              32,
+              34,
+              35,
+              40,
+              44,
+              46,
+              47,
+              53,
+              56,
+              64
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 97,
+            "best_validation_loss": 1.0762865543365479,
+            "checkpoint_validation_accuracy": 0.6,
+            "elapsed_seconds": 107.17199999999866,
+            "epochs": 100,
+            "fold": 5,
+            "state_sha256": "a14b7d996869922a515188f230f0a4bd2b02603b9491f02ce0a65108e2c18ff8",
+            "training_trials": 90,
+            "validation_indices": [
+              41,
+              42,
+              48,
+              50,
+              51,
+              52,
+              55,
+              59,
+              60,
+              71
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 0.8844555616378784,
+            "checkpoint_validation_accuracy": 0.8,
+            "elapsed_seconds": 102.89100000000326,
+            "epochs": 100,
+            "fold": 6,
+            "state_sha256": "667057ed3d788a846cba6eff0379270d15424a44718c95ead809369b8e9bc2a0",
+            "training_trials": 90,
+            "validation_indices": [
+              54,
+              58,
+              61,
+              62,
+              63,
+              66,
+              67,
+              68,
+              73,
+              76
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 99,
+            "best_validation_loss": 0.88178950548172,
+            "checkpoint_validation_accuracy": 0.6,
+            "elapsed_seconds": 104.5,
+            "epochs": 100,
+            "fold": 7,
+            "state_sha256": "b22b1692a1af8c2474b25e8a352412efdb015a39bf132da62fe6e5fa0d73b1e3",
+            "training_trials": 90,
+            "validation_indices": [
+              57,
+              69,
+              70,
+              72,
+              74,
+              75,
+              78,
+              79,
+              82,
+              83
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 1.0925145149230957,
+            "checkpoint_validation_accuracy": 0.6,
+            "elapsed_seconds": 106.68699999999808,
+            "epochs": 100,
+            "fold": 8,
+            "state_sha256": "67ed5d99e15e534a06f136c667495b4c6aafe2ce357cfa4da198fd0341b2f246",
+            "training_trials": 90,
+            "validation_indices": [
+              65,
+              80,
+              81,
+              85,
+              86,
+              87,
+              88,
+              89,
+              95,
+              98
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 1.0763133764266968,
+            "checkpoint_validation_accuracy": 0.6,
+            "elapsed_seconds": 108.32800000000134,
+            "epochs": 100,
+            "fold": 9,
+            "state_sha256": "1bb716654e5b96b30def5d723196486c7842e38e0c032a302ad8ff259a64a4e2",
+            "training_trials": 90,
+            "validation_indices": [
+              77,
+              84,
+              90,
+              91,
+              92,
+              93,
+              94,
+              96,
+              97,
+              99
+            ],
+            "validation_trials": 10
+          }
+        ],
+        "learning_rate": 0.0001,
+        "maximum_total_seconds": 21600,
+        "memory_format": "channels_last",
+        "memory_format_eval_equivalence_tolerance": {
+          "atol": 1e-06,
+          "rtol": 1e-05
+        },
+        "mkldnn": true,
+        "online_labels_received": false,
+        "online_recording_trials": {
+          "online": 50
+        },
+        "optimizer": "AdamW",
+        "parameters": 12293,
+        "seed": 20260906,
+        "selected_folds": [
+          6,
+          0,
+          1,
+          5
+        ],
+        "source_license": "CC0-1.0",
+        "split": "StratifiedKFold(10, shuffle=False)",
+        "threads": 1,
+        "torch_version": "2.14.0+cpu",
+        "training_jitter_samples": [
+          -25,
+          24
+        ],
+        "validation_and_online_jitter": false,
+        "weight_decay": 0.01
+      },
+      "new_reference_fits": 0,
+      "pair_id": "sub-2_ses-20230512_minimallyovert"
+    },
+    {
+      "calibration_trials": 100,
+      "checkpoint_reuse": {
+        "calibration_labels_used_for_split_validation_only": true,
+        "calibration_validation_scored": false,
+        "elapsed_seconds": 0.7970000000059372,
+        "new_fit_count": 0,
+        "online_labels_received": false,
+        "original_metadata_sha256": "75e670d766c45fcfe98cb20ea63d6dbe00a1e13f56590ea2f7acc262bcfeaceb",
+        "original_pair_report_sha256": "a7f36c2d1f7f778afacda21c48f80962d4f0e8835ad52b2d93a6c6bd30ab5a24",
+        "original_selection_preserved": true,
+        "reused_fits": 10,
+        "selected_folds": [
+          5,
+          9,
+          1,
+          2
+        ],
+        "serialized_checkpoint_bytes": 561640,
+        "verified_checkpoint_count": 10
+      },
+      "elapsed_seconds": 122.05919766426086,
+      "evaluation_trials": 50,
+      "extraction": [
+        {
+          "extra_leading_triggers": 0,
+          "private_targets_sha256": null,
+          "recording_id": "sub-2_ses-20230516_task-covert_acq-calibration_run-01",
+          "retained_bad_eeg_channels": 0,
+          "route": "source_continuous_trigger_buffer",
+          "trailing_edf_padding_samples": 0,
+          "trials": 100
+        },
+        {
+          "extra_leading_triggers": 0,
+          "private_targets_sha256": "ffa5db4594d7f9ddb15fa6b22302167a728f60920b2fa0c5ec2ddf318249be95",
+          "recording_id": "sub-2_ses-20230516_task-covert_acq-online_run-01",
+          "retained_bad_eeg_channels": 3,
+          "route": "source_continuous_trigger_buffer",
+          "trailing_edf_padding_samples": 0,
+          "trials": 50
+        }
+      ],
+      "model": {
+        "additional_input_normalization": false,
+        "architecture": "EEGNet-128x320",
+        "author_commit": "0dca00584c528b288392684dcec0d496b6aa4951",
+        "batch_size": 16,
+        "deviations": [
+          "100 manuscript epochs instead of source YAML 1000",
+          "seed 20260906 plus fold index; CPU deterministic execution",
+          "deterministic calibration validation instead of source dataset jitter",
+          "correct sample-weighted validation loss instead of source stale-training-loss bug",
+          "stable fold-index tie-break for calibration accuracy ranking",
+          "softmax of source ensemble scores supplies uncalibrated probabilities"
+        ],
+        "elapsed_seconds": 1069.2660000000033,
+        "ensemble": "per-model per-trial five-logit population z-score, four-fold mean, softmax",
+        "epochs_per_fold": 100,
+        "final_repetition_jitter_samples": 0,
+        "fold_selection": "highest accuracy at lowest validation-loss checkpoint; fold-index ties",
+        "folds": [
+          {
+            "best_epoch": 98,
+            "best_validation_loss": 1.491652488708496,
+            "checkpoint_validation_accuracy": 0.3,
+            "elapsed_seconds": 112.26499999999942,
+            "epochs": 100,
+            "fold": 0,
+            "state_sha256": "282f8b3f836a4cbf3bc924fd2b4080c442767633b85513685fe1d4d9f0c1929d",
+            "training_trials": 90,
+            "validation_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              10
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 1.4289164543151855,
+            "checkpoint_validation_accuracy": 0.4,
+            "elapsed_seconds": 117.35899999999674,
+            "epochs": 100,
+            "fold": 1,
+            "state_sha256": "e7ede09ddf421a04875aec0ce27da08754568b66255c00c17a1372cafdb83c9e",
+            "training_trials": 90,
+            "validation_indices": [
+              9,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              20,
+              22,
+              26
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 7,
+            "best_validation_loss": 1.5408351421356201,
+            "checkpoint_validation_accuracy": 0.4,
+            "elapsed_seconds": 107.70299999999406,
+            "epochs": 100,
+            "fold": 2,
+            "state_sha256": "df8f24adf6db85e3c583d2430dd37c4bf014737e3410107804288cb216bc42f8",
+            "training_trials": 90,
+            "validation_indices": [
+              17,
+              18,
+              19,
+              21,
+              23,
+              27,
+              28,
+              29,
+              32,
+              38
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 1,
+            "best_validation_loss": 1.6218427419662476,
+            "checkpoint_validation_accuracy": 0.2,
+            "elapsed_seconds": 106.92199999999866,
+            "epochs": 100,
+            "fold": 3,
+            "state_sha256": "47784c05883b8b8ce4fb9a4a24a6502895be417cc66a9973d8fc445b3aec48f2",
+            "training_trials": 90,
+            "validation_indices": [
+              24,
+              25,
+              30,
+              31,
+              33,
+              34,
+              35,
+              41,
+              44,
+              48
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 1.426335334777832,
+            "checkpoint_validation_accuracy": 0.4,
+            "elapsed_seconds": 104.92199999999866,
+            "epochs": 100,
+            "fold": 4,
+            "state_sha256": "20c738ab7c6295c867951884e5e324e88829710aa611a1d12268f96d7b5d7a54",
+            "training_trials": 90,
+            "validation_indices": [
+              36,
+              37,
+              39,
+              40,
+              42,
+              43,
+              46,
+              47,
+              56,
+              60
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 91,
+            "best_validation_loss": 1.4115936756134033,
+            "checkpoint_validation_accuracy": 0.6,
+            "elapsed_seconds": 104.14100000000326,
+            "epochs": 100,
+            "fold": 5,
+            "state_sha256": "a51c898c941d27a5713743ed28333f4308a53b145e6456ba2f18d09a72a6b663",
+            "training_trials": 90,
+            "validation_indices": [
+              45,
+              49,
+              50,
+              51,
+              52,
+              53,
+              55,
+              61,
+              66,
+              67
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 96,
+            "best_validation_loss": 1.4984642267227173,
+            "checkpoint_validation_accuracy": 0.4,
+            "elapsed_seconds": 104.04699999999866,
+            "epochs": 100,
+            "fold": 6,
+            "state_sha256": "344bd109d05daecae0d5914e0639f82030c51f58c512e544eafb90335dc3fc46",
+            "training_trials": 90,
+            "validation_indices": [
+              54,
+              57,
+              58,
+              59,
+              62,
+              63,
+              65,
+              68,
+              73,
+              75
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 97,
+            "best_validation_loss": 1.3902199268341064,
+            "checkpoint_validation_accuracy": 0.4,
+            "elapsed_seconds": 102.40699999999924,
+            "epochs": 100,
+            "fold": 7,
+            "state_sha256": "50f9c0824c09d78e29955f6c12f18406d6bc89452eabd64aa7d11b6606038b91",
+            "training_trials": 90,
+            "validation_indices": [
+              64,
+              69,
+              70,
+              71,
+              72,
+              74,
+              76,
+              79,
+              80,
+              88
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 64,
+            "best_validation_loss": 1.5042636394500732,
+            "checkpoint_validation_accuracy": 0.3,
+            "elapsed_seconds": 104.29699999999866,
+            "epochs": 100,
+            "fold": 8,
+            "state_sha256": "7b7d6f02524b55054dba991536cce46905149e2f5c06b0690476eba587f9ab91",
+            "training_trials": 90,
+            "validation_indices": [
+              77,
+              78,
+              81,
+              82,
+              83,
+              84,
+              86,
+              87,
+              94,
+              95
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 1.5185790061950684,
+            "checkpoint_validation_accuracy": 0.5,
+            "elapsed_seconds": 104.29699999999866,
+            "epochs": 100,
+            "fold": 9,
+            "state_sha256": "2242ddb35f0923eb2a5985a066f505b5de6b48d2d4356bed896170184a463467",
+            "training_trials": 90,
+            "validation_indices": [
+              85,
+              89,
+              90,
+              91,
+              92,
+              93,
+              96,
+              97,
+              98,
+              99
+            ],
+            "validation_trials": 10
+          }
+        ],
+        "learning_rate": 0.0001,
+        "maximum_total_seconds": 21600,
+        "memory_format": "channels_last",
+        "memory_format_eval_equivalence_tolerance": {
+          "atol": 1e-06,
+          "rtol": 1e-05
+        },
+        "mkldnn": true,
+        "online_labels_received": false,
+        "online_recording_trials": {
+          "online": 50
+        },
+        "optimizer": "AdamW",
+        "parameters": 12293,
+        "seed": 20260906,
+        "selected_folds": [
+          5,
+          9,
+          1,
+          2
+        ],
+        "source_license": "CC0-1.0",
+        "split": "StratifiedKFold(10, shuffle=False)",
+        "threads": 1,
+        "torch_version": "2.14.0+cpu",
+        "training_jitter_samples": [
+          -25,
+          24
+        ],
+        "validation_and_online_jitter": false,
+        "weight_decay": 0.01
+      },
+      "new_reference_fits": 0,
+      "pair_id": "sub-2_ses-20230516_covert"
+    },
+    {
+      "calibration_trials": 100,
+      "checkpoint_reuse": {
+        "calibration_labels_used_for_split_validation_only": true,
+        "calibration_validation_scored": false,
+        "elapsed_seconds": 1.1090000000112923,
+        "new_fit_count": 0,
+        "online_labels_received": false,
+        "original_metadata_sha256": "9b2d30fa5089f69f3cbae6d3ed65cdb1487e1705cd9a212dc9a22c5eaf43c7d6",
+        "original_pair_report_sha256": "68288adb078de0ec18219bb613d305d99bacf706e859009781aac2bd4b003614",
+        "original_selection_preserved": true,
+        "reused_fits": 10,
+        "selected_folds": [
+          2,
+          6,
+          3,
+          4
+        ],
+        "serialized_checkpoint_bytes": 561640,
+        "verified_checkpoint_count": 10
+      },
+      "elapsed_seconds": 147.6024694442749,
+      "evaluation_trials": 50,
+      "extraction": [
+        {
+          "extra_leading_triggers": 0,
+          "private_targets_sha256": null,
+          "recording_id": "sub-3_ses-20230523_task-minimallyovert_acq-calibration_run-01",
+          "retained_bad_eeg_channels": 1,
+          "route": "source_continuous_trigger_buffer",
+          "trailing_edf_padding_samples": 0,
+          "trials": 100
+        },
+        {
+          "extra_leading_triggers": 0,
+          "private_targets_sha256": "eef5e5d1bbe5b3ec3b8c4b07d08306fbf6c7ef6ca104f06e4051ba824ed31823",
+          "recording_id": "sub-3_ses-20230523_task-minimallyovert_acq-online_run-01",
+          "retained_bad_eeg_channels": 3,
+          "route": "source_continuous_trigger_buffer",
+          "trailing_edf_padding_samples": 0,
+          "trials": 50
+        }
+      ],
+      "model": {
+        "additional_input_normalization": false,
+        "architecture": "EEGNet-128x320",
+        "author_commit": "0dca00584c528b288392684dcec0d496b6aa4951",
+        "batch_size": 16,
+        "deviations": [
+          "100 manuscript epochs instead of source YAML 1000",
+          "seed 20260906 plus fold index; CPU deterministic execution",
+          "deterministic calibration validation instead of source dataset jitter",
+          "correct sample-weighted validation loss instead of source stale-training-loss bug",
+          "stable fold-index tie-break for calibration accuracy ranking",
+          "softmax of source ensemble scores supplies uncalibrated probabilities"
+        ],
+        "elapsed_seconds": 1184.2649999999994,
+        "ensemble": "per-model per-trial five-logit population z-score, four-fold mean, softmax",
+        "epochs_per_fold": 100,
+        "final_repetition_jitter_samples": 0,
+        "fold_selection": "highest accuracy at lowest validation-loss checkpoint; fold-index ties",
+        "folds": [
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 1.2046923637390137,
+            "checkpoint_validation_accuracy": 0.3,
+            "elapsed_seconds": 104.76600000000326,
+            "epochs": 100,
+            "fold": 0,
+            "state_sha256": "2b1d445c9bb9f52ee3b2f3f729a7f51b2d320026544f2db00b3789cd5b9c90fd",
+            "training_trials": 90,
+            "validation_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 1.0127462148666382,
+            "checkpoint_validation_accuracy": 0.5,
+            "elapsed_seconds": 103.85899999999674,
+            "epochs": 100,
+            "fold": 1,
+            "state_sha256": "22b87eabadd6a7eb94d280f138db9e7d01f28694753a63c0baae37fb93837423",
+            "training_trials": 90,
+            "validation_indices": [
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              21,
+              22
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 0.8501632809638977,
+            "checkpoint_validation_accuracy": 0.7,
+            "elapsed_seconds": 107.13999999999942,
+            "epochs": 100,
+            "fold": 2,
+            "state_sha256": "4ece4e49f09a03dec2cecddc74528a6f28cfe0f6585b7cfae5532ee39872190c",
+            "training_trials": 90,
+            "validation_indices": [
+              18,
+              19,
+              20,
+              23,
+              24,
+              25,
+              26,
+              28,
+              30,
+              34
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 0.7656647562980652,
+            "checkpoint_validation_accuracy": 0.6,
+            "elapsed_seconds": 108.42199999999866,
+            "epochs": 100,
+            "fold": 3,
+            "state_sha256": "b562b608560bed8c5c901087ac64e8e46f5ab7f2b6f5fbc03b583a9ad838da1f",
+            "training_trials": 90,
+            "validation_indices": [
+              27,
+              31,
+              33,
+              35,
+              37,
+              38,
+              39,
+              40,
+              43,
+              44
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 0.9132001996040344,
+            "checkpoint_validation_accuracy": 0.6,
+            "elapsed_seconds": 115.85899999999674,
+            "epochs": 100,
+            "fold": 4,
+            "state_sha256": "beb75804c5eabb1de9789e80ef2c68877ea8d32daa1b1bb3ba983b5a9b5a2e7a",
+            "training_trials": 90,
+            "validation_indices": [
+              29,
+              41,
+              45,
+              46,
+              47,
+              49,
+              50,
+              52,
+              53,
+              54
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 99,
+            "best_validation_loss": 1.1632182598114014,
+            "checkpoint_validation_accuracy": 0.5,
+            "elapsed_seconds": 118.9210000000021,
+            "epochs": 100,
+            "fold": 5,
+            "state_sha256": "60f132972f42b0018bf2d60f60b3646f8e3ddd3dff9e4d73001fc7d2c661730a",
+            "training_trials": 90,
+            "validation_indices": [
+              32,
+              51,
+              56,
+              57,
+              58,
+              59,
+              60,
+              62,
+              64,
+              66
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 0.9414942860603333,
+            "checkpoint_validation_accuracy": 0.7,
+            "elapsed_seconds": 111.71899999999732,
+            "epochs": 100,
+            "fold": 6,
+            "state_sha256": "abc2fb632b319bccabd56e629e724f5d1952f27f587e75c7ce346687c1452321",
+            "training_trials": 90,
+            "validation_indices": [
+              36,
+              65,
+              67,
+              68,
+              70,
+              71,
+              72,
+              74,
+              75,
+              81
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 74,
+            "best_validation_loss": 1.0239015817642212,
+            "checkpoint_validation_accuracy": 0.6,
+            "elapsed_seconds": 116.60899999999674,
+            "epochs": 100,
+            "fold": 7,
+            "state_sha256": "5b592c228459b11b3c09f857b2f4172045bd24c7039b3cc220711f6b7ea7787e",
+            "training_trials": 90,
+            "validation_indices": [
+              42,
+              48,
+              69,
+              73,
+              76,
+              77,
+              79,
+              80,
+              84,
+              86
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 0.9847642779350281,
+            "checkpoint_validation_accuracy": 0.6,
+            "elapsed_seconds": 137.53199999999924,
+            "epochs": 100,
+            "fold": 8,
+            "state_sha256": "d644027c706249aa5ce3558ea0ac61ef0bb6bb068efbed3e946477add3e0d003",
+            "training_trials": 90,
+            "validation_indices": [
+              55,
+              61,
+              78,
+              82,
+              85,
+              88,
+              89,
+              90,
+              91,
+              92
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 0.8128457069396973,
+            "checkpoint_validation_accuracy": 0.5,
+            "elapsed_seconds": 158.06300000000192,
+            "epochs": 100,
+            "fold": 9,
+            "state_sha256": "600ba7de8e8e880ce391aa37d6fe16ba04ae4583e64a7886e068b2fb7ac36f02",
+            "training_trials": 90,
+            "validation_indices": [
+              63,
+              83,
+              87,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99
+            ],
+            "validation_trials": 10
+          }
+        ],
+        "learning_rate": 0.0001,
+        "maximum_total_seconds": 21600,
+        "memory_format": "channels_last",
+        "memory_format_eval_equivalence_tolerance": {
+          "atol": 1e-06,
+          "rtol": 1e-05
+        },
+        "mkldnn": true,
+        "online_labels_received": false,
+        "online_recording_trials": {
+          "online": 50
+        },
+        "optimizer": "AdamW",
+        "parameters": 12293,
+        "seed": 20260906,
+        "selected_folds": [
+          2,
+          6,
+          3,
+          4
+        ],
+        "source_license": "CC0-1.0",
+        "split": "StratifiedKFold(10, shuffle=False)",
+        "threads": 1,
+        "torch_version": "2.14.0+cpu",
+        "training_jitter_samples": [
+          -25,
+          24
+        ],
+        "validation_and_online_jitter": false,
+        "weight_decay": 0.01
+      },
+      "new_reference_fits": 0,
+      "pair_id": "sub-3_ses-20230523_minimallyovert"
+    },
+    {
+      "calibration_trials": 100,
+      "checkpoint_reuse": {
+        "reused_fits": 0
+      },
+      "elapsed_seconds": 1277.3605415821075,
+      "evaluation_trials": 50,
+      "extraction": [
+        {
+          "extra_leading_triggers": 0,
+          "private_targets_sha256": null,
+          "recording_id": "sub-3_ses-20230524_task-covert_acq-calibration_run-01",
+          "retained_bad_eeg_channels": 14,
+          "route": "source_npy_concatenation",
+          "trailing_edf_padding_samples": 0,
+          "trials": 100
+        },
+        {
+          "extra_leading_triggers": 0,
+          "private_targets_sha256": "c17ca9e7a8945a9269ec6df6ad986101c28471b231912a27cc93db038e2d7a3b",
+          "recording_id": "sub-3_ses-20230524_task-covert_acq-online_run-01",
+          "retained_bad_eeg_channels": 1,
+          "route": "source_npy_concatenation",
+          "trailing_edf_padding_samples": 128,
+          "trials": 50
+        }
+      ],
+      "model": {
+        "additional_input_normalization": false,
+        "architecture": "EEGNet-128x320",
+        "author_commit": "0dca00584c528b288392684dcec0d496b6aa4951",
+        "batch_size": 16,
+        "deviations": [
+          "100 manuscript epochs instead of source YAML 1000",
+          "seed 20260906 plus fold index; CPU deterministic execution",
+          "deterministic calibration validation instead of source dataset jitter",
+          "correct sample-weighted validation loss instead of source stale-training-loss bug",
+          "stable fold-index tie-break for calibration accuracy ranking",
+          "softmax of source ensemble scores supplies uncalibrated probabilities"
+        ],
+        "elapsed_seconds": 1104.0940000000119,
+        "ensemble": "per-model per-trial five-logit population z-score, four-fold mean, softmax",
+        "epochs_per_fold": 100,
+        "final_repetition_jitter_samples": 0,
+        "fold_selection": "highest accuracy at lowest validation-loss checkpoint; fold-index ties",
+        "folds": [
+          {
+            "best_epoch": 94,
+            "best_validation_loss": 1.3787847757339478,
+            "checkpoint_validation_accuracy": 0.4,
+            "elapsed_seconds": 112.39100000000326,
+            "epochs": 100,
+            "fold": 0,
+            "state_sha256": "6bd367f48cb3ec4cb9bd227fd590d7a9d7a17b73b57d12d99c4f2bf8e783bafc",
+            "training_trials": 90,
+            "validation_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 1,
+            "best_validation_loss": 1.634547233581543,
+            "checkpoint_validation_accuracy": 0.0,
+            "elapsed_seconds": 120.56299999999464,
+            "epochs": 100,
+            "fold": 1,
+            "state_sha256": "388ef27168df3ae6d63d23527ab6ea2a6c30d0ee895c53bd30364032e766efdd",
+            "training_trials": 90,
+            "validation_indices": [
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              18,
+              19,
+              20,
+              21
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 35,
+            "best_validation_loss": 1.4899938106536865,
+            "checkpoint_validation_accuracy": 0.4,
+            "elapsed_seconds": 123.36000000000058,
+            "epochs": 100,
+            "fold": 2,
+            "state_sha256": "fdcfa14252c5b11de7f4777fd47b7c10ef6d6b51c17a7e71682623b17b606e2c",
+            "training_trials": 90,
+            "validation_indices": [
+              16,
+              22,
+              23,
+              24,
+              25,
+              26,
+              28,
+              29,
+              30,
+              31
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 93,
+            "best_validation_loss": 1.5168030261993408,
+            "checkpoint_validation_accuracy": 0.5,
+            "elapsed_seconds": 113.875,
+            "epochs": 100,
+            "fold": 3,
+            "state_sha256": "ccdeb2880552a4ea1f056c591f378cbda6837f3e928cf9def4b151f1970bd542",
+            "training_trials": 90,
+            "validation_indices": [
+              17,
+              27,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              40
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 32,
+            "best_validation_loss": 1.5859966278076172,
+            "checkpoint_validation_accuracy": 0.4,
+            "elapsed_seconds": 104.1880000000092,
+            "epochs": 100,
+            "fold": 4,
+            "state_sha256": "6c0911e1c643bd95e1ecdfc5877e01d402d17c81c5e8287e7d41e9c9030c6b2c",
+            "training_trials": 90,
+            "validation_indices": [
+              39,
+              41,
+              42,
+              43,
+              44,
+              45,
+              47,
+              48,
+              50,
+              56
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 64,
+            "best_validation_loss": 1.614250898361206,
+            "checkpoint_validation_accuracy": 0.2,
+            "elapsed_seconds": 104.28100000000268,
+            "epochs": 100,
+            "fold": 5,
+            "state_sha256": "a8b65a055682a49a92c51e64ae9c43ee310ed4cdbda18ada426a5adc07fddc8b",
+            "training_trials": 90,
+            "validation_indices": [
+              46,
+              49,
+              51,
+              54,
+              55,
+              58,
+              59,
+              60,
+              64,
+              71
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 100,
+            "best_validation_loss": 1.417342185974121,
+            "checkpoint_validation_accuracy": 0.6,
+            "elapsed_seconds": 103.82800000000861,
+            "epochs": 100,
+            "fold": 6,
+            "state_sha256": "580d13fca5a66e11a979fc3d6e9816f5e17a616579b9827caa57bdeafcf8b24f",
+            "training_trials": 90,
+            "validation_indices": [
+              52,
+              53,
+              57,
+              61,
+              63,
+              65,
+              66,
+              67,
+              70,
+              81
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 41,
+            "best_validation_loss": 1.5449707508087158,
+            "checkpoint_validation_accuracy": 0.4,
+            "elapsed_seconds": 107.82799999999406,
+            "epochs": 100,
+            "fold": 7,
+            "state_sha256": "390ec2478b208c0fa133a32be8aa30330c31a15bb25680e2d6961690c46af0fa",
+            "training_trials": 90,
+            "validation_indices": [
+              62,
+              68,
+              69,
+              72,
+              74,
+              75,
+              76,
+              77,
+              78,
+              90
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 94,
+            "best_validation_loss": 1.4192516803741455,
+            "checkpoint_validation_accuracy": 0.4,
+            "elapsed_seconds": 108.5619999999908,
+            "epochs": 100,
+            "fold": 8,
+            "state_sha256": "12769fab4b60a4e50d7baa8684ce6d6a00ff31b99491fdbdcfc40ec4b4e7da4b",
+            "training_trials": 90,
+            "validation_indices": [
+              73,
+              79,
+              80,
+              82,
+              83,
+              84,
+              85,
+              86,
+              88,
+              91
+            ],
+            "validation_trials": 10
+          },
+          {
+            "best_epoch": 83,
+            "best_validation_loss": 1.3625990152359009,
+            "checkpoint_validation_accuracy": 0.5,
+            "elapsed_seconds": 104.375,
+            "epochs": 100,
+            "fold": 9,
+            "state_sha256": "8796799b0dc048a4528c5ec8c50445f4a129686aec2d68a9ee64890c94211382",
+            "training_trials": 90,
+            "validation_indices": [
+              87,
+              89,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99
+            ],
+            "validation_trials": 10
+          }
+        ],
+        "learning_rate": 0.0001,
+        "maximum_total_seconds": 21600,
+        "memory_format": "channels_last",
+        "memory_format_eval_equivalence_tolerance": {
+          "atol": 1e-06,
+          "rtol": 1e-05
+        },
+        "mkldnn": true,
+        "online_labels_received": false,
+        "online_recording_trials": {
+          "online": 50
+        },
+        "optimizer": "AdamW",
+        "parameters": 12293,
+        "seed": 20260906,
+        "selected_folds": [
+          6,
+          3,
+          9,
+          0
+        ],
+        "source_license": "CC0-1.0",
+        "split": "StratifiedKFold(10, shuffle=False)",
+        "threads": 1,
+        "torch_version": "2.14.0+cpu",
+        "training_jitter_samples": [
+          -25,
+          24
+        ],
+        "validation_and_online_jitter": false,
+        "weight_decay": 0.01
+      },
+      "new_reference_fits": 10,
+      "pair_id": "sub-3_ses-20230524_covert"
+    }
+  ],
+  "peak_observed_rss_bytes": 908828672,
+  "predictions_relative_path": "data/speech_repro_1_corrected_20260921/predictions.npz",
+  "predictions_sha256": "cfe18ecdfc8dc5a9fd6717569a0835fc27275f3295a7065c6784195d3719f6d3",
+  "preflight_sha256": "3eb0c0af3bc5ce04e3301ab6e451c0965e946f5b2a866f0ac67a3d47e94d4ab1",
+  "protocol": "docs/SPEECH_REPRODUCTION_RESEARCH_DECISION.md",
+  "retained_bytes": 1039386479,
+  "runtime_versions": {
+    "mne": "1.12.1",
+    "numpy": "2.3.5",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "torch": "2.14.0+cpu"
+  },
+  "seed": 20260906,
+  "source_commit": "034af61aba855c58450977bf1c1916085c586cd6",
+  "source_manifest_sha256": "18a2c05c4997033fc22fa707a79ccfda6e576c1a0a2dfd5b31b4c62ae6b4a869",
+  "source_sidecars": [
+    {
+      "bytes": 1119,
+      "git_blob_sha": "a62d25d8155a035a831faac34db398acbbcb84d0",
+      "path": "README"
+    },
+    {
+      "bytes": 1122,
+      "git_blob_sha": "81fd1744e097a8ac8bc87ea4f4efc033f526d8a3",
+      "path": "dataset_description.json"
+    },
+    {
+      "bytes": 1473,
+      "git_blob_sha": "ee1df508960d153a65501de0a656abfec745f375",
+      "path": "events.json"
+    },
+    {
+      "bytes": 242,
+      "git_blob_sha": "a605cea98f956c83518fddcb0506303b6dc8b5c3",
+      "path": "sub-1/ses-20230511/eeg/sub-1_ses-20230511_coordsystem.json"
+    },
+    {
+      "bytes": 4109,
+      "git_blob_sha": "42cd41bd5bb886bf542b92c21ef8f77f4e4b7796",
+      "path": "sub-1/ses-20230511/eeg/sub-1_ses-20230511_electrodes.tsv"
+    },
+    {
+      "bytes": 375,
+      "git_blob_sha": "c3a8b993dd16f141ca4630b27395f0f82c0e0757",
+      "path": "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-calibration_run-01_bad_channels.json"
+    },
+    {
+      "bytes": 3135,
+      "git_blob_sha": "9a434010c92f82c2125bcb230ca8354f4dbe18ad",
+      "path": "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-calibration_run-01_channels.tsv"
+    },
+    {
+      "bytes": 823,
+      "git_blob_sha": "d9fe2b7c934968565edcbe0095700bacba370768",
+      "path": "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-calibration_run-01_eeg.json"
+    },
+    {
+      "bytes": 5456,
+      "git_blob_sha": "8ad93d0bd18858e7b4acd7247d1ee9950a3e6594",
+      "path": "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-calibration_run-01_events.tsv"
+    },
+    {
+      "bytes": 265,
+      "git_blob_sha": "08dfea630db900fe6e21e3aa59347375fb194920",
+      "path": "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-online_run-01_bad_channels.json"
+    },
+    {
+      "bytes": 3141,
+      "git_blob_sha": "ce644c7280ba994bda8a8a1fe83c87d78aa2c041",
+      "path": "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-online_run-01_channels.tsv"
+    },
+    {
+      "bytes": 818,
+      "git_blob_sha": "c25a5bb6eb74d9ecb4270215599f353689962d8d",
+      "path": "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-online_run-01_eeg.json"
+    },
+    {
+      "bytes": 2704,
+      "git_blob_sha": "42f29e1a67c3feb530622bdd70ce2d8fcd14e6d5",
+      "path": "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-online_run-01_events.tsv"
+    },
+    {
+      "bytes": 265,
+      "git_blob_sha": "c0e3124f4a07e856705fcb046f140f4956a4336e",
+      "path": "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-online_run-02_bad_channels.json"
+    },
+    {
+      "bytes": 3141,
+      "git_blob_sha": "66dce7c63f875462df90d34ad0fbf22fc7e0cd48",
+      "path": "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-online_run-02_channels.tsv"
+    },
+    {
+      "bytes": 818,
+      "git_blob_sha": "c25a5bb6eb74d9ecb4270215599f353689962d8d",
+      "path": "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-online_run-02_eeg.json"
+    },
+    {
+      "bytes": 1876,
+      "git_blob_sha": "f93a9ba709041313ec46ac9624cf1e978e5789be",
+      "path": "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-online_run-02_events.tsv"
+    },
+    {
+      "bytes": 242,
+      "git_blob_sha": "a605cea98f956c83518fddcb0506303b6dc8b5c3",
+      "path": "sub-1/ses-20230529/eeg/sub-1_ses-20230529_coordsystem.json"
+    },
+    {
+      "bytes": 4109,
+      "git_blob_sha": "42cd41bd5bb886bf542b92c21ef8f77f4e4b7796",
+      "path": "sub-1/ses-20230529/eeg/sub-1_ses-20230529_electrodes.tsv"
+    },
+    {
+      "bytes": 385,
+      "git_blob_sha": "08ef699268c0891ac42df3c64aba3e7d73b7f78c",
+      "path": "sub-1/ses-20230529/eeg/sub-1_ses-20230529_task-covert_acq-calibration_run-01_bad_channels.json"
+    },
+    {
+      "bytes": 3133,
+      "git_blob_sha": "ce042ba6712173ce359e0c58822246fae81918a4",
+      "path": "sub-1/ses-20230529/eeg/sub-1_ses-20230529_task-covert_acq-calibration_run-01_channels.tsv"
+    },
+    {
+      "bytes": 797,
+      "git_blob_sha": "fdfed1e107f0fe2ca9fa697c25333e7519ab428c",
+      "path": "sub-1/ses-20230529/eeg/sub-1_ses-20230529_task-covert_acq-calibration_run-01_eeg.json"
+    },
+    {
+      "bytes": 4584,
+      "git_blob_sha": "03f2e0ca4ab6179d56bf189f6dfef0cebba7b75b",
+      "path": "sub-1/ses-20230529/eeg/sub-1_ses-20230529_task-covert_acq-calibration_run-01_events.tsv"
+    },
+    {
+      "bytes": 337,
+      "git_blob_sha": "b765d9b290ab50e89d5404e6b37dddb0ebc918b2",
+      "path": "sub-1/ses-20230529/eeg/sub-1_ses-20230529_task-covert_acq-online_run-01_bad_channels.json"
+    },
+    {
+      "bytes": 3136,
+      "git_blob_sha": "a61c5f35c7afad769122bbbb9236c5de57c7eacc",
+      "path": "sub-1/ses-20230529/eeg/sub-1_ses-20230529_task-covert_acq-online_run-01_channels.tsv"
+    },
+    {
+      "bytes": 792,
+      "git_blob_sha": "d06fd8c9dacd0e1a4fd305e2572d67da6baab0f8",
+      "path": "sub-1/ses-20230529/eeg/sub-1_ses-20230529_task-covert_acq-online_run-01_eeg.json"
+    },
+    {
+      "bytes": 2079,
+      "git_blob_sha": "cfff9cc295fd1474a92e6734beba2a2b13c884d8",
+      "path": "sub-1/ses-20230529/eeg/sub-1_ses-20230529_task-covert_acq-online_run-01_events.tsv"
+    },
+    {
+      "bytes": 242,
+      "git_blob_sha": "a605cea98f956c83518fddcb0506303b6dc8b5c3",
+      "path": "sub-2/ses-20230512/eeg/sub-2_ses-20230512_coordsystem.json"
+    },
+    {
+      "bytes": 4109,
+      "git_blob_sha": "42cd41bd5bb886bf542b92c21ef8f77f4e4b7796",
+      "path": "sub-2/ses-20230512/eeg/sub-2_ses-20230512_electrodes.tsv"
+    },
+    {
+      "bytes": 303,
+      "git_blob_sha": "fa85b25003602cb5ffc0ff7bf50e5c593a6cf980",
+      "path": "sub-2/ses-20230512/eeg/sub-2_ses-20230512_task-minimallyovert_acq-calibration_run-01_bad_channels.json"
+    },
+    {
+      "bytes": 3141,
+      "git_blob_sha": "0ea4fe6b380757408d90f175013fd56feac7dc68",
+      "path": "sub-2/ses-20230512/eeg/sub-2_ses-20230512_task-minimallyovert_acq-calibration_run-01_channels.tsv"
+    },
+    {
+      "bytes": 823,
+      "git_blob_sha": "d9fe2b7c934968565edcbe0095700bacba370768",
+      "path": "sub-2/ses-20230512/eeg/sub-2_ses-20230512_task-minimallyovert_acq-calibration_run-01_eeg.json"
+    },
+    {
+      "bytes": 5471,
+      "git_blob_sha": "cd66aff43f8f666c189b2c728d9477b54aa71343",
+      "path": "sub-2/ses-20230512/eeg/sub-2_ses-20230512_task-minimallyovert_acq-calibration_run-01_events.tsv"
+    },
+    {
+      "bytes": 281,
+      "git_blob_sha": "70bbba318e76e39293176c28a93e1040f5353868",
+      "path": "sub-2/ses-20230512/eeg/sub-2_ses-20230512_task-minimallyovert_acq-online_run-01_bad_channels.json"
+    },
+    {
+      "bytes": 3141,
+      "git_blob_sha": "0ea4fe6b380757408d90f175013fd56feac7dc68",
+      "path": "sub-2/ses-20230512/eeg/sub-2_ses-20230512_task-minimallyovert_acq-online_run-01_channels.tsv"
+    },
+    {
+      "bytes": 818,
+      "git_blob_sha": "c25a5bb6eb74d9ecb4270215599f353689962d8d",
+      "path": "sub-2/ses-20230512/eeg/sub-2_ses-20230512_task-minimallyovert_acq-online_run-01_eeg.json"
+    },
+    {
+      "bytes": 2500,
+      "git_blob_sha": "22213e169e7045f45b9f4acdffeab8251d6764c7",
+      "path": "sub-2/ses-20230512/eeg/sub-2_ses-20230512_task-minimallyovert_acq-online_run-01_events.tsv"
+    },
+    {
+      "bytes": 242,
+      "git_blob_sha": "a605cea98f956c83518fddcb0506303b6dc8b5c3",
+      "path": "sub-2/ses-20230516/eeg/sub-2_ses-20230516_coordsystem.json"
+    },
+    {
+      "bytes": 4109,
+      "git_blob_sha": "42cd41bd5bb886bf542b92c21ef8f77f4e4b7796",
+      "path": "sub-2/ses-20230516/eeg/sub-2_ses-20230516_electrodes.tsv"
+    },
+    {
+      "bytes": 219,
+      "git_blob_sha": "7ee88c5970dec24e13d404f4ba0aee5537e20a5a",
+      "path": "sub-2/ses-20230516/eeg/sub-2_ses-20230516_task-covert_acq-calibration_run-01_bad_channels.json"
+    },
+    {
+      "bytes": 3144,
+      "git_blob_sha": "3d2bba93e1b29eaf6c9c98a41b8e43238565c7fb",
+      "path": "sub-2/ses-20230516/eeg/sub-2_ses-20230516_task-covert_acq-calibration_run-01_channels.tsv"
+    },
+    {
+      "bytes": 797,
+      "git_blob_sha": "fdfed1e107f0fe2ca9fa697c25333e7519ab428c",
+      "path": "sub-2/ses-20230516/eeg/sub-2_ses-20230516_task-covert_acq-calibration_run-01_eeg.json"
+    },
+    {
+      "bytes": 4583,
+      "git_blob_sha": "f830647942f23b1ec57c3b7520b764185542c7e2",
+      "path": "sub-2/ses-20230516/eeg/sub-2_ses-20230516_task-covert_acq-calibration_run-01_events.tsv"
+    },
+    {
+      "bytes": 271,
+      "git_blob_sha": "fd8a576919dd3eac1acd2d76dd9af9a91dd1fed4",
+      "path": "sub-2/ses-20230516/eeg/sub-2_ses-20230516_task-covert_acq-online_run-01_bad_channels.json"
+    },
+    {
+      "bytes": 3141,
+      "git_blob_sha": "4d9ef20a19bff6a265a22dc4d0a0320b7b70f02e",
+      "path": "sub-2/ses-20230516/eeg/sub-2_ses-20230516_task-covert_acq-online_run-01_channels.tsv"
+    },
+    {
+      "bytes": 792,
+      "git_blob_sha": "d06fd8c9dacd0e1a4fd305e2572d67da6baab0f8",
+      "path": "sub-2/ses-20230516/eeg/sub-2_ses-20230516_task-covert_acq-online_run-01_eeg.json"
+    },
+    {
+      "bytes": 2106,
+      "git_blob_sha": "aaa8171a5987c7d5200c05974b3272379adfceaa",
+      "path": "sub-2/ses-20230516/eeg/sub-2_ses-20230516_task-covert_acq-online_run-01_events.tsv"
+    },
+    {
+      "bytes": 242,
+      "git_blob_sha": "a605cea98f956c83518fddcb0506303b6dc8b5c3",
+      "path": "sub-3/ses-20230523/eeg/sub-3_ses-20230523_coordsystem.json"
+    },
+    {
+      "bytes": 4109,
+      "git_blob_sha": "42cd41bd5bb886bf542b92c21ef8f77f4e4b7796",
+      "path": "sub-3/ses-20230523/eeg/sub-3_ses-20230523_electrodes.tsv"
+    },
+    {
+      "bytes": 239,
+      "git_blob_sha": "cb04f3f5e7d016ac21a3dded0e2bf0071eb18467",
+      "path": "sub-3/ses-20230523/eeg/sub-3_ses-20230523_task-minimallyovert_acq-calibration_run-01_bad_channels.json"
+    },
+    {
+      "bytes": 3143,
+      "git_blob_sha": "fd18716681b78f54df1667ab0e2572e1789465cd",
+      "path": "sub-3/ses-20230523/eeg/sub-3_ses-20230523_task-minimallyovert_acq-calibration_run-01_channels.tsv"
+    },
+    {
+      "bytes": 823,
+      "git_blob_sha": "d9fe2b7c934968565edcbe0095700bacba370768",
+      "path": "sub-3/ses-20230523/eeg/sub-3_ses-20230523_task-minimallyovert_acq-calibration_run-01_eeg.json"
+    },
+    {
+      "bytes": 5492,
+      "git_blob_sha": "a380e2514d6eb77860cd12d5d580f72a74231325",
+      "path": "sub-3/ses-20230523/eeg/sub-3_ses-20230523_task-minimallyovert_acq-calibration_run-01_events.tsv"
+    },
+    {
+      "bytes": 267,
+      "git_blob_sha": "21b09c194d4d3eb5feb43884a0ac948e25884380",
+      "path": "sub-3/ses-20230523/eeg/sub-3_ses-20230523_task-minimallyovert_acq-online_run-01_bad_channels.json"
+    },
+    {
+      "bytes": 3141,
+      "git_blob_sha": "c9053df1e52ac268d759db2e68f1f276515bdea5",
+      "path": "sub-3/ses-20230523/eeg/sub-3_ses-20230523_task-minimallyovert_acq-online_run-01_channels.tsv"
+    },
+    {
+      "bytes": 818,
+      "git_blob_sha": "c25a5bb6eb74d9ecb4270215599f353689962d8d",
+      "path": "sub-3/ses-20230523/eeg/sub-3_ses-20230523_task-minimallyovert_acq-online_run-01_eeg.json"
+    },
+    {
+      "bytes": 2508,
+      "git_blob_sha": "277e6172d1a715f18af4d7638b4f6a5a96bc26a7",
+      "path": "sub-3/ses-20230523/eeg/sub-3_ses-20230523_task-minimallyovert_acq-online_run-01_events.tsv"
+    },
+    {
+      "bytes": 242,
+      "git_blob_sha": "a605cea98f956c83518fddcb0506303b6dc8b5c3",
+      "path": "sub-3/ses-20230524/eeg/sub-3_ses-20230524_coordsystem.json"
+    },
+    {
+      "bytes": 4109,
+      "git_blob_sha": "42cd41bd5bb886bf542b92c21ef8f77f4e4b7796",
+      "path": "sub-3/ses-20230524/eeg/sub-3_ses-20230524_electrodes.tsv"
+    },
+    {
+      "bytes": 442,
+      "git_blob_sha": "92764510603fe447d39e30b876190613b43da5a2",
+      "path": "sub-3/ses-20230524/eeg/sub-3_ses-20230524_task-covert_acq-calibration_run-01_bad_channels.json"
+    },
+    {
+      "bytes": 3130,
+      "git_blob_sha": "37f430f2be8e5a4da0d3931a1ed4feb593fbad6a",
+      "path": "sub-3/ses-20230524/eeg/sub-3_ses-20230524_task-covert_acq-calibration_run-01_channels.tsv"
+    },
+    {
+      "bytes": 797,
+      "git_blob_sha": "fdfed1e107f0fe2ca9fa697c25333e7519ab428c",
+      "path": "sub-3/ses-20230524/eeg/sub-3_ses-20230524_task-covert_acq-calibration_run-01_eeg.json"
+    },
+    {
+      "bytes": 4002,
+      "git_blob_sha": "6e8d3c851fa6691470a58d4a3768adef502bf5da",
+      "path": "sub-3/ses-20230524/eeg/sub-3_ses-20230524_task-covert_acq-calibration_run-01_events.tsv"
+    },
+    {
+      "bytes": 238,
+      "git_blob_sha": "a315a99a757d9e79b9289da7a50ff11667fe2b73",
+      "path": "sub-3/ses-20230524/eeg/sub-3_ses-20230524_task-covert_acq-online_run-01_bad_channels.json"
+    },
+    {
+      "bytes": 3143,
+      "git_blob_sha": "cd3b215606bcb3b3cd48b3906870ac5680c2df6a",
+      "path": "sub-3/ses-20230524/eeg/sub-3_ses-20230524_task-covert_acq-online_run-01_channels.tsv"
+    },
+    {
+      "bytes": 792,
+      "git_blob_sha": "d06fd8c9dacd0e1a4fd305e2572d67da6baab0f8",
+      "path": "sub-3/ses-20230524/eeg/sub-3_ses-20230524_task-covert_acq-online_run-01_eeg.json"
+    },
+    {
+      "bytes": 1776,
+      "git_blob_sha": "75b48393d1119ecbdfc9ad283fe4f4b967d69c48",
+      "path": "sub-3/ses-20230524/eeg/sub-3_ses-20230524_task-covert_acq-online_run-01_events.tsv"
+    }
+  ],
+  "started_sha256": "f23c4c2af1ce1c5df6a2053b4f11d76a1d004a1d954f9218d225df400e4ac5cf",
+  "status": "predictions_locked_unscored"
+}
