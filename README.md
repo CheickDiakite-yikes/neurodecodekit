@@ -40,11 +40,19 @@ BA was **18.13%**; the joint model also failed the full control conjunction.
 All 341 trials, both conditions and all nine arms remain in the
 [complete aggregate result](registries/speech_reproduction_result.v0.json).
 
-The next scientific priority is to identify which auxiliary modalities carry
-the strong minimally overt signal. The maintainer has asked us to continue the
-[calibration-only discovery](docs/SPEECH_AUXILIARY_DISCOVERY.md) separating
-display/timing from microphone, lips and eyes, within a ten-minute Tier B cap.
-An untouched, cue-resistant confirmation remains a later, separately scoped step.
+The [nine-second calibration-only follow-up](docs/SPEECH_AUXILIARY_DISCOVERY_RESULT.md)
+found **79.98% lip-only** and **66.22% EOG-only** balanced accuracy under
+whole-trial blocked validation. Both beat all three controls in all three
+minimally overt participants. DISPLAY, timing and microphone did not; no covert
+arm passed consistently. This shifts the lead toward peripheral-channel
+prediction, without establishing causal origin or new online performance.
+
+**Next scientific priority:** test whether averaging repetition waveforms hides
+EEG information. Compare matched small EEG power models before versus after
+repetition averaging, requiring an increment over complete auxiliary and
+deranged-EEG controls on development calibration only. This proposed follow-up
+needs its own frozen bounded scope. Any untouched, cue-resistant confirmation
+or low-channel peripheral interface evaluation is a separately scoped step.
 This consumed evaluation must not be retuned or rescored. We have evidence for
 task-label prediction, not EEG-specific thought decoding, cortical origin,
 clinical utility or unseen-person generalization. Both failed roots and the
