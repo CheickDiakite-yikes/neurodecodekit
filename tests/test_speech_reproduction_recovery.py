@@ -5,6 +5,7 @@ Git access are mocked, and neither training nor scientific scoring is invoked.
 """
 
 from copy import deepcopy
+from contextlib import ExitStack
 import importlib.util
 import json
 import os
@@ -45,7 +46,8 @@ def _complete_selection():
         roles = ["calibration", "online"] + (["online"] if index == 0 else [])
         for run, role in enumerate(roles):
             stem = f"{person}_{session}_task-{condition}_acq-{role}_run-{run}"
-            files.append({"path": f"{person}/{session}/eeg/{stem}_eeg.edf"})
+            files.append({"path": f"{person}/{session}/eeg/{stem}_eeg.edf",
+                          "events_path": f"{person}/{session}/eeg/{stem}_events.tsv"})
             extraction.append({"recording_id": stem,
                                "private_targets_sha256": None if run == 0 else "a" * 64})
         reports.append({
@@ -151,12 +153,16 @@ class RecoveryTemporaryStateTests(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.repo = Path(self.temp.name)
         self.local, self.old = self.repo / "recovery", self.repo / "original"
+        self.failed = self.repo / "failed-recovery"
         self.local.mkdir()
         self.old.mkdir()
+        self.failed.mkdir()
         self.manifest_path = self.repo / "manifest.json"
         self.freeze_path = self.repo / "freeze.json"
         self.result_path = self.repo / "result.json"
+        self.audit_path = self.repo / "calibration-audit.json"
         paths = {"REPO": self.repo, "LOCAL": self.local, "OLD": self.old,
+                 "FAILED_RECOVERY": self.failed, "CALIBRATION_AUDIT": self.audit_path,
                  "MANIFEST": self.manifest_path, "FREEZE": self.freeze_path,
                  "RESULT": self.result_path}
         for name, path in paths.items():
@@ -171,15 +177,24 @@ class RecoveryTemporaryStateTests(unittest.TestCase):
                                      side_effect=AssertionError("No real Git in generated tests"))
         self.git.start()
         self.addCleanup(self.git.stop)
+        self.failed_guard = mock.patch.object(recovery, "verify_failed_recovery")
+        self.failed_guard.start()
+        self.addCleanup(self.failed_guard.stop)
         self.manifest, self.freeze = _complete_selection()
         self.started = {"started_unix": 1000.0, "deadline_seconds": 7200,
-                        "code_commit": "generated-code"}
+                        "code_commit": "generated-code", "original_failure_sha256": recovery.FAILURE_SHA,
+                        "failed_recovery_failure_sha256": recovery.FAILED_RECOVERY_SHA}
+        recovery.write_json(self.audit_path, {"generated_only": True})
+        self.started["calibration_audit_sha256"] = recovery.sha256(self.audit_path)
         recovery.write_json(self.manifest_path, self.manifest)
         recovery.write_json(self.local / "started.json", self.started)
         recovery.write_json(self.local / "preflight.json", {"generated_only": True})
         self.freeze.update({
             "execution_root": "recovery", "predictions_relative_path": "recovery/predictions.npz",
             "original_failure_sha256": recovery.FAILURE_SHA,
+            "failed_recovery_failure_sha256": recovery.FAILED_RECOVERY_SHA,
+            "failed_recovery_artifacts_sha256": {"fake-previous": "hash"},
+            "calibration_audit_sha256": recovery.sha256(self.audit_path),
             "maximum_total_seconds": 7200, "code_commit": self.started["code_commit"],
             "started_sha256": recovery.sha256(self.local / "started.json"),
             "source_manifest_sha256": recovery.sha256(self.manifest_path),
@@ -190,10 +205,12 @@ class RecoveryTemporaryStateTests(unittest.TestCase):
     def ready(self):
         with mock.patch.object(recovery, "verify_original") as original_check, \
                 mock.patch.object(recovery, "verify_inventory") as inventory_check, \
+                mock.patch.object(recovery, "verify_failed_inventory") as failed_inventory_check, \
                 mock.patch.object(recovery.time, "time", return_value=1001.0):
             recovery.validate_score_ready(self.freeze, self.started)
         original_check.assert_called_once_with()
         inventory_check.assert_called_once_with(self.freeze["original_artifacts_sha256"])
+        failed_inventory_check.assert_called_once_with(self.freeze["failed_recovery_artifacts_sha256"])
 
     def test_ready_gate_accepts_only_complete_bound_generated_state(self):
         self.ready()
@@ -212,7 +229,8 @@ class RecoveryTemporaryStateTests(unittest.TestCase):
                 path.unlink()
 
     def test_wrong_root_prediction_path_or_lineage_refuses(self):
-        for field in ("execution_root", "predictions_relative_path", "original_failure_sha256"):
+        for field in ("execution_root", "predictions_relative_path", "original_failure_sha256",
+                      "failed_recovery_failure_sha256"):
             with self.subTest(field=field):
                 freeze = deepcopy(self.freeze)
                 freeze[field] = "different"
@@ -241,7 +259,8 @@ class RecoveryTemporaryStateTests(unittest.TestCase):
                         recovery.validate_score_ready(freeze, started)
 
     def test_changed_start_manifest_preflight_or_code_refuses_before_inventory(self):
-        for field in ("started_sha256", "source_manifest_sha256", "preflight_sha256", "code_commit"):
+        for field in ("started_sha256", "source_manifest_sha256", "preflight_sha256", "code_commit",
+                      "calibration_audit_sha256"):
             with self.subTest(field=field):
                 freeze = deepcopy(self.freeze)
                 freeze[field] = "different"
@@ -287,6 +306,28 @@ class RecoveryTemporaryStateTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "five pairs, fifty checkpoints and six"):
                 recovery.original_inventory()
 
+    def test_failed_recovery_inventory_seals_seven_targets_and_zero_new_weights(self):
+        for name in ("started.json", "execution_failed.json", "preflight.json"):
+            (self.failed / name).write_bytes(b"opaque generated bytes")
+        reports, targets = self.failed / "pair_reports", self.failed / "private_targets"
+        reports.mkdir()
+        targets.mkdir()
+        for index in range(5):
+            (reports / f"pair-{index}.json").write_bytes(b"not JSON")
+        for index in range(7):
+            (targets / f"target-{index}.json").write_bytes(b"not labels")
+        inventory = recovery.failed_recovery_inventory()
+        self.assertEqual(len(inventory), 15)
+        recovery.verify_failed_inventory(inventory)
+        (targets / "target-0.json").write_bytes(b"changed")
+        with self.assertRaisesRegex(ValueError, "failed recovery artifacts changed"):
+            recovery.verify_failed_inventory(inventory)
+        checkpoint = self.failed / "checkpoints" / "unexpected"
+        checkpoint.mkdir(parents=True)
+        (checkpoint / "fold-00.pt").write_bytes(b"not a checkpoint")
+        with self.assertRaisesRegex(ValueError, "zero checkpoints and seven sealed"):
+            recovery.failed_recovery_inventory()
+
     @unittest.skipUnless(importlib.util.find_spec("numpy"), "NumPy not installed")
     def test_score_gate_failure_cannot_open_predictions_or_consume_scoring(self):
         import numpy as np
@@ -298,6 +339,137 @@ class RecoveryTemporaryStateTests(unittest.TestCase):
                 recovery.score_body("generated-commit", mock.Mock(), self.started)
         load.assert_not_called()
         self.assertFalse((self.local / "scoring_consumed.json").exists())
+
+    @unittest.skipUnless(importlib.util.find_spec("numpy"), "NumPy not installed")
+    def test_calibration_audit_mismatch_stops_before_signal_preflight_or_models(self):
+        __import__("numpy")
+        from neurodecodekit.models import speech_reference
+        from neurodecodekit.preprocess import speech_reproduction
+
+        audit = SimpleNamespace(audit_calibrations=mock.Mock(return_value={"different": True}))
+        with mock.patch.dict(sys.modules, {"audit_speech_calibration": audit}), \
+                mock.patch.object(recovery, "original_inventory", return_value={}), \
+                mock.patch.object(recovery, "failed_recovery_inventory", return_value={}), \
+                mock.patch.object(recovery, "verify_sources", return_value=[]), \
+                mock.patch.object(speech_reproduction, "preflight_recording_timing") as preflight, \
+                mock.patch.object(speech_reference, "predict_from_checkpoints") as predict, \
+                mock.patch.object(speech_reference, "train_predict") as train:
+            with self.assertRaisesRegex(ValueError, "committed six-pair audit"):
+                recovery.predict_body(self.manifest, mock.Mock(), self.started)
+        preflight.assert_not_called()
+        predict.assert_not_called()
+        train.assert_not_called()
+
+    @unittest.skipUnless(importlib.util.find_spec("numpy"), "NumPy not installed")
+    def test_generated_six_pair_predict_freeze_and_one_score_smoke(self):
+        """Exercise the transaction with fabricated arrays and mocked model work."""
+        import numpy as np
+        from neurodecodekit.evaluation import speech_reproduction as evaluation
+        from neurodecodekit.models import speech_reference
+        from neurodecodekit.preprocess import speech_reproduction as preprocessing
+
+        self.local.joinpath("preflight.json").unlink()
+        extracts = {}
+        for pair_index, report in enumerate(self.freeze["pairs"]):
+            for record_index, record in enumerate(report["extraction"]):
+                recording = record["recording_id"]
+                calibration = record_index == 0
+                count = 100 if calibration else 41 if pair_index == 0 and record_index == 1 else 50
+                ids = [f"{recording}:trial-{index:04d}" for index in range(count)]
+                labels = np.arange(count) % 5
+                extract = {"trial_ids": ids, "timing_summary": {},
+                           "eeg_adaptive": np.zeros((count, 1, 1)),
+                           "adaptive_trials": np.zeros((count, 1, 1))}
+                if calibration:
+                    extract["calibration_labels"] = labels
+                else:
+                    payload = json.dumps({"recording_id": recording, "trial_ids": ids,
+                                          "labels": labels.tolist()}, sort_keys=True).encode()
+                    destination = self.failed / "private_targets" / f"{recording}.json"
+                    destination.parent.mkdir(exist_ok=True)
+                    destination.write_bytes(payload)
+                    if pair_index < 5:
+                        old_target = self.old / "private_targets" / destination.name
+                        old_target.parent.mkdir(exist_ok=True)
+                        old_target.write_bytes(payload)
+                    record["private_targets_sha256"] = recovery.sha256(destination)
+                    extract["private_targets_sha256"] = record["private_targets_sha256"]
+                extracts[recording] = extract
+            if pair_index < 5:
+                recovery.write_json(self.old / "pair_reports" / f"{report['pair_id']}.json", report)
+
+        audit = mock.Mock(return_value={"generated_only": True})
+
+        def extract_recording(*args, recording_id, role, private_target_path, **kwargs):
+            audit.assert_called_once_with(self.manifest, self.old / "source", self.old / "pair_reports")
+            if role == "online":
+                private_target_path.parent.mkdir(exist_ok=True)
+                private_target_path.write_bytes(
+                    (self.failed / "private_targets" / f"{recording_id}.json").read_bytes())
+            return extracts[recording_id]
+
+        def compact_features(extracted):
+            count = len(extracted["trial_ids"])
+            return np.zeros((count, 2)), {
+                name: np.zeros((count, 2)) for name in ("raw", "filtered", "preaction")}
+
+        def compact_predict(labels, train_aux, eval_aux, train_eeg, eval_eeg, **kwargs):
+            return {arm: np.full((len(eval_aux), 5), 0.2) for arm in COMPACT_ARMS}
+
+        def checkpoint_predict(values, *args, **kwargs):
+            return np.full((len(values), 5), 0.2), {"reused_fits": 10}
+
+        def train_predict(calibration, labels, values, **kwargs):
+            return np.full((len(values), 5), 0.2), deepcopy(self.freeze["pairs"][-1]["model"])
+
+        def git(*args):
+            if args[0] == "show":
+                return self.freeze_path.read_text()
+            if args[0] == "diff":
+                return self.freeze_path.relative_to(self.repo).as_posix()
+            if args[0] == "status":
+                return ""
+            raise AssertionError(f"Unexpected generated Git operation: {args}")
+
+        budget = SimpleNamespace(started_unix=1000.0, stage_started=None, deadline=8200.0,
+                                 peak_rss=0, check=mock.Mock(), storage=mock.Mock(return_value=0))
+        with ExitStack() as stack:
+            stack.enter_context(mock.patch.dict(sys.modules, {
+                "audit_speech_calibration": SimpleNamespace(audit_calibrations=audit)}))
+            for module, name, value in (
+                (recovery, "original_inventory", mock.Mock(return_value={"original": "hash"})),
+                (recovery, "failed_recovery_inventory", mock.Mock(return_value={"failed": "hash"})),
+                (recovery, "verify_sources", mock.Mock(return_value=[])),
+                (recovery, "verify_original", mock.Mock()),
+                (recovery, "verify_inventory", mock.Mock()),
+                (recovery, "verify_failed_inventory", mock.Mock()),
+                (recovery, "git", git),
+                (recovery.subprocess, "run", mock.Mock()),
+                (recovery.time, "time", lambda: 1001.0),
+                (recovery.importlib.metadata, "version", lambda name: "generated-version"),
+                (recovery.original, "compact_features", compact_features),
+                (preprocessing, "preflight_recording_timing", mock.Mock(return_value={})),
+                (preprocessing, "validate_source_geometry", mock.Mock()),
+                (preprocessing, "extract_recording", extract_recording),
+                (evaluation, "predict_compact_arms", compact_predict),
+                (speech_reference, "predict_from_checkpoints", mock.Mock(side_effect=checkpoint_predict)),
+                (speech_reference, "train_predict", mock.Mock(side_effect=train_predict)),
+            ):
+                stack.enter_context(mock.patch.object(module, name, value))
+            stack.enter_context(mock.patch("builtins.print"))
+            recovery.predict_body(self.manifest, budget, self.started)
+            self.assertEqual(speech_reference.predict_from_checkpoints.call_count, 5)
+            self.assertEqual(speech_reference.train_predict.call_count, 1)
+            frozen = json.loads(self.freeze_path.read_text())
+            self.assertEqual(frozen["n_evaluation_trials"], 341)
+            self.assertEqual(frozen["calibration_audit_sha256"], recovery.sha256(self.audit_path))
+            self.assertFalse((self.local / "scoring_consumed.json").exists())
+            recovery.score_body("generated-freeze-commit", budget, self.started)
+            result = json.loads(self.result_path.read_text())
+            self.assertEqual((result["n_trials"], result["scoring_invocations"]), (341, 1))
+            self.assertEqual(result["failed_recovery_failure_sha256"], recovery.FAILED_RECOVERY_SHA)
+            with self.assertRaisesRegex(RuntimeError, "failed or scoring already consumed"):
+                recovery.score_body("generated-freeze-commit", budget, self.started)
 
 
 class RecoveryBudgetTests(unittest.TestCase):
@@ -348,12 +520,15 @@ class RecoveryBudgetTests(unittest.TestCase):
     def test_storage_combines_original_and_recovery_without_double_budget(self):
         with tempfile.TemporaryDirectory(prefix="speech-recovery-storage-generated-") as directory:
             root = Path(directory)
-            old, local = root / "old", root / "recovery"
+            old, failed, local = root / "old", root / "failed", root / "recovery"
             old.mkdir()
+            failed.mkdir()
             local.mkdir()
-            (old / "generated.bin").write_bytes(b"a" * 80)
-            (local / "generated.bin").write_bytes(b"b" * 80)
+            (old / "generated.bin").write_bytes(b"a" * 60)
+            (failed / "generated.bin").write_bytes(b"b" * 60)
+            (local / "generated.bin").write_bytes(b"c" * 60)
             with mock.patch.object(recovery, "OLD", old), \
+                    mock.patch.object(recovery, "FAILED_RECOVERY", failed), \
                     mock.patch.object(recovery, "LOCAL", local), \
                     mock.patch.object(recovery, "REPO", root), \
                     mock.patch.object(recovery, "GIB", 100), \

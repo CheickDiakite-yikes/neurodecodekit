@@ -30,18 +30,19 @@ irreversible Tier C events.
 
 ## Scientific Operating Model
 
-**Current priority (September 21, 2026):** resolve calibration compatibility
-before proposing another execution. The
-[SPEECH-REPRO-1 recovery](docs/SPEECH_REPRODUCTION_RECOVERY_FAILURE.md) passed all
-13 timing/padding checks and reused all 50 existing EEGNet fits, then stopped
-after 172 seconds: the final calibration set failed our minimum-ten-examples-
-per-class guard before new reference training. This does not establish that
-ten-fold splitting is impossible. A calibration-only audit of class support
-and the author's splitting procedure is proposed, not yet authorized.
-No held-out score exists; EEG-specific word information remains untested.
-No automatic rerun, rule relaxation or partial scoring is authorized; the
-monitor is paused. Earlier closeouts remain historical records, not this
-experiment's scientific result.
+**Current priority (September 21, 2026):** obtain the complete, frozen
+SPEECH-REPRO-1 result: does EEG add five-word information beyond measured
+nuisances on later recordings of known people? The
+[calibration audit and correction](docs/SPEECH_REPRODUCTION_CALIBRATION_CORRECTION.md)
+confirm that our extra minimum-ten-examples-per-class guard, not the author's
+ten-fold procedure, blocked the last pair. All six calibration sets support
+the unchanged procedure; all training folds retain five classes and the
+previous 50 fits' split assignments match exactly. The maintainer approved one
+corrected complete two-hour invocation, reusing those fits and training only
+the final ten. Both failed roots remain immutable. No held-out score exists
+yet; no partial scoring, automatic retry or post-test tuning is permitted.
+Report reference prediction separately from conditional EEG contribution,
+including both conditions and every null. Earlier closeouts remain history.
 
 The [Scientific Discovery and Invention Constitution](docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md)
 now governs research priorities. Its companion

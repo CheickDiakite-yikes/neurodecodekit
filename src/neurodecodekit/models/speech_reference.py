@@ -159,7 +159,14 @@ def zscore_mean_probabilities(fold_logits):
 
 
 def calibration_folds(calibration_labels):
-    """Source stratification: no shuffle; every original trial enters one fold."""
+    """Source stratification with all five classes required in every training fold.
+
+    The author calls StratifiedKFold directly. Its warning for a class with
+    fewer than ten examples does not prohibit ten folds: a validation fold may
+    lack that class. Preserve the source split and reject only unsupported
+    training folds, never drop or rebalance trials to satisfy a count threshold.
+    Requiring all five training classes is our conservative additional check.
+    """
     np = _numpy()
     try:
         from sklearn.model_selection import StratifiedKFold
@@ -170,10 +177,11 @@ def calibration_folds(calibration_labels):
         raise ValueError("Calibration labels must be one-dimensional integer classes 0..4")
     if set(labels.tolist()) != set(range(5)):
         raise ValueError("Calibration must contain exactly five classes 0..4")
-    if np.min(np.bincount(labels, minlength=5)) < N_FOLDS:
-        raise ValueError("Ten-fold calibration needs at least ten original trials per class")
     splitter = StratifiedKFold(n_splits=N_FOLDS, shuffle=False)
-    return labels.astype(np.int64), list(splitter.split(np.zeros(len(labels)), labels))
+    folds = list(splitter.split(np.zeros(len(labels)), labels))
+    if any(set(labels[train].tolist()) != set(range(5)) for train, _ in folds):
+        raise ValueError("Every calibration training fold must retain all five classes")
+    return labels.astype(np.int64), folds
 
 
 def _check_deadline(deadline):

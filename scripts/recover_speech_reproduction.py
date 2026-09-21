@@ -1,6 +1,6 @@
-"""One explicitly approved, two-hour SPEECH-REPRO-1 recovery; score only once.
+"""One approved, corrected two-hour SPEECH-REPRO-1 attempt; score only once.
 
-The failed invocation is read-only evidence, never resumed or overwritten.
+Both failed invocations are read-only evidence, never resumed or overwritten.
 Reuse its exact source and 50 checkpoints; only the final ten EEGNet fits are
 new. Targets, weights and probabilities remain local. No automatic retry.
 """
@@ -25,9 +25,13 @@ import run_speech_reproduction as original
 
 REPO = original.REPO
 OLD = original.LOCAL
-LOCAL = REPO / "data/speech_repro_1_recovery_20260921"
+FAILED_RECOVERY = REPO / "data/speech_repro_1_recovery_20260921"
+LOCAL = REPO / "data/speech_repro_1_corrected_20260921"
 FAILURE_SHA = "cc260c268518fe2764132a57f83bf4b519ba07003c04192f036be45648fc33b6"
 IMPLEMENTATION = "479c1c3964823e43bafc995b11a48242980a532b"
+FAILED_RECOVERY_SHA = "acb4394ead52bbe084e547b192e9a92012841bd0bdeddd8dc08daa7645cc8dc5"
+FAILED_RECOVERY_IMPLEMENTATION = "059b75bd7c6a1b00098e65f583abfb53a5088138"
+CALIBRATION_AUDIT = REPO / "registries/speech_reproduction_calibration_audit.v0.json"
 MANIFEST, FREEZE, RESULT = original.MANIFEST, original.FREEZE, original.RESULT
 SEED, GIB = original.SEED, original.GIB
 write_json, sha256, git = original.write_json, original.sha256, original.git
@@ -47,7 +51,7 @@ class RecoveryBudget(original.Budget):
         super().check(self.stage_started if stage_started is None else stage_started)
 
     def storage(self):
-        retained = sum(p.stat().st_size for root in (OLD, LOCAL)
+        retained = sum(p.stat().st_size for root in (OLD, FAILED_RECOVERY, LOCAL)
                        for p in root.rglob("*") if p.is_file())
         if retained > 1.5 * GIB or shutil.disk_usage(REPO).free < 20 * GIB:
             raise RuntimeError("Combined original/recovery storage budget exceeded")
@@ -85,6 +89,37 @@ def verify_original():
     for name in ("scoring_consumed.json", "predictions.npz"):
         if (OLD / name).exists():
             raise ValueError("Original invocation has unexpected predictions or scoring state")
+
+
+def verify_failed_recovery():
+    if sha256(FAILED_RECOVERY / "execution_failed.json") != FAILED_RECOVERY_SHA:
+        raise ValueError("Previous recovery failure differs from approved successor lineage")
+    started = json.loads((FAILED_RECOVERY / "started.json").read_text())
+    if (started["code_commit"] != FAILED_RECOVERY_IMPLEMENTATION
+            or started["original_failure_sha256"] != FAILURE_SHA):
+        raise ValueError("Previous recovery implementation or original lineage differs")
+    for name in ("scoring_consumed.json", "predictions.npz"):
+        if (FAILED_RECOVERY / name).exists():
+            raise ValueError("Previous recovery has unexpected predictions or scoring state")
+
+
+def failed_recovery_inventory():
+    """Preserve the previous attempt's sealed files without parsing target values."""
+    verify_failed_recovery()
+    reports = sorted((FAILED_RECOVERY / "pair_reports").glob("*.json"))
+    weights = sorted((FAILED_RECOVERY / "checkpoints").glob("*/fold-*.pt"))
+    targets = sorted((FAILED_RECOVERY / "private_targets").glob("*.json"))
+    if (len(reports), len(weights), len(targets)) != (5, 0, 7):
+        raise ValueError("Previous recovery needs five reports, zero checkpoints and seven sealed files")
+    paths = [FAILED_RECOVERY / name for name in (
+        "started.json", "execution_failed.json", "preflight.json")]
+    return {path.relative_to(FAILED_RECOVERY).as_posix(): sha256(path)
+            for path in [*paths, *reports, *targets]}
+
+
+def verify_failed_inventory(expected):
+    if failed_recovery_inventory() != expected:
+        raise ValueError("Previous failed recovery artifacts changed")
 
 
 def original_inventory():
@@ -182,6 +217,7 @@ def validate_complete(freeze, manifest):
 
 def predict_body(manifest, budget, started):
     import numpy as np
+    from audit_speech_calibration import audit_calibrations
     from neurodecodekit.evaluation.speech_reproduction import COMPACT_ARMS, predict_compact_arms
     from neurodecodekit.models.speech_reference import predict_from_checkpoints, train_predict
     from neurodecodekit.preprocess.speech_reproduction import (
@@ -190,8 +226,16 @@ def predict_body(manifest, budget, started):
 
     budget.stage_started = time.monotonic()
     inventory = original_inventory()
+    failed_inventory = failed_recovery_inventory()
     receipts = verify_sources(manifest, budget)
     pairs = expected_pairs(manifest)
+    if sha256(CALIBRATION_AUDIT) != started["calibration_audit_sha256"]:
+        raise ValueError("Committed calibration audit changed since invocation")
+    expected_audit = json.loads(CALIBRATION_AUDIT.read_text())
+    actual_audit = audit_calibrations(manifest, OLD / "source", OLD / "pair_reports")
+    if actual_audit != expected_audit:
+        raise ValueError("Calibration preflight differs from committed six-pair audit")
+    budget.check()
     preflight = []
     for item in manifest["files"]:
         budget.stage_started = time.monotonic()
@@ -202,8 +246,10 @@ def predict_body(manifest, budget, started):
         budget.check()
     write_json(LOCAL / "preflight.json", {"recordings": preflight,
         "original_artifacts_sha256": inventory, "source_sidecars": receipts,
+        "failed_recovery_artifacts_sha256": failed_inventory,
+        "calibration_audit_sha256": started["calibration_audit_sha256"],
         "elapsed_seconds": time.time() - budget.started_unix})
-    print("All thirteen timing/padding preflights passed; source identities verified.", flush=True)
+    print("All six calibration and thirteen timing/padding preflights passed.", flush=True)
     pair_reports, trial_ids, people, conditions, records = [], [], [], [], []
     all_predictions = {arm: [] for arm in (*COMPACT_ARMS, "eegnet_reference")}
     for key in pairs:
@@ -241,6 +287,10 @@ def predict_body(manifest, budget, started):
                 if sha256(OLD / "private_targets" / (recording + ".json")) != extracted[
                     "private_targets_sha256"]:
                     raise ValueError("Reconstructed sealed targets differ from original")
+            if role == "online" and sha256(
+                    FAILED_RECOVERY / "private_targets" / (recording + ".json")) != extracted[
+                        "private_targets_sha256"]:
+                raise ValueError("Reconstructed sealed targets differ from previous recovery")
         if old_report is not None and extraction_metadata != old_report["extraction"]:
             raise ValueError("Completed pair extraction identity changed")
         budget.stage_started = time.monotonic()
@@ -297,6 +347,9 @@ def predict_body(manifest, budget, started):
         budget.storage()
     budget.stage_started = time.monotonic()
     verify_inventory(inventory)
+    verify_failed_inventory(failed_inventory)
+    if sha256(CALIBRATION_AUDIT) != started["calibration_audit_sha256"]:
+        raise ValueError("Calibration audit changed before freeze")
     payload = LOCAL / "predictions.npz"
     with payload.open("xb") as stream:
         np.savez_compressed(stream, trial_ids=np.asarray(trial_ids), participants=np.asarray(people),
@@ -309,9 +362,12 @@ def predict_body(manifest, budget, started):
         "execution_root": LOCAL.relative_to(REPO).as_posix(),
         "started_sha256": sha256(LOCAL / "started.json"), "original_failure_sha256": FAILURE_SHA,
         "original_artifacts_sha256": inventory, "preflight_sha256": sha256(LOCAL / "preflight.json"),
+        "failed_recovery_failure_sha256": FAILED_RECOVERY_SHA,
+        "failed_recovery_artifacts_sha256": failed_inventory,
+        "calibration_audit_sha256": started["calibration_audit_sha256"],
         "n_evaluation_trials": len(trial_ids), "arms": list(all_predictions), "seed": SEED,
         "protocol": "docs/SPEECH_REPRODUCTION_RESEARCH_DECISION.md",
-        "execution_amendment": "docs/SPEECH_REPRODUCTION_RECOVERY.md",
+        "execution_amendment": "docs/SPEECH_REPRODUCTION_CALIBRATION_CORRECTION.md",
         "maximum_total_seconds": MAX_SECONDS,
         "compact_settings": {"time_bins": 64, "bands_hz": [[2, 4], [4, 8], [8, 13],
             [13, 30], [30, 60], [60, 118]], "ridge_penalty": 1.0, "intercept_penalized": False,
@@ -332,9 +388,13 @@ def validate_score_ready(freeze, started):
     if (LOCAL / "execution_failed.json").exists() or (LOCAL / "scoring_consumed.json").exists():
         raise RuntimeError("Recovery failed or scoring already consumed; no retry")
     verify_original()
+    verify_failed_recovery()
     if (freeze["execution_root"] != LOCAL.relative_to(REPO).as_posix()
             or freeze["predictions_relative_path"] != (LOCAL / "predictions.npz").relative_to(REPO).as_posix()
-            or freeze["original_failure_sha256"] != FAILURE_SHA):
+            or freeze["original_failure_sha256"] != FAILURE_SHA
+            or freeze["failed_recovery_failure_sha256"] != FAILED_RECOVERY_SHA
+            or started["original_failure_sha256"] != FAILURE_SHA
+            or started["failed_recovery_failure_sha256"] != FAILED_RECOVERY_SHA):
         raise ValueError("Freeze execution root or failed-run lineage differs")
     if (started["deadline_seconds"] != MAX_SECONDS or freeze["maximum_total_seconds"] != MAX_SECONDS
             or time.time() - started["started_unix"] >= MAX_SECONDS):
@@ -342,15 +402,19 @@ def validate_score_ready(freeze, started):
     if (freeze["started_sha256"] != sha256(LOCAL / "started.json")
             or freeze["source_manifest_sha256"] != sha256(MANIFEST)
             or freeze["preflight_sha256"] != sha256(LOCAL / "preflight.json")
+            or freeze["calibration_audit_sha256"] != sha256(CALIBRATION_AUDIT)
+            or freeze["calibration_audit_sha256"] != started["calibration_audit_sha256"]
             or freeze["code_commit"] != started["code_commit"]):
         raise ValueError("Recovery provenance changed")
     if freeze["status"] != "predictions_locked_unscored" or RESULT.exists():
         raise ValueError("Scoring state is not fresh")
     validate_complete(freeze, json.loads(MANIFEST.read_text()))
     verify_inventory(freeze["original_artifacts_sha256"])
+    verify_failed_inventory(freeze["failed_recovery_artifacts_sha256"])
 
 
 def score_body(freeze_commit, budget, started):
+    budget.stage_started = time.monotonic()
     import numpy as np
     from neurodecodekit.evaluation.speech_reproduction import COMPACT_ARMS, score_speech_predictions
 
@@ -391,6 +455,9 @@ def score_body(freeze_commit, budget, started):
     result.update({"freeze_commit": freeze_commit, "predictions_sha256": freeze["predictions_sha256"],
         "source_commit": original.SOURCE_COMMIT, "code_commit": freeze["code_commit"],
         "execution_amendment": freeze["execution_amendment"], "scoring_invocations": 1,
+        "original_failure_sha256": FAILURE_SHA,
+        "failed_recovery_failure_sha256": FAILED_RECOVERY_SHA,
+        "calibration_audit_sha256": freeze["calibration_audit_sha256"],
         "reused_reference_fits": 50, "new_reference_fits": 10,
         "total_recovery_seconds": time.time() - budget.started_unix})
     budget.check()
@@ -401,6 +468,7 @@ def score_body(freeze_commit, budget, started):
 
 
 def main():
+    invoked_at = time.time()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("phase", choices=("predict", "score"))
     parser.add_argument("--freeze-commit")
@@ -409,14 +477,17 @@ def main():
         parser.error("score requires the pushed --freeze-commit")
     if args.phase == "predict":
         verify_original()
+        verify_failed_recovery()
         if LOCAL.exists() or FREEZE.exists() or RESULT.exists():
             raise FileExistsError("Recovery already exists; no automatic retry")
         if git("status", "--porcelain", "--untracked-files=no"):
             raise RuntimeError("Commit exact recovery implementation before execution")
         LOCAL.mkdir(parents=False, exist_ok=False)
-        started = {"started_unix": time.time(), "deadline_seconds": MAX_SECONDS,
+        started = {"started_unix": invoked_at, "deadline_seconds": MAX_SECONDS,
                    "code_commit": git("rev-parse", "HEAD"), "original_failure_sha256": FAILURE_SHA,
-                   "authorization": "User approved narrow fix and complete unchanged two-hour recovery"}
+                   "failed_recovery_failure_sha256": FAILED_RECOVERY_SHA,
+                   "calibration_audit_sha256": sha256(CALIBRATION_AUDIT),
+                   "authorization": "User approved one corrected complete two-hour successor run"}
         write_json(LOCAL / "started.json", started)
     else:
         if (LOCAL / "execution_failed.json").exists() or (LOCAL / "scoring_consumed.json").exists():

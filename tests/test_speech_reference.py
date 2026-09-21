@@ -88,6 +88,51 @@ class NumericTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             reference.calibration_folds(np.tile(np.arange(5), 9))
 
+    @unittest.skipUnless(importlib.util.find_spec("sklearn"), "optional sklearn")
+    def test_sparse_validation_class_preserves_source_folds_and_training_support(self):
+        import numpy as np
+        from sklearn.model_selection import StratifiedKFold
+
+        labels = np.repeat(np.arange(5), [20, 20, 20, 20, 9])
+        with self.assertWarnsRegex(UserWarning, "least populated class"):
+            actual_labels, actual = reference.calibration_folds(labels)
+        with self.assertWarnsRegex(UserWarning, "least populated class"):
+            expected = list(StratifiedKFold(10, shuffle=False).split(np.zeros(len(labels)), labels))
+        observed = []
+        validation_missing_class = 0
+        for (train, validation), (source_train, source_validation) in zip(actual, expected):
+            np.testing.assert_array_equal(train, source_train)
+            np.testing.assert_array_equal(validation, source_validation)
+            self.assertEqual(set(actual_labels[train].tolist()), set(range(5)))
+            self.assertFalse(set(train) & set(validation))
+            validation_missing_class += int(4 not in actual_labels[validation])
+            observed.extend(validation.tolist())
+        self.assertEqual(validation_missing_class, 1)
+        self.assertEqual(sorted(observed), list(range(len(labels))))
+
+    @unittest.skipUnless(importlib.util.find_spec("sklearn"), "optional sklearn")
+    def test_sparse_class_cannot_disappear_from_any_training_fold(self):
+        import numpy as np
+
+        labels = np.repeat(np.arange(5), [20, 20, 20, 20, 1])
+        with self.assertWarnsRegex(UserWarning, "least populated class"):
+            with self.assertRaisesRegex(ValueError, "training fold must retain all five"):
+                reference.calibration_folds(labels)
+
+    @unittest.skipUnless(importlib.util.find_spec("sklearn"), "optional sklearn")
+    def test_previously_supported_generated_layouts_keep_identical_source_indices(self):
+        import numpy as np
+        from sklearn.model_selection import StratifiedKFold
+
+        for seed, counts in enumerate(([20] * 5, [10, 20, 20, 20, 30], [19, 21, 17, 23, 20],
+                                       [15, 15, 20, 20, 30], [18, 22, 24, 16, 20])):
+            labels = np.random.RandomState(seed).permutation(np.repeat(np.arange(5), counts))
+            _, actual = reference.calibration_folds(labels)
+            expected = list(StratifiedKFold(10, shuffle=False).split(np.zeros(len(labels)), labels))
+            for (train, validation), (source_train, source_validation) in zip(actual, expected):
+                np.testing.assert_array_equal(train, source_train)
+                np.testing.assert_array_equal(validation, source_validation)
+
 
 @unittest.skipUnless(importlib.util.find_spec("torch"), "optional Torch")
 class NetworkTests(unittest.TestCase):

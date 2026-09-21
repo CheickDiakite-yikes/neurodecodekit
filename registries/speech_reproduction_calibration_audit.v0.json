@@ -1,0 +1,1149 @@
+{
+  "all_six_eligible": true,
+  "author_commit": "0dca00584c528b288392684dcec0d496b6aa4951",
+  "class_order": [
+    "green",
+    "magenta",
+    "orange",
+    "violet",
+    "yellow"
+  ],
+  "experiment_id": "SPEECH-REPRO-1",
+  "online_event_rows_read": 0,
+  "pairs": [
+    {
+      "all_training_folds_have_all_five_classes": true,
+      "calibration_trials": 100,
+      "class_counts": [
+        22,
+        22,
+        20,
+        20,
+        16
+      ],
+      "events_git_blob_sha": "8ad93d0bd18858e7b4acd7247d1ee9950a3e6594",
+      "events_path": "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-calibration_run-01_events.tsv",
+      "folds": [
+        {
+          "fold": 0,
+          "training_class_counts": [
+            20,
+            20,
+            18,
+            18,
+            14
+          ],
+          "validation_class_counts": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "fold": 1,
+          "training_class_counts": [
+            20,
+            20,
+            18,
+            18,
+            14
+          ],
+          "validation_class_counts": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "fold": 2,
+          "training_class_counts": [
+            20,
+            20,
+            18,
+            18,
+            14
+          ],
+          "validation_class_counts": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "fold": 3,
+          "training_class_counts": [
+            20,
+            20,
+            18,
+            18,
+            14
+          ],
+          "validation_class_counts": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "fold": 4,
+          "training_class_counts": [
+            20,
+            20,
+            18,
+            18,
+            14
+          ],
+          "validation_class_counts": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "fold": 5,
+          "training_class_counts": [
+            20,
+            20,
+            18,
+            18,
+            14
+          ],
+          "validation_class_counts": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "fold": 6,
+          "training_class_counts": [
+            19,
+            20,
+            18,
+            18,
+            15
+          ],
+          "validation_class_counts": [
+            3,
+            2,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "fold": 7,
+          "training_class_counts": [
+            19,
+            20,
+            18,
+            18,
+            15
+          ],
+          "validation_class_counts": [
+            3,
+            2,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "fold": 8,
+          "training_class_counts": [
+            20,
+            19,
+            18,
+            18,
+            15
+          ],
+          "validation_class_counts": [
+            2,
+            3,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "fold": 9,
+          "training_class_counts": [
+            20,
+            19,
+            18,
+            18,
+            15
+          ],
+          "validation_class_counts": [
+            2,
+            3,
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "pair_id": "sub-1_ses-20230511_minimallyovert",
+      "previous_fold_indices_match": true,
+      "split_warnings": []
+    },
+    {
+      "all_training_folds_have_all_five_classes": true,
+      "calibration_trials": 100,
+      "class_counts": [
+        24,
+        23,
+        24,
+        17,
+        12
+      ],
+      "events_git_blob_sha": "03f2e0ca4ab6179d56bf189f6dfef0cebba7b75b",
+      "events_path": "sub-1/ses-20230529/eeg/sub-1_ses-20230529_task-covert_acq-calibration_run-01_events.tsv",
+      "folds": [
+        {
+          "fold": 0,
+          "training_class_counts": [
+            21,
+            20,
+            22,
+            16,
+            11
+          ],
+          "validation_class_counts": [
+            3,
+            3,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "fold": 1,
+          "training_class_counts": [
+            21,
+            21,
+            22,
+            16,
+            10
+          ],
+          "validation_class_counts": [
+            3,
+            2,
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "fold": 2,
+          "training_class_counts": [
+            21,
+            21,
+            22,
+            16,
+            10
+          ],
+          "validation_class_counts": [
+            3,
+            2,
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "fold": 3,
+          "training_class_counts": [
+            21,
+            21,
+            22,
+            15,
+            11
+          ],
+          "validation_class_counts": [
+            3,
+            2,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "fold": 4,
+          "training_class_counts": [
+            22,
+            21,
+            21,
+            15,
+            11
+          ],
+          "validation_class_counts": [
+            2,
+            2,
+            3,
+            2,
+            1
+          ]
+        },
+        {
+          "fold": 5,
+          "training_class_counts": [
+            22,
+            21,
+            21,
+            15,
+            11
+          ],
+          "validation_class_counts": [
+            2,
+            2,
+            3,
+            2,
+            1
+          ]
+        },
+        {
+          "fold": 6,
+          "training_class_counts": [
+            22,
+            21,
+            21,
+            15,
+            11
+          ],
+          "validation_class_counts": [
+            2,
+            2,
+            3,
+            2,
+            1
+          ]
+        },
+        {
+          "fold": 7,
+          "training_class_counts": [
+            22,
+            21,
+            21,
+            15,
+            11
+          ],
+          "validation_class_counts": [
+            2,
+            2,
+            3,
+            2,
+            1
+          ]
+        },
+        {
+          "fold": 8,
+          "training_class_counts": [
+            22,
+            20,
+            22,
+            15,
+            11
+          ],
+          "validation_class_counts": [
+            2,
+            3,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "fold": 9,
+          "training_class_counts": [
+            22,
+            20,
+            22,
+            15,
+            11
+          ],
+          "validation_class_counts": [
+            2,
+            3,
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "pair_id": "sub-1_ses-20230529_covert",
+      "previous_fold_indices_match": true,
+      "split_warnings": []
+    },
+    {
+      "all_training_folds_have_all_five_classes": true,
+      "calibration_trials": 100,
+      "class_counts": [
+        30,
+        26,
+        18,
+        15,
+        11
+      ],
+      "events_git_blob_sha": "cd66aff43f8f666c189b2c728d9477b54aa71343",
+      "events_path": "sub-2/ses-20230512/eeg/sub-2_ses-20230512_task-minimallyovert_acq-calibration_run-01_events.tsv",
+      "folds": [
+        {
+          "fold": 0,
+          "training_class_counts": [
+            27,
+            23,
+            17,
+            13,
+            10
+          ],
+          "validation_class_counts": [
+            3,
+            3,
+            1,
+            2,
+            1
+          ]
+        },
+        {
+          "fold": 1,
+          "training_class_counts": [
+            27,
+            24,
+            16,
+            13,
+            10
+          ],
+          "validation_class_counts": [
+            3,
+            2,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "fold": 2,
+          "training_class_counts": [
+            27,
+            24,
+            16,
+            13,
+            10
+          ],
+          "validation_class_counts": [
+            3,
+            2,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "fold": 3,
+          "training_class_counts": [
+            27,
+            24,
+            16,
+            13,
+            10
+          ],
+          "validation_class_counts": [
+            3,
+            2,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "fold": 4,
+          "training_class_counts": [
+            27,
+            24,
+            16,
+            13,
+            10
+          ],
+          "validation_class_counts": [
+            3,
+            2,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "fold": 5,
+          "training_class_counts": [
+            27,
+            23,
+            16,
+            14,
+            10
+          ],
+          "validation_class_counts": [
+            3,
+            3,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "fold": 6,
+          "training_class_counts": [
+            27,
+            23,
+            16,
+            14,
+            10
+          ],
+          "validation_class_counts": [
+            3,
+            3,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "fold": 7,
+          "training_class_counts": [
+            27,
+            23,
+            16,
+            14,
+            10
+          ],
+          "validation_class_counts": [
+            3,
+            3,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "fold": 8,
+          "training_class_counts": [
+            27,
+            23,
+            16,
+            14,
+            10
+          ],
+          "validation_class_counts": [
+            3,
+            3,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "fold": 9,
+          "training_class_counts": [
+            27,
+            23,
+            17,
+            14,
+            9
+          ],
+          "validation_class_counts": [
+            3,
+            3,
+            1,
+            1,
+            2
+          ]
+        }
+      ],
+      "pair_id": "sub-2_ses-20230512_minimallyovert",
+      "previous_fold_indices_match": true,
+      "split_warnings": []
+    },
+    {
+      "all_training_folds_have_all_five_classes": true,
+      "calibration_trials": 100,
+      "class_counts": [
+        29,
+        26,
+        18,
+        14,
+        13
+      ],
+      "events_git_blob_sha": "f830647942f23b1ec57c3b7520b764185542c7e2",
+      "events_path": "sub-2/ses-20230516/eeg/sub-2_ses-20230516_task-covert_acq-calibration_run-01_events.tsv",
+      "folds": [
+        {
+          "fold": 0,
+          "training_class_counts": [
+            26,
+            24,
+            17,
+            12,
+            11
+          ],
+          "validation_class_counts": [
+            3,
+            2,
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "fold": 1,
+          "training_class_counts": [
+            26,
+            24,
+            17,
+            12,
+            11
+          ],
+          "validation_class_counts": [
+            3,
+            2,
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "fold": 2,
+          "training_class_counts": [
+            26,
+            24,
+            16,
+            12,
+            12
+          ],
+          "validation_class_counts": [
+            3,
+            2,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "fold": 3,
+          "training_class_counts": [
+            27,
+            23,
+            16,
+            12,
+            12
+          ],
+          "validation_class_counts": [
+            2,
+            3,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "fold": 4,
+          "training_class_counts": [
+            26,
+            23,
+            16,
+            13,
+            12
+          ],
+          "validation_class_counts": [
+            3,
+            3,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "fold": 5,
+          "training_class_counts": [
+            26,
+            23,
+            16,
+            13,
+            12
+          ],
+          "validation_class_counts": [
+            3,
+            3,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "fold": 6,
+          "training_class_counts": [
+            26,
+            23,
+            16,
+            13,
+            12
+          ],
+          "validation_class_counts": [
+            3,
+            3,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "fold": 7,
+          "training_class_counts": [
+            26,
+            23,
+            16,
+            13,
+            12
+          ],
+          "validation_class_counts": [
+            3,
+            3,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "fold": 8,
+          "training_class_counts": [
+            26,
+            23,
+            16,
+            13,
+            12
+          ],
+          "validation_class_counts": [
+            3,
+            3,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "fold": 9,
+          "training_class_counts": [
+            26,
+            24,
+            16,
+            13,
+            11
+          ],
+          "validation_class_counts": [
+            3,
+            2,
+            2,
+            1,
+            2
+          ]
+        }
+      ],
+      "pair_id": "sub-2_ses-20230516_covert",
+      "previous_fold_indices_match": true,
+      "split_warnings": []
+    },
+    {
+      "all_training_folds_have_all_five_classes": true,
+      "calibration_trials": 100,
+      "class_counts": [
+        31,
+        25,
+        18,
+        13,
+        13
+      ],
+      "events_git_blob_sha": "a380e2514d6eb77860cd12d5d580f72a74231325",
+      "events_path": "sub-3/ses-20230523/eeg/sub-3_ses-20230523_task-minimallyovert_acq-calibration_run-01_events.tsv",
+      "folds": [
+        {
+          "fold": 0,
+          "training_class_counts": [
+            28,
+            23,
+            16,
+            11,
+            12
+          ],
+          "validation_class_counts": [
+            3,
+            2,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "fold": 1,
+          "training_class_counts": [
+            28,
+            23,
+            16,
+            11,
+            12
+          ],
+          "validation_class_counts": [
+            3,
+            2,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "fold": 2,
+          "training_class_counts": [
+            28,
+            22,
+            17,
+            11,
+            12
+          ],
+          "validation_class_counts": [
+            3,
+            3,
+            1,
+            2,
+            1
+          ]
+        },
+        {
+          "fold": 3,
+          "training_class_counts": [
+            27,
+            22,
+            17,
+            12,
+            12
+          ],
+          "validation_class_counts": [
+            4,
+            3,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "fold": 4,
+          "training_class_counts": [
+            28,
+            22,
+            16,
+            12,
+            12
+          ],
+          "validation_class_counts": [
+            3,
+            3,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "fold": 5,
+          "training_class_counts": [
+            28,
+            22,
+            16,
+            12,
+            12
+          ],
+          "validation_class_counts": [
+            3,
+            3,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "fold": 6,
+          "training_class_counts": [
+            28,
+            22,
+            16,
+            12,
+            12
+          ],
+          "validation_class_counts": [
+            3,
+            3,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "fold": 7,
+          "training_class_counts": [
+            28,
+            23,
+            16,
+            12,
+            11
+          ],
+          "validation_class_counts": [
+            3,
+            2,
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "fold": 8,
+          "training_class_counts": [
+            28,
+            23,
+            16,
+            12,
+            11
+          ],
+          "validation_class_counts": [
+            3,
+            2,
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "fold": 9,
+          "training_class_counts": [
+            28,
+            23,
+            16,
+            12,
+            11
+          ],
+          "validation_class_counts": [
+            3,
+            2,
+            2,
+            1,
+            2
+          ]
+        }
+      ],
+      "pair_id": "sub-3_ses-20230523_minimallyovert",
+      "previous_fold_indices_match": true,
+      "split_warnings": []
+    },
+    {
+      "all_training_folds_have_all_five_classes": true,
+      "calibration_trials": 100,
+      "class_counts": [
+        37,
+        28,
+        13,
+        8,
+        14
+      ],
+      "events_git_blob_sha": "6e8d3c851fa6691470a58d4a3768adef502bf5da",
+      "events_path": "sub-3/ses-20230524/eeg/sub-3_ses-20230524_task-covert_acq-calibration_run-01_events.tsv",
+      "folds": [
+        {
+          "fold": 0,
+          "training_class_counts": [
+            33,
+            25,
+            12,
+            7,
+            13
+          ],
+          "validation_class_counts": [
+            4,
+            3,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "fold": 1,
+          "training_class_counts": [
+            33,
+            25,
+            12,
+            7,
+            13
+          ],
+          "validation_class_counts": [
+            4,
+            3,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "fold": 2,
+          "training_class_counts": [
+            33,
+            25,
+            12,
+            7,
+            13
+          ],
+          "validation_class_counts": [
+            4,
+            3,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "fold": 3,
+          "training_class_counts": [
+            34,
+            25,
+            11,
+            7,
+            13
+          ],
+          "validation_class_counts": [
+            3,
+            3,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "fold": 4,
+          "training_class_counts": [
+            34,
+            25,
+            11,
+            7,
+            13
+          ],
+          "validation_class_counts": [
+            3,
+            3,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "fold": 5,
+          "training_class_counts": [
+            34,
+            25,
+            11,
+            7,
+            13
+          ],
+          "validation_class_counts": [
+            3,
+            3,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "fold": 6,
+          "training_class_counts": [
+            33,
+            26,
+            12,
+            7,
+            12
+          ],
+          "validation_class_counts": [
+            4,
+            2,
+            1,
+            1,
+            2
+          ]
+        },
+        {
+          "fold": 7,
+          "training_class_counts": [
+            33,
+            26,
+            12,
+            7,
+            12
+          ],
+          "validation_class_counts": [
+            4,
+            2,
+            1,
+            1,
+            2
+          ]
+        },
+        {
+          "fold": 8,
+          "training_class_counts": [
+            33,
+            25,
+            12,
+            8,
+            12
+          ],
+          "validation_class_counts": [
+            4,
+            3,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "fold": 9,
+          "training_class_counts": [
+            33,
+            25,
+            12,
+            8,
+            12
+          ],
+          "validation_class_counts": [
+            4,
+            3,
+            1,
+            0,
+            2
+          ]
+        }
+      ],
+      "pair_id": "sub-3_ses-20230524_covert",
+      "previous_fold_indices_match": null,
+      "split_warnings": [
+        "The least populated class in y has only 8 members, which is less than n_splits=10."
+      ]
+    }
+  ],
+  "private_targets_read": 0,
+  "source_commit": "034af61aba855c58450977bf1c1916085c586cd6",
+  "split": "StratifiedKFold(10, shuffle=False)",
+  "training_or_scoring_invocations": 0
+}
