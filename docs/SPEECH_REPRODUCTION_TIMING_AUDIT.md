@@ -1,5 +1,9 @@
 # SPEECH-REPRO-1 timing diagnosis and recovery feasibility
 
+**Later decision:** the maintainer approved the
+[two-hour recovery](SPEECH_REPRODUCTION_RECOVERY.md). The audit below records
+the evidence and authorization state at diagnosis; it is not itself a rerun.
+
 September 21, 2026. **The blocker is a reader-format assumption, not a decoding
 result.** A label-blind audit explains the stopped run: participant 3's covert
 recordings contain concatenated original trials with retained trigger activity.

@@ -93,8 +93,10 @@ def trial_bounds(trigger, event_onsets, n_samples):
     """Return complete source buffers, action windows, and source timing route.
 
     Labels are deliberately absent. Continuous event times must agree with the
-    corresponding trigger edges. Concatenated NPY fallback is accepted only
-    with no edges and exact 2880-sample spacing. A final incomplete EDF data
+    corresponding trigger edges. The source NPY converter preserves all 139
+    channels, including retained triggers, but creates event times separately
+    at i*2880. That exact zero-based grid and matching length select the
+    concatenation route regardless of trigger presence. A final incomplete EDF data
     record may have source-exporter edge padding to the next whole second;
     the caller must separately verify those trailing channel values.
     """
@@ -111,19 +113,21 @@ def trial_bounds(trigger, event_onsets, n_samples):
         raise ValueError("Event times are not ordered sample-aligned times")
     edges = np.flatnonzero(np.diff(trigger) > 0.5) + 1
     trailing_padding = 0
-    if not len(edges):
-        payload_samples = len(samples) * BUFFER_SAMPLES
-        padded_samples = math.ceil(payload_samples / SFREQ) * SFREQ
-        if n_samples not in (payload_samples, padded_samples) or not np.array_equal(
-            samples, np.arange(len(samples)) * BUFFER_SAMPLES
-        ):
-            raise ValueError("Trigger-free recording is not the exact source NPY fallback")
+    payload_samples = len(samples) * BUFFER_SAMPLES
+    padded_samples = math.ceil(payload_samples / SFREQ) * SFREQ
+    concatenated_grid = np.array_equal(onsets * SFREQ,
+                                       np.arange(len(samples)) * BUFFER_SAMPLES)
+    if concatenated_grid:
+        if n_samples not in (payload_samples, padded_samples):
+            raise ValueError("Concatenated source length does not match complete original trials")
         trailing_padding = n_samples - payload_samples
         starts = samples
         ends = starts + BUFFER_SAMPLES
         route = "source_npy_concatenation"
         extras = 0
     else:
+        if not len(edges):
+            raise ValueError("Trigger-free recording is not the exact source NPY fallback")
         if len(edges) < len(samples):
             raise ValueError("Fewer source trigger edges than original trials")
         extras = len(edges) - len(samples)
@@ -149,7 +153,64 @@ def trial_bounds(trigger, event_onsets, n_samples):
         "route": route,
         "extra_leading_triggers": int(extras),
         "trailing_edf_padding_samples": int(trailing_padding),
+        "retained_trigger_edges": int(len(edges)),
     }
+
+
+def _validate_edf_padding(raw, layout, bounds):
+    """Inspect only final source sample plus trailing padding; never extract features."""
+    import numpy as np
+
+    if bounds["trailing_edf_padding_samples"]:
+        picks = layout["eeg"] + [ch for pair in layout["aux_pairs"] for ch in pair]
+        tail = raw.get_data(picks=picks + [layout["trigger"]],
+                            start=len(bounds["buffer_starts"]) * BUFFER_SAMPLES - 1)
+        if not np.isfinite(tail).all() or not np.all(tail == tail[:, :1]):
+            raise ValueError("Trailing EDF samples are not source-exporter edge padding")
+
+
+def _read_onsets_only(events_path):
+    """Decode only the first source TSV field; target bytes are not interpreted."""
+    onsets = []
+    with Path(events_path).open("rb") as stream:
+        if stream.readline().partition(b"\t")[0].strip() != b"onset":
+            raise ValueError("Source TSV does not have the expected first onset column")
+        for line in stream:
+            try:
+                onset = float(line.partition(b"\t")[0])
+            except ValueError:
+                raise ValueError("Source onset field is not numeric") from None
+            if not math.isfinite(onset):
+                raise ValueError("Source onset field is not finite")
+            onsets.append(onset)
+    return onsets
+
+
+def preflight_recording_timing(edf_path, events_path, channels_path):
+    """Validate one recording's timing using metadata, onsets, trigger and tail.
+
+    No broker, targets, original neural windows, filtering, fitting, prediction,
+    or scoring are invoked. Only aggregate timing diagnostics are returned.
+    The caller enforces its stage deadline around this bounded preflight.
+    """
+    import mne
+
+    raw = mne.io.read_raw_edf(str(edf_path), preload=False, verbose=False)
+    try:
+        if raw.info["sfreq"] != SFREQ:
+            raise ValueError("Source EDF sampling rate mismatch")
+        layout = channel_layout(_read_tsv(channels_path), raw.ch_names)
+        bounds = trial_bounds(raw.get_data(picks=[layout["trigger"]])[0],
+                              _read_onsets_only(events_path), raw.n_times)
+        _validate_edf_padding(raw, layout, bounds)
+        return {"route": bounds["route"], "trials": len(bounds["buffer_starts"]),
+                "extra_leading_triggers": bounds["extra_leading_triggers"],
+                "retained_trigger_edges": bounds["retained_trigger_edges"],
+                "trailing_edf_padding_samples": bounds["trailing_edf_padding_samples"],
+                "retained_bad_eeg_channels": layout["bad_eeg_count"],
+                "target_fields_read": False}
+    finally:
+        raw.close()
 
 
 def broker_event_rows(event_rows, recording_id, role, private_target_path=None):
@@ -289,13 +350,7 @@ def extract_recording(edf_path, events_path, channels_path, *, recording_id,
         nuisance_full = np.empty((n, 5, TRIAL_SAMPLES), dtype="float32")
         timing = np.empty((n, 2), dtype="float64")
         picks = layout["eeg"] + [ch for pair in layout["aux_pairs"] for ch in pair]
-        if bounds["trailing_edf_padding_samples"]:
-            # MNE's EDF writer pads an incomplete final data record with each
-            # channel's last value. Padding is never used as a trial or feature.
-            tail = raw.get_data(picks=picks + [layout["trigger"]],
-                                start=n * BUFFER_SAMPLES - 1)
-            if not np.isfinite(tail).all() or not np.all(tail == tail[:, :1]):
-                raise ValueError("Trailing EDF samples are not source-exporter edge padding")
+        _validate_edf_padding(raw, layout, bounds)
         for index, (start, end, action_start) in enumerate(zip(bounds["buffer_starts"],
                                   bounds["buffer_ends"], bounds["action_starts"])):
             if progress is not None:

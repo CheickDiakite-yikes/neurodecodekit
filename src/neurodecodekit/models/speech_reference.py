@@ -18,6 +18,8 @@ repetition averages. All checkpoints and predictions must remain local.
 from __future__ import annotations
 
 import hashlib
+import json
+import math
 import time
 from collections.abc import Mapping
 from pathlib import Path
@@ -353,3 +355,166 @@ def train_predict(cal_windows, cal_labels, online_windows, *, deadline=None,
         "online_labels_received": False,
     }
     return (probabilities if mapped else probabilities["online"]), metadata
+
+
+def _validate_checkpoint_metadata(metadata, cal_labels):
+    """Check existing records without recomputing any calibration score."""
+    torch = _torch()
+    fixed = {
+        "author_commit": AUTHOR_COMMIT, "architecture": "EEGNet-128x320",
+        "parameters": N_PARAMETERS, "seed": SEED, "epochs_per_fold": N_EPOCHS,
+        "batch_size": BATCH_SIZE, "optimizer": "AdamW", "learning_rate": 1e-4,
+        "weight_decay": 0.01, "split": "StratifiedKFold(10, shuffle=False)",
+        "fold_selection": "highest accuracy at lowest validation-loss checkpoint; fold-index ties",
+        "training_jitter_samples": [-25, 24], "final_repetition_jitter_samples": 0,
+        "validation_and_online_jitter": False, "additional_input_normalization": False,
+        "ensemble": "per-model per-trial five-logit population z-score, four-fold mean, softmax",
+        "torch_version": str(torch.__version__), "threads": 1,
+        "memory_format": "channels_last", "mkldnn": True,
+        "memory_format_eval_equivalence_tolerance": {"atol": 1e-6, "rtol": 1e-5},
+        "source_license": "CC0-1.0", "maximum_total_seconds": 6 * 60 * 60,
+        "online_labels_received": False,
+    }
+    if not isinstance(metadata, dict):
+        raise ValueError("Original reference metadata must be a dictionary")
+    for key, expected in fixed.items():
+        actual = metadata.get(key)
+        if type(actual) is not type(expected) or actual != expected:
+            raise ValueError(f"Original reference metadata differs: {key}")
+    _, splits = calibration_folds(cal_labels)
+    records = metadata.get("folds")
+    if not isinstance(records, list) or len(records) != N_FOLDS:
+        raise ValueError("Original reference must contain exactly ten fold records")
+    for index, (record, (train, validation)) in enumerate(zip(records, splits)):
+        if not isinstance(record, dict):
+            raise ValueError("Original fold record must be a dictionary")
+        integer_fields = {"fold": index, "epochs": N_EPOCHS,
+                          "training_trials": len(train), "validation_trials": len(validation)}
+        if any(type(record.get(key)) is not int or record[key] != value
+               for key, value in integer_fields.items()):
+            raise ValueError("Original fold identity, schedule, or calibration counts differ")
+        if record.get("validation_indices") != validation.tolist():
+            raise ValueError("Original calibration split indices differ")
+        best_epoch = record.get("best_epoch")
+        if type(best_epoch) is not int or not 1 <= best_epoch <= N_EPOCHS:
+            raise ValueError("Original best epoch is invalid")
+        accuracy, loss = record.get("checkpoint_validation_accuracy"), record.get("best_validation_loss")
+        if (type(accuracy) not in (int, float) or not math.isfinite(accuracy)
+                or not 0 <= accuracy <= 1 or type(loss) not in (int, float)
+                or not math.isfinite(loss) or loss < 0):
+            raise ValueError("Original calibration checkpoint metrics are invalid")
+        digest = record.get("state_sha256")
+        if (not isinstance(digest, str) or len(digest) != 64
+                or any(character not in "0123456789abcdef" for character in digest)):
+            raise ValueError("Original checkpoint hash is invalid")
+    selected = metadata.get("selected_folds")
+    ranked = sorted(range(N_FOLDS),
+                    key=lambda fold: (-records[fold]["checkpoint_validation_accuracy"], fold))[
+                        :N_ENSEMBLE]
+    if (not isinstance(selected, list) or any(type(index) is not int for index in selected)
+            or selected != ranked):
+        raise ValueError("Original selected folds do not match the frozen calibration ranking")
+    return records, selected
+
+
+def _validate_checkpoint_state(state, record):
+    """Validate tensors directly, before constructing a model or doing inference."""
+    torch = _torch()
+    shapes = {
+        "conv1.0.weight": (16, 1, 1, 30), "conv2.0.weight": (32, 1, 128, 1),
+        "conv3.0.weight": (32, 1, 1, 4), "conv3.1.weight": (32, 32, 1, 1),
+        "classifier.weight": (5, 1280), "classifier.bias": (5,),
+    }
+    for prefix, width in (("conv1.1", 16), ("conv2.1", 32), ("conv3.2", 32)):
+        shapes.update({f"{prefix}.{name}": (width,)
+                       for name in ("weight", "bias", "running_mean", "running_var")})
+        shapes[f"{prefix}.num_batches_tracked"] = ()
+    if not isinstance(state, dict) or set(state) != set(shapes):
+        raise ValueError("Checkpoint tensor names differ from the reference architecture")
+    batches = 1 + record["best_epoch"] * math.ceil(record["training_trials"] / BATCH_SIZE)
+    for name, shape in shapes.items():
+        value = state[name]
+        counter = name.endswith("num_batches_tracked")
+        dtype = torch.int64 if counter else torch.float32
+        if (not isinstance(value, torch.Tensor) or tuple(value.shape) != shape
+                or value.dtype != dtype or value.device.type != "cpu"
+                or not bool(torch.isfinite(value).all())):
+            raise ValueError("Checkpoint contains invalid tensor shape, dtype, device, or values")
+        if counter and int(value) != batches:
+            raise ValueError("Checkpoint BatchNorm history differs from its recorded best epoch")
+        if name.endswith("running_var") and bool((value < 0).any()):
+            raise ValueError("Checkpoint BatchNorm variance is negative")
+    if _state_hash(state) != record["state_sha256"]:
+        raise ValueError("Checkpoint canonical state hash does not match the original record")
+
+
+def predict_from_checkpoints(online_windows, model_metadata, checkpoint_dir, *,
+                             cal_labels, deadline, progress=None):
+    """Reuse an existing ten-fold fit without fitting or validating on signals.
+
+    Calibration labels recreate the original split only. No calibration
+    waveform or online label is accepted. All ten saved states are checked
+    before the originally selected four run unchanged inference. The caller
+    retains ``model_metadata`` unchanged and stores the returned reuse receipt
+    separately. Its checkpoint/source authorization and prediction freeze
+    remain the caller's responsibility.
+    """
+    if type(deadline) not in (int, float) or not math.isfinite(deadline):
+        raise ValueError("Recovery requires a finite absolute monotonic deadline")
+    deadline = min(float(deadline), time.monotonic() + 2 * 60 * 60)
+    _check_deadline(deadline)
+    np, torch = _numpy(), _torch()
+    records, selected = _validate_checkpoint_metadata(model_metadata, cal_labels)
+    torch.set_num_threads(1)
+    if torch.get_num_interop_threads() != 1:
+        torch.set_num_interop_threads(1)
+    torch.backends.mkldnn.enabled = True
+    torch.use_deterministic_algorithms(True)
+    mapped = isinstance(online_windows, Mapping)
+    raw_online = online_windows if mapped else {"online": online_windows}
+    if not raw_online or any(not isinstance(name, str) or not name for name in raw_online):
+        raise ValueError("Online recordings need nonempty string identifiers")
+    online = {name: average_repetitions(values) for name, values in raw_online.items()}
+    counts = {name: len(values) for name, values in online.items()}
+    if counts != model_metadata.get("online_recording_trials"):
+        raise ValueError("Online recording identities or trial counts differ from the original")
+    checkpoint_root = Path(checkpoint_dir)
+    expected = {f"fold-{index:02d}.pt" for index in range(N_FOLDS)}
+    if {path.name for path in checkpoint_root.glob("*.pt")} != expected:
+        raise ValueError("Exactly the original ten checkpoint files are required")
+    started, states, total_bytes = time.monotonic(), {}, 0
+    for record in records:
+        _check_deadline(deadline)
+        path = checkpoint_root / f"fold-{record['fold']:02d}.pt"
+        if path.is_symlink() or not path.is_file():
+            raise ValueError("Checkpoint must be an ordinary existing file")
+        state = torch.load(path, map_location="cpu", weights_only=True)
+        _validate_checkpoint_state(state, record)
+        total_bytes += path.stat().st_size
+        if record["fold"] in selected:
+            states[record["fold"]] = state
+    if progress is not None:
+        progress({"event": "reference_checkpoints_verified", "verified_checkpoints": N_FOLDS})
+    predictions = {name: [] for name in online}
+    for fold in selected:
+        _check_deadline(deadline)
+        model = build_reference_eegnet()
+        model.load_state_dict(states[fold], strict=True)
+        for name, values in online.items():
+            predictions[name].append(_predict_logits(model, values, deadline))
+        if progress is not None:
+            progress({"event": "reference_checkpoint_prediction_complete", "fold": fold})
+    probabilities = {name: zscore_mean_probabilities(np.stack(logits))
+                     for name, logits in predictions.items()}
+    _check_deadline(deadline)
+    receipt = {
+        "reused_fits": N_FOLDS, "new_fit_count": 0, "verified_checkpoint_count": N_FOLDS,
+        "selected_folds": list(selected), "serialized_checkpoint_bytes": total_bytes,
+        "original_metadata_sha256": hashlib.sha256(json.dumps(
+            model_metadata, sort_keys=True, separators=(",", ":"), allow_nan=False,
+        ).encode("utf-8")).hexdigest(),
+        "calibration_labels_used_for_split_validation_only": True,
+        "calibration_validation_scored": False, "online_labels_received": False,
+        "original_selection_preserved": True, "elapsed_seconds": time.monotonic() - started,
+    }
+    return (probabilities if mapped else probabilities["online"]), receipt

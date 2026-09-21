@@ -30,13 +30,14 @@ irreversible Tier C events.
 
 ## Scientific Operating Model
 
-**Current priority (September 21, 2026):** obtain authorization for a narrow
-recovery, then finish the controlled speech comparison. The
+**Current priority (September 21, 2026):** execute the
+[approved two-hour recovery](docs/SPEECH_REPRODUCTION_RECOVERY.md) and finish
+the controlled speech comparison. The
 [label-blind audit](docs/SPEECH_REPRODUCTION_TIMING_AUDIT.md) traced the stopped
 `SPEECH-REPRO-1` run to a reader-format assumption: the final two recordings
 contain pre-cut trials with retained triggers. All 13 source identities and
 50 saved reference checkpoints are intact. Recovery appears feasible without
-repeating those EEGNet fits, but has not been implemented or authorized.
+repeating those EEGNet fits; the maintainer has now approved this narrow recovery.
 No held-out score exists; EEG-specific word information remains untested.
 No automatic rerun or partial scoring is authorized. The
 [failure record](docs/SPEECH_REPRODUCTION_EXECUTION_FAILURE.md) and source-specific
