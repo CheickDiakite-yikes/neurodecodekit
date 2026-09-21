@@ -41,9 +41,10 @@ All 341 trials, both conditions and all nine arms remain in the
 [complete aggregate result](registries/speech_reproduction_result.v0.json).
 
 The next scientific priority is to identify which auxiliary modalities carry
-the strong minimally overt signal: propose calibration-only ablations separating
-display/timing from microphone, lips and eyes, then design an untouched,
-cue-resistant confirmation. No follow-up execution is authorized by this note.
+the strong minimally overt signal. The maintainer has asked us to continue the
+[calibration-only discovery](docs/SPEECH_AUXILIARY_DISCOVERY.md) separating
+display/timing from microphone, lips and eyes, within a ten-minute Tier B cap.
+An untouched, cue-resistant confirmation remains a later, separately scoped step.
 This consumed evaluation must not be retuned or rescored. We have evidence for
 task-label prediction, not EEG-specific thought decoding, cortical origin,
 clinical utility or unseen-person generalization. Both failed roots and the
