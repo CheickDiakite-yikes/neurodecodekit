@@ -123,6 +123,7 @@ class StreamedPowerTests(unittest.TestCase):
         raw_class, rows, events, template = self._fixture()
         raw, auxiliary_raw = raw_class(), raw_class()
         progress, allocations = [], []
+        transformed_count = 0
         original_empty = np.empty
         nuisance = speech_auxiliary.auxiliary_feature_row(template[128::2] - template[129::2])
 
@@ -134,6 +135,8 @@ class StreamedPowerTests(unittest.TestCase):
             return rows if path.name.endswith("channels.tsv") else events
 
         def one_trial(eeg, auxiliary):
+            nonlocal transformed_count
+            transformed_count += 1
             np.testing.assert_array_equal(eeg, template[:128])
             np.testing.assert_array_equal(auxiliary, template[128::2] - template[129::2])
             diagnostic = {**repetition._empty_diagnostic(), "n_trials": 1,
@@ -144,7 +147,7 @@ class StreamedPowerTests(unittest.TestCase):
 
         with mock.patch.object(mne.io, "read_raw_edf", return_value=raw), \
                 mock.patch.object(repetition, "_read_tsv", side_effect=read_rows), \
-                mock.patch.object(repetition, "_trial_features", side_effect=one_trial) as transformed, \
+                mock.patch.object(repetition, "_trial_features", new=one_trial), \
                 mock.patch.object(np, "empty", side_effect=empty):
             result = repetition.extract_calibration_power(*source_paths(),
                 progress=lambda complete, total: progress.append((complete, total)))
@@ -153,7 +156,7 @@ class StreamedPowerTests(unittest.TestCase):
                 mock.patch.object(speech_auxiliary, "auxiliary_feature_row", return_value=nuisance):
             original = speech_auxiliary.extract_calibration_auxiliary(*source_paths())
         np.testing.assert_array_equal(result["auxiliary"], original["features"])
-        self.assertEqual(transformed.call_count, 100)
+        self.assertEqual(transformed_count, 100)
         self.assertEqual(result["auxiliary"].shape, (100, 392))
         self.assertTrue(all(matrix.shape == (100, 768) for matrix in result["eeg_features"].values()))
         self.assertEqual(len(result["trial_ids"]), 100)

@@ -178,7 +178,9 @@ class RepetitionPowerComparisonTests(unittest.TestCase):
             calls += 1
             return np.full((len(actual_test), 5), 0.2)
 
-        with mock.patch.object(discovery, "ridge_probabilities", side_effect=check_fit):
+        # A direct replacement checks every call without retaining 220 large
+        # argument tuples in a Mock's lifetime call history.
+        with mock.patch.object(discovery, "ridge_probabilities", new=check_fit):
             report, outputs = discovery.run_pair_power_discovery(
                 self.auxiliary, self.eeg, self.labels, pair_id="generated")
         self.assertEqual(calls, 220)
