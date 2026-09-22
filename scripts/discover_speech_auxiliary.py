@@ -33,6 +33,8 @@ PRIOR_AUXILIARY = REPO / "registries/speech_auxiliary_discovery_result.v0.json"
 PRIOR_AUXILIARY_SHA = "794711f5f1731485c8d253ec48674a5ad35971dd9ede31876338c55bed4abda9"
 PRIOR_POWER = REPO / "registries/speech_repetition_power_result.v0.json"
 PRIOR_POWER_SHA = "daa18472b86d1348d33350e0862f5eec6b51ab4504c056376e98da3503bd0245"
+PRIOR_ADAPTIVE = REPO / "registries/speech_adaptive_attribution_result.v0.json"
+PRIOR_ADAPTIVE_SHA = "9e28a48e7fbb88eafee93b9955ee11a4184a5bf762801cf6cf9bccb51496826d"
 
 
 def configure_repetition_power():
@@ -51,6 +53,15 @@ def configure_adaptive_attribution():
     LOCAL = REPO / "data/speech_adaptive_attribution_20260922"
     PLAN = REPO / "registries/speech_adaptive_attribution_plan.v0.json"
     RESULT = REPO / "registries/speech_adaptive_attribution_result.v0.json"
+
+
+def configure_time_frequency():
+    """Select the fixed auxiliary-independent EEG decomposition discovery."""
+    global EXPERIMENT, LOCAL, PLAN, RESULT
+    EXPERIMENT = "time_frequency"
+    LOCAL = REPO / "data/speech_time_frequency_20260922"
+    PLAN = REPO / "registries/speech_time_frequency_plan.v0.json"
+    RESULT = REPO / "registries/speech_time_frequency_result.v0.json"
 
 
 class Budget:
@@ -143,10 +154,12 @@ def verify_bound_metadata(started):
             raise ValueError(f"Bound metadata changed: {key}")
     if original.sha256(original.RESULT) != PRIOR_RESULT_SHA:
         raise ValueError("Consumed confirmation aggregate changed")
-    if EXPERIMENT in ("repetition_power", "adaptive_attribution") and original.sha256(PRIOR_AUXILIARY) != PRIOR_AUXILIARY_SHA:
+    if EXPERIMENT in ("repetition_power", "adaptive_attribution", "time_frequency") and original.sha256(PRIOR_AUXILIARY) != PRIOR_AUXILIARY_SHA:
         raise ValueError("Previous auxiliary discovery aggregate changed")
-    if EXPERIMENT == "adaptive_attribution" and original.sha256(PRIOR_POWER) != PRIOR_POWER_SHA:
+    if EXPERIMENT in ("adaptive_attribution", "time_frequency") and original.sha256(PRIOR_POWER) != PRIOR_POWER_SHA:
         raise ValueError("Previous repetition-power aggregate changed")
+    if EXPERIMENT == "time_frequency" and original.sha256(PRIOR_ADAPTIVE) != PRIOR_ADAPTIVE_SHA:
+        raise ValueError("Previous adaptive-attribution aggregate changed")
 
 
 def run(budget, started):
@@ -155,8 +168,8 @@ def run(budget, started):
         preflight_calibration, run_pair_discovery,
     )
     from neurodecodekit.preprocess.speech_reproduction import _read_tsv, broker_event_rows
-    power_mode = EXPERIMENT in ("repetition_power", "adaptive_attribution")
-    mode_options = {"mode": "adaptive_attribution"} if EXPERIMENT == "adaptive_attribution" else {}
+    power_mode = EXPERIMENT in ("repetition_power", "adaptive_attribution", "time_frequency")
+    mode_options = {"mode": EXPERIMENT} if EXPERIMENT in ("adaptive_attribution", "time_frequency") else {}
     if power_mode:
         from neurodecodekit.experiments.speech_repetition_power import run_pair_power_discovery
         from neurodecodekit.preprocess.speech_repetition_power import extract_calibration_power
@@ -220,8 +233,10 @@ def run(budget, started):
         "prior_confirmation_result_sha256": PRIOR_RESULT_SHA,
         "source_receipts": receipts, "pairs": reports,
         "online_files_opened": 0, "new_download_bytes": 0,
-        "eeg_models_fitted": {"auxiliary": 0, "repetition_power": 1200, "adaptive_attribution": 900}[EXPERIMENT],
-        "ridge_models_fitted": {"auxiliary": 960, "repetition_power": 1320, "adaptive_attribution": 1620}[EXPERIMENT],
+        "eeg_models_fitted": {"auxiliary": 0, "repetition_power": 1200,
+                              "adaptive_attribution": 900, "time_frequency": 2700}[EXPERIMENT],
+        "ridge_models_fitted": {"auxiliary": 960, "repetition_power": 1320,
+                                "adaptive_attribution": 1620, "time_frequency": 2940}[EXPERIMENT],
         "deep_models_fitted": 0,
         "confirmation_reopened": False, "hyperparameter_searches": 0,
         "runtime_versions": {name: importlib.metadata.version(name) for name in
@@ -231,9 +246,13 @@ def run(budget, started):
         "claim_ceiling": "Exploratory within-recording calibration prediction; not online confirmation, causal origin or utility"}
     if power_mode:
         result["prior_auxiliary_discovery_sha256"] = PRIOR_AUXILIARY_SHA
-    if EXPERIMENT == "adaptive_attribution":
+    if EXPERIMENT in ("adaptive_attribution", "time_frequency"):
         result["prior_repetition_power_sha256"] = PRIOR_POWER_SHA
+    if EXPERIMENT == "adaptive_attribution":
         result["sham_feature_models_fitted"] = 600
+    if EXPERIMENT == "time_frequency":
+        result["prior_adaptive_attribution_sha256"] = PRIOR_ADAPTIVE_SHA
+        result["auxiliary_only_models_fitted"] = 240
     budget.check()
     original.write_json(RESULT, result)
     budget.storage()
@@ -274,9 +293,13 @@ if __name__ == "__main__":
                        help="Select the separate, fixed EEG repetition-power discovery")
     modes.add_argument("--adaptive-attribution", action="store_true",
                        help="Select the separate, fixed normalization and sham-EEG falsifier")
+    modes.add_argument("--time-frequency", action="store_true",
+                       help="Select the fixed auxiliary-independent EEG decomposition discovery")
     arguments = parser.parse_args()
     if arguments.repetition_power:
         configure_repetition_power()
     elif arguments.adaptive_attribution:
         configure_adaptive_attribution()
+    elif arguments.time_frequency:
+        configure_time_frequency()
     main()

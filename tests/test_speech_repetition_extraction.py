@@ -37,7 +37,7 @@ class CalibrationPathTests(unittest.TestCase):
         with mock.patch.object(repetition, "_dependencies", side_effect=AssertionError("No import")), \
                 mock.patch.object(Path, "open", side_effect=AssertionError("No open")):
             for arguments in cases:
-                for mode in ("repetition_power", "adaptive_attribution"):
+                for mode in ("repetition_power", "adaptive_attribution", "time_frequency"):
                     with self.subTest(paths=arguments, mode=mode), self.assertRaises(ValueError):
                         repetition.extract_calibration_power(*arguments, mode=mode)
             with self.assertRaisesRegex(ValueError, "mode"):
@@ -322,6 +322,102 @@ class StreamedPowerTests(unittest.TestCase):
             self.assertEqual(diagnostic["n_trials"], 100)
             self.assertEqual(diagnostic["coherent_to_total_band_power_ratio"], [None] * 6)
         self.assertTrue(raw.closed)
+
+    def test_time_frequency_matches_normalized_reference_and_band_window_mapping(self):
+        import numpy as np
+        from neurodecodekit.experiments.speech_repetition_power import _band_energies
+        from neurodecodekit.preprocess.speech_reproduction import source_filter
+
+        _, _, _, template = self._fixture()
+        eeg, auxiliary = template[:128], template[128::2] - template[129::2]
+        original_nuisance, original, _ = repetition._attribution_trial_features(
+            eeg, auxiliary, repetition._sham_template())
+        energy_shapes = []
+
+        def energies(values):
+            energy_shapes.append(values.shape)
+            return _band_energies(values)
+
+        with mock.patch.object(repetition, "adaptive_residual", side_effect=AssertionError("No NLMS")), \
+                mock.patch.object(repetition, "_sham_template", side_effect=AssertionError("No sham")), \
+                mock.patch("neurodecodekit.experiments.speech_repetition_power._band_energies", new=energies):
+            nuisance, powers, _ = repetition._time_frequency_trial_features(eeg, auxiliary)
+        self.assertEqual(energy_shapes.count((128, 5, 320)), 1)
+        np.testing.assert_array_equal(powers["full_all"], original["normalized_repetition"])
+        np.testing.assert_array_equal(nuisance[:390], original_nuisance)
+        full = powers["full_all"].reshape(128, 6)
+        for band, name in enumerate(repetition.TIME_FREQUENCY_BANDS):
+            np.testing.assert_array_equal(powers[name], full[:, band])
+        filtered, filtered_auxiliary = source_filter(eeg, auxiliary)
+        normalized = repetition._source_normalize(filtered)[:, 25:1625].astype(np.float32)
+        energy = _band_energies(normalized.astype(np.float64).reshape(128, 5, 320))
+        floor = np.finfo(float).tiny
+        for name, selection in (("early_all", slice(0, 2)), ("late_all", slice(3, 5))):
+            expected = np.log(np.maximum(energy[:, selection].mean(axis=1), floor)).reshape(-1)
+            np.testing.assert_array_equal(powers[name], expected)
+        for start, values in ((390, filtered_auxiliary),
+                              (540, repetition._source_normalize(filtered_auxiliary))):
+            repetitions = values[:, 25:1625].astype(np.float32).astype(np.float64).reshape(5, 5, 320)
+            expected = np.log(np.maximum(_band_energies(repetitions), floor)).reshape(-1)
+            np.testing.assert_array_equal(nuisance[start:start + 150], expected)
+
+    def test_time_frequency_eeg_and_auxiliary_are_independent_both_directions(self):
+        import numpy as np
+
+        _, _, _, template = self._fixture()
+        eeg, auxiliary = template[:128], template[128::2] - template[129::2]
+        with mock.patch.object(repetition, "adaptive_residual", side_effect=AssertionError("No NLMS")):
+            nuisance, powers, _ = repetition._time_frequency_trial_features(eeg, auxiliary)
+            changed_nuisance, _, _ = repetition._time_frequency_trial_features(np.zeros_like(eeg), auxiliary)
+            _, changed_powers, _ = repetition._time_frequency_trial_features(eeg, np.zeros_like(auxiliary))
+        np.testing.assert_array_equal(nuisance, changed_nuisance)
+        for name in repetition.TIME_FREQUENCY_WIDTHS:
+            np.testing.assert_array_equal(powers[name], changed_powers[name])
+
+    def test_time_frequency_stream_preserves_original_392_columns_and_appends_300(self):
+        import mne
+        import numpy as np
+        from neurodecodekit.preprocess import speech_auxiliary
+
+        raw_class, rows, events, _ = self._fixture()
+        raw, auxiliary_raw = raw_class(), raw_class()
+        nuisance = np.arange(690, dtype=float)
+        calls = 0
+
+        def one_trial(eeg, auxiliary):
+            nonlocal calls
+            calls += 1
+            self.assertEqual(eeg.shape, (128, 1626))
+            self.assertEqual(auxiliary.shape, (5, 1626))
+            powers = {name: np.zeros(width) for name, width in repetition.TIME_FREQUENCY_WIDTHS.items()}
+            return nuisance, powers, {"full_all": {**repetition._empty_diagnostic(), "n_trials": 1}}
+
+        def read_rows(path):
+            return rows if path.name.endswith("channels.tsv") else events
+
+        with mock.patch.object(mne.io, "read_raw_edf", return_value=raw), \
+                mock.patch.object(repetition, "_read_tsv", new=read_rows), \
+                mock.patch.object(repetition, "_time_frequency_trial_features", new=one_trial), \
+                mock.patch.object(repetition, "adaptive_residual", side_effect=AssertionError("No NLMS")), \
+                mock.patch.object(repetition, "_sham_template", side_effect=AssertionError("No sham")):
+            result = repetition.extract_calibration_power(*source_paths(), mode="time_frequency")
+        with mock.patch.object(mne.io, "read_raw_edf", return_value=auxiliary_raw), \
+                mock.patch.object(speech_auxiliary, "_read_tsv", new=read_rows), \
+                mock.patch.object(speech_auxiliary, "auxiliary_feature_row", new=lambda _: nuisance[:390]):
+            old = speech_auxiliary.extract_calibration_auxiliary(*source_paths())
+        self.assertEqual(calls, 100)
+        self.assertEqual(result["auxiliary"].shape, (100, 692))
+        np.testing.assert_array_equal(result["auxiliary"][:, :392], old["features"])
+        np.testing.assert_array_equal(result["auxiliary"][:, 392:], np.tile(nuisance[390:], (100, 1)))
+        for name, width in repetition.TIME_FREQUENCY_WIDTHS.items():
+            self.assertEqual(result["eeg_features"][name].shape, (100, width))
+        summary = result["timing_summary"]
+        self.assertFalse(summary["adaptive_filter_used"])
+        self.assertFalse(summary["physiological_auxiliary_in_eeg_preprocessing"])
+        self.assertTrue(summary["whole_trial_noncausal_preprocessing"])
+        self.assertNotIn("adaptive_seed", summary)
+        self.assertEqual(set(result["power_diagnostics"]), {"full_all"})
+        self.assertTrue(raw.closed and auxiliary_raw.closed)
 
 
 if __name__ == "__main__":

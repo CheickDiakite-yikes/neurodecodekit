@@ -41,6 +41,21 @@ class RepetitionPowerContractTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Mode must be"):
             discovery.run_pair_power_discovery(None, None, None, pair_id="generated", mode="unknown")
 
+    def test_time_frequency_exact_roster_dimensions_and_fit_budget(self):
+        self.assertEqual(discovery.TIME_FREQUENCY_REPRESENTATIONS, (
+            "full_all", "band_2_4", "band_4_8", "band_8_13", "band_13_30",
+            "band_30_60", "band_60_118", "early_all", "late_all"))
+        self.assertEqual(list(discovery.TIME_FREQUENCY_FEATURE_COUNTS.values()),
+                         [768, 128, 128, 128, 128, 128, 128, 768, 768])
+        self.assertEqual(len(discovery.TIME_FREQUENCY_ARMS), 51)
+        self.assertEqual(len(set(discovery.TIME_FREQUENCY_ARMS)), 51)
+        self.assertEqual(discovery.TIME_FREQUENCY_PRIMARY_ARM, "A_full_all")
+        self.assertEqual(discovery.TIME_FREQUENCY_PRIMARY_COMPARATORS, (
+            "A", "N", "A_full_all_deranged", "A_full_all_shuffled", "uniform", "training_prior"))
+        fits_per_pair = (len(discovery.TIME_FREQUENCY_ARMS) - 2) * 10
+        self.assertEqual(fits_per_pair, 490)
+        self.assertEqual(fits_per_pair * 6, 2940)
+
 
 @unittest.skipUnless(importlib.util.find_spec("numpy"), "Optional NumPy required")
 class RepetitionPowerFeatureTests(unittest.TestCase):
@@ -165,7 +180,15 @@ class RepetitionPowerComparisonTests(unittest.TestCase):
             name: self.eeg[discovery.REPRESENTATIONS[index % 4]]
             for index, name in enumerate(representations)
         }
-        fits_per_fold = 2 + 5 * len(representations)
+        auxiliary = self.auxiliary
+        if mode == "time_frequency":
+            representations = discovery.TIME_FREQUENCY_REPRESENTATIONS
+            arms = discovery.TIME_FREQUENCY_ARMS
+            eeg = {name: self.eeg[discovery.REPRESENTATIONS[index % 4]][:, :count]
+                   for index, (name, count) in enumerate(discovery.TIME_FREQUENCY_FEATURE_COUNTS.items())}
+            auxiliary = np.concatenate((self.auxiliary, self.eeg["raw_evoked"][:, :300]), axis=1)
+        auxiliary_fits = 4 if mode == "time_frequency" else 2
+        fits_per_fold = auxiliary_fits + 5 * len(representations)
         _, plans, metadata = auxiliary_discovery._split_plan(self.labels)
         fold_roster = [(scheme, fold, train, validation) for scheme, folds in plans.items()
                        for fold, (train, validation) in enumerate(folds)]
@@ -183,18 +206,24 @@ class RepetitionPowerComparisonTests(unittest.TestCase):
             fold_index, call_in_fold = divmod(calls, fits_per_fold)
             scheme, fold, train, validation = fold_roster[fold_index]
             if call_in_fold == 0:
-                cache["auxiliary"] = manual_block(self.auxiliary, train, validation)
+                cache["auxiliary"] = manual_block(auxiliary[:, :392], train, validation)
+                if mode == "time_frequency":
+                    cache["enriched"] = manual_block(auxiliary, train, validation)
                 cache["eeg"] = {name: manual_block(values, train, validation)
                                 for name, values in eeg.items()}
             truth = self.labels[train]
             seed = metadata["schemes"][scheme]["folds"][fold]["shuffle_seed"]
             shuffled = truth[np.random.default_rng(seed).permutation(len(train))]
             aux_train, aux_test = cache["auxiliary"]
-            if call_in_fold < 2:
+            if call_in_fold < auxiliary_fits:
+                if call_in_fold >= 2:
+                    aux_train, aux_test = cache["enriched"]
                 expected_train, expected_test = aux_train, aux_test
-                expected_labels = truth if call_in_fold == 0 else shuffled
+                expected_labels = truth if call_in_fold % 2 == 0 else shuffled
             else:
-                representation, variant = divmod(call_in_fold - 2, 5)
+                if mode == "time_frequency":
+                    aux_train, aux_test = cache["enriched"]
+                representation, variant = divmod(call_in_fold - auxiliary_fits, 5)
                 eeg_train, eeg_test = cache["eeg"][representations[representation]]
                 if variant == 3:
                     eeg_train, eeg_test = np.roll(eeg_train, 1, axis=0), np.roll(eeg_test, 1, axis=0)
@@ -218,8 +247,8 @@ class RepetitionPowerComparisonTests(unittest.TestCase):
         options = {} if mode is None else {"mode": mode}
         with mock.patch.object(discovery, "ridge_probabilities", new=check_fit):
             report, outputs = discovery.run_pair_power_discovery(
-                self.auxiliary, eeg, self.labels, pair_id="generated", **options)
-        self.assertEqual(calls, 220 if mode is None else 270)
+                auxiliary, eeg, self.labels, pair_id="generated", **options)
+        self.assertEqual(calls, 490 if mode == "time_frequency" else (220 if mode is None else 270))
         self.assertFalse(report["confirmatory_result"])
         for scheme in discovery.SCHEMES:
             self.assertEqual(set(outputs[scheme]), set(arms))
@@ -261,6 +290,63 @@ class RepetitionPowerComparisonTests(unittest.TestCase):
                 for comparator, gain in gains.items():
                     self.assertAlmostEqual(gain, metrics[comparator]["class_macro_log_loss"]
                                            - metrics[target]["class_macro_log_loss"])
+
+    def test_time_frequency_all_51_arms_oof_and_every_view_gain_retained(self):
+        np = self.np
+        report, outputs = self._check_all_arms_scaling(mode="time_frequency")
+        self.assertEqual(report["primary_arm"], "A_full_all")
+        self.assertEqual(report["primary_comparators"], list(discovery.TIME_FREQUENCY_PRIMARY_COMPARATORS))
+        self.assertEqual(report["n_auxiliary_features"], 692)
+        self.assertEqual(report["auxiliary_feature_counts"], {"N": 392, "A": 692})
+        self.assertEqual(report["n_eeg_features_per_representation"], discovery.TIME_FREQUENCY_FEATURE_COUNTS)
+        self.assertNotIn("secondary_arm", report)
+        for scheme in discovery.SCHEMES:
+            scheme_report = report["schemes"][scheme]
+            metrics = scheme_report["metrics"]
+            self.assertEqual(set(metrics), set(discovery.TIME_FREQUENCY_ARMS))
+            self.assertEqual(set(scheme_report["view_log_loss_gains"]), set(discovery.TIME_FREQUENCY_REPRESENTATIONS))
+            self.assertEqual(set(scheme_report["joint_vs_full_all_gain"]), set(discovery.TIME_FREQUENCY_REPRESENTATIONS))
+            for arm in discovery.TIME_FREQUENCY_ARMS:
+                probabilities = outputs[scheme][arm]
+                self.assertEqual(probabilities.shape, (100, 5))
+                self.assertTrue(np.isfinite(probabilities).all())
+                np.testing.assert_allclose(probabilities.sum(axis=1), 1, atol=1e-12)
+                expected = float(np.mean([
+                    -np.log(probabilities[self.labels == label, label]).mean() for label in range(5)]))
+                self.assertAlmostEqual(metrics[arm]["class_macro_log_loss"], expected)
+                self.assertEqual(metrics[arm]["n_trials"], 100)
+            for view in discovery.TIME_FREQUENCY_REPRESENTATIONS:
+                joint = "A_" + view
+                gains = scheme_report["view_log_loss_gains"][view]
+                self.assertEqual(set(gains), {"A", "N", joint + "_deranged", joint + "_shuffled",
+                                             "uniform", "training_prior"})
+                for comparator, gain in gains.items():
+                    self.assertAlmostEqual(gain, metrics[comparator]["class_macro_log_loss"]
+                                           - metrics[joint]["class_macro_log_loss"])
+                self.assertAlmostEqual(scheme_report["joint_vs_full_all_gain"][view],
+                                       metrics["A_full_all"]["class_macro_log_loss"]
+                                       - metrics[joint]["class_macro_log_loss"])
+            self.assertEqual(scheme_report["primary_log_loss_gains"],
+                             scheme_report["view_log_loss_gains"]["full_all"])
+            self.assertEqual(scheme_report["joint_vs_full_all_gain"]["full_all"], 0.0)
+
+    def test_time_frequency_wrong_auxiliary_or_view_dimension_refuses_before_fit(self):
+        np = self.np
+        auxiliary = np.zeros((100, 692))
+        eeg = {name: np.zeros((100, count)) for name, count in discovery.TIME_FREQUENCY_FEATURE_COUNTS.items()}
+
+        def must_not_fit(*args):
+            self.fail("Invalid time-frequency dimensions reached a model fit")
+
+        with mock.patch.object(discovery, "ridge_probabilities", new=must_not_fit):
+            for altered in (dict(eeg, band_2_4=np.zeros((100, 768))),
+                            dict(eeg, full_all=np.zeros((100, 128)))):
+                with self.assertRaisesRegex(ValueError, "declared view feature count"):
+                    discovery.run_pair_power_discovery(
+                        auxiliary, altered, self.labels, pair_id="generated", mode="time_frequency")
+            with self.assertRaisesRegex(ValueError, "100, 692"):
+                discovery.run_pair_power_discovery(
+                    self.auxiliary, eeg, self.labels, pair_id="generated", mode="time_frequency")
 
     def test_generated_signal_pools_original_trials_and_reports_exact_primary_gains(self):
         np = self.np

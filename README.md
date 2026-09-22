@@ -67,10 +67,14 @@ Simple normalization was competitive with the adaptive filter. All 29 arms,
 600 trials and both split schemes remain in the
 [aggregate](registries/speech_adaptive_attribution_result.v0.json).
 
-**Next scientific priority:** use EEG preprocessing that does not consume
-peripheral channels, then test a fixed time/frequency decomposition against
-strong auxiliary and temporal controls. No post-hoc best-band selection or
-larger-model escalation on this evidence. A low-channel peripheral interface
+**Current scientific test:** the approved [fixed time/frequency comparison](registries/speech_time_frequency_plan.v0.json)
+uses EEG preprocessing that never consumes peripheral channels. Nine preset
+views test all bands, each individual band, and early/late repetitions against
+both the original auxiliary readout and repetition-resolved auxiliary features.
+Same 600 calibration trials, whole-trial folds, all controls, ten-minute cap;
+the existing runner uses `--time-frequency`. No post-hoc best-view selection.
+Early/late are repetition-position comparisons, not causal temporal localization.
+A low-channel peripheral interface
 remains the practical lead; untouched, new-day and cue-resistant evaluation
 needs its own scope.
 This consumed evaluation must not be retuned or rescored. We have evidence for

@@ -64,6 +64,28 @@ ADAPTIVE_SECONDARY_COMPARATORS = (
     "N", "N_normalized_repetition", "N_sham_filtered_repetition",
     "N_filtered_repetition_deranged", "N_filtered_repetition_shuffled", "uniform", "training_prior",
 )
+TIME_FREQUENCY_FEATURE_COUNTS = {
+    "full_all": 768,
+    "band_2_4": 128,
+    "band_4_8": 128,
+    "band_8_13": 128,
+    "band_13_30": 128,
+    "band_30_60": 128,
+    "band_60_118": 128,
+    "early_all": 768,
+    "late_all": 768,
+}
+TIME_FREQUENCY_REPRESENTATIONS = tuple(TIME_FREQUENCY_FEATURE_COUNTS)
+TIME_FREQUENCY_ARMS = (
+    "N", "N_shuffled", "A", "A_shuffled", "uniform", "training_prior",
+    *(arm for representation in TIME_FREQUENCY_REPRESENTATIONS for arm in (
+        representation, representation + "_shuffled", "A_" + representation,
+        "A_" + representation + "_deranged", "A_" + representation + "_shuffled")),
+)
+TIME_FREQUENCY_PRIMARY_ARM = "A_full_all"
+TIME_FREQUENCY_PRIMARY_COMPARATORS = (
+    "A", "N", "A_full_all_deranged", "A_full_all_shuffled", "uniform", "training_prior",
+)
 
 
 def _band_energies(values):
@@ -165,6 +187,12 @@ def run_pair_power_discovery(
     yielding 29 arms. Its primary comparison uses sham features alone; the real
     filtered-EEG joint comparison is reported separately as secondary. This
     function does not construct or verify the caller-owned fixed sham template.
+
+    Explicit ``time_frequency`` requires nine fixed views and 692 auxiliary
+    columns: original N first, then 150 raw and 150 normalized repetition-power
+    features. N retains its original 392-column block; A standardizes all 692
+    columns as one block. Joint arms use A. Each view's declared feature count
+    determines its EEG-block normalization, without selecting a winning view.
     """
     if mode == "repetition_power":
         representations, arms = REPRESENTATIONS, ARMS
@@ -172,17 +200,28 @@ def run_pair_power_discovery(
     elif mode == "adaptive_attribution":
         representations, arms = ADAPTIVE_REPRESENTATIONS, ADAPTIVE_ARMS
         primary_arm, primary_comparators = ADAPTIVE_PRIMARY_ARM, ADAPTIVE_PRIMARY_COMPARATORS
+    elif mode == "time_frequency":
+        representations, arms = TIME_FREQUENCY_REPRESENTATIONS, TIME_FREQUENCY_ARMS
+        primary_arm, primary_comparators = TIME_FREQUENCY_PRIMARY_ARM, TIME_FREQUENCY_PRIMARY_COMPARATORS
     else:
-        raise ValueError("Mode must be repetition_power or adaptive_attribution")
+        raise ValueError("Mode must be repetition_power, adaptive_attribution or time_frequency")
+    time_frequency = mode == "time_frequency"
+    auxiliary_count = 692 if time_frequency else N_AUXILIARY_FEATURES
+    eeg_counts = TIME_FREQUENCY_FEATURE_COUNTS if time_frequency else {
+        name: N_EEG_FEATURES for name in representations
+    }
+    joint_prefix = "A_" if time_frequency else "N_"
     np = _numpy()
     auxiliary = _matrix(auxiliary, "calibration auxiliary features")
-    if auxiliary.shape != (N_TRIALS, N_AUXILIARY_FEATURES):
-        raise ValueError("Calibration auxiliary features must have shape (100, 392)")
+    if auxiliary.shape != (N_TRIALS, auxiliary_count):
+        raise ValueError(f"Calibration auxiliary features must have shape (100, {auxiliary_count})")
     if set(eeg_features) != set(representations):
-        count = "four" if mode == "repetition_power" else "five"
+        count = "nine" if time_frequency else ("four" if mode == "repetition_power" else "five")
         raise ValueError(f"EEG features must contain exactly the {count} fixed representations")
     eeg = {name: _matrix(eeg_features[name], name) for name in representations}
-    if any(matrix.shape != (N_TRIALS, N_EEG_FEATURES) for matrix in eeg.values()):
+    if time_frequency and any(matrix.shape != (N_TRIALS, eeg_counts[name]) for name, matrix in eeg.items()):
+        raise ValueError("Time-frequency EEG shapes must match each declared view feature count")
+    if not time_frequency and any(matrix.shape != (N_TRIALS, N_EEG_FEATURES) for matrix in eeg.values()):
         raise ValueError("Every EEG representation must have shape (100, 768)")
     if not isinstance(pair_id, str) or not pair_id:
         raise ValueError("A nonempty pair_id is required")
@@ -195,8 +234,8 @@ def run_pair_power_discovery(
         "representations": list(representations),
         "primary_arm": primary_arm,
         "primary_comparators": list(primary_comparators),
-        "n_auxiliary_features": N_AUXILIARY_FEATURES,
-        "n_eeg_features_per_representation": N_EEG_FEATURES,
+        "n_auxiliary_features": auxiliary_count,
+        "n_eeg_features_per_representation": dict(eeg_counts) if time_frequency else N_EEG_FEATURES,
         "settings": {
             "ridge_penalty": 1.0,
             "intercept_penalized": False,
@@ -216,6 +255,8 @@ def run_pair_power_discovery(
             "secondary_arm": ADAPTIVE_SECONDARY_ARM,
             "secondary_comparators": list(ADAPTIVE_SECONDARY_COMPARATORS),
         })
+    if time_frequency:
+        report.update({"mode": mode, "auxiliary_feature_counts": {"N": 392, "A": 692}})
     out_of_fold = {}
     for scheme, folds in plans.items():
         predictions = {arm: np.full((N_TRIALS, 5), np.nan) for arm in arms}
@@ -229,20 +270,25 @@ def run_pair_power_discovery(
             validation_order = np.roll(np.arange(len(validation)), 1)
             truth = labels[train]
             shuffled = truth[np.random.default_rng(fold_record["shuffle_seed"]).permutation(len(train))]
-            auxiliary_train, auxiliary_test = _standardized_block(auxiliary[train], auxiliary[validation])
+            auxiliary_train, auxiliary_test = _standardized_block(
+                auxiliary[train, :N_AUXILIARY_FEATURES], auxiliary[validation, :N_AUXILIARY_FEATURES])
             predictions["N"][validation] = ridge_probabilities(auxiliary_train, truth, auxiliary_test)
             predictions["N_shuffled"][validation] = ridge_probabilities(auxiliary_train, shuffled, auxiliary_test)
+            if time_frequency:
+                auxiliary_train, auxiliary_test = _standardized_block(auxiliary[train], auxiliary[validation])
+                predictions["A"][validation] = ridge_probabilities(auxiliary_train, truth, auxiliary_test)
+                predictions["A_shuffled"][validation] = ridge_probabilities(auxiliary_train, shuffled, auxiliary_test)
             for name, matrix in eeg.items():
                 eeg_train, eeg_test = _standardized_block(matrix[train], matrix[validation])
                 joint_train = np.concatenate((auxiliary_train, eeg_train), axis=1)
                 joint_test = np.concatenate((auxiliary_test, eeg_test), axis=1)
                 predictions[name][validation] = ridge_probabilities(eeg_train, truth, eeg_test)
                 predictions[name + "_shuffled"][validation] = ridge_probabilities(eeg_train, shuffled, eeg_test)
-                predictions["N_" + name][validation] = ridge_probabilities(joint_train, truth, joint_test)
-                predictions["N_" + name + "_deranged"][validation] = ridge_probabilities(
+                predictions[joint_prefix + name][validation] = ridge_probabilities(joint_train, truth, joint_test)
+                predictions[joint_prefix + name + "_deranged"][validation] = ridge_probabilities(
                     np.concatenate((auxiliary_train, eeg_train[train_order]), axis=1), truth,
                     np.concatenate((auxiliary_test, eeg_test[validation_order]), axis=1))
-                predictions["N_" + name + "_shuffled"][validation] = ridge_probabilities(
+                predictions[joint_prefix + name + "_shuffled"][validation] = ridge_probabilities(
                     joint_train, shuffled, joint_test)
             predictions["uniform"][validation] = 0.2
             predictions["training_prior"][validation] = np.bincount(labels[train], minlength=5) / len(train)
@@ -262,6 +308,21 @@ def run_pair_power_discovery(
                 - metrics[ADAPTIVE_SECONDARY_ARM]["class_macro_log_loss"]
                 for comparator in ADAPTIVE_SECONDARY_COMPARATORS
             }
+        if time_frequency:
+            report["schemes"][scheme]["view_log_loss_gains"] = {
+                name: {
+                    comparator: metrics[comparator]["class_macro_log_loss"]
+                    - metrics["A_" + name]["class_macro_log_loss"]
+                    for comparator in ("A", "N", "A_" + name + "_deranged",
+                                       "A_" + name + "_shuffled", "uniform", "training_prior")
+                }
+                for name in representations
+            }
+            report["schemes"][scheme]["joint_vs_full_all_gain"] = {
+                name: metrics[TIME_FREQUENCY_PRIMARY_ARM]["class_macro_log_loss"]
+                - metrics["A_" + name]["class_macro_log_loss"]
+                for name in representations
+            }
         out_of_fold[scheme] = predictions
     return report, out_of_fold
 
@@ -272,4 +333,6 @@ __all__ = [
     "fold_derangement_indices", "run_pair_power_discovery",
     "ADAPTIVE_REPRESENTATIONS", "ADAPTIVE_ARMS", "ADAPTIVE_PRIMARY_ARM",
     "ADAPTIVE_PRIMARY_COMPARATORS", "ADAPTIVE_SECONDARY_ARM", "ADAPTIVE_SECONDARY_COMPARATORS",
+    "TIME_FREQUENCY_REPRESENTATIONS", "TIME_FREQUENCY_FEATURE_COUNTS", "TIME_FREQUENCY_ARMS",
+    "TIME_FREQUENCY_PRIMARY_ARM", "TIME_FREQUENCY_PRIMARY_COMPARATORS",
 ]

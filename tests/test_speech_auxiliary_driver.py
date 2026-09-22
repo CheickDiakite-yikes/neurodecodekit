@@ -15,6 +15,27 @@ SPEC.loader.exec_module(driver)
 
 
 class AuxiliaryDriverTests(unittest.TestCase):
+    def test_time_frequency_route_preserves_all_previous_discoveries(self):
+        with mock.patch.multiple(driver, EXPERIMENT=driver.EXPERIMENT, LOCAL=driver.LOCAL,
+                                 PLAN=driver.PLAN, RESULT=driver.RESULT):
+            driver.configure_time_frequency()
+            self.assertEqual(driver.EXPERIMENT, "time_frequency")
+            self.assertTrue(all("time_frequency" in str(path) for path in
+                                (driver.LOCAL, driver.PLAN, driver.RESULT)))
+            started = {"plan_sha256": "plan", "source_manifest_sha256": "manifest",
+                       "prediction_freeze_sha256": "freeze"}
+            hashes = ["plan", "manifest", "freeze", driver.PRIOR_RESULT_SHA,
+                      driver.PRIOR_AUXILIARY_SHA, driver.PRIOR_POWER_SHA, driver.PRIOR_ADAPTIVE_SHA]
+            with mock.patch.object(driver.original, "sha256", side_effect=hashes):
+                driver.verify_bound_metadata(started)
+            for index, message in ((4, "Previous auxiliary"), (5, "Previous repetition-power"),
+                                   (6, "Previous adaptive-attribution")):
+                changed = hashes.copy()
+                changed[index] = "changed"
+                with mock.patch.object(driver.original, "sha256", side_effect=changed):
+                    with self.assertRaisesRegex(ValueError, message):
+                        driver.verify_bound_metadata(started)
+
     def test_adaptive_route_preserves_both_previous_discoveries(self):
         with mock.patch.multiple(driver, EXPERIMENT=driver.EXPERIMENT, LOCAL=driver.LOCAL,
                                  PLAN=driver.PLAN, RESULT=driver.RESULT):
