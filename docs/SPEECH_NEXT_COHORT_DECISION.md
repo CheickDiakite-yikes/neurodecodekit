@@ -3,6 +3,9 @@
 September 22, 2026. Source decision, not a new decoding result. The subsequent
 [bounded acquisition approval](INNER_SPEECH_ACQUISITION.md) now covers the
 ten-person ses-01 slice; it does not authorize an unspecified scoring run.
+That acquisition is now complete: all ten files and every required channel
+passed integrity checks. No participant event labels or decoding results have
+been interpreted. This removes source access as the immediate dependency.
 
 The current five-word recordings cannot establish cue-independent thoughts or
 new-day robustness. One fixed nested temperature test addresses the specific
@@ -68,8 +71,15 @@ and anonymization. Code licensing is not data-access permission.
 No reviewed source verified the complete fresh-day, cue-decoupled, group covert
 speech and synchronized peripheral-control design. That stronger question needs
 a separately scoped acquisition or collaboration. For ds003626 the immediate
-dependency is completing the approved bounded acquisition, then freezing the
-scientific comparison before opening outcomes. No participant signals, event
-rows, labels, private predictions or weights were read during the original
+dependency is now fixing the event-qualification and scientific comparison
+before opening outcomes. Preserve participant 03, whose published session-01
+correction leaves only one inner-speech run: use an all-person temporal split,
+not a uniform two-run design. One compact candidate is four blocked whole-trial
+folds with adjacent-trial embargo, equally calibrated peripheral-only, joint
+EEG, deranged-EEG and shuffled-label comparisons, plus cue-window, uniform and
+training-prior controls. Keep pronounced and visualization results visible.
+This is a prospective design direction, not an authorized or executed score.
+No participant signals, event rows, labels, private predictions or weights
+were read during the original
 source refresh. Acquisition status is recorded separately, not retroactively
 represented as part of that refresh.

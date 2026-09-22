@@ -1,6 +1,24 @@
 # Fresh imagined-word cohort: bounded acquisition
 
-September 22, 2026. Acquisition only; no decoding or biological result.
+September 22, 2026. **Acquisition complete.** No decoding or biological result.
+
+All ten first-session recordings passed publisher-MD5, exact-length and BDF
+geometry checks in **347.33 seconds**. Every file retains **137 channels**:
+128 EEG, eight external channels (including eye/lip electrodes) and status,
+all at 1024 Hz. The headers describe 16,405 seconds of recordings in total.
+Raw storage is 6.4304 GiB outside OneDrive; peak process RSS was 40,022,016
+bytes, generated metadata 10,664 bytes, with no retry, partial file or failure
+marker. Only opaque transfer and technical-header checks occurred: **no sample
+values, status events, word labels or decoding outcomes were interpreted**.
+
+The [aggregate receipt](../registries/inner_speech_acquisition_result.v0.json)
+has SHA-256 `35caa3bea6e782a67ef982d185eb0781e7938cfe4bccc7b93c89fb86d57b54bb`.
+Implementation `a3ea01a26dd7873528eb757529e867a3647b17eb` was verified on
+remote main and both CI jobs passed before this single acquisition
+([workflow](https://github.com/CheickDiakite-yikes/neurodecodekit/actions/runs/35791804347)).
+Source identity, all ten local byte lengths and the implementation/manifest
+hashes were separately cross-checked against the completed receipt without
+re-reading signal values. Data are now available; the scientific answer is not.
 
 The user approved the previously proposed **ds003626 v2.1.2, all ten people,
 first common complete raw session, EEG/eye/lip channels preserved, at most
@@ -73,7 +91,7 @@ Before payload access, seven generated-only safety tests and focused Ruff
 passed; independent review found no remaining acquisition blocker. The first
 test invocation used a OneDrive temporary fixture and correctly refused it;
 the final tests used local AppData. No participant data or network is used by
-those tests. Remote CI must also pass before executing the acquisition.
+those tests. Both remote CI jobs subsequently passed before execution.
 
 The source has three consecutive sessions on **one day** and direction-linked
 visual cues. This is a fresh-cohort, same-day attribution opportunity, not
