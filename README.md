@@ -30,7 +30,7 @@ irreversible Tier C events.
 
 ## Scientific Operating Model
 
-**Current result and priority (September 21, 2026):**
+**Current result and priority (September 22, 2026):**
 [SPEECH-REPRO-1 completed and scored once](docs/SPEECH_REPRODUCTION_RESULT.md).
 The minimally overt EEGNet reference reached **52.49% balanced accuracy**, above
 the 20% baseline in all three people. But auxiliary-only prediction reached
@@ -56,14 +56,23 @@ remain in the [aggregate](registries/speech_repetition_power_result.v0.json).
 Better repetition features are useful; they do not establish independent neural
 information. No online recording was opened.
 
-**Current scientific test:** separate trial normalization from the EOG/lip-fed
-adaptive filter, including a fixed sham-EEG control. Can it predict words when no
-recorded EEG-channel samples enter its features? The maintainer approved this
-[bounded falsifier](registries/speech_adaptive_attribution_plan.v0.json): same
-600 calibration trials, one fixed label-independent sham, matched small models,
-all controls and a ten-minute cap. It reuses the existing runner with
-`--adaptive-attribution`. A low-channel peripheral interface remains a separate
-practical lead; untouched, new-day and cue-resistant evaluation needs its own scope.
+**New belief-changing result:** the [83-second sham-input test](docs/SPEECH_ADAPTIVE_ATTRIBUTION_RESULT.md)
+reached **49.72% minimally overt balanced accuracy without recorded EEG samples**
+entering the features: one fixed synthetic waveform was processed with real
+EOG/lip inputs. It beat all four primary controls in all three people under
+blocked validation. This demonstrates an auxiliary-to-processed-feature pathway,
+not that every real-EEG result is peripheral. Covert failed the primary consistency
+rule; the real-EEG joint model failed its expanded control conjunction everywhere.
+Simple normalization was competitive with the adaptive filter. All 29 arms,
+600 trials and both split schemes remain in the
+[aggregate](registries/speech_adaptive_attribution_result.v0.json).
+
+**Next scientific priority:** use EEG preprocessing that does not consume
+peripheral channels, then test a fixed time/frequency decomposition against
+strong auxiliary and temporal controls. No post-hoc best-band selection or
+larger-model escalation on this evidence. A low-channel peripheral interface
+remains the practical lead; untouched, new-day and cue-resistant evaluation
+needs its own scope.
 This consumed evaluation must not be retuned or rescored. We have evidence for
 task-label prediction, not EEG-specific thought decoding, cortical origin,
 clinical utility or unseen-person generalization. Both failed roots and the
