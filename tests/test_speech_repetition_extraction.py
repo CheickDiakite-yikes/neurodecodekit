@@ -37,8 +37,11 @@ class CalibrationPathTests(unittest.TestCase):
         with mock.patch.object(repetition, "_dependencies", side_effect=AssertionError("No import")), \
                 mock.patch.object(Path, "open", side_effect=AssertionError("No open")):
             for arguments in cases:
-                with self.subTest(paths=arguments), self.assertRaises(ValueError):
-                    repetition.extract_calibration_power(*arguments)
+                for mode in ("repetition_power", "adaptive_attribution"):
+                    with self.subTest(paths=arguments, mode=mode), self.assertRaises(ValueError):
+                        repetition.extract_calibration_power(*arguments, mode=mode)
+            with self.assertRaisesRegex(ValueError, "mode"):
+                repetition.extract_calibration_power(*source_paths(), mode="unknown")
 
 
 @unittest.skipUnless(importlib.util.find_spec("numpy") and importlib.util.find_spec("mne"),
@@ -212,6 +215,113 @@ class StreamedPowerTests(unittest.TestCase):
             })
         self.assertEqual(repetition._finish_diagnostic(aggregate)[
             "coherent_to_total_band_power_ratio"], [.1] * 6)
+
+    def test_attribution_normalization_matches_source_and_preserves_original_views(self):
+        import numpy as np
+        from neurodecodekit.experiments.speech_repetition_power import paired_power_features
+        from neurodecodekit.preprocess.speech_reproduction import source_filter, adaptive_residual
+
+        _, _, _, template = self._fixture()
+        eeg, auxiliary = template[:128], template[128::2] - template[129::2]
+        sham = repetition._sham_template()
+        filtered, _ = source_filter(eeg, auxiliary)
+        expected_normalized = ((filtered - filtered.mean(axis=1, keepdims=True)) /
+                               (filtered.std(axis=1, ddof=1, keepdims=True) + np.finfo(float).eps))
+        expected_powers = paired_power_features(expected_normalized[:, 25:1625].astype(np.float32)[None])
+        calls = {"source": 0, "adaptive": 0}
+
+        def counted_source(eeg_values, auxiliary_values):
+            calls["source"] += 1
+            return source_filter(eeg_values, auxiliary_values)
+
+        def counted_adaptive(eeg_values, auxiliary_values, *, seed):
+            calls["adaptive"] += 1
+            self.assertEqual(seed, 20260906)
+            return adaptive_residual(eeg_values, auxiliary_values, seed=seed)
+
+        with mock.patch.object(repetition, "source_filter", new=counted_source), \
+                mock.patch.object(repetition, "adaptive_residual", new=counted_adaptive):
+            nuisance, powers, diagnostic = repetition._attribution_trial_features(eeg, auxiliary, sham)
+        self.assertEqual(calls, {"source": 1, "adaptive": 2})
+        np.testing.assert_array_equal(repetition._source_normalize(filtered), expected_normalized)
+        np.testing.assert_array_equal(powers["normalized_repetition"], expected_powers["repetition"][0])
+        original_nuisance, original_powers, _ = repetition._trial_features(eeg, auxiliary)
+        np.testing.assert_array_equal(nuisance, original_nuisance)
+        for name in ("raw_repetition", "filtered_repetition"):
+            np.testing.assert_array_equal(powers[name], original_powers[name])
+        self.assertEqual(set(powers), set(repetition.ATTRIBUTION_ARMS))
+        self.assertEqual(set(diagnostic), set(repetition.ATTRIBUTION_ARMS))
+
+    def test_fixed_sham_is_repeatable_and_invariant_to_real_eeg(self):
+        import numpy as np
+        from neurodecodekit.experiments.speech_repetition_power import paired_power_features
+        from neurodecodekit.preprocess.speech_reproduction import source_filter, adaptive_residual
+
+        _, _, _, template = self._fixture()
+        eeg, auxiliary = template[:128], template[128::2] - template[129::2]
+        sham = repetition._sham_template()
+        gaussian = np.random.default_rng(20260922).normal(0.0, 1.0, (128, 1626))
+        expected, _ = source_filter(gaussian, np.zeros((5, 1626)))
+        np.testing.assert_array_equal(sham, expected)
+        np.testing.assert_array_equal(sham, repetition._sham_template())
+        self.assertTrue(np.all(sham.std(axis=1) > 0))
+        _, powers, _ = repetition._attribution_trial_features(eeg, auxiliary, sham)
+        _, changed, _ = repetition._attribution_trial_features(np.zeros_like(eeg), auxiliary, sham)
+        for name in ("sham_normalized_repetition", "sham_filtered_repetition"):
+            np.testing.assert_array_equal(powers[name], changed[name])
+        self.assertFalse(np.array_equal(powers["raw_repetition"], changed["raw_repetition"]))
+        np.testing.assert_array_equal(sham, expected)
+        zero_auxiliary = np.zeros((3, 1626))
+        first = adaptive_residual(sham, zero_auxiliary, seed=20260906)
+        second = adaptive_residual(sham, zero_auxiliary, seed=20260906)
+        np.testing.assert_array_equal(first, second)
+        np.testing.assert_array_equal(first, repetition._source_normalize(sham))
+        first_power = paired_power_features(first[:, 25:1625].astype(np.float32)[None])
+        second_power = paired_power_features(second[:, 25:1625].astype(np.float32)[None])
+        np.testing.assert_array_equal(first_power["repetition"], second_power["repetition"])
+
+    def test_attribution_streams_with_one_fixed_template_and_no_waveform_return(self):
+        import mne
+        import numpy as np
+
+        raw_class, rows, events, _ = self._fixture()
+        raw = raw_class()
+        sham = np.ones((128, 1626))
+        calls = {"template": 0, "trial": 0}
+
+        def fixed_template():
+            calls["template"] += 1
+            return sham
+
+        def one_trial(eeg, auxiliary, template):
+            calls["trial"] += 1
+            self.assertIs(template, sham)
+            self.assertEqual(eeg.shape, (128, 1626))
+            self.assertEqual(auxiliary.shape, (5, 1626))
+            powers = {arm: np.zeros(768) for arm in repetition.ATTRIBUTION_ARMS}
+            diagnostic = {**repetition._empty_diagnostic(), "n_trials": 1}
+            return np.zeros(390), powers, {arm: diagnostic for arm in repetition.ATTRIBUTION_ARMS}
+
+        with mock.patch.object(mne.io, "read_raw_edf", return_value=raw), \
+                mock.patch.object(repetition, "_read_tsv", new=lambda path:
+                    rows if path.name.endswith("channels.tsv") else events), \
+                mock.patch.object(repetition, "_sham_template", new=fixed_template), \
+                mock.patch.object(repetition, "_attribution_trial_features", new=one_trial):
+            result = repetition.extract_calibration_power(*source_paths(), mode="adaptive_attribution")
+        self.assertEqual(calls, {"template": 1, "trial": 100})
+        self.assertEqual(result["auxiliary"].shape, (100, 392))
+        self.assertEqual(set(result["eeg_features"]), set(repetition.ATTRIBUTION_ARMS))
+        self.assertTrue(all(values.shape == (100, 768) for values in result["eeg_features"].values()))
+        self.assertEqual(set(result), {"auxiliary", "eeg_features", "calibration_labels", "trial_ids",
+                                       "timing_summary", "power_diagnostics"})
+        summary = result["timing_summary"]
+        self.assertEqual(summary["mode"], "adaptive_attribution")
+        self.assertFalse(summary["waveform_cache_retained"])
+        self.assertTrue(summary["sham"]["input_independent_of_real_data_labels_and_trial_ids"])
+        for diagnostic in result["power_diagnostics"].values():
+            self.assertEqual(diagnostic["n_trials"], 100)
+            self.assertEqual(diagnostic["coherent_to_total_band_power_ratio"], [None] * 6)
+        self.assertTrue(raw.closed)
 
 
 if __name__ == "__main__":

@@ -1,8 +1,8 @@
 """Stream original calibration trials into paired EEG power representations.
 
-Only the six established calibration filenames are admitted. EEG preprocessing
-is unchanged: one source_filter and one trial-reset adaptive_residual per
-1626-sample window. Each original trial, containing five repetitions, supplies
+Only the six established calibration filenames are admitted. Default EEG
+preprocessing is unchanged; the optional attribution mode adds matched
+normalization and fixed-sham controls. Each original trial, containing five repetitions, supplies
 one feature row. No EEG waveform cache, online access, model fit, or file write
 is performed. The caller verifies source identities and enforces resource caps.
 """
@@ -36,6 +36,9 @@ EXPECTED_TRIALS = 100
 ADAPTIVE_SEED = 20260906
 EEG_FEATURES = N_EEG * len(BANDS)
 EEG_ARMS = ("raw_evoked", "raw_repetition", "filtered_evoked", "filtered_repetition")
+ATTRIBUTION_ARMS = ("raw_repetition", "normalized_repetition", "filtered_repetition",
+                    "sham_normalized_repetition", "sham_filtered_repetition")
+SHAM_SEED = 20260922
 
 
 def _trial_features(eeg, auxiliary):
@@ -66,6 +69,54 @@ def _trial_features(eeg, auxiliary):
             raise ValueError("Paired EEG power features must contain 768 finite values")
     return nuisance, features, {"raw": raw_power["diagnostics"],
                                  "filtered": filtered_power["diagnostics"]}
+
+
+def _source_normalize(values):
+    """Exact EEG normalization inside adaptive_residual, before any cropping."""
+    _, np = _dependencies()
+    data = np.asarray(values, dtype=np.float64)
+    return ((data - data.mean(axis=1, keepdims=True)) /
+            (data.std(axis=1, ddof=1, keepdims=True) + np.finfo(float).eps))
+
+
+def _sham_template():
+    """One fixed conventionally filtered Gaussian input, with no data arguments."""
+    _, np = _dependencies()
+    length = TRIAL_SAMPLES + JITTER_SAMPLES
+    gaussian = np.random.default_rng(SHAM_SEED).normal(0.0, 1.0, (N_EEG, length))
+    template, _ = source_filter(gaussian, np.zeros((5, length), dtype=np.float64))
+    return template
+
+
+def _attribution_trial_features(eeg, auxiliary, sham):
+    """Hold physiological inputs and source NLMS fixed across real/sham EEG."""
+    from neurodecodekit.experiments.speech_repetition_power import paired_power_features
+
+    _, np = _dependencies()
+    filtered_eeg, filtered_auxiliary = source_filter(eeg, auxiliary)
+    physiological = filtered_auxiliary[2:]
+    views = {
+        "raw_repetition": filtered_eeg,
+        "normalized_repetition": _source_normalize(filtered_eeg),
+        "filtered_repetition": adaptive_residual(filtered_eeg, physiological, seed=ADAPTIVE_SEED),
+        "sham_normalized_repetition": _source_normalize(sham),
+        "sham_filtered_repetition": adaptive_residual(sham, physiological, seed=ADAPTIVE_SEED),
+    }
+    center = slice(CENTER_OFFSET, CENTER_OFFSET + TRIAL_SAMPLES)
+    auxiliary_full = filtered_auxiliary[:, center].astype(np.float32)[None]
+    nuisance = fixed_channel_features(average_repetitions(auxiliary_full),
+                                      full_trial=auxiliary_full, sfreq=SFREQ)[0]
+    features, diagnostics = {}, {}
+    for name, values in views.items():
+        powers = paired_power_features(values[:, center].astype(np.float32)[None])
+        features[name] = powers["repetition"][0]
+        diagnostics[name] = powers["diagnostics"]
+    if nuisance.shape != (390,) or not np.isfinite(nuisance).all():
+        raise ValueError("Original auxiliary features must contain 390 finite values")
+    if any(values.shape != (EEG_FEATURES,) or not np.isfinite(values).all()
+           for values in features.values()):
+        raise ValueError("Attribution EEG power features must contain 768 finite values")
+    return nuisance, features, diagnostics
 
 
 def _empty_diagnostic():
@@ -107,15 +158,24 @@ def _finish_diagnostic(aggregate):
     return aggregate
 
 
-def extract_calibration_power(edf_path, events_path, channels_path, *, progress=None):
-    """Return 100 auxiliary rows and four matched 100x768 EEG feature matrices.
+def extract_calibration_power(edf_path, events_path, channels_path, *, progress=None,
+                              mode="repetition_power"):
+    """Return 100 auxiliary rows and matched 100x768 EEG feature matrices.
 
     ``progress(completed_trials, total_trials)`` may raise to enforce the
     caller's deadline. Raw here means before adaptive filtering, not unfiltered
     EDF values. Diagnostics pool powers across channels and original trials;
     their ratios are ratios of totals, with no individual-trial payload.
+    The default four views are unchanged. ``mode='adaptive_attribution'``
+    returns five repetition-power views, including normalization-only and
+    fixed-sham controls. Of the two sham views, only sham_filtered depends
+    on real auxiliary input; neither sham input uses recorded EEG samples.
     """
     edf, events, channels, recording_id = _calibration_paths(edf_path, events_path, channels_path)
+    if mode not in ("repetition_power", "adaptive_attribution"):
+        raise ValueError("Unknown calibration power extraction mode")
+    attribution = mode == "adaptive_attribution"
+    arms = ATTRIBUTION_ARMS if attribution else EEG_ARMS
     mne, np = _dependencies()
     broker = broker_event_rows(_read_tsv(events), recording_id, role="calibration")
     if len(broker["trial_ids"]) != EXPECTED_TRIALS:
@@ -138,8 +198,10 @@ def extract_calibration_power(edf_path, events_path, channels_path, *, progress=
         picks = layout["eeg"] + [index for pair in layout["aux_pairs"] for index in pair]
         auxiliary_features = np.empty((EXPECTED_TRIALS, 392), dtype=np.float64)
         eeg_features = {arm: np.empty((EXPECTED_TRIALS, EEG_FEATURES), dtype=np.float64)
-                        for arm in EEG_ARMS}
-        diagnostics = {name: _empty_diagnostic() for name in ("raw", "filtered")}
+                        for arm in arms}
+        diagnostics = {name: _empty_diagnostic()
+                       for name in (arms if attribution else ("raw", "filtered"))}
+        sham = _sham_template() if attribution else None
         for index, (end, action_start) in enumerate(zip(bounds["buffer_ends"], action_starts)):
             if progress is not None:
                 progress(index, EXPECTED_TRIALS)
@@ -148,10 +210,13 @@ def extract_calibration_power(edf_path, events_path, channels_path, *, progress=
             if samples.shape != (N_EEG + 10, TRIAL_SAMPLES + JITTER_SAMPLES):
                 raise ValueError("Source read must retain 128 EEG and ten auxiliary columns")
             auxiliary = samples[N_EEG::2] - samples[N_EEG + 1::2]
-            nuisance, powers, diagnostic = _trial_features(samples[:N_EEG], auxiliary)
+            if attribution:
+                nuisance, powers, diagnostic = _attribution_trial_features(samples[:N_EEG], auxiliary, sham)
+            else:
+                nuisance, powers, diagnostic = _trial_features(samples[:N_EEG], auxiliary)
             auxiliary_features[index, :-2] = nuisance
             auxiliary_features[index, -2:] = (index, float(action_start) / SFREQ)
-            for arm in EEG_ARMS:
+            for arm in arms:
                 eeg_features[arm][index] = powers[arm]
             for name in diagnostics:
                 _merge_diagnostic(diagnostics[name], diagnostic[name])
@@ -160,7 +225,7 @@ def extract_calibration_power(edf_path, events_path, channels_path, *, progress=
         if not np.isfinite(auxiliary_features).all() or any(
                 not np.isfinite(values).all() for values in eeg_features.values()):
             raise ValueError("Nonfinite complete calibration feature matrix")
-        return {
+        result = {
             "auxiliary": auxiliary_features, "eeg_features": eeg_features,
             "calibration_labels": labels, "trial_ids": broker["trial_ids"],
             "timing_summary": {
@@ -180,5 +245,21 @@ def extract_calibration_power(edf_path, events_path, channels_path, *, progress=
             "power_diagnostics": {name: _finish_diagnostic(values)
                                   for name, values in diagnostics.items()},
         }
+        if attribution:
+            result["timing_summary"].update({
+                "mode": mode,
+                "normalization": "full_1626_samples_float64_channelwise_ddof1_plus_float64_epsilon",
+                "sham": {
+                    "seed": SHAM_SEED, "generator": "numpy_default_rng_standard_normal",
+                    "shape": [N_EEG, TRIAL_SAMPLES + JITTER_SAMPLES],
+                    "source_filter_calls_per_extraction": 1,
+                    "preprocessing_auxiliary": "five_zero_channels",
+                    "identical_input_all_trials_and_recordings": True,
+                    "input_independent_of_real_data_labels_and_trial_ids": True,
+                    "recorded_eeg_channel_samples_in_sham_input": False,
+                    "filtered_view_uses_real_filtered_eog_and_lips": True,
+                },
+            })
+        return result
     finally:
         raw.close()

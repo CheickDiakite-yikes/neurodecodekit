@@ -15,6 +15,26 @@ SPEC.loader.exec_module(driver)
 
 
 class AuxiliaryDriverTests(unittest.TestCase):
+    def test_adaptive_route_preserves_both_previous_discoveries(self):
+        with mock.patch.multiple(driver, EXPERIMENT=driver.EXPERIMENT, LOCAL=driver.LOCAL,
+                                 PLAN=driver.PLAN, RESULT=driver.RESULT):
+            driver.configure_adaptive_attribution()
+            self.assertEqual(driver.EXPERIMENT, "adaptive_attribution")
+            self.assertTrue(all("adaptive_attribution" in str(path) for path in
+                                (driver.LOCAL, driver.PLAN, driver.RESULT)))
+            started = {"plan_sha256": "plan", "source_manifest_sha256": "manifest",
+                       "prediction_freeze_sha256": "freeze"}
+            hashes = ["plan", "manifest", "freeze", driver.PRIOR_RESULT_SHA,
+                      driver.PRIOR_AUXILIARY_SHA, driver.PRIOR_POWER_SHA]
+            with mock.patch.object(driver.original, "sha256", side_effect=hashes):
+                driver.verify_bound_metadata(started)
+            for index, message in ((4, "Previous auxiliary"), (5, "Previous repetition-power")):
+                changed = hashes.copy()
+                changed[index] = "changed"
+                with mock.patch.object(driver.original, "sha256", side_effect=changed):
+                    with self.assertRaisesRegex(ValueError, message):
+                        driver.verify_bound_metadata(started)
+
     def test_repetition_power_route_has_separate_outputs_and_preserves_prior_evidence(self):
         with mock.patch.multiple(driver, EXPERIMENT=driver.EXPERIMENT, LOCAL=driver.LOCAL,
                                  PLAN=driver.PLAN, RESULT=driver.RESULT):

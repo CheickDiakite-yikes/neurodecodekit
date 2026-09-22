@@ -45,6 +45,25 @@ PRIMARY_COMPARATORS = (
     "N", "N_filtered_evoked", "N_filtered_repetition_deranged",
     "N_filtered_repetition_shuffled", "uniform", "training_prior",
 )
+ADAPTIVE_REPRESENTATIONS = (
+    "raw_repetition", "normalized_repetition", "filtered_repetition",
+    "sham_normalized_repetition", "sham_filtered_repetition",
+)
+ADAPTIVE_ARMS = (
+    "N", "N_shuffled", "uniform", "training_prior",
+    *(arm for representation in ADAPTIVE_REPRESENTATIONS for arm in (
+        representation, representation + "_shuffled", "N_" + representation,
+        "N_" + representation + "_deranged", "N_" + representation + "_shuffled")),
+)
+ADAPTIVE_PRIMARY_ARM = "sham_filtered_repetition"
+ADAPTIVE_PRIMARY_COMPARATORS = (
+    "sham_normalized_repetition", "sham_filtered_repetition_shuffled", "uniform", "training_prior",
+)
+ADAPTIVE_SECONDARY_ARM = "N_filtered_repetition"
+ADAPTIVE_SECONDARY_COMPARATORS = (
+    "N", "N_normalized_repetition", "N_sham_filtered_repetition",
+    "N_filtered_repetition_deranged", "N_filtered_repetition_shuffled", "uniform", "training_prior",
+)
 
 
 def _band_energies(values):
@@ -129,8 +148,10 @@ def fold_derangement_indices(train, validation):
     return tuple(np.roll(group, 1) for group in groups)
 
 
-def run_pair_power_discovery(auxiliary, eeg_features, calibration_labels, *, pair_id, progress=None):
-    """Return a JSON-safe pair report and local-only OOF arrays for all 24 arms.
+def run_pair_power_discovery(
+    auxiliary, eeg_features, calibration_labels, *, pair_id, progress=None, mode="repetition_power"
+):
+    """Return a JSON-safe pair report and local-only OOF arrays for fixed arms.
 
     ``eeg_features`` contains exactly REPRESENTATIONS, each ``[100,768]``;
     auxiliary has the original ``[100,392]`` features. Both fixed split schemes
@@ -138,14 +159,29 @@ def run_pair_power_discovery(auxiliary, eeg_features, calibration_labels, *, pai
     independently standardized using original training rows only and divided
     by sqrt(its feature count). Derangement then rolls only standardized EEG,
     independently within training and validation, leaving auxiliaries aligned.
+
+    The default mode retains the original four views, 24 arms and endpoint.
+    Explicit ``adaptive_attribution`` instead requires ADAPTIVE_REPRESENTATIONS,
+    yielding 29 arms. Its primary comparison uses sham features alone; the real
+    filtered-EEG joint comparison is reported separately as secondary. This
+    function does not construct or verify the caller-owned fixed sham template.
     """
+    if mode == "repetition_power":
+        representations, arms = REPRESENTATIONS, ARMS
+        primary_arm, primary_comparators = PRIMARY_ARM, PRIMARY_COMPARATORS
+    elif mode == "adaptive_attribution":
+        representations, arms = ADAPTIVE_REPRESENTATIONS, ADAPTIVE_ARMS
+        primary_arm, primary_comparators = ADAPTIVE_PRIMARY_ARM, ADAPTIVE_PRIMARY_COMPARATORS
+    else:
+        raise ValueError("Mode must be repetition_power or adaptive_attribution")
     np = _numpy()
     auxiliary = _matrix(auxiliary, "calibration auxiliary features")
     if auxiliary.shape != (N_TRIALS, N_AUXILIARY_FEATURES):
         raise ValueError("Calibration auxiliary features must have shape (100, 392)")
-    if set(eeg_features) != set(REPRESENTATIONS):
-        raise ValueError("EEG features must contain exactly the four fixed representations")
-    eeg = {name: _matrix(eeg_features[name], name) for name in REPRESENTATIONS}
+    if set(eeg_features) != set(representations):
+        count = "four" if mode == "repetition_power" else "five"
+        raise ValueError(f"EEG features must contain exactly the {count} fixed representations")
+    eeg = {name: _matrix(eeg_features[name], name) for name in representations}
     if any(matrix.shape != (N_TRIALS, N_EEG_FEATURES) for matrix in eeg.values()):
         raise ValueError("Every EEG representation must have shape (100, 768)")
     if not isinstance(pair_id, str) or not pair_id:
@@ -155,10 +191,10 @@ def run_pair_power_discovery(auxiliary, eeg_features, calibration_labels, *, pai
         "pair_id": pair_id,
         "status": "calibration_only_discovery",
         "confirmatory_result": False,
-        "arms": list(ARMS),
-        "representations": list(REPRESENTATIONS),
-        "primary_arm": PRIMARY_ARM,
-        "primary_comparators": list(PRIMARY_COMPARATORS),
+        "arms": list(arms),
+        "representations": list(representations),
+        "primary_arm": primary_arm,
+        "primary_comparators": list(primary_comparators),
         "n_auxiliary_features": N_AUXILIARY_FEATURES,
         "n_eeg_features_per_representation": N_EEG_FEATURES,
         "settings": {
@@ -174,9 +210,15 @@ def run_pair_power_discovery(auxiliary, eeg_features, calibration_labels, *, pai
             "claim_ceiling": "exploratory within-recording prediction, not causal or confirmatory",
         },
     })
+    if mode == "adaptive_attribution":
+        report.update({
+            "mode": mode,
+            "secondary_arm": ADAPTIVE_SECONDARY_ARM,
+            "secondary_comparators": list(ADAPTIVE_SECONDARY_COMPARATORS),
+        })
     out_of_fold = {}
     for scheme, folds in plans.items():
-        predictions = {arm: np.full((N_TRIALS, 5), np.nan) for arm in ARMS}
+        predictions = {arm: np.full((N_TRIALS, 5), np.nan) for arm in arms}
         for fold, (train, validation) in enumerate(folds):
             if progress is not None:
                 progress({"event": "fold_start", "pair_id": pair_id, "scheme": scheme, "fold": fold})
@@ -211,9 +253,15 @@ def run_pair_power_discovery(auxiliary, eeg_features, calibration_labels, *, pai
         report["schemes"][scheme]["metrics"] = metrics
         report["schemes"][scheme]["primary_log_loss_gains"] = {
             comparator: metrics[comparator]["class_macro_log_loss"]
-            - metrics[PRIMARY_ARM]["class_macro_log_loss"]
-            for comparator in PRIMARY_COMPARATORS
+            - metrics[primary_arm]["class_macro_log_loss"]
+            for comparator in primary_comparators
         }
+        if mode == "adaptive_attribution":
+            report["schemes"][scheme]["secondary_conditional_log_loss_gains"] = {
+                comparator: metrics[comparator]["class_macro_log_loss"]
+                - metrics[ADAPTIVE_SECONDARY_ARM]["class_macro_log_loss"]
+                for comparator in ADAPTIVE_SECONDARY_COMPARATORS
+            }
         out_of_fold[scheme] = predictions
     return report, out_of_fold
 
@@ -222,4 +270,6 @@ __all__ = [
     "ARMS", "BANDS", "PRIMARY_ARM", "PRIMARY_COMPARATORS", "REPRESENTATIONS",
     "SCHEMES", "SEED", "paired_power_features", "preflight_calibration",
     "fold_derangement_indices", "run_pair_power_discovery",
+    "ADAPTIVE_REPRESENTATIONS", "ADAPTIVE_ARMS", "ADAPTIVE_PRIMARY_ARM",
+    "ADAPTIVE_PRIMARY_COMPARATORS", "ADAPTIVE_SECONDARY_ARM", "ADAPTIVE_SECONDARY_COMPARATORS",
 ]

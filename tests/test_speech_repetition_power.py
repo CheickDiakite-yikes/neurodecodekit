@@ -25,6 +25,22 @@ class RepetitionPowerContractTests(unittest.TestCase):
         self.assertEqual(discovery.SEED, auxiliary_discovery.SEED)
         self.assertEqual(discovery.N_EEG_FEATURES, 128 * 6)
 
+    def test_adaptive_roster_and_primary_are_explicit_and_separate_from_secondary(self):
+        self.assertEqual(discovery.ADAPTIVE_REPRESENTATIONS, (
+            "raw_repetition", "normalized_repetition", "filtered_repetition",
+            "sham_normalized_repetition", "sham_filtered_repetition"))
+        self.assertEqual(len(discovery.ADAPTIVE_ARMS), 29)
+        self.assertEqual(len(set(discovery.ADAPTIVE_ARMS)), 29)
+        self.assertEqual(discovery.ADAPTIVE_PRIMARY_ARM, "sham_filtered_repetition")
+        self.assertEqual(discovery.ADAPTIVE_PRIMARY_COMPARATORS, (
+            "sham_normalized_repetition", "sham_filtered_repetition_shuffled", "uniform", "training_prior"))
+        self.assertEqual(discovery.ADAPTIVE_SECONDARY_ARM, "N_filtered_repetition")
+        self.assertEqual(discovery.ADAPTIVE_SECONDARY_COMPARATORS, (
+            "N", "N_normalized_repetition", "N_sham_filtered_repetition",
+            "N_filtered_repetition_deranged", "N_filtered_repetition_shuffled", "uniform", "training_prior"))
+        with self.assertRaisesRegex(ValueError, "Mode must be"):
+            discovery.run_pair_power_discovery(None, None, None, pair_id="generated", mode="unknown")
+
 
 @unittest.skipUnless(importlib.util.find_spec("numpy"), "Optional NumPy required")
 class RepetitionPowerFeatureTests(unittest.TestCase):
@@ -133,7 +149,23 @@ class RepetitionPowerComparisonTests(unittest.TestCase):
                 discovery.fold_derangement_indices(train, validation)
 
     def test_all_arms_train_only_scaling_shared_labels_and_fold_local_eeg_donors(self):
+        report, _ = self._check_all_arms_scaling()
+        self.assertEqual(report["primary_arm"], discovery.PRIMARY_ARM)
+        self.assertEqual(report["primary_comparators"], list(discovery.PRIMARY_COMPARATORS))
+        self.assertNotIn("mode", report)
+        self.assertNotIn("secondary_arm", report)
+        for scheme in discovery.SCHEMES:
+            self.assertNotIn("secondary_conditional_log_loss_gains", report["schemes"][scheme])
+
+    def _check_all_arms_scaling(self, mode=None):
         np = self.np
+        representations = discovery.REPRESENTATIONS if mode is None else discovery.ADAPTIVE_REPRESENTATIONS
+        arms = discovery.ARMS if mode is None else discovery.ADAPTIVE_ARMS
+        eeg = self.eeg if mode is None else {
+            name: self.eeg[discovery.REPRESENTATIONS[index % 4]]
+            for index, name in enumerate(representations)
+        }
+        fits_per_fold = 2 + 5 * len(representations)
         _, plans, metadata = auxiliary_discovery._split_plan(self.labels)
         fold_roster = [(scheme, fold, train, validation) for scheme, folds in plans.items()
                        for fold, (train, validation) in enumerate(folds)]
@@ -148,12 +180,12 @@ class RepetitionPowerComparisonTests(unittest.TestCase):
 
         def check_fit(actual_train, actual_labels, actual_test):
             nonlocal calls
-            fold_index, call_in_fold = divmod(calls, 22)
+            fold_index, call_in_fold = divmod(calls, fits_per_fold)
             scheme, fold, train, validation = fold_roster[fold_index]
             if call_in_fold == 0:
                 cache["auxiliary"] = manual_block(self.auxiliary, train, validation)
                 cache["eeg"] = {name: manual_block(values, train, validation)
-                                for name, values in self.eeg.items()}
+                                for name, values in eeg.items()}
             truth = self.labels[train]
             seed = metadata["schemes"][scheme]["folds"][fold]["shuffle_seed"]
             shuffled = truth[np.random.default_rng(seed).permutation(len(train))]
@@ -163,7 +195,7 @@ class RepetitionPowerComparisonTests(unittest.TestCase):
                 expected_labels = truth if call_in_fold == 0 else shuffled
             else:
                 representation, variant = divmod(call_in_fold - 2, 5)
-                eeg_train, eeg_test = cache["eeg"][discovery.REPRESENTATIONS[representation]]
+                eeg_train, eeg_test = cache["eeg"][representations[representation]]
                 if variant == 3:
                     eeg_train, eeg_test = np.roll(eeg_train, 1, axis=0), np.roll(eeg_test, 1, axis=0)
                 if variant < 2:
@@ -176,23 +208,59 @@ class RepetitionPowerComparisonTests(unittest.TestCase):
             np.testing.assert_allclose(actual_test, expected_test, rtol=0, atol=1e-14)
             np.testing.assert_array_equal(actual_labels, expected_labels)
             calls += 1
-            return np.full((len(actual_test), 5), 0.2)
+            # Distinct generated probabilities make gain-arithmetic checks
+            # nontrivial without performing another set of numerical fits.
+            weights = np.arange(1.0, 6.0) + call_in_fold / 10
+            return np.tile(weights / weights.sum(), (len(actual_test), 1))
 
-        # A direct replacement checks every call without retaining 220 large
+        # A direct replacement checks every call without retaining large
         # argument tuples in a Mock's lifetime call history.
+        options = {} if mode is None else {"mode": mode}
         with mock.patch.object(discovery, "ridge_probabilities", new=check_fit):
             report, outputs = discovery.run_pair_power_discovery(
-                self.auxiliary, self.eeg, self.labels, pair_id="generated")
-        self.assertEqual(calls, 220)
+                self.auxiliary, eeg, self.labels, pair_id="generated", **options)
+        self.assertEqual(calls, 220 if mode is None else 270)
         self.assertFalse(report["confirmatory_result"])
         for scheme in discovery.SCHEMES:
-            self.assertEqual(set(outputs[scheme]), set(discovery.ARMS))
+            self.assertEqual(set(outputs[scheme]), set(arms))
             for actual, expected in zip(report["schemes"][scheme]["folds"],
                                         metadata["schemes"][scheme]["folds"]):
                 self.assertEqual({key: value for key, value in actual.items()
                                   if key != "eeg_derangement_indices_sha256"}, expected)
                 self.assertEqual(len(actual["eeg_derangement_indices_sha256"]), 64)
         json.dumps(report, allow_nan=False)
+        return report, outputs
+
+    def test_adaptive_all_29_arms_complete_oof_and_separate_gain_arithmetic(self):
+        np = self.np
+        report, outputs = self._check_all_arms_scaling(mode="adaptive_attribution")
+        self.assertEqual(report["mode"], "adaptive_attribution")
+        self.assertEqual(report["primary_arm"], discovery.ADAPTIVE_PRIMARY_ARM)
+        self.assertEqual(report["primary_comparators"], list(discovery.ADAPTIVE_PRIMARY_COMPARATORS))
+        self.assertEqual(report["secondary_arm"], discovery.ADAPTIVE_SECONDARY_ARM)
+        self.assertEqual(report["secondary_comparators"], list(discovery.ADAPTIVE_SECONDARY_COMPARATORS))
+        for scheme in discovery.SCHEMES:
+            metrics = report["schemes"][scheme]["metrics"]
+            self.assertEqual(set(metrics), set(discovery.ADAPTIVE_ARMS))
+            for arm in discovery.ADAPTIVE_ARMS:
+                probabilities = outputs[scheme][arm]
+                self.assertEqual(probabilities.shape, (100, 5))
+                self.assertTrue(np.isfinite(probabilities).all())
+                np.testing.assert_allclose(probabilities.sum(axis=1), 1, atol=1e-12)
+                expected_loss = float(np.mean([
+                    -np.log(probabilities[self.labels == label, label]).mean() for label in range(5)]))
+                self.assertAlmostEqual(metrics[arm]["class_macro_log_loss"], expected_loss)
+                self.assertEqual(metrics[arm]["n_trials"], 100)
+            for key, target, comparators in (
+                ("primary_log_loss_gains", discovery.ADAPTIVE_PRIMARY_ARM, discovery.ADAPTIVE_PRIMARY_COMPARATORS),
+                ("secondary_conditional_log_loss_gains", discovery.ADAPTIVE_SECONDARY_ARM,
+                 discovery.ADAPTIVE_SECONDARY_COMPARATORS),
+            ):
+                gains = report["schemes"][scheme][key]
+                self.assertEqual(set(gains), set(comparators))
+                for comparator, gain in gains.items():
+                    self.assertAlmostEqual(gain, metrics[comparator]["class_macro_log_loss"]
+                                           - metrics[target]["class_macro_log_loss"])
 
     def test_generated_signal_pools_original_trials_and_reports_exact_primary_gains(self):
         np = self.np

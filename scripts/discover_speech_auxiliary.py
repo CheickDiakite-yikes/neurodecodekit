@@ -1,8 +1,8 @@
-"""Bounded calibration discovery: auxiliary carriers or matched repetition power.
+"""Bounded calibration discovery: auxiliary carriers, power, or filter attribution.
 
 Each fixed experiment has its own immutable output root and single invocation.
-No online files are admitted. --repetition-power selects the second experiment;
-omitting it retains the original, already-consumed auxiliary-only route.
+No online files are admitted. Explicit flags select separate fixed experiments;
+omitting them retains the original, already-consumed auxiliary-only route.
 """
 
 from __future__ import annotations
@@ -31,6 +31,8 @@ MAX_SECONDS, MAX_RSS, MAX_OUTPUT = 600, 1024**3, 32 * 1024**2
 EXPERIMENT = "auxiliary"
 PRIOR_AUXILIARY = REPO / "registries/speech_auxiliary_discovery_result.v0.json"
 PRIOR_AUXILIARY_SHA = "794711f5f1731485c8d253ec48674a5ad35971dd9ede31876338c55bed4abda9"
+PRIOR_POWER = REPO / "registries/speech_repetition_power_result.v0.json"
+PRIOR_POWER_SHA = "daa18472b86d1348d33350e0862f5eec6b51ab4504c056376e98da3503bd0245"
 
 
 def configure_repetition_power():
@@ -40,6 +42,15 @@ def configure_repetition_power():
     LOCAL = REPO / "data/speech_repetition_power_20260921"
     PLAN = REPO / "registries/speech_repetition_power_plan.v0.json"
     RESULT = REPO / "registries/speech_repetition_power_result.v0.json"
+
+
+def configure_adaptive_attribution():
+    """Select the fixed sham-input falsifier without reopening previous routes."""
+    global EXPERIMENT, LOCAL, PLAN, RESULT
+    EXPERIMENT = "adaptive_attribution"
+    LOCAL = REPO / "data/speech_adaptive_attribution_20260922"
+    PLAN = REPO / "registries/speech_adaptive_attribution_plan.v0.json"
+    RESULT = REPO / "registries/speech_adaptive_attribution_result.v0.json"
 
 
 class Budget:
@@ -132,8 +143,10 @@ def verify_bound_metadata(started):
             raise ValueError(f"Bound metadata changed: {key}")
     if original.sha256(original.RESULT) != PRIOR_RESULT_SHA:
         raise ValueError("Consumed confirmation aggregate changed")
-    if EXPERIMENT == "repetition_power" and original.sha256(PRIOR_AUXILIARY) != PRIOR_AUXILIARY_SHA:
+    if EXPERIMENT in ("repetition_power", "adaptive_attribution") and original.sha256(PRIOR_AUXILIARY) != PRIOR_AUXILIARY_SHA:
         raise ValueError("Previous auxiliary discovery aggregate changed")
+    if EXPERIMENT == "adaptive_attribution" and original.sha256(PRIOR_POWER) != PRIOR_POWER_SHA:
+        raise ValueError("Previous repetition-power aggregate changed")
 
 
 def run(budget, started):
@@ -142,7 +155,9 @@ def run(budget, started):
         preflight_calibration, run_pair_discovery,
     )
     from neurodecodekit.preprocess.speech_reproduction import _read_tsv, broker_event_rows
-    if EXPERIMENT == "repetition_power":
+    power_mode = EXPERIMENT in ("repetition_power", "adaptive_attribution")
+    mode_options = {"mode": "adaptive_attribution"} if EXPERIMENT == "adaptive_attribution" else {}
+    if power_mode:
         from neurodecodekit.experiments.speech_repetition_power import run_pair_power_discovery
         from neurodecodekit.preprocess.speech_repetition_power import extract_calibration_power
         extractor = extract_calibration_power
@@ -171,16 +186,16 @@ def run(budget, started):
         pair_id = "_".join((person, session, condition))
         extracted = extractor(SOURCE / item["path"],
             SOURCE / item["events_path"], SOURCE / item["path"].replace("_eeg.edf", "_channels.tsv"),
-            progress=budget.check)
+            progress=budget.check, **mode_options)
         budget.check()
         recording = Path(item["path"]).name.removesuffix("_eeg.edf")
         if preflight_calibration(np.asarray(extracted["calibration_labels"])) != eligibility[recording]:
             raise ValueError("Extracted calibration split differs from the all-six preflight")
         model_started = time.monotonic()
-        if EXPERIMENT == "repetition_power":
+        if power_mode:
             report, probabilities = run_pair_power_discovery(extracted["auxiliary"],
                 extracted["eeg_features"], np.asarray(extracted["calibration_labels"]),
-                pair_id=pair_id, progress=budget.check)
+                pair_id=pair_id, progress=budget.check, **mode_options)
             report["power_diagnostics"] = extracted["power_diagnostics"]
         else:
             report, probabilities = run_pair_discovery(extracted["features"],
@@ -205,8 +220,8 @@ def run(budget, started):
         "prior_confirmation_result_sha256": PRIOR_RESULT_SHA,
         "source_receipts": receipts, "pairs": reports,
         "online_files_opened": 0, "new_download_bytes": 0,
-        "eeg_models_fitted": 1200 if EXPERIMENT == "repetition_power" else 0,
-        "ridge_models_fitted": 1320 if EXPERIMENT == "repetition_power" else 960,
+        "eeg_models_fitted": {"auxiliary": 0, "repetition_power": 1200, "adaptive_attribution": 900}[EXPERIMENT],
+        "ridge_models_fitted": {"auxiliary": 960, "repetition_power": 1320, "adaptive_attribution": 1620}[EXPERIMENT],
         "deep_models_fitted": 0,
         "confirmation_reopened": False, "hyperparameter_searches": 0,
         "runtime_versions": {name: importlib.metadata.version(name) for name in
@@ -214,8 +229,11 @@ def run(budget, started):
         "runtime_seconds": time.monotonic() - budget.started,
         "peak_observed_rss_bytes": budget.peak_rss, "local_artifact_bytes": budget.storage(),
         "claim_ceiling": "Exploratory within-recording calibration prediction; not online confirmation, causal origin or utility"}
-    if EXPERIMENT == "repetition_power":
+    if power_mode:
         result["prior_auxiliary_discovery_sha256"] = PRIOR_AUXILIARY_SHA
+    if EXPERIMENT == "adaptive_attribution":
+        result["prior_repetition_power_sha256"] = PRIOR_POWER_SHA
+        result["sham_feature_models_fitted"] = 600
     budget.check()
     original.write_json(RESULT, result)
     budget.storage()
@@ -251,8 +269,14 @@ def main():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--repetition-power", action="store_true",
-                        help="Select the separate, fixed EEG repetition-power discovery")
-    if parser.parse_args().repetition_power:
+    modes = parser.add_mutually_exclusive_group()
+    modes.add_argument("--repetition-power", action="store_true",
+                       help="Select the separate, fixed EEG repetition-power discovery")
+    modes.add_argument("--adaptive-attribution", action="store_true",
+                       help="Select the separate, fixed normalization and sham-EEG falsifier")
+    arguments = parser.parse_args()
+    if arguments.repetition_power:
         configure_repetition_power()
+    elif arguments.adaptive_attribution:
+        configure_adaptive_attribution()
     main()

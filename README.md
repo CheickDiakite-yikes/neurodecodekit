@@ -56,10 +56,13 @@ remain in the [aggregate](registries/speech_repetition_power_result.v0.json).
 Better repetition features are useful; they do not establish independent neural
 information. No online recording was opened.
 
-**Next scientific priority:** separate trial normalization from the EOG/lip-fed
-adaptive filter, including a fixed sham-EEG control. Can the apparent improvement
-survive without informative EEG input? Resolve that cheap falsifier on calibration
-before scaling models. A low-channel peripheral interface remains a separate
+**Current scientific test:** separate trial normalization from the EOG/lip-fed
+adaptive filter, including a fixed sham-EEG control. Can it predict words when no
+recorded EEG-channel samples enter its features? The maintainer approved this
+[bounded falsifier](registries/speech_adaptive_attribution_plan.v0.json): same
+600 calibration trials, one fixed label-independent sham, matched small models,
+all controls and a ten-minute cap. It reuses the existing runner with
+`--adaptive-attribution`. A low-channel peripheral interface remains a separate
 practical lead; untouched, new-day and cue-resistant evaluation needs its own scope.
 This consumed evaluation must not be retuned or rescored. We have evidence for
 task-label prediction, not EEG-specific thought decoding, cortical origin,
