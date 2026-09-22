@@ -92,8 +92,11 @@ and cue controls. The [source decision](docs/SPEECH_NEXT_COHORT_DECISION.md)
 reuses the existing ten-person Thinking Out Loud candidate for a fresh-cohort,
 **same-day** study; no reviewed source supplies the complete new-day, cue-decoupled
 design. Preserve both accuracy and probability-scoring endpoints, with roles fixed
-before access and calibrators trained only on training data. New-source acquisition
-requires its own exact scope; consumed online recordings cannot be reused. The
+before access and calibrators trained only on training data. The user has now
+[approved the bounded ten-person raw acquisition](docs/INNER_SPEECH_ACQUISITION.md):
+6.4304 GiB, first session, all EEG/eye/lip channels retained, stored outside
+OneDrive. Labels and decoding outcomes remain unopened during acquisition;
+consumed online recordings cannot be reused. The
 low-channel peripheral interface remains a separate practical lead, not thought-to-text.
 This consumed evaluation must not be retuned or rescored. We have evidence for
 task-label prediction, not EEG-specific thought decoding, cortical origin,

@@ -1,6 +1,8 @@
 # Next thought-to-text step: fresh imagined-word evidence
 
-September 22, 2026. Source decision, not a new decoding result or data-access authorization.
+September 22, 2026. Source decision, not a new decoding result. The subsequent
+[bounded acquisition approval](INNER_SPEECH_ACQUISITION.md) now covers the
+ten-person ses-01 slice; it does not authorize an unspecified scoring run.
 
 The current five-word recordings cannot establish cue-independent thoughts or
 new-day robustness. One fixed nested temperature test addresses the specific
@@ -27,12 +29,13 @@ and montage require testing a frozen method, not transferring our five-word
 model weights. Visualization can expose a competing cue/task explanation; it
 does not substitute for randomized cue mappings or passive no-attempt trials.
 
-Existing generated-only source selection work already covers all ten people,
-the first common complete raw session, peripheral-preserving companions and a
-10 GiB ceiling. Reuse it; do not repeat the qualification or build another
-framework. Tracked records contain no real source manifest or completed
-acquisition/evaluation. The old metadata-only packet remains unactivated and
-does not grant payload or target access.
+Reuse the existing all-ten-person, first-common-session selection and 10 GiB
+ceiling. The live pinned inventory contains only raw BDFs, not the companions
+assumed by the generated selector. The new
+[source manifest](../registries/inner_speech_source_manifest.v0.json) preserves
+all original channels and both root metadata files. The historical generated
+qualification and metadata-only packet remain unactivated; this new approval
+does not change their evidence or grant evaluation access.
 
 ## Smallest next evidence target
 
@@ -65,6 +68,8 @@ and anonymization. Code licensing is not data-access permission.
 No reviewed source verified the complete fresh-day, cue-decoupled, group covert
 speech and synchronized peripheral-control design. That stronger question needs
 a separately scoped acquisition or collaboration. For ds003626 the immediate
-dependency is explicit bounded new-source access, not another literature loop.
-No participant signals, event rows, labels, private predictions or weights were
-read during this source refresh; no data were downloaded or uploaded.
+dependency is completing the approved bounded acquisition, then freezing the
+scientific comparison before opening outcomes. No participant signals, event
+rows, labels, private predictions or weights were read during the original
+source refresh. Acquisition status is recorded separately, not retroactively
+represented as part of that refresh.
