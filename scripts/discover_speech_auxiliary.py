@@ -35,6 +35,8 @@ PRIOR_POWER = REPO / "registries/speech_repetition_power_result.v0.json"
 PRIOR_POWER_SHA = "daa18472b86d1348d33350e0862f5eec6b51ab4504c056376e98da3503bd0245"
 PRIOR_ADAPTIVE = REPO / "registries/speech_adaptive_attribution_result.v0.json"
 PRIOR_ADAPTIVE_SHA = "9e28a48e7fbb88eafee93b9955ee11a4184a5bf762801cf6cf9bccb51496826d"
+PRIOR_TIME_FREQUENCY = REPO / "registries/speech_time_frequency_result.v0.json"
+PRIOR_TIME_FREQUENCY_SHA = "127a1dd0ac98281d8a486c104847f701019f27c5cef8fc3062802eadb90a9553"
 
 
 def configure_repetition_power():
@@ -62,6 +64,15 @@ def configure_time_frequency():
     LOCAL = REPO / "data/speech_time_frequency_20260922"
     PLAN = REPO / "registries/speech_time_frequency_plan.v0.json"
     RESULT = REPO / "registries/speech_time_frequency_result.v0.json"
+
+
+def configure_probability_calibration():
+    """Select one nested confidence-scale diagnosis, not a new feature search."""
+    global EXPERIMENT, LOCAL, PLAN, RESULT
+    EXPERIMENT = "probability_calibration"
+    LOCAL = REPO / "data/speech_probability_calibration_20260922"
+    PLAN = REPO / "registries/speech_probability_calibration_plan.v0.json"
+    RESULT = REPO / "registries/speech_probability_calibration_result.v0.json"
 
 
 class Budget:
@@ -154,12 +165,14 @@ def verify_bound_metadata(started):
             raise ValueError(f"Bound metadata changed: {key}")
     if original.sha256(original.RESULT) != PRIOR_RESULT_SHA:
         raise ValueError("Consumed confirmation aggregate changed")
-    if EXPERIMENT in ("repetition_power", "adaptive_attribution", "time_frequency") and original.sha256(PRIOR_AUXILIARY) != PRIOR_AUXILIARY_SHA:
+    if EXPERIMENT in ("repetition_power", "adaptive_attribution", "time_frequency", "probability_calibration") and original.sha256(PRIOR_AUXILIARY) != PRIOR_AUXILIARY_SHA:
         raise ValueError("Previous auxiliary discovery aggregate changed")
-    if EXPERIMENT in ("adaptive_attribution", "time_frequency") and original.sha256(PRIOR_POWER) != PRIOR_POWER_SHA:
+    if EXPERIMENT in ("adaptive_attribution", "time_frequency", "probability_calibration") and original.sha256(PRIOR_POWER) != PRIOR_POWER_SHA:
         raise ValueError("Previous repetition-power aggregate changed")
-    if EXPERIMENT == "time_frequency" and original.sha256(PRIOR_ADAPTIVE) != PRIOR_ADAPTIVE_SHA:
+    if EXPERIMENT in ("time_frequency", "probability_calibration") and original.sha256(PRIOR_ADAPTIVE) != PRIOR_ADAPTIVE_SHA:
         raise ValueError("Previous adaptive-attribution aggregate changed")
+    if EXPERIMENT == "probability_calibration" and original.sha256(PRIOR_TIME_FREQUENCY) != PRIOR_TIME_FREQUENCY_SHA:
+        raise ValueError("Previous time-frequency aggregate changed")
 
 
 def run(budget, started):
@@ -168,8 +181,15 @@ def run(budget, started):
         preflight_calibration, run_pair_discovery,
     )
     from neurodecodekit.preprocess.speech_reproduction import _read_tsv, broker_event_rows
-    power_mode = EXPERIMENT in ("repetition_power", "adaptive_attribution", "time_frequency")
+    probability_mode = EXPERIMENT == "probability_calibration"
+    power_mode = EXPERIMENT in ("repetition_power", "adaptive_attribution", "time_frequency", "probability_calibration")
     mode_options = {"mode": EXPERIMENT} if EXPERIMENT in ("adaptive_attribution", "time_frequency") else {}
+    if probability_mode:
+        from neurodecodekit.experiments.speech_probability_calibration import (
+            preflight_probability_calibration, run_pair_probability_calibration,
+        )
+        preflight_calibration = preflight_probability_calibration
+        mode_options = {"mode": "time_frequency"}
     if power_mode:
         from neurodecodekit.experiments.speech_repetition_power import run_pair_power_discovery
         from neurodecodekit.preprocess.speech_repetition_power import extract_calibration_power
@@ -205,7 +225,12 @@ def run(budget, started):
         if preflight_calibration(np.asarray(extracted["calibration_labels"])) != eligibility[recording]:
             raise ValueError("Extracted calibration split differs from the all-six preflight")
         model_started = time.monotonic()
-        if power_mode:
+        if probability_mode:
+            report, probabilities = run_pair_probability_calibration(extracted["auxiliary"],
+                extracted["eeg_features"]["full_all"], np.asarray(extracted["calibration_labels"]),
+                pair_id=pair_id, progress=budget.check)
+            report["power_diagnostics"] = extracted["power_diagnostics"]
+        elif power_mode:
             report, probabilities = run_pair_power_discovery(extracted["auxiliary"],
                 extracted["eeg_features"], np.asarray(extracted["calibration_labels"]),
                 pair_id=pair_id, progress=budget.check, **mode_options)
@@ -234,9 +259,11 @@ def run(budget, started):
         "source_receipts": receipts, "pairs": reports,
         "online_files_opened": 0, "new_download_bytes": 0,
         "eeg_models_fitted": {"auxiliary": 0, "repetition_power": 1200,
-                              "adaptive_attribution": 900, "time_frequency": 2700}[EXPERIMENT],
+                              "adaptive_attribution": 900, "time_frequency": 2700,
+                              "probability_calibration": 1500}[EXPERIMENT],
         "ridge_models_fitted": {"auxiliary": 960, "repetition_power": 1320,
-                                "adaptive_attribution": 1620, "time_frequency": 2940}[EXPERIMENT],
+                                "adaptive_attribution": 1620, "time_frequency": 2940,
+                                "probability_calibration": 2700}[EXPERIMENT],
         "deep_models_fitted": 0,
         "confirmation_reopened": False, "hyperparameter_searches": 0,
         "runtime_versions": {name: importlib.metadata.version(name) for name in
@@ -246,13 +273,17 @@ def run(budget, started):
         "claim_ceiling": "Exploratory within-recording calibration prediction; not online confirmation, causal origin or utility"}
     if power_mode:
         result["prior_auxiliary_discovery_sha256"] = PRIOR_AUXILIARY_SHA
-    if EXPERIMENT in ("adaptive_attribution", "time_frequency"):
+    if EXPERIMENT in ("adaptive_attribution", "time_frequency", "probability_calibration"):
         result["prior_repetition_power_sha256"] = PRIOR_POWER_SHA
     if EXPERIMENT == "adaptive_attribution":
         result["sham_feature_models_fitted"] = 600
-    if EXPERIMENT == "time_frequency":
+    if EXPERIMENT in ("time_frequency", "probability_calibration"):
         result["prior_adaptive_attribution_sha256"] = PRIOR_ADAPTIVE_SHA
-        result["auxiliary_only_models_fitted"] = 240
+        result["auxiliary_only_models_fitted"] = 1200 if probability_mode else 240
+    if probability_mode:
+        result["prior_time_frequency_sha256"] = PRIOR_TIME_FREQUENCY_SHA
+        result["training_only_temperature_parameters_fitted"] = 540
+        result["feature_or_model_family_searches"] = 0
     budget.check()
     original.write_json(RESULT, result)
     budget.storage()
@@ -295,6 +326,8 @@ if __name__ == "__main__":
                        help="Select the separate, fixed normalization and sham-EEG falsifier")
     modes.add_argument("--time-frequency", action="store_true",
                        help="Select the fixed auxiliary-independent EEG decomposition discovery")
+    modes.add_argument("--probability-calibration", action="store_true",
+                       help="Select the fixed nested temperature diagnosis on unchanged features")
     arguments = parser.parse_args()
     if arguments.repetition_power:
         configure_repetition_power()
@@ -302,4 +335,6 @@ if __name__ == "__main__":
         configure_adaptive_attribution()
     elif arguments.time_frequency:
         configure_time_frequency()
+    elif arguments.probability_calibration:
+        configure_probability_calibration()
     main()

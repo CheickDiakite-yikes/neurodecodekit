@@ -15,6 +15,34 @@ SPEC.loader.exec_module(driver)
 
 
 class AuxiliaryDriverTests(unittest.TestCase):
+    def test_probability_route_preserves_all_five_prior_results_and_calibration_scope(self):
+        with mock.patch.multiple(driver, EXPERIMENT=driver.EXPERIMENT, LOCAL=driver.LOCAL,
+                                 PLAN=driver.PLAN, RESULT=driver.RESULT):
+            driver.configure_probability_calibration()
+            self.assertEqual(driver.EXPERIMENT, "probability_calibration")
+            self.assertTrue(all("probability_calibration" in str(path) for path in
+                                (driver.LOCAL, driver.PLAN, driver.RESULT)))
+            started = {"plan_sha256": "plan", "source_manifest_sha256": "manifest",
+                       "prediction_freeze_sha256": "freeze"}
+            hashes = ["plan", "manifest", "freeze", driver.PRIOR_RESULT_SHA,
+                      driver.PRIOR_AUXILIARY_SHA, driver.PRIOR_POWER_SHA,
+                      driver.PRIOR_ADAPTIVE_SHA, driver.PRIOR_TIME_FREQUENCY_SHA]
+            with mock.patch.object(driver.original, "sha256", side_effect=hashes):
+                driver.verify_bound_metadata(started)
+            for index in range(3, len(hashes)):
+                changed = hashes.copy()
+                changed[index] = "changed"
+                with mock.patch.object(driver.original, "sha256", side_effect=changed):
+                    with self.assertRaisesRegex(ValueError, "aggregate changed"):
+                        driver.verify_bound_metadata(started)
+            plan = json.loads(driver.PLAN.read_text())
+            manifest = json.loads(driver.original.MANIFEST.read_text())
+            self.assertEqual(plan["calibration_source_paths"],
+                             [item["path"] for item in driver.calibration_selection(manifest)])
+            self.assertEqual(plan["resource_caps"]["runtime_seconds"], driver.MAX_SECONDS)
+            self.assertEqual(plan["model_counts"]["ridge_total"], 6 * 2 * 5 * 9 * 5)
+            self.assertEqual(plan["model_counts"]["temperature_parameters"], 6 * 2 * 5 * 9)
+
     def test_time_frequency_route_preserves_all_previous_discoveries(self):
         with mock.patch.multiple(driver, EXPERIMENT=driver.EXPERIMENT, LOCAL=driver.LOCAL,
                                  PLAN=driver.PLAN, RESULT=driver.RESULT):
