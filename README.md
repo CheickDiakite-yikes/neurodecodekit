@@ -47,14 +47,20 @@ minimally overt participants. DISPLAY, timing and microphone did not; no covert
 arm passed consistently. This shifts the lead toward peripheral-channel
 prediction, without establishing causal origin or new online performance.
 
-**Current experiment:** test whether averaging repetition waveforms hides
-EEG information. Compare matched small EEG power models before versus after
-repetition averaging, requiring an increment over complete auxiliary and
-deranged-EEG controls on development calibration only. The maintainer approved
-this [bounded discovery plan](registries/speech_repetition_power_plan.v0.json):
-all six calibration recordings, matched models, no online access, ten-minute cap.
-It uses the existing runner with `--repetition-power`. Any untouched, cue-resistant confirmation
-or low-channel peripheral interface evaluation is a separately scoped step.
+The [67-second repetition-power comparison](docs/SPEECH_REPETITION_POWER_RESULT.md)
+improved minimally overt adaptive EEG-derived BA from **37.73% to 46.38%**.
+But adding it to N improved log loss in only **1/3 people** (mean gain
+**+0.005820**), and **0/3 covert** (mean gain **-0.016323**). The registered
+consistency test failed in both conditions. All 24 arms and both split schemes
+remain in the [aggregate](registries/speech_repetition_power_result.v0.json).
+Better repetition features are useful; they do not establish independent neural
+information. No online recording was opened.
+
+**Next scientific priority:** separate trial normalization from the EOG/lip-fed
+adaptive filter, including a fixed sham-EEG control. Can the apparent improvement
+survive without informative EEG input? Resolve that cheap falsifier on calibration
+before scaling models. A low-channel peripheral interface remains a separate
+practical lead; untouched, new-day and cue-resistant evaluation needs its own scope.
 This consumed evaluation must not be retuned or rescored. We have evidence for
 task-label prediction, not EEG-specific thought decoding, cortical origin,
 clinical utility or unseen-person generalization. Both failed roots and the
