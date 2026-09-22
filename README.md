@@ -67,16 +67,22 @@ Simple normalization was competitive with the adaptive filter. All 29 arms,
 600 trials and both split schemes remain in the
 [aggregate](registries/speech_adaptive_attribution_result.v0.json).
 
-**Current scientific test:** the approved [fixed time/frequency comparison](registries/speech_time_frequency_plan.v0.json)
-uses EEG preprocessing that never consumes peripheral channels. Nine preset
-views test all bands, each individual band, and early/late repetitions against
-both the original auxiliary readout and repetition-resolved auxiliary features.
-Same 600 calibration trials, whole-trial folds, all controls, ten-minute cap;
-the existing runner uses `--time-frequency`. No post-hoc best-view selection.
-Early/late are repetition-position comparisons, not causal temporal localization.
-A low-channel peripheral interface
-remains the practical lead; untouched, new-day and cue-resistant evaluation
-needs its own scope.
+The [159-second auxiliary-independent EEG comparison](docs/SPEECH_TIME_FREQUENCY_RESULT.md)
+reached **89.75% minimally overt BA**, versus **85.62%** for repetition-enriched
+auxiliary-only prediction under blocked validation. BA improved in all three
+people with blocked folds (two with random folds), but the primary
+log-loss increment improved in only **1/3** (mean gain **+0.003846**). Covert
+also failed the all-person criterion. **None of nine preset EEG views passed
+all controls in all three people**, under either split scheme. All 51 arms and
+600 trials remain in the [aggregate](registries/speech_time_frequency_result.v0.json).
+Better top-choice accuracy does not override the failed primary probability endpoint.
+
+**Next scientific priority:** stop expanding models/bands on this reused cohort;
+test the fixed auxiliary-only and auxiliary-independent EEG joint predictors
+under a fresh recording context/day with controlled cues. Preserve both accuracy
+and probability-scoring endpoints, with roles fixed before access. Fresh data or
+evaluation requires its own exact scope; the consumed online recordings cannot
+be reused. The low-channel peripheral interface remains a separate practical lead.
 This consumed evaluation must not be retuned or rescored. We have evidence for
 task-label prediction, not EEG-specific thought decoding, cortical origin,
 clinical utility or unseen-person generalization. Both failed roots and the
