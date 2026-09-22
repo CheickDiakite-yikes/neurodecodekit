@@ -1,0 +1,51 @@
+{
+  "experiment_id": "speech_repetition_power_20260921",
+  "lane": "discovery",
+  "authority": "Maintainer: lets do it, another deep push; accepted the proposed calibration-only repetition-power experiment; approved charter Tier B",
+  "source_commit": "034af61aba855c58450977bf1c1916085c586cd6",
+  "calibration_source_paths": [
+    "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-calibration_run-01_eeg.edf",
+    "sub-1/ses-20230529/eeg/sub-1_ses-20230529_task-covert_acq-calibration_run-01_eeg.edf",
+    "sub-2/ses-20230512/eeg/sub-2_ses-20230512_task-minimallyovert_acq-calibration_run-01_eeg.edf",
+    "sub-2/ses-20230516/eeg/sub-2_ses-20230516_task-covert_acq-calibration_run-01_eeg.edf",
+    "sub-3/ses-20230523/eeg/sub-3_ses-20230523_task-minimallyovert_acq-calibration_run-01_eeg.edf",
+    "sub-3/ses-20230524/eeg/sub-3_ses-20230524_task-covert_acq-calibration_run-01_eeg.edf"
+  ],
+  "target": "Five-word calibration label; all600 original trials from six recordings, three people and both conditions; no exclusions",
+  "hypothesis": "Calculating power separately within each repetition preserves predictive EEG-derived information that averaging waveforms first discards, including an increment beyond the fixed complete auxiliary comparator",
+  "preprocessing": "Same source EEG gain, notch50/100, CAR, all-channel2-118Hz filtering on each1626-sample buffer. Raw means conventional preprocessing without adaptive residual, not unfiltered voltage. Filtered adds unchanged per-trial source NLMS using EOG/lips, seed20260906. Crop25:1625 thenfloat32 for both branches; no per-repetition normalization or cross-trial filter state.",
+  "representations": {
+    "raw_evoked": "128x6 log band powers of the mean five repetition waveforms after conventional preprocessing",
+    "raw_repetition": "128x6 log of mean five per-repetition band powers after conventional preprocessing",
+    "filtered_evoked": "128x6 log band powers of the mean five repetition waveforms after conventional plus adaptive preprocessing",
+    "filtered_repetition": "128x6 log of mean five per-repetition band powers after conventional plus adaptive preprocessing"
+  },
+  "spectral_settings": "Float64 feature calculations from cropped float32 windows;320samples/repetition at256Hz; one-sided squared FFT normalized by320^2; identical six bands2-4,4-8,8-13,13-30,30-60,60-118Hz; no added taper; upperedge118included; logaftermeanpower, notmeanlogpower;768features perrepresentation",
+  "auxiliary": "Unchanged392features: DISPLAY,MIC,EOG,upper/lowerlip bipolar channels including full-trial energy, plus trialindex and elapsedtime",
+  "arms": "24total: N,N_shuffled,uniform,training_prior; for each four representations R, R EEG-only,R_shuffled EEG-onlylabelshuffle,N_R,N_R_deranged,N_R_shuffled",
+  "model": "Fixed one-hot ridge alpha1, unpenalized intercept, softmax, no tuning or probability calibration. Train-only centering/scaling separately per auxiliary and EEG block, each divided by sqrt(blockdimension). All EEG views have matched768features.",
+  "primary_scheme": "blocked_embargo1",
+  "split_algorithms": "Reuse previous five chronological20trialblocks with one neighboring trainingtrial embargo perboundary, and fixed StratifiedKFold(5,shuffle=True,random_state=20260921). Both are retrospective within-recording; blocked fits may use later blocks. Each original trial validates once per scheme; all five repetitions remain together.",
+  "split_identity": "Exact source identities and deterministic algorithms fixed before access. All six class-support/split-hash preflights recorded before any fit; missing trainingclass fails whole invocation without repairs or partial aggregate.",
+  "seed": 20260921,
+  "label_shuffle": "Within training rows only, seed20260921+100*scheme_index+fold_index; same permutation for every arm in a fold; unchanged validation labels",
+  "derangement": "One-position cyclic shift of EEG separately within training indices and within validation indices; auxiliaries remain aligned; same mappings for all four representations. No fold-crossing data. Fixed misalignment diagnostic, not calibrated permutation null.",
+  "primary_arm": "N_filtered_repetition",
+  "primary_comparators": ["N", "N_filtered_evoked", "N_filtered_repetition_deranged", "N_filtered_repetition_shuffled", "uniform", "training_prior"],
+  "primary_metric": "Class-macro log loss pooled over100out-of-foldrows per person before equal-person descriptive means; balanced accuracy secondary",
+  "consistency_threshold": "Primary must strictly improve log loss over all six comparators in each of allthree people within a condition under blockedvalidation. Report minimallyovert and covert separately; no pooling that hides a failure. This is descriptive discovery consistency, not significance or proof of utility; report actual gain magnitudes.",
+  "diagnostics": "Target-free per-band sum of coherent and repetition powers and their ratios; ratio of sums, not mean individual ratios; all24arms/bothschemes/persons retained",
+  "interpretation": {
+    "primary_pass": "Exploratory predictive increment beyond this fixed auxiliary representation/model, with support for repetition-power representation. Not cortical origin; adaptive residual itself uses peripheral inputs.",
+    "repetition_beats_evoked_not_N": "Representation improvement without demonstrated conditional information beyond the auxiliary model",
+    "raw_pass_filtered_fail": "Adaptive preprocessing attenuates or transforms predictability; removed neural information and residual artifact remain competing explanations",
+    "both_equal_beyond_N": "Incremental prediction possible but no evidence waveform averaging was the bottleneck",
+    "random_only": "Time-separation-sensitive evidence, not stable held-out-block prediction",
+    "subset_people": "Heterogeneous result; all-person criterion fails",
+    "null": "No demonstrated increment from this fixed power readout, not evidence EEG lacks useful information"
+  },
+  "resource_caps": {"runtime_seconds": 600, "rss_bytes": 1073741824, "generated_bytes": 33554432, "minimum_free_bytes": 21474836480, "numerical_threads": 1, "workers": 1},
+  "stop_rule": "One bounded invocation after tests and remote CI. Preserve any failure with no automatic retry. Stream trials; no retained feature or waveform cache. Previous confirmation and auxiliary results remain byte-identical.",
+  "forbidden": ["online recordings or targets", "old private targets or predictions or weights", "new downloads", "EEGNet or deep-model training", "hyperparameter search", "rescoring consumed confirmation", "payload uploads"],
+  "claim_coordinates": {"generalization": "personalized within-recording calibration CV", "attribution": "exploratory increment beyond a fixed auxiliary predictor", "temporal_regime": "offline event-locked retrospective", "output": "five-word closed set", "calibration": "78/79 or80trainingtrials per fold", "setting": "existing curated laboratory recordings"}
+}

@@ -1,7 +1,13 @@
-"""One bounded, calibration-only auxiliary discovery run; never open online files."""
+"""Bounded calibration discovery: auxiliary carriers or matched repetition power.
+
+Each fixed experiment has its own immutable output root and single invocation.
+No online files are admitted. --repetition-power selects the second experiment;
+omitting it retains the original, already-consumed auxiliary-only route.
+"""
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import importlib.metadata
 import json
@@ -22,6 +28,18 @@ PLAN = REPO / "registries/speech_auxiliary_discovery_plan.v0.json"
 RESULT = REPO / "registries/speech_auxiliary_discovery_result.v0.json"
 PRIOR_RESULT_SHA = "5ca61ce244d9d7ed65ba6a3cebd65b0af49a4782979a8b834008553329087d8c"
 MAX_SECONDS, MAX_RSS, MAX_OUTPUT = 600, 1024**3, 32 * 1024**2
+EXPERIMENT = "auxiliary"
+PRIOR_AUXILIARY = REPO / "registries/speech_auxiliary_discovery_result.v0.json"
+PRIOR_AUXILIARY_SHA = "794711f5f1731485c8d253ec48674a5ad35971dd9ede31876338c55bed4abda9"
+
+
+def configure_repetition_power():
+    """Select one fixed discovery route before main; never alter old artifacts."""
+    global EXPERIMENT, LOCAL, PLAN, RESULT
+    EXPERIMENT = "repetition_power"
+    LOCAL = REPO / "data/speech_repetition_power_20260921"
+    PLAN = REPO / "registries/speech_repetition_power_plan.v0.json"
+    RESULT = REPO / "registries/speech_repetition_power_result.v0.json"
 
 
 class Budget:
@@ -114,6 +132,8 @@ def verify_bound_metadata(started):
             raise ValueError(f"Bound metadata changed: {key}")
     if original.sha256(original.RESULT) != PRIOR_RESULT_SHA:
         raise ValueError("Consumed confirmation aggregate changed")
+    if EXPERIMENT == "repetition_power" and original.sha256(PRIOR_AUXILIARY) != PRIOR_AUXILIARY_SHA:
+        raise ValueError("Previous auxiliary discovery aggregate changed")
 
 
 def run(budget, started):
@@ -121,8 +141,14 @@ def run(budget, started):
     from neurodecodekit.experiments.speech_auxiliary_discovery import (
         preflight_calibration, run_pair_discovery,
     )
-    from neurodecodekit.preprocess.speech_auxiliary import extract_calibration_auxiliary
     from neurodecodekit.preprocess.speech_reproduction import _read_tsv, broker_event_rows
+    if EXPERIMENT == "repetition_power":
+        from neurodecodekit.experiments.speech_repetition_power import run_pair_power_discovery
+        from neurodecodekit.preprocess.speech_repetition_power import extract_calibration_power
+        extractor = extract_calibration_power
+    else:
+        from neurodecodekit.preprocess.speech_auxiliary import extract_calibration_auxiliary
+        extractor = extract_calibration_auxiliary
 
     verify_bound_metadata(started)
     plan = json.loads(PLAN.read_text())
@@ -143,7 +169,7 @@ def run(budget, started):
     for item in selected:
         person, session, condition = original.pair_key(item)
         pair_id = "_".join((person, session, condition))
-        extracted = extract_calibration_auxiliary(SOURCE / item["path"],
+        extracted = extractor(SOURCE / item["path"],
             SOURCE / item["events_path"], SOURCE / item["path"].replace("_eeg.edf", "_channels.tsv"),
             progress=budget.check)
         budget.check()
@@ -151,8 +177,14 @@ def run(budget, started):
         if preflight_calibration(np.asarray(extracted["calibration_labels"])) != eligibility[recording]:
             raise ValueError("Extracted calibration split differs from the all-six preflight")
         model_started = time.monotonic()
-        report, probabilities = run_pair_discovery(extracted["features"],
-            np.asarray(extracted["calibration_labels"]), pair_id=pair_id, progress=budget.check)
+        if EXPERIMENT == "repetition_power":
+            report, probabilities = run_pair_power_discovery(extracted["auxiliary"],
+                extracted["eeg_features"], np.asarray(extracted["calibration_labels"]),
+                pair_id=pair_id, progress=budget.check)
+            report["power_diagnostics"] = extracted["power_diagnostics"]
+        else:
+            report, probabilities = run_pair_discovery(extracted["features"],
+                np.asarray(extracted["calibration_labels"]), pair_id=pair_id, progress=budget.check)
         report.update({"participant": person, "condition": condition,
                        "extraction": extracted["timing_summary"],
                        "fitting_prediction_and_metrics_seconds": time.monotonic() - model_started})
@@ -166,19 +198,24 @@ def run(budget, started):
         print(f"Completed calibration discovery pair {len(reports)}/6: {pair_id}", flush=True)
         del extracted, probabilities
     verify_bound_metadata(started)
-    result = {"experiment_id": "speech_auxiliary_discovery_20260921", "lane": "discovery",
+    result = {"experiment_id": LOCAL.name, "lane": "discovery",
         "status": "complete", "code_commit": started["code_commit"], "plan_sha256": started["plan_sha256"],
         "source_manifest_sha256": started["source_manifest_sha256"],
         "prediction_freeze_sha256": started["prediction_freeze_sha256"],
         "prior_confirmation_result_sha256": PRIOR_RESULT_SHA,
         "source_receipts": receipts, "pairs": reports,
-        "online_files_opened": 0, "new_download_bytes": 0, "eeg_models_fitted": 0,
+        "online_files_opened": 0, "new_download_bytes": 0,
+        "eeg_models_fitted": 1200 if EXPERIMENT == "repetition_power" else 0,
+        "ridge_models_fitted": 1320 if EXPERIMENT == "repetition_power" else 960,
+        "deep_models_fitted": 0,
         "confirmation_reopened": False, "hyperparameter_searches": 0,
         "runtime_versions": {name: importlib.metadata.version(name) for name in
                              ("numpy", "scipy", "mne", "scikit-learn")},
         "runtime_seconds": time.monotonic() - budget.started,
         "peak_observed_rss_bytes": budget.peak_rss, "local_artifact_bytes": budget.storage(),
         "claim_ceiling": "Exploratory within-recording calibration prediction; not online confirmation, causal origin or utility"}
+    if EXPERIMENT == "repetition_power":
+        result["prior_auxiliary_discovery_sha256"] = PRIOR_AUXILIARY_SHA
     budget.check()
     original.write_json(RESULT, result)
     budget.storage()
@@ -213,4 +250,9 @@ def main():
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--repetition-power", action="store_true",
+                        help="Select the separate, fixed EEG repetition-power discovery")
+    if parser.parse_args().repetition_power:
+        configure_repetition_power()
     main()

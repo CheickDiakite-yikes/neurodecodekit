@@ -47,11 +47,13 @@ minimally overt participants. DISPLAY, timing and microphone did not; no covert
 arm passed consistently. This shifts the lead toward peripheral-channel
 prediction, without establishing causal origin or new online performance.
 
-**Next scientific priority:** test whether averaging repetition waveforms hides
+**Current experiment:** test whether averaging repetition waveforms hides
 EEG information. Compare matched small EEG power models before versus after
 repetition averaging, requiring an increment over complete auxiliary and
-deranged-EEG controls on development calibration only. This proposed follow-up
-needs its own frozen bounded scope. Any untouched, cue-resistant confirmation
+deranged-EEG controls on development calibration only. The maintainer approved
+this [bounded discovery plan](registries/speech_repetition_power_plan.v0.json):
+all six calibration recordings, matched models, no online access, ten-minute cap.
+It uses the existing runner with `--repetition-power`. Any untouched, cue-resistant confirmation
 or low-channel peripheral interface evaluation is a separately scoped step.
 This consumed evaluation must not be retuned or rescored. We have evidence for
 task-label prediction, not EEG-specific thought decoding, cortical origin,

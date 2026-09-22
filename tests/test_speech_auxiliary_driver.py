@@ -15,6 +15,22 @@ SPEC.loader.exec_module(driver)
 
 
 class AuxiliaryDriverTests(unittest.TestCase):
+    def test_repetition_power_route_has_separate_outputs_and_preserves_prior_evidence(self):
+        with mock.patch.multiple(driver, EXPERIMENT=driver.EXPERIMENT, LOCAL=driver.LOCAL,
+                                 PLAN=driver.PLAN, RESULT=driver.RESULT):
+            old_paths = (driver.LOCAL, driver.PLAN, driver.RESULT)
+            driver.configure_repetition_power()
+            self.assertEqual(driver.EXPERIMENT, "repetition_power")
+            self.assertTrue(all("repetition_power" in str(path) for path in
+                                (driver.LOCAL, driver.PLAN, driver.RESULT)))
+            self.assertFalse(set(old_paths) & {driver.LOCAL, driver.PLAN, driver.RESULT})
+            started = {"plan_sha256": "plan", "source_manifest_sha256": "manifest",
+                       "prediction_freeze_sha256": "freeze"}
+            with mock.patch.object(driver.original, "sha256", side_effect=[
+                    "plan", "manifest", "freeze", driver.PRIOR_RESULT_SHA, "changed"]):
+                with self.assertRaisesRegex(ValueError, "Previous auxiliary"):
+                    driver.verify_bound_metadata(started)
+
     def test_exact_plan_selects_only_six_calibrations_from_public_manifest(self):
         manifest = json.loads((REPO / "registries/speech_reproduction_source_manifest.v0.json").read_text())
         plan = json.loads(driver.PLAN.read_text())
