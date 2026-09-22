@@ -77,12 +77,24 @@ all controls in all three people**, under either split scheme. All 51 arms and
 600 trials remain in the [aggregate](registries/speech_time_frequency_result.v0.json).
 Better top-choice accuracy does not override the failed primary probability endpoint.
 
-**Next scientific priority:** stop expanding models/bands on this reused cohort;
-test the fixed auxiliary-only and auxiliary-independent EEG joint predictors
-under a fresh recording context/day with controlled cues. Preserve both accuracy
-and probability-scoring endpoints, with roles fixed before access. Fresh data or
-evaluation requires its own exact scope; the consumed online recordings cannot
-be reused. The low-channel peripheral interface remains a separate practical lead.
+The [45-second nested confidence-calibration test](docs/SPEECH_PROBABILITY_CALIBRATION_RESULT.md)
+identified a real probability-readout limitation: minimally overt joint log loss
+fell **1.252182 → 0.369239**, with auxiliary-only A equally calibrated
+**1.256028 → 0.489214**. Every chosen word and BA stayed unchanged. The conditional
+EEG comparison now passed in **2/3 minimally overt people**, not all three;
+covert passed in **1/3 blocked and 0/3 random**. The EEG all-person criterion
+still failed in both conditions. All 20 arms, 600 trials and both schemes remain in the
+[aggregate](registries/speech_probability_calibration_result.v0.json).
+
+**Next scientific priority:** close calibration/model/band searches on this reused
+cohort and test imagined-word information on fresh people with strong peripheral
+and cue controls. The [source decision](docs/SPEECH_NEXT_COHORT_DECISION.md)
+reuses the existing ten-person Thinking Out Loud candidate for a fresh-cohort,
+**same-day** study; no reviewed source supplies the complete new-day, cue-decoupled
+design. Preserve both accuracy and probability-scoring endpoints, with roles fixed
+before access and calibrators trained only on training data. New-source acquisition
+requires its own exact scope; consumed online recordings cannot be reused. The
+low-channel peripheral interface remains a separate practical lead, not thought-to-text.
 This consumed evaluation must not be retuned or rescored. We have evidence for
 task-label prediction, not EEG-specific thought decoding, cortical origin,
 clinical utility or unseen-person generalization. Both failed roots and the
