@@ -6,6 +6,10 @@ ten-person ses-01 slice; it does not authorize an unspecified scoring run.
 That acquisition is now complete: all ten files and every required channel
 passed integrity checks. No participant event labels or decoding results have
 been interpreted. This removes source access as the immediate dependency.
+The subsequent [fixed experiment protocol](INNER_SPEECH_TEST.md) now specifies
+all ten people, all three conditions, eight arms, embargoed temporal folds,
+training-only calibration and the primary decision. Generated-only validation
+does not grant permission to open the new labels or execute scoring.
 
 The current five-word recordings cannot establish cue-independent thoughts or
 new-day robustness. One fixed nested temperature test addresses the specific

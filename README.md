@@ -95,8 +95,12 @@ design. Preserve both accuracy and probability-scoring endpoints, with roles fix
 before access and calibrators trained only on training data. The approved
 [ten-person raw acquisition is complete](docs/INNER_SPEECH_ACQUISITION.md):
 6.4304 GiB, first session, all EEG/eye/lip channels retained, verified in 347 seconds
-and stored outside OneDrive. Labels and decoding outcomes remain unopened;
-consumed online recordings cannot be reused. The
+and stored outside OneDrive. The [fixed four-word test](docs/INNER_SPEECH_TEST.md)
+is now implemented with generated-only tests: all ten people, all three
+conditions, eight matched arms, and a 20-minute/1-GiB cap. It requires mean
+inner-speech log-loss gain of at least 0.02 nats and the same nine of ten people
+beating every primary control. Execution awaits explicit approval; real labels
+and decoding outcomes remain unopened. Consumed online recordings cannot be reused. The
 low-channel peripheral interface remains a separate practical lead, not thought-to-text.
 This consumed evaluation must not be retuned or rescored. We have evidence for
 task-label prediction, not EEG-specific thought decoding, cortical origin,
