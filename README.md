@@ -277,18 +277,12 @@ Its immutable predecessor is `registries/current_research_frontier.v25.json`;
 earlier predecessors are `registries/current_research_frontier.v24.json`,
 `registries/current_research_frontier.v23.json`, and
 `registries/current_research_frontier.v21.json`;
-the earlier immutable predecessor is `registries/current_research_frontier.v20.json`;
-the earlier immutable predecessor is `registries/current_research_frontier.v19.json`;
-the earlier immutable predecessor is `registries/current_research_frontier.v18.json`;
-the earlier immutable predecessor is `registries/current_research_frontier.v17.json`;
-the earlier immutable predecessor is `registries/current_research_frontier.v16.json`;
-the earlier immutable predecessor is `registries/current_research_frontier.v15.json`;
-the earlier immutable predecessor is `registries/current_research_frontier.v14.json`;
-the earlier immutable predecessor is `registries/current_research_frontier.v13.json`;
-the earlier predecessors are `registries/current_research_frontier.v12.json`
-and `registries/current_research_frontier.v11.json`.
-Its earlier immutable predecessor is
-`registries/current_research_frontier.v10.json`.
+Earlier immutable predecessors: `registries/current_research_frontier.v20.json`,
+`registries/current_research_frontier.v19.json`, `registries/current_research_frontier.v18.json`,
+`registries/current_research_frontier.v17.json`, `registries/current_research_frontier.v16.json`,
+`registries/current_research_frontier.v15.json`, `registries/current_research_frontier.v14.json`,
+`registries/current_research_frontier.v13.json`, `registries/current_research_frontier.v12.json`,
+`registries/current_research_frontier.v11.json`, and `registries/current_research_frontier.v10.json`.
 The earlier predecessors `registries/current_research_frontier.v8.json`,
 `registries/current_research_frontier.v7.json`, and
 `registries/current_research_frontier.v6.json` remain immutable history.
