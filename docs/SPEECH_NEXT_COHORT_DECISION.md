@@ -11,6 +11,12 @@ all ten people, all three conditions, eight arms, embargoed temporal folds,
 training-only calibration and the primary decision. Generated-only validation
 does not grant permission to open the new labels or execute scoring.
 
+September 23 execution update: the subsequent approved launch
+[stopped before participant access](INNER_SPEECH_EXECUTION_REFUSAL.md) because
+the configured local path resolves into the app's local cache. No model or
+score ran. A narrowly scoped canonical-path correction and fresh launch need
+approval; the scientific comparison remains unchanged.
+
 The current five-word recordings cannot establish cue-independent thoughts or
 new-day robustness. One fixed nested temperature test addresses the specific
 accuracy/probability-quality mismatch; it must not become another model search.

@@ -30,7 +30,7 @@ irreversible Tier C events.
 
 ## Scientific Operating Model
 
-**Current result and priority (September 22, 2026):**
+**Current result and priority (September 23, 2026):**
 [SPEECH-REPRO-1 completed and scored once](docs/SPEECH_REPRODUCTION_RESULT.md).
 The minimally overt EEGNet reference reached **52.49% balanced accuracy**, above
 the 20% baseline in all three people. But auxiliary-only prediction reached
@@ -99,8 +99,11 @@ and stored outside OneDrive. The [fixed four-word test](docs/INNER_SPEECH_TEST.m
 is now implemented with generated-only tests: all ten people, all three
 conditions, eight matched arms, and a 20-minute/1-GiB cap. It requires mean
 inner-speech log-loss gain of at least 0.02 nats and the same nine of ten people
-beating every primary control. Execution awaits explicit approval; real labels
-and decoding outcomes remain unopened. Consumed online recordings cannot be reused. The
+beating every primary control. The approved launch
+[stopped at the local-path guard](docs/INNER_SPEECH_EXECUTION_REFUSAL.md) before
+participant access: no fits or score. A narrow canonical-path correction and
+another launch require fresh approval; scientific settings stay fixed.
+Real labels remain unopened. Consumed online recordings cannot be reused. The
 low-channel peripheral interface remains a separate practical lead, not thought-to-text.
 This consumed evaluation must not be retuned or rescored. We have evidence for
 task-label prediction, not EEG-specific thought decoding, cortical origin,
