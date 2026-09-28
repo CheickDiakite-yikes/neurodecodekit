@@ -22,6 +22,58 @@ except ImportError:
 
 
 class RunnerTests(unittest.TestCase):
+    def test_local_path_resolution_admits_only_direct_or_exact_package_layout(self):
+        with tempfile.TemporaryDirectory() as directory:
+            parent = Path(directory).resolve() / "Local"
+            base = parent / "NeuroDecodeKit"
+            source, local = base / runner.SOURCE.name, base / runner.LOCAL.name
+            source.mkdir(parents=True)
+            self.assertEqual(runner.canonical_local_paths(base, source, local), (base, source, local))
+            root = parent / "Packages" / "OpenAI.Codex_123456789abcd" / "LocalCache" / "Local" / base.name
+            (root / source.name).mkdir(parents=True)
+            original_resolve = Path.resolve
+
+            def mapped(path, *args, **kwargs):
+                if path in (base, source, local):
+                    return root / path.relative_to(base)
+                return original_resolve(path, *args, **kwargs)
+
+            with mock.patch.object(Path, "resolve", autospec=True, side_effect=mapped):
+                self.assertEqual(runner.canonical_local_paths(base, source, local),
+                                 (root, root / source.name, root / local.name))
+            with mock.patch.object(runner, "BASE", base):
+                first = runner.local_destination_sha256()
+            with mock.patch.object(runner, "BASE", root):
+                self.assertNotEqual(first, runner.local_destination_sha256())
+
+    def test_local_path_resolution_refuses_unexpected_roots_and_nested_redirects(self):
+        with tempfile.TemporaryDirectory() as directory:
+            parent = Path(directory).resolve() / "Local"
+            base = parent / "NeuroDecodeKit"
+            source, local = base / runner.SOURCE.name, base / runner.LOCAL.name
+            source.mkdir(parents=True)
+            original_resolve = Path.resolve
+            targets = (
+                parent / "OneDrive" / base.name,
+                parent.parent / "elsewhere" / base.name,
+                parent / "Packages" / "AnotherApp_123456789abcd" / "LocalCache" / "Local" / base.name,
+                parent / "Packages" / "OpenAI.Codex_123456789abcd" / "OtherCache" / "Local" / base.name,
+            )
+            for target in targets:
+                with self.subTest(kind=target.relative_to(parent.parent).parts[0]):
+                    def redirected(path, *args, **kwargs):
+                        return target if path == base else original_resolve(path, *args, **kwargs)
+                    with mock.patch.object(Path, "resolve", autospec=True, side_effect=redirected):
+                        with self.assertRaises(RuntimeError):
+                            runner.canonical_local_paths(base, source, local)
+            for child in (source, local, parent):
+                with self.subTest(child=child.name):
+                    def escaped(path, *args, **kwargs):
+                        return parent.parent / "escape" if path == child else original_resolve(path, *args, **kwargs)
+                    with mock.patch.object(Path, "resolve", autospec=True, side_effect=escaped):
+                        with self.assertRaises(RuntimeError):
+                            runner.canonical_local_paths(base, source, local)
+
     def test_dry_run_does_not_open_any_file_or_call_git(self):
         with mock.patch.object(Path, "open", side_effect=AssertionError("No files")), \
                 mock.patch.object(runner, "git", side_effect=AssertionError("No Git")), \

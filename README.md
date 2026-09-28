@@ -101,8 +101,8 @@ conditions, eight matched arms, and a 20-minute/1-GiB cap. It requires mean
 inner-speech log-loss gain of at least 0.02 nats and the same nine of ten people
 beating every primary control. The approved launch
 [stopped at the local-path guard](docs/INNER_SPEECH_EXECUTION_REFUSAL.md) before
-participant access: no fits or score. A narrow canonical-path correction and
-another launch require fresh approval; scientific settings stay fixed.
+participant access: no fits or score. A [path-only correction](docs/INNER_SPEECH_PATH_CORRECTION.md)
+and one unchanged launch are now approved; scientific settings stay fixed.
 Real labels remain unopened. Consumed online recordings cannot be reused. The
 low-channel peripheral interface remains a separate practical lead, not thought-to-text.
 This consumed evaluation must not be retuned or rescored. We have evidence for

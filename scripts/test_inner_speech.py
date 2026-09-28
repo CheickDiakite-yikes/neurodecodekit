@@ -76,6 +76,38 @@ def fingerprints():
     return {name: sha256(REPO / name) for name in CODE_PATHS}
 
 
+def canonical_local_paths(base, source, local):
+    """Admit only direct local storage or this app's exact package-cache layout.
+
+    Resolve metadata only; never open a recording or create a directory here.
+    No arbitrary junction destination, cloud folder or nested redirect is allowed.
+    """
+    parent = base.parent.absolute()
+    require(parent.resolve(strict=True) == parent and base.is_dir(), "local_parent_identity")
+    require(source == base / SOURCE.name and local == base / LOCAL.name,
+            "fixed_local_children")
+    root = base.resolve(strict=True)
+    require(root.is_relative_to(parent) and "onedrive" not in str(root).lower(),
+            "local_root_containment")
+    parts = root.relative_to(parent).parts
+    direct = root == base.absolute()
+    packaged = (len(parts) == 5 and parts[0].casefold() == "packages" and
+                re.fullmatch(r"OpenAI\.Codex_[a-z0-9]{13}", parts[1]) is not None and
+                tuple(p.casefold() for p in parts[2:]) ==
+                ("localcache", "local", base.name.casefold()))
+    require(direct or packaged, "unrecognized_local_redirect")
+    require(root.resolve(strict=True) == root, "canonical_root_changed")
+    canonical_source, canonical_local = root / source.name, root / local.name
+    require(source.resolve(strict=True) == canonical_source and canonical_source.is_dir(),
+            "local_source_containment")
+    require(local.resolve() == canonical_local, "local_output_containment")
+    return root, canonical_source, canonical_local
+
+
+def local_destination_sha256():
+    return hashlib.sha256(str(BASE).casefold().encode("utf-8")).hexdigest()
+
+
 class Budget:
     def __init__(self, started):
         import psutil
@@ -343,6 +375,7 @@ def score(freeze_commit, budget, started):
 
 
 def main(argv=None):
+    global BASE, SOURCE, LOCAL
     invoked_at = time.time()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("phase", nargs="?", default="dry-run", choices=("dry-run", "predict", "score"))
@@ -354,8 +387,8 @@ def main(argv=None):
             "participant_files_opened": 0, "trials_expected": 2000,
             "execution_requires_explicit_study_approval": True}, indent=2))
         return 0
-    require(os.name == "nt" and LOCAL.resolve() == LOCAL.absolute() and
-            "onedrive" not in str(LOCAL).lower(), "fixed_local_windows_output")
+    require(os.name == "nt", "fixed_local_windows_output")
+    BASE, SOURCE, LOCAL = canonical_local_paths(BASE, SOURCE, LOCAL)
     if args.phase == "predict":
         require(bool(args.approval_text and args.approval_text.strip()), "explicit_approval_record_required")
         require(not LOCAL.exists() and not FREEZE.exists() and not RESULT.exists(), "attempt_already_exists")
@@ -363,6 +396,7 @@ def main(argv=None):
         started = {"experiment_id": "INNER-SPEECH-TEST-1", "started_unix": invoked_at,
             "deadline_unix": invoked_at + MAX_SECONDS, "code_commit": git("rev-parse", "HEAD"),
             "fingerprints": fingerprints(), "approval_text": args.approval_text,
+            "local_destination_sha256": local_destination_sha256(),
             "approval_field_is_audit_not_authority": True}
         LOCAL.mkdir(parents=False, exist_ok=False)
         write_json(LOCAL / "started.json", started)
@@ -371,6 +405,8 @@ def main(argv=None):
         require(not (LOCAL / "execution_failed.json").exists() and
                 not (LOCAL / "scoring_consumed.json").exists() and not RESULT.exists(), "consumed_or_failed")
         started = json.loads((LOCAL / "started.json").read_text())
+    require(started["local_destination_sha256"] == local_destination_sha256(),
+            "local_destination_changed")
     require(started["fingerprints"] == fingerprints(), "scientific_code_changed")
     budget = Budget(started)
     finished = threading.Event()
