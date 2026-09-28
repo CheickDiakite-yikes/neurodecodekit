@@ -23,6 +23,13 @@ accuracy/probability-quality mismatch; it must not become another model search.
 The next larger scientific step is a fresh imagined-speech cohort with strong
 peripheral comparisons. No language model is needed to answer that question.
 
+September 28 execution update: after the path correction and green CI, all ten
+source hashes passed, but the single run
+[stopped on participant 01's event grammar](INNER_SPEECH_QUALIFICATION_FAILURE.md).
+Status events were read; no physiological windows, fits or scores followed.
+Source-event compatibility is now the precise unresolved dependency. A bounded
+structural audit needs separate approval; no automatic repair or retry follows.
+
 ## Reuse the existing Thinking Out Loud candidate
 
 OpenNeuro **ds003626 v2.1.2** is the most practical reviewed candidate, already

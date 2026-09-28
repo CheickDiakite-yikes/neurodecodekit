@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "experiment_id": "INNER-SPEECH-TEST-1",
+  "status": "event_qualification_failed_no_scientific_score",
+  "execution_date_utc": "2026-09-28",
+  "code_commit": "d137b52dd1198d91e5fe2786e6d196c69f877003",
+  "pre_execution_ci": {
+    "workflow_run": 36496762314,
+    "base_python_job": 109178036254,
+    "optional_neuro_readers_job": 109178036511,
+    "both_conclusions": "success"
+  },
+  "failure_metadata": {
+    "stage": "all_participant_event_qualification",
+    "participant": "sub-01",
+    "error_type": "InnerSpeechRefusal",
+    "error_code": "event_grammar",
+    "elapsed_seconds": 9.645241498947144,
+    "peak_rss_bytes": 43851776,
+    "retry_or_partial_score_allowed": false
+  },
+  "established_from_failure_position_and_frozen_code": {
+    "source_files_full_hash_verified": 10,
+    "participant_headers_validated": 1,
+    "status_streams_decoded": 1,
+    "event_format_and_chronological_order_passed": true,
+    "participants_fully_qualified": 0,
+    "fold_preflights_completed": 0,
+    "physiological_windows_extracted": 0,
+    "model_fits": 0,
+    "predictions_generated": 0,
+    "targets_exported": 0,
+    "scoring_invocations": 0
+  },
+  "sub01_trials_partially_parsed_before_refusal": null,
+  "exact_failing_grammar_position": null,
+  "source_corruption_established": false,
+  "parser_defect_established": false,
+  "qualification_report_exists": false,
+  "prediction_freeze_exists": false,
+  "scoring_consumed_marker_exists": false,
+  "scientific_result_exists": false,
+  "label_access_caveat": "The first participant's decoded Status list contains cue/target codes. Their values were not inspected or disclosed outside the runner; do not claim labels remained unopened.",
+  "preservation": "The initialized attempt and its failure marker remain untouched in private local storage; the earlier pre-execution refusal also remains immutable.",
+  "automatic_retry_allowed": false,
+  "raw_or_private_outputs_uploaded": false,
+  "belief_update": "The scientific hypothesis was not tested. Byte identity and corrected path handling passed; source-event compatibility is unresolved. This is not a biological null.",
+  "next_priority": "A separately approved bounded event-structure-only audit must identify the exact mismatch before any parser change or new experiment. Do not guess targets, drop trials, alter controls or score partial data."
+}

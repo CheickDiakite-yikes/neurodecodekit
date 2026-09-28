@@ -30,7 +30,7 @@ irreversible Tier C events.
 
 ## Scientific Operating Model
 
-**Current result and priority (September 23, 2026):**
+**Current result and priority (September 28, 2026):**
 [SPEECH-REPRO-1 completed and scored once](docs/SPEECH_REPRODUCTION_RESULT.md).
 The minimally overt EEGNet reference reached **52.49% balanced accuracy**, above
 the 20% baseline in all three people. But auxiliary-only prediction reached
@@ -99,11 +99,12 @@ and stored outside OneDrive. The [fixed four-word test](docs/INNER_SPEECH_TEST.m
 is now implemented with generated-only tests: all ten people, all three
 conditions, eight matched arms, and a 20-minute/1-GiB cap. It requires mean
 inner-speech log-loss gain of at least 0.02 nats and the same nine of ten people
-beating every primary control. The approved launch
-[stopped at the local-path guard](docs/INNER_SPEECH_EXECUTION_REFUSAL.md) before
-participant access: no fits or score. A [path-only correction](docs/INNER_SPEECH_PATH_CORRECTION.md)
-and one unchanged launch are now approved; scientific settings stay fixed.
-Real labels remain unopened. Consumed online recordings cannot be reused. The
+beating every primary control. After the approved path fix, the sole corrected
+run [stopped at event qualification](docs/INNER_SPEECH_QUALIFICATION_FAILURE.md):
+all ten source hashes passed, but participant 01's event structure was refused.
+No fitting or scoring occurred; this is not a biological null. Next: a bounded,
+separately approved structural audit—not another blind model run. Status events
+were read; labels cannot be called unopened. Consumed online recordings cannot be reused. The
 low-channel peripheral interface remains a separate practical lead, not thought-to-text.
 This consumed evaluation must not be retuned or rescored. We have evidence for
 task-label prediction, not EEG-specific thought decoding, cortical origin,
@@ -143,6 +144,7 @@ packet is active. See the [result closeout](docs/OFNER_2017_MOTOR_IMAGERY_RANGE_
 and [proof closeout](docs/OFNER_2017_MOTOR_IMAGERY_RANGE_HEADER_RESULT_PROOF_CLOSEOUT.md).
 The immutable machine frontier for that consumed result remains
 [`registries/current_research_frontier.v6.json`](registries/current_research_frontier.v6.json).
+The historical `registries/current_research_frontier.v10.json` also remains immutable.
 The proof passed Base Python `99174411928`, Optional Neuro Readers
 `99174412006`, and CI `33280371097` on GitHub `main`.
 
@@ -285,7 +287,7 @@ Earlier immutable predecessors: `registries/current_research_frontier.v20.json`,
 `registries/current_research_frontier.v17.json`, `registries/current_research_frontier.v16.json`,
 `registries/current_research_frontier.v15.json`, `registries/current_research_frontier.v14.json`,
 `registries/current_research_frontier.v13.json`, `registries/current_research_frontier.v12.json`,
-`registries/current_research_frontier.v11.json`, and `registries/current_research_frontier.v10.json`.
+and `registries/current_research_frontier.v11.json`.
 The earlier predecessors `registries/current_research_frontier.v8.json`,
 `registries/current_research_frontier.v7.json`, and
 `registries/current_research_frontier.v6.json` remain immutable history.
