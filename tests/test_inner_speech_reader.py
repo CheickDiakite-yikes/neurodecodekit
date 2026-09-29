@@ -1,6 +1,8 @@
 """Generated BDFs/events only; never read acquired participant files."""
 
 import importlib.util
+from dataclasses import replace
+import json
 from pathlib import Path
 import tempfile
 import unittest
@@ -75,6 +77,91 @@ def generated_bdf(path, *, records=3, replacements=None):
 
 
 class TrialParserTests(unittest.TestCase):
+    def test_missing_rest_opt_in_preserves_intact_trials_and_strict_summary(self):
+        strict_summary, amended_summary = {}, {}
+        events = generated_events()
+        strict = parse_trials(events, participant="sub-01", summary=strict_summary)
+        amended = parse_trials(events, participant="sub-01", summary=amended_summary,
+                               allow_missing_rest=True)
+        self.assertEqual(amended, strict)
+        self.assertEqual(amended_summary.pop("missing_rest_events"), 0)
+        for interval in amended_summary["interval_timing"].values():
+            self.assertEqual(interval.pop("observed_count"), 200)
+            self.assertEqual(interval.pop("unavailable_count"), 0)
+        self.assertEqual(amended_summary, strict_summary)
+        self.assertNotIn("missing_rest_events", strict_summary)
+
+    def test_missing_rest_is_none_without_changing_events_targets_or_other_trials(self):
+        original = generated_events()
+        expected = parse_trials(original, participant="sub-01")
+        rest = [i for i, (_, code) in enumerate(original) if code == 46][3]
+        events = original[:rest] + original[rest + 1:]
+        before, summary = events.copy(), {}
+        with self.assertRaisesRegex(InnerSpeechRefusal, "event_grammar"):
+            parse_trials(events, participant="sub-01")
+        for not_explicit in (False, 1, "true"):
+            with self.subTest(opt_in=not_explicit), self.assertRaises(InnerSpeechRefusal):
+                parse_trials(events, participant="sub-01", allow_missing_rest=not_explicit)
+        trials = parse_trials(events, participant="sub-01", summary=summary,
+                              allow_missing_rest=True)
+        expected[3] = replace(expected[3], rest=None)
+        self.assertEqual(trials, expected)
+        self.assertEqual(events, before)
+        self.assertEqual(summary["trials"], 200)
+        self.assertEqual(summary["missing_rest_events"], 1)
+        self.assertEqual(summary["inferred_target_count"], 0)
+        self.assertEqual(summary["synthesized_event_count"], 0)
+        for name, interval in summary["interval_timing"].items():
+            missing = int(name == "relax")
+            self.assertEqual(interval["observed_count"], 200 - missing)
+            self.assertEqual(interval["unavailable_count"], missing)
+            self.assertEqual(interval["deviation_over_0_1s_count"], 0)
+        self.assertEqual(summary["interval_timing"]["relax"]["minimum_seconds"], 1.0)
+        self.assertEqual(summary["interval_timing"]["relax"]["maximum_seconds"], 1.0)
+        json.dumps(summary, allow_nan=False)
+
+    def test_missing_rest_amendment_refuses_other_following_events(self):
+        original = generated_events()
+        rests = [i for i, (_, code) in enumerate(original) if code == 46]
+        before_question = next(i for i in rests if original[i + 1][1] == 17)
+        for rest in (rests[39], before_question, rests[-1]):
+            events = original[:rest] + original[rest + 1:]
+            with self.subTest(rest_index=rest), self.assertRaisesRegex(
+                    InnerSpeechRefusal, "event_grammar"):
+                parse_trials(events, participant="sub-01", allow_missing_rest=True)
+        for code in (61, 65):
+            events = original.copy()
+            events[rests[3]] = (events[rests[3]][0], code)
+            with self.subTest(following_code=code), self.assertRaisesRegex(
+                    InnerSpeechRefusal, "event_grammar"):
+                parse_trials(events, participant="sub-01", allow_missing_rest=True)
+
+    def test_missing_rest_amendment_does_not_admit_other_missing_markers_or_targets(self):
+        original = generated_events()
+        for code in (11, 13, 14, 15, 16, 21, 42, 31, 44, 45, 12):
+            index = next(i for i, (_, value) in enumerate(original) if value == code)
+            events = original[:index] + original[index + 1:]
+            with self.subTest(missing_code=code), self.assertRaises(InnerSpeechRefusal):
+                parse_trials(events, participant="sub-01", allow_missing_rest=True)
+
+    def test_missing_rest_amendment_preserves_observed_timing_and_window_checks(self):
+        original = generated_events()
+        rest = [i for i, (_, code) in enumerate(original) if code == 46][3]
+        incomplete = original[:rest] + original[rest + 1:]
+        # A missing rest cannot excuse an insufficient action or cue window.
+        for index, sample in ((rest - 1, original[rest - 2][0] + 2047),
+                              (rest - 3, original[rest - 2][0] - 383)):
+            events = incomplete.copy()
+            events[index] = (sample, events[index][1])
+            with self.subTest(index=index), self.assertRaisesRegex(
+                    InnerSpeechRefusal, "trial_timing"):
+                parse_trials(events, participant="sub-01", allow_missing_rest=True)
+        # Keep order intact while extending an observed relax-to-rest interval beyond 3s.
+        events = [(sample + (2049 if i >= rest else 0), code)
+                  for i, (sample, code) in enumerate(original)]
+        with self.assertRaisesRegex(InnerSpeechRefusal, "trial_timing"):
+            parse_trials(events, participant="sub-01", allow_missing_rest=True)
+
     def test_complete_trials_and_event_relative_windows(self):
         summary = {}
         trials = parse_trials(generated_events(), participant="sub-01", summary=summary)

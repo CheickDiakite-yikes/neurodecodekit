@@ -106,8 +106,10 @@ No fitting or scoring occurred; this is not a biological null. The approved
 [4.25-second structural audit](docs/INNER_SPEECH_EVENT_AUDIT.md) located the failure:
 after three complete trials, the parser expected rest but saw the next trial
 start. The decoded stream has 200 cues/actions/relax markers, but 199 rest
-markers. Next: an explicit source-supported event/timing amendment, not dropped
-trials or an unchanged retry; rest is used by the current timing controls.
+markers. The approved [missing-timing amendment](docs/INNER_SPEECH_MISSING_REST_AMENDMENT.md)
+retains every trial and observed timing value, adds availability flags, and
+changes the nuisance block from 85 to 87 features without inventing timestamps.
+Next: validate, then one full 20-minute test only if all ten people qualify.
 Status events were read; labels cannot be called unopened. Consumed online recordings cannot be reused. The
 low-channel peripheral interface remains a separate practical lead, not thought-to-text.
 This consumed evaluation must not be retuned or rescored. We have evidence for

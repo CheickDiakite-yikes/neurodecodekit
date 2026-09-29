@@ -15,6 +15,23 @@ SPEC.loader.exec_module(AUDIT)
 
 
 class EventAuditTests(unittest.TestCase):
+    def test_existing_traceback_projection_neither_reparses_nor_reads_files(self):
+        events = generated_events()
+        index = next(i for i, (_, code) in enumerate(events) if code == 31)
+        events[index] = (events[index][0], 64)
+        try:
+            AUDIT.parse_trials(events, participant="sub-01", allow_missing_rest=True)
+        except AUDIT.InnerSpeechRefusal as error:
+            with patch.object(AUDIT, "parse_trials", side_effect=AssertionError("No reparse")), \
+                    patch.object(Path, "open", side_effect=AssertionError("No source read")):
+                result = AUDIT.project_parser_refusal(error)
+        else:
+            self.fail("Generated missing direction must refuse")
+        self.assertEqual(result, {
+            "parser_status": "refused", "error_code": "event_grammar", "completed_trials": 0,
+            "first_mismatch": {"expected_families": ["direction_cue"],
+                               "observed_family": "attention_answer"}})
+
     def test_initial_unknown_is_projected_without_numeric_value_or_repair(self):
         events = [(0, 987654321), *generated_events()]
         before = list(events)

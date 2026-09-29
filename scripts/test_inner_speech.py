@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import importlib.util
 import json
 import math
 import os
@@ -24,6 +25,8 @@ for _name in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS",
     os.environ[_name] = "1"
 
 REPO = Path(__file__).resolve().parents[1]
+EXPERIMENT_ID = "INNER-SPEECH-TEST-1"
+ALLOW_MISSING_REST = False
 BASE = Path(r"C:\Users\80714\AppData\Local\NeuroDecodeKit")
 SOURCE = BASE / "ds003626_v2_1_2_ses01_20260922"
 LOCAL = BASE / "inner_speech_test_1_20260922"
@@ -133,15 +136,24 @@ class Budget:
 
 
 def failure(error, budget):
+    from neurodecodekit.datasets.inner_speech import InnerSpeechRefusal
     path = LOCAL / "execution_failed.json"
     if not path.exists():
         code = str(error)
-        write_json(path, {"experiment_id": "INNER-SPEECH-TEST-1", "status": "failed",
+        payload = {"experiment_id": EXPERIMENT_ID, "status": "failed",
             "stage": budget.stage, "participant": budget.participant,
             "error_type": type(error).__name__,
             "error_code": code if re.fullmatch("[a-z_]+", code) else type(error).__name__,
             "elapsed_seconds": time.time() - budget.started,
-            "peak_rss_bytes": budget.peak_rss, "retry_or_partial_score_allowed": False})
+            "peak_rss_bytes": budget.peak_rss, "retry_or_partial_score_allowed": False}
+        if (ALLOW_MISSING_REST and isinstance(error, InnerSpeechRefusal) and
+                budget.stage == "all_participant_event_qualification"):
+            spec = importlib.util.spec_from_file_location("event_refusal_projection",
+                REPO / "scripts/audit_inner_speech_events.py")
+            projection = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(projection)
+            payload["structural_diagnostic"] = projection.project_parser_refusal(error)
+        write_json(path, payload)
 
 
 def watchdog(budget, finished):
@@ -203,7 +215,8 @@ def qualify_all(inventory, budget):
         budget.participant = participant
         reader, summary = BDFReader(path), {"participant": participant}
         events = reader.iter_status_events(budget.check, participant=participant)
-        trials = parse_trials(events, participant=participant, summary=summary)
+        trials = parse_trials(events, participant=participant, summary=summary,
+                              allow_missing_rest=ALLOW_MISSING_REST)
         summary["status"] = reader.status_summary
         summary["condition_counts"] = {}
         for condition_index, (condition, code) in enumerate(CONDITIONS):
@@ -222,6 +235,24 @@ def qualify_all(inventory, budget):
     return qualified
 
 
+def timing_features(trials, index):
+    """Observed timing plus explicit availability; never synthesize an event."""
+    import numpy as np
+    trial = trials[index]
+    rest_available = trial.rest is not None
+    gap_available = index > 0 and trials[index - 1].rest is not None
+    require(ALLOW_MISSING_REST or (rest_available and (index == 0 or gap_available)),
+            "missing_rest_requires_amendment")
+    timing = [trial.start / 1024, trial.run_ordinal, index % 40,
+        (trial.cue - trial.start) / 1024, (trial.action - trial.cue) / 1024,
+        (trial.relax - trial.action) / 1024,
+        (trial.rest - trial.relax) / 1024 if rest_available else 0.0,
+        (trial.start - trials[index - 1].rest) / 1024 if gap_available else 0.0]
+    if ALLOW_MISSING_REST:
+        timing.extend((float(rest_available), float(gap_available)))
+    return np.asarray(timing, dtype=np.float64)
+
+
 def participant_features(reader, trials, budget):
     import numpy as np
     from neurodecodekit.datasets.inner_speech import EEG_CHANNELS, EXG_CHANNELS
@@ -234,10 +265,7 @@ def participant_features(reader, trials, budget):
                 "window_crosses_event_boundary")
         action = reader.read_window(trial.relax - 2048, trial.relax, picks)
         primary = window_features(action[:128], action[128:])
-        timing = np.asarray([trial.start / 1024, trial.run_ordinal, index % 40,
-            (trial.cue - trial.start) / 1024, (trial.action - trial.cue) / 1024,
-            (trial.relax - trial.action) / 1024, (trial.rest - trial.relax) / 1024,
-            0.0 if index == 0 else (trial.start - trials[index-1].rest) / 1024])
+        timing = timing_features(trials, index)
         features["P"].append(np.concatenate((primary["P"], timing)))
         features["E_action"].append(primary["E"])
         cue = reader.read_window(trial.cue, trial.cue + 384, picks)
@@ -263,7 +291,8 @@ def predict(budget, started):
             indices = np.asarray([i for i, trial in enumerate(trials) if trial.condition == code])
             labels = np.asarray([trials[i].label for i in indices], dtype=np.int64)
             bundle = run_condition({k: v[indices] for k, v in features.items()}, labels, indices,
-                seed=20260922 + 16 * person_index + 4 * condition_index, check=budget.check)
+                seed=20260922 + 16 * person_index + 4 * condition_index, check=budget.check,
+                missing_timing=ALLOW_MISSING_REST)
             name = f"{participant}_{condition}"
             predictions, targets, diagnostics = (LOCAL / (name + suffix) for suffix in (
                 "_predictions.npz", "_targets.npy", "_diagnostics.json"))
@@ -283,7 +312,7 @@ def predict(budget, started):
         print(f"Completed participant {person_index+1}/10; held-out metrics not computed.", flush=True)
     validate_pairs(pairs)
     require(not (LOCAL / "execution_failed.json").exists(), "failed_attempt")
-    write_json(FREEZE, {"experiment_id": "INNER-SPEECH-TEST-1",
+    write_json(FREEZE, {"experiment_id": EXPERIMENT_ID,
         "code_commit": started["code_commit"], "fingerprints": started["fingerprints"],
         "pairs": pairs, "qualification_sha256": sha256(LOCAL / "qualification.json"),
         "elapsed_seconds": time.time() - budget.started, "peak_rss_bytes": budget.peak_rss,
@@ -327,6 +356,7 @@ def score(freeze_commit, budget, started):
     import numpy as np
     from neurodecodekit.experiments.inner_speech import ARMS, LEARNED_ARMS, score_condition
     require(re.fullmatch("[a-f0-9]{40}", freeze_commit) is not None, "exact_freeze_commit")
+    require(started.get("experiment_id") == EXPERIMENT_ID, "attempt_identity")
     freeze_path = FREEZE.relative_to(REPO).as_posix()
     require(git("rev-parse", "HEAD") == freeze_commit, "freeze_must_be_head")
     require(not git("status", "--porcelain", "--untracked-files=no"), "clean_scoring_tree")
@@ -335,6 +365,7 @@ def score(freeze_commit, budget, started):
     require(git("ls-remote", "origin", "refs/heads/main").split()[0] == freeze_commit,
             "freeze_not_verified_on_remote_main")
     frozen = json.loads(git("show", f"{freeze_commit}:{freeze_path}"))
+    require(frozen.get("experiment_id") == EXPERIMENT_ID, "freeze_identity")
     require(frozen == json.loads(FREEZE.read_text()) and frozen["fingerprints"] == fingerprints(),
             "freeze_or_code_changed")
     validate_pairs(frozen["pairs"])
@@ -362,7 +393,7 @@ def score(freeze_commit, budget, started):
                       fit_diagnostics=diagnostics)
         results.append(result)
         budget.check()
-    output = {"experiment_id": "INNER-SPEECH-TEST-1", "status": "complete",
+    output = {"experiment_id": EXPERIMENT_ID, "status": "complete",
         "code_commit": started["code_commit"], "freeze_commit": freeze_commit,
         "pairs": results, "primary": primary_decision(results),
         "qualification": json.loads((LOCAL / "qualification.json").read_text()),
@@ -383,7 +414,7 @@ def main(argv=None):
     parser.add_argument("--freeze-commit")
     args = parser.parse_args(argv)
     if args.phase == "dry-run":
-        print(json.dumps({"experiment_id": "INNER-SPEECH-TEST-1", "mode": "dry_run",
+        print(json.dumps({"experiment_id": EXPERIMENT_ID, "mode": "dry_run",
             "participant_files_opened": 0, "trials_expected": 2000,
             "execution_requires_explicit_study_approval": True}, indent=2))
         return 0
@@ -393,7 +424,7 @@ def main(argv=None):
         require(bool(args.approval_text and args.approval_text.strip()), "explicit_approval_record_required")
         require(not LOCAL.exists() and not FREEZE.exists() and not RESULT.exists(), "attempt_already_exists")
         require(not git("status", "--porcelain", "--untracked-files=no"), "commit_before_prediction")
-        started = {"experiment_id": "INNER-SPEECH-TEST-1", "started_unix": invoked_at,
+        started = {"experiment_id": EXPERIMENT_ID, "started_unix": invoked_at,
             "deadline_unix": invoked_at + MAX_SECONDS, "code_commit": git("rev-parse", "HEAD"),
             "fingerprints": fingerprints(), "approval_text": args.approval_text,
             "local_destination_sha256": local_destination_sha256(),
@@ -405,6 +436,7 @@ def main(argv=None):
         require(not (LOCAL / "execution_failed.json").exists() and
                 not (LOCAL / "scoring_consumed.json").exists() and not RESULT.exists(), "consumed_or_failed")
         started = json.loads((LOCAL / "started.json").read_text())
+    require(started.get("experiment_id") == EXPERIMENT_ID, "attempt_identity")
     require(started["local_destination_sha256"] == local_destination_sha256(),
             "local_destination_changed")
     require(started["fingerprints"] == fingerprints(), "scientific_code_changed")

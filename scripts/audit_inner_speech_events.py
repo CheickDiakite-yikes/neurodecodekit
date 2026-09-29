@@ -19,6 +19,7 @@ from neurodecodekit.datasets.inner_speech import BDFReader, InnerSpeechRefusal, 
 REPO = Path(__file__).resolve().parents[1]
 AUDIT_NAME = "inner_speech_event_audit_20260929"
 MAX_SECONDS, MAX_RSS, MAX_OUTPUT = 120, 256 * 1024**2, 64 * 1024
+_PARSER_CODE = parse_trials.__code__
 
 
 def family(code):
@@ -37,6 +38,41 @@ def family(code):
             51: "inter_run_rest"}.get(code, "unrecognized_status_word")
 
 
+def project_parser_refusal(error, *, audit_context=False):
+    """Sanitize an existing parser traceback; never read a file or parse again."""
+    frame, take = None, None
+    trace = error.__traceback__
+    while trace is not None:
+        if trace.tb_frame.f_code is _PARSER_CODE:
+            frame = trace.tb_frame
+        elif (trace.tb_frame.f_code.co_name == "take" and
+              trace.tb_frame.f_code.co_filename == _PARSER_CODE.co_filename):
+            take = trace.tb_frame
+        trace = trace.tb_next
+    known = {"event_count", "event_format", "event_order", "event_grammar",
+             "baseline_end_missing", "trial_timing", "trailing_events", "condition_layout"}
+    result = {"parser_status": "refused", "error_code": str(error) if str(error) in known else
+              "other_parser_refusal", "completed_trials": None, "first_mismatch": None}
+    if frame is not None:
+        state = frame.f_locals
+        result["completed_trials"] = len(state.get("trials", []))
+        position, events = state.get("position"), state["events"]
+        if take is not None and type(position) is int:
+            present = position < len(events)
+            result["first_mismatch"] = {
+                "expected_families": sorted({family(c) for c in take.f_locals["allowed"]}),
+                "observed_family": family(events[position][1] if present else None),
+            }
+            if audit_context:
+                result["first_mismatch"].update({
+                    "is_first_retained_event": position == 0,
+                    "is_recording_initial_sample": present and events[position][0] == 0,
+                    "completed_run_end_markers": sum(c == 16 for _, c in events[:position]),
+                })
+    # Only primitive allowlisted facts leave this function, never private frame state.
+    return result
+
+
 def diagnose(events):
     """Project only allowlisted structural fields from one unchanged parse."""
     result = {"event_family_counts": dict(sorted(Counter(family(c) for _, c in events).items()))}
@@ -44,35 +80,7 @@ def diagnose(events):
         trials = parse_trials(events, participant="sub-01")
         result.update(parser_status="passed", completed_trials=len(trials), first_mismatch=None)
     except InnerSpeechRefusal as error:
-        # Do not serialize tracebacks, frame locals, trial objects or event rows.
-        frame, take = None, None
-        trace = error.__traceback__
-        while trace is not None:
-            if trace.tb_frame.f_code is parse_trials.__code__:
-                frame = trace.tb_frame
-            elif (trace.tb_frame.f_code.co_name == "take" and
-                  trace.tb_frame.f_code.co_filename == parse_trials.__code__.co_filename):
-                take = trace.tb_frame
-            trace = trace.tb_next
-        known = {"event_count", "event_format", "event_order", "event_grammar",
-                 "baseline_end_missing", "trial_timing", "trailing_events", "condition_layout"}
-        result.update(parser_status="refused", error_code=str(error) if str(error) in known else
-                      "other_parser_refusal", completed_trials=None, first_mismatch=None)
-        if frame is not None:
-            state = frame.f_locals
-            result["completed_trials"] = len(state.get("trials", []))
-            position = state.get("position")
-            if take is not None and type(position) is int:
-                present = position < len(events)
-                result["first_mismatch"] = {
-                    "expected_families": sorted({family(c) for c in take.f_locals["allowed"]}),
-                    "observed_family": family(events[position][1] if present else None),
-                    "is_first_retained_event": position == 0,
-                    "is_recording_initial_sample": present and events[position][0] == 0,
-                    "completed_run_end_markers": sum(c == 16 for _, c in events[:position]),
-                }
-        # Drop references into private parser state before returning the aggregate.
-        frame = take = trace = None
+        result.update(project_parser_refusal(error, audit_context=True))
     return result
 
 

@@ -292,13 +292,15 @@ def _predict_arms(features, labels, null_labels, train, validation, check):
     return result
 
 
-def run_condition(features, labels, original_trial_indices, *, seed=SEED, check=None):
+def run_condition(features, labels, original_trial_indices, *, seed=SEED, check=None,
+                  missing_timing=False):
     """Return prediction arrays and fit diagnostics; never score outer targets.
 
     Return keys are predictions (eight calibrated/control arrays), uncalibrated
     (six learned arrays), and fit_diagnostics (JSON-safe counts/settings/fits).
     P includes all 77 peripheral features plus exactly eight caller-supplied
     target-free timing/run/order columns; no direction identity may enter them.
+    The explicit missing-timing amendment appends exactly two availability flags.
     """
     np = _numpy()
     started = time.monotonic()
@@ -306,9 +308,12 @@ def run_condition(features, labels, original_trial_indices, *, seed=SEED, check=
     if set(features) != {"P", "E_action", "E_cue", "E_late"}:
         raise ValueError("Expected exactly P, E_action, E_cue and E_late feature blocks")
     features = {name: _matrix(values, name) for name, values in features.items()}
-    if features["P"].shape != (len(labels), 85) or any(
+    if type(missing_timing) is not bool:
+        raise ValueError("Missing timing mode must be an explicit boolean")
+    p_width = 87 if missing_timing else 85
+    if features["P"].shape != (len(labels), p_width) or any(
             features[name].shape != (len(labels), 640) for name in ("E_action", "E_cue", "E_late")):
-        raise ValueError("Expected n×85 peripheral/timing and three n×640 EEG blocks")
+        raise ValueError("Expected the registered peripheral/timing width and three n×640 EEG blocks")
     predictions = {arm: np.full((len(labels), N_CLASSES), np.nan) for arm in ARMS}
     raw_predictions = {arm: np.full((len(labels), N_CLASSES), np.nan) for arm in LEARNED_ARMS}
     for fold, (train, validation, inner, null_labels) in enumerate(plans):
@@ -336,6 +341,7 @@ def run_condition(features, labels, original_trial_indices, *, seed=SEED, check=
         _probabilities(values, len(labels))
     return {"predictions": predictions, "uncalibrated": raw_predictions, "fit_diagnostics": {
         "n_trials": len(labels), "seed_block": [seed, seed + 3], "outer_folds": fold_records,
+        "peripheral_timing_features": p_width, "missing_timing_amendment": missing_timing,
         "ridge_fits": 96, "temperature_fits": 24, "ridge_alpha": 1.0,
         "beta_bounds": list(BETA_BOUNDS), "bisection_steps": BISECTION_STEPS,
         "standardization": "current training rows only; each P/EEG block divided by sqrt(dimension)",

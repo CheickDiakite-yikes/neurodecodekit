@@ -168,7 +168,8 @@ class RunnerTests(unittest.TestCase):
                             ("predictions", "targets", "diagnostics"), (prediction, target, diagnostic))},
                         **{key + "_sha256": runner.sha256(path) for key, path in zip(
                             ("predictions", "targets", "diagnostics"), (prediction, target, diagnostic))}})
-            frozen = {"pairs": pairs, "fingerprints": {"fixture": "generated"},
+            frozen = {"experiment_id": runner.EXPERIMENT_ID,
+                      "pairs": pairs, "fingerprints": {"fixture": "generated"},
                       "qualification_sha256": runner.sha256(local / "qualification.json"),
                       "peak_rss_bytes": 1000}
             runner.write_json(freeze_path, frozen)
@@ -191,7 +192,7 @@ class RunnerTests(unittest.TestCase):
 
             budget = mock.Mock(started=time.time(), peak_rss=1000,
                                publication_lock=threading.Lock(), completed=False)
-            started = {"code_commit": "b" * 40}
+            started = {"code_commit": "b" * 40, "experiment_id": runner.EXPERIMENT_ID}
             with mock.patch.multiple(runner, REPO=repo, LOCAL=local, FREEZE=freeze_path,
                                      RESULT=result_path, PLAN=plan_path), \
                     mock.patch.object(runner, "fingerprints", return_value={"fixture": "generated"}), \

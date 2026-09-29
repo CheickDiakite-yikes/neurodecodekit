@@ -224,11 +224,12 @@ class Trial:
     cue: int
     action: int
     relax: int
-    rest: int
+    rest: int | None
     run_ordinal: int
 
 
-def parse_trials(events, *, participant, session="ses-01", summary=None):
+def parse_trials(events, *, participant, session="ses-01", summary=None,
+                 allow_missing_rest=False):
     """Validate all 200 trials, then apply only the registered sub-03 correction.
 
     Admitted intervals (seconds): concentration(0,5], cue[.375,3],
@@ -238,6 +239,10 @@ def parse_trials(events, *, participant, session="ses-01", summary=None):
     Unpaired attention events are ignored only after a complete rest46 and
     before the next trial/run end. Inter-run rest51 is optional between intact
     run-end16/start15 markers. Neither exception changes or drops any trial.
+    The explicit missing-rest amendment admits only relax45 immediately followed
+    by the next trial_start42 within a run. Store rest=None, never a substituted
+    timestamp; its relax-to-rest interval remains unavailable, not validated.
+    Default strict parsing and summary fields are unchanged.
     The optional summary dictionary receives aggregate qualification facts.
     """
     _require(participant in {f"sub-{i:02d}" for i in range(1, 11)} and session == "ses-01",
@@ -273,15 +278,18 @@ def parse_trials(events, *, participant, session="ses-01", summary=None):
         take((15,))
         condition = take((21, 22, 23))[1]
         conditions.append(condition)
-        for _ in range(40):
+        for trial_index in range(40):
             start = take((42,))[0]
             cue, code = take((31, 32, 33, 34))
-            action, relax, rest = (take((mark,))[0] for mark in (44, 45, 46))
-            intervals = (cue - start, action - cue, relax - action, rest - relax)
+            action, relax = (take((mark,))[0] for mark in (44, 45))
+            rest = (None if allow_missing_rest is True and trial_index < 39 and peek() == 42
+                    else take((46,))[0])
+            intervals = (cue - start, action - cue, relax - action,
+                         None if rest is None else rest - relax)
             _require(0 < intervals[0] <= 5 * SFREQ and
                      384 <= intervals[1] <= 3 * SFREQ and
                      2 * SFREQ <= intervals[2] <= 4 * SFREQ and
-                     0 < intervals[3] <= 3 * SFREQ, "trial_timing")
+                     (intervals[3] is None or 0 < intervals[3] <= 3 * SFREQ), "trial_timing")
             observed_intervals.append(intervals)
             trials.append(Trial(code - 31, condition, start, cue, action, relax, rest, run))
             pending_question = False
@@ -312,17 +320,25 @@ def parse_trials(events, *, participant, session="ses-01", summary=None):
         trials = [replace(trial, condition=23) if trial.run_ordinal == 3 else trial
                   for trial in trials]
     if summary is not None:
+        interval_timing = {}
+        for index, name in enumerate(INTERVAL_NAMES):
+            observed = [row[index] for row in observed_intervals if row[index] is not None]
+            interval_timing[name] = {
+                "minimum_seconds": min(observed) / SFREQ if observed else None,
+                "maximum_seconds": max(observed) / SFREQ if observed else None,
+                "nominal_seconds": NOMINAL_INTERVALS[index],
+                "deviation_over_0_1s_count": sum(
+                    abs(value / SFREQ - NOMINAL_INTERVALS[index]) > .1 for value in observed),
+            }
+            if allow_missing_rest is True:
+                interval_timing[name].update(observed_count=len(observed),
+                                             unavailable_count=len(trials) - len(observed))
+        if allow_missing_rest is True:
+            summary["missing_rest_events"] = sum(trial.rest is None for trial in trials)
         summary.update(trials=200, runs=5, baseline_end_missing=missing_baseline_end,
                        **ancillary,
                        condition_correction_applied=corrected,
                        condition_correction_already_present=participant == "sub-03" and not corrected,
                        inferred_target_count=0, synthesized_event_count=0,
-                       interval_timing={name: {
-                           "minimum_seconds": min(row[index] for row in observed_intervals) / SFREQ,
-                           "maximum_seconds": max(row[index] for row in observed_intervals) / SFREQ,
-                           "nominal_seconds": NOMINAL_INTERVALS[index],
-                           "deviation_over_0_1s_count": sum(
-                               abs(row[index] / SFREQ - NOMINAL_INTERVALS[index]) > .1
-                               for row in observed_intervals)}
-                           for index, name in enumerate(INTERVAL_NAMES)})
+                       interval_timing=interval_timing)
     return trials
