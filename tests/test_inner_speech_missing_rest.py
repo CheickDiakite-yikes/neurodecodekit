@@ -57,7 +57,8 @@ class MissingRestRunnerTests(unittest.TestCase):
         self.assertTrue(set(original.CODE_PATHS).issubset(amended.CODE_PATHS))
         self.assertIn("scripts/test_inner_speech_missing_rest.py", amended.CODE_PATHS)
         self.assertIn(amended.PLAN.relative_to(amended.REPO).as_posix(), amended.CODE_PATHS)
-        with mock.patch.object(amended, "git", side_effect=AssertionError("No Git")):
+        with mock.patch.object(amended, "git", side_effect=AssertionError("No Git")), \
+                mock.patch.dict("sys.modules", {"numpy": None}):
             with self.assertRaisesRegex(RuntimeError, "attempt_identity"):
                 amended.score("a" * 40, mock.Mock(), {"experiment_id": original.EXPERIMENT_ID})
 
