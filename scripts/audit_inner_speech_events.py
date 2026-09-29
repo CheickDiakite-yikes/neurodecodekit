@@ -155,6 +155,8 @@ def execute():
             terminal = True
         print(json.dumps({"status": "audit_completed", "parser_status": result["parser_status"]}))
     except Exception:
+        if terminal:
+            return 0  # A closed console cannot invalidate a completed private result.
         with publication:
             failure = audit / "audit_failed.json"
             if not failure.exists():
