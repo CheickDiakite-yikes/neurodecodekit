@@ -30,6 +30,15 @@ Status events were read; no physiological windows, fits or scores followed.
 Source-event compatibility is now the precise unresolved dependency. A bounded
 structural audit needs separate approval; no automatic repair or retry follows.
 
+September 29 update: that audit was separately approved and completed once.
+The [sanitized result](INNER_SPEECH_EVENT_AUDIT.md) identifies a missing mandatory
+rest marker at the fourth trial in the decoded stream: 200 cues/actions/relax
+markers, 199 rest markers. No physiological windows, fitting or scores followed.
+The next decision is a source-supported event/timing amendment that retains
+all participants and targets. Making rest optional changes the existing timing
+controls and qualification; it cannot be represented as an unchanged retry.
+No rest timestamps may be invented and no trial may be silently dropped.
+
 ## Reuse the existing Thinking Out Loud candidate
 
 OpenNeuro **ds003626 v2.1.2** is the most practical reviewed candidate, already

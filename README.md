@@ -30,7 +30,7 @@ irreversible Tier C events.
 
 ## Scientific Operating Model
 
-**Current result and priority (September 28, 2026):**
+**Current result and priority (September 29, 2026):**
 [SPEECH-REPRO-1 completed and scored once](docs/SPEECH_REPRODUCTION_RESULT.md).
 The minimally overt EEGNet reference reached **52.49% balanced accuracy**, above
 the 20% baseline in all three people. But auxiliary-only prediction reached
@@ -102,9 +102,13 @@ inner-speech log-loss gain of at least 0.02 nats and the same nine of ten people
 beating every primary control. After the approved path fix, the sole corrected
 run [stopped at event qualification](docs/INNER_SPEECH_QUALIFICATION_FAILURE.md):
 all ten source hashes passed, but participant 01's event structure was refused.
-No fitting or scoring occurred; this is not a biological null. Next: a bounded,
-separately approved structural audit—not another blind model run. Status events
-were read; labels cannot be called unopened. Consumed online recordings cannot be reused. The
+No fitting or scoring occurred; this is not a biological null. The approved
+[4.25-second structural audit](docs/INNER_SPEECH_EVENT_AUDIT.md) located the failure:
+after three complete trials, the parser expected rest but saw the next trial
+start. The decoded stream has 200 cues/actions/relax markers, but 199 rest
+markers. Next: an explicit source-supported event/timing amendment, not dropped
+trials or an unchanged retry; rest is used by the current timing controls.
+Status events were read; labels cannot be called unopened. Consumed online recordings cannot be reused. The
 low-channel peripheral interface remains a separate practical lead, not thought-to-text.
 This consumed evaluation must not be retuned or rescored. We have evidence for
 task-label prediction, not EEG-specific thought decoding, cortical origin,
