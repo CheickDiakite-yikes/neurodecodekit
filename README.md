@@ -109,7 +109,12 @@ start. The decoded stream has 200 cues/actions/relax markers, but 199 rest
 markers. The approved [missing-timing amendment](docs/INNER_SPEECH_MISSING_REST_AMENDMENT.md)
 retains every trial and observed timing value, adds availability flags, and
 changes the nuisance block from 85 to 87 features without inventing timestamps.
-Next: validate, then one full 20-minute test only if all ten people qualify.
+The [single amended run](docs/INNER_SPEECH_MISSING_REST_AMENDMENT.md)
+qualified participant 01, then stopped after 12.27 seconds: participant 02 had
+a direction cue where a trial-start marker was required after 72 complete
+trials. No physiological windows, fits or scores followed. Next: a separately
+approved whole-cohort event-structure census to establish alignment before
+another model run; the present attempt is consumed.
 Status events were read; labels cannot be called unopened. Consumed online recordings cannot be reused. The
 low-channel peripheral interface remains a separate practical lead, not thought-to-text.
 This consumed evaluation must not be retuned or rescored. We have evidence for

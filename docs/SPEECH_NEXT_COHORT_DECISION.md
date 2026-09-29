@@ -39,6 +39,14 @@ all participants and targets. Making rest optional changes the existing timing
 controls and qualification; it cannot be represented as an unchanged retry.
 No rest timestamps may be invented and no trial may be silently dropped.
 
+The subsequently approved [missing-timing run](INNER_SPEECH_MISSING_REST_AMENDMENT.md)
+is now consumed: participant 01 qualified, but participant 02 encountered a
+direction cue where trial-start was required after 72 complete trials. The
+12.27-second attempt produced no physiological windows, fits or score. The next
+dependency is a separately authorized, whole-cohort structural census of
+unambiguous trial/action alignment, before choosing one coherent admission
+policy or declaring this frozen study infeasible. No automatic retry follows.
+
 ## Reuse the existing Thinking Out Loud candidate
 
 OpenNeuro **ds003626 v2.1.2** is the most practical reviewed candidate, already

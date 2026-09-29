@@ -53,3 +53,49 @@ before any features/fits, both routes' one-shot score guards and sanitized
 failure projection without a second parse. A metadata-only path check admitted
 the canonical local destination and confirmed no successor attempt/freeze/result
 exists, without opening participant files. Remote CI is checked before launch.
+
+## Consumed execution result: trial-start mismatch in participant 02
+
+The single approved invocation used `28983dafabb07cf3820de2b7bf199ecc669c7c69`
+after both CI jobs passed (workflow `36589987257`). It stopped after **12.266
+seconds**, at **45,846,528 bytes (43.72 MiB)** peak RSS. The earlier implementation
+commit's base-only CI error was corrected before any real-data access; it did
+not consume an experiment attempt.
+
+All ten recordings passed full-file SHA verification. Participant 01 completed
+all 200 trials and all three condition/split preflights under the amendment.
+Participant 02 completed **72 trials**, then the parser encountered a
+**direction cue where the next trial-start marker was required**. This is a
+different structural mismatch from the admitted missing-rest case. The
+[sanitized failure record](../registries/inner_speech_missing_rest_failure.v0.json)
+separates observed failure metadata from consequences established by the
+frozen control flow.
+
+The all-ten qualification boundary worked: **zero physiological windows,
+features, fits, predictions or scores** followed. No complete qualification,
+freeze, score-consumed marker or scientific result exists. Status and
+target-bearing codes were decoded for the first two people inside the runner;
+raw event rows and target identities were not inspected or exported. The
+attempt is consumed and its local failure evidence remains unchanged. There
+was no retry, inferred timestamp, dropped trial or post-failure source read.
+
+This does not estimate a neural effect or reject the primary hypothesis. It
+establishes that the cohort's event compatibility is more complex than the
+single rest-marker omission. The exact cause of the trial-start mismatch,
+later trial alignment and later participants' compatibility remain unknown.
+
+## Next priority: establish cohort-wide alignment before another model run
+
+A separately approved **one-pass event-structure-only census of all ten
+recordings** should enumerate structural exceptions across the whole cohort,
+not stop at the first person or first mismatch. Proposed limits: 120 seconds,
+256 MiB RSS, 1 MiB sanitized output, one worker, no new downloads. Decode only
+Status, collapse direction/answer identities, preserve raw inputs, and export
+only structural counts and categories. No physiological analysis, repaired
+event list, label inference, model fitting or scoring.
+
+Use that complete structural picture to decide whether one coherent policy
+can retain unambiguous observed cue/action alignment for all trials. If not,
+this frozen study is infeasible as specified; further piecemeal exceptions
+would change the study without resolving its identification problem. This
+proposal grants no new data access or execution authority.
