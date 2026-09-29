@@ -112,9 +112,16 @@ changes the nuisance block from 85 to 87 features without inventing timestamps.
 The [single amended run](docs/INNER_SPEECH_MISSING_REST_AMENDMENT.md)
 qualified participant 01, then stopped after 12.27 seconds: participant 02 had
 a direction cue where a trial-start marker was required after 72 complete
-trials. No physiological windows, fits or scores followed. Next: a separately
-approved whole-cohort event-structure census to establish alignment before
-another model run; the present attempt is consumed.
+trials. No physiological windows, fits or scores followed. The approved
+[whole-cohort census](docs/INNER_SPEECH_EVENT_CENSUS.md) then completed in 14.17
+seconds: 50 intact run boundaries, but three absent direction cues and four
+incomplete cue/action/relax sequences in the existing decoder's output.
+It found 1,993 contiguous core sequences, not 2,000 qualified trials. **Next:
+reconcile source-compatible Status extraction once, then prospectively define
+an observed-anchor study retaining all ten people and every control.** No more
+piecemeal parser exceptions, inferred words or unapproved trial exclusions.
+The current all-trial study and the census are consumed; neither produced a
+neural result. See the [complete aggregate](registries/inner_speech_event_census_result.v0.json).
 Status events were read; labels cannot be called unopened. Consumed online recordings cannot be reused. The
 low-channel peripheral interface remains a separate practical lead, not thought-to-text.
 This consumed evaluation must not be retuned or rescored. We have evidence for

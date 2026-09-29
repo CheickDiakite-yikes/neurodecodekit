@@ -47,6 +47,16 @@ dependency is a separately authorized, whole-cohort structural census of
 unambiguous trial/action alignment, before choosing one coherent admission
 policy or declaring this frozen study infeasible. No automatic retry follows.
 
+That [all-ten census](INNER_SPEECH_EVENT_CENSUS.md) completed in 14.17 seconds:
+the existing decoder retains 1,997 cues and 1,993 contiguous cue/action/relax
+sequences across all 50 runs. Three missing direction cues and four incomplete
+core sequences block the no-exclusion all-2,000-trial design; this is not an EEG
+null. No physiology, models or scores were accessed. Reconcile pre-repair
+source-compatible Status extraction with the frozen decoder once before a
+new observed-anchor study. Preserve all ten people and all controls; any
+bounded, uniform structural exclusions need prospective approval. Stop
+piecemeal parser amendments and never infer missing words from class balance.
+
 ## Reuse the existing Thinking Out Loud candidate
 
 OpenNeuro **ds003626 v2.1.2** is the most practical reviewed candidate, already
