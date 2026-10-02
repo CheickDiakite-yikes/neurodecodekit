@@ -42,6 +42,13 @@ def without_phases(events, missing):
     return [event for index, event in enumerate(events) if index not in removed]
 
 
+def attention_without_rest(events, *, slot=0, attention=(17, 61)):
+    """Replace only an observed rest with generated attention after that relax."""
+    relax = [i for i, (_, code) in enumerate(events) if code == 45][slot]
+    extras = [(events[relax][0] + offset, code) for offset, code in enumerate(attention, 1)]
+    return events[:relax + 1] + extras + events[relax + 2:]
+
+
 class ObservedSlotTests(unittest.TestCase):
     def test_intact_slots_match_strict_parser_exactly_and_are_frozen(self):
         events, summary = generated_events(), {}
@@ -242,6 +249,99 @@ class ObservedSlotTests(unittest.TestCase):
         self.assertTrue(all(slot.eligible for slot in slots))
         self.assertEqual(summary["excluded"], 0)
         self.assertEqual((summary["missing_start_events"], summary["missing_rest_events"]), (100, 100))
+
+    def test_attention_amendment_exact_pattern_preserves_observations_for_all_people(self):
+        original = generated_events()
+        for index in range(1, 11):
+            participant, summary = f"sub-{index:02d}", {}
+            events = attention_without_rest(original, attention=(17, 61 + index % 4))
+            before = events.copy()
+            slots = parse_observed_slots(events, participant=participant, session="ses-02",
+                                         allow_attention_after_relax=True, summary=summary)
+            expected = parse_observed_slots(without_phases(original, [(0, 4)]),
+                                             participant=participant, session="ses-02")
+            self.assertEqual(slots, expected)
+            self.assertEqual(events, before)
+            self.assertIsNone(slots[0].rest)
+            self.assertEqual([slot.original_index for slot in slots], list(range(200)))
+            self.assertEqual((summary["attention_after_relax_pairs"], summary["missing_rest_events"],
+                              summary["eligible"], summary["excluded"]), (1, 1, 200, 0))
+            self.assertEqual((summary["attention_question_events"], summary["attention_answer_events"],
+                              summary["unpaired_attention_questions"], summary["unpaired_attention_answers"]),
+                             (1, 1, 0, 0))
+            self.assertEqual((summary["inferred_target_count"], summary["synthesized_event_count"]), (0, 0))
+
+    def test_attention_amendment_default_still_refuses_and_is_session2_boolean_only(self):
+        original = generated_events()
+        events = attention_without_rest(original)
+        for kwargs in ({}, {"session": "ses-02"},
+                       {"session": "ses-02", "allow_attention_after_relax": False}):
+            with self.assertRaisesRegex(InnerSpeechRefusal, "attention_requires_observed_rest"):
+                parse_observed_slots(events, participant="sub-01", **kwargs)
+        for session, opt_in in (("ses-01", True), ("ses-02", 1), ("ses-02", "true")):
+            with self.assertRaisesRegex(InnerSpeechRefusal, "attention_amendment_session"):
+                parse_observed_slots(original, participant="sub-01", session=session,
+                                     allow_attention_after_relax=opt_in)
+        old_summary, new_summary = {}, {}
+        self.assertEqual(parse_observed_slots(original, participant="sub-01", session="ses-02",
+                                              summary=old_summary),
+                         parse_observed_slots(original, participant="sub-01", session="ses-02",
+                                              allow_attention_after_relax=True, summary=new_summary))
+        self.assertEqual(new_summary.pop("attention_after_relax_pairs"), 0)
+        self.assertEqual(old_summary, new_summary)
+
+    def test_attention_amendment_rejects_adjacent_pattern_and_other_phase_relaxations(self):
+        original = generated_events()
+        malformed = [attention_without_rest(original, attention=codes)
+                     for codes in ((61,), (17,), (61, 17), (17, 17, 61),
+                                   (17, 61, 62), (17, 61, 17, 62), (17, 61, 46))]
+        # No generalization to a next cue, run end, unknown event, or an incomplete preceding core.
+        valid = attention_without_rest(original)
+        starts = [i for i, (_, code) in enumerate(valid) if code == 42]
+        malformed.append(valid[:starts[1]] + valid[starts[1] + 1:])
+        malformed.append(attention_without_rest(original, slot=39))
+        unknown = valid.copy()
+        unknown[starts[1]] = (unknown[starts[1]][0], 999)
+        malformed.append(unknown)
+        for code in (42, 31, 44):
+            position = next(i for i, (_, observed_code) in enumerate(valid) if observed_code == code)
+            malformed.append(valid[:position] + valid[position + 1:])
+        for code in (31, 44, 45):
+            position = next(i for i, (_, observed_code) in enumerate(valid) if observed_code == code)
+            malformed.append(valid[:position + 1] + [(valid[position][0] + 1, code)] + valid[position + 1:])
+        # An attention pair inserted between action and relax is never admitted.
+        action = next(i for i, (_, code) in enumerate(original) if code == 44)
+        malformed.append(original[:action + 1] + [(original[action][0] + 1, 17),
+                                                   (original[action][0] + 2, 61)] + original[action + 1:])
+        for index, events in enumerate(malformed):
+            summary = {"sentinel": True}
+            with self.subTest(case=index), self.assertRaises(InnerSpeechRefusal):
+                parse_observed_slots(events, participant="sub-01", session="ses-02",
+                                     allow_attention_after_relax=True, summary=summary)
+            self.assertEqual(summary, {"sentinel": True})
+
+    def test_attention_amendment_keeps_timing_bounds_and_exclusion_cap(self):
+        for intervals in ((5121, 512, 2560, 1024), (512, 383, 2560, 1024),
+                          (512, 3073, 2560, 1024), (512, 512, 2047, 1024),
+                          (512, 512, 4097, 1024)):
+            with self.subTest(intervals=intervals), self.assertRaisesRegex(InnerSpeechRefusal, "trial_timing"):
+                parse_observed_slots(attention_without_rest(generated_events(intervals=intervals)),
+                                     participant="sub-01", session="ses-02", allow_attention_after_relax=True)
+        original = generated_events()
+        for count in (2, 3):
+            events = without_phases(original, [(i + 1, 1) for i in range(count)])
+            events = attention_without_rest(events)
+            summary = {}
+            if count == 2:
+                slots = parse_observed_slots(events, participant="sub-01", session="ses-02",
+                                             allow_attention_after_relax=True, summary=summary)
+                self.assertEqual((len(slots), summary["excluded"], summary["attention_after_relax_pairs"]),
+                                 (200, 2, 1))
+            else:
+                with self.assertRaisesRegex(InnerSpeechRefusal, "exclusion_cap"):
+                    parse_observed_slots(events, participant="sub-01", session="ses-02",
+                                         allow_attention_after_relax=True, summary=summary)
+                self.assertEqual(summary, {})
 
 
 if __name__ == "__main__":

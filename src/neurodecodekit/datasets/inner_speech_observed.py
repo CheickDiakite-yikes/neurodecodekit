@@ -51,7 +51,8 @@ def _make_slot(phases, condition, run, original_index):
     return slot
 
 
-def parse_observed_slots(events, *, participant, session="ses-01", summary=None):
+def parse_observed_slots(events, *, participant, session="ses-01", summary=None,
+                         allow_attention_after_relax=False):
     """Assign exactly 5x40 observed slots for explicitly admitted sessions.
 
     At most one of start/cue/action/relax/rest may be absent in any slot.
@@ -63,9 +64,14 @@ def parse_observed_slots(events, *, participant, session="ses-01", summary=None)
     Session-1 participant corrections never apply to session 2.
     Only observed adjacent logical intervals are validated; missing timestamps
     stay None, never an inferred boundary or substituted neighbouring event.
+    The explicit session-2 attention amendment accepts only an intact observed
+    start/cue/action/relax sequence, absent rest, exactly one question/answer
+    pair, and the next observed trial start. All other behavior is unchanged.
     """
     _require(participant in {f"sub-{i:02d}" for i in range(1, 11)} and session in ("ses-01", "ses-02"),
              "participant_session")
+    _require(type(allow_attention_after_relax) is bool and
+             (not allow_attention_after_relax or session == "ses-02"), "attention_amendment_session")
     _require(isinstance(events, (list, tuple)) and 0 < len(events) <= 10000, "event_count")
     _require(all(isinstance(item, (list, tuple)) and len(item) == 2 and
                  all(type(value) is int for value in item) and item[0] >= 0 for item in events),
@@ -93,7 +99,7 @@ def parse_observed_slots(events, *, participant, session="ses-01", summary=None)
     ancillary = {"attention_question_events": 0, "attention_answer_events": 0,
                  "unpaired_attention_questions": 0, "unpaired_attention_answers": 0,
                  "missing_inter_run_rest_tags": 0}
-    slots, conditions = [], []
+    slots, conditions, attention_after_relax_pairs = [], [], 0
     for run in range(1, 6):
         take((15,))
         condition = take((21, 22, 23))[1]
@@ -102,6 +108,18 @@ def parse_observed_slots(events, *, participant, session="ses-01", summary=None)
         while peek() != 16:
             code = peek()
             if code in ATTENTION:
+                if allow_attention_after_relax and last_rank == 3:
+                    _require(tuple(phases) == (0, 1, 2, 3), "attention_after_relax_core")
+                    _make_slot(phases, condition, run, len(slots))  # Validate observed timing first.
+                    _require(position + 2 < len(events) and code == 17 and
+                             events[position + 1][1] in (61, 62, 63, 64) and
+                             events[position + 2][1] == 42, "attention_after_relax_pattern")
+                    take((17,))
+                    take((61, 62, 63, 64))
+                    ancillary["attention_question_events"] += 1
+                    ancillary["attention_answer_events"] += 1
+                    attention_after_relax_pairs += 1
+                    continue  # Rest stays absent; the observed start performs the normal rank reset.
                 _require(last_rank == 4 and 4 in phases, "attention_requires_observed_rest")
                 pending_question = False
                 while peek() in ATTENTION:
@@ -164,4 +182,6 @@ def parse_observed_slots(events, *, participant, session="ses-01", summary=None)
             condition_correction_applied=corrected,
             condition_correction_already_present=correction_allowed and not corrected,
             inferred_target_count=0, synthesized_event_count=0)
+        if allow_attention_after_relax:
+            summary["attention_after_relax_pairs"] = attention_after_relax_pairs
     return slots

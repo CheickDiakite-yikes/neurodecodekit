@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "experiment_id": "INNER-SPEECH-TEMPORAL-S2-A1",
+  "status": "approved_frozen_before_corrected_physiology",
+  "approval": "Maintainer on October 2, 2026: 'continue approved, lets please get closer to thought to text' in direct response to the narrow correction, validation, and one unchanged all-ten, thirteen-arm experiment capped at twenty minutes and scored once. This authorizes one fresh successor, not a retry of any consumed directory.",
+  "question": "Does preserving ordered signed waveform information improve imagined-word decoding beyond matched peripheral/timing information and same-trial spectral EEG?",
+  "source": {
+    "dataset": "ds003626",
+    "version": "2.1.2",
+    "commit": "d96743351ae4e5d0ee7a1384320ea8d52a2ce698",
+    "session": "ses-02",
+    "participants": 10,
+    "manifest": "registries/inner_speech_session2_source_manifest.v0.json",
+    "payload_bytes": 6870116352
+  },
+  "acquisition": {
+    "wall_seconds": 3600,
+    "payload_ceiling_bytes": 10737418240,
+    "rss_bytes": 1073741824,
+    "generated_metadata_bytes": 33554432,
+    "minimum_free_bytes": 21474836480,
+    "workers": 1,
+    "retries": 0,
+    "resume": false,
+    "all_original_channels": true,
+    "source_headers": "All ten pinned object versions, sizes and ETags checked before body acquisition; copy opaque BDF bytes and technical headers only."
+  },
+  "inherits": "registries/inner_speech_temporal_plan.v0.json",
+  "inheritance": "All scientific fields of the original temporal-versus-spectral plan are retained. Only the explicit ancillary event placement and fresh execution identities change as detailed below. No new acquisition is authorized; reuse the complete committed session-two acquisition.",
+  "decoder_gate": {
+    "scope": "All ten ses-02 files; hashes, headers and Status only. Require exact ordered agreement between frozen and independent source-compatible decoders and all thirty split preflights before physiology.",
+    "session_rules": "No session-1 sub-10 short-pulse filter or missing-baseline allowance; no session-1 sub-03 condition correction. Require baseline-end for everyone and condition layout 21,22,22,23,23 for five runs.",
+    "author_commit": "65bd162a32f38546b6596cb25d46f4a862fa87fb",
+    "wall_seconds_from_overall_start": 120,
+    "rss_bytes": 268435456,
+    "generated_bytes": 1048576
+  },
+  "eligibility": {
+    "nominal_trials_per_person": 200,
+    "runs_per_person": 5,
+    "slots_per_run": 40,
+    "conditions_per_person": {
+      "pronounced": 40,
+      "inner": 80,
+      "visualization": 80
+    },
+    "maximum_uniquely_incomplete_core_slots_per_person": 2,
+    "maximum_cohort_exclusions": 20,
+    "rule": "Keep only uniquely identified original slots with observed cue, action and relax. At most one missing phase per otherwise valid slot. Never infer labels/timestamps, compress original indices, drop a person/condition or change the decoder after inspection. Structural exclusion is not proven missing-at-random."
+  },
+  "features": {
+    "sampling_hz": 1024,
+    "E_temporal_width": 4096,
+    "E_spectral_width": 640,
+    "P_width": 440,
+    "EEG_temporal": "128 EEG channels, EEG-only common-average reference, per-window channel demean, 32 ordered signed bin means per channel; no new filter or learned spatial transform.",
+    "windows": "Action: final2048 samples ending at observed relax. Cue: first384 samples after observed cue. Late: final384 samples of action. All within observed boundaries.",
+    "P_exact_order": "77 original peripheral spectral/variance features; 11 original observed timing/availability features; 352 temporal features (32 signed bin means for each of the same11 EXG-derived channels).",
+    "comparability": "Every joint, deranged, label-null and spectral-joint arm shares identical P440. EEG and peripheral blocks use training-only scaling and sqrt(block width) normalization. Spectral comparator uses identical fresh trials, splits and P, not session-1 scores."
+  },
+  "arms": [
+    "P",
+    "joint",
+    "cue_joint",
+    "late_joint",
+    "deranged_joint",
+    "joint_shuffled",
+    "spectral_joint",
+    "action_eeg",
+    "action_eeg_shuffled",
+    "cue_eeg",
+    "cue_eeg_shuffled",
+    "uniform",
+    "training_prior"
+  ],
+  "estimator": {
+    "ridge_alpha": 1.0,
+    "outer_blocks": 4,
+    "inner_blocks": 3,
+    "embargo_original_indices_each_side": 1,
+    "temperature_bounds": [
+      0.05,
+      20.0
+    ],
+    "temperature_bisections": 60,
+    "seed": "20260922 +16*zero_based_person +4*zero_based_condition",
+    "ridge_fits_per_pair": 176,
+    "temperature_fits_per_pair": 44,
+    "null_training": "All three learned label-null arms use the same fixed outer-training label permutation throughout inner fitting and calibration. No validation labels influence features, scaling, regularization or temperature."
+  },
+  "primary": {
+    "population": "All ten inner-speech participant pairs",
+    "minimum_mean_joint_gain_over_P_nats": 0.02,
+    "minimum_mean_joint_gain_over_spectral_nats_strict": 0.0,
+    "same_people_required": 9,
+    "strictly_positive_against_every": [
+      "P",
+      "deranged_joint",
+      "joint_shuffled",
+      "uniform",
+      "training_prior",
+      "spectral_joint"
+    ],
+    "ties": "nonpositive",
+    "secondary_rescue": false
+  },
+  "cue_sensitivity": {
+    "separate_from_primary": true,
+    "population": "All ten inner-condition cue EEG-only pairs",
+    "minimum_mean_gain_over_uniform_nats": 0.02,
+    "same_people_required": 9,
+    "strictly_positive_against_every": [
+      "cue_eeg_shuffled",
+      "uniform",
+      "training_prior"
+    ],
+    "interpretation": "Sensitivity to a recorded cue response is not imagined-word information or cortical attribution. Failure does not prove absence of biological signal."
+  },
+  "progression": "Primary AND cue sensitivity must pass to propose later untouched confirmation. No outcome automatically authorizes session-3 access. Action EEG-only, other conditions, calibration and every null remain reported regardless of primary.",
+  "resources": {
+    "wall_seconds": 1200,
+    "wall_includes": "qualification, prediction, hash-freeze commit/push and one final score",
+    "rss_bytes": 1073741824,
+    "generated_bytes": 33554432,
+    "minimum_free_bytes": 21474836480,
+    "numerical_workers": 1
+  },
+  "execution": "One new exclusive local output inner_speech_temporal_s2_a1_20261002 outside OneDrive. Require the complete committed acquisition and pinned all-ten audit. Preserve every prior failed/completed attempt, especially temporal start/failure and session-two audit start/result. Freeze all30 pairs/all13 prediction arms and all11 raw-score arms; commit/push ONLY the complete hash freeze and verify remote main before exactly one score. Original started_unix governs the1200-second deadline through final score, including freeze commit/push. Any failure consumes this successor: no retry, tuning, new data, partial scoring or relaxed limits.",
+  "privacy": "Only code/protocol, source metadata and hashes, sanitized status and complete aggregates may be published. Raw signals/events, labels, excluded-slot identities, per-trial predictions and weights remain local outside OneDrive.",
+  "interpretation": "Prospectively specified development comparison on structurally eligible same-day within-person four-word session-two trials, after source event structure was audited but before any session-two physiological feature extraction or scoring. Not independent confirmation of the earlier work; not cortical origin, cue-independent thoughts, arbitrary text, new-day robustness, unseen-person generalization, prospective live use or clinical utility. The fixed ordered signed bin means are not beta-envelope trajectories. No architecture ceiling is established by failure of this one representation.",
+  "inherited_plan_sha256": "067231fc33934b03525dd3f579ba63e0711e597d98fb738d7c9925cbafc55f43",
+  "ancillary_correction": {
+    "option": "allow_attention_after_relax=True",
+    "default": "False; session-one and original temporal entrypoints retain the original refusal.",
+    "scope": "Session two only. Permit exactly one attention question immediately followed by exactly one attention answer, then the next observed trial-start marker, after a segment with exactly observed start, cue, action and relax, in order and within all available original timing bounds. Rest remains None; no sample, label, trial, event or boundary is inferred.",
+    "excluded": "Do not allow attention interrupting core phases, missing any other phase, duplicate phases, an answer without a question in the new configuration, multiple questions/answers, or cue/run-end as the immediate following boundary. Existing attention-after-rest behavior is unchanged.",
+    "audit": "registries/inner_speech_session2_audit_result.v0.json",
+    "audit_sha256": "c07767e099cb88185548245b5cfc64d89bcc75cbde93323b27fc9d3b59a200f5",
+    "qualification": "The diagnostic count of 1994 core-present segments is not assumed or forced. Recheck exact complete ordered decoder agreement, original grammar except this option, condition layout, class support and all thirty split preflights before physiology."
+  }
+}

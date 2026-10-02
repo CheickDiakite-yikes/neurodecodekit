@@ -24,6 +24,7 @@ def configured_runner():
     runner.SOURCE_SESSION = "ses-01"
     runner.MAX_EXCLUSIONS = 7
     runner.EXPERIMENT_KWARGS = {"observed_anchors": True}
+    runner.EVENT_PARSER_KWARGS = {}
     runner.PRIOR_EVIDENCE = {
         "inner_speech_test_1_20260922": ("started.json", "execution_failed.json"),
         "inner_speech_test_1_mr1_20260929": ("started.json", "execution_failed.json"),
@@ -117,7 +118,8 @@ def configured_runner():
             del reference
             budget.stage = "observed_slot_qualification"
             summary = {"participant": participant}
-            slots = parse_observed_slots(events, summary=summary, **event_options)
+            slots = parse_observed_slots(events, summary=summary, **event_options,
+                                         **runner.EVENT_PARSER_KWARGS)
             del events
             for condition_index, (condition, code) in enumerate(runner.CONDITIONS):
                 nominal = np.asarray([s.original_index for s in slots if s.condition == code])
