@@ -128,7 +128,8 @@ class ReferenceStatusTests(unittest.TestCase):
             self.assertEqual(reference_status_events(reader, participant="sub-10", session="ses-01"), [(20, 45)])
             expected = [(4, 31), (10, 44), (20, 45)]
             self.assertEqual(reference_status_events(reader, participant="sub-10", session="ses-02"), expected)
-            self.assertEqual(reader.iter_status_events(participant="sub-10", session="ses-02"), expected)
+            if importlib.util.find_spec("numpy"):
+                self.assertEqual(reader.iter_status_events(participant="sub-10", session="ses-02"), expected)
             for participant in ("sub-01", "sub-03"):
                 self.assertEqual(reference_status_events(reader, participant=participant), expected)
                 self.assertEqual(reference_status_events(reader, participant=participant, session="ses-02"), expected)
