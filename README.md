@@ -30,7 +30,22 @@ irreversible Tier C events.
 
 ## Scientific Operating Model
 
-**Current result and priority (September 29, 2026):**
+**Current result and priority (October 2, 2026):**
+The [completed ten-person imagined-word experiment](docs/INNER_SPEECH_OBSERVED_RESULT.md)
+scored once in **245 seconds**, retaining 1,993 trials, all ten people, all three
+conditions and all eight arms. The primary EEG increment **failed**: mean
+inner-speech log-loss gain **-0.003282 nats**, only **1/10** people beating every
+control (9/10 required). Joint inner-speech balanced accuracy was **24.58%**
+against 25% uniform; peripheral/timing-only pronounced balanced accuracy was **83.69%**.
+All negative and positive comparisons remain in the
+[aggregate](registries/inner_speech_observed_result.v0.json). This is a scientific
+negative result for the fixed model, not an execution failure or an EEG ceiling.
+**Next:** test a fixed time-resolved representation on separately authorized
+data, with an EEG-only sensitivity check and matched peripheral/null controls,
+before another untouched imagined-word confirmation. No tuning or rescoring
+of these consumed trials; cue decoding alone is not thought decoding.
+
+Earlier evidence remains relevant:
 [SPEECH-REPRO-1 completed and scored once](docs/SPEECH_REPRODUCTION_RESULT.md).
 The minimally overt EEGNet reference reached **52.49% balanced accuracy**, above
 the 20% baseline in all three people. But auxiliary-only prediction reached
@@ -86,7 +101,7 @@ covert passed in **1/3 blocked and 0/3 random**. The EEG all-person criterion
 still failed in both conditions. All 20 arms, 600 trials and both schemes remain in the
 [aggregate](registries/speech_probability_calibration_result.v0.json).
 
-**Next scientific priority:** close calibration/model/band searches on this reused
+**Fresh-cohort rationale (now tested below):** close calibration/model/band searches on this reused
 cohort and test imagined-word information on fresh people with strong peripheral
 and cue controls. The [source decision](docs/SPEECH_NEXT_COHORT_DECISION.md)
 reuses the existing ten-person Thinking Out Loud candidate for a fresh-cohort,
@@ -116,12 +131,14 @@ trials. No physiological windows, fits or scores followed. The approved
 [whole-cohort census](docs/INNER_SPEECH_EVENT_CENSUS.md) then completed in 14.17
 seconds: 50 intact run boundaries, but three absent direction cues and four
 incomplete cue/action/relax sequences in the existing decoder's output.
-It found 1,993 contiguous core sequences, not 2,000 qualified trials. **Next:
-reconcile source-compatible Status extraction once, then prospectively define
-an observed-anchor study retaining all ten people and every control.** No more
-piecemeal parser exceptions, inferred words or unapproved trial exclusions.
-The current all-trial study and the census are consumed; neither produced a
-neural result. See the [complete aggregate](registries/inner_speech_event_census_result.v0.json).
+It found 1,993 contiguous core sequences, not 2,000 qualified trials. The approved
+[observed-anchor successor](docs/INNER_SPEECH_OBSERVED_RESULT.md) subsequently
+confirmed exact independent decoder agreement for all ten people, accounted for
+all 2,000 nominal slots and retained 1,993 eligible trials with seven predefined
+structural exclusions. It completed training and one score; its primary failed.
+No inferred words, timestamps, compressed chronology or post-score rescue were
+used. Both earlier all-trial attempts and the census remain consumed history;
+the [census aggregate](registries/inner_speech_event_census_result.v0.json) is unchanged.
 Status events were read; labels cannot be called unopened. Consumed online recordings cannot be reused. The
 low-channel peripheral interface remains a separate practical lead, not thought-to-text.
 This consumed evaluation must not be retuned or rescored. We have evidence for
@@ -162,7 +179,8 @@ packet is active. See the [result closeout](docs/OFNER_2017_MOTOR_IMAGERY_RANGE_
 and [proof closeout](docs/OFNER_2017_MOTOR_IMAGERY_RANGE_HEADER_RESULT_PROOF_CLOSEOUT.md).
 The immutable machine frontier for that consumed result remains
 [`registries/current_research_frontier.v6.json`](registries/current_research_frontier.v6.json).
-The historical `registries/current_research_frontier.v10.json` also remains immutable.
+The historical `registries/current_research_frontier.v10.json` and
+`registries/current_research_frontier.v11.json` also remain immutable.
 The proof passed Base Python `99174411928`, Optional Neuro Readers
 `99174412006`, and CI `33280371097` on GitHub `main`.
 
