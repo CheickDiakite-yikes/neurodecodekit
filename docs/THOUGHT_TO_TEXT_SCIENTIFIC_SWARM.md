@@ -100,12 +100,96 @@ model rescue. If a language model is later used, compare the identical model,
 context, search and timing with content-bearing neural evidence removed.
 
 The all-ten structural audit and approved numerical successor are complete.
-The next proposed measurement is the fixed beta-envelope sensitivity/attribution
-experiment above, with separate sensitivity and imagined-content endpoints.
-It requires its own source decision, frozen protocol and approval; no further
-data work is authorized. Do not tune consumed sessions or open session 3 to
-confirm the failed signed-bin model. Compositional or invasive reference work
-likewise remains a separate source and scientific decision.
+Both publication CI suites for result commit `53098f3` passed in
+[workflow 37038468059](https://github.com/CheickDiakite-yikes/neurodecodekit/actions/runs/37038468059).
+The source review below changes the next recommendation; it does not reopen
+the failed experiment or authorize another data-accessing run.
+
+## Source review changes the next experiment
+
+The next recommended observation is a **reference reproduction of attempted
+speech transfer to verbal versus visual memory**, preserving the remaining
+scalp evidence. Train one fixed linear readout on attempted speech, then compare
+its predictions during the memory delay under the two strategies, with arrow
+content, evaluation blocks and timing matched. Use no language model. This is
+a design candidate, not an executable or already approved experiment.
+
+The [Kunz primary study](https://pmc.ncbi.nlm.nih.gov/articles/PMC12360486/)
+provides the same-arrow strategy contrast and attempted-speech reference in
+intracortical recordings. Its processed spike features are not verified beta
+field potentials. A successful reproduction would show sensitivity to known
+speech-related information modulated by strategy, not novel thought-to-text,
+scalp feasibility or recovery of privately selected content. Strategy-dependent
+attention and task differences would remain alternative explanations.
+
+Public [Dryad metadata](https://datadryad.org/dataset/doi:10.5061/dryad.gf1vhhn1j)
+and its [dataset API](https://datadryad.org/api/v2/datasets/doi%3A10.5061%2Fdryad.gf1vhhn1j)
+were checked on October 2, 2026: version 2, version ID 379376, CC0-1.0.
+The [file inventory](https://datadryad.org/api/v2/versions/379376/files) advertises:
+
+| Selected archive | File ID | Compressed bytes |
+| --- | ---: | ---: |
+| seqRecallSpeech.zip | 4203849 | 79,443,728 |
+| seqRecallVerbalMemory.zip | 4203853 | 175,492,315 |
+| seqRecallVisualMemory.zip | 4203851 | 105,176,285 |
+| Total | | 360,112,328 |
+
+License and advertised size are verified, not actual archive transport or
+contents. Exact paired participant/session/block coverage, event definitions,
+decompressed size and available peripheral measurements remain unresolved.
+No archive, neural sample, target, prediction or weight was opened in this review.
+
+**Requested next boundary, not authorization:** acquire only these three
+archives once into local storage outside OneDrive; inspect ZIP directories and
+their documentation, not neural arrays or per-trial event/target records.
+Proposed limits: ten minutes, 500 MiB transferred, 512 MiB retained archives,
+256 MiB RSS, one worker, at most 64 KiB of documentation, and no extraction
+of scientific arrays. Stop on mismatch, missing matching coverage, timeout or
+resource failure; no automatic retry or substitution. The output should be
+only a source-fit decision and the exact information needed to freeze one
+reference experiment. No training or scoring is included in that permission.
+
+## Keep beta dynamics as a separate hypothesis
+
+The [new ECoG paper](https://www.nature.com/articles/s41593-026-02456-0)
+motivates 12–24 Hz analytic-amplitude trajectories, not signed waveform bins.
+It used nine surgical participants; imagery articulation targets were derived
+from overt speech, and EMG monitoring covered four. Its human recordings are
+controlled-access, so an open paper is not an acquisition-ready dataset.
+This supports a hypothesis to test, not evidence of scalp translation.
+
+The adversarial review makes three prospective improvements to a beta test:
+
+- Compare ordered envelopes against the **same envelope's mean and mean squared
+  amplitude**. Comparing only against the old 13–30 Hz power features changes
+  the frequency range and amplitude statistic as well as temporal structure.
+- Add a trial-specific circular time shift, shared across EEG channels, with
+  peripheral inputs unchanged. It preserves the cyclic autocorrelation and
+  simultaneous spatial pattern more closely than arbitrary bin scrambling.
+  Superiority indicates useful task alignment, not a uniquely linguistic
+  sequence; one fixed null is not a randomization significance distribution.
+- Predeclare separate content and measurement-sensitivity interpretations.
+  Failed cue decoding does not alone validate an absence-of-imagery conclusion.
+  No threshold in the completed experiment is relaxed.
+
+The [scalp dataset descriptor](https://www.nature.com/articles/s41597-022-01147-2)
+places all three sessions on the same day and gives session 3 variable trial
+counts. Subtracting the first two 200-trial sessions from published totals
+implies 75–170 session-3 trials per person; these are derived bounds, not
+verified event counts or task-cell coverage. The current five-by-forty parser
+is therefore not a drop-in fit. Refitting within session 3 would test fresh
+trials in familiar people and context, not cross-day or cross-session transfer.
+
+For planning only, if independent people each have probability p of passing
+all controls, the chance of at least nine passes in ten is
+10*p^9*(1-p)+p^10: 37.58% at p=0.8 and 73.61% at p=0.9. This is an assumption-
+based consistency-gate calculation, not power for the whole experiment;
+additional effect thresholds can only lower the pass probability. Preserve
+uncertainty rather than calling every failed gate a biological null.
+
+**Do not acquire or open session 3 now.** Keep beta testing parked until a
+source-specific design can answer its question. No fresh neural experiment,
+archive acquisition, outreach, human study or model tuning occurred here.
 
 The substantive change is the research target: **identify a transferable
 content-bearing mechanism**, not optimize a score whose origin we cannot distinguish.

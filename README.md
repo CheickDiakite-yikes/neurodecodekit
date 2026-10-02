@@ -39,17 +39,21 @@ against peripheral/timing alone and **-0.008322 nats** against matched spectral
 EEG; **0/10** people beat every control. Joint balanced accuracy was **22.15%**
 versus 25% uniform. All nulls and secondary results remain in the
 [aggregate](registries/inner_speech_temporal_attention_result.v0.json).
-**Next:** stop signed-bin tuning/confirmation and specify one separate fixed
-beta-envelope sensitivity/attribution experiment, with matched power,
-per-trial time-scrambling and peripheral/null controls. It needs its own source
-decision, bounded protocol and approval. No consumed session is reopened;
-session 3 remains unopened and unacquired. This negative result is not an EEG
-ceiling or proof that thought decoding is impossible.
+**Next:** preserve session 3 and qualify the three-file, 360 MB intracortical
+reference for attempted-speech transfer to verbal versus visual rehearsal of
+the same arrows. The [source review](docs/THOUGHT_TO_TEXT_SCIENTIFIC_SWARM.md#source-review-changes-the-next-experiment)
+verified CC0 and exact file sizes; matched archive coverage is not yet verified.
+The bounded acquisition/documentation-only step needs approval; no download,
+training or score is authorized. This is a proposed reference reproduction,
+not a new thought-to-text claim. The beta-envelope idea remains separate and
+parked: session 3 has variable trial counts and is not a fresh recording day.
+No consumed session is reopened. The negative result is not an EEG ceiling.
 
 The [scientific swarm review](docs/THOUGHT_TO_TEXT_SCIENTIFIC_SWARM.md) now organizes
 work around competing mechanisms, independent falsification and decisive data.
 Its separate mechanistic candidate is a fixed beta-envelope trajectory test,
-distinct from the completed raw-bin comparison; no new experiment is authorized.
+with matched amplitude statistics and circular-shift controls, distinct from
+the completed raw-bin comparison; no new experiment is authorized.
 The longer-term milestone is content
 that external cues cannot already supply, with transfer to untouched words or days.
 
