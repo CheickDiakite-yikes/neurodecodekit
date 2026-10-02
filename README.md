@@ -39,15 +39,16 @@ against peripheral/timing alone and **-0.008322 nats** against matched spectral
 EEG; **0/10** people beat every control. Joint balanced accuracy was **22.15%**
 versus 25% uniform. All nulls and secondary results remain in the
 [aggregate](registries/inner_speech_temporal_attention_result.v0.json).
-**Next:** preserve session 3 and qualify the three-file, 360 MB intracortical
-reference for attempted-speech transfer to verbal versus visual rehearsal of
-the same arrows. The [source review](docs/THOUGHT_TO_TEXT_SCIENTIFIC_SWARM.md#source-review-changes-the-next-experiment)
-verified CC0 and exact file sizes; matched archive coverage is not yet verified.
-The bounded acquisition/documentation-only step needs approval; no download,
-training or score is authorized. This is a proposed reference reproduction,
-not a new thought-to-text claim. The beta-envelope idea remains separate and
-parked: session 3 has variable trial counts and is not a fresh recording day.
-No consumed session is reopened. The negative result is not an EEG ceiling.
+**Current blocker:** the approved three-file intracortical reference acquisition
+stopped with an HTTP error after **1.062 seconds and zero archive bytes copied**.
+No inventory, internal README, neural array, label, fit or score was opened.
+The [failure and next boundary](docs/THOUGHT_TO_TEXT_SCIENTIFIC_SWARM.md#approved-acquisition-stopped-at-http-transport)
+preserve the consumed attempt; the HTTP status was not retained, so its cause
+is unknown. Next is a separately approved thirty-second header-only diagnostic,
+not a blind download retry. The intended scientific question remains attempted-
+speech transfer to verbal versus visual rehearsal of the same arrows. No new
+decoding result is claimed. Preserve session 3 and all consumed evidence; the
+beta-envelope hypothesis remains parked.
 
 The [scientific swarm review](docs/THOUGHT_TO_TEXT_SCIENTIFIC_SWARM.md) now organizes
 work around competing mechanisms, independent falsification and decisive data.

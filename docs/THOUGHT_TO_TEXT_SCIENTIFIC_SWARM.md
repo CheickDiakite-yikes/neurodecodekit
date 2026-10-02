@@ -139,12 +139,38 @@ contents. Exact paired participant/session/block coverage, event definitions,
 decompressed size and available peripheral measurements remain unresolved.
 No archive, neural sample, target, prediction or weight was opened in this review.
 
+### Approved acquisition stopped at HTTP transport
+
+The sole approved acquisition is now **failed and consumed**. Implementation
+`40c052f` passed nine generated-only tests and Ruff before its one invocation.
+It stopped during the first archive attempt with `HTTPError` after 1.062 seconds,
+at 36,548,608-byte peak RSS. Zero archive bytes were copied; the local archive
+file is empty. No ZIP inventory, internal README, neural array, event, target,
+fit or score was opened or produced. The local start and failure markers remain
+unchanged; their hashes and measured outcome are in the
+[aggregate failure record](../registries/kunz_reference_qualification.v0.json).
+
+The helper did not retain the HTTP status or headers. Do not infer 401, 403,
+rate limiting, an authentication cause or a permanent source restriction.
+[Dryad's API documentation](https://github.com/datadryad/dryad-app/blob/main/documentation/apis/api_accounts.md)
+requires tokens for API downloads, but that does not diagnose a failure on its
+separate web-download route. No credential, account, retry, alternate endpoint
+or workaround was used. This is an access blocker, not a biological null or a
+thought-to-text result.
+
+**Next proposed boundary:** one separately approved, thirty-second,
+header-only diagnostic of the first approved web-download URL, at most four
+HTTPS redirects, retaining only status and sanitized technical header metadata.
+No explicit response-body read, archive retention, array or trial access,
+acquisition retry, model or score is included. This can distinguish HTTP failure
+classes without another blind full-download attempt. It does not promise a fix.
+
 **Approved October 2, 2026:** the maintainer replied "continue approved, lets
 please get closer to thought to text" to the explicit acquisition-only request.
 The source-decision commit `4182ec8` passed both
 [CI jobs](https://github.com/CheickDiakite-yikes/neurodecodekit/actions/runs/37042602118).
-This admits one acquisition and documentation check, not a neural experiment.
-Acquire only these three
+That approval admitted one acquisition and documentation check, not a neural
+experiment, and is now consumed. Its original scope was to acquire only these three
 archives once into local storage outside OneDrive; inspect ZIP directories and
 their documentation, not neural arrays or per-trial event/target records.
 Approved limits: ten minutes, 500 MiB transferred, 512 MiB retained archives,
@@ -193,8 +219,9 @@ additional effect thresholds can only lower the pass probability. Preserve
 uncertainty rather than calling every failed gate a biological null.
 
 **Do not acquire or open session 3 now.** Keep beta testing parked until a
-source-specific design can answer its question. No fresh neural experiment,
-archive acquisition, outreach, human study or model tuning occurred here.
+source-specific design can answer its question. The later approved archive
+attempt failed as recorded above. No neural experiment, outreach, human study
+or model tuning occurred.
 
 The substantive change is the research target: **identify a transferable
 content-bearing mechanism**, not optimize a score whose origin we cannot distinguish.
