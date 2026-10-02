@@ -150,20 +150,32 @@ fit or score was opened or produced. The local start and failure markers remain
 unchanged; their hashes and measured outcome are in the
 [aggregate failure record](../registries/kunz_reference_qualification.v0.json).
 
-The helper did not retain the HTTP status or headers. Do not infer 401, 403,
-rate limiting, an authentication cause or a permanent source restriction.
+The original helper did not retain the HTTP status or headers, so the original
+status remains unknown. The separately approved diagnostic below does not
+retroactively fill that missing evidence.
 [Dryad's API documentation](https://github.com/datadryad/dryad-app/blob/main/documentation/apis/api_accounts.md)
 requires tokens for API downloads, but that does not diagnose a failure on its
 separate web-download route. No credential, account, retry, alternate endpoint
 or workaround was used. This is an access blocker, not a biological null or a
 thought-to-text result.
 
-**Next proposed boundary:** one separately approved, thirty-second,
-header-only diagnostic of the first approved web-download URL, at most four
-HTTPS redirects, retaining only status and sanitized technical header metadata.
-No explicit response-body read, archive retention, array or trial access,
-acquisition retry, model or score is included. This can distinguish HTTP failure
-classes without another blind full-download attempt. It does not promise a fix.
+**Header-only diagnostic completed:** the maintainer's "continue" authorized
+the single thirty-second check. The same web URL, User-Agent and encoding
+headers returned **403 Forbidden** in **0.61 seconds**, with no redirect.
+The response advertised HTML, length 118 and server `awselb/2.0`, with no
+authentication challenge header. Zero response-body reads, retained body bytes
+or archive writes occurred. The [diagnostic record](../registries/kunz_reference_http_diagnostic.v0.json)
+preserves only safe metadata; the earlier failure marker is unchanged.
+
+The headers do not distinguish authentication, WAF/IP policy, rate limiting or
+another denial mechanism. The absent challenge header does not rule out authentication.
+No neural or trial data were accessed and no further source contact is admitted.
+**Next:** obtain the exact three archives through the maintainer's normal Dryad
+browser download or a separately authorized authenticated API connection.
+Neither route is verified to succeed. Keep credentials out of chat, preserve
+the exact file/version identities, and use a new nonsynced local folder rather
+than overwriting the consumed attempt. Archive inspection remains pending;
+no alternate dataset, anonymous retry, training or score is authorized.
 
 **Approved October 2, 2026:** the maintainer replied "continue approved, lets
 please get closer to thought to text" to the explicit acquisition-only request.

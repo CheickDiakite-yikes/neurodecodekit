@@ -42,10 +42,11 @@ versus 25% uniform. All nulls and secondary results remain in the
 **Current blocker:** the approved three-file intracortical reference acquisition
 stopped with an HTTP error after **1.062 seconds and zero archive bytes copied**.
 No inventory, internal README, neural array, label, fit or score was opened.
-The [failure and next boundary](docs/THOUGHT_TO_TEXT_SCIENTIFIC_SWARM.md#approved-acquisition-stopped-at-http-transport)
-preserve the consumed attempt; the HTTP status was not retained, so its cause
-is unknown. Next is a separately approved thirty-second header-only diagnostic,
-not a blind download retry. The intended scientific question remains attempted-
+The separately approved **0.61-second header-only diagnostic returned 403**,
+with no redirect or body read. The [failure and next boundary](docs/THOUGHT_TO_TEXT_SCIENTIFIC_SWARM.md#approved-acquisition-stopped-at-http-transport)
+preserve both attempts; the denial's cause remains unknown. Next requires a
+normal browser download or separately authorized authenticated API connection,
+not another anonymous retry. The intended scientific question remains attempted-
 speech transfer to verbal versus visual rehearsal of the same arrows. No new
 decoding result is claimed. Preserve session 3 and all consumed evidence; the
 beta-envelope hypothesis remains parked.
