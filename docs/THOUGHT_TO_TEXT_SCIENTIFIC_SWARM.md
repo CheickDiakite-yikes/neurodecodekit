@@ -39,7 +39,7 @@ authorization and appropriate oversight. No collection is proposed for execution
 
 | Hypothesis | Smallest useful falsifier | What would reject it |
 |---|---|---|
-| Ordered beta-amplitude trajectories carry information lost by averaging | One fixed 12–24 Hz envelope representation and linear model, compared with whole-window power, a fixed temporal-order scramble, matched peripheral features and label nulls | No held-out increment, or the advantage survives temporal scrambling |
+| Ordered beta-amplitude trajectories carry information lost by averaging | One fixed 12–24 Hz envelope representation and linear model, compared with whole-window power, independently scrambled time bins per trial, matched peripheral features and label nulls | No held-out increment, or the advantage survives temporal scrambling |
 | Reusable phonetic features transfer better than memorized word identities | One prespecified distinction trained on two syllable contexts and tested on an unseen third, with cue and peripheral controls | Only familiar contexts or selectively chosen people work |
 | Apparent word information is largely cue/history/peripheral prediction | Identical external input with privately chosen content; pre-choice, timing/history and expanded peripheral controls; an untouched day | The pre-choice or nuisance model explains the apparent decoding advantage |
 
@@ -55,6 +55,16 @@ has its first zero at 16 Hz and can alias surviving higher-frequency components.
 This does not destroy every beta-related effect, but it is not extraction of a
 12–24 Hz amplitude envelope. These are code/sampling deductions, not empirical
 findings. The consumed experiment is not amended or reopened by this observation.
+
+The adversarial review caught an important null-design trap: one common time-bin
+permutation would only rename columns and leave isotropic ridge predictions
+unchanged. The proposed scramble must use a label-independent, reproducibly
+seeded permutation per trial, synchronized across channels, before training-only
+scaling. It preserves simultaneous spatial patterns but destroys alignment and
+autocorrelation as well as order; beating it supports useful time-locked structure,
+not specifically a causal language mechanism. Envelope filtering must not borrow
+cue, neighboring-trial or held-out samples. These are requirements for a future
+protocol, not an authorized analysis or an edit to the consumed experiment.
 
 ## Use published knowledge without confusing reproduction with discovery
 
