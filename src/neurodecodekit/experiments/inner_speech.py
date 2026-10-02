@@ -127,11 +127,22 @@ def _split_record(train, validation, original_indices, labels, null_labels):
             "original_split_sha256": hashlib.sha256(json.dumps(payload, sort_keys=True).encode()).hexdigest()}
 
 
-def _nested_plan(labels, original_trial_indices, seed):
+def _retention_record(original, nominal):
+    np = _numpy()
+    return {"nominal_trials": len(nominal), "retained_trials": len(original),
+            "excluded_trials": len(nominal) - len(original),
+            "nominal_indices_sha256": hashlib.sha256(
+                json.dumps(np.asarray(nominal).tolist()).encode()).hexdigest(),
+            "retained_indices_sha256": hashlib.sha256(
+                json.dumps(np.asarray(original).tolist()).encode()).hexdigest()}
+
+
+def _nested_plan(labels, original_trial_indices, seed, nominal_trial_indices=None):
     np = _numpy()
     labels = _labels(labels)
     original = np.asarray(original_trial_indices)
-    if len(labels) not in (40, 80, 120) or original.shape != labels.shape or original.dtype.kind not in "iu":
+    if ((nominal_trial_indices is None and len(labels) not in (40, 80, 120)) or
+            original.shape != labels.shape or original.dtype.kind not in "iu"):
         raise ValueError("Conditions require 40, 80 or 120 original whole trials and integer indices")
     if (original < 0).any() or np.any(original[1:] <= original[:-1]):
         raise ValueError("Original trial indices must be nonnegative, unique and chronological")
@@ -139,27 +150,65 @@ def _nested_plan(labels, original_trial_indices, seed):
         raise ValueError("Seed must be a nonnegative Python integer with a distinct four-seed block")
     original = original.astype(np.int64, copy=False)
     _four_classes(labels)
-    rows = np.arange(len(labels))
+    nominal = original
+    if nominal_trial_indices is not None:
+        nominal = np.asarray(nominal_trial_indices)
+        if (nominal.ndim != 1 or len(nominal) not in (40, 80, 120) or nominal.dtype.kind not in "iu" or
+                (nominal < 0).any() or (nominal > 199).any() or
+                np.any(nominal[1:] <= nominal[:-1])):
+            raise ValueError("Nominal indices require 40, 80 or 120 unique chronological integers in 0..199")
+        nominal = nominal.astype(np.int64, copy=False)
+        if not 0 <= len(nominal) - len(original) <= 7 or not np.isin(original, nominal).all():
+            raise ValueError("Retained indices must be a nominal subset with at most seven exclusions")
+    rows = np.arange(len(nominal))
     blocks = np.array_split(rows, 4)
+
+    def retained_split(planned_train, planned_validation):
+        if nominal_trial_indices is None:
+            return planned_train, planned_validation
+        train = np.flatnonzero(np.isin(original, nominal[planned_train]))
+        validation = np.flatnonzero(np.isin(original, nominal[planned_validation]))
+        if len(train) < 2 or len(validation) < 2:
+            raise ValueError("Retained temporal split is too small for derangement")
+        return train, validation
+
+    def record_split(train, validation, planned_train, planned_validation, null_labels):
+        record = _split_record(train, validation, original, labels, null_labels)
+        if nominal_trial_indices is not None:
+            payload = {"train": nominal[planned_train].tolist(),
+                       "validation": nominal[planned_validation].tolist()}
+            record.update(nominal_training_trials=len(planned_train),
+                          nominal_validation_trials=len(planned_validation),
+                          excluded_training_trials=len(planned_train) - len(train),
+                          excluded_validation_trials=len(planned_validation) - len(validation),
+                          nominal_split_sha256=hashlib.sha256(
+                              json.dumps(payload, sort_keys=True).encode()).hexdigest())
+        return record
+
     plans, records = [], []
     for fold, block in enumerate(blocks):
-        train, validation = _embargoed_split(rows, block, original)
+        # Freeze blocks and both embargo levels on nominal slots before intersecting
+        # retained rows. Deleting a boundary slot cannot reclaim its embargoed neighbour.
+        planned_train, planned_validation = _embargoed_split(rows, block, nominal)
+        train, validation = retained_split(planned_train, planned_validation)
         null_labels = np.full(len(labels), -1, dtype=np.int64)
         permutation = np.random.default_rng(seed + fold).permutation(len(train))
         null_labels[train] = labels[train][permutation]
-        record = _split_record(train, validation, original, labels, null_labels)
+        record = record_split(train, validation, planned_train, planned_validation, null_labels)
         record.update({"outer_fold": fold, "shuffle_seed": seed + fold,
                        "temperature_calibration_trials": len(train), "inner_folds": []})
         inner, coverage = [], np.zeros(len(labels), dtype=int)
         for other, inner_block in enumerate(blocks):
             if other == fold:
                 continue
-            inner_validation = np.intersect1d(train, inner_block, assume_unique=True)
-            inner_train, inner_validation = _embargoed_split(train, inner_validation, original)
+            planned_inner_validation = np.intersect1d(planned_train, inner_block, assume_unique=True)
+            planned_inner_train, planned_inner_validation = _embargoed_split(
+                planned_train, planned_inner_validation, nominal)
+            inner_train, inner_validation = retained_split(planned_inner_train, planned_inner_validation)
             inner.append((inner_train, inner_validation))
             coverage[inner_validation] += 1
-            record["inner_folds"].append(_split_record(
-                inner_train, inner_validation, original, labels, null_labels))
+            record["inner_folds"].append(record_split(inner_train, inner_validation,
+                planned_inner_train, planned_inner_validation, null_labels))
         if not np.all(coverage[train] == 1) or coverage.sum() != len(train):
             raise ValueError("Inner OOF must cover outer training exactly once, without outer test rows")
         plans.append((train, validation, inner, null_labels))
@@ -167,10 +216,13 @@ def _nested_plan(labels, original_trial_indices, seed):
     return labels, plans, records
 
 
-def preflight_condition(labels, original_trial_indices, *, seed=SEED):
+def preflight_condition(labels, original_trial_indices, *, seed=SEED, nominal_trial_indices=None):
     """Validate fixed splits and record true/null supports, without changing folds."""
-    return {"n_trials": len(labels), "seed_block": [seed, seed + 3],
-            "folds": _nested_plan(labels, original_trial_indices, seed)[2]}
+    result = {"n_trials": len(labels), "seed_block": [seed, seed + 3],
+              "folds": _nested_plan(labels, original_trial_indices, seed, nominal_trial_indices)[2]}
+    if nominal_trial_indices is not None:
+        result.update(_retention_record(original_trial_indices, nominal_trial_indices))
+    return result
 
 
 def _ridge_probabilities(train, labels, evaluation):
@@ -293,7 +345,7 @@ def _predict_arms(features, labels, null_labels, train, validation, check):
 
 
 def run_condition(features, labels, original_trial_indices, *, seed=SEED, check=None,
-                  missing_timing=False):
+                  missing_timing=False, observed_anchors=False, nominal_trial_indices=None):
     """Return prediction arrays and fit diagnostics; never score outer targets.
 
     Return keys are predictions (eight calibrated/control arrays), uncalibrated
@@ -301,16 +353,24 @@ def run_condition(features, labels, original_trial_indices, *, seed=SEED, check=
     P includes all 77 peripheral features plus exactly eight caller-supplied
     target-free timing/run/order columns; no direction identity may enter them.
     The explicit missing-timing amendment appends exactly two availability flags.
+    Observed-anchor mode instead appends three flags and requires the full nominal
+    condition indices; missing-timing mode and observed-anchor mode are exclusive.
     """
     np = _numpy()
     started = time.monotonic()
-    labels, plans, fold_records = _nested_plan(labels, original_trial_indices, seed)
+    if type(observed_anchors) is not bool:
+        raise ValueError("Observed anchor mode must be an explicit boolean")
+    if observed_anchors and (missing_timing or nominal_trial_indices is None):
+        raise ValueError("Observed anchors require nominal indices and exclude missing-timing mode")
+    if not observed_anchors and nominal_trial_indices is not None:
+        raise ValueError("Nominal retention metadata requires explicit observed-anchor mode")
+    labels, plans, fold_records = _nested_plan(labels, original_trial_indices, seed, nominal_trial_indices)
     if set(features) != {"P", "E_action", "E_cue", "E_late"}:
         raise ValueError("Expected exactly P, E_action, E_cue and E_late feature blocks")
     features = {name: _matrix(values, name) for name, values in features.items()}
     if type(missing_timing) is not bool:
         raise ValueError("Missing timing mode must be an explicit boolean")
-    p_width = 87 if missing_timing else 85
+    p_width = 88 if observed_anchors else 87 if missing_timing else 85
     if features["P"].shape != (len(labels), p_width) or any(
             features[name].shape != (len(labels), 640) for name in ("E_action", "E_cue", "E_late")):
         raise ValueError("Expected the registered peripheral/timing width and three n×640 EEG blocks")
@@ -339,7 +399,7 @@ def run_condition(features, labels, original_trial_indices, *, seed=SEED, check=
         fold_records[fold]["temperatures"] = temperatures
     for values in (*predictions.values(), *raw_predictions.values()):
         _probabilities(values, len(labels))
-    return {"predictions": predictions, "uncalibrated": raw_predictions, "fit_diagnostics": {
+    result = {"predictions": predictions, "uncalibrated": raw_predictions, "fit_diagnostics": {
         "n_trials": len(labels), "seed_block": [seed, seed + 3], "outer_folds": fold_records,
         "peripheral_timing_features": p_width, "missing_timing_amendment": missing_timing,
         "ridge_fits": 96, "temperature_fits": 24, "ridge_alpha": 1.0,
@@ -361,6 +421,10 @@ def run_condition(features, labels, original_trial_indices, *, seed=SEED, check=
         "argmax_tie_policy": "exact output ties only; mathematical lost gap at most4ULPs; original winner advanced1ULP; strict reversals refuse",
         "argmax_changes": 0, "outer_scores_computed": False,
         "elapsed_seconds": time.monotonic() - started}}
+    if observed_anchors:
+        result["fit_diagnostics"].update(observed_anchor_amendment=True,
+            **_retention_record(original_trial_indices, nominal_trial_indices))
+    return result
 
 
 def _metrics(probabilities, labels):
