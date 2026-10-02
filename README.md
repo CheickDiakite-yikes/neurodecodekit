@@ -40,6 +40,12 @@ exposing word identities, reading physiological windows, fitting or scoring. Pre
 the consumed attempt; do not drop participants, infer events or rerun automatically.
 Session 3 remains unopened and unacquired.
 
+The [scientific swarm review](docs/THOUGHT_TO_TEXT_SCIENTIFIC_SWARM.md) now organizes
+work around competing mechanisms, independent falsification and decisive data.
+Its next candidate is a fixed beta-envelope trajectory test, distinct from raw
+bin means; no new experiment is authorized. The longer-term milestone is content
+that external cues cannot already supply, with transfer to untouched words or days.
+
 **Latest completed scientific result:**
 The [completed ten-person imagined-word experiment](docs/INNER_SPEECH_OBSERVED_RESULT.md)
 scored once in **245 seconds**, retaining 1,993 trials, all ten people, all three
