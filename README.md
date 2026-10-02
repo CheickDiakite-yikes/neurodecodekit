@@ -31,6 +31,16 @@ irreversible Tier C events.
 ## Scientific Operating Model
 
 **Current result and priority (October 2, 2026):**
+The fresh [session-2 temporal test stopped before physiological analysis](docs/INNER_SPEECH_TEMPORAL_FAILURE.md):
+all ten recordings were acquired, but participant 3's attention/rest sequence
+failed the frozen eligibility rule after 20.80 seconds. **Zero fits or scores**;
+the temporal hypothesis remains untested. **Next:** seek fresh approval for one
+all-ten, Status-only structural audit (120 seconds, 256 MiB, 1 MiB output), without
+exposing word identities, reading physiological windows, fitting or scoring. Preserve
+the consumed attempt; do not drop participants, infer events or rerun automatically.
+Session 3 remains unopened and unacquired.
+
+**Latest completed scientific result:**
 The [completed ten-person imagined-word experiment](docs/INNER_SPEECH_OBSERVED_RESULT.md)
 scored once in **245 seconds**, retaining 1,993 trials, all ten people, all three
 conditions and all eight arms. The primary EEG increment **failed**: mean
@@ -40,10 +50,9 @@ against 25% uniform; peripheral/timing-only pronounced balanced accuracy was **8
 All negative and positive comparisons remain in the
 [aggregate](registries/inner_speech_observed_result.v0.json). This is a scientific
 negative result for the fixed model, not an execution failure or an EEG ceiling.
-**Next:** test a fixed time-resolved representation on separately authorized
-data, with an EEG-only sensitivity check and matched peripheral/null controls,
-before another untouched imagined-word confirmation. No tuning or rescoring
-of these consumed trials; cue decoding alone is not thought decoding.
+This motivated the fresh temporal test above, including EEG-only sensitivity
+and matched peripheral/null controls. No tuning or rescoring of these consumed
+session-1 trials; cue decoding alone is not thought decoding.
 
 Earlier evidence remains relevant:
 [SPEECH-REPRO-1 completed and scored once](docs/SPEECH_REPRODUCTION_RESULT.md).
