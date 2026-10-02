@@ -21,6 +21,15 @@ def configured_runner():
     runner.PLAN = repo / "registries/inner_speech_observed_plan.v0.json"
     runner.FREEZE = repo / "registries/inner_speech_observed_prediction_freeze.v0.json"
     runner.RESULT = repo / "registries/inner_speech_observed_result.v0.json"
+    runner.SOURCE_SESSION = "ses-01"
+    runner.MAX_EXCLUSIONS = 7
+    runner.EXPERIMENT_KWARGS = {"observed_anchors": True}
+    runner.PRIOR_EVIDENCE = {
+        "inner_speech_test_1_20260922": ("started.json", "execution_failed.json"),
+        "inner_speech_test_1_mr1_20260929": ("started.json", "execution_failed.json"),
+        "inner_speech_event_audit_20260929": ("started.json", "result.json"),
+        "inner_speech_event_census_20260929": ("started.json", "result.json"),
+    }
     runner.CODE_PATHS += (
         "scripts/test_inner_speech_observed.py",
         "src/neurodecodekit/datasets/inner_speech_observed.py",
@@ -41,14 +50,8 @@ def configured_runner():
                 runner.require(total <= 1024**2 - 4096, "decoder_gate_output_cap")
 
     def prior_evidence():
-        names = {
-            "inner_speech_test_1_20260922": ("started.json", "execution_failed.json"),
-            "inner_speech_test_1_mr1_20260929": ("started.json", "execution_failed.json"),
-            "inner_speech_event_audit_20260929": ("started.json", "result.json"),
-            "inner_speech_event_census_20260929": ("started.json", "result.json"),
-        }
         return {f"{root}/{name}": runner.sha256(runner.BASE / root / name)
-                for root, files in names.items() for name in files}
+                for root, files in runner.PRIOR_EVIDENCE.items() for name in files}
 
     def validate_pairs(pairs):
         expected = {(f"sub-{i:02d}", condition) for i in range(1, 11)
@@ -82,7 +85,7 @@ def configured_runner():
         from neurodecodekit.datasets.inner_speech import BDFReader
         from neurodecodekit.datasets.inner_speech_observed import parse_observed_slots
         from neurodecodekit.datasets.inner_speech_reference_status import reference_status_events
-        from neurodecodekit.experiments.inner_speech import preflight_condition
+        preflight_condition = importlib.import_module(runner.MODEL_MODULE).preflight_condition
         runner.require(tuple(p for p, _, _ in inventory) ==
                        tuple(f"sub-{i:02d}" for i in range(1, 11)), "complete_source_roster")
         qualified, summaries, agreements = [], [], []
@@ -92,8 +95,11 @@ def configured_runner():
         for person_index, (participant, path, digest) in enumerate(inventory):
             budget.participant, budget.stage = participant, "decoder_agreement"
             reader = BDFReader(path)
-            events = reader.iter_status_events(budget.check, participant=participant)
-            reference = reference_status_events(reader, participant=participant, check=budget.check)
+            event_options = {"participant": participant}
+            if runner.SOURCE_SESSION != "ses-01":
+                event_options["session"] = runner.SOURCE_SESSION
+            events = reader.iter_status_events(budget.check, **event_options)
+            reference = reference_status_events(reader, check=budget.check, **event_options)
             core_equal = ([e for e in events if e[1] in core_codes] ==
                           [e for e in reference if e[1] in core_codes])
             protocol_equal = ([e for e in events if e[1] in protocol_codes] ==
@@ -111,7 +117,7 @@ def configured_runner():
             del reference
             budget.stage = "observed_slot_qualification"
             summary = {"participant": participant}
-            slots = parse_observed_slots(events, participant=participant, summary=summary)
+            slots = parse_observed_slots(events, summary=summary, **event_options)
             del events
             for condition_index, (condition, code) in enumerate(runner.CONDITIONS):
                 nominal = np.asarray([s.original_index for s in slots if s.condition == code])
@@ -127,7 +133,7 @@ def configured_runner():
         runner.require(len(qualified) == 10 and sum(s["slots"] for s in summaries) == 2000,
                        "complete_slot_roster")
         excluded = sum(s["excluded"] for s in summaries)
-        runner.require(excluded <= 7, "cohort_exclusion_cap")
+        runner.require(excluded <= runner.MAX_EXCLUSIONS, "cohort_exclusion_cap")
         runner.write_json(runner.LOCAL / "decoder_gate.json", {
             "status": "passed", "participants_checked": agreements,
             "physiological_windows_read": 0, "training_calls": 0, "scoring_calls": 0})
@@ -162,7 +168,7 @@ def configured_runner():
 
     def predict(budget, started):
         import numpy as np
-        from neurodecodekit.experiments.inner_speech import run_condition
+        run_condition = importlib.import_module(runner.MODEL_MODULE).run_condition
         budget.gate_active, budget.stage = True, "source_verification"
         before = prior_evidence()
         inventory = runner.source_inventory(budget)
@@ -183,7 +189,7 @@ def configured_runner():
                 nominal = np.asarray([s.original_index for s in slots if s.condition == code])
                 bundle = run_condition({k: v[rows] for k, v in features.items()}, labels, original,
                     seed=20260922 + 16 * person_index + 4 * condition_index, check=budget.check,
-                    observed_anchors=True, nominal_trial_indices=nominal)
+                    nominal_trial_indices=nominal, **runner.EXPERIMENT_KWARGS)
                 name = f"{participant}_{condition}"
                 predictions, targets, diagnostics = (runner.LOCAL / (name + suffix) for suffix in (
                     "_predictions.npz", "_targets.npy", "_diagnostics.json"))
@@ -202,7 +208,7 @@ def configured_runner():
             runner.require(runner.sha256(reader.path, budget.check) == digest, "source_changed_during_features")
             del features
             print(f"Completed participant {person_index + 1}/10; no held-out metrics computed.", flush=True)
-        validate_pairs(pairs)
+        runner.validate_pairs(pairs)
         runner.require(before == prior_evidence(), "prior_evidence_changed")
         runner.require(not (runner.LOCAL / "execution_failed.json").exists(), "failed_attempt")
         runner.write_json(runner.FREEZE, {"experiment_id": runner.EXPERIMENT_ID,

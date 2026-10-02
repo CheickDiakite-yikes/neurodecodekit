@@ -117,6 +117,25 @@ class ReferenceStatusTests(unittest.TestCase):
             with self.assertRaisesRegex(InnerSpeechRefusal, "reference_participant"):
                 reference_status_events(reader, participant="sub-11")
 
+    def test_sub10_short_pulse_exception_is_session1_only_and_defaults_are_unchanged(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "generated.bdf"
+            words = {i: code for start, stop, code in ((4, 5, 31), (10, 12, 44), (20, 24, 45))
+                     for i in range(start, stop)}
+            generated_bdf(path, records=1, replacements={"Status": words})
+            reader = BDFReader(path)
+            self.assertEqual(reference_status_events(reader, participant="sub-10"), [(20, 45)])
+            self.assertEqual(reference_status_events(reader, participant="sub-10", session="ses-01"), [(20, 45)])
+            expected = [(4, 31), (10, 44), (20, 45)]
+            self.assertEqual(reference_status_events(reader, participant="sub-10", session="ses-02"), expected)
+            self.assertEqual(reader.iter_status_events(participant="sub-10", session="ses-02"), expected)
+            for participant in ("sub-01", "sub-03"):
+                self.assertEqual(reference_status_events(reader, participant=participant), expected)
+                self.assertEqual(reference_status_events(reader, participant=participant, session="ses-02"), expected)
+            with mock.patch.object(reader, "_open", side_effect=AssertionError("must refuse before reading")):
+                with self.assertRaisesRegex(InnerSpeechRefusal, "reference_session"):
+                    reference_status_events(reader, participant="sub-10", session="ses-03")
+
     @unittest.skipUnless(importlib.util.find_spec("mne") and importlib.util.find_spec("numpy"),
                          "Optional MNE/NumPy comparison")
     def test_optional_mne_generated_rawarray_matches_source_semantics(self):

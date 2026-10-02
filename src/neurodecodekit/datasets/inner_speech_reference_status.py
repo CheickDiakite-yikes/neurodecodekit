@@ -92,16 +92,17 @@ def _onsets(steps, initial, n_samples, *, minimum_duration):
     return [(sample, code) for sample, code in events if code != OVERFLOW_ONLY]
 
 
-def reference_status_events(reader, *, participant, check=None):
-    """Private ordered (sample, code) pairs for the fixed ses-01 source route.
+def reference_status_events(reader, *, participant, session="ses-01", check=None):
+    """Private ordered (sample, code) pairs; session 2 requires explicit opt-in.
 
     Equivalent extraction settings: initial_event=True, consecutive=True,
-    shortest_event=2, min_duration=.002 only for sub-10 (otherwise0). Retain
+    shortest_event=2, min_duration=.002 only for sub-10/ses-01 (otherwise0). Retain
     17 bits before transitions, then remove exact65536 AFTER event extraction.
     Caller must keep this list private and refuse an anchor disagreement.
     """
     _require(participant in {f"sub-{i:02d}" for i in range(1, 11)},
              "reference_participant")
+    _require(session in ("ses-01", "ses-02"), "reference_session")
     _require(reader.sfreq == SFREQ and reader.channel_names[-1] == "Status" and
              reader.n_samples == reader.n_records * reader.samples_per_record,
              "reference_geometry")
@@ -116,7 +117,8 @@ def reference_status_events(reader, *, participant, check=None):
 
     steps, initial, n_samples = _status_steps(records(), reader.samples_per_record, check)
     _require(n_samples == reader.n_samples, "reference_incomplete_status")
-    result = _onsets(steps, initial, n_samples, minimum_duration=participant == "sub-10")
+    result = _onsets(steps, initial, n_samples,
+                     minimum_duration=participant == "sub-10" and session == "ses-01")
     if check is not None:
         check()
     return result

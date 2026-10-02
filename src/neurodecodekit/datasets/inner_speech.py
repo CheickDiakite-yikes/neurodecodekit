@@ -148,13 +148,13 @@ class BDFReader:
         High acquisition bits, including 65536, are masked, not trial codes.
         Pulse state spans records. Only sub-10/ses-01 discards pulses shorter
         than ceil(.002*1024)=3 samples, prospectively matching the source's
-        duration exception; other participants retain every nonzero pulse.
+        duration exception; all session-2 participants retain every nonzero pulse.
         Counts are technical aggregates; raw status words never enter reports.
         """
         np = _numpy()
-        _require(participant in {f"sub-{i:02d}" for i in range(1, 11)} and session == "ses-01",
+        _require(participant in {f"sub-{i:02d}" for i in range(1, 11)} and session in ("ses-01", "ses-02"),
                  "participant_session")
-        minimum = 3 if participant == "sub-10" else 1
+        minimum = 3 if participant == "sub-10" and session == "ses-01" else 1
         events, previous, onset = [], 0, 0
         summary = {"short_pulses_below_three": 0, "ignored_short_pulses": 0,
                    "nonzero_highbit_samples": 0, "minimum_pulse_samples": minimum}

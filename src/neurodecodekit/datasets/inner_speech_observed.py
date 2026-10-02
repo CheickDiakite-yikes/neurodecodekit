@@ -52,16 +52,19 @@ def _make_slot(phases, condition, run, original_index):
 
 
 def parse_observed_slots(events, *, participant, session="ses-01", summary=None):
-    """Assign exactly 5x40 observed slots; at most seven missing-core exclusions.
+    """Assign exactly 5x40 observed slots for explicitly admitted sessions.
 
     At most one of start/cue/action/relax/rest may be absent in any slot.
     Missing start/rest alone retain eligibility. Missing cue/action/relax
     excludes a slot without relabeling or compressing original chronology.
-    The caller enforces the separately approved seven-exclusion study-wide cap.
+    Session 1 permits at most seven missing-core exclusions per person;
+    opt-in session 2 permits two. The caller enforces the respective study-wide
+    caps of seven and twenty, along with condition coverage and split preflight.
+    Session-1 participant corrections never apply to session 2.
     Only observed adjacent logical intervals are validated; missing timestamps
     stay None, never an inferred boundary or substituted neighbouring event.
     """
-    _require(participant in {f"sub-{i:02d}" for i in range(1, 11)} and session == "ses-01",
+    _require(participant in {f"sub-{i:02d}" for i in range(1, 11)} and session in ("ses-01", "ses-02"),
              "participant_session")
     _require(isinstance(events, (list, tuple)) and 0 < len(events) <= 10000, "event_count")
     _require(all(isinstance(item, (list, tuple)) and len(item) == 2 and
@@ -83,7 +86,8 @@ def parse_observed_slots(events, *, participant, session="ses-01", summary=None)
     take((11,))
     take((13,))
     missing_baseline_end = peek() != 14
-    _require(not missing_baseline_end or participant == "sub-10", "baseline_end_missing")
+    _require(not missing_baseline_end or (participant == "sub-10" and session == "ses-01"),
+             "baseline_end_missing")
     if not missing_baseline_end:
         take((14,))
     ancillary = {"attention_question_events": 0, "attention_answer_events": 0,
@@ -136,13 +140,15 @@ def parse_observed_slots(events, *, participant, session="ses-01", summary=None)
     take((12,))
     _require(position == len(events), "trailing_events")
     expected = [21, 22, 22, 23, 23]
+    correction_allowed = participant == "sub-03" and session == "ses-01"
     _require(conditions == expected or
-             (participant == "sub-03" and conditions == [21, 22, 23, 23, 23]), "condition_layout")
-    corrected = participant == "sub-03" and conditions == expected
+             (correction_allowed and conditions == [21, 22, 23, 23, 23]), "condition_layout")
+    corrected = correction_allowed and conditions == expected
     if corrected:
         slots = [replace(slot, condition=23) if slot.run_ordinal == 3 else slot for slot in slots]
     excluded = sum(not slot.eligible for slot in slots)
-    _require(len(slots) == 200 and excluded <= 7, "exclusion_cap_or_slot_count")
+    _require(len(slots) == 200 and excluded <= (7 if session == "ses-01" else 2),
+             "exclusion_cap_or_slot_count")
     if summary is not None:
         summary.update(
             slots=200, eligible=200 - excluded, excluded=excluded, runs=5,
@@ -156,6 +162,6 @@ def parse_observed_slots(events, *, participant, session="ses-01", summary=None)
                                        for code in (21, 22, 23)},
             baseline_end_missing=missing_baseline_end, **ancillary,
             condition_correction_applied=corrected,
-            condition_correction_already_present=participant == "sub-03" and not corrected,
+            condition_correction_already_present=correction_allowed and not corrected,
             inferred_target_count=0, synthesized_event_count=0)
     return slots

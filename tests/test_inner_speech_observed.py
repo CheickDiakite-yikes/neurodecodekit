@@ -186,13 +186,62 @@ class ObservedSlotTests(unittest.TestCase):
         no_interrun = [event for event in original if event[1] != 51]
         parse_observed_slots(no_interrun, participant="sub-01", summary=summary)
         self.assertEqual(summary["missing_inter_run_rest_tags"], 4)
-        for participant, session in (("sub-11", "ses-01"), ("sub-01", "ses-02")):
+        for participant, session in (("sub-11", "ses-01"), ("sub-01", "ses-03")):
             with self.assertRaises(InnerSpeechRefusal):
                 parse_observed_slots(original, participant=participant, session=session)
         for events in (None, [], [(None, 11)], [(True, 11)], [(0, True)],
                        [original[0], original[0], *original[1:]], original[::-1]):
             with self.subTest(events_type=type(events).__name__), self.assertRaises(InnerSpeechRefusal):
                 parse_observed_slots(events, participant="sub-01")
+
+    def test_session2_all_people_keep_standard_conditions_and_session1_is_unchanged(self):
+        events = generated_events()
+        for participant in (f"sub-{i:02d}" for i in range(1, 11)):
+            with self.subTest(participant=participant):
+                summary = {}
+                slots = parse_observed_slots(events, participant=participant, session="ses-02", summary=summary)
+                self.assertEqual([slot.original_index for slot in slots], list(range(200)))
+                self.assertTrue(all(slot.eligible for slot in slots))
+                self.assertEqual(summary["condition_counts_nominal"], {"21": 40, "22": 80, "23": 80})
+                self.assertFalse(summary["condition_correction_applied"])
+                self.assertFalse(summary["condition_correction_already_present"])
+                default_summary, explicit_summary = {}, {}
+                self.assertEqual(
+                    parse_observed_slots(events, participant=participant, summary=default_summary),
+                    parse_observed_slots(events, participant=participant, session="ses-01", summary=explicit_summary))
+                self.assertEqual(default_summary, explicit_summary)
+        corrected = generated_events(conditions=(21, 22, 23, 23, 23))
+        with self.assertRaisesRegex(InnerSpeechRefusal, "condition_layout"):
+            parse_observed_slots(corrected, participant="sub-03", session="ses-02")
+        no_baseline_end = [event for event in events if event[1] != 14]
+        with self.assertRaisesRegex(InnerSpeechRefusal, "baseline_end_missing"):
+            parse_observed_slots(no_baseline_end, participant="sub-10", session="ses-02")
+
+    def test_session2_two_core_exclusions_pass_three_refuse_without_reindexing(self):
+        original = generated_events()
+        for phase in (1, 2, 3):
+            with self.subTest(phase=phase):
+                missing = [(0, phase), (199, phase)]
+                summary = {}
+                slots = parse_observed_slots(without_phases(original, missing), participant="sub-03",
+                                             session="ses-02", summary=summary)
+                self.assertEqual((summary["eligible"], summary["excluded"]), (198, 2))
+                self.assertEqual([slot.original_index for slot in slots if slot.eligible], list(range(1, 199)))
+                self.assertEqual(summary["condition_counts_eligible"], {"21": 39, "22": 80, "23": 79})
+                self.assertEqual(summary["exclusion_reasons"]["missing_" + PHASE_NAMES[phase]], 2)
+                self.assertEqual(slots[0].label, None if phase == 1 else 0)
+                unchanged = {"sentinel": True}
+                with self.assertRaisesRegex(InnerSpeechRefusal, "exclusion_cap"):
+                    parse_observed_slots(without_phases(original, missing + [(40, phase)]),
+                                         participant="sub-03", session="ses-02", summary=unchanged)
+                self.assertEqual(unchanged, {"sentinel": True})
+        noncore_missing = [(index, 0 if index % 2 else 4) for index in range(200)]
+        summary = {}
+        slots = parse_observed_slots(without_phases(original, noncore_missing), participant="sub-10",
+                                     session="ses-02", summary=summary)
+        self.assertTrue(all(slot.eligible for slot in slots))
+        self.assertEqual(summary["excluded"], 0)
+        self.assertEqual((summary["missing_start_events"], summary["missing_rest_events"]), (100, 100))
 
 
 if __name__ == "__main__":

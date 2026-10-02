@@ -22,6 +22,8 @@ import urllib.request
 
 
 REPO = Path(__file__).resolve().parents[1]
+ACQUISITION_ID = "INNER-SPEECH-ACQ-1"
+CONFIGURATION_SCRIPT = None
 MANIFEST = REPO / "registries/inner_speech_source_manifest.v0.json"
 RESULT = REPO / "registries/inner_speech_acquisition_result.v0.json"
 OUTPUT = Path(r"C:\Users\80714\AppData\Local\NeuroDecodeKit\ds003626_v2_1_2_ses01_20260922")
@@ -58,7 +60,7 @@ def validate_manifest(manifest):
     require(isinstance(manifest, dict), "manifest_object")
     require((manifest.get("dataset"), manifest.get("version"), manifest.get("source_commit")) ==
             ("ds003626", "2.1.2", COMMIT), "manifest_identity")
-    require(manifest.get("acquisition_id") == "INNER-SPEECH-ACQ-1", "acquisition_identity")
+    require(manifest.get("acquisition_id") == ACQUISITION_ID, "acquisition_identity")
     require(manifest.get("license") == "CC0" and manifest.get("raw_companions") == [], "source_scope")
     require(manifest.get("resource_limits") == {
         "wall_seconds": WALL_SECONDS, "peak_rss_bytes": GIB,
@@ -106,7 +108,7 @@ def validate_manifest(manifest):
     return manifest
 
 
-def load_manifest(path=MANIFEST):
+def load_manifest(path=None):
     def unique_object(pairs):
         result = {}
         for key, value in pairs:
@@ -114,7 +116,7 @@ def load_manifest(path=MANIFEST):
             result[key] = value
         return result
 
-    with Path(path).open("rb") as stream:
+    with Path(MANIFEST if path is None else path).open("rb") as stream:
         content = stream.read(METADATA_LIMIT + 1)
     require(len(content) <= METADATA_LIMIT, "manifest_size")
     return validate_manifest(json.loads(content, object_pairs_hook=unique_object))
@@ -238,7 +240,7 @@ def download(item, destination, budget, *, metadata=False, opener=None):
     size = 0
     opener = opener or urllib.request.build_opener(NoRedirect())
     request = urllib.request.Request(item["url"], headers={
-        "User-Agent": "NeuroDecodeKit-INNER-SPEECH-ACQ-1", "Accept-Encoding": "identity"})
+        "User-Agent": f"NeuroDecodeKit-{ACQUISITION_ID}", "Accept-Encoding": "identity"})
     with partial.open("xb") as output:
         with opener.open(request, timeout=budget.timeout()) as source:
             require(source.status == 200 and source.geturl() == item["url"], "response_status_or_redirect")
@@ -275,9 +277,9 @@ def download(item, destination, budget, *, metadata=False, opener=None):
     return receipt
 
 
-def acquire(manifest, output, *, result_path=RESULT, budget=None, opener=None):
+def acquire(manifest, output, *, result_path=None, budget=None, opener=None):
     validate_manifest(manifest)
-    output, result_path = Path(output), Path(result_path)
+    output, result_path = Path(output), Path(RESULT if result_path is None else result_path)
     require(output.absolute() == OUTPUT.absolute() and output.resolve() == OUTPUT.absolute() and
             "onedrive" not in str(output).lower(), "fixed_local_output_required")
     require(not output.exists() and not result_path.exists(), "existing_run_or_result")
@@ -287,6 +289,9 @@ def acquire(manifest, output, *, result_path=RESULT, budget=None, opener=None):
             "manifest_changed")
     provenance = {"manifest_sha256": hashlib.sha256(manifest_bytes).hexdigest(),
                   "acquisition_script_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
+    if CONFIGURATION_SCRIPT is not None:
+        provenance["acquisition_wrapper_sha256"] = hashlib.sha256(
+            Path(CONFIGURATION_SCRIPT).read_bytes()).hexdigest()
     ancestor = output.parent
     while not ancestor.exists():
         ancestor = ancestor.parent
@@ -298,7 +303,7 @@ def acquire(manifest, output, *, result_path=RESULT, budget=None, opener=None):
     stage = "start"
     try:
         started_unix = time.time()
-        write_json(output / "acquisition_started.json", {"acquisition_id": "INNER-SPEECH-ACQ-1",
+        write_json(output / "acquisition_started.json", {"acquisition_id": ACQUISITION_ID,
                    "source_commit": COMMIT, "retry_or_resume_allowed": False, **provenance,
                    "started_unix": started_unix,
                    "started_utc": datetime.fromtimestamp(started_unix, timezone.utc).isoformat(),
@@ -314,7 +319,7 @@ def acquire(manifest, output, *, result_path=RESULT, budget=None, opener=None):
             print(f"Verified BDF {len(files)}/10 (technical header only)", flush=True)
         require(len(files) == 10 and sum(item["bytes"] for item in files) == PAYLOAD_BYTES, "incomplete_acquisition")
         budget.check()
-        report = {"schema_version": 1, "acquisition_id": "INNER-SPEECH-ACQ-1", "status": "complete",
+        report = {"schema_version": 1, "acquisition_id": ACQUISITION_ID, "status": "complete",
                   "dataset": "ds003626", "version": "2.1.2", "source_commit": COMMIT,
                   **provenance,
                   "files_verified": len(files), "payload_bytes": sum(item["bytes"] for item in files),
@@ -333,7 +338,7 @@ def acquire(manifest, output, *, result_path=RESULT, budget=None, opener=None):
         write_json(result_path, report, budget)
         return report
     except BaseException as error:
-        failure = {"acquisition_id": "INNER-SPEECH-ACQ-1", "status": "failed", "stage": stage,
+        failure = {"acquisition_id": ACQUISITION_ID, "status": "failed", "stage": stage,
                    "failure_code": str(error) if isinstance(error, Refusal) else type(error).__name__,
                    "files_verified": len(files), "metadata_files_verified": len(metadata),
                    "copied_payload_bytes": budget.payload_bytes, "partial_files_preserved": True,

@@ -26,6 +26,7 @@ for _name in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS",
 
 REPO = Path(__file__).resolve().parents[1]
 EXPERIMENT_ID = "INNER-SPEECH-TEST-1"
+MODEL_MODULE = "neurodecodekit.experiments.inner_speech"
 ALLOW_MISSING_REST = False
 BASE = Path(r"C:\Users\80714\AppData\Local\NeuroDecodeKit")
 SOURCE = BASE / "ds003626_v2_1_2_ses01_20260922"
@@ -356,7 +357,8 @@ def score(freeze_commit, budget, started):
     require(re.fullmatch("[a-f0-9]{40}", freeze_commit) is not None, "exact_freeze_commit")
     require(started.get("experiment_id") == EXPERIMENT_ID, "attempt_identity")
     import numpy as np
-    from neurodecodekit.experiments.inner_speech import ARMS, LEARNED_ARMS, score_condition
+    model = importlib.import_module(MODEL_MODULE)
+    ARMS, LEARNED_ARMS, score_condition = model.ARMS, model.LEARNED_ARMS, model.score_condition
     freeze_path = FREEZE.relative_to(REPO).as_posix()
     require(git("rev-parse", "HEAD") == freeze_commit, "freeze_must_be_head")
     require(not git("status", "--porcelain", "--untracked-files=no"), "clean_scoring_tree")

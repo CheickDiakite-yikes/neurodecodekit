@@ -1,5 +1,10 @@
 # Next test: temporal information on fresh recordings, not a rescue of session 1
 
+Activation: the maintainer subsequently approved the exact acquisition and
+one-run scope below. See the [frozen execution boundary](INNER_SPEECH_TEMPORAL_EXECUTION.md)
+and [machine plan](../registries/inner_speech_temporal_plan.v0.json).
+The original proposal below remains a historical pre-approval record.
+
 October 2, 2026. The maintainer approved continuing toward a fixed time-resolved
 EEG test. This records the source decision and proposed scope; it is not a
 completed experiment or a substitute for the additional acquisition decision.

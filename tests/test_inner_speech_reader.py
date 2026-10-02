@@ -299,6 +299,13 @@ class BDFReaderTests(unittest.TestCase):
             events = reader.iter_status_events(participant="sub-10")
             self.assertEqual(events, [(0, 11), (1023, 31), (1026, 44)])
             self.assertEqual(reader.status_summary["ignored_short_pulses"], 2)
+            self.assertEqual(reader.iter_status_events(participant="sub-10", session="ses-01"), events)
+            self.assertEqual(reader.iter_status_events(participant="sub-10", session="ses-02"),
+                             [(0, 11), (20, 14), (1023, 31), (1026, 44), (2000, 45)])
+            self.assertEqual(reader.status_summary["minimum_pulse_samples"], 1)
+            self.assertEqual(reader.status_summary["ignored_short_pulses"], 0)
+            with self.assertRaisesRegex(InnerSpeechRefusal, "participant_session"):
+                reader.iter_status_events(participant="sub-10", session="ses-03")
 
     def test_window_refuses_status_bounds_duplicates_and_file_changes(self):
         with tempfile.TemporaryDirectory() as directory:
