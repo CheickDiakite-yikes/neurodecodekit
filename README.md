@@ -31,19 +31,24 @@ irreversible Tier C events.
 ## Scientific Operating Model
 
 **Current result and priority (October 2, 2026):**
-The fresh [session-2 temporal test stopped before physiological analysis](docs/INNER_SPEECH_TEMPORAL_FAILURE.md):
-all ten recordings were acquired, but participant 3's attention/rest sequence
-failed the frozen eligibility rule after 20.80 seconds. **Zero fits or scores**;
-the temporal hypothesis remains untested. **Next:** seek fresh approval for one
-all-ten, Status-only structural audit (120 seconds, 256 MiB, 1 MiB output), without
-exposing word identities, reading physiological windows, fitting or scoring. Preserve
-the consumed attempt; do not drop participants, infer events or rerun automatically.
-Session 3 remains unopened and unacquired.
+The [all-ten session-2 event audit](docs/INNER_SPEECH_SESSION2_AUDIT_RESULT.md)
+completed in **29.58 seconds**, with exact agreement between both decoders.
+One attention group followed an intact cue/action/relax core without an observed
+rest. Six other segments lacked a core marker, within the already-fixed exclusion
+caps; 1,994 core-present segments are **not yet qualified trials**. No physiological
+windows, fits or scores were read or produced. The earlier
+[temporal attempt remains failed and immutable](docs/INNER_SPEECH_TEMPORAL_FAILURE.md).
+**Next:** seek fresh approval for a narrow attention-boundary successor and one
+unchanged all-ten temporal-versus-spectral test (20-minute total cap, thirteen arms,
+all controls). Condition layout and split eligibility must still pass; no new
+data, inferred events, higher exclusions or automatic retry. Session 3 remains
+unopened and unacquired. The temporal decoding hypothesis remains untested.
 
 The [scientific swarm review](docs/THOUGHT_TO_TEXT_SCIENTIFIC_SWARM.md) now organizes
 work around competing mechanisms, independent falsification and decisive data.
-Its next candidate is a fixed beta-envelope trajectory test, distinct from raw
-bin means; no new experiment is authorized. The longer-term milestone is content
+Its separate mechanistic candidate is a fixed beta-envelope trajectory test,
+distinct from the current raw-bin comparison; no new experiment is authorized.
+The longer-term milestone is content
 that external cues cannot already supply, with transfer to untouched words or days.
 
 **Latest completed scientific result:**

@@ -1,0 +1,2551 @@
+{
+  "alignment_or_scientific_qualification_established": false,
+  "audit_id": "INNER-SPEECH-EVENT-AUDIT-S2",
+  "code_commit": "85511a9da6d9b7ea625c5e620c61aeab97718448",
+  "code_hashes": {
+    "registries/inner_speech_observed_plan.v0.json": "69f68018d0bfce2f7aef3d44b3d3fc59077d254a796312924028f6e4b7de59f2",
+    "registries/inner_speech_session2_acquisition_result.v0.json": "cf2fcd44b744d067216caf0296c1595b613275498db6360ec5b8ada8ecad0534",
+    "registries/inner_speech_session2_audit_plan.v0.json": "45ac6dbe19ba088b75b616f9725e3f7c63ac44e942fe06b4445ee0a0fa503166",
+    "registries/inner_speech_session2_source_manifest.v0.json": "f59ff98e40a1ad90088ac125c38083d5838366e4ea4ff0bdee0c6dad22d16c26",
+    "registries/inner_speech_temporal_failure.v0.json": "e55f205747022229416ed9c7e6732cfdcfecf0456ddfe5753edb78e020a5fb0c",
+    "registries/inner_speech_temporal_plan.v0.json": "067231fc33934b03525dd3f579ba63e0711e597d98fb738d7c9925cbafc55f43",
+    "registries/inner_speech_test_plan.v0.json": "a569a4317182950470c342c5f9892d25463eabff06cf71650100821b59ca8c02",
+    "scripts/acquire_inner_speech.py": "a511c3efb0d775165a064c66ab5504962a2edf197eb3660a5e577cac148801a6",
+    "scripts/acquire_inner_speech_session2.py": "a2ec740e1d63f17df038499f7d9bc61063ae8bcc8e2b27f0359b585b5fc34998",
+    "scripts/audit_inner_speech_events.py": "7e3b70fa6989f77a387270cc86dace9db240cbf39c4ad351574a71c1135b49ab",
+    "scripts/audit_inner_speech_session2.py": "27cb19742c589293557a6222af8913cf704ebd9f78002acfe198f323b4e35436",
+    "scripts/inner_speech_session2_structure.py": "4c97ec3d79eeae0ec43ea1c53f1f50fab18aa11c81e23ba9457a6567b79617cb",
+    "scripts/test_inner_speech.py": "3c194c2f3c43210ac5ff060867ac66d2293aa69e9fe6e31b3f748de89547af24",
+    "scripts/test_inner_speech_observed.py": "fa8b7a13f8ed8b5c98edd767d670bbbc90333582f8ed540439920e2ca0f9419a",
+    "scripts/test_inner_speech_temporal.py": "92eab9ac76ae8dec851a71b1a0412417aab0529bb315c1a01b110c41328dad3b",
+    "src/neurodecodekit/datasets/inner_speech.py": "5c647cc29c863bdb87a06605f43369ee884dfb9fa7b7762571afdfd798ba7678",
+    "src/neurodecodekit/datasets/inner_speech_observed.py": "ab6c2a40ad1c742dad0b9bbb2be79ce341fcc18cde6c1b15273600ba0cd5db65",
+    "src/neurodecodekit/datasets/inner_speech_reference_status.py": "dcc89a76df0d5bdc46e0d036ad998387c0f93f84990686d56adf6251fb2bae5c",
+    "src/neurodecodekit/evaluation/speech_reproduction.py": "96e0637bda2802110ba65db4609806cf141f85210f9397223eaddc67c2c6a6f1",
+    "src/neurodecodekit/experiments/inner_speech.py": "379b54aff25d9accc521ab6b27dd0c2d0dd21b592e6e03261dfcb9dc7b23cc12",
+    "src/neurodecodekit/experiments/inner_speech_temporal.py": "4287152a2f2e84062aacee02ac9e5f9104d3106bb2ec9c65659b971289ab9fbe",
+    "src/neurodecodekit/experiments/speech_probability_calibration.py": "9433a41230d42cf77cfa2ba24c48b06cb8adf3fb45a4070b051c360da9033902"
+  },
+  "dataset": "ds003626",
+  "decoder_agreement_participants": 10,
+  "direction_or_answer_identities_exported": 0,
+  "elapsed_seconds": 29.57800000003772,
+  "events_changed": 0,
+  "labels_or_times_inferred": 0,
+  "participants": [
+    {
+      "decoders": {
+        "frozen": {
+          "status": "decoded",
+          "structure": {
+            "alignment_or_scientific_qualification_established": false,
+            "attention_context_patterns": [
+              {
+                "answer_count": "one",
+                "groups": 1,
+                "next_family": "run_end",
+                "preceding_family": "rest",
+                "previous_observed_core_phase": "rest",
+                "question_count": "one",
+                "run_context": "inside_intact_boundary_pair",
+                "segment_signature": {
+                  "ambiguous_structure": false,
+                  "attention_between_observed_phases": false,
+                  "attention_present": true,
+                  "contiguous_cue_action_relax": true,
+                  "duplicate_phase": false,
+                  "ending_boundary_family": "run_end",
+                  "noncore_nonattention_marker": false,
+                  "nonincreasing_sample_gap": false,
+                  "observed_core_window_checks": {
+                    "action_2048_before_relax": "within_range",
+                    "cue_384_before_action": "within_range"
+                  },
+                  "observed_phase_interval_checks": {
+                    "action_to_relax": "within_range",
+                    "cue_to_action": "within_range",
+                    "relax_to_rest": "within_range",
+                    "start_to_cue": "within_range"
+                  },
+                  "phase_counts": {
+                    "action": "one",
+                    "direction_cue": "one",
+                    "relax": "one",
+                    "rest": "one",
+                    "trial_start": "one"
+                  },
+                  "strictly_ordered_observed_phases": true
+                },
+                "single_question_then_answers": true
+              },
+              {
+                "answer_count": "one",
+                "groups": 11,
+                "next_family": "trial_start",
+                "preceding_family": "rest",
+                "previous_observed_core_phase": "rest",
+                "question_count": "one",
+                "run_context": "inside_intact_boundary_pair",
+                "segment_signature": {
+                  "ambiguous_structure": false,
+                  "attention_between_observed_phases": false,
+                  "attention_present": true,
+                  "contiguous_cue_action_relax": true,
+                  "duplicate_phase": false,
+                  "ending_boundary_family": "trial_start",
+                  "noncore_nonattention_marker": false,
+                  "nonincreasing_sample_gap": false,
+                  "observed_core_window_checks": {
+                    "action_2048_before_relax": "within_range",
+                    "cue_384_before_action": "within_range"
+                  },
+                  "observed_phase_interval_checks": {
+                    "action_to_relax": "within_range",
+                    "cue_to_action": "within_range",
+                    "relax_to_rest": "within_range",
+                    "start_to_cue": "within_range"
+                  },
+                  "phase_counts": {
+                    "action": "one",
+                    "direction_cue": "one",
+                    "relax": "one",
+                    "rest": "one",
+                    "trial_start": "one"
+                  },
+                  "strictly_ordered_observed_phases": true
+                },
+                "single_question_then_answers": true
+              }
+            ],
+            "attention_events": 24,
+            "attention_groups": 12,
+            "attention_groups_outside_or_ambiguous_runs": 0,
+            "event_family_counts": {
+              "action": 200,
+              "attention_answer": 12,
+              "attention_question": 12,
+              "baseline_end": 1,
+              "baseline_start": 1,
+              "condition_marker": 5,
+              "direction_cue": 200,
+              "experiment_end": 1,
+              "experiment_start": 1,
+              "inter_run_rest": 4,
+              "relax": 200,
+              "rest": 200,
+              "run_end": 5,
+              "run_start": 5,
+              "trial_start": 200
+            },
+            "events": 1047,
+            "events_changed": 0,
+            "events_inside_intact_run_boundaries": 1039,
+            "events_outside_or_ambiguous_run_boundaries": 8,
+            "intact_run_boundary_pairs": 5,
+            "labels_inferred": 0,
+            "malformed_run_boundary_counts": {
+              "nested_run_starts": 0,
+              "unclosed_run_starts": 0,
+              "unmatched_run_ends": 0
+            },
+            "nonincreasing_sample_pairs": 0,
+            "parser_calls": 0,
+            "per_run_condition_marker_multiplicity_histogram": {
+              "multiple": 0,
+              "one": 5,
+              "zero": 0
+            },
+            "per_run_segment_count_histogram": [
+              {
+                "runs": 5,
+                "structural_segments": 40
+              }
+            ],
+            "schema_version": 1,
+            "structural_segment_patterns": [
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "run_end",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 4,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 184,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": true,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "run_end",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 1,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": true,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 11,
+                "strictly_ordered_observed_phases": true
+              }
+            ],
+            "structural_segments": 200,
+            "unassigned_run_boundary_markers": 0
+          }
+        },
+        "independent": {
+          "events": 1047,
+          "status": "decoded",
+          "structure_identical_to_frozen": true
+        }
+      },
+      "full_ordered_decoder_agreement": true,
+      "participant": "sub-01",
+      "source_hash_verified_before_and_after": true
+    },
+    {
+      "decoders": {
+        "frozen": {
+          "status": "decoded",
+          "structure": {
+            "alignment_or_scientific_qualification_established": false,
+            "attention_context_patterns": [
+              {
+                "answer_count": "one",
+                "groups": 16,
+                "next_family": "trial_start",
+                "preceding_family": "rest",
+                "previous_observed_core_phase": "rest",
+                "question_count": "one",
+                "run_context": "inside_intact_boundary_pair",
+                "segment_signature": {
+                  "ambiguous_structure": false,
+                  "attention_between_observed_phases": false,
+                  "attention_present": true,
+                  "contiguous_cue_action_relax": true,
+                  "duplicate_phase": false,
+                  "ending_boundary_family": "trial_start",
+                  "noncore_nonattention_marker": false,
+                  "nonincreasing_sample_gap": false,
+                  "observed_core_window_checks": {
+                    "action_2048_before_relax": "within_range",
+                    "cue_384_before_action": "within_range"
+                  },
+                  "observed_phase_interval_checks": {
+                    "action_to_relax": "within_range",
+                    "cue_to_action": "within_range",
+                    "relax_to_rest": "within_range",
+                    "start_to_cue": "within_range"
+                  },
+                  "phase_counts": {
+                    "action": "one",
+                    "direction_cue": "one",
+                    "relax": "one",
+                    "rest": "one",
+                    "trial_start": "one"
+                  },
+                  "strictly_ordered_observed_phases": true
+                },
+                "single_question_then_answers": true
+              }
+            ],
+            "attention_events": 32,
+            "attention_groups": 16,
+            "attention_groups_outside_or_ambiguous_runs": 0,
+            "event_family_counts": {
+              "action": 200,
+              "attention_answer": 16,
+              "attention_question": 16,
+              "baseline_end": 1,
+              "baseline_start": 1,
+              "condition_marker": 5,
+              "direction_cue": 200,
+              "experiment_end": 1,
+              "experiment_start": 1,
+              "inter_run_rest": 4,
+              "relax": 200,
+              "rest": 200,
+              "run_end": 5,
+              "run_start": 5,
+              "trial_start": 200
+            },
+            "events": 1055,
+            "events_changed": 0,
+            "events_inside_intact_run_boundaries": 1047,
+            "events_outside_or_ambiguous_run_boundaries": 8,
+            "intact_run_boundary_pairs": 5,
+            "labels_inferred": 0,
+            "malformed_run_boundary_counts": {
+              "nested_run_starts": 0,
+              "unclosed_run_starts": 0,
+              "unmatched_run_ends": 0
+            },
+            "nonincreasing_sample_pairs": 0,
+            "parser_calls": 0,
+            "per_run_condition_marker_multiplicity_histogram": {
+              "multiple": 0,
+              "one": 5,
+              "zero": 0
+            },
+            "per_run_segment_count_histogram": [
+              {
+                "runs": 5,
+                "structural_segments": 40
+              }
+            ],
+            "schema_version": 1,
+            "structural_segment_patterns": [
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "run_end",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 5,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 179,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": true,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 16,
+                "strictly_ordered_observed_phases": true
+              }
+            ],
+            "structural_segments": 200,
+            "unassigned_run_boundary_markers": 0
+          }
+        },
+        "independent": {
+          "events": 1055,
+          "status": "decoded",
+          "structure_identical_to_frozen": true
+        }
+      },
+      "full_ordered_decoder_agreement": true,
+      "participant": "sub-02",
+      "source_hash_verified_before_and_after": true
+    },
+    {
+      "decoders": {
+        "frozen": {
+          "status": "decoded",
+          "structure": {
+            "alignment_or_scientific_qualification_established": false,
+            "attention_context_patterns": [
+              {
+                "answer_count": "one",
+                "groups": 1,
+                "next_family": "trial_start",
+                "preceding_family": "relax",
+                "previous_observed_core_phase": "relax",
+                "question_count": "one",
+                "run_context": "inside_intact_boundary_pair",
+                "segment_signature": {
+                  "ambiguous_structure": false,
+                  "attention_between_observed_phases": false,
+                  "attention_present": true,
+                  "contiguous_cue_action_relax": true,
+                  "duplicate_phase": false,
+                  "ending_boundary_family": "trial_start",
+                  "noncore_nonattention_marker": false,
+                  "nonincreasing_sample_gap": false,
+                  "observed_core_window_checks": {
+                    "action_2048_before_relax": "within_range",
+                    "cue_384_before_action": "within_range"
+                  },
+                  "observed_phase_interval_checks": {
+                    "action_to_relax": "within_range",
+                    "cue_to_action": "within_range",
+                    "relax_to_rest": "unavailable_missing_or_duplicate",
+                    "start_to_cue": "within_range"
+                  },
+                  "phase_counts": {
+                    "action": "one",
+                    "direction_cue": "one",
+                    "relax": "one",
+                    "rest": "zero",
+                    "trial_start": "one"
+                  },
+                  "strictly_ordered_observed_phases": true
+                },
+                "single_question_then_answers": true
+              },
+              {
+                "answer_count": "one",
+                "groups": 9,
+                "next_family": "trial_start",
+                "preceding_family": "rest",
+                "previous_observed_core_phase": "rest",
+                "question_count": "one",
+                "run_context": "inside_intact_boundary_pair",
+                "segment_signature": {
+                  "ambiguous_structure": false,
+                  "attention_between_observed_phases": false,
+                  "attention_present": true,
+                  "contiguous_cue_action_relax": true,
+                  "duplicate_phase": false,
+                  "ending_boundary_family": "trial_start",
+                  "noncore_nonattention_marker": false,
+                  "nonincreasing_sample_gap": false,
+                  "observed_core_window_checks": {
+                    "action_2048_before_relax": "within_range",
+                    "cue_384_before_action": "within_range"
+                  },
+                  "observed_phase_interval_checks": {
+                    "action_to_relax": "within_range",
+                    "cue_to_action": "within_range",
+                    "relax_to_rest": "within_range",
+                    "start_to_cue": "within_range"
+                  },
+                  "phase_counts": {
+                    "action": "one",
+                    "direction_cue": "one",
+                    "relax": "one",
+                    "rest": "one",
+                    "trial_start": "one"
+                  },
+                  "strictly_ordered_observed_phases": true
+                },
+                "single_question_then_answers": true
+              },
+              {
+                "answer_count": "one",
+                "groups": 1,
+                "next_family": "trial_start",
+                "preceding_family": "rest",
+                "previous_observed_core_phase": "rest",
+                "question_count": "zero",
+                "run_context": "inside_intact_boundary_pair",
+                "segment_signature": {
+                  "ambiguous_structure": false,
+                  "attention_between_observed_phases": false,
+                  "attention_present": true,
+                  "contiguous_cue_action_relax": true,
+                  "duplicate_phase": false,
+                  "ending_boundary_family": "trial_start",
+                  "noncore_nonattention_marker": false,
+                  "nonincreasing_sample_gap": false,
+                  "observed_core_window_checks": {
+                    "action_2048_before_relax": "within_range",
+                    "cue_384_before_action": "within_range"
+                  },
+                  "observed_phase_interval_checks": {
+                    "action_to_relax": "within_range",
+                    "cue_to_action": "within_range",
+                    "relax_to_rest": "within_range",
+                    "start_to_cue": "within_range"
+                  },
+                  "phase_counts": {
+                    "action": "one",
+                    "direction_cue": "one",
+                    "relax": "one",
+                    "rest": "one",
+                    "trial_start": "one"
+                  },
+                  "strictly_ordered_observed_phases": true
+                },
+                "single_question_then_answers": false
+              }
+            ],
+            "attention_events": 21,
+            "attention_groups": 11,
+            "attention_groups_outside_or_ambiguous_runs": 0,
+            "event_family_counts": {
+              "action": 200,
+              "attention_answer": 11,
+              "attention_question": 10,
+              "baseline_end": 1,
+              "baseline_start": 1,
+              "condition_marker": 5,
+              "direction_cue": 200,
+              "experiment_end": 1,
+              "experiment_start": 1,
+              "inter_run_rest": 4,
+              "relax": 200,
+              "rest": 198,
+              "run_end": 5,
+              "run_start": 5,
+              "trial_start": 200
+            },
+            "events": 1042,
+            "events_changed": 0,
+            "events_inside_intact_run_boundaries": 1034,
+            "events_outside_or_ambiguous_run_boundaries": 8,
+            "intact_run_boundary_pairs": 5,
+            "labels_inferred": 0,
+            "malformed_run_boundary_counts": {
+              "nested_run_starts": 0,
+              "unclosed_run_starts": 0,
+              "unmatched_run_ends": 0
+            },
+            "nonincreasing_sample_pairs": 0,
+            "parser_calls": 0,
+            "per_run_condition_marker_multiplicity_histogram": {
+              "multiple": 0,
+              "one": 5,
+              "zero": 0
+            },
+            "per_run_segment_count_histogram": [
+              {
+                "runs": 5,
+                "structural_segments": 40
+              }
+            ],
+            "schema_version": 1,
+            "structural_segment_patterns": [
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "run_end",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 5,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "unavailable_missing_or_duplicate",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "zero",
+                  "trial_start": "one"
+                },
+                "segments": 1,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 183,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": true,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "unavailable_missing_or_duplicate",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "zero",
+                  "trial_start": "one"
+                },
+                "segments": 1,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": true,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 10,
+                "strictly_ordered_observed_phases": true
+              }
+            ],
+            "structural_segments": 200,
+            "unassigned_run_boundary_markers": 0
+          }
+        },
+        "independent": {
+          "events": 1042,
+          "status": "decoded",
+          "structure_identical_to_frozen": true
+        }
+      },
+      "full_ordered_decoder_agreement": true,
+      "participant": "sub-03",
+      "source_hash_verified_before_and_after": true
+    },
+    {
+      "decoders": {
+        "frozen": {
+          "status": "decoded",
+          "structure": {
+            "alignment_or_scientific_qualification_established": false,
+            "attention_context_patterns": [
+              {
+                "answer_count": "one",
+                "groups": 1,
+                "next_family": "run_end",
+                "preceding_family": "rest",
+                "previous_observed_core_phase": "rest",
+                "question_count": "one",
+                "run_context": "inside_intact_boundary_pair",
+                "segment_signature": {
+                  "ambiguous_structure": false,
+                  "attention_between_observed_phases": false,
+                  "attention_present": true,
+                  "contiguous_cue_action_relax": true,
+                  "duplicate_phase": false,
+                  "ending_boundary_family": "run_end",
+                  "noncore_nonattention_marker": false,
+                  "nonincreasing_sample_gap": false,
+                  "observed_core_window_checks": {
+                    "action_2048_before_relax": "within_range",
+                    "cue_384_before_action": "within_range"
+                  },
+                  "observed_phase_interval_checks": {
+                    "action_to_relax": "within_range",
+                    "cue_to_action": "within_range",
+                    "relax_to_rest": "within_range",
+                    "start_to_cue": "within_range"
+                  },
+                  "phase_counts": {
+                    "action": "one",
+                    "direction_cue": "one",
+                    "relax": "one",
+                    "rest": "one",
+                    "trial_start": "one"
+                  },
+                  "strictly_ordered_observed_phases": true
+                },
+                "single_question_then_answers": true
+              },
+              {
+                "answer_count": "one",
+                "groups": 13,
+                "next_family": "trial_start",
+                "preceding_family": "rest",
+                "previous_observed_core_phase": "rest",
+                "question_count": "one",
+                "run_context": "inside_intact_boundary_pair",
+                "segment_signature": {
+                  "ambiguous_structure": false,
+                  "attention_between_observed_phases": false,
+                  "attention_present": true,
+                  "contiguous_cue_action_relax": true,
+                  "duplicate_phase": false,
+                  "ending_boundary_family": "trial_start",
+                  "noncore_nonattention_marker": false,
+                  "nonincreasing_sample_gap": false,
+                  "observed_core_window_checks": {
+                    "action_2048_before_relax": "within_range",
+                    "cue_384_before_action": "within_range"
+                  },
+                  "observed_phase_interval_checks": {
+                    "action_to_relax": "within_range",
+                    "cue_to_action": "within_range",
+                    "relax_to_rest": "within_range",
+                    "start_to_cue": "within_range"
+                  },
+                  "phase_counts": {
+                    "action": "one",
+                    "direction_cue": "one",
+                    "relax": "one",
+                    "rest": "one",
+                    "trial_start": "one"
+                  },
+                  "strictly_ordered_observed_phases": true
+                },
+                "single_question_then_answers": true
+              }
+            ],
+            "attention_events": 28,
+            "attention_groups": 14,
+            "attention_groups_outside_or_ambiguous_runs": 0,
+            "event_family_counts": {
+              "action": 200,
+              "attention_answer": 14,
+              "attention_question": 14,
+              "baseline_end": 1,
+              "baseline_start": 1,
+              "condition_marker": 5,
+              "direction_cue": 200,
+              "experiment_end": 1,
+              "experiment_start": 1,
+              "inter_run_rest": 4,
+              "relax": 200,
+              "rest": 200,
+              "run_end": 5,
+              "run_start": 5,
+              "trial_start": 200
+            },
+            "events": 1051,
+            "events_changed": 0,
+            "events_inside_intact_run_boundaries": 1043,
+            "events_outside_or_ambiguous_run_boundaries": 8,
+            "intact_run_boundary_pairs": 5,
+            "labels_inferred": 0,
+            "malformed_run_boundary_counts": {
+              "nested_run_starts": 0,
+              "unclosed_run_starts": 0,
+              "unmatched_run_ends": 0
+            },
+            "nonincreasing_sample_pairs": 0,
+            "parser_calls": 0,
+            "per_run_condition_marker_multiplicity_histogram": {
+              "multiple": 0,
+              "one": 5,
+              "zero": 0
+            },
+            "per_run_segment_count_histogram": [
+              {
+                "runs": 5,
+                "structural_segments": 40
+              }
+            ],
+            "schema_version": 1,
+            "structural_segment_patterns": [
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "run_end",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 4,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 182,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": true,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "run_end",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 1,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": true,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 13,
+                "strictly_ordered_observed_phases": true
+              }
+            ],
+            "structural_segments": 200,
+            "unassigned_run_boundary_markers": 0
+          }
+        },
+        "independent": {
+          "events": 1051,
+          "status": "decoded",
+          "structure_identical_to_frozen": true
+        }
+      },
+      "full_ordered_decoder_agreement": true,
+      "participant": "sub-04",
+      "source_hash_verified_before_and_after": true
+    },
+    {
+      "decoders": {
+        "frozen": {
+          "status": "decoded",
+          "structure": {
+            "alignment_or_scientific_qualification_established": false,
+            "attention_context_patterns": [
+              {
+                "answer_count": "one",
+                "groups": 10,
+                "next_family": "trial_start",
+                "preceding_family": "rest",
+                "previous_observed_core_phase": "rest",
+                "question_count": "one",
+                "run_context": "inside_intact_boundary_pair",
+                "segment_signature": {
+                  "ambiguous_structure": false,
+                  "attention_between_observed_phases": false,
+                  "attention_present": true,
+                  "contiguous_cue_action_relax": true,
+                  "duplicate_phase": false,
+                  "ending_boundary_family": "trial_start",
+                  "noncore_nonattention_marker": false,
+                  "nonincreasing_sample_gap": false,
+                  "observed_core_window_checks": {
+                    "action_2048_before_relax": "within_range",
+                    "cue_384_before_action": "within_range"
+                  },
+                  "observed_phase_interval_checks": {
+                    "action_to_relax": "within_range",
+                    "cue_to_action": "within_range",
+                    "relax_to_rest": "within_range",
+                    "start_to_cue": "within_range"
+                  },
+                  "phase_counts": {
+                    "action": "one",
+                    "direction_cue": "one",
+                    "relax": "one",
+                    "rest": "one",
+                    "trial_start": "one"
+                  },
+                  "strictly_ordered_observed_phases": true
+                },
+                "single_question_then_answers": true
+              }
+            ],
+            "attention_events": 20,
+            "attention_groups": 10,
+            "attention_groups_outside_or_ambiguous_runs": 0,
+            "event_family_counts": {
+              "action": 200,
+              "attention_answer": 10,
+              "attention_question": 10,
+              "baseline_end": 1,
+              "baseline_start": 1,
+              "condition_marker": 5,
+              "direction_cue": 200,
+              "experiment_end": 1,
+              "experiment_start": 1,
+              "inter_run_rest": 4,
+              "relax": 199,
+              "rest": 200,
+              "run_end": 5,
+              "run_start": 5,
+              "trial_start": 200
+            },
+            "events": 1042,
+            "events_changed": 0,
+            "events_inside_intact_run_boundaries": 1034,
+            "events_outside_or_ambiguous_run_boundaries": 8,
+            "intact_run_boundary_pairs": 5,
+            "labels_inferred": 0,
+            "malformed_run_boundary_counts": {
+              "nested_run_starts": 0,
+              "unclosed_run_starts": 0,
+              "unmatched_run_ends": 0
+            },
+            "nonincreasing_sample_pairs": 0,
+            "parser_calls": 0,
+            "per_run_condition_marker_multiplicity_histogram": {
+              "multiple": 0,
+              "one": 5,
+              "zero": 0
+            },
+            "per_run_segment_count_histogram": [
+              {
+                "runs": 5,
+                "structural_segments": 40
+              }
+            ],
+            "schema_version": 1,
+            "structural_segment_patterns": [
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": false,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "unavailable_missing_or_duplicate",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "unavailable_missing_or_duplicate",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "unavailable_missing_or_duplicate",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "zero",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 1,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "run_end",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 5,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 184,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": true,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 10,
+                "strictly_ordered_observed_phases": true
+              }
+            ],
+            "structural_segments": 200,
+            "unassigned_run_boundary_markers": 0
+          }
+        },
+        "independent": {
+          "events": 1042,
+          "status": "decoded",
+          "structure_identical_to_frozen": true
+        }
+      },
+      "full_ordered_decoder_agreement": true,
+      "participant": "sub-05",
+      "source_hash_verified_before_and_after": true
+    },
+    {
+      "decoders": {
+        "frozen": {
+          "status": "decoded",
+          "structure": {
+            "alignment_or_scientific_qualification_established": false,
+            "attention_context_patterns": [
+              {
+                "answer_count": "one",
+                "groups": 12,
+                "next_family": "trial_start",
+                "preceding_family": "rest",
+                "previous_observed_core_phase": "rest",
+                "question_count": "one",
+                "run_context": "inside_intact_boundary_pair",
+                "segment_signature": {
+                  "ambiguous_structure": false,
+                  "attention_between_observed_phases": false,
+                  "attention_present": true,
+                  "contiguous_cue_action_relax": true,
+                  "duplicate_phase": false,
+                  "ending_boundary_family": "trial_start",
+                  "noncore_nonattention_marker": false,
+                  "nonincreasing_sample_gap": false,
+                  "observed_core_window_checks": {
+                    "action_2048_before_relax": "within_range",
+                    "cue_384_before_action": "within_range"
+                  },
+                  "observed_phase_interval_checks": {
+                    "action_to_relax": "within_range",
+                    "cue_to_action": "within_range",
+                    "relax_to_rest": "within_range",
+                    "start_to_cue": "within_range"
+                  },
+                  "phase_counts": {
+                    "action": "one",
+                    "direction_cue": "one",
+                    "relax": "one",
+                    "rest": "one",
+                    "trial_start": "one"
+                  },
+                  "strictly_ordered_observed_phases": true
+                },
+                "single_question_then_answers": true
+              }
+            ],
+            "attention_events": 24,
+            "attention_groups": 12,
+            "attention_groups_outside_or_ambiguous_runs": 0,
+            "event_family_counts": {
+              "action": 200,
+              "attention_answer": 12,
+              "attention_question": 12,
+              "baseline_end": 1,
+              "baseline_start": 1,
+              "condition_marker": 5,
+              "direction_cue": 199,
+              "experiment_end": 1,
+              "experiment_start": 1,
+              "inter_run_rest": 4,
+              "relax": 200,
+              "rest": 200,
+              "run_end": 5,
+              "run_start": 5,
+              "trial_start": 200
+            },
+            "events": 1046,
+            "events_changed": 0,
+            "events_inside_intact_run_boundaries": 1038,
+            "events_outside_or_ambiguous_run_boundaries": 8,
+            "intact_run_boundary_pairs": 5,
+            "labels_inferred": 0,
+            "malformed_run_boundary_counts": {
+              "nested_run_starts": 0,
+              "unclosed_run_starts": 0,
+              "unmatched_run_ends": 0
+            },
+            "nonincreasing_sample_pairs": 0,
+            "parser_calls": 0,
+            "per_run_condition_marker_multiplicity_histogram": {
+              "multiple": 0,
+              "one": 5,
+              "zero": 0
+            },
+            "per_run_segment_count_histogram": [
+              {
+                "runs": 5,
+                "structural_segments": 40
+              }
+            ],
+            "schema_version": 1,
+            "structural_segment_patterns": [
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": false,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "unavailable_missing_or_duplicate"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "unavailable_missing_or_duplicate",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "unavailable_missing_or_duplicate"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "zero",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 1,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "run_end",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 5,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 182,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": true,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 12,
+                "strictly_ordered_observed_phases": true
+              }
+            ],
+            "structural_segments": 200,
+            "unassigned_run_boundary_markers": 0
+          }
+        },
+        "independent": {
+          "events": 1046,
+          "status": "decoded",
+          "structure_identical_to_frozen": true
+        }
+      },
+      "full_ordered_decoder_agreement": true,
+      "participant": "sub-06",
+      "source_hash_verified_before_and_after": true
+    },
+    {
+      "decoders": {
+        "frozen": {
+          "status": "decoded",
+          "structure": {
+            "alignment_or_scientific_qualification_established": false,
+            "attention_context_patterns": [
+              {
+                "answer_count": "one",
+                "groups": 11,
+                "next_family": "trial_start",
+                "preceding_family": "rest",
+                "previous_observed_core_phase": "rest",
+                "question_count": "one",
+                "run_context": "inside_intact_boundary_pair",
+                "segment_signature": {
+                  "ambiguous_structure": false,
+                  "attention_between_observed_phases": false,
+                  "attention_present": true,
+                  "contiguous_cue_action_relax": true,
+                  "duplicate_phase": false,
+                  "ending_boundary_family": "trial_start",
+                  "noncore_nonattention_marker": false,
+                  "nonincreasing_sample_gap": false,
+                  "observed_core_window_checks": {
+                    "action_2048_before_relax": "within_range",
+                    "cue_384_before_action": "within_range"
+                  },
+                  "observed_phase_interval_checks": {
+                    "action_to_relax": "within_range",
+                    "cue_to_action": "within_range",
+                    "relax_to_rest": "within_range",
+                    "start_to_cue": "within_range"
+                  },
+                  "phase_counts": {
+                    "action": "one",
+                    "direction_cue": "one",
+                    "relax": "one",
+                    "rest": "one",
+                    "trial_start": "one"
+                  },
+                  "strictly_ordered_observed_phases": true
+                },
+                "single_question_then_answers": true
+              }
+            ],
+            "attention_events": 22,
+            "attention_groups": 11,
+            "attention_groups_outside_or_ambiguous_runs": 0,
+            "event_family_counts": {
+              "action": 198,
+              "attention_answer": 11,
+              "attention_question": 11,
+              "baseline_end": 1,
+              "baseline_start": 1,
+              "condition_marker": 5,
+              "direction_cue": 200,
+              "experiment_end": 1,
+              "experiment_start": 1,
+              "inter_run_rest": 4,
+              "relax": 200,
+              "rest": 200,
+              "run_end": 5,
+              "run_start": 5,
+              "trial_start": 200
+            },
+            "events": 1043,
+            "events_changed": 0,
+            "events_inside_intact_run_boundaries": 1035,
+            "events_outside_or_ambiguous_run_boundaries": 8,
+            "intact_run_boundary_pairs": 5,
+            "labels_inferred": 0,
+            "malformed_run_boundary_counts": {
+              "nested_run_starts": 0,
+              "unclosed_run_starts": 0,
+              "unmatched_run_ends": 0
+            },
+            "nonincreasing_sample_pairs": 0,
+            "parser_calls": 0,
+            "per_run_condition_marker_multiplicity_histogram": {
+              "multiple": 0,
+              "one": 5,
+              "zero": 0
+            },
+            "per_run_segment_count_histogram": [
+              {
+                "runs": 5,
+                "structural_segments": 40
+              }
+            ],
+            "schema_version": 1,
+            "structural_segment_patterns": [
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": false,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "unavailable_missing_or_duplicate",
+                  "cue_384_before_action": "unavailable_missing_or_duplicate"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "unavailable_missing_or_duplicate",
+                  "cue_to_action": "unavailable_missing_or_duplicate",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "zero",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 2,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "run_end",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 5,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 182,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": true,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 11,
+                "strictly_ordered_observed_phases": true
+              }
+            ],
+            "structural_segments": 200,
+            "unassigned_run_boundary_markers": 0
+          }
+        },
+        "independent": {
+          "events": 1043,
+          "status": "decoded",
+          "structure_identical_to_frozen": true
+        }
+      },
+      "full_ordered_decoder_agreement": true,
+      "participant": "sub-07",
+      "source_hash_verified_before_and_after": true
+    },
+    {
+      "decoders": {
+        "frozen": {
+          "status": "decoded",
+          "structure": {
+            "alignment_or_scientific_qualification_established": false,
+            "attention_context_patterns": [
+              {
+                "answer_count": "one",
+                "groups": 1,
+                "next_family": "run_end",
+                "preceding_family": "rest",
+                "previous_observed_core_phase": "rest",
+                "question_count": "one",
+                "run_context": "inside_intact_boundary_pair",
+                "segment_signature": {
+                  "ambiguous_structure": false,
+                  "attention_between_observed_phases": false,
+                  "attention_present": true,
+                  "contiguous_cue_action_relax": true,
+                  "duplicate_phase": false,
+                  "ending_boundary_family": "run_end",
+                  "noncore_nonattention_marker": false,
+                  "nonincreasing_sample_gap": false,
+                  "observed_core_window_checks": {
+                    "action_2048_before_relax": "within_range",
+                    "cue_384_before_action": "within_range"
+                  },
+                  "observed_phase_interval_checks": {
+                    "action_to_relax": "within_range",
+                    "cue_to_action": "within_range",
+                    "relax_to_rest": "within_range",
+                    "start_to_cue": "within_range"
+                  },
+                  "phase_counts": {
+                    "action": "one",
+                    "direction_cue": "one",
+                    "relax": "one",
+                    "rest": "one",
+                    "trial_start": "one"
+                  },
+                  "strictly_ordered_observed_phases": true
+                },
+                "single_question_then_answers": true
+              },
+              {
+                "answer_count": "one",
+                "groups": 10,
+                "next_family": "trial_start",
+                "preceding_family": "rest",
+                "previous_observed_core_phase": "rest",
+                "question_count": "one",
+                "run_context": "inside_intact_boundary_pair",
+                "segment_signature": {
+                  "ambiguous_structure": false,
+                  "attention_between_observed_phases": false,
+                  "attention_present": true,
+                  "contiguous_cue_action_relax": true,
+                  "duplicate_phase": false,
+                  "ending_boundary_family": "trial_start",
+                  "noncore_nonattention_marker": false,
+                  "nonincreasing_sample_gap": false,
+                  "observed_core_window_checks": {
+                    "action_2048_before_relax": "within_range",
+                    "cue_384_before_action": "within_range"
+                  },
+                  "observed_phase_interval_checks": {
+                    "action_to_relax": "within_range",
+                    "cue_to_action": "within_range",
+                    "relax_to_rest": "within_range",
+                    "start_to_cue": "within_range"
+                  },
+                  "phase_counts": {
+                    "action": "one",
+                    "direction_cue": "one",
+                    "relax": "one",
+                    "rest": "one",
+                    "trial_start": "one"
+                  },
+                  "strictly_ordered_observed_phases": true
+                },
+                "single_question_then_answers": true
+              },
+              {
+                "answer_count": "one",
+                "groups": 1,
+                "next_family": "trial_start",
+                "preceding_family": "rest",
+                "previous_observed_core_phase": "rest",
+                "question_count": "zero",
+                "run_context": "inside_intact_boundary_pair",
+                "segment_signature": {
+                  "ambiguous_structure": false,
+                  "attention_between_observed_phases": false,
+                  "attention_present": true,
+                  "contiguous_cue_action_relax": true,
+                  "duplicate_phase": false,
+                  "ending_boundary_family": "trial_start",
+                  "noncore_nonattention_marker": false,
+                  "nonincreasing_sample_gap": false,
+                  "observed_core_window_checks": {
+                    "action_2048_before_relax": "within_range",
+                    "cue_384_before_action": "within_range"
+                  },
+                  "observed_phase_interval_checks": {
+                    "action_to_relax": "within_range",
+                    "cue_to_action": "within_range",
+                    "relax_to_rest": "within_range",
+                    "start_to_cue": "within_range"
+                  },
+                  "phase_counts": {
+                    "action": "one",
+                    "direction_cue": "one",
+                    "relax": "one",
+                    "rest": "one",
+                    "trial_start": "one"
+                  },
+                  "strictly_ordered_observed_phases": true
+                },
+                "single_question_then_answers": false
+              }
+            ],
+            "attention_events": 23,
+            "attention_groups": 12,
+            "attention_groups_outside_or_ambiguous_runs": 0,
+            "event_family_counts": {
+              "action": 200,
+              "attention_answer": 12,
+              "attention_question": 11,
+              "baseline_end": 1,
+              "baseline_start": 1,
+              "condition_marker": 5,
+              "direction_cue": 200,
+              "experiment_end": 1,
+              "experiment_start": 1,
+              "inter_run_rest": 4,
+              "relax": 200,
+              "rest": 200,
+              "run_end": 5,
+              "run_start": 5,
+              "trial_start": 200
+            },
+            "events": 1046,
+            "events_changed": 0,
+            "events_inside_intact_run_boundaries": 1038,
+            "events_outside_or_ambiguous_run_boundaries": 8,
+            "intact_run_boundary_pairs": 5,
+            "labels_inferred": 0,
+            "malformed_run_boundary_counts": {
+              "nested_run_starts": 0,
+              "unclosed_run_starts": 0,
+              "unmatched_run_ends": 0
+            },
+            "nonincreasing_sample_pairs": 0,
+            "parser_calls": 0,
+            "per_run_condition_marker_multiplicity_histogram": {
+              "multiple": 0,
+              "one": 5,
+              "zero": 0
+            },
+            "per_run_segment_count_histogram": [
+              {
+                "runs": 5,
+                "structural_segments": 40
+              }
+            ],
+            "schema_version": 1,
+            "structural_segment_patterns": [
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "run_end",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 4,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 184,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": true,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "run_end",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 1,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": true,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 11,
+                "strictly_ordered_observed_phases": true
+              }
+            ],
+            "structural_segments": 200,
+            "unassigned_run_boundary_markers": 0
+          }
+        },
+        "independent": {
+          "events": 1046,
+          "status": "decoded",
+          "structure_identical_to_frozen": true
+        }
+      },
+      "full_ordered_decoder_agreement": true,
+      "participant": "sub-08",
+      "source_hash_verified_before_and_after": true
+    },
+    {
+      "decoders": {
+        "frozen": {
+          "status": "decoded",
+          "structure": {
+            "alignment_or_scientific_qualification_established": false,
+            "attention_context_patterns": [
+              {
+                "answer_count": "one",
+                "groups": 10,
+                "next_family": "trial_start",
+                "preceding_family": "rest",
+                "previous_observed_core_phase": "rest",
+                "question_count": "one",
+                "run_context": "inside_intact_boundary_pair",
+                "segment_signature": {
+                  "ambiguous_structure": false,
+                  "attention_between_observed_phases": false,
+                  "attention_present": true,
+                  "contiguous_cue_action_relax": true,
+                  "duplicate_phase": false,
+                  "ending_boundary_family": "trial_start",
+                  "noncore_nonattention_marker": false,
+                  "nonincreasing_sample_gap": false,
+                  "observed_core_window_checks": {
+                    "action_2048_before_relax": "within_range",
+                    "cue_384_before_action": "within_range"
+                  },
+                  "observed_phase_interval_checks": {
+                    "action_to_relax": "within_range",
+                    "cue_to_action": "within_range",
+                    "relax_to_rest": "within_range",
+                    "start_to_cue": "within_range"
+                  },
+                  "phase_counts": {
+                    "action": "one",
+                    "direction_cue": "one",
+                    "relax": "one",
+                    "rest": "one",
+                    "trial_start": "one"
+                  },
+                  "strictly_ordered_observed_phases": true
+                },
+                "single_question_then_answers": true
+              }
+            ],
+            "attention_events": 20,
+            "attention_groups": 10,
+            "attention_groups_outside_or_ambiguous_runs": 0,
+            "event_family_counts": {
+              "action": 200,
+              "attention_answer": 10,
+              "attention_question": 10,
+              "baseline_end": 1,
+              "baseline_start": 1,
+              "condition_marker": 5,
+              "direction_cue": 200,
+              "experiment_end": 1,
+              "experiment_start": 1,
+              "inter_run_rest": 4,
+              "relax": 200,
+              "rest": 200,
+              "run_end": 5,
+              "run_start": 5,
+              "trial_start": 199
+            },
+            "events": 1042,
+            "events_changed": 0,
+            "events_inside_intact_run_boundaries": 1034,
+            "events_outside_or_ambiguous_run_boundaries": 8,
+            "intact_run_boundary_pairs": 5,
+            "labels_inferred": 0,
+            "malformed_run_boundary_counts": {
+              "nested_run_starts": 0,
+              "unclosed_run_starts": 0,
+              "unmatched_run_ends": 0
+            },
+            "nonincreasing_sample_pairs": 0,
+            "parser_calls": 0,
+            "per_run_condition_marker_multiplicity_histogram": {
+              "multiple": 0,
+              "one": 5,
+              "zero": 0
+            },
+            "per_run_segment_count_histogram": [
+              {
+                "runs": 5,
+                "structural_segments": 40
+              }
+            ],
+            "schema_version": 1,
+            "structural_segment_patterns": [
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "direction_cue",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 1,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "run_end",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 5,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "unavailable_missing_or_duplicate"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "zero"
+                },
+                "segments": 1,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 183,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": true,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 10,
+                "strictly_ordered_observed_phases": true
+              }
+            ],
+            "structural_segments": 200,
+            "unassigned_run_boundary_markers": 0
+          }
+        },
+        "independent": {
+          "events": 1042,
+          "status": "decoded",
+          "structure_identical_to_frozen": true
+        }
+      },
+      "full_ordered_decoder_agreement": true,
+      "participant": "sub-09",
+      "source_hash_verified_before_and_after": true
+    },
+    {
+      "decoders": {
+        "frozen": {
+          "status": "decoded",
+          "structure": {
+            "alignment_or_scientific_qualification_established": false,
+            "attention_context_patterns": [
+              {
+                "answer_count": "one",
+                "groups": 11,
+                "next_family": "trial_start",
+                "preceding_family": "rest",
+                "previous_observed_core_phase": "rest",
+                "question_count": "one",
+                "run_context": "inside_intact_boundary_pair",
+                "segment_signature": {
+                  "ambiguous_structure": false,
+                  "attention_between_observed_phases": false,
+                  "attention_present": true,
+                  "contiguous_cue_action_relax": true,
+                  "duplicate_phase": false,
+                  "ending_boundary_family": "trial_start",
+                  "noncore_nonattention_marker": false,
+                  "nonincreasing_sample_gap": false,
+                  "observed_core_window_checks": {
+                    "action_2048_before_relax": "within_range",
+                    "cue_384_before_action": "within_range"
+                  },
+                  "observed_phase_interval_checks": {
+                    "action_to_relax": "within_range",
+                    "cue_to_action": "within_range",
+                    "relax_to_rest": "within_range",
+                    "start_to_cue": "within_range"
+                  },
+                  "phase_counts": {
+                    "action": "one",
+                    "direction_cue": "one",
+                    "relax": "one",
+                    "rest": "one",
+                    "trial_start": "one"
+                  },
+                  "strictly_ordered_observed_phases": true
+                },
+                "single_question_then_answers": true
+              }
+            ],
+            "attention_events": 22,
+            "attention_groups": 11,
+            "attention_groups_outside_or_ambiguous_runs": 0,
+            "event_family_counts": {
+              "action": 198,
+              "attention_answer": 11,
+              "attention_question": 11,
+              "baseline_end": 1,
+              "baseline_start": 1,
+              "condition_marker": 5,
+              "direction_cue": 200,
+              "experiment_end": 1,
+              "experiment_start": 1,
+              "inter_run_rest": 4,
+              "relax": 200,
+              "rest": 200,
+              "run_end": 5,
+              "run_start": 5,
+              "trial_start": 200
+            },
+            "events": 1043,
+            "events_changed": 0,
+            "events_inside_intact_run_boundaries": 1035,
+            "events_outside_or_ambiguous_run_boundaries": 8,
+            "intact_run_boundary_pairs": 5,
+            "labels_inferred": 0,
+            "malformed_run_boundary_counts": {
+              "nested_run_starts": 0,
+              "unclosed_run_starts": 0,
+              "unmatched_run_ends": 0
+            },
+            "nonincreasing_sample_pairs": 0,
+            "parser_calls": 0,
+            "per_run_condition_marker_multiplicity_histogram": {
+              "multiple": 0,
+              "one": 5,
+              "zero": 0
+            },
+            "per_run_segment_count_histogram": [
+              {
+                "runs": 5,
+                "structural_segments": 40
+              }
+            ],
+            "schema_version": 1,
+            "structural_segment_patterns": [
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": false,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "unavailable_missing_or_duplicate",
+                  "cue_384_before_action": "unavailable_missing_or_duplicate"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "unavailable_missing_or_duplicate",
+                  "cue_to_action": "unavailable_missing_or_duplicate",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "zero",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 2,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "run_end",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 5,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": false,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 182,
+                "strictly_ordered_observed_phases": true
+              },
+              {
+                "ambiguous_structure": false,
+                "attention_between_observed_phases": false,
+                "attention_present": true,
+                "contiguous_cue_action_relax": true,
+                "duplicate_phase": false,
+                "ending_boundary_family": "trial_start",
+                "noncore_nonattention_marker": false,
+                "nonincreasing_sample_gap": false,
+                "observed_core_window_checks": {
+                  "action_2048_before_relax": "within_range",
+                  "cue_384_before_action": "within_range"
+                },
+                "observed_phase_interval_checks": {
+                  "action_to_relax": "within_range",
+                  "cue_to_action": "within_range",
+                  "relax_to_rest": "within_range",
+                  "start_to_cue": "within_range"
+                },
+                "phase_counts": {
+                  "action": "one",
+                  "direction_cue": "one",
+                  "relax": "one",
+                  "rest": "one",
+                  "trial_start": "one"
+                },
+                "segments": 11,
+                "strictly_ordered_observed_phases": true
+              }
+            ],
+            "structural_segments": 200,
+            "unassigned_run_boundary_markers": 0
+          }
+        },
+        "independent": {
+          "events": 1043,
+          "status": "decoded",
+          "structure_identical_to_frozen": true
+        }
+      },
+      "full_ordered_decoder_agreement": true,
+      "participant": "sub-10",
+      "source_hash_verified_before_and_after": true
+    }
+  ],
+  "participants_audited": 10,
+  "peak_rss_bytes": 45690880,
+  "physiological_windows_read": 0,
+  "prior_evidence_and_scientific_code_unchanged": true,
+  "prior_evidence_hashes": {
+    "inner_speech_event_audit_20260929/result.json": "b84b18e3512cc62133f9923a32041a19de975e3730a44df4a95ab3c1ca59b276",
+    "inner_speech_event_audit_20260929/started.json": "dfbf561df001c1c38fdaca5dae5ee7dd7651b384f95dc37f52404a60521c66dd",
+    "inner_speech_event_census_20260929/result.json": "d2d817e0d94d5b25657608d57c9098bfbbb55efa837a1fadd238eb9e340b20ab",
+    "inner_speech_event_census_20260929/started.json": "953f866ab1c749c232aef1bdb8432006d904f071150c9d3d3c26023cc43c7b5e",
+    "inner_speech_observed_1_20261002/completed_aggregate.json": "158d76894bd246842a6c9339563be381cfaf8d13de16283626d767aeadba9eac",
+    "inner_speech_observed_1_20261002/scoring_consumed.json": "2fdec1cc41cafb21b28ddf202fe1ff9cd253d9248cea7a4e0f3860fa15ed7b28",
+    "inner_speech_observed_1_20261002/started.json": "75369cc3f5656ed0ec1d6095d71fa5b3a2c68db93dcfb7d07bda4035252e0f2c",
+    "inner_speech_temporal_dev_s2_20261002/execution_failed.json": "ec8cab862a24828f3cd3477367e164fea5c7e431d1d91eb48fc790f40f819f1f",
+    "inner_speech_temporal_dev_s2_20261002/started.json": "8636a06adf8c27fa6f89c015e2b13160d11d967bad88176812bfcb4a36b3822d",
+    "inner_speech_test_1_20260922/execution_failed.json": "f2e99288db00b37c7e344927e196ea6b51afdd16d6a0d0acf1569d4beed5ad7f",
+    "inner_speech_test_1_20260922/started.json": "327142a701cf603c27f83ef07306b4a3bbb96475266ea609f48da7c15ad2f174",
+    "inner_speech_test_1_mr1_20260929/execution_failed.json": "bbbd1f0d071bbb67a8f00b21a061630a71a19453306af36a2ebe76d9f3ff3696",
+    "inner_speech_test_1_mr1_20260929/started.json": "caec1f8ee8b6928e651839cbf19a23c1a8edbcbd5031f5629241f25b6aac9314"
+  },
+  "schema_version": 1,
+  "scoring_calls": 0,
+  "session": "ses-02",
+  "source_opaque_bytes_hashed": 13740232704,
+  "status": "audit_completed",
+  "training_calls": 0,
+  "trial_parser_calls": 0,
+  "version": "2.1.2"
+}
