@@ -13,9 +13,12 @@ language prior and measured peripheral activity cannot already explain, then
 test transfer to an untouched linguistic combination or recording day. A
 four-class accuracy improvement is an intermediate result, not thought-to-text.
 
-Our existing spectral experiment was negative. The session-2 temporal attempt
-[stopped before physiology](INNER_SPEECH_TEMPORAL_FAILURE.md), so it supplies no
-positive or negative evidence about the temporal hypothesis.
+Our existing spectral experiment was negative. The first session-2 temporal
+attempt [stopped before physiology](INNER_SPEECH_TEMPORAL_FAILURE.md); its
+separately approved [narrow successor completed](INNER_SPEECH_TEMPORAL_ATTENTION_RESULT.md)
+and was also negative. Ordered signed bin means failed the primary and cue
+sensitivity criteria, with 0/10 people beating every primary control. This
+weakens that fixed representation, not every temporal EEG hypothesis.
 
 ## The team's strongest finding is a limit of the question
 
@@ -96,11 +99,13 @@ cost. No parallel parameter sweeps, favorable-participant selection or language
 model rescue. If a language model is later used, compare the identical model,
 context, search and timing with content-bearing neural evidence removed.
 
-Immediate data work remains stopped. The smallest proposed unblocker is the
-all-ten session-2 Status-only audit already specified in the failure note
-(120 seconds, 256 MiB RSS, 1 MiB output). It needs fresh approval and does not
-authorize a numerical rerun. Any beta-envelope, compositional or invasive
-reference experiment needs its own source decision and frozen protocol.
+The all-ten structural audit and approved numerical successor are complete.
+The next proposed measurement is the fixed beta-envelope sensitivity/attribution
+experiment above, with separate sensitivity and imagined-content endpoints.
+It requires its own source decision, frozen protocol and approval; no further
+data work is authorized. Do not tune consumed sessions or open session 3 to
+confirm the failed signed-bin model. Compositional or invasive reference work
+likewise remains a separate source and scientific decision.
 
 The substantive change is the research target: **identify a transferable
 content-bearing mechanism**, not optimize a score whose origin we cannot distinguish.

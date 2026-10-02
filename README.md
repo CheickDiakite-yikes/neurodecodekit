@@ -31,27 +31,29 @@ irreversible Tier C events.
 ## Scientific Operating Model
 
 **Current result and priority (October 2, 2026):**
-The [all-ten session-2 event audit](docs/INNER_SPEECH_SESSION2_AUDIT_RESULT.md)
-completed in **29.58 seconds**, with exact agreement between both decoders.
-One attention group followed an intact cue/action/relax core without an observed
-rest. Six other segments lacked a core marker, within the already-fixed exclusion
-caps; 1,994 core-present segments are **not yet qualified trials**. No physiological
-windows, fits or scores were read or produced. The earlier
-[temporal attempt remains failed and immutable](docs/INNER_SPEECH_TEMPORAL_FAILURE.md).
-**Next:** seek fresh approval for a narrow attention-boundary successor and one
-unchanged all-ten temporal-versus-spectral test (20-minute total cap, thirteen arms,
-all controls). Condition layout and split eligibility must still pass; no new
-data, inferred events, higher exclusions or automatic retry. Session 3 remains
-unopened and unacquired. The temporal decoding hypothesis remains untested.
+The [corrected session-2 temporal experiment](docs/INNER_SPEECH_TEMPORAL_ATTENTION_RESULT.md)
+completed and scored once in **252 seconds**, retaining **1,994 trials**, all ten
+people, three conditions and thirteen arms. **Primary, cue sensitivity and
+progression all failed.** Inner-speech joint log-loss gain was **-0.006061 nats**
+against peripheral/timing alone and **-0.008322 nats** against matched spectral
+EEG; **0/10** people beat every control. Joint balanced accuracy was **22.15%**
+versus 25% uniform. All nulls and secondary results remain in the
+[aggregate](registries/inner_speech_temporal_attention_result.v0.json).
+**Next:** stop signed-bin tuning/confirmation and specify one separate fixed
+beta-envelope sensitivity/attribution experiment, with matched power,
+per-trial time-scrambling and peripheral/null controls. It needs its own source
+decision, bounded protocol and approval. No consumed session is reopened;
+session 3 remains unopened and unacquired. This negative result is not an EEG
+ceiling or proof that thought decoding is impossible.
 
 The [scientific swarm review](docs/THOUGHT_TO_TEXT_SCIENTIFIC_SWARM.md) now organizes
 work around competing mechanisms, independent falsification and decisive data.
 Its separate mechanistic candidate is a fixed beta-envelope trajectory test,
-distinct from the current raw-bin comparison; no new experiment is authorized.
+distinct from the completed raw-bin comparison; no new experiment is authorized.
 The longer-term milestone is content
 that external cues cannot already supply, with transfer to untouched words or days.
 
-**Latest completed scientific result:**
+**Prior session-1 scientific result:**
 The [completed ten-person imagined-word experiment](docs/INNER_SPEECH_OBSERVED_RESULT.md)
 scored once in **245 seconds**, retaining 1,993 trials, all ten people, all three
 conditions and all eight arms. The primary EEG increment **failed**: mean
