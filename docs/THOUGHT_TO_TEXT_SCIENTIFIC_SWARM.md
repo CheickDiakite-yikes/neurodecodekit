@@ -139,10 +139,15 @@ contents. Exact paired participant/session/block coverage, event definitions,
 decompressed size and available peripheral measurements remain unresolved.
 No archive, neural sample, target, prediction or weight was opened in this review.
 
-**Requested next boundary, not authorization:** acquire only these three
+**Approved October 2, 2026:** the maintainer replied "continue approved, lets
+please get closer to thought to text" to the explicit acquisition-only request.
+The source-decision commit `4182ec8` passed both
+[CI jobs](https://github.com/CheickDiakite-yikes/neurodecodekit/actions/runs/37042602118).
+This admits one acquisition and documentation check, not a neural experiment.
+Acquire only these three
 archives once into local storage outside OneDrive; inspect ZIP directories and
 their documentation, not neural arrays or per-trial event/target records.
-Proposed limits: ten minutes, 500 MiB transferred, 512 MiB retained archives,
+Approved limits: ten minutes, 500 MiB transferred, 512 MiB retained archives,
 256 MiB RSS, one worker, at most 64 KiB of documentation, and no extraction
 of scientific arrays. Stop on mismatch, missing matching coverage, timeout or
 resource failure; no automatic retry or substitution. The output should be
