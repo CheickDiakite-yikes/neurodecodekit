@@ -44,20 +44,18 @@ stopped with an HTTP error after **1.062 seconds and zero archive bytes copied**
 No inventory, internal README, neural array, label, fit or score was opened.
 The separately approved **0.61-second header-only diagnostic returned 403**,
 with no redirect or body read. The [failure and next boundary](docs/THOUGHT_TO_TEXT_SCIENTIFIC_SWARM.md#approved-acquisition-stopped-at-http-transport)
-preserve both attempts; the denial's cause remains unknown. Next requires a
-normal browser download or separately authorized authenticated API connection,
-not another anonymous retry. The intended scientific question remains attempted-
-speech transfer to verbal versus visual rehearsal of the same arrows. No new
-decoding result is claimed. Preserve session 3 and all consumed evidence; the
-beta-envelope hypothesis remains parked.
+preserve both attempts; the denial's cause is unknown. Next requires a normal
+browser download or separately authorized authenticated API access, not an
+anonymous retry. The scientific question remains attempted-speech transfer to
+verbal versus visual rehearsal of the same arrows. No new decoding result is
+claimed. Preserve session 3 and all consumed evidence.
 
-The [scientific swarm review](docs/THOUGHT_TO_TEXT_SCIENTIFIC_SWARM.md) now organizes
+The [scientific swarm review](docs/THOUGHT_TO_TEXT_SCIENTIFIC_SWARM.md) organizes
 work around competing mechanisms, independent falsification and decisive data.
-Its separate mechanistic candidate is a fixed beta-envelope trajectory test,
-with matched amplitude statistics and circular-shift controls, distinct from
-the completed raw-bin comparison; no new experiment is authorized.
-The longer-term milestone is content
-that external cues cannot already supply, with transfer to untouched words or days.
+Its separate, parked candidate is a fixed beta-envelope trajectory test with
+matched amplitude and circular-shift controls, unlike the completed raw-bin
+comparison; no new experiment is authorized. The longer-term milestone is content
+external cues cannot supply, with transfer to untouched words or days.
 
 **Prior session-1 scientific result:**
 The [completed ten-person imagined-word experiment](docs/INNER_SPEECH_OBSERVED_RESULT.md)
