@@ -4,7 +4,46 @@ A native, local macOS experiment toward **silent thought-to-text**. The initial
 vocabulary is YES / NO. This is an exploratory self-study, not a demonstrated
 thought reader, EEG instrument, medical device, or free-form language decoder.
 It contains no speech recognizer, microphone input, LLM, model download, or
-network client. No participant result exists until a person completes the study.
+network client. One held-out run is complete and found **no clear held-out
+evidence**; the result is below.
+
+## Result of the first completed run (September 9, 2026)
+
+One participant completed the 24 blinded held-out trials once, in the same
+visit as calibration, using the saved v0 calibration through the v1 app. The
+app scored once and recorded status `no_clear_held_out_evidence`. Held-out
+choices were 15 YES and 9 NO, so always answering YES scores 62.5%.
+
+| Predictor | Correct | Accuracy | Balanced accuracy | Predicted YES / NO |
+| --- | ---: | ---: | ---: | ---: |
+| Primary: nuisance-adjusted forehead color | 15/24 | 62.5% | 52.2% | 22 / 2 |
+| Nuisance features only | 15/24 | 62.5% | 65.6% | 10 / 14 |
+| Chronological trial position | 15/24 | 62.5% | 50.0% | 24 / 0 |
+| Calibration majority, no camera | 9/24 | 37.5% | 50.0% | 0 / 24 |
+
+The primary decoder only matched the always-YES rate, predicting YES on 22 of
+24 trials; its balanced accuracy is near chance. The prespecified
+fixed-marginal permutation reference gives p = 0.62, and the Wilson 95%
+interval for accuracy is 42.7%–78.8%. Nuisance features alone reached a higher
+balanced accuracy, which is a descriptive comparison only. **This run gives no
+evidence that the forehead color features predict the private choice.** It is
+one person, one visit and 24 trials: a negative result for this representation,
+not a limit on camera or EEG approaches. The calibration-majority comparator
+predicted NO on every trial while most held-out choices were YES: self-chosen
+words need not be exchangeable, and the caveat under
+[Decoder and controls](#decoder-and-controls) applies to the permutation
+reference.
+
+Measured cost: 259.7 seconds on the experiment clock, 1,222.6 seconds of
+process runtime, 260,505,600 bytes peak RSS, 73,555 retained numerical bytes,
+zero raw video or audio bytes, and zero model API calls.
+
+Both runs in `local-runs/` are kept and counted. The earlier v0 run completed
+24 calibration trials and timed out before any held-out trial, so it has no
+score; the v1 run above reused that calibration. Per-trial records stay local
+and ignored by Git. Checked on October 3, 2026 without rebuilding: the app
+binary still matches `binary_sha256` in `build/verification-v1.json`, and the
+v0 event log still matches its recorded hash.
 
 ## Run
 
@@ -121,11 +160,18 @@ defined, fresh-session replication with stronger nuisance and randomization
 controls before changing the decoder or increasing the vocabulary. Never tune
 on this held-out block or present repeated attempts' best result alone.
 
+**Applied to the completed run:** accuracy stayed at the majority baseline, so
+the result is reported above for this representation and participant. The
+decoder is unchanged and nothing is tuned on that held-out block.
+
 This separate local prototype follows the user's explicit 2026-09-09 request
 to pursue this experiment. It accesses no historical participant data and
 does not activate, reopen, or reinterpret any consumed NeuroDecodeKit lane.
 
 ## Verification at handoff
+
+This section records the state before the held-out run reported above; its
+statements that no score or participant trial exists describe that earlier time.
 
 ### Timing repair and saved calibration
 
