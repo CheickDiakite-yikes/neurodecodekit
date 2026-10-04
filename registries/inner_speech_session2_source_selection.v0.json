@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "selection_id": "INNER-SPEECH-TEMPORAL-DEV-S2",
+  "status": "metadata_only_acquisition_not_authorized",
+  "dataset": "ds003626",
+  "version": "2.1.2",
+  "source_commit": "d96743351ae4e5d0ee7a1384320ea8d52a2ce698",
+  "license": "CC0",
+  "source_tree_url": "https://api.github.com/repos/OpenNeuroDatasets/ds003626/git/trees/d96743351ae4e5d0ee7a1384320ea8d52a2ce698?recursive=1",
+  "source_tree_entries": 298,
+  "source_tree_truncated": false,
+  "selection": "Exactly sub-01 through sub-10, ses-02, original all-channel BDF recordings. No participant selection by prior performance.",
+  "purpose": "One fixed time-resolved development test; ses-01 scored evidence remains consumed and ses-03 remains unopened for possible later confirmation.",
+  "payload_bytes": 6870116352,
+  "payload_gib": 6.398294448852539,
+  "metadata_scope": "Public Git tree and ten Git-annex pointer blobs only. No BDF payload, header, Status, sample, target, prediction or model read.",
+  "recording_design": "Published protocol: three consecutive sessions on one recording day, five condition runs per session. Sessions 1 and 2 have 200 nominal trials/person. This metadata does not establish actual session-2 marker completeness or eligible trial counts.",
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8844234/",
+  "proposed_acquisition_limits": {
+    "wall_seconds": 3600,
+    "payload_limit_bytes": 10737418240,
+    "peak_rss_bytes": 1073741824,
+    "generated_metadata_bytes": 33554432,
+    "minimum_free_bytes": 21474836480,
+    "workers": 1,
+    "automatic_retry": false
+  },
+  "proposed_numerical_limits": {
+    "wall_seconds": 1200,
+    "peak_rss_bytes": 1073741824,
+    "generated_bytes": 33554432,
+    "workers": 1,
+    "scoring_invocations": 1
+  },
+  "unresolved_before_payload": [
+    "Explicit approval of new session-2 acquisition and development exposure",
+    "Metadata-only S3 HEAD verification and exact version pins",
+    "Session-2 technical-header and event-qualification contract; no inherited session-1 corrections or seven-exclusion rule",
+    "Frozen temporal comparison, controls, splits, progression rule and generated tests before physiology"
+  ],
+  "acquisition_authorized": false,
+  "experiment_authorized": false,
+  "files": [
+    {
+      "path": "sub-01/ses-02/eeg/sub-01_ses-02_task-innerspeech_eeg.bdf",
+      "git_blob_sha1": "2a7d5632e7feb89bf18417a17d1e92399f8d6198",
+      "annex_pointer": "../../../.git/annex/objects/f8/Pv/MD5E-s702878208--e0ba741cc1f219f8a11c5ef183e6efc2.bdf/MD5E-s702878208--e0ba741cc1f219f8a11c5ef183e6efc2.bdf",
+      "size_bytes": 702878208,
+      "md5": "e0ba741cc1f219f8a11c5ef183e6efc2"
+    },
+    {
+      "path": "sub-02/ses-02/eeg/sub-02_ses-02_task-innerspeech_eeg.bdf",
+      "git_blob_sha1": "fac9d6357dbbfcba49b53fbecbc900c58c110af5",
+      "annex_pointer": "../../../.git/annex/objects/40/k3/MD5E-s695723520--3c6eb2046eb2908e26a10a7d0b1c6e80.bdf/MD5E-s695723520--3c6eb2046eb2908e26a10a7d0b1c6e80.bdf",
+      "size_bytes": 695723520,
+      "md5": "3c6eb2046eb2908e26a10a7d0b1c6e80"
+    },
+    {
+      "path": "sub-03/ses-02/eeg/sub-03_ses-02_task-innerspeech_eeg.bdf",
+      "git_blob_sha1": "c5b8223d1db2d412609a0006e26e56493d7ab1e8",
+      "annex_pointer": "../../../.git/annex/objects/v7/Kv/MD5E-s688568832--ef23d403e44db7ea100f88050d2462ba.bdf/MD5E-s688568832--ef23d403e44db7ea100f88050d2462ba.bdf",
+      "size_bytes": 688568832,
+      "md5": "ef23d403e44db7ea100f88050d2462ba"
+    },
+    {
+      "path": "sub-04/ses-02/eeg/sub-04_ses-02_task-innerspeech_eeg.bdf",
+      "git_blob_sha1": "18b3fa8b054a1aad4498d37fac12c5fc14ea34c5",
+      "annex_pointer": "../../../.git/annex/objects/Fz/Kg/MD5E-s693619200--0586a84ba9be6c8cd491c3ab40850406.bdf/MD5E-s693619200--0586a84ba9be6c8cd491c3ab40850406.bdf",
+      "size_bytes": 693619200,
+      "md5": "0586a84ba9be6c8cd491c3ab40850406"
+    },
+    {
+      "path": "sub-05/ses-02/eeg/sub-05_ses-02_task-innerspeech_eeg.bdf",
+      "git_blob_sha1": "422a2ad7c05a20753786d8e96f02efb07940409c",
+      "annex_pointer": "../../../.git/annex/objects/k1/jQ/MD5E-s678468096--b026e597870da201279ace6cafd889d3.bdf/MD5E-s678468096--b026e597870da201279ace6cafd889d3.bdf",
+      "size_bytes": 678468096,
+      "md5": "b026e597870da201279ace6cafd889d3"
+    },
+    {
+      "path": "sub-06/ses-02/eeg/sub-06_ses-02_task-innerspeech_eeg.bdf",
+      "git_blob_sha1": "8fb9353796dfc1046d7fed71978e1f8d3b707f8d",
+      "annex_pointer": "../../../.git/annex/objects/18/f1/MD5E-s686885376--e82f2fde3a7c964e4892914e12ea738e.bdf/MD5E-s686885376--e82f2fde3a7c964e4892914e12ea738e.bdf",
+      "size_bytes": 686885376,
+      "md5": "e82f2fde3a7c964e4892914e12ea738e"
+    },
+    {
+      "path": "sub-07/ses-02/eeg/sub-07_ses-02_task-innerspeech_eeg.bdf",
+      "git_blob_sha1": "6916035c6af0f62c69434700c7e774ef10f7f617",
+      "annex_pointer": "../../../.git/annex/objects/43/Mj/MD5E-s676363776--58937c030cd46bc5dcb066c3f213891b.bdf/MD5E-s676363776--58937c030cd46bc5dcb066c3f213891b.bdf",
+      "size_bytes": 676363776,
+      "md5": "58937c030cd46bc5dcb066c3f213891b"
+    },
+    {
+      "path": "sub-08/ses-02/eeg/sub-08_ses-02_task-innerspeech_eeg.bdf",
+      "git_blob_sha1": "d0c040224436bccb948e60c47f7dbdf3c36bb91a",
+      "annex_pointer": "../../../.git/annex/objects/gm/wm/MD5E-s694881792--f598033aff3ae7123a3d8f040c197bd0.bdf/MD5E-s694881792--f598033aff3ae7123a3d8f040c197bd0.bdf",
+      "size_bytes": 694881792,
+      "md5": "f598033aff3ae7123a3d8f040c197bd0"
+    },
+    {
+      "path": "sub-09/ses-02/eeg/sub-09_ses-02_task-innerspeech_eeg.bdf",
+      "git_blob_sha1": "f926d41044ea555ec476101a06757d83762b163e",
+      "annex_pointer": "../../../.git/annex/objects/mm/Vm/MD5E-s672155136--df08d244e06c66fa8f03cb7551c4a699.bdf/MD5E-s672155136--df08d244e06c66fa8f03cb7551c4a699.bdf",
+      "size_bytes": 672155136,
+      "md5": "df08d244e06c66fa8f03cb7551c4a699"
+    },
+    {
+      "path": "sub-10/ses-02/eeg/sub-10_ses-02_task-innerspeech_eeg.bdf",
+      "git_blob_sha1": "363ef1199db59b59587d253923ff582a6a83348d",
+      "annex_pointer": "../../../.git/annex/objects/qw/X7/MD5E-s680572416--93060eb64ff46412ec33b7ffe37f35bf.bdf/MD5E-s680572416--93060eb64ff46412ec33b7ffe37f35bf.bdf",
+      "size_bytes": 680572416,
+      "md5": "93060eb64ff46412ec33b7ffe37f35bf"
+    }
+  ]
+}

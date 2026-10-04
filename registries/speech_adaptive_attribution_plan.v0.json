@@ -1,0 +1,57 @@
+{
+  "experiment_id": "speech_adaptive_attribution_20260922",
+  "lane": "discovery",
+  "authority": "Maintainer accepted the proposed adaptive-filter sham-input test: lets do it keep going and finding ways to get better results; approved charter Tier B",
+  "source_commit": "034af61aba855c58450977bf1c1916085c586cd6",
+  "calibration_source_paths": [
+    "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-calibration_run-01_eeg.edf",
+    "sub-1/ses-20230529/eeg/sub-1_ses-20230529_task-covert_acq-calibration_run-01_eeg.edf",
+    "sub-2/ses-20230512/eeg/sub-2_ses-20230512_task-minimallyovert_acq-calibration_run-01_eeg.edf",
+    "sub-2/ses-20230516/eeg/sub-2_ses-20230516_task-covert_acq-calibration_run-01_eeg.edf",
+    "sub-3/ses-20230523/eeg/sub-3_ses-20230523_task-minimallyovert_acq-calibration_run-01_eeg.edf",
+    "sub-3/ses-20230524/eeg/sub-3_ses-20230524_task-covert_acq-calibration_run-01_eeg.edf"
+  ],
+  "target": "Five-word calibration label; all600 development trials from six recordings, three people and both conditions; no exclusions",
+  "hypothesis": "The EOG/lip-fed adaptive filter can produce word-predictive features with no recorded EEG-channel samples entering those features; per-trial normalization is a separate competing explanation for prior improvement",
+  "preprocessing": "Unchanged source EEG gain, notch50/100, CAR and all-channel2-118Hz filtering on1626samples. Trial normalization uses float64 mean and std(ddof1)+machineepsilon over all1626samples perchannel. NLMS uses original adaptive_residual with per-trial normalization, mu.1, eps.001, fixed random weights seed20260906, reset eachtrial. All views crop25:1625 thenfloat32 before identical float64 spectral features.",
+  "sham": {
+    "seed": 20260922,
+    "construction": "np.random.default_rng(20260922).normal(0,1,(128,1626)); pass through source_filter with zero(5,1626) auxiliaries once per recording. Identical template for every trial and recording, independent of recorded EEG, labels, trial index, timing, person and condition.",
+    "allowed_varying_input": "Only the original conventionally filtered EOG and two lip waveforms enter sham_filtered_repetition via the unchanged adaptive_residual. No recorded EEG amplitude, variance, normalization denominator, fitted transform or spectrum enters either sham branch.",
+    "limit": "One fixed nondegenerate template, not spectrum-matched to recorded EEG. No later seed, amplitude or template search. Sham-negative is inconclusive about EEG origin; auxiliary electrodes may themselves contain mixed physiological sources."
+  },
+  "representations": {
+    "raw_repetition": "Conventionally preprocessed recorded EEG, without per-trial normalization or NLMS",
+    "normalized_repetition": "Same recorded EEG with per-trial normalization only, no NLMS",
+    "filtered_repetition": "Same recorded EEG through unchanged auxiliary-fed adaptive_residual",
+    "sham_normalized_repetition": "Fixed source-filtered sham with per-trial normalization only; identical features every trial",
+    "sham_filtered_repetition": "Fixed source-filtered sham through unchanged adaptive_residual with real EOG/lips; no recorded EEG-channel samples"
+  },
+  "features": "Same768features perview:128channels times6bands2-4,4-8,8-13,13-30,30-60,60-118Hz. Five320sample repetitions at256Hz; one-sided squared FFT/320^2, no taper, upperedge118included, average per-repetition powers thenlog. N is unchanged392auxiliary/timingfeatures.",
+  "arms": "29total: N,N_shuffled,uniform,training_prior; for each five views R: R,R_shuffled,N_R,N_R_deranged,N_R_shuffled. Every arm retained under both schemes.",
+  "model": "Unchanged fixed one-hot ridge alpha1 with unpenalized intercept and softmax. Train-only perfeature centering/scaling; auxiliary and EEG/sham blocks each divided bysqrt(own dimension). No tuning or probability calibration.",
+  "split_algorithms": "Same blocked_embargo1 primary: five chronological20trialblocks, one adjacent traintrial embargo perboundary,78/79traintrials; same stratified_shuffled secondary: StratifiedKFold5 shuffleTrue random_state20260921,80traintrials. Retrospective within-recording, not past-to-future. Original trial with all five repetitions is indivisible. All six class-support and split-hash preflights before any fit.",
+  "seed": 20260921,
+  "label_shuffle": "Training labels only; seed20260921+100*scheme_index+fold_index, same permutation across arms; validation targets unchanged",
+  "derangement": "EEG/sham feature rows roll one position separately within train and validation; N stays aligned. Original training rows determine scaling. No crossfold donors. Single misalignment diagnostic, not permutation inference.",
+  "primary_arm": "sham_filtered_repetition",
+  "primary_comparators": ["sham_normalized_repetition", "sham_filtered_repetition_shuffled", "uniform", "training_prior"],
+  "primary_metric": "Class-macro log loss over100pooled out-of-fold trials per person; equal-person descriptive means; balanced accuracy secondary",
+  "primary_threshold": "Strictly lower log loss than allfour comparators in every one of three people within a condition under blockedvalidation. Report minimallyovert and covert separately. Descriptive consistency, not statistical significance.",
+  "secondary_arm": "N_filtered_repetition",
+  "secondary_comparators": ["N", "N_normalized_repetition", "N_sham_filtered_repetition", "N_filtered_repetition_deranged", "N_filtered_repetition_shuffled", "uniform", "training_prior"],
+  "secondary_threshold": "Strictly lower log loss than allseven comparators in allthreepeople percondition; descriptive secondary diagnostic, not fresh confirmation",
+  "interpretation": {
+    "sham_pass": "Demonstrates an auxiliary-to-processed-feature predictive pathway without recorded EEG-channel inputs on these calibration recordings. Does not establish that all real-EEG performance is peripheral, that auxiliaries have no neural contribution, or that NLMS generally fails.",
+    "normalization_matches_or_beats_adaptive": "No demonstrated adaptive-filter-specific advantage over per-trial normalization for this readout",
+    "real_joint_secondary_pass": "Residual recorded-EEG contribution beyond these specific normalization/sham/nuisance comparators remains plausible; cortical origin and independent neural communication unresolved",
+    "subset_people": "Heterogeneous result, all-person threshold fails; retain individual outcomes",
+    "sham_fail": "This single fixed template did not demonstrate the pathway; not proof of neural origin or absence of other peripheral transformations",
+    "random_only": "Sensitive to temporal split structure, not consistent held-out-block prediction"
+  },
+  "resource_caps": {"runtime_seconds": 600, "rss_bytes": 1073741824, "generated_bytes": 33554432, "minimum_free_bytes": 21474836480, "numerical_threads": 1, "workers": 1},
+  "model_counts": {"ridge_total": 1620, "with_recorded_eeg_features": 900, "with_sham_features": 600, "auxiliary_only": 120, "deep_models": 0},
+  "stop_rule": "One invocation after generated checks and both remote CI jobs pass. Preserve failure, no automatic retry or partial aggregate. No code changes during execution. Stream trials; no retained waveform or feature cache. All three previous result aggregates remain byte-identical.",
+  "forbidden": ["online recordings or targets", "old private targets, predictions or weights", "new downloads", "hyperparameter or sham-template search", "rescoring consumed confirmation", "payload uploads"],
+  "claim_coordinates": {"generalization": "personalized within-recording development calibration CV", "attribution": "preprocessing-pathway falsification, not cortical-origin evidence", "temporal_regime": "offline event-locked retrospective", "output": "five-word closed set", "calibration": "78/79 or80trainingtrials per fold", "setting": "existing curated laboratory recordings"}
+}

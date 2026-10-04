@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "experiment_id": "INNER-SPEECH-TEST-1",
+  "status": "frozen_protocol_pending_explicit_execution_approval",
+  "dataset": "ds003626",
+  "version": "2.1.2",
+  "source_commit": "d96743351ae4e5d0ee7a1384320ea8d52a2ce698",
+  "source_manifest": "registries/inner_speech_source_manifest.v0.json",
+  "acquisition_receipt": "registries/inner_speech_acquisition_result.v0.json",
+  "acquisition_receipt_sha256": "35caa3bea6e782a67ef982d185eb0781e7938cfe4bccc7b93c89fb86d57b54bb",
+  "participants": [
+    "sub-01",
+    "sub-02",
+    "sub-03",
+    "sub-04",
+    "sub-05",
+    "sub-06",
+    "sub-07",
+    "sub-08",
+    "sub-09",
+    "sub-10"
+  ],
+  "session": "ses-01",
+  "hypothesis": "Recorded EEG improves four-word inner-speech held-out probabilities beyond the fixed peripheral/timing model and every primary null.",
+  "conditions": {
+    "pronounced": 21,
+    "inner": 22,
+    "visualization": 23
+  },
+  "classes": {
+    "up": 0,
+    "down": 1,
+    "right": 2,
+    "left": 3
+  },
+  "qualification": {
+    "runs": 5,
+    "trials_per_run": 40,
+    "trials_per_participant": 200,
+    "expected_total_trials": 2000,
+    "run_conditions": [
+      21,
+      22,
+      22,
+      23,
+      23
+    ],
+    "sub03_run3": "Correct 22 to 23 prospectively; accept already-corrected 23, no other layout changes.",
+    "nominal_intervals_seconds": {
+      "concentration": 0.5,
+      "cue": 0.5,
+      "action": 2.5,
+      "relax": 1
+    },
+    "status": "Lower 16 bits; nonzero transitions; sub-10 only discard nonzero pulses shorter than 3 samples, matching published 2 ms handling; report counts.",
+    "baseline": "Baseline features unused; missing baseline end 14 accepted only in sub-10 and reported, never synthesized.",
+    "ancillary_events": "Ignore unused question 17 and attention-answer 61..64 individually only after complete trial end 46 and before next 42 or run end 16; report unpaired counts without inferring an answer or correctness. Inter-run rest tag 51 may be absent only between intact run end 16 and next run start 15; report missing counts. These exceptions never repair trial-internal or target events.",
+    "missing_target_or_ambiguous_trial": "Stop entire study before fitting; no imputation, exclusion, participant substitution or partial score.",
+    "expected_condition_totals": {
+      "pronounced": 400,
+      "inner": 760,
+      "visualization": 840
+    },
+    "interval_admission_seconds": {
+      "concentration": [
+        0,
+        5
+      ],
+      "cue": [
+        0.375,
+        3
+      ],
+      "action": [
+        2,
+        4
+      ],
+      "relax": [
+        0,
+        3
+      ]
+    },
+    "interval_admission_note": "Zero concentration/relax intervals fail. Endpoints otherwise inclusive. Strict event order, nonoverlap and complete trials are mandatory. Nominal-timing deviations >0.1 s are reported, not used for post-hoc exclusion or window changes; public paper and newer author MATLAB disagree. This is not an exact nominal-timing reproduction."
+  },
+  "windows": {
+    "primary": "[actual_relax-2048, actual_relax), within action",
+    "cue": "[actual_cue, actual_cue+384), within cue",
+    "late": "[actual_relax-384, actual_relax), within action",
+    "sampling_hz": 1024,
+    "primary_samples": 2048,
+    "comparison_samples": 384
+  },
+  "features": {
+    "eeg": "128-channel common-average reference within each window, using EEG only; demean, symmetric numpy.hanning(N), log integrated one-sided FFT band power. No claim of resolving 1 Hz in the 384-sample comparison.",
+    "eeg_bands_hz": [
+      [
+        1,
+        4
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        8,
+        13
+      ],
+      [
+        13,
+        30
+      ],
+      [
+        30,
+        40
+      ]
+    ],
+    "peripheral": "EXG1..8 minus EXG1/2 mean, plus EXG3-EXG4, EXG5-EXG6, EXG7-EXG8; log band powers and log variance from the same 2048-sample action window.",
+    "peripheral_bands_hz": [
+      [
+        1,
+        4
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        8,
+        13
+      ],
+      [
+        13,
+        30
+      ],
+      [
+        30,
+        45
+      ],
+      [
+        55,
+        100
+      ]
+    ],
+    "bands": "Left closed/right open except final high edge included; no cross-window filtering, padding, resampling, baseline normalization or peripheral-driven EEG cleaning.",
+    "power_normalization": "abs(rfft(demean(x)*hanning(N)))^2/(N*sum(hanning(N)^2)); double interior one-sided frequency bins; sum included bins. Variance is unwindowed population variance (ddof=0).",
+    "log_feature_floor": "numpy.finfo(float64).tiny, applied before natural log to power and variance.",
+    "timing": [
+      "start_seconds",
+      "run_ordinal",
+      "trial_in_run",
+      "concentration_seconds",
+      "cue_seconds",
+      "action_seconds",
+      "relax_seconds",
+      "preceding_trial_gap_seconds"
+    ],
+    "forbidden": "Directional cue identity, target values, attention answers, pupil/cue images and condition-derived target lookup are not predictors."
+  },
+  "arms": [
+    "P",
+    "joint",
+    "cue_joint",
+    "late_joint",
+    "deranged_joint",
+    "joint_shuffled",
+    "uniform",
+    "training_prior"
+  ],
+  "validation": {
+    "outer_folds": 4,
+    "outer": "Contiguous array_split whole trials within participant/condition; no random split variant.",
+    "inner_folds": 3,
+    "inner": "Three remaining original outer blocks intersected with outer training.",
+    "embargo": "Remove original-trial indices within distance 1 of validation at both levels.",
+    "endpoint": "Pool one out-of-fold prediction per eligible trial; no group weight transfer or unseen-person claim.",
+    "class_support": "All four classes required globally in every participant/condition. Fixed four-column ridge permits missing training classes. Temperature macro-averages observed calibration classes. No alternate folds.",
+    "seed": 20260922
+  },
+  "estimator": {
+    "model": "One-hot ridge, alpha 1, unpenalized intercept, softmax; train-only per-feature standardization and per-block sqrt-dimension normalization.",
+    "temperature": "Each of six learned arms gets inner-OOF class-macro NLL calibration; inverse temperature [0.05,20], 60 bisection steps, train labels only. Preserve uncalibrated diagnostics and argmax.",
+    "float64_ties": "If positive calibration changes argmax only by collapsing maxima to an exact output tie, restore the original winner by one output ULP only when the lost mathematical gap is at most four output ULPs. Report every correction; refuse strict reversals or larger gaps. This does not change the model or temperature fit.",
+    "derangement": "Fixed cyclic offset 1 within training and validation partitions separately; no target-dependent offset selection.",
+    "shuffle": "One fixed outer-training label permutation per fold, retained consistently for every inner fit and temperature target. Never permute held-out evaluation labels.",
+    "training_prior": "Laplace/add-one prior from outer training only."
+  },
+  "primary": {
+    "condition": "inner",
+    "metric": "Participant class-macro negative log likelihood; log floor 1e-15.",
+    "comparator": "P",
+    "minimum_mean_gain_nats": 0.02,
+    "controls": [
+      "P",
+      "deranged_joint",
+      "joint_shuffled",
+      "uniform",
+      "training_prior"
+    ],
+    "consistency": "The SAME at least 9 of 10 participants must have strictly positive joint gain against every primary comparator; ties count as nonpositive.",
+    "statistic": "Report one-sided exact sign-test p for each contrast with fixed n=10; 9 positives => 11/1024. All-control conjunction, not a bound on mean gain."
+  },
+  "secondary": "Balanced accuracy, confusion matrices, all participants/conditions, uncalibrated probabilities, cue_joint versus matched-duration late_joint. No secondary rescue of failed primary.",
+  "stop_rule": "Exactly one prediction and one score. Failure consumes attempt; no retries, tuning, partial scoring, dropped participants/trials, added data or hidden variants.",
+  "resources": {
+    "wall_seconds": 1200,
+    "wall_includes": "prediction, prediction-hash freeze commit/push, final scoring",
+    "rss_bytes": 1073741824,
+    "generated_bytes": 33554432,
+    "min_free_bytes": 21474836480,
+    "numerical_workers": 1,
+    "network": "No new data downloads; Git public hash/aggregate commits only."
+  },
+  "privacy": "All signal/event arrays, labels and per-trial predictions remain local AppData outside OneDrive; Git receives only code, protocol, hashes, aggregate metrics and reports.",
+  "interpretation": "Fresh-recording same-day within-person offline four-word prediction beyond these recorded alternatives; not cortical origin, cue-independent thoughts, unseen-person model generalization, new-day robustness, arbitrary text, prospective live use or clinical utility."
+}

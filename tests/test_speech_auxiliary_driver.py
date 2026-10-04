@@ -1,0 +1,168 @@
+"""Generated-only execution boundary checks; never read participant payloads."""
+
+import importlib.util
+import json
+from pathlib import Path
+import tempfile
+import unittest
+from unittest import mock
+
+
+REPO = Path(__file__).resolve().parents[1]
+SPEC = importlib.util.spec_from_file_location("auxiliary_driver", REPO / "scripts/discover_speech_auxiliary.py")
+driver = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(driver)
+
+
+class AuxiliaryDriverTests(unittest.TestCase):
+    def test_probability_route_preserves_all_five_prior_results_and_calibration_scope(self):
+        with mock.patch.multiple(driver, EXPERIMENT=driver.EXPERIMENT, LOCAL=driver.LOCAL,
+                                 PLAN=driver.PLAN, RESULT=driver.RESULT):
+            driver.configure_probability_calibration()
+            self.assertEqual(driver.EXPERIMENT, "probability_calibration")
+            self.assertTrue(all("probability_calibration" in str(path) for path in
+                                (driver.LOCAL, driver.PLAN, driver.RESULT)))
+            started = {"plan_sha256": "plan", "source_manifest_sha256": "manifest",
+                       "prediction_freeze_sha256": "freeze"}
+            hashes = ["plan", "manifest", "freeze", driver.PRIOR_RESULT_SHA,
+                      driver.PRIOR_AUXILIARY_SHA, driver.PRIOR_POWER_SHA,
+                      driver.PRIOR_ADAPTIVE_SHA, driver.PRIOR_TIME_FREQUENCY_SHA]
+            with mock.patch.object(driver.original, "sha256", side_effect=hashes):
+                driver.verify_bound_metadata(started)
+            for index in range(3, len(hashes)):
+                changed = hashes.copy()
+                changed[index] = "changed"
+                with mock.patch.object(driver.original, "sha256", side_effect=changed):
+                    with self.assertRaisesRegex(ValueError, "aggregate changed"):
+                        driver.verify_bound_metadata(started)
+            plan = json.loads(driver.PLAN.read_text())
+            manifest = json.loads(driver.original.MANIFEST.read_text())
+            self.assertEqual(plan["calibration_source_paths"],
+                             [item["path"] for item in driver.calibration_selection(manifest)])
+            self.assertEqual(plan["resource_caps"]["runtime_seconds"], driver.MAX_SECONDS)
+            self.assertEqual(plan["model_counts"]["ridge_total"], 6 * 2 * 5 * 9 * 5)
+            self.assertEqual(plan["model_counts"]["temperature_parameters"], 6 * 2 * 5 * 9)
+
+    def test_time_frequency_route_preserves_all_previous_discoveries(self):
+        with mock.patch.multiple(driver, EXPERIMENT=driver.EXPERIMENT, LOCAL=driver.LOCAL,
+                                 PLAN=driver.PLAN, RESULT=driver.RESULT):
+            driver.configure_time_frequency()
+            self.assertEqual(driver.EXPERIMENT, "time_frequency")
+            self.assertTrue(all("time_frequency" in str(path) for path in
+                                (driver.LOCAL, driver.PLAN, driver.RESULT)))
+            started = {"plan_sha256": "plan", "source_manifest_sha256": "manifest",
+                       "prediction_freeze_sha256": "freeze"}
+            hashes = ["plan", "manifest", "freeze", driver.PRIOR_RESULT_SHA,
+                      driver.PRIOR_AUXILIARY_SHA, driver.PRIOR_POWER_SHA, driver.PRIOR_ADAPTIVE_SHA]
+            with mock.patch.object(driver.original, "sha256", side_effect=hashes):
+                driver.verify_bound_metadata(started)
+            for index, message in ((4, "Previous auxiliary"), (5, "Previous repetition-power"),
+                                   (6, "Previous adaptive-attribution")):
+                changed = hashes.copy()
+                changed[index] = "changed"
+                with mock.patch.object(driver.original, "sha256", side_effect=changed):
+                    with self.assertRaisesRegex(ValueError, message):
+                        driver.verify_bound_metadata(started)
+
+    def test_adaptive_route_preserves_both_previous_discoveries(self):
+        with mock.patch.multiple(driver, EXPERIMENT=driver.EXPERIMENT, LOCAL=driver.LOCAL,
+                                 PLAN=driver.PLAN, RESULT=driver.RESULT):
+            driver.configure_adaptive_attribution()
+            self.assertEqual(driver.EXPERIMENT, "adaptive_attribution")
+            self.assertTrue(all("adaptive_attribution" in str(path) for path in
+                                (driver.LOCAL, driver.PLAN, driver.RESULT)))
+            started = {"plan_sha256": "plan", "source_manifest_sha256": "manifest",
+                       "prediction_freeze_sha256": "freeze"}
+            hashes = ["plan", "manifest", "freeze", driver.PRIOR_RESULT_SHA,
+                      driver.PRIOR_AUXILIARY_SHA, driver.PRIOR_POWER_SHA]
+            with mock.patch.object(driver.original, "sha256", side_effect=hashes):
+                driver.verify_bound_metadata(started)
+            for index, message in ((4, "Previous auxiliary"), (5, "Previous repetition-power")):
+                changed = hashes.copy()
+                changed[index] = "changed"
+                with mock.patch.object(driver.original, "sha256", side_effect=changed):
+                    with self.assertRaisesRegex(ValueError, message):
+                        driver.verify_bound_metadata(started)
+
+    def test_repetition_power_route_has_separate_outputs_and_preserves_prior_evidence(self):
+        with mock.patch.multiple(driver, EXPERIMENT=driver.EXPERIMENT, LOCAL=driver.LOCAL,
+                                 PLAN=driver.PLAN, RESULT=driver.RESULT):
+            old_paths = (driver.LOCAL, driver.PLAN, driver.RESULT)
+            driver.configure_repetition_power()
+            self.assertEqual(driver.EXPERIMENT, "repetition_power")
+            self.assertTrue(all("repetition_power" in str(path) for path in
+                                (driver.LOCAL, driver.PLAN, driver.RESULT)))
+            self.assertFalse(set(old_paths) & {driver.LOCAL, driver.PLAN, driver.RESULT})
+            started = {"plan_sha256": "plan", "source_manifest_sha256": "manifest",
+                       "prediction_freeze_sha256": "freeze"}
+            with mock.patch.object(driver.original, "sha256", side_effect=[
+                    "plan", "manifest", "freeze", driver.PRIOR_RESULT_SHA, "changed"]):
+                with self.assertRaisesRegex(ValueError, "Previous auxiliary"):
+                    driver.verify_bound_metadata(started)
+
+    def test_exact_plan_selects_only_six_calibrations_from_public_manifest(self):
+        manifest = json.loads((REPO / "registries/speech_reproduction_source_manifest.v0.json").read_text())
+        plan = json.loads(driver.PLAN.read_text())
+        selected = driver.calibration_selection(manifest)
+        self.assertEqual([item["path"] for item in selected], plan["calibration_source_paths"])
+        self.assertEqual(len(selected), 6)
+        self.assertTrue(all("_acq-online_" not in item["path"] for item in selected))
+        for item in selected:
+            original_path = item["events_path"]
+            item["events_path"] = original_path.replace("_acq-calibration_", "_acq-online_")
+            with self.assertRaises(ValueError):
+                driver.calibration_selection(manifest)
+            item["events_path"] = original_path
+
+    def test_single_invocation_refuses_existing_root_before_any_data_access(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            with mock.patch.object(driver, "LOCAL", Path(temporary)), \
+                    mock.patch.object(driver, "run") as run:
+                with self.assertRaises(FileExistsError):
+                    driver.main()
+                run.assert_not_called()
+
+    def test_dirty_implementation_refused_before_creating_output(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            local = Path(temporary) / "not-created"
+            with mock.patch.object(driver, "LOCAL", local), \
+                    mock.patch.object(driver, "RESULT", Path(temporary) / "absent.json"), \
+                    mock.patch.object(driver.original, "git", return_value=" M changed.py"), \
+                    mock.patch.object(driver, "run") as run:
+                with self.assertRaises(RuntimeError):
+                    driver.main()
+                self.assertFalse(local.exists())
+                run.assert_not_called()
+
+    def test_failure_marker_is_preserved_not_overwritten(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            with mock.patch.object(driver, "LOCAL", Path(temporary)):
+                budget = mock.Mock(started=driver.time.monotonic())
+                driver.failure(ValueError("generated failure"), budget)
+                first = (Path(temporary) / "execution_failed.json").read_bytes()
+                driver.failure(RuntimeError("later failure"), budget)
+                self.assertEqual(first, (Path(temporary) / "execution_failed.json").read_bytes())
+                self.assertFalse(json.loads(first)["confirmation_reopened"])
+
+    def test_budget_enforces_time_and_rss_without_numerical_dependencies(self):
+        budget = driver.Budget.__new__(driver.Budget)
+        budget.started = driver.time.monotonic() - 601
+        budget.process = mock.Mock()
+        budget.process.memory_info.return_value.rss = 100
+        budget.peak_rss = 0
+        with self.assertRaisesRegex(RuntimeError, "Ten-minute"):
+            budget.check()
+        budget.started = driver.time.monotonic()
+        budget.process.memory_info.return_value.rss = driver.MAX_RSS + 1
+        with self.assertRaisesRegex(RuntimeError, "One-GiB"):
+            budget.check()
+
+    def test_bound_metadata_change_refused_without_source_reads(self):
+        started = {"plan_sha256": "plan", "source_manifest_sha256": "manifest",
+                   "prediction_freeze_sha256": "freeze"}
+        with mock.patch.object(driver.original, "sha256", side_effect=["changed"]):
+            with self.assertRaisesRegex(ValueError, "plan_sha256"):
+                driver.verify_bound_metadata(started)
+        with mock.patch.object(driver.original, "sha256", side_effect=[
+                "plan", "manifest", "freeze", driver.PRIOR_RESULT_SHA]):
+            driver.verify_bound_metadata(started)

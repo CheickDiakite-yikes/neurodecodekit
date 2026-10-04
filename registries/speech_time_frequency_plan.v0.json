@@ -1,0 +1,58 @@
+{
+  "experiment_id": "speech_time_frequency_20260922",
+  "lane": "discovery",
+  "authority": "Maintainer approved the proposed auxiliary-independent EEG test: appproved, lets do it keep going and finding ways to get better breakthrough results; standing charter Tier B",
+  "source_commit": "034af61aba855c58450977bf1c1916085c586cd6",
+  "calibration_source_paths": [
+    "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-calibration_run-01_eeg.edf",
+    "sub-1/ses-20230529/eeg/sub-1_ses-20230529_task-covert_acq-calibration_run-01_eeg.edf",
+    "sub-2/ses-20230512/eeg/sub-2_ses-20230512_task-minimallyovert_acq-calibration_run-01_eeg.edf",
+    "sub-2/ses-20230516/eeg/sub-2_ses-20230516_task-covert_acq-calibration_run-01_eeg.edf",
+    "sub-3/ses-20230523/eeg/sub-3_ses-20230523_task-minimallyovert_acq-calibration_run-01_eeg.edf",
+    "sub-3/ses-20230524/eeg/sub-3_ses-20230524_task-covert_acq-calibration_run-01_eeg.edf"
+  ],
+  "target": "Five-word development calibration labels; all 600 original trials, three people, both conditions, no exclusions",
+  "hypothesis": "Recorded EEG processed without peripheral input adds predictive association beyond both the original auxiliary readout and a repetition-resolved auxiliary readout; fixed marginal frequency and repetition-position views characterize any association without winner selection",
+  "eeg_preprocessing": "Same source EEG gain, EEG-only notch50/100, EEG-only CAR, independent per-channel2-118Hz bandpass on1626samples; per-channel float64 z-score over full1626samples, std(ddof1)+float64epsilon. No adaptive_residual, NLMS, sham template, auxiliary-derived scale or fitted auxiliary-to-EEG transform. Crop25:1625 and castfloat32 before float64 spectral calculation.",
+  "auxiliary": {
+    "N": "Unchanged392columns: five conventionally filtered bipolar auxiliary channels with78features each, then original trial index and elapsed time at390:392",
+    "A": "692columns: originalN392, then150raw auxiliary per-repetition log bandpowers, then150normalized auxiliary per-repetition log bandpowers. Normalize auxiliary channels independently over the same full1626sample window (ddof1+epsilon), not per-repetition. Crop25:1625float32; each150block flattens5channels x5repetitions x6bands in that order. No recordedEEG sample or statistic enters auxiliary features.",
+    "caveat": "Enrichment is not guaranteed to improve prediction. A is standardized as one692featureblock, so dimension normalization differs from N; both A and unchanged N remain required comparators. Joint derangement matches each joint model's feature count."
+  },
+  "spectral_settings": "Five320sample repetitions at256Hz. Same one-sided squared FFT/320^2, interior bins doubled, no taper; bands2-4,4-8,8-13,13-30,30-60,60-118Hz with118included. EEG view averages selected repetition powers thenlogs, notmeanlog. Auxiliary enrichment retains separate per-repetition log powers.",
+  "views": {
+    "full_all": "All five repetitions, all six bands,128x6=768features; primary",
+    "band_2_4": "All five repetitions,2-4Hz,128features",
+    "band_4_8": "All five repetitions,4-8Hz,128features",
+    "band_8_13": "All five repetitions,8-13Hz,128features",
+    "band_13_30": "All five repetitions,13-30Hz,128features",
+    "band_30_60": "All five repetitions,30-60Hz,128features",
+    "band_60_118": "All five repetitions,60-118Hz,128features",
+    "early_all": "First two complete repetitions only, all six bands,768features",
+    "late_all": "Last two complete repetitions only, all six bands,768features"
+  },
+  "temporal_limit": "Early/late are repetition-position comparisons inside the same action window, not pre-cue, pre-action, causal, or independent temporal-localization controls. Whole-buffer filtering and normalization are noncausal and shared across the selected positions. All original trials are retained in every view.",
+  "arms": "51total: N,N_shuffled,A,A_shuffled,uniform,training_prior; for each nine EEG views R: R,R_shuffled,A_R,A_R_deranged,A_R_shuffled. All arms reported under both schemes.",
+  "model": "Unchanged one-hot ridge alpha1, unpenalized intercept, softmax, no tuning or probability calibration. Each N/A/EEG featureblock centered/scaled on trainingrows only and divided bysqrt(own dimension). Joint A and EEG are separately scaled. Single-band versus all-band differences also change feature count and regularization geometry; do not infer unique physiological information from rankings.",
+  "split_algorithms": "Unchanged blocked_embargo1 primary: five chronological20trialblocks, one adjacent trainingtrial embargo perboundary,78/79trainingtrials. Unchanged stratified_shuffled secondary: StratifiedKFold5 shuffleTrue random_state20260921,80trainingtrials. Retrospective within-recording, not past-to-future. All five repetitions of each trial remain together. All six class-support and split-hash preflights before any fit.",
+  "seed": 20260921,
+  "label_shuffle": "Training labels only; seed20260921+100*scheme_index+fold_index, same permutation across all arms in a fold; no validation target enters fitting",
+  "derangement": "One-position EEG feature-row cyclic shift separately within train and validation, A aligned; scale on original trainingrows before the shift. No crossfold donors. Misalignment diagnostic, not calibrated permutation inference.",
+  "primary_arm": "A_full_all",
+  "primary_comparators": ["A", "N", "A_full_all_deranged", "A_full_all_shuffled", "uniform", "training_prior"],
+  "primary_metric": "Class-macro log loss pooled over100original out-of-fold trials perperson; equal-person descriptive means; balanced accuracy secondary",
+  "threshold": "Primary log loss strictly lower than each of six comparators in all three people within a condition under blockedvalidation; both conditions separately. Descriptive consistency, not statistical significance.",
+  "exploratory_views": "For every view report the same six-comparator gains (own derangement/shuffle) plus joint log-loss gain versus full_all. Preserve all nine views. No best-band/window selection, no substitution for a failed primary, no multiplicity-adjusted or confirmatory claim. A view-consistent signal is only a hypothesis for independent testing.",
+  "interpretation": {
+    "primary_pass": "Incremental predictive association from recorded EEG under auxiliary-independent preprocessing beyond these fixed peripheral readouts; not cortical origin or cue-independent communication",
+    "A_improves_N": "Useful refinement of auxiliary prediction; does not establish physiological origin, silence, or online utility",
+    "views_only_pass": "Exploratory heterogeneity requiring independent testing, not rescue of the primary or selection of a future winner on consumed evaluation",
+    "random_only": "Sensitive to temporal split structure; blocked criterion fails",
+    "null": "No demonstrated increment for these fixed EEG representations; do not escalate model complexity on this evidence or conclude EEG lacks useful information"
+  },
+  "resource_caps": {"runtime_seconds":600,"rss_bytes":1073741824,"generated_bytes":33554432,"minimum_free_bytes":21474836480,"numerical_threads":1,"workers":1},
+  "model_counts": {"ridge_total":2940,"with_recorded_eeg_features":2700,"auxiliary_only":240,"deep_models":0},
+  "stop_rule": "One invocation after generated checks and both remote CI jobs pass. Preserve failures; no automatic retry, dropped trial or partial aggregate. Scientific code unchanged during execution. Stream trials, no retained waveform/feature cache. All four previous scientific result aggregates remain byte-identical.",
+  "forbidden": ["online recordings or targets","old private targets, predictions or weights","new downloads","adaptive or peripheral-fed EEG preprocessing","hyperparameter, band or window search","rescoring consumed confirmation","payload uploads"],
+  "claim_coordinates": {"generalization":"personalized within-recording development calibration CV","attribution":"association beyond fixed recorded auxiliary models, not cortical origin","temporal_regime":"offline event-locked retrospective","output":"five-word closed set","calibration":"78/79 or80trainingtrials per fold","setting":"existing curated laboratory recordings"}
+}

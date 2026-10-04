@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "experiment_id": "INNER-SPEECH-TEMPORAL-DEV-S2",
+  "status": "refused_before_physiology",
+  "scientific_outcome": "not_evaluated",
+  "primary_pass": null,
+  "cue_sensitivity_pass": null,
+  "progression_pass": null,
+  "source_session": "ses-02",
+  "acquisition": {"status": "complete", "files_verified": 10, "payload_bytes": 6870116352, "elapsed_seconds": 883.7820000000065, "retries": 0, "receipt_sha256": "cf2fcd44b744d067216caf0296c1595b613275498db6360ec5b8ada8ecad0534"},
+  "implementation_commit": "7a1236a990eda78674ade65cbef31978e69660db",
+  "test_only_correction_commit": "f73251e264f6c1e1cecf288c250a94c11ce896b0",
+  "attempt_code_commit": "7f96336721a4f0f22091f8152d56f6be550bbb64",
+  "implementation_validation": {"focused_generated_tests": 75, "ruff": "passed", "initial_ci": "Neuro-enabled passed; base failed one new test that assumed optional NumPy was installed.", "test_only_fix": "Conditional frozen-reader cross-check; independent pure-Python reference assertions retained. Focused test passed with and without NumPy. No scientific code changed.", "both_remote_jobs_passed_before_acquisition": true, "green_workflow": "https://github.com/CheickDiakite-yikes/neurodecodekit/actions/runs/37022035546"},
+  "failure": {"elapsed_seconds": 20.804673194885254, "error_code": "attention_requires_observed_rest", "error_type": "InnerSpeechRefusal", "participant": "sub-03", "peak_rss_bytes": 47419392, "stage": "observed_slot_qualification", "retry_or_partial_score_allowed": false},
+  "exposure": {"source_hashes_checked": 10, "status_qualification_reached_participant": "sub-03", "complete_cohort_qualification": false, "physiological_windows_read": 0, "training_calls": 0, "prediction_pairs": 0, "scoring_invocations": 0, "counts_basis": "Observed failure stage and frozen predict control flow: qualify_all must return before any physiological feature extraction or model fitting. Output directory contains only started.json and execution_failed.json; no freeze or result exists."},
+  "evidence_hashes": {"started_json_sha256": "8636a06adf8c27fa6f89c015e2b13160d11d967bad88176812bfcb4a36b3822d", "execution_failed_json_sha256": "ec8cab862a24828f3cd3477367e164fea5c7e431d1d91eb48fc790f40f819f1f", "frozen_plan_sha256": "067231fc33934b03525dd3f579ba63e0711e597d98fb738d7c9925cbafc55f43"},
+  "interpretation": "An attention event occurred outside the parser's allowed observed-rest context. The failure marker does not identify the full sequence or establish whether this is a missing marker, another event pattern, or the only cohort issue. No temporal-versus-spectral scientific comparison was completed; neither efficacy nor absence of imagined-word information can be inferred.",
+  "preservation": "The failed attempt and complete local recordings remain unchanged. No source rows, words, EEG windows, predictions or weights are published. Session 1 remains consumed; session 3 remains unopened/unacquired.",
+  "next_priority": "Seek fresh authorization for one bounded all-ten session-2 Status-only structural audit, reporting aggregate event-family/order/completeness findings without word identities or physiology. Do not patch or rerun this consumed attempt, drop a participant, infer missing words/times or score partial data. Any corrected scientific successor requires its own frozen decision."
+}

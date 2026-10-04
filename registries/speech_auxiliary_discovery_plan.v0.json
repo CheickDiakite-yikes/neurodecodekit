@@ -1,0 +1,50 @@
+{
+  "experiment_id": "speech_auxiliary_discovery_20260921",
+  "lane": "discovery",
+  "authority": "Maintainer request to continue the proposed calibration-only ablation; approved charter Tier B for already-authorized development data",
+  "source_commit": "034af61aba855c58450977bf1c1916085c586cd6",
+  "calibration_source_paths": [
+    "sub-1/ses-20230511/eeg/sub-1_ses-20230511_task-minimallyovert_acq-calibration_run-01_eeg.edf",
+    "sub-1/ses-20230529/eeg/sub-1_ses-20230529_task-covert_acq-calibration_run-01_eeg.edf",
+    "sub-2/ses-20230512/eeg/sub-2_ses-20230512_task-minimallyovert_acq-calibration_run-01_eeg.edf",
+    "sub-2/ses-20230516/eeg/sub-2_ses-20230516_task-covert_acq-calibration_run-01_eeg.edf",
+    "sub-3/ses-20230523/eeg/sub-3_ses-20230523_task-minimallyovert_acq-calibration_run-01_eeg.edf",
+    "sub-3/ses-20230524/eeg/sub-3_ses-20230524_task-covert_acq-calibration_run-01_eeg.edf"
+  ],
+  "input_identity": "EDF size/SHA256 and event/channel Git blob identities from the existing manifest and pushed prediction freeze",
+  "target": "Original five-word calibration label; 100 complete trials per recording, 600 total",
+  "hypotheses": [
+    "Display and/or timing may explain useful auxiliary word prediction without speech-related physiology",
+    "Microphone, lips or eyes may instead carry the reproducible auxiliary information",
+    "A large random-split advantage over held-out chronological blocks may indicate time-local structure rather than stable word information"
+  ],
+  "modalities": {
+    "T": "trial index and elapsed recording time",
+    "D": "DISPLAY bipolar channel",
+    "DT": "DISPLAY and timing",
+    "M": "microphone bipolar channel",
+    "E": "EOG bipolar channel",
+    "L": "upper and lower lip bipolar channels",
+    "P": "microphone, EOG and both lip channels",
+    "N": "all five auxiliary channels and timing"
+  },
+  "controls": "One matched training-label shuffle for each of eight modality arms, plus uniform and fold-training-prior predictors: 18 arms total",
+  "feature_recipe": "Unchanged original nuisance preprocessing and 78 fixed features per bipolar channel; no EEG features or models",
+  "model": "One-hot ridge alpha=1, unpenalized intercept, softmax; training-only centering/scaling divided by sqrt(selected feature count); no tuning or probability calibration",
+  "splits": {
+    "primary": "blocked_embargo1: chronological validation blocks [0,20), [20,40), [40,60), [60,80), [80,100); exclude one immediately neighboring training trial at each boundary",
+    "secondary": "stratified_shuffled: StratifiedKFold(5, shuffle=True, random_state=20260921)",
+    "identity_record": "All six recordings preflighted and train/validation index hashes recorded before any fit; exact algorithms and source identities fixed here",
+    "unit": "Original whole trial, including all five repetitions; each trial validated once per scheme",
+    "failure": "Missing class in any training fold stops the complete discovery; no split repair, trial removal or partial aggregate"
+  },
+  "seed": 20260921,
+  "shuffle_seed_formula": "20260921 + 100*scheme_index + fold_index; same training permutation across all modality arms within a fold",
+  "metrics": "Pool all 100 out-of-fold rows before class-macro log loss and five-class balanced accuracy; report every person/condition/arm/scheme and equal-person descriptive means",
+  "interpretation_threshold": "A consistent carrier must improve class-macro log loss over uniform, training prior and its matched shuffle in all three people within a condition under blocked validation. This descriptive threshold is not a significance test or confirmation. Preserve every result regardless of threshold.",
+  "resource_caps": {"runtime_seconds": 600, "rss_bytes": 1073741824, "generated_bytes": 33554432, "minimum_free_bytes": 21474836480, "numerical_threads": 1, "workers": 1},
+  "stop_rule": "One bounded invocation. Any source, extraction, class-support, numerical or resource failure is preserved without automatic retry. Existing one-shot confirmation and failed roots remain immutable.",
+  "exclusions": "None",
+  "forbidden": ["online source files or labels", "old private targets, predictions or weights", "new downloads", "EEG fitting", "confirmation rescoring", "hyperparameter search", "payload upload"],
+  "claim_ceiling": "Exploratory within-recording calibration prediction only; neither causal source nor independent information, online performance, neural origin, thought decoding, unseen-person generalization or practical utility"
+}

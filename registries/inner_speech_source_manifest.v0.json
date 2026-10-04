@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "acquisition_id": "INNER-SPEECH-ACQ-1",
+  "dataset": "ds003626",
+  "version": "2.1.2",
+  "source_commit": "d96743351ae4e5d0ee7a1384320ea8d52a2ce698",
+  "license": "CC0",
+  "source_tree_url": "https://api.github.com/repos/OpenNeuroDatasets/ds003626/git/trees/d96743351ae4e5d0ee7a1384320ea8d52a2ce698?recursive=1",
+  "selection": "All ten participants; lexicographically first common raw session, ses-01. All original BDF channels preserved. No derivatives.",
+  "observed_raw_sessions": [
+    "ses-01",
+    "ses-02",
+    "ses-03"
+  ],
+  "source_tree_truncated": false,
+  "source_tree_entries": 298,
+  "raw_companions": [],
+  "raw_companion_note": "The actual pinned raw inventory contains only BDF recordings. No channels.tsv/events.tsv/eeg.json exists beside them or inherited at raw roots. Do not impose the old generated-only companion assumption or invent sidecars. Channel metadata and status remain in BDF.",
+  "payload_bytes": 6904627200,
+  "payload_limit_bytes": 10737418240,
+  "target_access": "Copy bytes and inspect technical BDF header only. Do not decode status, event targets, physiological sample values, or performance outcomes.",
+  "resource_limits": {
+    "wall_seconds": 3600,
+    "peak_rss_bytes": 1073741824,
+    "generated_metadata_bytes": 33554432,
+    "minimum_free_bytes": 21474836480,
+    "workers": 1
+  },
+  "metadata_files": [
+    {
+      "path": "README",
+      "size_bytes": 1675,
+      "git_blob_sha1": "f0c574ea2feaa4df33b48b84d121cb99cdc5030e",
+      "url": "https://raw.githubusercontent.com/OpenNeuroDatasets/ds003626/d96743351ae4e5d0ee7a1384320ea8d52a2ce698/README"
+    },
+    {
+      "path": "dataset_description.json",
+      "size_bytes": 647,
+      "git_blob_sha1": "ebaffc2f8c3848c74d525ade1ce02d680d76eedd",
+      "url": "https://raw.githubusercontent.com/OpenNeuroDatasets/ds003626/d96743351ae4e5d0ee7a1384320ea8d52a2ce698/dataset_description.json"
+    }
+  ],
+  "files": [
+    {
+      "path": "sub-01/ses-01/eeg/sub-01_ses-01_task-innerspeech_eeg.bdf",
+      "git_blob_sha1": "d69ba102600d67b487642b8a4e6677fd3b1a574f",
+      "annex_pointer": "../../../.git/annex/objects/4X/xf/MD5E-s771058176--99304b3e9f43792d625ad36cf4153f3e.bdf/MD5E-s771058176--99304b3e9f43792d625ad36cf4153f3e.bdf",
+      "size_bytes": 771058176,
+      "md5": "99304b3e9f43792d625ad36cf4153f3e",
+      "url": "https://s3.amazonaws.com/openneuro.org/ds003626/sub-01/ses-01/eeg/sub-01_ses-01_task-innerspeech_eeg.bdf?versionId=_epuv8s0yl8cjb4l5uTKzAXIwzu4zBec",
+      "s3_version_id": "_epuv8s0yl8cjb4l5uTKzAXIwzu4zBec",
+      "metadata_head_verified": {
+        "status": 200,
+        "content_length": 771058176,
+        "etag": "99304b3e9f43792d625ad36cf4153f3e"
+      }
+    },
+    {
+      "path": "sub-02/ses-01/eeg/sub-02_ses-01_task-innerspeech_eeg.bdf",
+      "git_blob_sha1": "e7e938fcacf03ccf341f4101048bbe243f95c6ac",
+      "annex_pointer": "../../../.git/annex/objects/Mq/Q5/MD5E-s686464512--8c682af8b679705be2462aae5a198ed2.bdf/MD5E-s686464512--8c682af8b679705be2462aae5a198ed2.bdf",
+      "size_bytes": 686464512,
+      "md5": "8c682af8b679705be2462aae5a198ed2",
+      "url": "https://s3.amazonaws.com/openneuro.org/ds003626/sub-02/ses-01/eeg/sub-02_ses-01_task-innerspeech_eeg.bdf?versionId=wsGY0qgCdD_n9qOdfW.htUHoLZgOE8Jy",
+      "s3_version_id": "wsGY0qgCdD_n9qOdfW.htUHoLZgOE8Jy",
+      "metadata_head_verified": {
+        "status": 200,
+        "content_length": 686464512,
+        "etag": "8c682af8b679705be2462aae5a198ed2"
+      }
+    },
+    {
+      "path": "sub-03/ses-01/eeg/sub-03_ses-01_task-innerspeech_eeg.bdf",
+      "git_blob_sha1": "01682b9bd13bf5aa72f2c0aa99e646a845423a92",
+      "annex_pointer": "../../../.git/annex/objects/97/5f/MD5E-s686885376--85e93049ac0bda6382786c259a60473a.bdf/MD5E-s686885376--85e93049ac0bda6382786c259a60473a.bdf",
+      "size_bytes": 686885376,
+      "md5": "85e93049ac0bda6382786c259a60473a",
+      "url": "https://s3.amazonaws.com/openneuro.org/ds003626/sub-03/ses-01/eeg/sub-03_ses-01_task-innerspeech_eeg.bdf?versionId=jR3I63cjRGYyjytOxhdJwGJI9tq7EbWW",
+      "s3_version_id": "jR3I63cjRGYyjytOxhdJwGJI9tq7EbWW",
+      "metadata_head_verified": {
+        "status": 200,
+        "content_length": 686885376,
+        "etag": "85e93049ac0bda6382786c259a60473a"
+      }
+    },
+    {
+      "path": "sub-04/ses-01/eeg/sub-04_ses-01_task-innerspeech_eeg.bdf",
+      "git_blob_sha1": "a9911de1c972acc94821dd82a0876cac97623609",
+      "annex_pointer": "../../../.git/annex/objects/8X/qQ/MD5E-s680993280--96015fbc1b1970bbda52a5c37a0f221e.bdf/MD5E-s680993280--96015fbc1b1970bbda52a5c37a0f221e.bdf",
+      "size_bytes": 680993280,
+      "md5": "96015fbc1b1970bbda52a5c37a0f221e",
+      "url": "https://s3.amazonaws.com/openneuro.org/ds003626/sub-04/ses-01/eeg/sub-04_ses-01_task-innerspeech_eeg.bdf?versionId=C7UmGnHLRNKerf7eG9ccufxagJ7_bu3P",
+      "s3_version_id": "C7UmGnHLRNKerf7eG9ccufxagJ7_bu3P",
+      "metadata_head_verified": {
+        "status": 200,
+        "content_length": 680993280,
+        "etag": "96015fbc1b1970bbda52a5c37a0f221e"
+      }
+    },
+    {
+      "path": "sub-05/ses-01/eeg/sub-05_ses-01_task-innerspeech_eeg.bdf",
+      "git_blob_sha1": "38cf8fd59a086f5a4b5c7086fb0277c1fbd8d9ad",
+      "annex_pointer": "../../../.git/annex/objects/Xx/pZ/MD5E-s683097600--da31613d283c49beefad7e3b9b822942.bdf/MD5E-s683097600--da31613d283c49beefad7e3b9b822942.bdf",
+      "size_bytes": 683097600,
+      "md5": "da31613d283c49beefad7e3b9b822942",
+      "url": "https://s3.amazonaws.com/openneuro.org/ds003626/sub-05/ses-01/eeg/sub-05_ses-01_task-innerspeech_eeg.bdf?versionId=0BEf0JTw3FX6sygZGIKtTBEfQCtXu5nL",
+      "s3_version_id": "0BEf0JTw3FX6sygZGIKtTBEfQCtXu5nL",
+      "metadata_head_verified": {
+        "status": 200,
+        "content_length": 683097600,
+        "etag": "da31613d283c49beefad7e3b9b822942"
+      }
+    },
+    {
+      "path": "sub-06/ses-01/eeg/sub-06_ses-01_task-innerspeech_eeg.bdf",
+      "git_blob_sha1": "4e29b45c01baa40fae6204fbb67749fa80c8a1c1",
+      "annex_pointer": "../../../.git/annex/objects/2Q/13/MD5E-s677205504--12ab441a598ac8842259a6676c481d9c.bdf/MD5E-s677205504--12ab441a598ac8842259a6676c481d9c.bdf",
+      "size_bytes": 677205504,
+      "md5": "12ab441a598ac8842259a6676c481d9c",
+      "url": "https://s3.amazonaws.com/openneuro.org/ds003626/sub-06/ses-01/eeg/sub-06_ses-01_task-innerspeech_eeg.bdf?versionId=8yxAvrEcWxGN5PBCZRLcpGdXG0FvUZ8u",
+      "s3_version_id": "8yxAvrEcWxGN5PBCZRLcpGdXG0FvUZ8u",
+      "metadata_head_verified": {
+        "status": 200,
+        "content_length": 677205504,
+        "etag": "12ab441a598ac8842259a6676c481d9c"
+      }
+    },
+    {
+      "path": "sub-07/ses-01/eeg/sub-07_ses-01_task-innerspeech_eeg.bdf",
+      "git_blob_sha1": "b45a30426a49a06dd7267f84b12889241b044a31",
+      "annex_pointer": "../../../.git/annex/objects/q3/K4/MD5E-s679730688--40a15d7ec000bfb2aa2ec3dbeac0f375.bdf/MD5E-s679730688--40a15d7ec000bfb2aa2ec3dbeac0f375.bdf",
+      "size_bytes": 679730688,
+      "md5": "40a15d7ec000bfb2aa2ec3dbeac0f375",
+      "url": "https://s3.amazonaws.com/openneuro.org/ds003626/sub-07/ses-01/eeg/sub-07_ses-01_task-innerspeech_eeg.bdf?versionId=_mXWBEYVtzIdwPoRNBDOKkHJeLortLRQ",
+      "s3_version_id": "_mXWBEYVtzIdwPoRNBDOKkHJeLortLRQ",
+      "metadata_head_verified": {
+        "status": 200,
+        "content_length": 679730688,
+        "etag": "40a15d7ec000bfb2aa2ec3dbeac0f375"
+      }
+    },
+    {
+      "path": "sub-08/ses-01/eeg/sub-08_ses-01_task-innerspeech_eeg.bdf",
+      "git_blob_sha1": "1e1aa4b347e44b04bc278a110f3a4bc1f57573c9",
+      "annex_pointer": "../../../.git/annex/objects/P1/Zg/MD5E-s681414144--4e6882869e3f3971fa4a3f96b2f43238.bdf/MD5E-s681414144--4e6882869e3f3971fa4a3f96b2f43238.bdf",
+      "size_bytes": 681414144,
+      "md5": "4e6882869e3f3971fa4a3f96b2f43238",
+      "url": "https://s3.amazonaws.com/openneuro.org/ds003626/sub-08/ses-01/eeg/sub-08_ses-01_task-innerspeech_eeg.bdf?versionId=Z8XGw28ilJjOu.1gmo7fcIbd_pYJ04kZ",
+      "s3_version_id": "Z8XGw28ilJjOu.1gmo7fcIbd_pYJ04kZ",
+      "metadata_head_verified": {
+        "status": 200,
+        "content_length": 681414144,
+        "etag": "4e6882869e3f3971fa4a3f96b2f43238"
+      }
+    },
+    {
+      "path": "sub-09/ses-01/eeg/sub-09_ses-01_task-innerspeech_eeg.bdf",
+      "git_blob_sha1": "b58b41aa52c11bf2bb3abf2d5a9478cf85cd002f",
+      "annex_pointer": "../../../.git/annex/objects/Kx/XQ/MD5E-s683939328--6785968ed8607bbe96a5e001887667c2.bdf/MD5E-s683939328--6785968ed8607bbe96a5e001887667c2.bdf",
+      "size_bytes": 683939328,
+      "md5": "6785968ed8607bbe96a5e001887667c2",
+      "url": "https://s3.amazonaws.com/openneuro.org/ds003626/sub-09/ses-01/eeg/sub-09_ses-01_task-innerspeech_eeg.bdf?versionId=xfvQYuEAv.pnIxs5lb0duXeNvxjqt.2V",
+      "s3_version_id": "xfvQYuEAv.pnIxs5lb0duXeNvxjqt.2V",
+      "metadata_head_verified": {
+        "status": 200,
+        "content_length": 683939328,
+        "etag": "6785968ed8607bbe96a5e001887667c2"
+      }
+    },
+    {
+      "path": "sub-10/ses-01/eeg/sub-10_ses-01_task-innerspeech_eeg.bdf",
+      "git_blob_sha1": "ece93311fb028af3003591b277adfb32113c594e",
+      "annex_pointer": "../../../.git/annex/objects/26/kG/MD5E-s673838592--47da206a83bfb09136d2b1cd86c0a608.bdf/MD5E-s673838592--47da206a83bfb09136d2b1cd86c0a608.bdf",
+      "size_bytes": 673838592,
+      "md5": "47da206a83bfb09136d2b1cd86c0a608",
+      "url": "https://s3.amazonaws.com/openneuro.org/ds003626/sub-10/ses-01/eeg/sub-10_ses-01_task-innerspeech_eeg.bdf?versionId=quZuW7ovT5OBjCt.1uNy.p4O1lppdQyc",
+      "s3_version_id": "quZuW7ovT5OBjCt.1uNy.p4O1lppdQyc",
+      "metadata_head_verified": {
+        "status": 200,
+        "content_length": 673838592,
+        "etag": "47da206a83bfb09136d2b1cd86c0a608"
+      }
+    }
+  ],
+  "metadata_head_date": "2026-09-22"
+}

@@ -30,6 +30,148 @@ irreversible Tier C events.
 
 ## Scientific Operating Model
 
+**Current result and priority (October 2, 2026):**
+The [corrected session-2 temporal experiment](docs/INNER_SPEECH_TEMPORAL_ATTENTION_RESULT.md)
+completed and scored once in **252 seconds**, retaining **1,994 trials**, all ten
+people, three conditions and thirteen arms. **Primary, cue sensitivity and
+progression all failed.** Inner-speech joint log-loss gain was **-0.006061 nats**
+against peripheral/timing alone and **-0.008322 nats** against matched spectral
+EEG; **0/10** people beat every control. Joint balanced accuracy was **22.15%**
+versus 25% uniform. All nulls and secondary results remain in the
+[aggregate](registries/inner_speech_temporal_attention_result.v0.json).
+**Current blocker:** the approved three-file intracortical reference acquisition
+stopped with an HTTP error after **1.062 seconds and zero archive bytes copied**.
+No inventory, internal README, neural array, label, fit or score was opened.
+The separately approved **0.61-second header-only diagnostic returned 403**,
+with no redirect or body read. The [failure and next boundary](docs/THOUGHT_TO_TEXT_SCIENTIFIC_SWARM.md#approved-acquisition-stopped-at-http-transport)
+preserve both attempts; the denial's cause is unknown. Next requires a normal
+browser download or separately authorized authenticated API access, not an
+anonymous retry. The scientific question remains attempted-speech transfer to
+verbal versus visual rehearsal of the same arrows. No new decoding result is
+claimed. Preserve session 3 and all consumed evidence.
+
+The [scientific swarm review](docs/THOUGHT_TO_TEXT_SCIENTIFIC_SWARM.md) organizes
+work around competing mechanisms, independent falsification and decisive data.
+Its separate, parked candidate is a fixed beta-envelope trajectory test with
+matched amplitude and circular-shift controls, unlike the completed raw-bin
+comparison; no new experiment is authorized. The longer-term milestone is content
+external cues cannot supply, with transfer to untouched words or days.
+
+**Prior session-1 scientific result:**
+The [completed ten-person imagined-word experiment](docs/INNER_SPEECH_OBSERVED_RESULT.md)
+scored once in **245 seconds**, retaining 1,993 trials, all ten people, all three
+conditions and all eight arms. The primary EEG increment **failed**: mean
+inner-speech log-loss gain **-0.003282 nats**, only **1/10** people beating every
+control (9/10 required). Joint inner-speech balanced accuracy was **24.58%**
+against 25% uniform; peripheral/timing-only pronounced balanced accuracy was **83.69%**.
+All negative and positive comparisons remain in the
+[aggregate](registries/inner_speech_observed_result.v0.json). This is a scientific
+negative result for the fixed model, not an execution failure or an EEG ceiling.
+This motivated the fresh temporal test above, including EEG-only sensitivity
+and matched peripheral/null controls. No tuning or rescoring of these consumed
+session-1 trials; cue decoding alone is not thought decoding.
+
+Earlier evidence remains relevant:
+[SPEECH-REPRO-1 completed and scored once](docs/SPEECH_REPRODUCTION_RESULT.md).
+The minimally overt EEGNet reference reached **52.49% balanced accuracy**, above
+the 20% baseline in all three people. But auxiliary-only prediction reached
+**84.83%**, and adding filtered EEG failed the registered conditional log-loss
+test (mean log-loss gain **-0.022513**, only 1/3 people improved). Covert reference
+BA was **18.13%**; the joint model also failed the full control conjunction.
+All 341 trials, both conditions and all nine arms remain in the
+[complete aggregate result](registries/speech_reproduction_result.v0.json).
+
+The [nine-second calibration-only follow-up](docs/SPEECH_AUXILIARY_DISCOVERY_RESULT.md)
+found **79.98% lip-only** and **66.22% EOG-only** balanced accuracy under
+whole-trial blocked validation. Both beat all three controls in all three
+minimally overt participants. DISPLAY, timing and microphone did not; no covert
+arm passed consistently. This shifts the lead toward peripheral-channel
+prediction, without establishing causal origin or new online performance.
+
+The [67-second repetition-power comparison](docs/SPEECH_REPETITION_POWER_RESULT.md)
+improved minimally overt adaptive EEG-derived BA from **37.73% to 46.38%**.
+But adding it to N improved log loss in only **1/3 people** (mean gain
+**+0.005820**), and **0/3 covert** (mean gain **-0.016323**). The registered
+consistency test failed in both conditions. All 24 arms and both split schemes
+remain in the [aggregate](registries/speech_repetition_power_result.v0.json).
+Better repetition features are useful; they do not establish independent neural
+information. No online recording was opened.
+
+**New belief-changing result:** the [83-second sham-input test](docs/SPEECH_ADAPTIVE_ATTRIBUTION_RESULT.md)
+reached **49.72% minimally overt balanced accuracy without recorded EEG samples**
+entering the features: one fixed synthetic waveform was processed with real
+EOG/lip inputs. It beat all four primary controls in all three people under
+blocked validation. This demonstrates an auxiliary-to-processed-feature pathway,
+not that every real-EEG result is peripheral. Covert failed the primary consistency
+rule; the real-EEG joint model failed its expanded control conjunction everywhere.
+Simple normalization was competitive with the adaptive filter. All 29 arms,
+600 trials and both split schemes remain in the
+[aggregate](registries/speech_adaptive_attribution_result.v0.json).
+
+The [159-second auxiliary-independent EEG comparison](docs/SPEECH_TIME_FREQUENCY_RESULT.md)
+reached **89.75% minimally overt BA**, versus **85.62%** for repetition-enriched
+auxiliary-only prediction under blocked validation. BA improved in all three
+people with blocked folds (two with random folds), but the primary
+log-loss increment improved in only **1/3** (mean gain **+0.003846**). Covert
+also failed the all-person criterion. **None of nine preset EEG views passed
+all controls in all three people**, under either split scheme. All 51 arms and
+600 trials remain in the [aggregate](registries/speech_time_frequency_result.v0.json).
+Better top-choice accuracy does not override the failed primary probability endpoint.
+
+The [45-second nested confidence-calibration test](docs/SPEECH_PROBABILITY_CALIBRATION_RESULT.md)
+identified a real probability-readout limitation: minimally overt joint log loss
+fell **1.252182 → 0.369239**, with auxiliary-only A equally calibrated
+**1.256028 → 0.489214**. Every chosen word and BA stayed unchanged. The conditional
+EEG comparison now passed in **2/3 minimally overt people**, not all three;
+covert passed in **1/3 blocked and 0/3 random**. The EEG all-person criterion
+still failed in both conditions. All 20 arms, 600 trials and both schemes remain in the
+[aggregate](registries/speech_probability_calibration_result.v0.json).
+
+**Fresh-cohort rationale (now tested below):** close calibration/model/band searches on this reused
+cohort and test imagined-word information on fresh people with strong peripheral
+and cue controls. The [source decision](docs/SPEECH_NEXT_COHORT_DECISION.md)
+reuses the existing ten-person Thinking Out Loud candidate for a fresh-cohort,
+**same-day** study; no reviewed source supplies the complete new-day, cue-decoupled
+design. Preserve both accuracy and probability-scoring endpoints, with roles fixed
+before access and calibrators trained only on training data. The approved
+[ten-person raw acquisition is complete](docs/INNER_SPEECH_ACQUISITION.md):
+6.4304 GiB, first session, all EEG/eye/lip channels retained, verified in 347 seconds
+and stored outside OneDrive. The [fixed four-word test](docs/INNER_SPEECH_TEST.md)
+is now implemented with generated-only tests: all ten people, all three
+conditions, eight matched arms, and a 20-minute/1-GiB cap. It requires mean
+inner-speech log-loss gain of at least 0.02 nats and the same nine of ten people
+beating every primary control. After the approved path fix, the sole corrected
+run [stopped at event qualification](docs/INNER_SPEECH_QUALIFICATION_FAILURE.md):
+all ten source hashes passed, but participant 01's event structure was refused.
+No fitting or scoring occurred; this is not a biological null. The approved
+[4.25-second structural audit](docs/INNER_SPEECH_EVENT_AUDIT.md) located the failure:
+after three complete trials, the parser expected rest but saw the next trial
+start. The decoded stream has 200 cues/actions/relax markers, but 199 rest
+markers. The approved [missing-timing amendment](docs/INNER_SPEECH_MISSING_REST_AMENDMENT.md)
+retains every trial and observed timing value, adds availability flags, and
+changes the nuisance block from 85 to 87 features without inventing timestamps.
+The [single amended run](docs/INNER_SPEECH_MISSING_REST_AMENDMENT.md)
+qualified participant 01, then stopped after 12.27 seconds: participant 02 had
+a direction cue where a trial-start marker was required after 72 complete
+trials. No physiological windows, fits or scores followed. The approved
+[whole-cohort census](docs/INNER_SPEECH_EVENT_CENSUS.md) then completed in 14.17
+seconds: 50 intact run boundaries, but three absent direction cues and four
+incomplete cue/action/relax sequences in the existing decoder's output.
+It found 1,993 contiguous core sequences, not 2,000 qualified trials. The approved
+[observed-anchor successor](docs/INNER_SPEECH_OBSERVED_RESULT.md) subsequently
+confirmed exact independent decoder agreement for all ten people, accounted for
+all 2,000 nominal slots and retained 1,993 eligible trials with seven predefined
+structural exclusions. It completed training and one score; its primary failed.
+No inferred words, timestamps, compressed chronology or post-score rescue were
+used. Both earlier all-trial attempts and the census remain consumed history;
+the [census aggregate](registries/inner_speech_event_census_result.v0.json) is unchanged.
+Status events were read; labels cannot be called unopened. Consumed online recordings cannot be reused. The
+low-channel peripheral interface remains a separate practical lead, not thought-to-text.
+This consumed evaluation must not be retuned or rescored. We have evidence for
+task-label prediction, not EEG-specific thought decoding, cortical origin,
+clinical utility or unseen-person generalization. Both failed roots and the
+successful one-shot evidence remain preserved. Earlier closeouts remain history.
+
 The [Scientific Discovery and Invention Constitution](docs/SCIENTIFIC_DISCOVERY_AND_INVENTION_CONSTITUTION.md)
 now governs research priorities. Its companion
 [convergence plan](docs/SCIENTIFIC_CONVERGENCE_AND_INVENTION_PLAN.md) and
@@ -63,6 +205,8 @@ packet is active. See the [result closeout](docs/OFNER_2017_MOTOR_IMAGERY_RANGE_
 and [proof closeout](docs/OFNER_2017_MOTOR_IMAGERY_RANGE_HEADER_RESULT_PROOF_CLOSEOUT.md).
 The immutable machine frontier for that consumed result remains
 [`registries/current_research_frontier.v6.json`](registries/current_research_frontier.v6.json).
+The historical `registries/current_research_frontier.v10.json` and
+`registries/current_research_frontier.v11.json` also remain immutable.
 The proof passed Base Python `99174411928`, Optional Neuro Readers
 `99174412006`, and CI `33280371097` on GitHub `main`.
 
@@ -200,18 +344,12 @@ Its immutable predecessor is `registries/current_research_frontier.v25.json`;
 earlier predecessors are `registries/current_research_frontier.v24.json`,
 `registries/current_research_frontier.v23.json`, and
 `registries/current_research_frontier.v21.json`;
-the earlier immutable predecessor is `registries/current_research_frontier.v20.json`;
-the earlier immutable predecessor is `registries/current_research_frontier.v19.json`;
-the earlier immutable predecessor is `registries/current_research_frontier.v18.json`;
-the earlier immutable predecessor is `registries/current_research_frontier.v17.json`;
-the earlier immutable predecessor is `registries/current_research_frontier.v16.json`;
-the earlier immutable predecessor is `registries/current_research_frontier.v15.json`;
-the earlier immutable predecessor is `registries/current_research_frontier.v14.json`;
-the earlier immutable predecessor is `registries/current_research_frontier.v13.json`;
-the earlier predecessors are `registries/current_research_frontier.v12.json`
+Earlier immutable predecessors: `registries/current_research_frontier.v20.json`,
+`registries/current_research_frontier.v19.json`, `registries/current_research_frontier.v18.json`,
+`registries/current_research_frontier.v17.json`, `registries/current_research_frontier.v16.json`,
+`registries/current_research_frontier.v15.json`, `registries/current_research_frontier.v14.json`,
+`registries/current_research_frontier.v13.json`, `registries/current_research_frontier.v12.json`,
 and `registries/current_research_frontier.v11.json`.
-Its earlier immutable predecessor is
-`registries/current_research_frontier.v10.json`.
 The earlier predecessors `registries/current_research_frontier.v8.json`,
 `registries/current_research_frontier.v7.json`, and
 `registries/current_research_frontier.v6.json` remain immutable history.

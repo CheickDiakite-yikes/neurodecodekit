@@ -1,0 +1,40 @@
+{
+  "status": "headers_observed",
+  "approval": "continue",
+  "scope": "One thirty-second header-only diagnostic, with at most four HTTPS redirects; no explicit response-body reads or full-download retry.",
+  "started_unix": 1790964621.4565675,
+  "elapsed_seconds": 0.6099999999860302,
+  "method": "GET",
+  "url": "https://datadryad.org/downloads/file_stream/4203849",
+  "request_headers": {
+    "User-Agent": "NeuroDecodeKit-source-qualification",
+    "Accept-Encoding": "identity"
+  },
+  "requests": 1,
+  "hops": [
+    {
+      "host": "datadryad.org",
+      "status": 403,
+      "headers": {
+        "content-type": "text/html",
+        "content-length": "118",
+        "server": "awselb/2.0"
+      },
+      "www_authenticate_present": false,
+      "redirect_host": null
+    }
+  ],
+  "explicit_response_body_read_calls": 0,
+  "response_body_bytes_retained": 0,
+  "archive_files_written": 0,
+  "neural_or_trial_data_accessed": false,
+  "original_failure_marker_sha256": "ed2b9faf588f539d397b854155e675fdad5695e772532a99cb606539d8f06adb",
+  "interpretation": "This diagnostic request was denied with HTTP 403; its cause is unresolved. The original acquisition status was not captured and remains unknown.",
+  "not_established": [
+    "Authentication requirement on this web route",
+    "WAF, IP policy, rate limiting or a permanent restriction",
+    "Success of a browser download or authenticated API route",
+    "Source fitness or neural decoding performance"
+  ],
+  "further_source_contact_authorized": false
+}

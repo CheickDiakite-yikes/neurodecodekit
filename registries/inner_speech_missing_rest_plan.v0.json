@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "experiment_id": "INNER-SPEECH-TEST-1-MR1",
+  "status": "approved_amendment_pending_validation_and_single_execution",
+  "inherits": "registries/inner_speech_test_plan.v0.json",
+  "base_plan_git_blob": "0f1c63c4248d7dd167f657b846871a29e09430b8",
+  "inheritance": "All original scientific settings and limits apply except the explicit qualification and timing amendments below. Both plans and both runners are fingerprinted before execution.",
+  "basis": "registries/inner_speech_event_audit_result.v0.json",
+  "qualification_amendment": {
+    "admitted_pattern": "Within a run, an otherwise intact trial ends with observed relax45 immediately followed by the next trial_start42. Represent the absent rest46 timestamp as null. No omission before attention/question/run-end is admitted.",
+    "unchanged": "All direction, start, cue, action and relax markers remain observed; all original non-rest interval and window bounds, event order, exact roster, trial counts, class and split preflights remain required.",
+    "unavailable_check": "The missing relax-to-rest interval has no measurable value. Report its unavailable count and exclude it from observed interval statistics; never report it as passed or reconstruct a timestamp.",
+    "admission_order": "All ten participants and all thirty participant-condition pairs must fully qualify before any physiological window extraction or fit.",
+    "rest_events_synthesized": 0,
+    "targets_inferred": 0,
+    "trials_excluded": 0
+  },
+  "timing_amendment": {
+    "columns": ["start_seconds", "run_ordinal", "trial_in_run", "concentration_seconds", "cue_seconds", "action_seconds", "relax_seconds_or_zero", "preceding_trial_gap_seconds_or_zero", "rest_available", "preceding_rest_available"],
+    "encoding": "Retain observed values. Encode only unavailable feature values as fixed zero plus availability flag0; observed values get flag1. First trial's preceding-rest flag is0. A missing rest affects its trial's relax duration and the following trial's preceding gap. No label or missing timestamp is inferred.",
+    "peripheral_features": 77,
+    "timing_features": 10,
+    "total_P_features": 87,
+    "comparison": "Identical P values and flags enter every learned arm, including all nulls. Train-only standardization and sqrt(P dimension) normalization now use87 rather than85 columns. EEG features, windows and all other estimator settings are unchanged.",
+    "limitation": "Missingness patterns absent from a training fold cannot acquire a learned correction. This is an explicit feature-level missing-value encoding amendment, not an equivalent rerun of the original comparison."
+  },
+  "execution": "One new local attempt outside OneDrive. Preserve original failed attempt and completed structural audit. One prediction freeze, pushed and remotely verified before one score. Any qualification/resource/process failure consumes this attempt; no retry, partial score, tuning or broader missing-marker repair.",
+  "resources": {"wall_seconds": 1200, "wall_includes": "qualification, prediction, hash-freeze commit/push and final scoring", "rss_bytes": 1073741824, "generated_bytes": 33554432, "minimum_free_bytes": 21474836480, "numerical_workers": 1},
+  "unchanged_primary": "Inner speech: mean participant NLL(P) minus NLL(joint) >=0.02 nats and the SAME >=9 of10 participants strictly positive versus P, deranged_joint, joint_shuffled, uniform and training_prior. All eight arms and three conditions retained; no secondary rescue.",
+  "privacy": "No source rows, target identities, signals, per-trial predictions or weights uploaded. Only protocol/code, hashes, sanitized qualification/failure metadata, aggregate metrics and interpretation may be published.",
+  "interpretation": "Same-day within-person offline four-word prediction beyond the amended measured peripheral/timing alternatives; not cortical origin, cue-independent thoughts, unseen-person model generalization, new-day robustness, arbitrary text, prospective live use or clinical utility. The timing amendment changes the nuisance comparator and must remain explicit."
+}

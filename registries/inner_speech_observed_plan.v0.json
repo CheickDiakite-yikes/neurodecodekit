@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "experiment_id": "INNER-SPEECH-OBSERVED-1",
+  "status": "approved_successor_pending_generated_validation_and_single_execution",
+  "approval": "Maintainer approved the 20-minute successor proposed after the all-ten event census: independent decoder agreement, all ten people and every control, at most seven uniquely identified incomplete slots, one score.",
+  "inherits": "registries/inner_speech_test_plan.v0.json",
+  "base_plan_git_blob": "0f1c63c4248d7dd167f657b846871a29e09430b8",
+  "basis": "registries/inner_speech_event_census_result.v0.json",
+  "inheritance": "All original source, population, conditions, signal windows, spectral features, estimators, calibration, seeds, arms, primary decision and claim boundaries remain fixed except the explicit amendments below. This is not an unchanged rerun.",
+  "decoder_gate": {
+    "frozen": "Existing BDFReader low-16-bit nonzero transition decoder; sub-10 discards nonzero pulses shorter than three samples.",
+    "reference": "Independent Status-byte decoder reproducing pinned MNE0.22 pre-repair semantics: low17bits, initial_event=True, consecutive=True, shortest_event=2, min_duration=.002 only sub-10; remove exact65536 only after extraction. Never execute author event-correction or label-inference routines.",
+    "author_commit": "65bd162a32f38546b6596cb25d46f4a862fa87fb",
+    "comparison": "Exact ordered sample/code equality for core cue/action/relax, protocol/context, and the full event stream. Any disagreement or independent decoder refusal stops before physiological windows. No preferred-count decoder selection.",
+    "scope": "All ten existing ses-01 recordings; source hashing, technical headers and Status only. All thirty split preflights complete before physiology.",
+    "limits": {"wall_seconds_from_overall_start": 120, "rss_bytes": 268435456, "generated_bytes": 1048576}
+  },
+  "slots": {
+    "nominal": "Exactly five intact run boundaries and forty uniquely identified chronological slots per run for each of ten people. Preserve original0..199 indices even when excluded.",
+    "grammar": "Each slot contains exactly four or five distinct observed phases in increasing start/cue/action/relax/rest order, starting with start or cue and ending with relax or rest. Strict rank reset defines the next slot. Equal-rank duplicates, multiple missing phases, ambiguous boundaries or wrong slot counts refuse the whole study.",
+    "eligibility": "Keep if and only if direction cue, action and relax are all observed. Missing start/rest alone do not exclude. Missing any one core phase excludes the unique slot without inferring its word or timestamp. At most seven exclusions across the complete cohort; no participant/condition removal.",
+    "timing": "Check every interval with both observed endpoints against the original limits, including on excluded slots. Absent endpoints remain null; do not mark those intervals passed. All admitted physiological windows remain within observed cue/action boundaries.",
+    "conditions": "Original condition layout and documented sub-03 run3 correction remain fixed. Ancillary questions/answers only after an observed rest, no inferred answers. Missing baseline-end remains admitted only for sub-10."
+  },
+  "timing_features": {
+    "columns": ["start_seconds_or_zero", "run_ordinal", "original_trial_in_run", "concentration_seconds_or_zero", "cue_seconds", "action_seconds", "relax_seconds_or_zero", "preceding_original_slot_gap_seconds_or_zero", "rest_available", "preceding_gap_available", "start_available"],
+    "encoding": "Only unavailable numerical features become zero plus an explicit flag. Gap needs the current observed start and immediately preceding ORIGINAL slot's observed rest, even when that preceding slot is excluded. No compressed adjacency, inferred event or direction/answer value enters P.",
+    "P_width": 88,
+    "normalization_change": "77 peripheral plus11 timing/availability features; every learned arm shares identical P. Train-only P scaling now divides by sqrt88 rather than sqrt85(original) or sqrt87(MR1). This is a changed nuisance comparator, not exact predictive equivalence."
+  },
+  "splits": "First form four original nominal chronological condition blocks and both levels of original-index plus/minus1 embargo; then intersect with eligible rows. Never rebalance folds or restore embargoed neighbours after exclusions. Keep three inner blocks, same seeds and four-class/global support policy. Refuse invalid/too-small splits; no alternate partition.",
+  "primary": "Mean participant inner-speech NLL(P)-NLL(joint)>=0.02 nats AND the SAME at least9of10 people strictly positive against P, deranged_joint, joint_shuffled, uniform and training_prior. All eight arms and all three conditions retained. No secondary rescue.",
+  "resources": {"wall_seconds": 1200, "wall_includes": "decoder/slot/split gate, prediction, hash-freeze commit/push and one final score", "rss_bytes": 1073741824, "generated_bytes": 33554432, "minimum_free_bytes": 21474836480, "numerical_workers": 1, "new_downloads": 0},
+  "execution": "One exclusive new AppData attempt outside OneDrive. Preserve both failed attempts and both completed structural diagnostics. One prediction freeze committed and remotely verified before one score. Any source, decoder, slot, resource or process failure consumes this attempt; no retry or partial scoring.",
+  "privacy": "Raw events/signals, exact target identities, excluded-slot identities, per-trial predictions and weights remain local. Only code/protocol, hash freeze, sanitized status/qualification and complete aggregate scores may be published.",
+  "interpretation": "Outcome-unseen comparison on structurally eligible same-day within-person four-word trials. Exclusion is structural, not proven missing-at-random; a small excluded fraction does not bound selection bias. Not cortical origin, cue-independent thoughts, unseen-person model generalization, new-day robustness, arbitrary text, prospective live use or clinical utility."
+}

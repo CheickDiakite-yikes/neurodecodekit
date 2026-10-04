@@ -1,0 +1,1054 @@
+{
+  "calibration_audit_sha256": "d64abead8ca2c6b31a6248c54bc5c4578bb5ae8eef61f0a01b23e4f2b5219b74",
+  "code_commit": "29d1f10f04aebb9e2ec972a7cb8fa7e626f82832",
+  "conditions": {
+    "covert": {
+      "complete_five_class_endpoint": true,
+      "conditional_descriptive_success": false,
+      "equal_person_metrics": {
+        "auxiliary_deranged_eeg": {
+          "equal_person_accuracy": 0.26,
+          "equal_person_balanced_accuracy": 0.23134338428456078,
+          "equal_person_class_macro_log_loss": 1.589826312822212
+        },
+        "auxiliary_filtered_eeg": {
+          "equal_person_accuracy": 0.3666666666666667,
+          "equal_person_balanced_accuracy": 0.31225136519254165,
+          "equal_person_class_macro_log_loss": 1.5860538230506618
+        },
+        "auxiliary_filtered_eeg_shuffled_labels": {
+          "equal_person_accuracy": 0.22666666666666666,
+          "equal_person_balanced_accuracy": 0.1844933280227398,
+          "equal_person_class_macro_log_loss": 1.6289262614049311
+        },
+        "auxiliary_only": {
+          "equal_person_accuracy": 0.2866666666666667,
+          "equal_person_balanced_accuracy": 0.24163413928119812,
+          "equal_person_class_macro_log_loss": 1.5885759732962743
+        },
+        "auxiliary_preaction_eeg": {
+          "equal_person_accuracy": 0.29333333333333333,
+          "equal_person_balanced_accuracy": 0.26692793045734226,
+          "equal_person_class_macro_log_loss": 1.5827471601717733
+        },
+        "auxiliary_raw_eeg": {
+          "equal_person_accuracy": 0.32,
+          "equal_person_balanced_accuracy": 0.2761397643750585,
+          "equal_person_class_macro_log_loss": 1.595622410001363
+        },
+        "eegnet_reference": {
+          "equal_person_accuracy": 0.23333333333333336,
+          "equal_person_balanced_accuracy": 0.18127345421463067,
+          "equal_person_class_macro_log_loss": 1.870177578283742
+        },
+        "training_prior": {
+          "equal_person_accuracy": 0.22666666666666668,
+          "equal_person_balanced_accuracy": 0.20000000000000004,
+          "equal_person_class_macro_log_loss": 1.6880992969863426
+        },
+        "uniform": {
+          "equal_person_accuracy": 0.22666666666666668,
+          "equal_person_balanced_accuracy": 0.20000000000000004,
+          "equal_person_class_macro_log_loss": 1.6094379124341003
+        }
+      },
+      "notes": [],
+      "participant_metrics": {
+        "sub-1": {
+          "auxiliary_deranged_eeg": {
+            "accuracy": 0.42,
+            "balanced_accuracy": 0.37285799168152106,
+            "class_counts": [
+              11,
+              17,
+              10,
+              9,
+              3
+            ],
+            "class_macro_log_loss": 1.52162475389985,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_filtered_eeg": {
+            "accuracy": 0.48,
+            "balanced_accuracy": 0.43103980986333923,
+            "class_counts": [
+              11,
+              17,
+              10,
+              9,
+              3
+            ],
+            "class_macro_log_loss": 1.5134445391986515,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_filtered_eeg_shuffled_labels": {
+            "accuracy": 0.26,
+            "balanced_accuracy": 0.21377302436125967,
+            "class_counts": [
+              11,
+              17,
+              10,
+              9,
+              3
+            ],
+            "class_macro_log_loss": 1.6332374008524249,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_only": {
+            "accuracy": 0.44,
+            "balanced_accuracy": 0.38644087938205585,
+            "class_counts": [
+              11,
+              17,
+              10,
+              9,
+              3
+            ],
+            "class_macro_log_loss": 1.5137181511785385,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_preaction_eeg": {
+            "accuracy": 0.44,
+            "balanced_accuracy": 0.4056922162804516,
+            "class_counts": [
+              11,
+              17,
+              10,
+              9,
+              3
+            ],
+            "class_macro_log_loss": 1.5061950555705579,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_raw_eeg": {
+            "accuracy": 0.46,
+            "balanced_accuracy": 0.4210932857991681,
+            "class_counts": [
+              11,
+              17,
+              10,
+              9,
+              3
+            ],
+            "class_macro_log_loss": 1.5143462378115884,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "eegnet_reference": {
+            "accuracy": 0.28,
+            "balanced_accuracy": 0.2231610219845514,
+            "class_counts": [
+              11,
+              17,
+              10,
+              9,
+              3
+            ],
+            "class_macro_log_loss": 1.7834554406115728,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "training_prior": {
+            "accuracy": 0.22,
+            "balanced_accuracy": 0.2,
+            "class_counts": [
+              11,
+              17,
+              10,
+              9,
+              3
+            ],
+            "class_macro_log_loss": 1.64322581189424,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "uniform": {
+            "accuracy": 0.22,
+            "balanced_accuracy": 0.2,
+            "class_counts": [
+              11,
+              17,
+              10,
+              9,
+              3
+            ],
+            "class_macro_log_loss": 1.6094379124341003,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          }
+        },
+        "sub-2": {
+          "auxiliary_deranged_eeg": {
+            "accuracy": 0.12,
+            "balanced_accuracy": 0.12666666666666665,
+            "class_counts": [
+              10,
+              15,
+              13,
+              6,
+              6
+            ],
+            "class_macro_log_loss": 1.6214159610089773,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_filtered_eeg": {
+            "accuracy": 0.34,
+            "balanced_accuracy": 0.28153846153846157,
+            "class_counts": [
+              10,
+              15,
+              13,
+              6,
+              6
+            ],
+            "class_macro_log_loss": 1.6337590672156488,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_filtered_eeg_shuffled_labels": {
+            "accuracy": 0.18,
+            "balanced_accuracy": 0.1441025641025641,
+            "class_counts": [
+              10,
+              15,
+              13,
+              6,
+              6
+            ],
+            "class_macro_log_loss": 1.6375789265620384,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_only": {
+            "accuracy": 0.14,
+            "balanced_accuracy": 0.11538461538461538,
+            "class_counts": [
+              10,
+              15,
+              13,
+              6,
+              6
+            ],
+            "class_macro_log_loss": 1.635488404993525,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_preaction_eeg": {
+            "accuracy": 0.16,
+            "balanced_accuracy": 0.1687179487179487,
+            "class_counts": [
+              10,
+              15,
+              13,
+              6,
+              6
+            ],
+            "class_macro_log_loss": 1.618919120163009,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_raw_eeg": {
+            "accuracy": 0.24,
+            "balanced_accuracy": 0.21282051282051287,
+            "class_counts": [
+              10,
+              15,
+              13,
+              6,
+              6
+            ],
+            "class_macro_log_loss": 1.6433053730796576,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "eegnet_reference": {
+            "accuracy": 0.16,
+            "balanced_accuracy": 0.12615384615384614,
+            "class_counts": [
+              10,
+              15,
+              13,
+              6,
+              6
+            ],
+            "class_macro_log_loss": 1.8473049591738,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "training_prior": {
+            "accuracy": 0.2,
+            "balanced_accuracy": 0.2,
+            "class_counts": [
+              10,
+              15,
+              13,
+              6,
+              6
+            ],
+            "class_macro_log_loss": 1.6612160233919084,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "uniform": {
+            "accuracy": 0.2,
+            "balanced_accuracy": 0.2,
+            "class_counts": [
+              10,
+              15,
+              13,
+              6,
+              6
+            ],
+            "class_macro_log_loss": 1.6094379124341003,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          }
+        },
+        "sub-3": {
+          "auxiliary_deranged_eeg": {
+            "accuracy": 0.24,
+            "balanced_accuracy": 0.19450549450549454,
+            "class_counts": [
+              13,
+              14,
+              9,
+              7,
+              7
+            ],
+            "class_macro_log_loss": 1.626438223557809,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_filtered_eeg": {
+            "accuracy": 0.28,
+            "balanced_accuracy": 0.22417582417582418,
+            "class_counts": [
+              13,
+              14,
+              9,
+              7,
+              7
+            ],
+            "class_macro_log_loss": 1.6109578627376848,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_filtered_eeg_shuffled_labels": {
+            "accuracy": 0.24,
+            "balanced_accuracy": 0.19560439560439558,
+            "class_counts": [
+              13,
+              14,
+              9,
+              7,
+              7
+            ],
+            "class_macro_log_loss": 1.61596245680033,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_only": {
+            "accuracy": 0.28,
+            "balanced_accuracy": 0.2230769230769231,
+            "class_counts": [
+              13,
+              14,
+              9,
+              7,
+              7
+            ],
+            "class_macro_log_loss": 1.6165213637167597,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_preaction_eeg": {
+            "accuracy": 0.28,
+            "balanced_accuracy": 0.22637362637362637,
+            "class_counts": [
+              13,
+              14,
+              9,
+              7,
+              7
+            ],
+            "class_macro_log_loss": 1.6231273047817532,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_raw_eeg": {
+            "accuracy": 0.26,
+            "balanced_accuracy": 0.19450549450549454,
+            "class_counts": [
+              13,
+              14,
+              9,
+              7,
+              7
+            ],
+            "class_macro_log_loss": 1.6292156191128426,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "eegnet_reference": {
+            "accuracy": 0.26,
+            "balanced_accuracy": 0.19450549450549454,
+            "class_counts": [
+              13,
+              14,
+              9,
+              7,
+              7
+            ],
+            "class_macro_log_loss": 1.9797723350658536,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "training_prior": {
+            "accuracy": 0.26,
+            "balanced_accuracy": 0.2,
+            "class_counts": [
+              13,
+              14,
+              9,
+              7,
+              7
+            ],
+            "class_macro_log_loss": 1.7598560556728795,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "uniform": {
+            "accuracy": 0.26,
+            "balanced_accuracy": 0.2,
+            "class_counts": [
+              13,
+              14,
+              9,
+              7,
+              7
+            ],
+            "class_macro_log_loss": 1.6094379124341,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          }
+        }
+      },
+      "primary_edges": {
+        "auxiliary_deranged_eeg": {
+          "all_three_positive": false,
+          "equal_person_log_loss_gain": 0.0037724897715503878,
+          "per_person_log_loss_gain": {
+            "sub-1": 0.008180214701198452,
+            "sub-2": -0.01234310620667145,
+            "sub-3": 0.015480360820124162
+          },
+          "positive_people": 2
+        },
+        "auxiliary_filtered_eeg_shuffled_labels": {
+          "all_three_positive": true,
+          "equal_person_log_loss_gain": 0.04287243835426935,
+          "per_person_log_loss_gain": {
+            "sub-1": 0.11979286165377334,
+            "sub-2": 0.00381985934638962,
+            "sub-3": 0.005004594062645085
+          },
+          "positive_people": 3
+        },
+        "auxiliary_only": {
+          "all_three_positive": true,
+          "equal_person_log_loss_gain": 0.002522150245612679,
+          "per_person_log_loss_gain": {
+            "sub-1": 0.0002736119798869563,
+            "sub-2": 0.0017293377778762054,
+            "sub-3": 0.005563500979074876
+          },
+          "positive_people": 3
+        },
+        "auxiliary_preaction_eeg": {
+          "all_three_positive": false,
+          "equal_person_log_loss_gain": -0.00330666287888833,
+          "per_person_log_loss_gain": {
+            "sub-1": -0.007249483628093634,
+            "sub-2": -0.01483994705263969,
+            "sub-3": 0.012169442044068335
+          },
+          "positive_people": 1
+        },
+        "auxiliary_raw_eeg": {
+          "all_three_positive": true,
+          "equal_person_log_loss_gain": 0.009568586950701174,
+          "per_person_log_loss_gain": {
+            "sub-1": 0.0009016986129368743,
+            "sub-2": 0.009546305864008842,
+            "sub-3": 0.018257756375157808
+          },
+          "positive_people": 3
+        },
+        "training_prior": {
+          "all_three_positive": true,
+          "equal_person_log_loss_gain": 0.10204547393568093,
+          "per_person_log_loss_gain": {
+            "sub-1": 0.12978127269558848,
+            "sub-2": 0.02745695617625965,
+            "sub-3": 0.14889819293519468
+          },
+          "positive_people": 3
+        },
+        "uniform": {
+          "all_three_positive": false,
+          "equal_person_log_loss_gain": 0.0233840893834385,
+          "per_person_log_loss_gain": {
+            "sub-1": 0.09599337323544876,
+            "sub-2": -0.024321154781548504,
+            "sub-3": -0.0015199503035847606
+          },
+          "positive_people": 1
+        }
+      },
+      "reference_all_three_above_chance": false,
+      "status": "increment_not_demonstrated"
+    },
+    "minimallyovert": {
+      "complete_five_class_endpoint": true,
+      "conditional_descriptive_success": false,
+      "equal_person_metrics": {
+        "auxiliary_deranged_eeg": {
+          "equal_person_accuracy": 0.8736996336996338,
+          "equal_person_balanced_accuracy": 0.8409753853232114,
+          "equal_person_class_macro_log_loss": 1.282730617145347
+        },
+        "auxiliary_filtered_eeg": {
+          "equal_person_accuracy": 0.8900366300366299,
+          "equal_person_balanced_accuracy": 0.8746708006874249,
+          "equal_person_class_macro_log_loss": 1.263214963880057
+        },
+        "auxiliary_filtered_eeg_shuffled_labels": {
+          "equal_person_accuracy": 0.2752380952380952,
+          "equal_person_balanced_accuracy": 0.22534912515730932,
+          "equal_person_class_macro_log_loss": 1.6136974925978198
+        },
+        "auxiliary_only": {
+          "equal_person_accuracy": 0.8706959706959707,
+          "equal_person_balanced_accuracy": 0.8482985899673879,
+          "equal_person_class_macro_log_loss": 1.2407016035696792
+        },
+        "auxiliary_preaction_eeg": {
+          "equal_person_accuracy": 0.8487179487179487,
+          "equal_person_balanced_accuracy": 0.8167078377244619,
+          "equal_person_class_macro_log_loss": 1.2852832154120213
+        },
+        "auxiliary_raw_eeg": {
+          "equal_person_accuracy": 0.878021978021978,
+          "equal_person_balanced_accuracy": 0.8594612241031677,
+          "equal_person_class_macro_log_loss": 1.2470386599195227
+        },
+        "eegnet_reference": {
+          "equal_person_accuracy": 0.5591208791208792,
+          "equal_person_balanced_accuracy": 0.5248681554308152,
+          "equal_person_class_macro_log_loss": 1.2068937798855777
+        },
+        "training_prior": {
+          "equal_person_accuracy": 0.28424908424908424,
+          "equal_person_balanced_accuracy": 0.20000000000000004,
+          "equal_person_class_macro_log_loss": 1.6535113306736005
+        },
+        "uniform": {
+          "equal_person_accuracy": 0.28424908424908424,
+          "equal_person_balanced_accuracy": 0.20000000000000004,
+          "equal_person_class_macro_log_loss": 1.6094379124341003
+        }
+      },
+      "notes": [],
+      "participant_metrics": {
+        "sub-1": {
+          "auxiliary_deranged_eeg": {
+            "accuracy": 0.9010989010989011,
+            "balanced_accuracy": 0.8726086956521739,
+            "class_counts": [
+              23,
+              34,
+              16,
+              10,
+              8
+            ],
+            "class_macro_log_loss": 1.2779841241919139,
+            "complete_five_class_endpoint": true,
+            "n_trials": 91
+          },
+          "auxiliary_filtered_eeg": {
+            "accuracy": 0.8901098901098901,
+            "balanced_accuracy": 0.8781393861892584,
+            "class_counts": [
+              23,
+              34,
+              16,
+              10,
+              8
+            ],
+            "class_macro_log_loss": 1.2676673152349816,
+            "complete_five_class_endpoint": true,
+            "n_trials": 91
+          },
+          "auxiliary_filtered_eeg_shuffled_labels": {
+            "accuracy": 0.2857142857142857,
+            "balanced_accuracy": 0.22723785166240412,
+            "class_counts": [
+              23,
+              34,
+              16,
+              10,
+              8
+            ],
+            "class_macro_log_loss": 1.59148556697007,
+            "complete_five_class_endpoint": true,
+            "n_trials": 91
+          },
+          "auxiliary_only": {
+            "accuracy": 0.9120879120879121,
+            "balanced_accuracy": 0.8955306905370843,
+            "class_counts": [
+              23,
+              34,
+              16,
+              10,
+              8
+            ],
+            "class_macro_log_loss": 1.2255341361122427,
+            "complete_five_class_endpoint": true,
+            "n_trials": 91
+          },
+          "auxiliary_preaction_eeg": {
+            "accuracy": 0.8461538461538461,
+            "balanced_accuracy": 0.8281393861892583,
+            "class_counts": [
+              23,
+              34,
+              16,
+              10,
+              8
+            ],
+            "class_macro_log_loss": 1.281964656926768,
+            "complete_five_class_endpoint": true,
+            "n_trials": 91
+          },
+          "auxiliary_raw_eeg": {
+            "accuracy": 0.9340659340659341,
+            "balanced_accuracy": 0.9308439897698209,
+            "class_counts": [
+              23,
+              34,
+              16,
+              10,
+              8
+            ],
+            "class_macro_log_loss": 1.2290184565423075,
+            "complete_five_class_endpoint": true,
+            "n_trials": 91
+          },
+          "eegnet_reference": {
+            "accuracy": 0.6373626373626373,
+            "balanced_accuracy": 0.6001023017902813,
+            "class_counts": [
+              23,
+              34,
+              16,
+              10,
+              8
+            ],
+            "class_macro_log_loss": 1.1238271070058437,
+            "complete_five_class_endpoint": true,
+            "n_trials": 91
+          },
+          "training_prior": {
+            "accuracy": 0.25274725274725274,
+            "balanced_accuracy": 0.2,
+            "class_counts": [
+              23,
+              34,
+              16,
+              10,
+              8
+            ],
+            "class_macro_log_loss": 1.6159425507752125,
+            "complete_five_class_endpoint": true,
+            "n_trials": 91
+          },
+          "uniform": {
+            "accuracy": 0.25274725274725274,
+            "balanced_accuracy": 0.2,
+            "class_counts": [
+              23,
+              34,
+              16,
+              10,
+              8
+            ],
+            "class_macro_log_loss": 1.6094379124341003,
+            "complete_five_class_endpoint": true,
+            "n_trials": 91
+          }
+        },
+        "sub-2": {
+          "auxiliary_deranged_eeg": {
+            "accuracy": 0.9,
+            "balanced_accuracy": 0.8555555555555555,
+            "class_counts": [
+              18,
+              9,
+              11,
+              6,
+              6
+            ],
+            "class_macro_log_loss": 1.2278343130280827,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_filtered_eeg": {
+            "accuracy": 0.9,
+            "balanced_accuracy": 0.8777777777777779,
+            "class_counts": [
+              18,
+              9,
+              11,
+              6,
+              6
+            ],
+            "class_macro_log_loss": 1.2189035536092478,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_filtered_eeg_shuffled_labels": {
+            "accuracy": 0.36,
+            "balanced_accuracy": 0.3,
+            "class_counts": [
+              18,
+              9,
+              11,
+              6,
+              6
+            ],
+            "class_macro_log_loss": 1.6158029639966294,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_only": {
+            "accuracy": 0.92,
+            "balanced_accuracy": 0.888888888888889,
+            "class_counts": [
+              18,
+              9,
+              11,
+              6,
+              6
+            ],
+            "class_macro_log_loss": 1.1839534204535327,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_preaction_eeg": {
+            "accuracy": 0.9,
+            "balanced_accuracy": 0.8555555555555557,
+            "class_counts": [
+              18,
+              9,
+              11,
+              6,
+              6
+            ],
+            "class_macro_log_loss": 1.2230307445708308,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_raw_eeg": {
+            "accuracy": 0.88,
+            "balanced_accuracy": 0.8444444444444444,
+            "class_counts": [
+              18,
+              9,
+              11,
+              6,
+              6
+            ],
+            "class_macro_log_loss": 1.2210847975607346,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "eegnet_reference": {
+            "accuracy": 0.5,
+            "balanced_accuracy": 0.44545454545454544,
+            "class_counts": [
+              18,
+              9,
+              11,
+              6,
+              6
+            ],
+            "class_macro_log_loss": 1.2609346315846484,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "training_prior": {
+            "accuracy": 0.36,
+            "balanced_accuracy": 0.2,
+            "class_counts": [
+              18,
+              9,
+              11,
+              6,
+              6
+            ],
+            "class_macro_log_loss": 1.674047955692015,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "uniform": {
+            "accuracy": 0.36,
+            "balanced_accuracy": 0.2,
+            "class_counts": [
+              18,
+              9,
+              11,
+              6,
+              6
+            ],
+            "class_macro_log_loss": 1.6094379124341003,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          }
+        },
+        "sub-3": {
+          "auxiliary_deranged_eeg": {
+            "accuracy": 0.82,
+            "balanced_accuracy": 0.7947619047619048,
+            "class_counts": [
+              12,
+              14,
+              8,
+              6,
+              10
+            ],
+            "class_macro_log_loss": 1.3423734142160437,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_filtered_eeg": {
+            "accuracy": 0.88,
+            "balanced_accuracy": 0.8680952380952383,
+            "class_counts": [
+              12,
+              14,
+              8,
+              6,
+              10
+            ],
+            "class_macro_log_loss": 1.3030740227959412,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_filtered_eeg_shuffled_labels": {
+            "accuracy": 0.18,
+            "balanced_accuracy": 0.1488095238095238,
+            "class_counts": [
+              12,
+              14,
+              8,
+              6,
+              10
+            ],
+            "class_macro_log_loss": 1.6338039468267602,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_only": {
+            "accuracy": 0.78,
+            "balanced_accuracy": 0.7604761904761904,
+            "class_counts": [
+              12,
+              14,
+              8,
+              6,
+              10
+            ],
+            "class_macro_log_loss": 1.3126172541432624,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_preaction_eeg": {
+            "accuracy": 0.8,
+            "balanced_accuracy": 0.7664285714285715,
+            "class_counts": [
+              12,
+              14,
+              8,
+              6,
+              10
+            ],
+            "class_macro_log_loss": 1.3508542447384648,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "auxiliary_raw_eeg": {
+            "accuracy": 0.82,
+            "balanced_accuracy": 0.8030952380952382,
+            "class_counts": [
+              12,
+              14,
+              8,
+              6,
+              10
+            ],
+            "class_macro_log_loss": 1.2910127256555257,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "eegnet_reference": {
+            "accuracy": 0.54,
+            "balanced_accuracy": 0.529047619047619,
+            "class_counts": [
+              12,
+              14,
+              8,
+              6,
+              10
+            ],
+            "class_macro_log_loss": 1.2359196010662408,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "training_prior": {
+            "accuracy": 0.24,
+            "balanced_accuracy": 0.2,
+            "class_counts": [
+              12,
+              14,
+              8,
+              6,
+              10
+            ],
+            "class_macro_log_loss": 1.6705434855535741,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          },
+          "uniform": {
+            "accuracy": 0.24,
+            "balanced_accuracy": 0.2,
+            "class_counts": [
+              12,
+              14,
+              8,
+              6,
+              10
+            ],
+            "class_macro_log_loss": 1.6094379124341003,
+            "complete_five_class_endpoint": true,
+            "n_trials": 50
+          }
+        }
+      },
+      "primary_edges": {
+        "auxiliary_deranged_eeg": {
+          "all_three_positive": true,
+          "equal_person_log_loss_gain": 0.019515653265289885,
+          "per_person_log_loss_gain": {
+            "sub-1": 0.010316808956932322,
+            "sub-2": 0.00893075941883481,
+            "sub-3": 0.039299391420102525
+          },
+          "positive_people": 3
+        },
+        "auxiliary_filtered_eeg_shuffled_labels": {
+          "all_three_positive": true,
+          "equal_person_log_loss_gain": 0.35048252871776303,
+          "per_person_log_loss_gain": {
+            "sub-1": 0.3238182517350885,
+            "sub-2": 0.3968994103873815,
+            "sub-3": 0.330729924030819
+          },
+          "positive_people": 3
+        },
+        "auxiliary_only": {
+          "all_three_positive": false,
+          "equal_person_log_loss_gain": -0.022513360310377612,
+          "per_person_log_loss_gain": {
+            "sub-1": -0.04213317912273884,
+            "sub-2": -0.03495013315571516,
+            "sub-3": 0.009543231347321157
+          },
+          "positive_people": 1
+        },
+        "auxiliary_preaction_eeg": {
+          "all_three_positive": true,
+          "equal_person_log_loss_gain": 0.022068251531964345,
+          "per_person_log_loss_gain": {
+            "sub-1": 0.014297341691786425,
+            "sub-2": 0.004127190961582983,
+            "sub-3": 0.047780221942523626
+          },
+          "positive_people": 3
+        },
+        "auxiliary_raw_eeg": {
+          "all_three_positive": false,
+          "equal_person_log_loss_gain": -0.016176303960534266,
+          "per_person_log_loss_gain": {
+            "sub-1": -0.03864885869267409,
+            "sub-2": 0.0021812439514867776,
+            "sub-3": -0.012061297140415483
+          },
+          "positive_people": 1
+        },
+        "training_prior": {
+          "all_three_positive": true,
+          "equal_person_log_loss_gain": 0.3902963667935437,
+          "per_person_log_loss_gain": {
+            "sub-1": 0.348275235540231,
+            "sub-2": 0.4551444020827671,
+            "sub-3": 0.3674694627576329
+          },
+          "positive_people": 3
+        },
+        "uniform": {
+          "all_three_positive": true,
+          "equal_person_log_loss_gain": 0.3462229485540434,
+          "per_person_log_loss_gain": {
+            "sub-1": 0.34177059719911873,
+            "sub-2": 0.39053435882485243,
+            "sub-3": 0.3063638896381591
+          },
+          "positive_people": 3
+        }
+      },
+      "reference_all_three_above_chance": true,
+      "status": "increment_not_demonstrated"
+    }
+  },
+  "execution_amendment": "docs/SPEECH_REPRODUCTION_CALIBRATION_CORRECTION.md",
+  "experiment_id": "SPEECH-REPRO-1",
+  "failed_recovery_failure_sha256": "acb4394ead52bbe084e547b192e9a92012841bd0bdeddd8dc08daa7645cc8dc5",
+  "freeze_commit": "dd3b3dccb637ec26ecf8f32ab134388923b3c561",
+  "minimum_one_sided_person_sign_flip_p": 0.125,
+  "n_people_expected": 3,
+  "n_trials": 341,
+  "new_reference_fits": 10,
+  "notes": [
+    "Historical online recordings are offline evaluation, not our prospective live test.",
+    "Raw and preaction EEG are interpretation comparisons, outside the success conjunction.",
+    "A conditional failure does not establish missing word information or reference failure.",
+    "Positive findings concern release labels beyond measured controls; cue and cortical attribution remain unresolved."
+  ],
+  "original_failure_sha256": "cc260c268518fe2764132a57f83bf4b519ba07003c04192f036be45648fc33b6",
+  "population_significance_claim": false,
+  "predictions_sha256": "cfe18ecdfc8dc5a9fd6717569a0835fc27275f3295a7065c6784195d3719f6d3",
+  "primary_arm": "auxiliary_filtered_eeg",
+  "primary_condition": "minimallyovert",
+  "primary_endpoint": "equal_person_class_macro_log_loss_gain_over_auxiliary_only",
+  "reused_reference_fits": 50,
+  "scoring_invocations": 1,
+  "source_commit": "034af61aba855c58450977bf1c1916085c586cd6",
+  "total_recovery_seconds": 3896.9388570785522
+}

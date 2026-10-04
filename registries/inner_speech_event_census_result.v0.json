@@ -1,0 +1,2552 @@
+{
+  "census_id": "INNER-SPEECH-EVENT-CENSUS-1",
+  "code_commit": "9afb73141d2e0c3af487b8ebce57fc4e08c188f2",
+  "dataset": "ds003626",
+  "direction_or_answer_identities_exported": 0,
+  "elapsed_seconds": 14.172000000005937,
+  "events_changed": 0,
+  "labels_inferred": 0,
+  "parser_calls": 0,
+  "participants": [
+    {
+      "adjacent_family_transitions": [
+        {
+          "count": 200,
+          "from": "action",
+          "to": "relax"
+        },
+        {
+          "count": 2,
+          "from": "attention_answer",
+          "to": "run_end"
+        },
+        {
+          "count": 43,
+          "from": "attention_answer",
+          "to": "trial_start"
+        },
+        {
+          "count": 45,
+          "from": "attention_question",
+          "to": "attention_answer"
+        },
+        {
+          "count": 1,
+          "from": "baseline_end",
+          "to": "run_start"
+        },
+        {
+          "count": 1,
+          "from": "baseline_start",
+          "to": "baseline_end"
+        },
+        {
+          "count": 5,
+          "from": "condition_marker",
+          "to": "trial_start"
+        },
+        {
+          "count": 200,
+          "from": "direction_cue",
+          "to": "action"
+        },
+        {
+          "count": 1,
+          "from": "experiment_start",
+          "to": "baseline_start"
+        },
+        {
+          "count": 4,
+          "from": "inter_run_rest",
+          "to": "run_start"
+        },
+        {
+          "count": 199,
+          "from": "relax",
+          "to": "rest"
+        },
+        {
+          "count": 1,
+          "from": "relax",
+          "to": "trial_start"
+        },
+        {
+          "count": 45,
+          "from": "rest",
+          "to": "attention_question"
+        },
+        {
+          "count": 3,
+          "from": "rest",
+          "to": "run_end"
+        },
+        {
+          "count": 151,
+          "from": "rest",
+          "to": "trial_start"
+        },
+        {
+          "count": 1,
+          "from": "run_end",
+          "to": "experiment_end"
+        },
+        {
+          "count": 4,
+          "from": "run_end",
+          "to": "inter_run_rest"
+        },
+        {
+          "count": 5,
+          "from": "run_start",
+          "to": "condition_marker"
+        },
+        {
+          "count": 200,
+          "from": "trial_start",
+          "to": "direction_cue"
+        }
+      ],
+      "adjacent_interval_checks": {
+        "action_to_relax": {
+          "outside_range": 0,
+          "within_range": 200
+        },
+        "cue_to_action": {
+          "outside_range": 0,
+          "within_range": 200
+        },
+        "relax_to_rest": {
+          "outside_range": 0,
+          "within_range": 199
+        },
+        "start_to_cue": {
+          "outside_range": 0,
+          "within_range": 200
+        }
+      },
+      "alignment_or_scientific_qualification_established": false,
+      "cue_core_patterns": {
+        "contiguous_cue_action_relax": 200
+      },
+      "cue_preceding_families": {
+        "trial_start": 200
+      },
+      "event_family_counts": {
+        "action": 200,
+        "attention_answer": 45,
+        "attention_question": 45,
+        "baseline_end": 1,
+        "baseline_start": 1,
+        "condition_marker": 5,
+        "direction_cue": 200,
+        "experiment_end": 1,
+        "experiment_start": 1,
+        "inter_run_rest": 4,
+        "relax": 200,
+        "rest": 199,
+        "run_end": 5,
+        "run_start": 5,
+        "trial_start": 200
+      },
+      "events": 1112,
+      "events_outside_unambiguous_runs": {
+        "baseline_end": 1,
+        "baseline_start": 1,
+        "experiment_end": 1,
+        "experiment_start": 1,
+        "inter_run_rest": 4
+      },
+      "nonincreasing_sample_pairs": 0,
+      "participant": "sub-01",
+      "source_sha256_verified": true,
+      "status_summary": {
+        "events_retained": 1112,
+        "ignored_short_pulses": 0,
+        "minimum_pulse_samples": 1,
+        "nonzero_highbit_samples": 1875968,
+        "short_pulses_below_three": 3
+      },
+      "trial_start_anchor_block_patterns": [
+        {
+          "action_count": "one",
+          "blocks": 5,
+          "cue_count": "one",
+          "ending_boundary_family": "run_end",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "one"
+        },
+        {
+          "action_count": "one",
+          "blocks": 194,
+          "cue_count": "one",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "one"
+        },
+        {
+          "action_count": "one",
+          "blocks": 1,
+          "cue_count": "one",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "zero"
+        }
+      ],
+      "unambiguously_bounded_runs": [
+        {
+          "action": 40,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 39,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 11,
+          "attention_question": 11,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 12,
+          "attention_question": 12,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 11,
+          "attention_question": 11,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 11,
+          "attention_question": 11,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        }
+      ],
+      "unassigned_run_boundary_markers": 0
+    },
+    {
+      "adjacent_family_transitions": [
+        {
+          "count": 200,
+          "from": "action",
+          "to": "relax"
+        },
+        {
+          "count": 1,
+          "from": "attention_answer",
+          "to": "run_end"
+        },
+        {
+          "count": 10,
+          "from": "attention_answer",
+          "to": "trial_start"
+        },
+        {
+          "count": 11,
+          "from": "attention_question",
+          "to": "attention_answer"
+        },
+        {
+          "count": 1,
+          "from": "baseline_end",
+          "to": "run_start"
+        },
+        {
+          "count": 1,
+          "from": "baseline_start",
+          "to": "baseline_end"
+        },
+        {
+          "count": 5,
+          "from": "condition_marker",
+          "to": "trial_start"
+        },
+        {
+          "count": 200,
+          "from": "direction_cue",
+          "to": "action"
+        },
+        {
+          "count": 1,
+          "from": "experiment_start",
+          "to": "baseline_start"
+        },
+        {
+          "count": 4,
+          "from": "inter_run_rest",
+          "to": "run_start"
+        },
+        {
+          "count": 200,
+          "from": "relax",
+          "to": "rest"
+        },
+        {
+          "count": 11,
+          "from": "rest",
+          "to": "attention_question"
+        },
+        {
+          "count": 1,
+          "from": "rest",
+          "to": "direction_cue"
+        },
+        {
+          "count": 4,
+          "from": "rest",
+          "to": "run_end"
+        },
+        {
+          "count": 184,
+          "from": "rest",
+          "to": "trial_start"
+        },
+        {
+          "count": 1,
+          "from": "run_end",
+          "to": "experiment_end"
+        },
+        {
+          "count": 4,
+          "from": "run_end",
+          "to": "inter_run_rest"
+        },
+        {
+          "count": 5,
+          "from": "run_start",
+          "to": "condition_marker"
+        },
+        {
+          "count": 199,
+          "from": "trial_start",
+          "to": "direction_cue"
+        }
+      ],
+      "adjacent_interval_checks": {
+        "action_to_relax": {
+          "outside_range": 0,
+          "within_range": 200
+        },
+        "cue_to_action": {
+          "outside_range": 0,
+          "within_range": 200
+        },
+        "relax_to_rest": {
+          "outside_range": 0,
+          "within_range": 200
+        },
+        "start_to_cue": {
+          "outside_range": 0,
+          "within_range": 199
+        }
+      },
+      "alignment_or_scientific_qualification_established": false,
+      "cue_core_patterns": {
+        "contiguous_cue_action_relax": 200
+      },
+      "cue_preceding_families": {
+        "rest": 1,
+        "trial_start": 199
+      },
+      "event_family_counts": {
+        "action": 200,
+        "attention_answer": 11,
+        "attention_question": 11,
+        "baseline_end": 1,
+        "baseline_start": 1,
+        "condition_marker": 5,
+        "direction_cue": 200,
+        "experiment_end": 1,
+        "experiment_start": 1,
+        "inter_run_rest": 4,
+        "relax": 200,
+        "rest": 200,
+        "run_end": 5,
+        "run_start": 5,
+        "trial_start": 199
+      },
+      "events": 1044,
+      "events_outside_unambiguous_runs": {
+        "baseline_end": 1,
+        "baseline_start": 1,
+        "experiment_end": 1,
+        "experiment_start": 1,
+        "inter_run_rest": 4
+      },
+      "nonincreasing_sample_pairs": 0,
+      "participant": "sub-02",
+      "source_sha256_verified": true,
+      "status_summary": {
+        "events_retained": 1044,
+        "ignored_short_pulses": 0,
+        "minimum_pulse_samples": 1,
+        "nonzero_highbit_samples": 1670144,
+        "short_pulses_below_three": 7
+      },
+      "trial_start_anchor_block_patterns": [
+        {
+          "action_count": "multiple",
+          "blocks": 1,
+          "cue_count": "multiple",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": true,
+          "relax_count": "multiple",
+          "rest_count": "multiple"
+        },
+        {
+          "action_count": "one",
+          "blocks": 5,
+          "cue_count": "one",
+          "ending_boundary_family": "run_end",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "one"
+        },
+        {
+          "action_count": "one",
+          "blocks": 193,
+          "cue_count": "one",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "one"
+        }
+      ],
+      "unambiguously_bounded_runs": [
+        {
+          "action": 40,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 2,
+          "attention_question": 2,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 39
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        }
+      ],
+      "unassigned_run_boundary_markers": 0
+    },
+    {
+      "adjacent_family_transitions": [
+        {
+          "count": 200,
+          "from": "action",
+          "to": "relax"
+        },
+        {
+          "count": 1,
+          "from": "attention_answer",
+          "to": "direction_cue"
+        },
+        {
+          "count": 11,
+          "from": "attention_answer",
+          "to": "trial_start"
+        },
+        {
+          "count": 12,
+          "from": "attention_question",
+          "to": "attention_answer"
+        },
+        {
+          "count": 1,
+          "from": "baseline_end",
+          "to": "run_start"
+        },
+        {
+          "count": 1,
+          "from": "baseline_start",
+          "to": "baseline_end"
+        },
+        {
+          "count": 5,
+          "from": "condition_marker",
+          "to": "trial_start"
+        },
+        {
+          "count": 200,
+          "from": "direction_cue",
+          "to": "action"
+        },
+        {
+          "count": 1,
+          "from": "experiment_start",
+          "to": "baseline_start"
+        },
+        {
+          "count": 4,
+          "from": "inter_run_rest",
+          "to": "run_start"
+        },
+        {
+          "count": 200,
+          "from": "relax",
+          "to": "rest"
+        },
+        {
+          "count": 12,
+          "from": "rest",
+          "to": "attention_question"
+        },
+        {
+          "count": 5,
+          "from": "rest",
+          "to": "run_end"
+        },
+        {
+          "count": 183,
+          "from": "rest",
+          "to": "trial_start"
+        },
+        {
+          "count": 1,
+          "from": "run_end",
+          "to": "experiment_end"
+        },
+        {
+          "count": 4,
+          "from": "run_end",
+          "to": "inter_run_rest"
+        },
+        {
+          "count": 5,
+          "from": "run_start",
+          "to": "condition_marker"
+        },
+        {
+          "count": 199,
+          "from": "trial_start",
+          "to": "direction_cue"
+        }
+      ],
+      "adjacent_interval_checks": {
+        "action_to_relax": {
+          "outside_range": 0,
+          "within_range": 200
+        },
+        "cue_to_action": {
+          "outside_range": 0,
+          "within_range": 200
+        },
+        "relax_to_rest": {
+          "outside_range": 0,
+          "within_range": 200
+        },
+        "start_to_cue": {
+          "outside_range": 0,
+          "within_range": 199
+        }
+      },
+      "alignment_or_scientific_qualification_established": false,
+      "cue_core_patterns": {
+        "contiguous_cue_action_relax": 200
+      },
+      "cue_preceding_families": {
+        "attention_answer": 1,
+        "trial_start": 199
+      },
+      "event_family_counts": {
+        "action": 200,
+        "attention_answer": 12,
+        "attention_question": 12,
+        "baseline_end": 1,
+        "baseline_start": 1,
+        "condition_marker": 5,
+        "direction_cue": 200,
+        "experiment_end": 1,
+        "experiment_start": 1,
+        "inter_run_rest": 4,
+        "relax": 200,
+        "rest": 200,
+        "run_end": 5,
+        "run_start": 5,
+        "trial_start": 199
+      },
+      "events": 1046,
+      "events_outside_unambiguous_runs": {
+        "baseline_end": 1,
+        "baseline_start": 1,
+        "experiment_end": 1,
+        "experiment_start": 1,
+        "inter_run_rest": 4
+      },
+      "nonincreasing_sample_pairs": 0,
+      "participant": "sub-03",
+      "source_sha256_verified": true,
+      "status_summary": {
+        "events_retained": 1046,
+        "ignored_short_pulses": 0,
+        "minimum_pulse_samples": 1,
+        "nonzero_highbit_samples": 1671168,
+        "short_pulses_below_three": 11
+      },
+      "trial_start_anchor_block_patterns": [
+        {
+          "action_count": "multiple",
+          "blocks": 1,
+          "cue_count": "multiple",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": true,
+          "relax_count": "multiple",
+          "rest_count": "multiple"
+        },
+        {
+          "action_count": "one",
+          "blocks": 5,
+          "cue_count": "one",
+          "ending_boundary_family": "run_end",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "one"
+        },
+        {
+          "action_count": "one",
+          "blocks": 193,
+          "cue_count": "one",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "one"
+        }
+      ],
+      "unambiguously_bounded_runs": [
+        {
+          "action": 40,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 39
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        }
+      ],
+      "unassigned_run_boundary_markers": 0
+    },
+    {
+      "adjacent_family_transitions": [
+        {
+          "count": 200,
+          "from": "action",
+          "to": "relax"
+        },
+        {
+          "count": 1,
+          "from": "attention_answer",
+          "to": "run_end"
+        },
+        {
+          "count": 10,
+          "from": "attention_answer",
+          "to": "trial_start"
+        },
+        {
+          "count": 11,
+          "from": "attention_question",
+          "to": "attention_answer"
+        },
+        {
+          "count": 1,
+          "from": "attention_question",
+          "to": "trial_start"
+        },
+        {
+          "count": 1,
+          "from": "baseline_end",
+          "to": "run_start"
+        },
+        {
+          "count": 1,
+          "from": "baseline_start",
+          "to": "baseline_end"
+        },
+        {
+          "count": 5,
+          "from": "condition_marker",
+          "to": "trial_start"
+        },
+        {
+          "count": 200,
+          "from": "direction_cue",
+          "to": "action"
+        },
+        {
+          "count": 1,
+          "from": "experiment_start",
+          "to": "baseline_start"
+        },
+        {
+          "count": 4,
+          "from": "inter_run_rest",
+          "to": "run_start"
+        },
+        {
+          "count": 200,
+          "from": "relax",
+          "to": "rest"
+        },
+        {
+          "count": 12,
+          "from": "rest",
+          "to": "attention_question"
+        },
+        {
+          "count": 4,
+          "from": "rest",
+          "to": "run_end"
+        },
+        {
+          "count": 184,
+          "from": "rest",
+          "to": "trial_start"
+        },
+        {
+          "count": 1,
+          "from": "run_end",
+          "to": "experiment_end"
+        },
+        {
+          "count": 4,
+          "from": "run_end",
+          "to": "inter_run_rest"
+        },
+        {
+          "count": 5,
+          "from": "run_start",
+          "to": "condition_marker"
+        },
+        {
+          "count": 200,
+          "from": "trial_start",
+          "to": "direction_cue"
+        }
+      ],
+      "adjacent_interval_checks": {
+        "action_to_relax": {
+          "outside_range": 0,
+          "within_range": 200
+        },
+        "cue_to_action": {
+          "outside_range": 0,
+          "within_range": 200
+        },
+        "relax_to_rest": {
+          "outside_range": 0,
+          "within_range": 200
+        },
+        "start_to_cue": {
+          "outside_range": 0,
+          "within_range": 200
+        }
+      },
+      "alignment_or_scientific_qualification_established": false,
+      "cue_core_patterns": {
+        "contiguous_cue_action_relax": 200
+      },
+      "cue_preceding_families": {
+        "trial_start": 200
+      },
+      "event_family_counts": {
+        "action": 200,
+        "attention_answer": 11,
+        "attention_question": 12,
+        "baseline_end": 1,
+        "baseline_start": 1,
+        "condition_marker": 5,
+        "direction_cue": 200,
+        "experiment_end": 1,
+        "experiment_start": 1,
+        "inter_run_rest": 4,
+        "relax": 200,
+        "rest": 200,
+        "run_end": 5,
+        "run_start": 5,
+        "trial_start": 200
+      },
+      "events": 1046,
+      "events_outside_unambiguous_runs": {
+        "baseline_end": 1,
+        "baseline_start": 1,
+        "experiment_end": 1,
+        "experiment_start": 1,
+        "inter_run_rest": 4
+      },
+      "nonincreasing_sample_pairs": 0,
+      "participant": "sub-04",
+      "source_sha256_verified": true,
+      "status_summary": {
+        "events_retained": 1046,
+        "ignored_short_pulses": 0,
+        "minimum_pulse_samples": 1,
+        "nonzero_highbit_samples": 1656832,
+        "short_pulses_below_three": 7
+      },
+      "trial_start_anchor_block_patterns": [
+        {
+          "action_count": "one",
+          "blocks": 5,
+          "cue_count": "one",
+          "ending_boundary_family": "run_end",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "one"
+        },
+        {
+          "action_count": "one",
+          "blocks": 195,
+          "cue_count": "one",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "one"
+        }
+      ],
+      "unambiguously_bounded_runs": [
+        {
+          "action": 40,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 2,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        }
+      ],
+      "unassigned_run_boundary_markers": 0
+    },
+    {
+      "adjacent_family_transitions": [
+        {
+          "count": 200,
+          "from": "action",
+          "to": "relax"
+        },
+        {
+          "count": 12,
+          "from": "attention_answer",
+          "to": "trial_start"
+        },
+        {
+          "count": 12,
+          "from": "attention_question",
+          "to": "attention_answer"
+        },
+        {
+          "count": 1,
+          "from": "baseline_end",
+          "to": "run_start"
+        },
+        {
+          "count": 1,
+          "from": "baseline_start",
+          "to": "baseline_end"
+        },
+        {
+          "count": 5,
+          "from": "condition_marker",
+          "to": "trial_start"
+        },
+        {
+          "count": 199,
+          "from": "direction_cue",
+          "to": "action"
+        },
+        {
+          "count": 1,
+          "from": "experiment_start",
+          "to": "baseline_start"
+        },
+        {
+          "count": 4,
+          "from": "inter_run_rest",
+          "to": "run_start"
+        },
+        {
+          "count": 199,
+          "from": "relax",
+          "to": "rest"
+        },
+        {
+          "count": 1,
+          "from": "relax",
+          "to": "trial_start"
+        },
+        {
+          "count": 12,
+          "from": "rest",
+          "to": "attention_question"
+        },
+        {
+          "count": 2,
+          "from": "rest",
+          "to": "direction_cue"
+        },
+        {
+          "count": 5,
+          "from": "rest",
+          "to": "run_end"
+        },
+        {
+          "count": 180,
+          "from": "rest",
+          "to": "trial_start"
+        },
+        {
+          "count": 1,
+          "from": "run_end",
+          "to": "experiment_end"
+        },
+        {
+          "count": 4,
+          "from": "run_end",
+          "to": "inter_run_rest"
+        },
+        {
+          "count": 5,
+          "from": "run_start",
+          "to": "condition_marker"
+        },
+        {
+          "count": 1,
+          "from": "trial_start",
+          "to": "action"
+        },
+        {
+          "count": 197,
+          "from": "trial_start",
+          "to": "direction_cue"
+        }
+      ],
+      "adjacent_interval_checks": {
+        "action_to_relax": {
+          "outside_range": 0,
+          "within_range": 200
+        },
+        "cue_to_action": {
+          "outside_range": 0,
+          "within_range": 199
+        },
+        "relax_to_rest": {
+          "outside_range": 0,
+          "within_range": 199
+        },
+        "start_to_cue": {
+          "outside_range": 0,
+          "within_range": 197
+        }
+      },
+      "alignment_or_scientific_qualification_established": false,
+      "cue_core_patterns": {
+        "contiguous_cue_action_relax": 199
+      },
+      "cue_preceding_families": {
+        "rest": 2,
+        "trial_start": 197
+      },
+      "event_family_counts": {
+        "action": 200,
+        "attention_answer": 12,
+        "attention_question": 12,
+        "baseline_end": 1,
+        "baseline_start": 1,
+        "condition_marker": 5,
+        "direction_cue": 199,
+        "experiment_end": 1,
+        "experiment_start": 1,
+        "inter_run_rest": 4,
+        "relax": 200,
+        "rest": 199,
+        "run_end": 5,
+        "run_start": 5,
+        "trial_start": 198
+      },
+      "events": 1043,
+      "events_outside_unambiguous_runs": {
+        "baseline_end": 1,
+        "baseline_start": 1,
+        "experiment_end": 1,
+        "experiment_start": 1,
+        "inter_run_rest": 4
+      },
+      "nonincreasing_sample_pairs": 0,
+      "participant": "sub-05",
+      "source_sha256_verified": true,
+      "status_summary": {
+        "events_retained": 1043,
+        "ignored_short_pulses": 0,
+        "minimum_pulse_samples": 1,
+        "nonzero_highbit_samples": 1661952,
+        "short_pulses_below_three": 8
+      },
+      "trial_start_anchor_block_patterns": [
+        {
+          "action_count": "multiple",
+          "blocks": 2,
+          "cue_count": "multiple",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": true,
+          "relax_count": "multiple",
+          "rest_count": "multiple"
+        },
+        {
+          "action_count": "one",
+          "blocks": 5,
+          "cue_count": "one",
+          "ending_boundary_family": "run_end",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "one"
+        },
+        {
+          "action_count": "one",
+          "blocks": 189,
+          "cue_count": "one",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "one"
+        },
+        {
+          "action_count": "one",
+          "blocks": 1,
+          "cue_count": "one",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "zero"
+        },
+        {
+          "action_count": "one",
+          "blocks": 1,
+          "cue_count": "zero",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": false,
+          "relax_count": "one",
+          "rest_count": "one"
+        }
+      ],
+      "unambiguously_bounded_runs": [
+        {
+          "action": 40,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 39
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 39,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 39,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 39
+        }
+      ],
+      "unassigned_run_boundary_markers": 0
+    },
+    {
+      "adjacent_family_transitions": [
+        {
+          "count": 199,
+          "from": "action",
+          "to": "relax"
+        },
+        {
+          "count": 1,
+          "from": "attention_answer",
+          "to": "run_end"
+        },
+        {
+          "count": 11,
+          "from": "attention_answer",
+          "to": "trial_start"
+        },
+        {
+          "count": 12,
+          "from": "attention_question",
+          "to": "attention_answer"
+        },
+        {
+          "count": 1,
+          "from": "baseline_end",
+          "to": "run_start"
+        },
+        {
+          "count": 1,
+          "from": "baseline_start",
+          "to": "baseline_end"
+        },
+        {
+          "count": 5,
+          "from": "condition_marker",
+          "to": "trial_start"
+        },
+        {
+          "count": 199,
+          "from": "direction_cue",
+          "to": "action"
+        },
+        {
+          "count": 1,
+          "from": "direction_cue",
+          "to": "relax"
+        },
+        {
+          "count": 1,
+          "from": "experiment_start",
+          "to": "baseline_start"
+        },
+        {
+          "count": 4,
+          "from": "inter_run_rest",
+          "to": "run_start"
+        },
+        {
+          "count": 200,
+          "from": "relax",
+          "to": "rest"
+        },
+        {
+          "count": 12,
+          "from": "rest",
+          "to": "attention_question"
+        },
+        {
+          "count": 1,
+          "from": "rest",
+          "to": "direction_cue"
+        },
+        {
+          "count": 4,
+          "from": "rest",
+          "to": "run_end"
+        },
+        {
+          "count": 183,
+          "from": "rest",
+          "to": "trial_start"
+        },
+        {
+          "count": 1,
+          "from": "run_end",
+          "to": "experiment_end"
+        },
+        {
+          "count": 4,
+          "from": "run_end",
+          "to": "inter_run_rest"
+        },
+        {
+          "count": 5,
+          "from": "run_start",
+          "to": "condition_marker"
+        },
+        {
+          "count": 199,
+          "from": "trial_start",
+          "to": "direction_cue"
+        }
+      ],
+      "adjacent_interval_checks": {
+        "action_to_relax": {
+          "outside_range": 0,
+          "within_range": 199
+        },
+        "cue_to_action": {
+          "outside_range": 0,
+          "within_range": 199
+        },
+        "relax_to_rest": {
+          "outside_range": 0,
+          "within_range": 200
+        },
+        "start_to_cue": {
+          "outside_range": 0,
+          "within_range": 199
+        }
+      },
+      "alignment_or_scientific_qualification_established": false,
+      "cue_core_patterns": {
+        "contiguous_cue_action_relax": 199,
+        "incomplete_or_interrupted": 1
+      },
+      "cue_preceding_families": {
+        "rest": 1,
+        "trial_start": 199
+      },
+      "event_family_counts": {
+        "action": 199,
+        "attention_answer": 12,
+        "attention_question": 12,
+        "baseline_end": 1,
+        "baseline_start": 1,
+        "condition_marker": 5,
+        "direction_cue": 200,
+        "experiment_end": 1,
+        "experiment_start": 1,
+        "inter_run_rest": 4,
+        "relax": 200,
+        "rest": 200,
+        "run_end": 5,
+        "run_start": 5,
+        "trial_start": 199
+      },
+      "events": 1045,
+      "events_outside_unambiguous_runs": {
+        "baseline_end": 1,
+        "baseline_start": 1,
+        "experiment_end": 1,
+        "experiment_start": 1,
+        "inter_run_rest": 4
+      },
+      "nonincreasing_sample_pairs": 0,
+      "participant": "sub-06",
+      "source_sha256_verified": true,
+      "status_summary": {
+        "events_retained": 1045,
+        "ignored_short_pulses": 0,
+        "minimum_pulse_samples": 1,
+        "nonzero_highbit_samples": 1647616,
+        "short_pulses_below_three": 8
+      },
+      "trial_start_anchor_block_patterns": [
+        {
+          "action_count": "multiple",
+          "blocks": 1,
+          "cue_count": "multiple",
+          "ending_boundary_family": "run_end",
+          "ordered_core_prefix": true,
+          "relax_count": "multiple",
+          "rest_count": "multiple"
+        },
+        {
+          "action_count": "one",
+          "blocks": 4,
+          "cue_count": "one",
+          "ending_boundary_family": "run_end",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "one"
+        },
+        {
+          "action_count": "one",
+          "blocks": 193,
+          "cue_count": "one",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "one"
+        },
+        {
+          "action_count": "zero",
+          "blocks": 1,
+          "cue_count": "one",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": false,
+          "relax_count": "one",
+          "rest_count": "one"
+        }
+      ],
+      "unambiguously_bounded_runs": [
+        {
+          "action": 40,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 39
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 39,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        }
+      ],
+      "unassigned_run_boundary_markers": 0
+    },
+    {
+      "adjacent_family_transitions": [
+        {
+          "count": 199,
+          "from": "action",
+          "to": "relax"
+        },
+        {
+          "count": 12,
+          "from": "attention_answer",
+          "to": "trial_start"
+        },
+        {
+          "count": 12,
+          "from": "attention_question",
+          "to": "attention_answer"
+        },
+        {
+          "count": 1,
+          "from": "baseline_end",
+          "to": "run_start"
+        },
+        {
+          "count": 1,
+          "from": "baseline_start",
+          "to": "baseline_end"
+        },
+        {
+          "count": 5,
+          "from": "condition_marker",
+          "to": "trial_start"
+        },
+        {
+          "count": 199,
+          "from": "direction_cue",
+          "to": "action"
+        },
+        {
+          "count": 1,
+          "from": "direction_cue",
+          "to": "relax"
+        },
+        {
+          "count": 1,
+          "from": "experiment_start",
+          "to": "baseline_start"
+        },
+        {
+          "count": 4,
+          "from": "inter_run_rest",
+          "to": "run_start"
+        },
+        {
+          "count": 200,
+          "from": "relax",
+          "to": "rest"
+        },
+        {
+          "count": 12,
+          "from": "rest",
+          "to": "attention_question"
+        },
+        {
+          "count": 5,
+          "from": "rest",
+          "to": "run_end"
+        },
+        {
+          "count": 183,
+          "from": "rest",
+          "to": "trial_start"
+        },
+        {
+          "count": 1,
+          "from": "run_end",
+          "to": "experiment_end"
+        },
+        {
+          "count": 4,
+          "from": "run_end",
+          "to": "inter_run_rest"
+        },
+        {
+          "count": 5,
+          "from": "run_start",
+          "to": "condition_marker"
+        },
+        {
+          "count": 200,
+          "from": "trial_start",
+          "to": "direction_cue"
+        }
+      ],
+      "adjacent_interval_checks": {
+        "action_to_relax": {
+          "outside_range": 0,
+          "within_range": 199
+        },
+        "cue_to_action": {
+          "outside_range": 0,
+          "within_range": 199
+        },
+        "relax_to_rest": {
+          "outside_range": 0,
+          "within_range": 200
+        },
+        "start_to_cue": {
+          "outside_range": 0,
+          "within_range": 200
+        }
+      },
+      "alignment_or_scientific_qualification_established": false,
+      "cue_core_patterns": {
+        "contiguous_cue_action_relax": 199,
+        "incomplete_or_interrupted": 1
+      },
+      "cue_preceding_families": {
+        "trial_start": 200
+      },
+      "event_family_counts": {
+        "action": 199,
+        "attention_answer": 12,
+        "attention_question": 12,
+        "baseline_end": 1,
+        "baseline_start": 1,
+        "condition_marker": 5,
+        "direction_cue": 200,
+        "experiment_end": 1,
+        "experiment_start": 1,
+        "inter_run_rest": 4,
+        "relax": 200,
+        "rest": 200,
+        "run_end": 5,
+        "run_start": 5,
+        "trial_start": 200
+      },
+      "events": 1046,
+      "events_outside_unambiguous_runs": {
+        "baseline_end": 1,
+        "baseline_start": 1,
+        "experiment_end": 1,
+        "experiment_start": 1,
+        "inter_run_rest": 4
+      },
+      "nonincreasing_sample_pairs": 0,
+      "participant": "sub-07",
+      "source_sha256_verified": true,
+      "status_summary": {
+        "events_retained": 1046,
+        "ignored_short_pulses": 0,
+        "minimum_pulse_samples": 1,
+        "nonzero_highbit_samples": 1653760,
+        "short_pulses_below_three": 3
+      },
+      "trial_start_anchor_block_patterns": [
+        {
+          "action_count": "one",
+          "blocks": 5,
+          "cue_count": "one",
+          "ending_boundary_family": "run_end",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "one"
+        },
+        {
+          "action_count": "one",
+          "blocks": 194,
+          "cue_count": "one",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "one"
+        },
+        {
+          "action_count": "zero",
+          "blocks": 1,
+          "cue_count": "one",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": false,
+          "relax_count": "one",
+          "rest_count": "one"
+        }
+      ],
+      "unambiguously_bounded_runs": [
+        {
+          "action": 40,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 39,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        }
+      ],
+      "unassigned_run_boundary_markers": 0
+    },
+    {
+      "adjacent_family_transitions": [
+        {
+          "count": 200,
+          "from": "action",
+          "to": "relax"
+        },
+        {
+          "count": 1,
+          "from": "attention_answer",
+          "to": "run_end"
+        },
+        {
+          "count": 11,
+          "from": "attention_answer",
+          "to": "trial_start"
+        },
+        {
+          "count": 12,
+          "from": "attention_question",
+          "to": "attention_answer"
+        },
+        {
+          "count": 1,
+          "from": "baseline_end",
+          "to": "run_start"
+        },
+        {
+          "count": 1,
+          "from": "baseline_start",
+          "to": "baseline_end"
+        },
+        {
+          "count": 5,
+          "from": "condition_marker",
+          "to": "trial_start"
+        },
+        {
+          "count": 199,
+          "from": "direction_cue",
+          "to": "action"
+        },
+        {
+          "count": 1,
+          "from": "experiment_start",
+          "to": "baseline_start"
+        },
+        {
+          "count": 4,
+          "from": "inter_run_rest",
+          "to": "run_start"
+        },
+        {
+          "count": 199,
+          "from": "relax",
+          "to": "rest"
+        },
+        {
+          "count": 1,
+          "from": "relax",
+          "to": "trial_start"
+        },
+        {
+          "count": 12,
+          "from": "rest",
+          "to": "attention_question"
+        },
+        {
+          "count": 4,
+          "from": "rest",
+          "to": "run_end"
+        },
+        {
+          "count": 183,
+          "from": "rest",
+          "to": "trial_start"
+        },
+        {
+          "count": 1,
+          "from": "run_end",
+          "to": "experiment_end"
+        },
+        {
+          "count": 4,
+          "from": "run_end",
+          "to": "inter_run_rest"
+        },
+        {
+          "count": 5,
+          "from": "run_start",
+          "to": "condition_marker"
+        },
+        {
+          "count": 1,
+          "from": "trial_start",
+          "to": "action"
+        },
+        {
+          "count": 199,
+          "from": "trial_start",
+          "to": "direction_cue"
+        }
+      ],
+      "adjacent_interval_checks": {
+        "action_to_relax": {
+          "outside_range": 0,
+          "within_range": 200
+        },
+        "cue_to_action": {
+          "outside_range": 0,
+          "within_range": 199
+        },
+        "relax_to_rest": {
+          "outside_range": 0,
+          "within_range": 199
+        },
+        "start_to_cue": {
+          "outside_range": 0,
+          "within_range": 199
+        }
+      },
+      "alignment_or_scientific_qualification_established": false,
+      "cue_core_patterns": {
+        "contiguous_cue_action_relax": 199
+      },
+      "cue_preceding_families": {
+        "trial_start": 199
+      },
+      "event_family_counts": {
+        "action": 200,
+        "attention_answer": 12,
+        "attention_question": 12,
+        "baseline_end": 1,
+        "baseline_start": 1,
+        "condition_marker": 5,
+        "direction_cue": 199,
+        "experiment_end": 1,
+        "experiment_start": 1,
+        "inter_run_rest": 4,
+        "relax": 200,
+        "rest": 199,
+        "run_end": 5,
+        "run_start": 5,
+        "trial_start": 200
+      },
+      "events": 1045,
+      "events_outside_unambiguous_runs": {
+        "baseline_end": 1,
+        "baseline_start": 1,
+        "experiment_end": 1,
+        "experiment_start": 1,
+        "inter_run_rest": 4
+      },
+      "nonincreasing_sample_pairs": 0,
+      "participant": "sub-08",
+      "source_sha256_verified": true,
+      "status_summary": {
+        "events_retained": 1045,
+        "ignored_short_pulses": 0,
+        "minimum_pulse_samples": 1,
+        "nonzero_highbit_samples": 1657856,
+        "short_pulses_below_three": 5
+      },
+      "trial_start_anchor_block_patterns": [
+        {
+          "action_count": "one",
+          "blocks": 5,
+          "cue_count": "one",
+          "ending_boundary_family": "run_end",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "one"
+        },
+        {
+          "action_count": "one",
+          "blocks": 193,
+          "cue_count": "one",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "one"
+        },
+        {
+          "action_count": "one",
+          "blocks": 1,
+          "cue_count": "one",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "zero"
+        },
+        {
+          "action_count": "one",
+          "blocks": 1,
+          "cue_count": "zero",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": false,
+          "relax_count": "one",
+          "rest_count": "one"
+        }
+      ],
+      "unambiguously_bounded_runs": [
+        {
+          "action": 40,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 39,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 39,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        }
+      ],
+      "unassigned_run_boundary_markers": 0
+    },
+    {
+      "adjacent_family_transitions": [
+        {
+          "count": 198,
+          "from": "action",
+          "to": "relax"
+        },
+        {
+          "count": 1,
+          "from": "action",
+          "to": "rest"
+        },
+        {
+          "count": 12,
+          "from": "attention_answer",
+          "to": "trial_start"
+        },
+        {
+          "count": 12,
+          "from": "attention_question",
+          "to": "attention_answer"
+        },
+        {
+          "count": 1,
+          "from": "baseline_end",
+          "to": "run_start"
+        },
+        {
+          "count": 1,
+          "from": "baseline_start",
+          "to": "baseline_end"
+        },
+        {
+          "count": 5,
+          "from": "condition_marker",
+          "to": "trial_start"
+        },
+        {
+          "count": 199,
+          "from": "direction_cue",
+          "to": "action"
+        },
+        {
+          "count": 1,
+          "from": "direction_cue",
+          "to": "relax"
+        },
+        {
+          "count": 1,
+          "from": "experiment_start",
+          "to": "baseline_start"
+        },
+        {
+          "count": 4,
+          "from": "inter_run_rest",
+          "to": "run_start"
+        },
+        {
+          "count": 199,
+          "from": "relax",
+          "to": "rest"
+        },
+        {
+          "count": 12,
+          "from": "rest",
+          "to": "attention_question"
+        },
+        {
+          "count": 5,
+          "from": "rest",
+          "to": "run_end"
+        },
+        {
+          "count": 183,
+          "from": "rest",
+          "to": "trial_start"
+        },
+        {
+          "count": 1,
+          "from": "run_end",
+          "to": "experiment_end"
+        },
+        {
+          "count": 4,
+          "from": "run_end",
+          "to": "inter_run_rest"
+        },
+        {
+          "count": 5,
+          "from": "run_start",
+          "to": "condition_marker"
+        },
+        {
+          "count": 200,
+          "from": "trial_start",
+          "to": "direction_cue"
+        }
+      ],
+      "adjacent_interval_checks": {
+        "action_to_relax": {
+          "outside_range": 0,
+          "within_range": 198
+        },
+        "cue_to_action": {
+          "outside_range": 0,
+          "within_range": 199
+        },
+        "relax_to_rest": {
+          "outside_range": 0,
+          "within_range": 199
+        },
+        "start_to_cue": {
+          "outside_range": 0,
+          "within_range": 200
+        }
+      },
+      "alignment_or_scientific_qualification_established": false,
+      "cue_core_patterns": {
+        "contiguous_cue_action_relax": 198,
+        "incomplete_or_interrupted": 2
+      },
+      "cue_preceding_families": {
+        "trial_start": 200
+      },
+      "event_family_counts": {
+        "action": 199,
+        "attention_answer": 12,
+        "attention_question": 12,
+        "baseline_end": 1,
+        "baseline_start": 1,
+        "condition_marker": 5,
+        "direction_cue": 200,
+        "experiment_end": 1,
+        "experiment_start": 1,
+        "inter_run_rest": 4,
+        "relax": 199,
+        "rest": 200,
+        "run_end": 5,
+        "run_start": 5,
+        "trial_start": 200
+      },
+      "events": 1045,
+      "events_outside_unambiguous_runs": {
+        "baseline_end": 1,
+        "baseline_start": 1,
+        "experiment_end": 1,
+        "experiment_start": 1,
+        "inter_run_rest": 4
+      },
+      "nonincreasing_sample_pairs": 0,
+      "participant": "sub-09",
+      "source_sha256_verified": true,
+      "status_summary": {
+        "events_retained": 1045,
+        "ignored_short_pulses": 0,
+        "minimum_pulse_samples": 1,
+        "nonzero_highbit_samples": 1664000,
+        "short_pulses_below_three": 7
+      },
+      "trial_start_anchor_block_patterns": [
+        {
+          "action_count": "one",
+          "blocks": 5,
+          "cue_count": "one",
+          "ending_boundary_family": "run_end",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "one"
+        },
+        {
+          "action_count": "one",
+          "blocks": 193,
+          "cue_count": "one",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "one"
+        },
+        {
+          "action_count": "one",
+          "blocks": 1,
+          "cue_count": "one",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": false,
+          "relax_count": "zero",
+          "rest_count": "one"
+        },
+        {
+          "action_count": "zero",
+          "blocks": 1,
+          "cue_count": "one",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": false,
+          "relax_count": "one",
+          "rest_count": "one"
+        }
+      ],
+      "unambiguously_bounded_runs": [
+        {
+          "action": 40,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 39,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 39,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        }
+      ],
+      "unassigned_run_boundary_markers": 0
+    },
+    {
+      "adjacent_family_transitions": [
+        {
+          "count": 200,
+          "from": "action",
+          "to": "relax"
+        },
+        {
+          "count": 1,
+          "from": "attention_answer",
+          "to": "run_end"
+        },
+        {
+          "count": 10,
+          "from": "attention_answer",
+          "to": "trial_start"
+        },
+        {
+          "count": 11,
+          "from": "attention_question",
+          "to": "attention_answer"
+        },
+        {
+          "count": 1,
+          "from": "baseline_start",
+          "to": "run_start"
+        },
+        {
+          "count": 5,
+          "from": "condition_marker",
+          "to": "trial_start"
+        },
+        {
+          "count": 199,
+          "from": "direction_cue",
+          "to": "action"
+        },
+        {
+          "count": 1,
+          "from": "experiment_start",
+          "to": "baseline_start"
+        },
+        {
+          "count": 4,
+          "from": "inter_run_rest",
+          "to": "run_start"
+        },
+        {
+          "count": 200,
+          "from": "relax",
+          "to": "rest"
+        },
+        {
+          "count": 11,
+          "from": "rest",
+          "to": "attention_question"
+        },
+        {
+          "count": 4,
+          "from": "rest",
+          "to": "run_end"
+        },
+        {
+          "count": 185,
+          "from": "rest",
+          "to": "trial_start"
+        },
+        {
+          "count": 1,
+          "from": "run_end",
+          "to": "experiment_end"
+        },
+        {
+          "count": 4,
+          "from": "run_end",
+          "to": "inter_run_rest"
+        },
+        {
+          "count": 5,
+          "from": "run_start",
+          "to": "condition_marker"
+        },
+        {
+          "count": 1,
+          "from": "trial_start",
+          "to": "action"
+        },
+        {
+          "count": 199,
+          "from": "trial_start",
+          "to": "direction_cue"
+        }
+      ],
+      "adjacent_interval_checks": {
+        "action_to_relax": {
+          "outside_range": 0,
+          "within_range": 200
+        },
+        "cue_to_action": {
+          "outside_range": 0,
+          "within_range": 199
+        },
+        "relax_to_rest": {
+          "outside_range": 0,
+          "within_range": 200
+        },
+        "start_to_cue": {
+          "outside_range": 0,
+          "within_range": 199
+        }
+      },
+      "alignment_or_scientific_qualification_established": false,
+      "cue_core_patterns": {
+        "contiguous_cue_action_relax": 199
+      },
+      "cue_preceding_families": {
+        "trial_start": 199
+      },
+      "event_family_counts": {
+        "action": 200,
+        "attention_answer": 11,
+        "attention_question": 11,
+        "baseline_start": 1,
+        "condition_marker": 5,
+        "direction_cue": 199,
+        "experiment_end": 1,
+        "experiment_start": 1,
+        "inter_run_rest": 4,
+        "relax": 200,
+        "rest": 200,
+        "run_end": 5,
+        "run_start": 5,
+        "trial_start": 200
+      },
+      "events": 1043,
+      "events_outside_unambiguous_runs": {
+        "baseline_start": 1,
+        "experiment_end": 1,
+        "experiment_start": 1,
+        "inter_run_rest": 4
+      },
+      "nonincreasing_sample_pairs": 0,
+      "participant": "sub-10",
+      "source_sha256_verified": true,
+      "status_summary": {
+        "events_retained": 1043,
+        "ignored_short_pulses": 2,
+        "minimum_pulse_samples": 3,
+        "nonzero_highbit_samples": 1639424,
+        "short_pulses_below_three": 2
+      },
+      "trial_start_anchor_block_patterns": [
+        {
+          "action_count": "one",
+          "blocks": 5,
+          "cue_count": "one",
+          "ending_boundary_family": "run_end",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "one"
+        },
+        {
+          "action_count": "one",
+          "blocks": 194,
+          "cue_count": "one",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": true,
+          "relax_count": "one",
+          "rest_count": "one"
+        },
+        {
+          "action_count": "one",
+          "blocks": 1,
+          "cue_count": "zero",
+          "ending_boundary_family": "trial_start",
+          "ordered_core_prefix": false,
+          "relax_count": "one",
+          "rest_count": "one"
+        }
+      ],
+      "unambiguously_bounded_runs": [
+        {
+          "action": 40,
+          "condition_marker": 1,
+          "direction_cue": 39,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 2,
+          "attention_question": 2,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        },
+        {
+          "action": 40,
+          "attention_answer": 3,
+          "attention_question": 3,
+          "condition_marker": 1,
+          "direction_cue": 40,
+          "relax": 40,
+          "rest": 40,
+          "run_end": 1,
+          "run_start": 1,
+          "trial_start": 40
+        }
+      ],
+      "unassigned_run_boundary_markers": 0
+    }
+  ],
+  "peak_rss_bytes": 45166592,
+  "physiological_windows_read": 0,
+  "prior_evidence_and_scientific_code_unchanged": true,
+  "schema_version": 1,
+  "scoring_calls": 0,
+  "session": "ses-01",
+  "status": "census_completed",
+  "training_calls": 0,
+  "version": "2.1.2"
+}
